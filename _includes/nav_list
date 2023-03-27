@@ -7,6 +7,7 @@
   <ul class="nav__items">
     {% for nav in navigation %}
       <li>
+        <br>
         {% if nav.icon %}
         <span class="nav__sub-title"><i class="{{ nav.icon | default: 'fas fa-circle' }}" aria-hidden="true"> {{ nav.title }}</i></span>
         {% else %}
