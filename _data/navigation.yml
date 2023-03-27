@@ -7,7 +7,7 @@ home:
         url: /study/4g_lte/4g_lte-1.1/
       - title: "5G NR"
         icon: "fas fa-paper-plane"
-        url: /study/g_nr/5g_nr-1.1/
+        url: /study/5g_nr/5g_nr-1.1/
       - title: "O-RAN"
         icon: "fas fa-code-branch"
         url: /study/o-ran/o_ran-1.1/
