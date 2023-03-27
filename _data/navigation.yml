@@ -3,10 +3,10 @@ home:
     icon: "fas fa-book"
     children:
       - title: "4G LTE"
-        icon: "fas fa-table-tennis"
+        icon: "fas fa-filter"
         url: /study/4g_lte-1.1/
       - title: "5G NR"
-        icon: "signal_cellular_4_bar"
+        icon: "fas fa-paper-plane"
         url: /study/5g_nr-1.1/
       - title: "O-RAN"
         icon: "fas fa-code-branch"
@@ -15,10 +15,10 @@ home:
     icon: "fas fa-table-tennis"
     children:
       - title: "Football"
-        icon: "fa fa-soccer-ball-o"
+        icon: "fas fa-soccer-ball"
         url: /sports/football/
       - title: "Esports"
-        icon: "gamepad"
+        icon: "fas fa-gamepad"
         url: /sports/esorts/
 
 # main links
