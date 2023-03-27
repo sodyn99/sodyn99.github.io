@@ -9,16 +9,16 @@ home:
         icon: "signal_cellular_4_bar"
         url: /study/5g_nr-1.1/
       - title: "O-RAN"
-        icon: "fas fa-circle"
+        icon: "fas fa-code-branch"
         url: /study/o_ran-1.1/
   - title: "Sports"
     icon: "fas fa-table-tennis"
     children:
       - title: "Football"
-        icon: "fas fa-circle"
+        icon: "fa fa-soccer-ball-o"
         url: /sports/football/
       - title: "Esports"
-        icon: "fas fa-circle"
+        icon: "gamepad"
         url: /sports/esorts/
 
 # main links
