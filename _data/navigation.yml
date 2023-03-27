@@ -3,16 +3,16 @@ home:
     icon: "fas fa-book"
     children:
       - title: "4G LTE"
-        icon: "fas fa-circle"
+        icon: "fas fa-table-tennis"
         url: /study/4g_lte-1.1/
       - title: "5G NR"
-        icon: "fas fa-circle"
+        icon: "signal_cellular_4_bar"
         url: /study/5g_nr-1.1/
       - title: "O-RAN"
         icon: "fas fa-circle"
         url: /study/o_ran-1.1/
   - title: "Sports"
-    icon: "fas fa-book"
+    icon: "fas fa-table-tennis"
     children:
       - title: "Football"
         icon: "fas fa-circle"
