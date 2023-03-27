@@ -11,11 +11,14 @@ home:
       - title: "O-RAN"
         icon: "fas fa-code-branch"
         url: /study/o_ran-1.1/
+      - title: "AWS"
+        icon: "fab fa-aws"
+        url: /study/aws-1.1/
   - title: "Sports"
     icon: "fas fa-table-tennis"
     children:
       - title: "Football"
-        icon: "fas fa-basketball-ball"
+        icon: "fas fa-volleyball-ball"
         url: /sports/football/
       - title: "Esports"
         icon: "fas fa-gamepad"
@@ -103,4 +106,20 @@ o-ran:
       - title: "5G RESOURCE ALLOCATION"
         index: "2.1"
         url: /study/5g_nr-2.1/
+
+############ AWS ####################
+aws:
+  - title: "1. INTRO"
+    children:
+      - title: "Cloud Computing"
+        index: "1.1"
+        url: /study/aws-1.1/
+      - title: "AWS"
+        index: "1.2"
+        url: /study/aws-1.2/
+  - title: "2. 시작하기"
+    children:
+      - title: "계정 생성"
+        index: "2.1"
+        url: /study/aws-2.1/
   
