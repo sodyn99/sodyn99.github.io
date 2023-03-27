@@ -1,0 +1,106 @@
+home:
+  - title: "Study"
+    icon: "fas fa-book"
+    children:
+      - title: "4G LTE"
+        icon: "fas fa-circle"
+        url: /study/4g_lte-1.1/
+      - title: "5G NR"
+        icon: "fas fa-circle"
+        url: /study/5g_nr-1.1/
+      - title: "O-RAN"
+        icon: "fas fa-circle"
+        url: /study/o_ran-1.1/
+  - title: "Sports"
+    icon: "fas fa-book"
+    children:
+      - title: "Football"
+        icon: "fas fa-circle"
+        url: /sports/football/
+      - title: "Esports"
+        icon: "fas fa-circle"
+        url: /sports/esorts/
+
+# main links
+main:
+  - title: "Category"
+    url: /categories/
+  - title: "Tag"
+    url: /tags/
+  - title: "About"
+    url: /about/
+  # - title: "Sample Posts"
+  #   url: /year-archive/
+  # - title: "Sample Collections"
+  #   url: /collection-archive/
+  # - title: "Sitemap"
+  #   url: /sitemap/
+
+############ O-RAN ####################
+o-ran:
+  - title: "1. INTRO"
+    children:
+      - title: "About"
+        index: "1.1"
+        url: /study/o_ran-1.1/
+  - title: "2. 논문 리뷰"
+    children:
+      - title: "Intelligence and Learning in O-RAN for Data-Driven NextG Cellular Networks"
+        index: "2.1"
+        url: /study/o_ran-2.1/
+  - title: "3. 기타"
+    children:
+      - title: ""
+
+############ 4G LTE ####################
+4g_lte:
+  - title: "1. INTRO"
+    children:
+      - title: "Introduction"
+        index: "1.1"
+        url: /study/4g_lte-1.1/
+      - title: "About"
+        index: "1.2"
+        url: /study/4g_lte-1.2/
+  - title: "2. HIGH DATA RATES IN MOBILE COMMUNICATION"
+    children:
+      - title: "High Data Rates"
+        index: "2.1"
+        url: /study/4g_lte-2.1/
+      - title: "Power Limited Scenarios"
+        index: "2.2"
+        url: /study/4g_lte-2.2/
+      - title: "Bandwidth Limited Scenarios"
+        index: "2.3"
+        url: /study/4g_lte-2.3/
+      - title: "Multi-Carrier Transmission"
+        index: "2.4"
+        url: /study/4g_lte-2.4/
+  - title: "3. OFDM"
+    children:
+      - title: "Concept"
+        index: "3.1"
+        url: /study/4g_lte-3.1/
+      - title: "OFDM Implementation"
+        index: "3.2"
+        url: /study/4g_lte-3.2/
+
+############ 5G NR ####################
+5g_nr:
+  - title: "1. INTRO"
+    children:
+      - title: "Introduction"
+        index: "1.1"
+        url: /study/5g_nr-1.1/
+      - title: "About"
+        index: "1.2"
+        url: /study/5g_nr-1.2/
+      - title: "4G vs 5G"
+        index: "1.3"
+        url: /study/5g_nr-1.3/
+  - title: "2. 5G RESOURCE ALLOCATION"
+    children:
+      - title: "5G RESOURCE ALLOCATION"
+        index: "2.1"
+        url: /study/5g_nr-2.1/
+  
