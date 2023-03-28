@@ -11,9 +11,9 @@ sidebar:
 ![Profile](/images/account.png)
 
 ## About Me
-<br>
+<p></p>
 <div class = "div1" markdown="1">
-  👤 이성진<br><br>
+  <p>👤 이성진</p>
   🏫 경희대학교<br>
   📝 전자공학과<br>
   🎓 4학년<br>
@@ -21,7 +21,7 @@ sidebar:
 </div>
 
 <div class = "div2" markdown="1">
-  👤 LEE SUNGJIN<br><br>
+  <p>👤 LEE SUNGJIN</p>
   🏫 Kyunghee University<br>
   📝 Electronic Engineering<br>
   🎓 Senior<br>
