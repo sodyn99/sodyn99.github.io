@@ -14,7 +14,7 @@ sidebar:
   🏫 경희대학교<br>
   📝 전자공학과<br>
   🎓 4학년<br>
-  💼 학생입니다.
+  💼 학생입니다.<br>
 </div>
 
 <div class = "div2" style="width:40%;" markdown="1">
@@ -22,7 +22,7 @@ sidebar:
   🏫 Kyunghee University<br>
   📝 Electronic Engineering<br>
   🎓 Senior<br>
-  💼 student.
+  💼 student.<br>
 </div>
 
 <br><br>
@@ -55,6 +55,9 @@ sidebar:
 </span>
 &nbsp;#6454ED|
 |:---:|:---:|:---:|:---:|:---:|
+
+| <a href="https://github.com/anuraghazra/github-readme-stats"><img align="center" src="https://github-readme-stats.vercel.app/api?username=anuraghazra&show_icons=true&include_all_commits=true&theme=buefy&hide_border=true" alt="Anurag's github stats" /></a> | <a href="https://github.com/anuraghazra/github-readme-stats"><img align="center" src="https://github-readme-stats.vercel.app/api/top-langs/?username=anuraghazra&layout=compact&theme=buefy&hide_border=true" /></a> |
+| ------------- | ------------- |
 
 ### 팔로우
 
