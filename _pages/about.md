@@ -37,27 +37,27 @@ Background
 <div class = "box" style="width:30px; display:inline-block;" markdown = "1">
   <span style="color:#252A34">■</span>
 </div>
-#252A34
+#252A34<br>
 Green 
 <div class = "box" style="width:30px;" markdown = "1">
   <span style="color:#24A091">■</span>
 </div>
-#24A091
+#24A091<br>
 Yellow 
 <div class = "box" style="width:30px;" markdown = "1">
   <span style="color:#D1F951">■</span>
 </div>
-#D1F951
+#D1F951<br>
 Red 
 <div class = "box" style="width:30px;" markdown = "1">
   <span style="color:#F0383B">■</span>
 </div>
-#F0383B
+<span style="color:#F0383B">#F0383B/span><br>
 Blue 
 <div class = "box" style="width:30px;" markdown = "1">
   <span style="color:#6454ED">■</span>
 </div>
-#6454ED
+<span style="color:#6454ED">#6454ED</span><br>
 
 ### 팔로우
 
