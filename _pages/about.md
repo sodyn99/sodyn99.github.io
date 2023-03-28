@@ -10,23 +10,21 @@ sidebar:
 ### About Me
 
 <div class = "div1" markdown="1">
-이성진<br><br>
-:school: 경희대학교<br>
-전자공학과<br>
-4학년<br>
-학생입니다.
+  이성진<br><br>
+  :school: 경희대학교<br>
+  전자공학과<br>
+  4학년<br>
+  학생입니다.
 </div>
 
 <div class = "div2" markdown="1">
-LEE SUNGJIN<br><br>
-:school: Kyunghee University<br>
-Electronic Engineering<br>
-Senior<br>
+  LEE SUNGJIN<br><br>
+  :school: Kyunghee University<br>
+  Electronic Engineering<br>
+  Senior<br>
 </div>
 
 <br><br>
-
----
 
 ### About BLog
 
@@ -34,7 +32,7 @@ Senior<br>
 [IBM Plex Sans KR](https://fonts.google.com/specimen/IBM+Plex+Sans+KR)
 
 --- color ---<br>
-<div class = "box" markdown = "1" style="width:10px;">
+<div class = "box" allign="center" style="width:15px;height:15px;" markdown = "1">
 <span style="color:#252A34">■</span>
 </div>
 <span style="color:#24A091">■</span>
