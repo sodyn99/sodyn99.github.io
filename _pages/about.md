@@ -14,7 +14,7 @@ sidebar:
   🏫 경희대학교<br>
   📝 전자공학과<br>
   🎓 4학년<br>
-  💼 학생입니다.<br>
+  💼 학생입니다.<br><br>
 </div>
 
 <div class = "div2" markdown="1">
@@ -22,7 +22,7 @@ sidebar:
   🏫 Kyunghee University<br>
   📝 Electronic Engineering<br>
   🎓 Senior<br>
-  💼 Student.<br>
+  💼 Student.<br><br>
 </div>
 
 <br><br>
