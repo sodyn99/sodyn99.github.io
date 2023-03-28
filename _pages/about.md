@@ -29,24 +29,24 @@ sidebar:
 
 ## About BLog
 
-### font <br>
+### font
 [IBM Plex Sans KR](https://fonts.google.com/specimen/IBM+Plex+Sans+KR)
 
-### color <br>
+### color
 <div class = "box" style="width:30px;" markdown = "1">
-  <span style="color:#252A34">■ #252A34</span> 
+  Background | <span style="color:#252A34">■ #252A34</span> 
 </div>
 <div class = "box" style="width:30px;" markdown = "1">
-  <span style="color:#24A091">■ #24A091</span>
+  Green | <span style="color:#24A091">■ #24A091</span>
 </div>
 <div class = "box" style="width:30px;" markdown = "1">
-  <span style="color:#D1F951">■ #D1F951</span>
+  Yellow | <span style="color:#D1F951">■ #D1F951</span>
 </div>
 <div class = "box" style="width:30px;" markdown = "1">
-  <span style="color:#F0383B">■ #F0383B</span>
+  Red | <span style="color:#F0383B">■ #F0383B</span>
 </div>
 <div class = "box" style="width:20px;height:20px;" markdown = "1">
-  <span style="color:#6454ED">■ #6454ED</span>
+  Blue | <span style="color:#6454ED">■ #6454ED</span>
 </div>
 
 ### 팔로우
