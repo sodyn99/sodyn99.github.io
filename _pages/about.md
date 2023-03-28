@@ -38,7 +38,8 @@ sidebar:
 <span style="color:#24A091">■</span>
 <span style="color:#D1F951">■</span>
 <span style="color:#F0383B">■</span>
-<span style="color:#6454ED">■</span>
+<div class = "box" allign="center" style="width:20px;height:20px;" markdown = "1">
+  <span style="color:#6454ED">■</span>
 </div>
 
 ### 팔로우
