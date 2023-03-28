@@ -33,31 +33,31 @@ sidebar:
 [IBM Plex Sans KR](https://fonts.google.com/specimen/IBM+Plex+Sans+KR)
 
 ### color
-Background 
-<span class = "box" style="display: inline-block; width: 35px; text-align: right;" markdown = "1">
+Background&nbsp;
+<span class = "box" style="display: inline-block; width: 30px; text-align: right;" markdown = "1">
   <span style="color:#252A34">■</span>
 </span>
-#252A34<br>
-Green 
-<span class = "box" style="display: inline-block; width: 35px; text-align: right;" markdown = "1">
+&nbsp;#252A34<br>
+Green&nbsp;
+<span class = "box" style="display: inline-block; width: 30px; text-align: right;" markdown = "1">
   <span style="color:#24A091">■</span>
 </span>
-#24A091<br>
-Yellow 
-<span class = "box" style="display: inline-block; width: 35px; text-align: right;" markdown = "1">
+&nbsp;#24A091<br>
+Yellow&nbsp;
+<span class = "box" style="display: inline-block; width: 30px; text-align: right;" markdown = "1">
   <span style="color:#D1F951">■</span>
 </span>
-#D1F951<br>
-Red 
-<span class = "box" style="display: inline-block; width: 35px; text-align: right;" markdown = "1">
+&nbsp;#D1F951<br>
+Red&nbsp;
+<span class = "box" style="display: inline-block; width: 30px; text-align: right;" markdown = "1">
   <span style="color:#F0383B">■</span>
 </span>
 #F0383B<br>
-Blue 
-<span class = "box" style="display: inline-block; width: 35px; text-align: right;" markdown = "1">
+Blue&nbsp;
+<span class = "box" style="display: inline-block; width: 30px; text-align: right;" markdown = "1">
   <span style="color:#6454ED">■</span>
 </span>
-#6454ED<br>
+&nbsp;#6454ED<br>
 
 ### 팔로우
 
