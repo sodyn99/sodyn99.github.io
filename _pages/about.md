@@ -34,30 +34,30 @@ sidebar:
 
 ### color
 Background 
-<span class = "box" style="width:30px;" markdown = "1">
+<span class = "box" style="display: inline-block; width: 35px; text-align: right;" markdown = "1">
   <span style="color:#252A34">■</span>
 </span>
 #252A34<br>
 Green 
-<div class = "box" style="width:30px;" markdown = "1">
+<span class = "box" style="display: inline-block; width: 35px; text-align: right;" markdown = "1">
   <span style="color:#24A091">■</span>
-</div>
+</span>
 #24A091<br>
 Yellow 
-<div class = "box" style="width:30px;" markdown = "1">
+<span class = "box" style="display: inline-block; width: 35px; text-align: right;" markdown = "1">
   <span style="color:#D1F951">■</span>
-</div>
+</span>
 #D1F951<br>
 Red 
-<div class = "box" style="width:30px;" markdown = "1">
+<span class = "box" style="display: inline-block; width: 35px; text-align: right;" markdown = "1">
   <span style="color:#F0383B">■</span>
-</div>
-<span style="color:#F0383B">#F0383B/span><br>
+</span>
+#F0383B<br>
 Blue 
-<div class = "box" style="width:30px;" markdown = "1">
+<span class = "box" style="display: inline-block; width: 35px; text-align: right;" markdown = "1">
   <span style="color:#6454ED">■</span>
-</div>
-<span style="color:#6454ED">#6454ED</span><br>
+</span>
+#6454ED<br>
 
 ### 팔로우
 
