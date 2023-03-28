@@ -38,18 +38,26 @@ Background |
   <span style="color:#252A34">■</span>
 </div>
 #252A34
+Green | 
 <div class = "box" style="width:30px;" markdown = "1">
-  Green | <span style="color:#24A091">■</span>#24A091
+  <span style="color:#24A091">■</span>
 </div>
+#24A091
+Yellow | 
 <div class = "box" style="width:30px;" markdown = "1">
-  Yellow | <span style="color:#D1F951">■</span>#D1F951
+  <span style="color:#D1F951">■</span>
 </div>
+#D1F951
+Red | 
 <div class = "box" style="width:30px;" markdown = "1">
-  Red | <span style="color:#F0383B">■</span>#F0383B
+  <span style="color:#F0383B">■</span>
 </div>
+#F0383B
+Blue | 
 <div class = "box" style="width:30px;" markdown = "1">
-  Blue | <span style="color:#6454ED">■</span>#6454ED
+  <span style="color:#6454ED">■</span>
 </div>
+#6454ED
 
 ### 팔로우
 
