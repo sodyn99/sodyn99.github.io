@@ -7,7 +7,7 @@ sidebar:
   nav: home
 ---
 
-### About Me
+## About Me
 
 <div class = "div1" markdown="1">
   이성진<br><br>
@@ -26,12 +26,12 @@ sidebar:
 
 <br><br>
 
-### About BLog
+## About BLog
 
---- font ---<br>
+### font <br>
 [IBM Plex Sans KR](https://fonts.google.com/specimen/IBM+Plex+Sans+KR)
 
---- color ---<br>
+### color <br>
 <div class = "box" allign="center" style="width:20px;height:20px;" markdown = "1">
   <span style="color:#252A34">■</span>
 </div>
