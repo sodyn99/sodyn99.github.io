@@ -34,19 +34,19 @@ sidebar:
 
 ### color
 <div class = "box" style="width:30px;" markdown = "1">
-  Background | <span style="color:#252A34">■ #252A34</span> 
+  Background | <span style="color:#252A34">■</span> #252A34
 </div>
 <div class = "box" style="width:30px;" markdown = "1">
-  Green | <span style="color:#24A091">■ #24A091</span>
+  Green | <span style="color:#24A091">■</span>#24A091
 </div>
 <div class = "box" style="width:30px;" markdown = "1">
-  Yellow | <span style="color:#D1F951">■ #D1F951</span>
+  Yellow | <span style="color:#D1F951">■</span>#D1F951
 </div>
 <div class = "box" style="width:30px;" markdown = "1">
-  Red | <span style="color:#F0383B">■ #F0383B</span>
+  Red | <span style="color:#F0383B">■</span>#F0383B
 </div>
 <div class = "box" style="width:20px;height:20px;" markdown = "1">
-  Blue | <span style="color:#6454ED">■ #6454ED</span>
+  Blue | <span style="color:#6454ED">■</span>#6454ED
 </div>
 
 ### 팔로우
