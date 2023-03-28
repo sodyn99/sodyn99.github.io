@@ -34,27 +34,27 @@ sidebar:
 
 ### color
 Background&nbsp;
-<span class = "box" style="display: inline-block; width: 30px; text-align: right;" markdown = "1">
+<span class = "box" style="display: inline-block; width: 25px; text-align: right;" markdown = "1">
   <span style="color:#252A34">■</span>
 </span>
 &nbsp;#252A34<br>
 Green&nbsp;
-<span class = "box" style="display: inline-block; width: 30px; text-align: right;" markdown = "1">
+<span class = "box" style="display: inline-block; width: 25px; text-align: right;" markdown = "1">
   <span style="color:#24A091">■</span>
 </span>
 &nbsp;#24A091<br>
 Yellow&nbsp;
-<span class = "box" style="display: inline-block; width: 30px; text-align: right;" markdown = "1">
+<span class = "box" style="display: inline-block; width: 25px; text-align: right;" markdown = "1">
   <span style="color:#D1F951">■</span>
 </span>
 &nbsp;#D1F951<br>
 Red&nbsp;
-<span class = "box" style="display: inline-block; width: 30px; text-align: right;" markdown = "1">
+<span class = "box" style="display: inline-block; width: 25px; text-align: right;" markdown = "1">
   <span style="color:#F0383B">■</span>
 </span>
 #F0383B<br>
 Blue&nbsp;
-<span class = "box" style="display: inline-block; width: 30px; text-align: right;" markdown = "1">
+<span class = "box" style="display: inline-block; width: 25px; text-align: right;" markdown = "1">
   <span style="color:#6454ED">■</span>
 </span>
 &nbsp;#6454ED<br>
