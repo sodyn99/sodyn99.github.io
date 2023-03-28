@@ -33,26 +33,26 @@ sidebar:
 [IBM Plex Sans KR](https://fonts.google.com/specimen/IBM+Plex+Sans+KR)
 
 ### 🎨 Color
-<p>Background&nbsp;
+<p>
 <span class = "box" style="display: inline-block; width: 25px; text-align: center;" markdown = "1">
   <span style="color:#252A34">■</span>
-&nbsp;#252A34</p>
-<p>Green&nbsp;
+&nbsp;#252A34&nbsp;Background</p>
+<p>
 <span class = "box" style="display: inline-block; width: 25px; text-align: center;" markdown = "1">
   <span style="color:#24A091">■</span>
-&nbsp;#24A091</p>
-<p>Yellow&nbsp;
+&nbsp;#24A091&nbsp;Green</p>
+<p>
 <span class = "box" style="display: inline-block; width: 25px; text-align: center;" markdown = "1">
   <span style="color:#D1F951">■</span>
-&nbsp;#D1F951</p>
-<p>Red&nbsp;
+&nbsp;#D1F951&nbsp;Yellow</p>
+<p>
 <span class = "box" style="display: inline-block; width: 25px; text-align: center;" markdown = "1">
   <span style="color:#F0383B">■</span>
-&nbsp;#F0383B</p>
-<p>Blue&nbsp;
+&nbsp;#F0383B&nbsp;Red</p>
+<p>
 <span class = "box" style="display: inline-block; width: 25px; text-align: center;" markdown = "1">
   <span style="color:#6454ED">■</span>
-&nbsp;#6454ED</p>
+&nbsp;#6454ED&nbsp;Blue</p>
 
 
 ### 팔로우
