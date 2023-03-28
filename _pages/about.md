@@ -11,7 +11,7 @@ sidebar:
 
 <div class = "div1" markdown="1">
   이성진<br><br>
-  :school: 경희대학교<br>
+  🏫 경희대학교<br>
   전자공학과<br>
   4학년<br>
   학생입니다.
@@ -19,7 +19,7 @@ sidebar:
 
 <div class = "div2" markdown="1">
   LEE SUNGJIN<br><br>
-  :school: Kyunghee University<br>
+  🏫 Kyunghee University<br>
   Electronic Engineering<br>
   Senior<br>
   student.
