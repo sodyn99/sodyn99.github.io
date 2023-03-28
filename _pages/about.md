@@ -7,7 +7,7 @@ sidebar:
   nav: home
 ---
 
-![Profile](images/account.png)
+![Profile](/images/account.png)
 
 ## About Me
 
