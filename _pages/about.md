@@ -34,9 +34,9 @@ sidebar:
 
 ### color
 Background 
-<div class = "box" style="width:30px; display:inline-block;" markdown = "1">
+<span class = "box" style="width:30px;" markdown = "1">
   <span style="color:#252A34">■</span>
-</div>
+</span>
 #252A34<br>
 Green 
 <div class = "box" style="width:30px;" markdown = "1">
