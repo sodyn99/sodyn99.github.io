@@ -7,6 +7,8 @@ sidebar:
   nav: home
 ---
 
+![]("images/account.png")
+
 ## About Me
 
 <div class = "div1" markdown="1">
