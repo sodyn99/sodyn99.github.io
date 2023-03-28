@@ -9,21 +9,21 @@ sidebar:
 
 ## About Me
 
-<div class = "div1" style="width:40%;" markdown="1">
+<span class = "div1" markdown="1">
   👤 이성진<br><br>
   🏫 경희대학교<br>
   📝 전자공학과<br>
   🎓 4학년<br>
   💼 학생입니다.<br>
-</div>
+</span>
 
-<div class = "div2" style="width:40%;" markdown="1">
+<span class = "div2" markdown="1">
   👤 LEE SUNGJIN<br><br>
   🏫 Kyunghee University<br>
   📝 Electronic Engineering<br>
   🎓 Senior<br>
   💼 student.<br>
-</div>
+</span>
 
 <br><br>
 
