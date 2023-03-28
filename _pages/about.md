@@ -27,7 +27,24 @@ sidebar:
   🎓 Senior<br>
   💼 Student.<br><br>
 </div>
+### Contact
 
+<a href="https://github.com/asungajinli" itemprop="sameAs" rel="nofollow noopener noreferrer me">
+  <i class="fab fa-fw fa-github" aria-hidden="true"></i>
+</a>
+&nbsp;&nbsp;
+<a href="https://instagram.com/s_din.99" itemprop="sameAs" rel="nofollow noopener noreferrer me">
+  <i class="fab fa-fw fa-instagram" aria-hidden="true"></i>
+</a>
+&nbsp;&nbsp;
+<a href="https://www.linkedin.com/in/asungajinli" itemprop="sameAs" rel="nofollow noopener noreferrer me">
+  <i class="fab fa-fw fa-linkedin" aria-hidden="true"></i>
+</a>
+&nbsp;&nbsp;
+<a href="mailto:ssjj3552@gmail.com" rel="me" class="u-email">
+  <meta itemprop="email" content="ssjj3552@gmail.com" />
+  <i class="fas fa-fw fa-envelope-square" aria-hidden="true"></i>
+</a>
 <br><br>
 
 
@@ -56,25 +73,5 @@ sidebar:
 <span class = "box" style="display: inline-block; width: 25px; text-align: center;" markdown = "1">
   <span style="color:#6454ED">■</span>
 &nbsp;#6454ED&nbsp;&nbsp;|&nbsp;&nbsp;Blue</p>
-
-
-### 팔로우
-
-<a href="https://github.com/asungajinli" itemprop="sameAs" rel="nofollow noopener noreferrer me">
-  <i class="fab fa-fw fa-github" aria-hidden="true"></i>
-</a>
-&nbsp;&nbsp;
-<a href="https://instagram.com/s_din.99" itemprop="sameAs" rel="nofollow noopener noreferrer me">
-  <i class="fab fa-fw fa-instagram" aria-hidden="true"></i>
-</a>
-&nbsp;&nbsp;
-<a href="https://www.linkedin.com/in/asungajinli" itemprop="sameAs" rel="nofollow noopener noreferrer me">
-  <i class="fab fa-fw fa-linkedin" aria-hidden="true"></i>
-</a>
-&nbsp;&nbsp;
-<a href="mailto:ssjj3552@gmail.com" rel="me" class="u-email">
-  <meta itemprop="email" content="ssjj3552@gmail.com" />
-  <i class="fas fa-fw fa-envelope-square" aria-hidden="true"></i>
-</a>
 
 ---
