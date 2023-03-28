@@ -22,7 +22,7 @@ sidebar:
   🏫 Kyunghee University<br>
   📝 Electronic Engineering<br>
   🎓 Senior<br>
-  💼 student.<br>
+  💼 Student.<br>
 </div>
 
 <br><br>
@@ -33,33 +33,32 @@ sidebar:
 [IBM Plex Sans KR](https://fonts.google.com/specimen/IBM+Plex+Sans+KR)
 
 ### 🎨 Color
-|Background&nbsp;
+<p>Background&nbsp;
 <span class = "box" style="display: inline-block; width: 25px; text-align: center;" markdown = "1">
   <span style="color:#252A34">■</span>
 </span>
-&nbsp;#252A34|Green&nbsp;
+&nbsp;#252A34</p>
+<p>Green&nbsp;
 <span class = "box" style="display: inline-block; width: 25px; text-align: center;" markdown = "1">
   <span style="color:#24A091">■</span>
 </span>
-&nbsp;#24A091|Yellow&nbsp;
+&nbsp;#24A091</p>
+<p>Yellow&nbsp;
 <span class = "box" style="display: inline-block; width: 25px; text-align: center;" markdown = "1">
   <span style="color:#D1F951">■</span>
 </span>
-&nbsp;#D1F951|Red&nbsp;
+&nbsp;#D1F951</p>
+<p>Red&nbsp;
 <span class = "box" style="display: inline-block; width: 25px; text-align: center;" markdown = "1">
   <span style="color:#F0383B">■</span>
 </span>
-#F0383B|Blue&nbsp;
+&nbsp;#F0383B</p>
+<p>Blue&nbsp;
 <span class = "box" style="display: inline-block; width: 25px; text-align: center;" markdown = "1">
   <span style="color:#6454ED">■</span>
 </span>
-&nbsp;#6454ED|
-|:---:|:---:|:---:|:---:|:---:|
+&nbsp;#6454ED</p>
 
-
-
-| <a href="https://github.com/anuraghazra/github-readme-stats"><img align="center" src="https://github-readme-stats.vercel.app/api?username=anuraghazra&show_icons=true&include_all_commits=true&theme=buefy&hide_border=true" alt="Anurag's github stats" /></a> | <a href="https://github.com/anuraghazra/github-readme-stats"><img align="center" src="https://github-readme-stats.vercel.app/api/top-langs/?username=anuraghazra&layout=compact&theme=buefy&hide_border=true" /></a> |
-| ------------- | ------------- |
 
 ### 팔로우
 
