@@ -33,7 +33,7 @@ sidebar:
 [IBM Plex Sans KR](https://fonts.google.com/specimen/IBM+Plex+Sans+KR)
 
 ### color <br>
-<div class = "box" style="width:20px;height:20px;" markdown = "1">
+<div class = "box" style="width:20px;" markdown = "1">
   <span style="color:#252A34">■</span>
 </div>
 <span style="color:#24A091">■</span>
