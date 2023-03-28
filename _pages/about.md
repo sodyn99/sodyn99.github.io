@@ -27,7 +27,8 @@ sidebar:
   🎓 Senior<br>
   💼 Student.<br><br>
 </div>
-### Contact
+
+#### Contact
 
 <a href="https://github.com/asungajinli" itemprop="sameAs" rel="nofollow noopener noreferrer me">
   <i class="fab fa-fw fa-github" aria-hidden="true"></i>
@@ -41,8 +42,7 @@ sidebar:
   <i class="fab fa-fw fa-linkedin" aria-hidden="true"></i>
 </a>
 &nbsp;&nbsp;
-<a href="mailto:ssjj3552@gmail.com" rel="me" class="u-email">
-  <meta itemprop="email" content="ssjj3552@gmail.com" />
+<a href="mailto:ssjj3552@gmail.com" itemprop="email" rel="me">
   <i class="fas fa-fw fa-envelope-square" aria-hidden="true"></i>
 </a>
 <br><br>
