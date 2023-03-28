@@ -7,6 +7,7 @@ sidebar:
   nav: home
 ---
 
+<br><br>
 ![Profile](/images/account.png)
 
 ## About Me
