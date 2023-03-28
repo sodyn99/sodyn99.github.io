@@ -45,7 +45,7 @@ sidebar:
 <div class = "box" style="width:30px;" markdown = "1">
   Red | <span style="color:#F0383B">■</span>#F0383B
 </div>
-<div class = "box" style="width:20px;height:20px;" markdown = "1">
+<div class = "box" style="width:30px;" markdown = "1">
   Blue | <span style="color:#6454ED">■</span>#6454ED
 </div>
 
