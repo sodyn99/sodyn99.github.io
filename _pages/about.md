@@ -34,8 +34,9 @@ Senior<br>
 [IBM Plex Sans KR](https://fonts.google.com/specimen/IBM+Plex+Sans+KR)
 
 --- color ---<br>
-<div class = "box" markdown = "1">
+<div class = "box" markdown = "1" style="width:10px;">
 <span style="color:#252A34">■</span>
+</div>
 <span style="color:#24A091">■</span>
 <span style="color:#D1F951">■</span>
 <span style="color:#F0383B">■</span>
