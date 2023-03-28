@@ -10,7 +10,7 @@ sidebar:
 ![Profile](/images/account.png)
 
 ## About Me
-
+<br>
 <div class = "div1" markdown="1">
   👤 이성진<br><br>
   🏫 경희대학교<br>
