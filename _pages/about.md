@@ -29,7 +29,7 @@ sidebar:
 
 ## About BLog
 
-### font
+### :school: font
 [IBM Plex Sans KR](https://fonts.google.com/specimen/IBM+Plex+Sans+KR)
 
 ### color
