@@ -22,6 +22,7 @@ sidebar:
   :school: Kyunghee University<br>
   Electronic Engineering<br>
   Senior<br>
+  student.
 </div>
 
 <br><br>
