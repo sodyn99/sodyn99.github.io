@@ -29,31 +29,27 @@ sidebar:
 
 ## About BLog
 
-### :school: font
+### 🅰️ font
 [IBM Plex Sans KR](https://fonts.google.com/specimen/IBM+Plex+Sans+KR)
 
-### color
+### 🎨 color
 |Background&nbsp;
 <span class = "box" style="display: inline-block; width: 25px; text-align: center;" markdown = "1">
   <span style="color:#252A34">■</span>
 </span>
-&nbsp;#252A34
-|Green&nbsp;
+&nbsp;#252A34|Green&nbsp;
 <span class = "box" style="display: inline-block; width: 25px; text-align: center;" markdown = "1">
   <span style="color:#24A091">■</span>
 </span>
-&nbsp;#24A091
-|Yellow&nbsp;
+&nbsp;#24A091|Yellow&nbsp;
 <span class = "box" style="display: inline-block; width: 25px; text-align: center;" markdown = "1">
   <span style="color:#D1F951">■</span>
 </span>
-&nbsp;#D1F951
-|Red&nbsp;
+&nbsp;#D1F951|Red&nbsp;
 <span class = "box" style="display: inline-block; width: 25px; text-align: center;" markdown = "1">
   <span style="color:#F0383B">■</span>
 </span>
-#F0383B
-|Blue&nbsp;
+#F0383B|Blue&nbsp;
 <span class = "box" style="display: inline-block; width: 25px; text-align: center;" markdown = "1">
   <span style="color:#6454ED">■</span>
 </span>
