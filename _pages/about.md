@@ -31,10 +31,10 @@ sidebar:
 
 
 ## About Blog
-### 🅰️ Font
+#### 🅰️ Font
 [IBM Plex Sans KR](https://fonts.google.com/specimen/IBM+Plex+Sans+KR)
 
-### 🎨 Color
+#### 🎨 Color
 <p>
 <span class = "box" style="display: inline-block; width: 25px; text-align: center;" markdown = "1">
   <span style="color:#252A34">■</span>
