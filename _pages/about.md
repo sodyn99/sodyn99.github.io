@@ -13,7 +13,7 @@ sidebar:
 이성진<br><br>
 :school: 경희대학교<br>
 전자공학과<br>
-4학년 (Senior)<br>
+4학년<br>
 학생입니다.
 </div>
 
@@ -32,9 +32,13 @@ Senior<br>
 [IBM Plex Sans KR](https://fonts.google.com/specimen/IBM+Plex+Sans+KR)
 
 --- color ---<br>
+<div class = "box" markdown = "1">
 <span style="color:#252A34">■</span>
-<span style="color:#252A34">■</span>
-■
+<span style="color:#24A091">■</span>
+<span style="color:#D1F951">■</span>
+<span style="color:#F0383B">■</span>
+<span style="color:#6454ED">■</span>
+</div>
 
 ### 팔로우
 
