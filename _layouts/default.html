@@ -10,8 +10,6 @@
 -->
 <html lang="{{ site.locale | slice: 0,2 | default: "en" }}" class="no-js">
   <head>
-    {% include head.html %}
-    {% include head/custom.html %}
     <style> 
       ::-webkit-scrollbar{width: 10px;}
       ::-webkit-scrollbar-track {background-color:#404040; border-radius: 10px;}
@@ -37,6 +35,8 @@
         text-align: center
       }
     </style>
+    {% include head.html %}
+    {% include head/custom.html %}
   </head>
 
   <body class="layout--{{ page.layout | default: layout.layout }}{% if page.classes or layout.classes %}{{ page.classes | default: layout.classes | join: ' ' | prepend: ' ' }}{% endif %}">
