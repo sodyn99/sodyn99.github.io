@@ -6,7 +6,8 @@ on:
 
 jobs:
   close-pr:
-    runs-on: ubuntu-latest
+    #runs-on: ubuntu-latest
+    runs-om: ${{ fromJSON('["ubuntu-latest", "self-hosted"]')[github.repository == 'github/docs-internal'] }}
     if: "contains(github.event.pull_request.body, 'by deleting this comment block') || github.event.pull_request.body == ''"
     steps:
       - uses: actions-ecosystem/action-add-labels@v1
