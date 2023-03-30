@@ -134,4 +134,7 @@ aws:
       - title: "IAM"
         index: "2.2"
         url: /study/aws/aws-2.2/
+      - title: "EC2"
+        index: "2.3"
+        url: /study/aws/aws-2.3/
   
