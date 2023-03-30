@@ -63,7 +63,7 @@ $lighter-gray: mix(#fff, $gray, 90%) !default;
 
 $background-color: #fff !default;
 $code-background-color: #fafafa !default;
-$code-background-color-dark: $light-gray !default;
+$code-background-color-dark: #E2E4F2; //$light-gray !default;
 $text-color: $dark-gray !default;
 $muted-text-color: mix(#fff, $text-color, 20%) !default;
 $border-color: $lighter-gray !default;
