@@ -15,7 +15,7 @@ home:
         icon: "fab fa-aws"
         url: /study/aws/aws-1.1/
       - title: "JavaScript"
-        icon: "fab fa-aws"
+        icon: "fab fa-java"
         url: /study/java/java-1.1/
   - title: "Sports"
     icon: "fas fa-table-tennis"
