@@ -159,3 +159,9 @@ java:
       - title: "변수"
         index: "2.2"
         url: /study/javascript/java-2.2/
+      - title: "주석, 줄바꿈, 여백"
+        index: "2.3"
+        url: /study/javascript/java-2.3/
+      - title: "연산자"
+        index: "2.4"
+        url: /study/javascript/java-2.4/
