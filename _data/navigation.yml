@@ -147,15 +147,15 @@ java:
     children:
       - title: "Introduction"
         index: "1.1"
-        url: /study/java/java-1.1/
+        url: /study/javascript/java-1.1/
       - title: "실행과 실습"
         index: "1.2"
-        url: /study/java/java-1.2/
+        url: /study/javascript/java-1.2/
   - title: "2. 문법"
     children:
       - title: "숫자와 문자"
         index: "2.1"
-        url: /study/java/java-2.1/
+        url: /study/javascript/java-2.1/
       - title: "변수"
         index: "2.2"
-        url: /study/java/java-2.2/
+        url: /study/javascript/java-2.2/
