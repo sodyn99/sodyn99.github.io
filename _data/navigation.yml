@@ -145,17 +145,17 @@ aws:
 java:
   - title: "1. 시작"
     children:
-      - title: "실행과 실습"
+      - title: "Introduction"
         index: "1.1"
         url: /study/java/java-1.1/
-      - title: "About"
+      - title: "실행과 실습"
         index: "1.2"
         url: /study/java/java-1.2/
-      - title: "4G vs 5G"
-        index: "1.3"
-        url: /study/java/java-1.3/
-  - title: "2. 5G RESOURCE ALLOCATION"
+  - title: "2. 문법"
     children:
-      - title: "5G Resource Allocation"
+      - title: "숫자와 문자"
         index: "2.1"
         url: /study/java/java-2.1/
+      - title: "변수"
+        index: "2.2"
+        url: /study/java/java-2.2/
