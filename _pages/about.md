@@ -55,8 +55,8 @@ sidebar:
 #### 🎨&nbsp;Color
 <p>
 <span class = "box" style="display: inline-block; width: 25px; text-align: center;" markdown = "1">
-  <span style="color:#252A34">■</span>
-&nbsp;#252A34&nbsp;&nbsp;|&nbsp;&nbsp;Background</p>
+  <span style="color:#1C192B">■</span>
+&nbsp;#1C192B&nbsp;&nbsp;|&nbsp;&nbsp;Background</p>
 <p>
 <span class = "box" style="display: inline-block; width: 25px; text-align: center;" markdown = "1">
   <span style="color:#24A091">■</span>
