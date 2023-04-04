@@ -8,10 +8,10 @@ Minimal Mistakes
 
 #### 🎨&nbsp;Color
 
-<span style="color:#1C192B">■</span>
+![#1C192B]()
 &nbsp;#1C192B&nbsp;&nbsp;|&nbsp;&nbsp;Background<br>
 
-<span style="color:#24A091">■</span>
+![#24A091](https://placehold.co/15x15/24A091/24A091.png)
 &nbsp;#24A091&nbsp;&nbsp;|&nbsp;&nbsp;Green<br>
 
 <span style="color:#D1F951">■</span>
