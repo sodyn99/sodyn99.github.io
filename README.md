@@ -1,6 +1,6 @@
 # [Asungajinli's Blog](https://asungajinli.github.io)
 
-## Blog Theme
+## 🌱&nbsp;Blog Theme
 Minimal Mistakes
 
 ## 🅰️&nbsp;Font
@@ -22,3 +22,16 @@ Minimal Mistakes
 
 ![#6454ED](https://placehold.co/15x15/6454ED/6454ED.png)
 &nbsp;#6454ED&nbsp;&nbsp;|&nbsp;&nbsp;Blue&nbsp;(LCK Blue)<br>
+
+## 📃&nbsp;Contents
+- Study
+  - 4G LTE (unfinished)
+  - 5G NR (unfinished)
+  - O-RAN (unfinished)
+  - AWS (unfinished)
+  - JavaScript (unfinished)
+  - Drone (unfinished)
+- Sports
+  - ~~Football~~
+  - ~~Esports~~
+**Updating content daily**
