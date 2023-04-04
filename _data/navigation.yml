@@ -220,6 +220,24 @@ java:
       - title: "this"
         index: "4.4"
         url: /study/javascript/java-4.4/
+      - title: "상속"
+        index: "4.5"
+        url: /study/javascript/java-4.5/
+      - title: "prototype"
+        index: "4.6"
+        url: /study/javascript/java-4.6/
+      - title: "표준 내장 객체의 확장"
+        index: "4.7"
+        url: /study/javascript/java-4.7/
+      - title: "object"
+        index: "4.8"
+        url: /study/javascript/java-4.8/
+      - title: "데이터 타입"
+        index: "4.9"
+        url: /study/javascript/java-4.9/
+      - title: "참조"
+        index: "4.10"
+        url: /study/javascript/java-4.10/
 
 ############ Drone ####################
 drone:
