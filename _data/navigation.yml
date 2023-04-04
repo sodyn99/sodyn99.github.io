@@ -17,6 +17,9 @@ home:
       - title: "JavaScript"
         icon: "fab fa-java"
         url: /study/javascript/java-1.1/
+      - title: "Drone"
+        icon: "fas fa-plane"
+        url: /study/drone/drone-1.1/
   - title: "Sports"
     icon: "fas fa-table-tennis"
     children:
