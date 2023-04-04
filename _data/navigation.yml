@@ -252,7 +252,7 @@ drone:
       - title: "드론 특강 2"
         index: "1.2"
         url: /study/drone/drone-1.2/
-  - title: "2. 5G RESOURCE ALLOCATION"
+  - title: "2. [프로젝트]드론 관제를 위한 GCS 운영 및 제어시스템 개발"
     children:
       - title: "5G Resource Allocation"
         index: "2.1"
