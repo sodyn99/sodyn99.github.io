@@ -3,10 +3,10 @@
 ## Blog Theme
 Minimal Mistakes
 
-#### 🅰️&nbsp;Font
+## 🅰️&nbsp;Font
 [IBM Plex Sans KR](https://fonts.google.com/specimen/IBM+Plex+Sans+KR)
 
-#### 🎨&nbsp;Color
+## 🎨&nbsp;Color
 
 ![#1C192B](https://placehold.co/5x5/1C192B/1C192B.png)
 &nbsp;#1C192B&nbsp;&nbsp;|&nbsp;&nbsp;Background<br>
