@@ -255,11 +255,7 @@ drone:
       - title: "드론 제어 시스템"
         index: "1.3"
         url: /study/drone/drone-1.3/
-  - title: "2. [프로젝트] 드론 관제를 위한 GCS 운영 및 제어시스템 개발"
-    children:
-      - title: "5G Resource Allocation"
-        index: "2.1"
-        url: /study/drone/drone-2.1/
+
 
 
 
