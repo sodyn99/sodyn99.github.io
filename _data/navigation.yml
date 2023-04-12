@@ -15,10 +15,10 @@ home:
         icon: "fas fa-plane"
         url: /study/drone/drone-1.1/
       - title: "AWS"
-        icon: "fab fa-aws"
+        icon: "fas fa-aws"
         url: /study/aws/aws-1.1/
       - title: "JavaScript"
-        icon: "fab fa-java"
+        icon: "fas fa-java"
         url: /study/javascript/java-1.1/
   - title: "Sports"
     icon: "fas fa-table-tennis"
