@@ -24,7 +24,7 @@
           {% for child in nav.children %}
             {% if child.icon %}
               <li>
-                <span class="nav__sub-2-title"></span> <br> &nbsp;&nbsp;
+                <span style="font-weight:bold" class="nav__sub-2-title"></span> <br> &nbsp;&nbsp;
                   <a href="{{ child.url | relative_url }}"{% if child.url == page.url %} class="active"{% endif %}>
                     <i class="{{ child.icon | default: 'fas fa-circle' }}" aria-hidden="true">&nbsp;{{ child.title }}</i>
                   </a>
