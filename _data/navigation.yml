@@ -76,13 +76,13 @@ o-ran:
       - title: "High Data Rates"
         index: "2.1"
         url: /study/4g_lte/4g_lte-2.1/
-      - title: "Power Limited Scenarios"
+      - title: "Power Limi..."
         index: "2.2"
         url: /study/4g_lte/4g_lte-2.2/
-      - title: "Bandwidth Limited Scenarios"
+      - title: "Bandwidth ..."
         index: "2.3"
         url: /study/4g_lte/4g_lte-2.3/
-      - title: "Multi-Carrier Transmission"
+      - title: "Multi-Carri..."
         index: "2.4"
         url: /study/4g_lte/4g_lte-2.4/
   - title: "3. OFDM"
@@ -90,7 +90,7 @@ o-ran:
       - title: "Concept"
         index: "3.1"
         url: /study/4g_lte/4g_lte-3.1/
-      - title: "OFDM Implementation"
+      - title: "OFDM Impleme..."
         index: "3.2"
         url: /study/4g_lte/4g_lte-3.2/
       - title: "Problem 1"
