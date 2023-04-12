@@ -57,7 +57,7 @@ Spoqa Han Sans Neo
 <p>
 <span class = "box" style="display: inline-block; width: 25px; text-align: center;" markdown = "1">
   <span style="color:#1C192B">■</span>
-&nbsp;#1C192B&nbsp;&nbsp;|&nbsp;&nbsp;Background</p>
+&nbsp;#1C192B&nbsp;&nbsp;|&nbsp;&nbsp;Text</p>
 <p>
 <span class = "box" style="display: inline-block; width: 25px; text-align: center;" markdown = "1">
   <span style="color:#24A091">■</span>
