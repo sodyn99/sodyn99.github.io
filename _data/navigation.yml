@@ -79,7 +79,7 @@ o-ran:
       - title: "Power Limited ..."
         index: "2.2"
         url: /study/4g_lte/4g_lte-2.2/
-      - title: "Bandwidth Limi..."
+      - title: "Bandwidth Lim..."
         index: "2.3"
         url: /study/4g_lte/4g_lte-2.3/
       - title: "Multi-Carrier ..."
