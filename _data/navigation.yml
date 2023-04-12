@@ -120,7 +120,7 @@ o-ran:
 aws:
   - title: "1. INTRO"
     children:
-      - title: "Cloud Computin..."
+      - title: "Cloud Computi..."
         index: "1.1"
         url: /study/aws/aws-1.1/
       - title: "가상화"
