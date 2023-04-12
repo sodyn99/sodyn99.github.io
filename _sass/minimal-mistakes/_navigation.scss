@@ -469,7 +469,9 @@
     -webkit-transition: 0.5s ease-in-out;
     transition: 0.5s ease-in-out;
     max-height: 9999px; /* exaggerate max-height to accommodate tall lists*/
-    overflow: visible;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
     opacity: 1;
     margin-top: 1em;
     -webkit-transform: translate(0, 0);
