@@ -54,7 +54,7 @@ o-ran:
         url: /study/o-ran/o_ran-1.1/
   - title: "2. 논문 리뷰"
     children:
-      - title: "Intelligence and Learning in O-RAN for Data-Driven NextG Cellular Networks"
+      - title: "Intelligence a..."
         index: "2.1"
         url: /study/o-ran/o_ran-2.1/
   - title: "3. 기타"
@@ -76,13 +76,13 @@ o-ran:
       - title: "High Data Rates"
         index: "2.1"
         url: /study/4g_lte/4g_lte-2.1/
-      - title: "Power Limit..."
+      - title: "Power Limited ..."
         index: "2.2"
         url: /study/4g_lte/4g_lte-2.2/
-      - title: "Bandwidth Li..."
+      - title: "Bandwidth Limi..."
         index: "2.3"
         url: /study/4g_lte/4g_lte-2.3/
-      - title: "Multi-Carrie..."
+      - title: "Multi-Carrier ..."
         index: "2.4"
         url: /study/4g_lte/4g_lte-2.4/
   - title: "3. OFDM"
@@ -211,7 +211,7 @@ java:
         url: /study/javascript/java-3.7/
   - title: "4. 객체지향프로그래밍"
     children:
-      - title: "객체지향프로그래밍"
+      - title: "객체지향프로..."
         index: "4.1"
         url: /study/javascript/java-4.1/
       - title: "생성자와 new"
@@ -229,7 +229,7 @@ java:
       - title: "prototype"
         index: "4.6"
         url: /study/javascript/java-4.6/
-      - title: "표준 내장 객체의 확장"
+      - title: "표준 내장 객..."
         index: "4.7"
         url: /study/javascript/java-4.7/
       - title: "object"
