@@ -3,10 +3,10 @@
    ========================================================================== */
 
 /* Colors */
-$background-color: #1C192B !default;
-$text-color: #F2F2F2 !default;
+$background-color: #ffffff !default;
+$text-color: #1C192B !default;
 $primary-color: #24A091 !default;
-$border-color: mix(#fff, $background-color, 20%) !default;
+$border-color: mix(#1C192B, $background-color, 20%) !default;
 $code-background-color: #404040;
 $code-background-color-dark: mix(#000, $background-color, 20%) !default;
 $form-background-color: mix(#000, $background-color, 15%) !default;
