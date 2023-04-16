@@ -57,6 +57,15 @@ o-ran:
       - title: "Intelligence a..."
         index: "2.1"
         url: /study/o-ran/o_ran-2.1/
+      - title: "ColO-RAN：D..."
+        index: "2.2"
+        url: /study/o-ran/o_ran-2.2/
+      - title: "Colosseum：L..."
+        index: "2.3"
+        url: /study/o-ran/o_ran-2.3/
+      - title: "OpenRAN Gym ..."
+        index: "2.4"
+        url: /study/o-ran/o_ran-2.4/
   - title: "3. 기타"
     children:
       - title: ""
