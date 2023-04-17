@@ -124,6 +124,7 @@
 .author__avatar {
   display: table-cell;
   vertical-align: top;
+  text-align: center;
   width: 36px;
   height: 36px;
 
@@ -134,7 +135,6 @@
   }
 
   img {
-    margin: auto;
     max-width: 110px;
     border-radius: 50%;
 
