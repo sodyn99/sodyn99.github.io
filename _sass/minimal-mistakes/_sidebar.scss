@@ -126,8 +126,6 @@
   vertical-align: top;
   width: 36px;
   height: 36px;
-  display: flex;
-  justify-content: center;
 
   @include breakpoint($large) {
     display: block;
@@ -136,6 +134,7 @@
   }
 
   img {
+    margin: auto;
     max-width: 110px;
     border-radius: 50%;
 
