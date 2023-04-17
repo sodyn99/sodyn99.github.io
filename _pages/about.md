@@ -52,8 +52,8 @@ Asungajinli
 
 ## About Blog
 #### 🅰️&nbsp;Font
-<!-- [IBM Plex Sans KR](https://fonts.google.com/specimen/IBM+Plex+Sans+KR) -->
-Spoqa Han Sans Neo
+[IBM Plex Sans KR](https://fonts.google.com/specimen/IBM+Plex+Sans+KR)
+<!--Spoqa Han Sans Neo-->
 
 #### 🎨&nbsp;Color
 <p>
