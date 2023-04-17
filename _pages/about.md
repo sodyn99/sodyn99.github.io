@@ -8,9 +8,9 @@ sidebar:
 ---
 
 <br><br>
-![Profile](/images/account.png)
-아성가진리
-Asungajinli
+![Profile](/images/account.png)  
+아성가진리  
+Asungajinli  
 
 ## About Me
 <p></p>
