@@ -8,7 +8,7 @@ sidebar:
 ---
 
 <br><br>
-![Profile](/images/account.png)  
+<p><img src="/images/account.png" width="50%" height="50%"></p>
 아성가진리  
 Asungajinli  
 
