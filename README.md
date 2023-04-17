@@ -4,7 +4,7 @@
 Minimal Mistakes
 
 ## 🅰️&nbsp;Font
-[IBM Plex Sans KR](https://fonts.google.com/specimen/IBM+Plex+Sans+KR)
+[Noto Sans KR](https://fonts.google.com/share?selection.family=Noto%20Sans%20KR:wght@100;300;400)
 
 ## 🎨&nbsp;Color
 
