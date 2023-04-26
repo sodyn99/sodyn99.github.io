@@ -272,7 +272,7 @@ drone:
 linux:
     - title: "1. Linux 기초"
       children:
-        - tittle: "Linux 소개"
+        - title: "Linux 소개"
           index: "1.1"
           url: /study/linux/linux-1.1/
         - title: "Linux 설치"
