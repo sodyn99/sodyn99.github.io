@@ -270,15 +270,15 @@ drone:
 
 ############ Orange Pi ####################
 linux:
-    - title: "Linux 기초"
+    - title: "1. Linux 기초"
       children:
-        - tittle: "Orange Pi"
+        - tittle: "Linux 소개"
           index: "1.1"
           url: /study/linux/linux-1.1/
-        - title: "Orange Pi 2"
+        - title: "Linux 설치"
           index: "1.2"
           url: /study/linux/linux_1.2/
-    - title: "Orange Pi"
+    - title: "2. Orange Pi"
       children:
         - title: "About"
           index: "2.1"
