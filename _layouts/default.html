@@ -75,7 +75,7 @@
       $(document).mousemove(function( event ) {
       //verticalAxis
       mouseY = event.pageY;
-      yAxis = (pageY/2-mouseY)/pageY*300; 
+      yAxis = (pageY-mouseY)/pageY*200; 
       //horizontalAxis
       mouseX = event.pageX / -pageX;
       xAxis = -mouseX * 100 - 100;
