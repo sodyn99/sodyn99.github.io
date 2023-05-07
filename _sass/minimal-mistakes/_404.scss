@@ -228,7 +228,6 @@
     .box__button {
       display: inline-block;
       position: relative;
-      background: $red;
       border: 1px solid transparent;
       border-radius: 10px;
       height: 50px;
@@ -265,6 +264,13 @@
         &:before {
           transform: translateX(250px) rotate(45deg);
         }
+      }
+
+      .box__button-home{
+        background: $blue;
+      }
+      .box__button-back{
+        background: $red;
       }
     }
   }
