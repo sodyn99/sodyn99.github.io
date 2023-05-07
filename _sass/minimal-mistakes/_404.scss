@@ -130,7 +130,7 @@
     }
 
     .box__ghost-container {
-      background: $primary-color;
+      background: $text-color;
       width: 100px;
       height: 100px;
       border-radius: 100px 100px 0 0;
@@ -179,7 +179,7 @@
           top:-10px;
           height:20px;
           border-radius:100%;
-          background-color: $primary-color;
+          background-color: $text-color;
 
           &:nth-child(2n) {
             top: -12px;
@@ -207,7 +207,7 @@
     transform: translateX(-50%);
     
     .box__description-container {
-      color: $primary-color;
+      color: $text-color;
       text-align: center;
       width: 200px;
       font-size: 16px;
