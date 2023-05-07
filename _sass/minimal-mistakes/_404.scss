@@ -1,11 +1,9 @@
-$white: #fff;
-
 .box__404 {
   width: 350px;
   height: 100%;
   max-height: 600px;
   min-height: 450px;
-  background: $text-color;
+  background: $white;
   border-radius: 20px;
   position: absolute;
   left: 50%;
@@ -132,7 +130,7 @@ $white: #fff;
     }
 
     .box__ghost-container {
-      background: $white;
+      background: $primary-color;
       width: 100px;
       height: 100px;
       border-radius: 100px 100px 0 0;
@@ -151,7 +149,7 @@ $white: #fff;
         .box__eye-left {
           width: 12px;
           height: 12px;
-          background: $text-color;
+          background: $white;
           border-radius: 50%;
           margin: 0 10px;
           position: absolute;
@@ -160,7 +158,7 @@ $white: #fff;
         .box__eye-right {
           width: 12px;
           height: 12px;
-          background: $text-color;
+          background: $white;
           border-radius: 50%;   
           margin: 0 10px;
           position: absolute;
@@ -209,7 +207,7 @@ $white: #fff;
     transform: translateX(-50%);
     
     .box__description-container {
-      color: $white;
+      color: $primary-color;
       text-align: center;
       width: 200px;
       font-size: 16px;
@@ -221,7 +219,7 @@ $white: #fff;
       }
 
       .box__description-text {
-        color: $info-color;
+        color: $blue;
         line-height: 20px;
         margin-top: 20px;
       }
@@ -270,22 +268,4 @@ $white: #fff;
     }
   }
 }
-
-// //keyframes
-// @keyframes upndown {
-//   0% {transform: translateY(5px);}
-//   50% {transform: translateY(15px);}
-//   100% {transform: translateY(5px);}
-// }
-// @keyframes smallnbig {
-//   0% {width: 90px;}
-//   50% {width: 100px;}
-//   100% {width: 90px;}
-// }
-// @keyframes shine {
-//   0% {opacity: .2;}
-//   25% {opacity: .1;}
-//   50% {opacity: .2;}
-//   100% {opacity: .2;}
-// }
 
