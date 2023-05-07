@@ -294,55 +294,10 @@ linux:
         - title: "VirtualBox"
           index: "3.1"
           url: /study/linux/linux-3.1/
-        - title: "VMware"
+        - title: "Windows에 Linux 설치"
           index: "3.2"
           url: /study/linux/linux-3.2/
-        - title: "Docker"
-          index: "3.3"
-          url: /study/linux/linux-3.3/
-        - title: "Vagrant"
-          index: "3.4"
-          url: /study/linux/linux-3.4/
-        - title: "Kubernetes"
-          index: "3.5"
-          url: /study/linux/linux-3.5/
-        - title: "OpenStack"
-          index: "3.6"
-          url: /study/linux/linux-3.6/
-        - title: "CloudStack"
-          index: "3.7"
-          url: /study/linux/linux-3.7/
-        - title: "OpenNebula"
-          index: "3.8"
-          url: /study/linux/linux-3.8/
-        - title: "Xen"
-          index: "3.9"
-          url: /study/linux/linux-3.9/
-        - title: "LXC"
-          index: "3.10"
-          url: /study/linux/linux-3.10/
-        - title: "LXD"
-          index: "3.11"
-          url: /study/linux/linux-3.11/
-        - title: "Proxmox VE"
-          index: "3.12"
-          url: /study/linux/linux-3.12/
-        - title: "oVirt"
-          index: "3.13"
-          url: /study/linux/linux-3.13/
-        - title: "Rancher"
-          index: "3.14"
-          url: /study/linux/linux-3.14/
-        - title: "Cloud Foundry"
-          index: "3.15"
-          url: /study/linux/linux-3.15/
-        - title: "Cloudify"
-          index: "3.16"
-          url: /study/linux/linux-3.16/
-        - title: "Mesos"
-          index: "3.17"
-          url: /study/linux/linux-3.17/
-
+        
 
 
 
