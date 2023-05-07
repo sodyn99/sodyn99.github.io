@@ -33,30 +33,10 @@ layout: default
         <div class="box__description-text">It seems like we couldn't find the page you were looking for</div>
       </div>
       
-      <a href="javascript:window.history.back();" target="_blank" class="box__button">Go back</a>
+      <a href="javascript:history.back();" class="box__button">Go back</a>
       
     </div>
     
   </div>
 </div>
 
-<script>
-    var pageX = $(document).width();
-    var pageY = $(document).height();
-    var mouseY=0;
-    var mouseX=0;
-
-    $(document).mousemove(function( event ) {
-    //verticalAxis
-    mouseY = event.pageY;
-    yAxis = (pageY/2-mouseY)/pageY*300; 
-    //horizontalAxis
-    mouseX = event.pageX / -pageX;
-    xAxis = -mouseX * 100 - 100;
-
-    $('.box__ghost-eyes').css({ 'transform': 'translate('+ xAxis +'%,-'+ yAxis +'%)' }); 
-
-    //console.log('X: ' + xAxis);
-
-    });
-</script>
