@@ -179,12 +179,12 @@
           top:-10px;
           height:20px;
           border-radius:100%;
-          background-color: #fff;
+          background-color: $primary-color;
 
           &:nth-child(2n) {
             top: -12px;
             margin: 0 -0px;
-            border-top: 15px solid $text-color;
+            border-top: 15px solid $white;
             background: transparent;
           }
         }
