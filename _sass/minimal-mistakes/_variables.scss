@@ -70,13 +70,20 @@ $border-color: $lighter-gray !default;
 $form-background-color: $lighter-gray !default;
 $footer-background-color: $lighter-gray !default;
 
+$green: #24A091 !default;
+$orange: #F38C00 !default;
+$red: #F0383B !default;
+$blue: #6454ED !default;
+$purple: #A069C3 !default;
+$yellow: #D1F951 !default;
+
 $primary-color: #1C192B !default;
 //$primary-color: #6f777d !default;
-$success-color: #24A091 !default;
-$warning-color: #D1F951 !default;
-$danger-color: #F0383B !default;
+$success-color: $green;
+$warning-color: $yellow;
+$danger-color: $red;
 //$danger-color: #ee5f5b !default;
-$info-color: #6454ED !default;
+$info-color: $blue;
 //$info-color: #3b9cba !default;
 $focus-color: $primary-color !default;
 $active-color: mix(#fff, $primary-color, 80%) !default;

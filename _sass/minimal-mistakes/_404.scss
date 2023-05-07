@@ -1,24 +1,11 @@
-//variables
-$purple: #28254C;
-$l-purple: #332F63;
-$t-purple: #8C8AA7;
-$pink: #FF5E65;
 $white: #fff;
-
-// html, body {
-//   background: $purple;
-//   font-family: 'Ubuntu';
-// }
-// * {
-//   box-sizing: border-box;
-// }
 
 .box__404 {
   width: 350px;
   height: 100%;
   max-height: 600px;
   min-height: 450px;
-  background: $l-purple;
+  background: $text-color;
   border-radius: 20px;
   position: absolute;
   left: 50%;
@@ -164,7 +151,7 @@ $white: #fff;
         .box__eye-left {
           width: 12px;
           height: 12px;
-          background: $l-purple;
+          background: $text-color;
           border-radius: 50%;
           margin: 0 10px;
           position: absolute;
@@ -173,7 +160,7 @@ $white: #fff;
         .box__eye-right {
           width: 12px;
           height: 12px;
-          background: $l-purple;
+          background: $text-color;
           border-radius: 50%;   
           margin: 0 10px;
           position: absolute;
@@ -194,12 +181,12 @@ $white: #fff;
           top:-10px;
           height:20px;
           border-radius:100%;
-          background-color: $white;
+          background-color: #fff;
 
           &:nth-child(2n) {
             top: -12px;
             margin: 0 -0px;
-            border-top: 15px solid $l-purple;
+            border-top: 15px solid $text-color;
             background: transparent;
           }
         }
@@ -234,7 +221,7 @@ $white: #fff;
       }
 
       .box__description-text {
-        color: $t-purple;
+        color: $info-color;
         line-height: 20px;
         margin-top: 20px;
       }
@@ -243,7 +230,7 @@ $white: #fff;
     .box__button {
       display: block;
       position: relative;
-      background: $pink;
+      background: $red;
       border: 1px solid transparent;
       border-radius: 50px;
       height: 50px;
