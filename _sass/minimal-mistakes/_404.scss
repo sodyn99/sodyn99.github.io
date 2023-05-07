@@ -224,95 +224,87 @@
         margin-top: 20px;
       }
     }
-    
-    .box__button {
+
+    .box__button-home{
+      display: inline-block;
       position: relative;
-      width: 100%;
+      border: 1px solid transparent;
+      border-radius: 10px;
       height: 50px;
+      width: 40%;
+      text-align: center;
+      text-decoration: none;
+      color: $blue;
+      line-height: 50px;
+      font-size: 18px;
+      white-space: nowrap;
       margin-top: 25px;
-
-      .box__button-home{
-        background: $blue;
-        display: inline-block;
-        position: relative;
-        border: 1px solid transparent;
-        border-radius: 10px;
-        height: 50px;
-        width: 40%;
-        text-align: center;
-        text-decoration: none;
-        color: $white;
-        line-height: 50px;
-        font-size: 18px;
-        white-space: nowrap;
-        margin-top: 25px;
-        transition: background .5s ease;
-        overflow: hidden;
-        -webkit-mask-image: -webkit-radial-gradient(white, black);
-
-        &:before {
-          content: '';
-          position: absolute;
-          width: 20px;
-          height: 100px;
-          background: $white;
-          bottom: -25px;
-          left: 0;
-          border: 2px solid $white;
-          transform: translateX(-50px) rotate(45deg);
-          transition: transform .5s ease;
-        }
+      transition: background .5s ease;
+      overflow: hidden;
+      -webkit-mask-image: -webkit-radial-gradient(white, black);
+      
+      &:before {
+        content: '';
+        position: absolute;
+        width: 20px;
+        height: 100px;
+        background: $white;
+        bottom: -25px;
+        left: 0;
+        border: 2px solid $white;
+        transform: translateX(-50px) rotate(45deg);
+        transition: transform .5s ease;
+      }
+      
+      &:hover {
+        background: transparent;
+        border-color: $blue;
+        color: $blue;
         
-        &:hover {
-          background: transparent;
-          border-color: $blue;
-          color: $blue;
-          
-          &:before {
-            transform: translateX(250px) rotate(45deg);
-          }
+        &:before {
+          transform: translateX(250px) rotate(45deg);
         }
       }
-      .box__button-back{
-        background: $red;
-        display: inline-block;
-        position: relative;
-        border: 1px solid transparent;
-        border-radius: 10px;
-        height: 50px;
-        width: 40%;
-        text-align: center;
-        text-decoration: none;
-        color: $white;
-        line-height: 50px;
-        font-size: 18px;
-        white-space: nowrap;
-        margin-top: 25px;
-        transition: background .5s ease;
-        overflow: hidden;
-        -webkit-mask-image: -webkit-radial-gradient(white, black);
+    }
 
-        &:before {
-          content: '';
-          position: absolute;
-          width: 20px;
-          height: 100px;
-          background: $white;
-          bottom: -25px;
-          left: 0;
-          border: 2px solid $white;
-          transform: translateX(-50px) rotate(45deg);
-          transition: transform .5s ease;
-        }
+    .box__button-back{
+      display: inline-block;
+      position: relative;
+      border: 1px solid transparent;
+      border-radius: 10px;
+      height: 50px;
+      width: 40%;
+      text-align: center;
+      text-decoration: none;
+      color: $red;
+      line-height: 50px;
+      font-size: 18px;
+      white-space: nowrap;
+      margin-top: 25px;
+      transition: background .5s ease;
+      overflow: hidden;
+      -webkit-mask-image: -webkit-radial-gradient(white, black);
+      
+      &:before {
+        content: '';
+        position: absolute;
+        width: 20px;
+        height: 100px;
+        background: $white;
+        bottom: -25px;
+        left: 0;
+        border: 2px solid $white;
+        transform: translateX(-50px) rotate(45deg);
+        transition: transform .5s ease;
+      }
+      
+      &:hover {
+        background: transparent;
+        border-color: $red;
+        color: $red;
         
-        &:hover {
-          background: transparent;
-          border-color: $red;
-          color: $red;
-          
-          &:before {
-            transform: translateX(250px) rotate(45deg);
-          }
+        &:before {
+          transform: translateX(250px) rotate(45deg);
         }
       }
     }
