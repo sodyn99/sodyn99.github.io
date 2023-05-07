@@ -294,10 +294,10 @@ linux:
         - title: "VirtualBox"
           index: "3.1"
           url: /study/linux/linux-3.1/
-        - title: "Windows에 Linux 설치"
+        - title: "Windows에 Li..."
           index: "3.2"
           url: /study/linux/linux-3.2/
-        
+
 
 
 
