@@ -193,7 +193,7 @@
       
     .box__ghost-shadow {
       height: 20px;
-      box-shadow: 0 50px 15px 5px #3B3769;
+      box-shadow: 0 50px 15px 5px $text-color;
       border-radius: 50%;
       margin: 0 auto;
       animation: smallnbig 3s ease-in-out infinite;
