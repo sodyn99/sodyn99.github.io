@@ -43,3 +43,26 @@
      "HTML-CSS": { availableFonts: ["TeX"] }
    });
 </script>
+
+
+<!-- 404.html -->
+<script>
+  var pageX = $(document).width();
+  var pageY = $(document).height();
+  var mouseY=0;
+  var mouseX=0;
+
+  $(document).mousemove(function( event ) {
+  //verticalAxis
+  mouseY = event.pageY;
+  yAxis = (pageY-mouseY)/pageY*200; 
+  //horizontalAxis
+  mouseX = event.pageX / -pageX;
+  xAxis = -mouseX * 100 - 100;
+
+  $('.box__ghost-eyes').css({ 'transform': 'translate('+ xAxis +'%,-'+ yAxis +'%)' }); 
+
+  //console.log('X: ' + xAxis);
+
+  });
+</script>
