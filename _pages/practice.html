@@ -12,94 +12,98 @@
   <head>
     <!-- bootstrap -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    
     <style>
+    :root{
+        --ratio: 0.72;
+    }
     .football-field{
-        width: 125vmin;
-        height: 70vmin;
-        background-color:  #178B4E;
+        width: calc(125vmin * var(--ratio));
+        height:  calc(90vmin * var(--ratio));
+        background-color:  #F2F2F2;
         margin: 5% auto;
         /* box-shadow: -1px -1px 4px 3px lightgrey; */
         border-radius: 10px;
     }
     .border-line{
-        width: 80vmin;
-        height: 56.26vmin;
-        border:0.5vmin solid #1F6F3F;
-        margin-top:6.37vmin;
-        margin-left:22vmin;
+        width:  calc(80vmin * var(--ratio));
+        height:  calc(56.26vmin * var(--ratio));
+        border: calc(0.5vmin * var(--ratio)) solid #D9D9D9;
+        margin-top:  calc(30vmin * var(--ratio));
+        margin-left: calc(22vmin * var(--ratio));
         position: absolute;
     }
     .midline{
-        width: 40vmin;
-        height: 55.75vmin;
-        border-right-color:#1F6F3F;
+        width:  calc(40vmin * var(--ratio));
+        height:  calc(55.75vmin * var(--ratio));
+        border-right-color:#D9D9D9;
         border-right-style:solid;
-        border-right-width:0.5vmin;
+        border-right-width: calc(0.5vmin * var(--ratio));
         position:absolute;
     }	
     .goal-line1{
-        width: 12.38vmin;
-        height: 31.63vmin;
-        border:0.5vmin solid #1F6F3F;
-        margin-top: 12.3vmin;
+        width:  calc(12.38vmin * var(--ratio));
+        height:  calc(31.63vmin * var(--ratio));
+        border: calc(0.5vmin * var(--ratio)) solid #D9D9D9;
+        margin-top:  calc(12.3vmin * var(--ratio));
         border-left-width:0px;
         position:absolute;
         z-index:10;
     }
     .goal-line2{
-        width: 12.38vmin;
-        height:31.63vmin;
-        border:0.5vmin solid #1F6F3F;
+        width:  calc(12.38vmin * var(--ratio));
+        height: calc(31.63vmin * var(--ratio));
+        border: calc(0.5vmin * var(--ratio)) solid #D9D9D9;
         border-right-width:0px;
-        margin-top: -0.5vmin;
-        margin-left: 66.78vmin;
+        margin-top:  calc(-0.5vmin * var(--ratio));
+        margin-left:  calc(66.78vmin * var(--ratio));
         position:absolute;
     }
     .goal-line1-2{
-        width: 4vmin;
-        height:14.36vmin;
-        border:0.5vmin solid #1F6F3F;
-        margin-top: 8.2vmin;
+        width:  calc(4vmin * var(--ratio));
+        height: calc(14.36vmin * var(--ratio));
+        border: calc(0.5vmin * var(--ratio)) solid #D9D9D9;
+        margin-top:  calc(8.2vmin * var(--ratio));
         border-left-width:0px;
-        margin-left: -67.36vmin;
+        margin-left:  calc(-67.36vmin * var(--ratio));
         position:absolute;
         z-index:11;
     }
     .goal-line2-2{
-        width: 4vmin;
-        height:14.36vmin;
-        border:0.5vmin solid #1F6F3F;
-        margin-top: -0.5vmin;
+        width:  calc(4vmin * var(--ratio));
+        height: calc(14.36vmin * var(--ratio));
+        border: calc(0.5vmin * var(--ratio)) solid #D9D9D9;
+        margin-top:  calc(-0.5vmin * var(--ratio));
         border-right-width:0px;
-        margin-left: 75.5vmin;
+        margin-left:  calc(75.5vmin * var(--ratio));
         position:absolute;
     }
     .circle{
-        width:14.53vmin;
-        height:14.53vmin;
-        margin-top: -0.7vmin;
-        border:0.5vmin solid #1F6F3F;
-        margin-left: -43.4vmin;
+        width: calc(14.53vmin * var(--ratio));
+        height: calc(14.53vmin * var(--ratio));
+        margin-top:  calc(-0.7vmin * var(--ratio));
+        border: calc(0.5vmin * var(--ratio)) solid #D9D9D9;
+        margin-left:  calc(-43.4vmin * var(--ratio));
         border-radius: 50%;
         position:absolute;
     }
     .goal-circle1{
-        width:3.67vmin;
-        height:11.28vmin;
-        margin-top: 1.19vmin;
-        border: 0.5vmin solid #1F6F3F;
+        width: calc(3.67vmin * var(--ratio));
+        height: calc(11.28vmin * var(--ratio));
+        margin-top:  calc(1.19vmin * var(--ratio));
+        border:  calc(0.5vmin * var(--ratio)) solid #D9D9D9;
         border-left: 0px;
-        margin-left: -20.51vmin;
+        margin-left:  calc(-20.71vmin * var(--ratio));
         border-radius: 0 100% 100% 0 / 50%;
         position:absolute;
     }
     .goal-circle2{
-        width:3.67vmin;
-        height:11.28vmin;
-        margin-top: -0.08vmin;
-        border:0.5vmin solid #1F6F3F;
+        width: calc(3.67vmin * var(--ratio));
+        height: calc(11.28vmin * var(--ratio));
+        margin-top:  calc(-0.08vmin * var(--ratio));
+        border: calc(0.5vmin * var(--ratio)) solid #D9D9D9;
         border-right: 0px;
-        margin-left: 51vmin;
+        margin-left:  calc(51vmin * var(--ratio));
         border-radius: 100% 0 0 100% / 50%;
         position:absolute;
     }
