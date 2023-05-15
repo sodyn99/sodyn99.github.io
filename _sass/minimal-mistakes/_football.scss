@@ -1,207 +1,90 @@
-// .football-field{
-//     width: 1280px;
-//     height: 720px;
-//     background-color:  #178B4E;
-//     margin: auto auto;
-//     /* box-shadow: -1px -1px 4px 3px lightgrey; */
-//     border-radius: 10px;
-// }
-// .border-line{
-//     width: 930px;
-//     height: 654px;
-//     border:5px solid #1F6F3F;
-//     margin-top:33px;
-//     margin-left:175px;
-//     position: absolute;
-// }
-// .midline{
-//     width: 465px;
-//     height: 645px;
-//     border-right-color:#1F6F3F;
-//     border-right-style:solid;
-//     border-right-width:5px;
-//     position:absolute;
-// }	
-// .goal-line1{
-//     width: 144px;
-//     height: 370px;
-//     border:5px solid #1F6F3F;
-//     margin-top: 140px;
-//     border-left-width:0px;
-//     position:absolute;
-//     z-index:10;
-// }
-// .goal-line2{
-//     width: 144px;
-//     height:370px;
-//     border:5px solid #1F6F3F;
-//     border-right-width:0px;
-//     margin-top: -5px;
-//     margin-left: 780px;
-//     position:absolute;
-// }
-// .goal-line1-2{
-//     width: 47px;
-//     height:168px;
-//     border:5px solid #1F6F3F;
-//     margin-top: 96px;
-//     border-left-width:0px;
-//     margin-left: -788px;
-//     position:absolute;
-//     z-index:11;
-// }
-// .goal-line2-2{
-//     width: 47px;
-//     height:168px;
-//     border:5px solid #1F6F3F;
-//     margin-top: -5px;
-//     border-right-width:0px;
-//     margin-left: 878px;
-//     position:absolute;
-// }
-// .circle{
-//     width:170px;
-//     height:168px;
-//     margin-top: -6px;
-//     border:5px solid #1F6F3F;
-//     margin-left: -502px;
-//     border-radius: 50%;
-//     position:absolute;
-// }
-// .goal-circle1{
-//     width:43px;
-//     height:132px;
-//     margin-top: 14px;
-//     border: 5px solid #1F6F3F;
-//     border-left: 0px;
-//     margin-left: -240px;
-//     border-radius: 0 100% 100% 0 / 50%;
-//     position:absolute;
-// }
-// .goal-circle2{
-//     width:43px;
-//     height:132px;
-//     border:5px solid #1F6F3F;
-//     border-right: 0px;
-//     margin-left: 597px;
-//     border-radius: 100% 0 0 100% / 50%;
-//     position:absolute;
-// }
-// .goal-cover1{
-//     width: 80px;
-//     height: 180px;
-//     background-color: #178B4E;
-//     position: absolute;
-//     margin-left: -696px;
-//     margin-top: -30px;
-// }
-// .goal-cover2{
-//     width: 80px;
-//     height: 180px;
-//     background-color: #178B4E;
-//     position: absolute;
-//     margin-left: 726px;
-//     margin-top: 0px;
-// }
-html {
---green: #178B4E;
---light: #178B4E;
+.football-field{
+    width: 125vmin;
+    height: 70vmin;
+    background-color:  #178B4E;
+    margin: 5% auto;
+    /* box-shadow: -1px -1px 4px 3px lightgrey; */
+    border-radius: 10px;
 }
-.football-field {
-    background: var(--green);
-    position: absolute;
-    top: 30%;
+.border-line{
     width: 80vmin;
-    height: 50vmin;
-    border: 0.5vmin solid #1F6F3F;
-    background-image:
-        radial-gradient(circle at 0% 0%, transparent 1%, #1F6F3F 0 1.5%, transparent 0),
-        radial-gradient(circle at 100% 0%, transparent 1%, #1F6F3F 0 1.5%, transparent 0),
-        radial-gradient(circle at 0% 100%, transparent 1%, #1F6F3F 0 1.5%, transparent 0),
-        radial-gradient(circle at 100% 100%, transparent 1%, #1F6F3F 0 1.5%, transparent 0),
-        radial-gradient(circle at 50% 50%, #1F6F3F 1%, transparent 0),
-        radial-gradient(circle at 50% 50%, transparent 14%, #1F6F3F 0 14.75%, transparent 0),
-        radial-gradient(circle at 16% 50%, transparent 10%, #1F6F3F 0 10.5%, transparent 0),
-        radial-gradient(circle at 84% 50%, transparent 10%, #1F6F3F 0 10.5%, transparent 0),
-        linear-gradient(to right, transparent 49.75%, #1F6F3F 0 50.25%, transparent 0),
-        repeating-linear-gradient(to right, var(--green) 0 10%, var(--light) 0 20%);
-    
-}
-.football-field::before{
-    content:"";
-    display: block;
+    height: 56.26vmin;
+    border:0.5vmin solid #1F6F3F;
+    margin-top:6.37vmin;
+    margin-left:22vmin;
     position: absolute;
-    width: 5.8%;
-    top: 50%;
-    left: 0;
-    transform: translate(0, -50%);
-    height: 25%;
-    background: var(--green);
-    box-shadow: 
-        inset 0 0 0 5vmin var(--green),
-        0 0 0 0.35vmin #1F6F3F,
-        1.2vmin 0 0 1.2vmin var(--green),
-        1.2vmin 4vmin 0 1.2vmin var(--green),
-        1.2vmin -4vmin 0 1.2vmin var(--green),
-        5.2vmin 0 0 5.2vmin var(--green),
-        5.2vmin 0 0 5.5vmin #1F6F3F,
-        74.5vmin 0 var(--green),
-        74.5vmin 0 0 0.35vmin #1F6F3F,
-        73.3vmin 0 0 1.2vmin var(--green),
-        73.3vmin 4vmin 0 1.2vmin var(--green),
-        73.3vmin -4vmin 0 1.2vmin var(--green),
-        69.2vmin 0 0 5.2vmin var(--green),
-        69.2vmin 0 0 5.5vmin #1F6F3F,
-        -4vmin 0 0 -2vmin #0003,
-        78.5vmin 0 0 -2vmin #0003
 }
-.football-field::after{
-    content: "SOCCER TIME!!!";
-    white-space: pre;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-size: 4vmin;
-    font-weight: bold;
-    font-style: italic;
-    color: #000;
-    font-family: arial, verdana, sans-serif;
-    position: absolute;
+.midline{
+    width: 40vmin;
+    height: 55.75vmin;
+    border-right-color:#1F6F3F;
+    border-right-style:solid;
+    border-right-width:0.5vmin;
+    position:absolute;
+}	
+.goal-line1{
+    width: 12.38vmin;
+    height: 31.63vmin;
+    border:0.5vmin solid #1F6F3F;
+    margin-top: 12.3vmin;
+    border-left-width:0px;
+    position:absolute;
+    z-index:10;
+}
+.goal-line2{
+    width: 12.38vmin;
+    height:31.63vmin;
+    border:0.5vmin solid #1F6F3F;
+    border-right-width:0px;
+    margin-top: -0.5vmin;
+    margin-left: 66.78vmin;
+    position:absolute;
+}
+.goal-line1-2{
+    width: 4vmin;
+    height:14.36vmin;
+    border:0.5vmin solid #1F6F3F;
+    margin-top: 8.2vmin;
+    border-left-width:0px;
+    margin-left: -67.36vmin;
+    position:absolute;
+    z-index:11;
+}
+.goal-line2-2{
+    width: 4vmin;
+    height:14.36vmin;
+    border:0.5vmin solid #1F6F3F;
+    margin-top: -0.5vmin;
+    border-right-width:0px;
+    margin-left: 75.5vmin;
+    position:absolute;
+}
+.circle{
+    width:14.53vmin;
+    height:14.53vmin;
+    margin-top: -0.7vmin;
+    border:0.5vmin solid #1F6F3F;
+    margin-left: -43.4vmin;
     border-radius: 50%;
-    height: 2.5vmin;
-    width: 2.5vmin;
-    left: 50%;
-    top: -7.5%;
-    transform: translate(-50%, -50%);
-    box-shadow:
-        -29vmin 29vmin 0 -0.9vmin white,
-        29vmin 29vmin 0 -0.9vmin white,
-        
-        -38vmin 29vmin #fe3,
-        -24vmin 12vmin #369,
-        -25vmin 25vmin #369,
-        -24vmin 35.5vmin #369,
-        -23vmin 48vmin #369,
-        -10vmin 12vmin #369,
-        -13.4vmin 26vmin #369,
-        -12vmin 35.5vmin #369,
-        -9vmin 48vmin #369,
-        -1.5vmin 27.5vmin #369,
-        -1vmin 30.5vmin #369,
-        
-        36vmin 29vmin #49f,
-        24vmin 12vmin #c33,
-        25vmin 25vmin #c33,
-        24vmin 35.5vmin #c33,
-        24.5vmin 48vmin #c33,
-        14vmin 17vmin #c33,
-        17vmin 29vmin #c33,
-        13vmin 42vmin #c33,
-        1.5vmin 44vmin #c33,
-        1.5vmin 18.5vmin #c33,
-        6.5vmin 32.5vmin #c33,
-        
-        -2vmin 21vmin #222,
-        10vmin 56vmin #222,
-        -24vmin 2vmin #222
+    position:absolute;
+}
+.goal-circle1{
+    width:3.67vmin;
+    height:11.28vmin;
+    margin-top: 1.19vmin;
+    border: 0.5vmin solid #1F6F3F;
+    border-left: 0px;
+    margin-left: -20.51vmin;
+    border-radius: 0 100% 100% 0 / 50%;
+    position:absolute;
+}
+.goal-circle2{
+    width:3.67vmin;
+    height:11.28vmin;
+    margin-top: -0.08vmin;
+    border:0.5vmin solid #1F6F3F;
+    border-right: 0px;
+    margin-left: 51vmin;
+    border-radius: 100% 0 0 100% / 50%;
+    position:absolute;
 }
