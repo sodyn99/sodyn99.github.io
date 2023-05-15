@@ -88,6 +88,7 @@
 
 .notice--info {
   @include notice($info-color);
+  color: #fff;
 }
 
 /* Warning notice */
