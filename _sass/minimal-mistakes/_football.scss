@@ -1,87 +1,105 @@
 .football-field{
     width: 1280px;
     height: 720px;
-    background-color:  #00b36b;
+    background-color:  #178B4E;
     margin: auto auto;
-    box-shadow: -1px -1px 4px 3px lightgrey;
-    border-radius: 6px;
-    padding-top:45px;
-    padding-left:30px;
-    padding-right:30px;
+    /* box-shadow: -1px -1px 4px 3px lightgrey; */
+    border-radius: 10px;
 }
 .border-line{
-    width: 931px;
-    height: 653px;
-    border:5px solid white;
-    margin:auto;
+    width: 930px;
+    height: 654px;
+    border:5px solid #1F6F3F;
+    margin-top:33px;
+    margin-left:175px;
+    position: absolute;
 }
 .midline{
-    width: 445px;
-    height: 600px;
-    border-right-color:white;
+    width: 465px;
+    height: 645px;
+    border-right-color:#1F6F3F;
     border-right-style:solid;
     border-right-width:5px;
     position:absolute;
 }	
 .goal-line1{
-    width: 140px;
-    height:290px;
-    border:5px solid white;
-    margin-top:150px;
+    width: 144px;
+    height: 370px;
+    border:5px solid #1F6F3F;
+    margin-top: 140px;
     border-left-width:0px;
     position:absolute;
     z-index:10;
 }
 .goal-line2{
-    width: 140px;
-    height:290px;
-    border:5px solid white;
-    margin-left:755px;
+    width: 144px;
+    height:370px;
+    border:5px solid #1F6F3F;
+    border-right-width:0px;
+    margin-top: -5px;
+    margin-left: 780px;
     position:absolute;
 }
 .goal-line1-2{
-    width: 50px;
-    height:200px;
-    border:5px solid white;
-    margin-left:-760px;
-    margin-top:35px;
+    width: 47px;
+    height:168px;
+    border:5px solid #1F6F3F;
+    margin-top: 96px;
     border-left-width:0px;
+    margin-left: -788px;
     position:absolute;
     z-index:11;
 }
 .goal-line2-2{
-    width: 50px;
-    height:200px;
-    border:5px solid white;
-    margin-left:850px;
+    width: 47px;
+    height:168px;
+    border:5px solid #1F6F3F;
+    margin-top: -5px;
     border-right-width:0px;
+    margin-left: 878px;
     position:absolute;
 }
 .circle{
     width:170px;
-    height:170px;
-    border:5px solid #ffffff;
-    margin-left:-498px;
+    height:168px;
+    margin-top: -6px;
+    border:5px solid #1F6F3F;
+    margin-left: -502px;
     border-radius: 50%;
     position:absolute;
 }
-.small-circle1{
-    width:1px;
-    height:1px;
-    border:5px solid #ffffff;
-    margin-left:-348px;
-    top:90px;
-    right:430px;
-    background-color: #00b36b;
-    border-radius: 50%;
+.goal-circle1{
+    width:43px;
+    height:132px;
+    margin-top: 14px;
+    border: 5px solid #1F6F3F;
+    border-left: 0px;
+    margin-left: -240px;
+    border-radius: 0 100% 100% 0 / 50%;
     position:absolute;
 }
-.small-circle2{
-    width:1px;
-    height:1px;
-    border:5px solid #ffffff;
-    margin-left:350px;
-    left:350px;
-    border-radius: 50%;
+.goal-circle2{
+    width:43px;
+    height:132px;
+    border:5px solid #1F6F3F;
+    border-right: 0px;
+    margin-left: 597px;
+    border-radius: 100% 0 0 100% / 50%;
     position:absolute;
+}
+.goal-cover1{
+    width: 80px;
+    height: 180px;
+    background-color: #178B4E;
+    position: absolute;
+    margin-left: -696px;
+    margin-top: -30px;
+}
+.goal-cover2{
+    width: 80px;
+    height: 180px;
+    background-color: #178B4E;
+    position: absolute;
+    margin-left: 726px;
+    margin-top: 0px;
 }
