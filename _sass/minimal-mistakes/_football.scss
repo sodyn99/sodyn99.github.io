@@ -1,7 +1,3 @@
-html {
---green: #178B4E;
---light: #178B4E;
-}
 .football-field {
     background: var(--green);
     position: absolute;
@@ -21,7 +17,7 @@ html {
         radial-gradient(circle at 16% 50%, transparent 10%, #1F6F3F 0 10.5%, transparent 0),
         radial-gradient(circle at 84% 50%, transparent 10%, #1F6F3F 0 10.5%, transparent 0),
         linear-gradient(to right, transparent 49.75%, #1F6F3F 0 50.25%, transparent 0),
-        repeating-linear-gradient(to right, var(--green) 0 10%, var(--light) 0 20%);
+        repeating-linear-gradient(to right, var(#178B4E) 0 10%, var(#178B4E) 0 20%);
     
 }
 .football-field::before{
@@ -33,21 +29,21 @@ html {
     left: 0;
     transform: translate(0, -50%);
     height: 25%;
-    background: var(--green);
+    background: var(#178B4E);
     box-shadow: 
-        inset 0 0 0 5vmin var(--green),
+        inset 0 0 0 5vmin var(#178B4E),
         0 0 0 0.35vmin #1F6F3F,
-        1.2vmin 0 0 1.2vmin var(--green),
-        1.2vmin 4vmin 0 1.2vmin var(--green),
-        1.2vmin -4vmin 0 1.2vmin var(--green),
-        5.2vmin 0 0 5.2vmin var(--green),
+        1.2vmin 0 0 1.2vmin var(#178B4E),
+        1.2vmin 4vmin 0 1.2vmin var(#178B4E),
+        1.2vmin -4vmin 0 1.2vmin var(#178B4E),
+        5.2vmin 0 0 5.2vmin var(#178B4E),
         5.2vmin 0 0 5.5vmin #1F6F3F,
-        74.5vmin 0 var(--green),
+        74.5vmin 0 var(#178B4E),
         74.5vmin 0 0 0.35vmin #1F6F3F,
-        73.3vmin 0 0 1.2vmin var(--green),
-        73.3vmin 4vmin 0 1.2vmin var(--green),
-        73.3vmin -4vmin 0 1.2vmin var(--green),
-        69.2vmin 0 0 5.2vmin var(--green),
+        73.3vmin 0 0 1.2vmin var(#178B4E),
+        73.3vmin 4vmin 0 1.2vmin var(#178B4E),
+        73.3vmin -4vmin 0 1.2vmin var(#178B4E),
+        69.2vmin 0 0 5.2vmin var(#178B4E),
         69.2vmin 0 0 5.5vmin #1F6F3F,
         -4vmin 0 0 -2vmin #0003,
         78.5vmin 0 0 -2vmin #0003
