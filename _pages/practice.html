@@ -14,6 +14,7 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
     
     <style>
+    @import url(//db.onlinewebfonts.com/c/88978184a438c2447fe0faa001f15a34?family=Futura+Maxi+CG+Bold);
     :root{
         --ratio: 0.72;
     }
@@ -107,6 +108,55 @@
         border-radius: 100% 0 0 100% / 50%;
         position:absolute;
     }
+    .football-round{
+        font-family: 'Futura Maxi CG Bold';
+        font-size: calc(5vmin * var(--ratio));
+        font-weight: bold;
+        color: #000;
+        margin-top: calc(-34vmin * var(--ratio));
+        margin-left: calc(-29vmin * var(--ratio));
+        position:absolute;
+    }
+    .football-title-premierleague{
+        content:url(/images/football/title/premier_league.png);
+        width: calc(70vmin * var(--ratio));
+        height: calc(11vmin * var(--ratio));
+        margin-top: calc(-46vmin * var(--ratio));
+        margin-left: calc(-58.8vmin * var(--ratio));
+        position:absolute;
+    }
+    .football-title-laliga{
+        content:url(/images/football/title/laliga.png);
+        width: calc(65vmin * var(--ratio));
+        height: calc(27.5vmin * var(--ratio));
+        margin-top: calc(-53vmin * var(--ratio));
+        margin-left: calc(-56vmin * var(--ratio));
+        position:absolute;
+    }
+    .football-title-seriea{
+        content:url(/images/football/title/serie_a.png);
+        width: calc(63vmin * var(--ratio));
+        height: calc(27.5vmin * var(--ratio));
+        margin-top: calc(-56vmin * var(--ratio));
+        margin-left: calc(-55.3vmin * var(--ratio));
+        position:absolute;
+    }
+    .football-title-championsleague{
+        content:url(/images/football/title/champions_league.png);
+        width: calc(63vmin * var(--ratio));
+        height: calc(11vmin * var(--ratio));
+        margin-top: calc(-48vmin * var(--ratio));
+        margin-left: calc(-55.3vmin * var(--ratio));
+        position:absolute;
+    }
+    .football-title-europaleague{
+        content:url(/images/football/title/europa_league.png);
+        width: calc(50vmin * var(--ratio));
+        height: calc(15vmin * var(--ratio));
+        margin-top: calc(-50vmin * var(--ratio));
+        margin-left: calc(-49vmin * var(--ratio));
+        position:absolute;
+    }
     </style>
   </head>
 
@@ -122,6 +172,8 @@
         <div class="circle">
         <div class="goal-circle1">
         <div class="goal-circle2">
+        <div class="football-title-europaleague"></div>
+        <div class="football-round">24R</div>
     </div>
     <script>
         $(window).resize(function(){
