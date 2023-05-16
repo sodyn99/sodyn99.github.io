@@ -148,22 +148,14 @@
 $hoverEasing: cubic-bezier(0.23, 1, 0.32, 1);
 $returnEasing: cubic-bezier(0.445, 0.05, 0.55, 0.95);
 
-body {
-  margin: 40px 0;
-  font-family: "Raleway";
-  font-size: 14px;
-  font-weight: 500;
-  background-color: #BCAAA4;
-  -webkit-font-smoothing: antialiased;
-}
-
-.title {
-  font-family: "Raleway";
-  font-size: 24px;
-  font-weight: 700;
-  color: #5D4037;
-  text-align: center;
-}
+// body {
+//   margin: 40px 0;
+//   font-family: "Raleway";
+//   font-size: 14px;
+//   font-weight: 500;
+//   background-color: #BCAAA4;
+//   -webkit-font-smoothing: antialiased;
+// }
 
 p {
   line-height: 1.5em;
@@ -173,7 +165,7 @@ h1+p, p+p {
   margin-top: 10px;
 }
 
-.container {
+.big-card {
   padding: 40px 80px;
   display: flex;
   flex-wrap: wrap;
