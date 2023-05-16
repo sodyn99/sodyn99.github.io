@@ -237,7 +237,7 @@
     transition: transform 0.3s;
     box-shadow: none!important;
     position: relative;
-    bottom: -35%;
+    bottom: -25%;
     a:hover {
         box-shadow: none!important;
     }
@@ -257,6 +257,13 @@
     a:hover {
         box-shadow: none!important;
     }
+}
+
+.card-character > img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    box-shadow: none!important;
 }
 
 .card:hover .card-character {
