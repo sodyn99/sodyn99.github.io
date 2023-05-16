@@ -237,7 +237,7 @@
     transition: transform 0.3s;
     box-shadow: none!important;
     position: relative;
-    bottom: -25%;
+    bottom: -30%;
     a:hover {
         box-shadow: none!important;
     }
@@ -248,7 +248,7 @@
 }
 
 .card-character {
-    width: 100%;
+    height: calc(47vmin * var(--ratio));
     opacity: 0;
     transition: all 0.3s;
     position: absolute;
@@ -260,9 +260,8 @@
 }
 
 .card-character > img {
-    width: 100%;
     height: 100%;
-    object-fit: contain;
+    position: absolute;
     box-shadow: none!important;
 }
 
