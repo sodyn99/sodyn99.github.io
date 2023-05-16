@@ -11,183 +11,259 @@
 <html lang="{{ site.locale | slice: 0,2 | default: "en" }}" class="no-js">
   <head>
     <!-- bootstrap -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
-    
+    <!-- <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+     -->
     <style>
-    @import url(//db.onlinewebfonts.com/c/88978184a438c2447fe0faa001f15a34?family=Futura+Maxi+CG+Bold);
-    :root{
-        --ratio: 0.72;
-    }
-    .football-field{
-        width: calc(120vmin * var(--ratio));
-        height:  calc(90vmin * var(--ratio));
-        background-color:  #F2F2F2;
-        margin: 5% 1%;
-        /* box-shadow: -1px -1px 4px 3px lightgrey; */
+        $hoverEasing: cubic-bezier(0.23, 1, 0.32, 1);
+        $returnEasing: cubic-bezier(0.445, 0.05, 0.55, 0.95);
+
+        body {
+        margin: 40px 0;
+        font-family: "Raleway";
+        font-size: 14px;
+        font-weight: 500;
+        background-color: #BCAAA4;
+        -webkit-font-smoothing: antialiased;
+        }
+
+        .title {
+        font-family: "Raleway";
+        font-size: 24px;
+        font-weight: 700;
+        color: #5D4037;
+        text-align: center;
+        }
+
+        p {
+        line-height: 1.5em;
+        }
+
+        h1+p, p+p {
+        margin-top: 10px;
+        }
+
+        .container {
+        padding: 40px 80px;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        }
+
+        .card-wrap {
+        margin: 10px;
+        transform: perspective(800px);
+        transform-style: preserve-3d;
+        cursor: pointer;
+        /* // background-color: #fff; */
+        
+        &:hover {
+            .card-info {
+            transform: translateY(0);
+            }
+            .card-info p {
+            opacity: 1;
+            }
+            .card-info, .card-info p {
+            transition: 0.6s $hoverEasing;
+            }
+            .card-info:after {
+            transition: 5s $hoverEasing;
+            opacity: 1;
+            transform: translateY(0);
+            }
+            .card-bg {
+            transition: 
+                0.6s $hoverEasing,
+                opacity 5s $hoverEasing;
+            opacity: 0.8;
+            }
+            .card {
+            transition:
+                0.6s $hoverEasing,
+                box-shadow 2s $hoverEasing;
+            box-shadow:
+                rgba(white, 0.2) 0 0 40px 5px,
+                rgba(white, 1) 0 0 0 1px,
+                rgba(black, 0.66) 0 30px 60px 0,
+                inset #333 0 0 0 5px,
+                inset white 0 0 0 6px;
+            }
+        }
+        }
+
+        .card {
+        position: relative;
+        flex: 0 0 240px;
+        width: 240px;
+        height: 320px;
+        background-color: #333;
+        overflow: hidden;
         border-radius: 10px;
-    }
-    .border-line{
-        width:  calc(80vmin * var(--ratio));
-        height:  calc(56.26vmin * var(--ratio));
-        border: calc(0.5vmin * var(--ratio)) solid #D9D9D9;
-        margin-top:  calc(30vmin * var(--ratio));
-        margin-left: calc(19.5vmin * var(--ratio));
+        box-shadow:
+            rgba(black, 0.66) 0 30px 60px 0,
+            inset #333 0 0 0 5px,
+            inset rgba(white, 0.5) 0 0 0 6px;
+        transition: 1s $returnEasing;
+        }
+
+        .card-bg {
+        opacity: 0.5;
         position: absolute;
-    }
-    .midline{
-        width:  calc(40vmin * var(--ratio));
-        height:  calc(55.75vmin * var(--ratio));
-        border-right-color:#D9D9D9;
-        border-right-style:solid;
-        border-right-width: calc(0.5vmin * var(--ratio));
-        position:absolute;
-    }	
-    .goal-line1{
-        width:  calc(12.38vmin * var(--ratio));
-        height:  calc(31.63vmin * var(--ratio));
-        border: calc(0.5vmin * var(--ratio)) solid #D9D9D9;
-        margin-top:  calc(12.3vmin * var(--ratio));
-        border-left-width:0px;
-        position:absolute;
-        z-index:10;
-    }
-    .goal-line2{
-        width:  calc(12.38vmin * var(--ratio));
-        height: calc(31.63vmin * var(--ratio));
-        border: calc(0.5vmin * var(--ratio)) solid #D9D9D9;
-        border-right-width:0px;
-        margin-top:  calc(-0.5vmin * var(--ratio));
-        margin-left:  calc(66.78vmin * var(--ratio));
-        position:absolute;
-    }
-    .goal-line1-2{
-        width:  calc(4vmin * var(--ratio));
-        height: calc(14.36vmin * var(--ratio));
-        border: calc(0.5vmin * var(--ratio)) solid #D9D9D9;
-        margin-top:  calc(8.2vmin * var(--ratio));
-        border-left-width:0px;
-        margin-left:  calc(-67.36vmin * var(--ratio));
-        position:absolute;
-        z-index:11;
-    }
-    .goal-line2-2{
-        width:  calc(4vmin * var(--ratio));
-        height: calc(14.36vmin * var(--ratio));
-        border: calc(0.5vmin * var(--ratio)) solid #D9D9D9;
-        margin-top:  calc(-0.5vmin * var(--ratio));
-        border-right-width:0px;
-        margin-left:  calc(75.5vmin * var(--ratio));
-        position:absolute;
-    }
-    .circle{
-        width: calc(14.53vmin * var(--ratio));
-        height: calc(14.53vmin * var(--ratio));
-        margin-top:  calc(-0.7vmin * var(--ratio));
-        border: calc(0.5vmin * var(--ratio)) solid #D9D9D9;
-        margin-left:  calc(-43.4vmin * var(--ratio));
-        border-radius: 50%;
-        position:absolute;
-    }
-    .goal-circle1{
-        width: calc(3.67vmin * var(--ratio));
-        height: calc(11.28vmin * var(--ratio));
-        margin-top:  calc(1.19vmin * var(--ratio));
-        border:  calc(0.5vmin * var(--ratio)) solid #D9D9D9;
-        border-left: 0px;
-        margin-left:  calc(-20.71vmin * var(--ratio));
-        border-radius: 0 100% 100% 0 / 50%;
-        position:absolute;
-    }
-    .goal-circle2{
-        width: calc(3.67vmin * var(--ratio));
-        height: calc(11.28vmin * var(--ratio));
-        margin-top:  calc(-0.08vmin * var(--ratio));
-        border: calc(0.5vmin * var(--ratio)) solid #D9D9D9;
-        border-right: 0px;
-        margin-left:  calc(51vmin * var(--ratio));
-        border-radius: 100% 0 0 100% / 50%;
-        position:absolute;
-    }
-    .football-round{
-        font-family: 'Futura Maxi CG Bold';
-        font-size: calc(5vmin * var(--ratio));
-        font-weight: bold;
-        color: #000;
-        margin-top: calc(-34vmin * var(--ratio));
-        margin-left: calc(-29vmin * var(--ratio));
-        position:absolute;
-    }
-    .football-title-premierleague{
-        content:url(/images/football/title/premier_league.png);
-        width: calc(70vmin * var(--ratio));
-        height: calc(11vmin * var(--ratio));
-        margin-top: calc(-46vmin * var(--ratio));
-        margin-left: calc(-58.8vmin * var(--ratio));
-        position:absolute;
-    }
-    .football-title-laliga{
-        content:url(/images/football/title/laliga.png);
-        width: calc(65vmin * var(--ratio));
-        height: calc(27.5vmin * var(--ratio));
-        margin-top: calc(-53vmin * var(--ratio));
-        margin-left: calc(-56vmin * var(--ratio));
-        position:absolute;
-    }
-    .football-title-seriea{
-        content:url(/images/football/title/serie_a.png);
-        width: calc(63vmin * var(--ratio));
-        height: calc(27.5vmin * var(--ratio));
-        margin-top: calc(-56vmin * var(--ratio));
-        margin-left: calc(-55.3vmin * var(--ratio));
-        position:absolute;
-    }
-    .football-title-championsleague{
-        content:url(/images/football/title/champions_league.png);
-        width: calc(63vmin * var(--ratio));
-        height: calc(11vmin * var(--ratio));
-        margin-top: calc(-48vmin * var(--ratio));
-        margin-left: calc(-55.3vmin * var(--ratio));
-        position:absolute;
-    }
-    .football-title-europaleague{
-        content:url(/images/football/title/europa_league.png);
-        width: calc(50vmin * var(--ratio));
-        height: calc(15vmin * var(--ratio));
-        margin-top: calc(-50vmin * var(--ratio));
-        margin-left: calc(-49vmin * var(--ratio));
-        position:absolute;
-    }
-    .football-home{
-        width: calc(10vmin * var(--ratio));
-        height: calc(10vmin * var(--ratio));
-        margin-top: calc(-50vmin * var(--ratio));
-        margin-left: calc(-49vmin * var(--ratio));
-        position:absolute;
-    }
+        top: -20px; left: -20px;
+        width: 100%;
+        height: 100%;
+        padding: 20px;
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: cover;
+        transition:
+            1s $returnEasing,
+            opacity 5s 1s $returnEasing;
+        pointer-events: none;
+        }
+
+        .card-info {
+        padding: 20px;
+        position: absolute;
+        bottom: 0;
+        color: #fff;
+        transform: translateY(40%);
+        transition: 0.6s 1.6s cubic-bezier(0.215, 0.61, 0.355, 1);
+        
+        p {
+            opacity: 0;
+            text-shadow: rgba(black, 1) 0 2px 3px;
+            transition: 0.6s 1.6s cubic-bezier(0.215, 0.61, 0.355, 1);
+        }
+        
+        * {
+            position: relative;
+            z-index: 1;
+        }
+        
+        &:after {
+            content: '';
+            position: absolute;
+            top: 0; left: 0;
+            z-index: 0;
+            width: 100%;
+            height: 100%;
+            background-image: linear-gradient(to bottom, transparent 0%, rgba(#000, 0.6) 100%);
+            background-blend-mode: overlay;
+            opacity: 0;
+            transform: translateY(100%);
+            transition: 5s 1s $returnEasing;
+        }
+        }
+
+        .card-info h1 {
+        font-family: "Playfair Display";
+        font-size: 36px;
+        font-weight: 700;
+        text-shadow: rgba(black, 0.5) 0 10px 10px;
+        }
+
     </style>
   </head>
 
   <body>
-    
-    <div class="football-field" >
-        <div class="border-line">
-        <div class="midline">
-        <div class="goal-line1">
-        <div class="goal-line2">
-        <div class="goal-line1-2">
-        <div class="goal-line2-2">
-        <div class="circle">
-        <div class="goal-circle1">
-        <div class="goal-circle2">
-        <div class="football-title-europaleague"></div>
-        <div class="football-round">24R</div>
-        <div class="football-home"></div>
+    <h1 class="title">Hover over the cards</h1>
+
+    <div id="app" class="container">
+        <card data-image="https://images.unsplash.com/photo-1479660656269-197ebb83b540?dpr=2&auto=compress,format&fit=crop&w=1199&h=798&q=80&cs=tinysrgb&crop=">
+            <h1 slot="header">Canyons</h1>
+            <p slot="content">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+        </card>
+        <card data-image="https://images.unsplash.com/photo-1479659929431-4342107adfc1?dpr=2&auto=compress,format&fit=crop&w=1199&h=799&q=80&cs=tinysrgb&crop=">
+            <h1 slot="header">Beaches</h1>
+            <p slot="content">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+        </card>
+        <card data-image="https://images.unsplash.com/photo-1479644025832-60dabb8be2a1?dpr=2&auto=compress,format&fit=crop&w=1199&h=799&q=80&cs=tinysrgb&crop=">
+            <h1 slot="header">Trees</h1>
+            <p slot="content">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+        </card>
+        <card data-image="https://images.unsplash.com/photo-1479621051492-5a6f9bd9e51a?dpr=2&auto=compress,format&fit=crop&w=1199&h=811&q=80&cs=tinysrgb&crop=">
+            <h1 slot="header">Lakes</h1>
+            <p slot="content">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+        </card>
     </div>
     <script>
-        $(window).resize(function(){
-            var winWidth = $(window).width();
-            var boxWidth = $('.football-field').width();
-            $('.football-field').height(boxWidth*0.681);
+        Vue.config.devtools = true;
+
+        Vue.component('card', {
+        template: `
+            <div class="card-wrap"
+            @mousemove="handleMouseMove"
+            @mouseenter="handleMouseEnter"
+            @mouseleave="handleMouseLeave"
+            ref="card">
+            <div class="card"
+                :style="cardStyle">
+                <div class="card-bg" :style="[cardBgTransform, cardBgImage]"></div>
+                <div class="card-info">
+                <slot name="header"></slot>
+                <slot name="content"></slot>
+                </div>
+            </div>
+            </div>`,
+        mounted() {
+            this.width = this.$refs.card.offsetWidth;
+            this.height = this.$refs.card.offsetHeight;
+        },
+        props: ['dataImage'],
+        data: () => ({
+            width: 0,
+            height: 0,
+            mouseX: 0,
+            mouseY: 0,
+            mouseLeaveDelay: null
+        }),
+        computed: {
+            mousePX() {
+            return this.mouseX / this.width;
+            },
+            mousePY() {
+            return this.mouseY / this.height;
+            },
+            cardStyle() {
+            const rX = this.mousePX * 30;
+            const rY = this.mousePY * -30;
+            return {
+                transform: `rotateY(${rX}deg) rotateX(${rY}deg)`
+            };
+            },
+            cardBgTransform() {
+            const tX = this.mousePX * -40;
+            const tY = this.mousePY * -40;
+            return {
+                transform: `translateX(${tX}px) translateY(${tY}px)`
+            }
+            },
+            cardBgImage() {
+            return {
+                backgroundImage: `url(${this.dataImage})`
+            }
+            }
+        },
+        methods: {
+            handleMouseMove(e) {
+            this.mouseX = e.pageX - this.$refs.card.offsetLeft - this.width/2;
+            this.mouseY = e.pageY - this.$refs.card.offsetTop - this.height/2;
+            },
+            handleMouseEnter() {
+            clearTimeout(this.mouseLeaveDelay);
+            },
+            handleMouseLeave() {
+            this.mouseLeaveDelay = setTimeout(()=>{
+                this.mouseX = 0;
+                this.mouseY = 0;
+            }, 1000);
+            }
+        }
+        });
+
+        const app = new Vue({
+        el: '#app'
         });
     </script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
