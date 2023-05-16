@@ -164,6 +164,7 @@
     perspective: 2500px;
     margin-right: calc(5vmin * var(--ratio));
     box-shadow: none!important;
+    border: none!important;
 }
 
 .cover-image {
@@ -183,7 +184,7 @@
 
 .card:hover .card-wrapper {
     transform: perspective(900px) translateY(-5%) rotateX(25deg) translateZ(0);
-    box-shadow: 2px 35px 32px -8px rgba(0, 0, 0, 0.75);
+    box-shadow: 2px 35px 32px -8px rgba(0, 0, 0, 0.75) !important;
     // -webkit-box-shadow: 2px 35px 32px -8px rgba(0, 0, 0, 0.75);
     // -moz-box-shadow: 2px 35px 32px -8px rgba(0, 0, 0, 0.75);
 }
@@ -207,7 +208,7 @@
     to top,
     transparent 46%,
     rgba(12, 13, 19, 0.5) 68%,
-    /*rgba(12, 13, 19) 97%*/
+    rgba(12, 13, 19, 0.5) 97%
     );
 }
 .card-wrapper::after {
@@ -218,7 +219,7 @@
     to bottom,
     transparent 46%,
     rgba(12, 13, 19, 0.5) 68%,
-    /*rgba(12, 13, 19) 97%*/
+    rgba(12, 13, 19, 0.5) 97%
     );
 }
 
