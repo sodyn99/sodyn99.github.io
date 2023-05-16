@@ -175,22 +175,22 @@
     object-fit: cover;
 }
   
-.wrapper {
+.card-wrapper {
     transition: all 0.5s;
     position: absolute;
     width: 100%;
     z-index: -1;
 }
   
-.card:hover .wrapper {
+.card:hover .card-wrapper {
     transform: perspective(900px) translateY(-5%) rotateX(25deg) translateZ(0);
     box-shadow: 2px 35px 32px -8px rgba(0, 0, 0, 0.75);
     -webkit-box-shadow: 2px 35px 32px -8px rgba(0, 0, 0, 0.75);
     -moz-box-shadow: 2px 35px 32px -8px rgba(0, 0, 0, 0.75);
 }
   
-.wrapper::before,
-.wrapper::after {
+.card-wrapper::before,
+.card-wrapper::after {
     content: "";
     opacity: 0;
     width: 100%;
@@ -199,7 +199,7 @@
     position: absolute;
     left: 0;
 }
-.wrapper::before {
+.card-wrapper::before {
     top: 0;
     height: 100%;
     background-image: linear-gradient(
@@ -209,7 +209,7 @@
       rgba(12, 13, 19) 97%
     );
 }
-.wrapper::after {
+.card-wrapper::after {
     bottom: 0;
     opacity: 1;
     background-image: linear-gradient(
@@ -220,23 +220,23 @@
     );
 }
   
-.card:hover .wrapper::before,
-.wrapper::after {
+.card:hover .card-wrapper::before,
+.card-wrapper::after {
     opacity: 1;
 }
   
-.card:hover .wrapper::after {
+.card:hover .card-wrapper::after {
     height: 120px;
 }
-.title {
+.card-title {
     width: 100%;
     transition: transform 0.5s;
 }
-.card:hover .title {
+.card:hover .card-title {
     transform: translate3d(0%, -50px, 100px);
 }
   
-.character {
+.card-character {
     width: 100%;
     opacity: 0;
     transition: all 0.5s;
@@ -244,7 +244,7 @@
     z-index: -1;
 }
   
-.card:hover .character {
+.card:hover .card-character {
     opacity: 1;
     transform: translate3d(0%, -30%, 100px);
 }
