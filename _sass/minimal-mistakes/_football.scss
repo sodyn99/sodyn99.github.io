@@ -1,6 +1,6 @@
 :root{
     --ratio: 0.72;
-    --card-height: calc(100vmin * var(--ratio));
+    --card-height: calc(70vmin * var(--ratio));
     --card-width: calc(var(--card-height) / 1.5);
 }
 
@@ -162,6 +162,7 @@
     align-items: flex-end;
     perspective: 2500px;
     margin-right: calc(5vmin * var(--ratio));
+    margin-bottom: calc(5vmin * var(--ratio));
     box-shadow: none!important;
     border: none!important;
 }
