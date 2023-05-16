@@ -1,6 +1,6 @@
 :root{
     --ratio: 0.72;
-    --card-height: 300px;
+    --card-height: calc(50vmin * var(--ratio));
     --card-width: calc(var(--card-height) / 1.5);
 }
 
@@ -151,8 +151,7 @@
     height: calc(90vmin * var(--ratio));
     flex-wrap: wrap;
     display: flex;
-    justify-content: center;
-    align-items: center;
+    margin: 5% 1%;
 }
 .card {
     width: var(--card-width);
@@ -236,6 +235,7 @@
 .card-title {
     width: 100%;
     transition: transform 0.3s;
+    box-shadow: none!important;
     a:hover {
         box-shadow: none!important;
     }
