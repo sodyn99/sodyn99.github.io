@@ -147,8 +147,8 @@
 
 /* card */
 .card-container {
-    width: calc(120vmin * var(--ratio));
-    height: calc(90vmin * var(--ratio));
+    width: calc(100% - 2%);
+    height: var(--card-height);
     flex-wrap: wrap;
     display: flex;
     margin: 5% 1%;
@@ -233,7 +233,7 @@
     box-shadow: none!important;
 }
 .card-title {
-    width: calc(30vmin * var(--ratio));
+    width: var(--card-width);
     transition: transform 0.3s;
     box-shadow: none!important;
     position: relative;
@@ -255,7 +255,7 @@
 }
 
 .card-character {
-    height: calc(47vmin * var(--ratio));
+    height: calc(var(--card-height) - 5%);
     opacity: 0;
     transition: all 0.3s;
     position: absolute;

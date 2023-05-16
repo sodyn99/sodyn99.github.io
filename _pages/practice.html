@@ -16,13 +16,13 @@
     <style>
         :root {
             --ratio: 0.72;
-            --card-height: calc(50vmin * var(--ratio));
+            --card-height: calc(100vmin * var(--ratio));
             --card-width: calc(var(--card-height) / 1.5);
         }
 
         .card-container {
-            width: calc(120vmin * var(--ratio));
-            height: calc(90vmin * var(--ratio));
+            width: calc(100% - 2%);
+            height: var(--card-height);
             border: 1px solid red;
             margin: 5% 1%;
             flex-wrap: wrap;
@@ -37,6 +37,7 @@
             align-items: flex-end;
             perspective: 2500px;
             margin-right: calc(5vmin * var(--ratio));
+            margin-bottom: calc(5vmin * var(--ratio));
         }
         
         .cover-image {
