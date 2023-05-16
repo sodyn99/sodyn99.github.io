@@ -17,7 +17,7 @@ author_profile: false
   <div class="goal-line2">
   <div class="goal-line1-2">
   <div class="goal-line2-2">
-  <div class="circle">
+  <div class="midcircle">
   <div class="goal-circle1">
   <div class="goal-circle2">
   <div class="football-title-premierleague"></div>
