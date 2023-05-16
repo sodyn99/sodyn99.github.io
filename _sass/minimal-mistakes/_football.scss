@@ -180,9 +180,9 @@
 
 .card:hover .card-wrapper {
     transform: perspective(900px) translateY(-5%) rotateX(25deg) translateZ(0);
-    box-shadow: 2px 35px 32px -8px rgba(0, 0, 0, 0.75);
-    -webkit-box-shadow: 2px 35px 32px -8px rgba(0, 0, 0, 0.75);
-    -moz-box-shadow: 2px 35px 32px -8px rgba(0, 0, 0, 0.75);
+    box-shadow: none 2px 35px 32px -8px rgba(0, 0, 0, 0.75);
+    // -webkit-box-shadow: 2px 35px 32px -8px rgba(0, 0, 0, 0.75);
+    // -moz-box-shadow: 2px 35px 32px -8px rgba(0, 0, 0, 0.75);
 }
 
 /* .card-wrapper::before,
