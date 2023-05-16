@@ -167,6 +167,7 @@
 }
 
 .cover-image {
+    box-shadow: none;
     width: 100%;
     height: 100%;
     object-fit: cover;
@@ -174,6 +175,7 @@
 }
 
 .card-wrapper {
+    box-shadow: none;
     transition: all 0.3s;
     position: absolute;
     width: 100%;
@@ -190,6 +192,7 @@
 .card-wrapper::before,
 .card-wrapper::after {
     content: "";
+    box-shadow: none;
     opacity: 0;
     width: 100%;
     height: 80px;
@@ -198,6 +201,7 @@
     left: 0;
 }
 .card-wrapper::before {
+    box-shadow: none;
     top: 0;
     height: 100%;
     background-image: linear-gradient(
@@ -208,6 +212,7 @@
     );
 }
 .card-wrapper::after {
+    box-shadow: none;
     bottom: 0;
     opacity: 1;
     background-image: linear-gradient(
