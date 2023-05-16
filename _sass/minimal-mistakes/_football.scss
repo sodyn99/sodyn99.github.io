@@ -233,7 +233,7 @@
     box-shadow: none!important;
 }
 .card-title {
-    width: 100%;
+    width: calc(30vmin * var(--ratio));
     transition: transform 0.3s;
     box-shadow: none!important;
     position: relative;
@@ -241,6 +241,10 @@
     a:hover {
         box-shadow: none!important;
     }
+}
+.card-title > img{
+    width: 100%;
+    box-shadow: none!important;
 }
 .card:hover .card-title {
     transform: translate3d(0%, -50px, 100px);
@@ -261,7 +265,6 @@
 
 .card-character > img {
     height: 100%;
-    position: absolute;
     box-shadow: none!important;
 }
 
