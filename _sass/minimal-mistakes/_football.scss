@@ -235,8 +235,9 @@
 .card-title {
     width: calc(30vmin * var(--ratio));
     transition: transform 0.3s;
-    //box-shadow: none!important;
+    box-shadow: none!important;
     position: relative;
+    border: 1px solid red;
     bottom: -35%;
     a:hover {
         box-shadow: none!important;
@@ -258,8 +259,7 @@
     transition: all 0.3s;
     position: absolute;
     z-index: -1;
-    border: 1px solid red;
-    //box-shadow: none!important;
+    box-shadow: none!important;
     a:hover {
         box-shadow: none!important;
     }
