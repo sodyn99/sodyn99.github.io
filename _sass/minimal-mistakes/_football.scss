@@ -1,6 +1,6 @@
 :root{
     --ratio: 0.72;
-    --card-height: calc(50vmin * var(--ratio));
+    --card-height: calc(100vmin * var(--ratio));
     --card-width: calc(var(--card-height) / 1.5);
 }
 
