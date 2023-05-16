@@ -21,15 +21,16 @@
         * {
             box-sizing: border-box;
         }
-        /* body {
+        .card-container {
             width: 100vw;
-            height: 100vh;
+            height: 50vh;
+            border: 1px solid red;
             margin: 0;
+            flex-wrap: wrap;
             display: flex;
             justify-content: center;
             align-items: center;
-            background: #191c29;
-        } */
+        }
         .card {
             width: var(--card-width);
             height: var(--card-height);
@@ -39,7 +40,7 @@
             align-items: flex-end;
             padding: 0 36px;
             perspective: 2500px;
-            margin: 0 50px;
+            margin: 36px 50px;
         }
         
         .cover-image {
@@ -127,25 +128,37 @@
   </head>
 
   <body>
-    <a href="https://www.mythrillfiction.com/the-dark-rider" alt="Mythrill" target="_blank">
-    <div class="card">
-        <div class="wrapper">
-        <img src="https://ggayane.github.io/css-experiments/cards/dark_rider-cover.jpg" class="cover-image" />
+    <div class="card-container">
+        <a href="https://www.mythrillfiction.com/the-dark-rider" alt="Mythrill" target="_blank">
+        <div class="card">
+            <div class="wrapper">
+            <img src="https://ggayane.github.io/css-experiments/cards/dark_rider-cover.jpg" class="cover-image" />
+            </div>
+            <img src="https://ggayane.github.io/css-experiments/cards/dark_rider-title.png" class="title" />
+            <img src="https://ggayane.github.io/css-experiments/cards/dark_rider-character.webp" class="character" />
         </div>
-        <img src="https://ggayane.github.io/css-experiments/cards/dark_rider-title.png" class="title" />
-        <img src="https://ggayane.github.io/css-experiments/cards/dark_rider-character.webp" class="character" />
-    </div>
-    </a>
-    
-    <a href="https://www.mythrillfiction.com/force-mage" alt="Mythrill" target="_blank">
-    <div class="card">
-        <div class="wrapper">
-        <img src="https://ggayane.github.io/css-experiments/cards/force_mage-cover.jpg" class="cover-image" />
+        </a>
+
+        <a href="https://www.mythrillfiction.com/the-dark-rider" alt="Mythrill" target="_blank">
+            <div class="card">
+                <div class="wrapper">
+                <img src="https://ggayane.github.io/css-experiments/cards/dark_rider-cover.jpg" class="cover-image" />
+                </div>
+                <img src="https://ggayane.github.io/css-experiments/cards/dark_rider-title.png" class="title" />
+                <img src="https://ggayane.github.io/css-experiments/cards/dark_rider-character.webp" class="character" />
+            </div>
+        </a>
+        
+        <a href="https://www.mythrillfiction.com/force-mage" alt="Mythrill" target="_blank">
+        <div class="card">
+            <div class="wrapper">
+            <img src="https://ggayane.github.io/css-experiments/cards/force_mage-cover.jpg" class="cover-image" />
+            </div>
+            <img src="https://ggayane.github.io/css-experiments/cards/force_mage-title.png" class="title" />
+            <img src="https://ggayane.github.io/css-experiments/cards/force_mage-character.webp" class="character" />
         </div>
-        <img src="https://ggayane.github.io/css-experiments/cards/force_mage-title.png" class="title" />
-        <img src="https://ggayane.github.io/css-experiments/cards/force_mage-character.webp" class="character" />
+        </a>
     </div>
-    </a>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
   </body>
 </html>

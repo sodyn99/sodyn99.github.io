@@ -149,14 +149,15 @@
 * {
     box-sizing: border-box;
 }
-// body {
-//     width: 100vw;
-//     height: 100vh;
-//     margin: 0;
-//     display: flex;
-//     justify-content: center;
-//     align-items: center;
-// }
+.card-container {
+    width: 100vw;
+    height: 50vh;
+    margin: 0;
+    flex-wrap: wrap;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
 .card {
     width: var(--card-width);
     height: var(--card-height);
@@ -166,7 +167,7 @@
     align-items: flex-end;
     padding: 0 36px;
     perspective: 2500px;
-    margin: 0 50px;
+    margin: 36px 50px;
 }
   
 .cover-image {
