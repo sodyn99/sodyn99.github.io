@@ -151,7 +151,7 @@
     height: var(--card-height);
     flex-wrap: wrap;
     display: flex;
-    margin: 5% 1%;
+    margin: 5% 3%;
 }
 .card {
     width: var(--card-width);
@@ -161,8 +161,8 @@
     justify-content: center;
     align-items: flex-end;
     perspective: 2500px;
-    margin-right: calc(5vmin * var(--ratio));
-    margin-bottom: calc(5vmin * var(--ratio));
+    margin-right: calc(8vmin * var(--ratio));
+    margin-bottom: calc(8vmin * var(--ratio));
     box-shadow: none!important;
     border: none!important;
 }
