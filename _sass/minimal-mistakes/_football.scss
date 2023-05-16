@@ -147,9 +147,8 @@
 
 /* card */
 .card-container {
-    width: 80vw;
-    height: 50vh;
-    margin: 0;
+    width: calc(120vmin * var(--ratio));
+    height: calc(90vmin * var(--ratio));
     flex-wrap: wrap;
     display: flex;
     justify-content: center;
@@ -162,38 +161,37 @@
     display: flex;
     justify-content: center;
     align-items: flex-end;
-    padding: 0 36px;
     perspective: 2500px;
-    margin: 36px 50px;
+    margin-right: calc(5vmin * var(--ratio));
 }
-  
+
 .cover-image {
     width: 100%;
     height: 100%;
     object-fit: cover;
 }
-  
+
 .card-wrapper {
-    transition: all 0.5s;
+    transition: all 0.3s;
     position: absolute;
     width: 100%;
     z-index: -1;
 }
-  
+
 .card:hover .card-wrapper {
     transform: perspective(900px) translateY(-5%) rotateX(25deg) translateZ(0);
     box-shadow: 2px 35px 32px -8px rgba(0, 0, 0, 0.75);
     -webkit-box-shadow: 2px 35px 32px -8px rgba(0, 0, 0, 0.75);
     -moz-box-shadow: 2px 35px 32px -8px rgba(0, 0, 0, 0.75);
 }
-  
-.card-wrapper::before,
+
+/* .card-wrapper::before,
 .card-wrapper::after {
     content: "";
     opacity: 0;
     width: 100%;
     height: 80px;
-    transition: all 0.5s;
+    transition: all 0.3s;
     position: absolute;
     left: 0;
 }
@@ -204,7 +202,7 @@
     to top,
     transparent 46%,
     rgba(12, 13, 19, 0.5) 68%,
-    /*rgba(12, 13, 19) 97%*/
+    rgba(12, 13, 19) 97%
     );
 }
 .card-wrapper::after {
@@ -214,34 +212,34 @@
     to bottom,
     transparent 46%,
     rgba(12, 13, 19, 0.5) 68%,
-    /*rgba(12, 13, 19) 97%*/
+    rgba(12, 13, 19) 97%
     );
-}
-  
+} */
+
 .card:hover .card-wrapper::before,
 .card-wrapper::after {
     opacity: 1;
 }
-  
+
 .card:hover .card-wrapper::after {
     height: 120px;
 }
 .card-title {
     width: 100%;
-    transition: transform 0.5s;
+    transition: transform 0.3s;
 }
 .card:hover .card-title {
     transform: translate3d(0%, -50px, 100px);
 }
-  
+
 .card-character {
     width: 100%;
     opacity: 0;
-    transition: all 0.5s;
+    transition: all 0.3s;
     position: absolute;
     z-index: -1;
 }
-  
+
 .card:hover .card-character {
     opacity: 1;
     transform: translate3d(0%, -30%, 100px);
