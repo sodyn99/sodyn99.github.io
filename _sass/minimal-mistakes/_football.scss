@@ -236,7 +236,7 @@
 .card-title {
     width: 100%;
     transition: transform 0.3s;
-    &:hover {
+    a:hover {
         box-shadow: none;
     }
 }
@@ -252,7 +252,7 @@
     position: absolute;
     z-index: -1;
     box-shadow: none;
-    &:hover {
+    a:hover {
         box-shadow: none;
     }
 }
