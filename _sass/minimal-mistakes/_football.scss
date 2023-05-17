@@ -256,8 +256,8 @@
 }
 
 .card-character {
-    height: calc(var(--card-height) - 5%);
-    width: calc(var(--card-width) - 5%);
+    max-height: calc(var(--card-height) - 5%);
+    max-width: calc(var(--card-width) - 5%);
     opacity: 0;
     transition: all 0.3s;
     position: absolute;
@@ -273,7 +273,6 @@
 .card-character > img {
     height: 100%;
     width: 100%;
-    object-fit: cover;
     box-shadow: none!important;
 }
 
