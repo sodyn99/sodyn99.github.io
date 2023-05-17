@@ -256,8 +256,8 @@
 }
 
 .card-character {
-    max-height: calc(var(--card-height) - 5%);
-    max-width: calc(var(--card-width) + 20%);
+    max-height: calc(var(--card-height) - 10%);
+    max-width: calc(var(--card-width) + 30%);
     opacity: 0;
     transition: all 0.3s;
     position: absolute;
