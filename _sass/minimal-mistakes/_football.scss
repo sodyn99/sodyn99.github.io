@@ -207,8 +207,8 @@
     background-image: linear-gradient(
     to top,
     transparent 46%,
-    rgba(12, 13, 19, 0.5) 68%,
-    rgba(12, 13, 19, 0.5) 97%
+    /*rgba(12, 13, 19, 0.5) 68%,
+    rgba(12, 13, 19, 0.5) 97%*/
     );
 }
 .card-wrapper::after {
@@ -218,8 +218,8 @@
     background-image: linear-gradient(
     to bottom,
     transparent 46%,
-    rgba(12, 13, 19, 0.5) 68%,
-    rgba(12, 13, 19, 0.5) 97%
+    /*rgba(12, 13, 19, 0.5) 68%,
+    rgba(12, 13, 19, 0.5) 97%*/
     );
 }
 
@@ -257,6 +257,7 @@
 
 .card-character {
     height: calc(var(--card-height) - 5%);
+    width: calc(var(--card-width) - 5%);
     opacity: 0;
     transition: all 0.3s;
     position: absolute;
