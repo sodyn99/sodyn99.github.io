@@ -287,14 +287,14 @@
 /* football standings */
 .table_container {
     margin: 40px 40px;
-    width: 80%;
+    width: 50%;
     border: none;
     border-radius: 25px;
     box-shadow: 0px 0px 15px 0px lightslategray;
     overflow-x: auto;
     backdrop-filter: blur(10px);
     /* background: linear-gradient(45deg, #f2f2f2, lightgray); */
-    background: rgba(220 220 230 / 65%);
+    background: rgba(220, 220, 230, 0.6);
     
 }
 .football_standings {
@@ -308,18 +308,18 @@
     
 }
 .football_standings thead th {
-padding: 15px;
+padding: 15px 10px;
 color:#000;
 font-size:14px;
 text-align: center;
 font-weight: 1000;
 }
 .football_standings tbody td {
-padding: 5px 20px;
+padding: 5px 0px;
 font-size:14px;
 }
 .football_standings tbody tr:hover td {
-    background:rgba(220 220 230 / 30%);
+    background:rgba(220, 220, 230, 0.5);
     color: #000;
 }
 .football_standings tbody tr {
