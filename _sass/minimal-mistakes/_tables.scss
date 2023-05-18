@@ -51,7 +51,7 @@ th {
   background: rgba(220, 220, 230, 0.6);
   
 }
-.dataframe-football_standings {
+.dataframe.football_standings {
   width: 100%;
   position: relative !important;
   text-align: center !important;
@@ -61,65 +61,65 @@ th {
   border: none !important;
   
 }
-.dataframe-football_standings thead th {
+.dataframe.football_standings thead th {
 padding: 15px 10px;
 color:#000;
 font-size:14px !important;
 text-align: center !important;
 font-weight: 1000 !important;
 }
-.dataframe-football_standings tbody td {
+.dataframe.football_standings tbody td {
 padding: 5px 0px;
 font-size:14px !important;
 }
-.dataframe-football_standings tbody tr:hover td {
+.dataframe.football_standings tbody tr:hover td {
   background:rgba(220, 220, 230, 0.5)!important;
   color: #000;
 }
-.dataframe-football_standings tbody tr {
+.dataframe.football_standings tbody tr {
 color:#000;
 font-weight:bold;
 }
-.dataframe-football_standings tbody tr:first-child,
-.dataframe-football_standings tbody tr:nth-child(2),
-.dataframe-football_standings tbody tr:nth-child(3),
-.dataframe-football_standings tbody tr:nth-child(4) {
+.dataframe.football_standings tbody tr:first-child,
+.dataframe.football_standings tbody tr:nth-child(2),
+.dataframe.football_standings tbody tr:nth-child(3),
+.dataframe.football_standings tbody tr:nth-child(4) {
 color: #3426b1 !important;
   &:hover td{
       color: #3426b1;
   }
 }
-.dataframe-football_standings tbody tr:nth-child(5),
-.dataframe-football_standings tbody tr:nth-child(6){
+.dataframe.football_standings tbody tr:nth-child(5),
+.dataframe.football_standings tbody tr:nth-child(6){
 color: #1e746a !important;
   &:hover td{
       color: #1e746a;
   }
 }
-.dataframe-football_standings tbody tr:nth-child(7){
+.dataframe.football_standings tbody tr:nth-child(7){
 color: #637721 !important;
   &:hover td{
       color: #637721;
   }
 }
-.dataframe-football_standings tbody tr:last-child,
-.dataframe-football_standings tbody tr:nth-last-child(2),
-.dataframe-football_standings tbody tr:nth-last-child(3) {
+.dataframe.football_standings tbody tr:last-child,
+.dataframe.football_standings tbody tr:nth-last-child(2),
+.dataframe.football_standings tbody tr:nth-last-child(3) {
 color:#ad2022 !important;
   &:hover td{
       color:#ad2022;
   }
 }
-.dataframe-football_standings tbody span {
+.dataframe.football_standings tbody span {
 font-weight:bold;
 padding:10px 15px;
 border-radius:50%;
 }
-.dataframe-football_standings tbody tr:first-child span {
+.dataframe.football_standings tbody tr:first-child span {
 background:#5055CB;
 color:white;
 }
-.dataframe-football_standings tbody tr span {
+.dataframe.football_standings tbody tr span {
 background:#262626;
 color:#747474;
 }
