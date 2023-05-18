@@ -52,13 +52,12 @@ th {
   
 }
 .dataframe.football_standings {
-  width: 100%;
+  width: 100%!important;
   position: relative !important;
   text-align: center !important;
-  line-height: 1.2;
-  
-  border-collapse: collapse !important;
   border: none !important;
+  border-collapse: collapse !important;
+  
   
 }
 .dataframe.football_standings thead th {
