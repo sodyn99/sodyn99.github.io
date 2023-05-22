@@ -284,3 +284,48 @@
 // }
 
 
+.box__button-football {
+    display: block;
+    position: relative;
+    background: $green;
+    border: 1px solid transparent;
+    border-radius: 15px;
+    width: 500px;
+    height: 50px;
+    text-align: center;
+    text-decoration: none;
+    color: white;
+    line-height: 50px;
+    font-size: 18px;
+    font-weight: bold;
+    margin: 25px 25px;
+    padding: 0 auto;
+    white-space: nowrap;
+    transition: background .3s ease;
+    overflow: hidden;
+    cursor: pointer;
+    -webkit-mask-image: -webkit-radial-gradient(white, black);
+    
+    &:before {
+      content: '';
+      position: absolute;
+      width: 20px;
+      height: 100px;
+      background: white;
+      bottom: -25px;
+      left: 0;
+      border: 2px solid white;
+      transform: translateX(-50px) rotate(45deg);
+      transition: transform .3s ease;
+    }
+    
+    &:hover {
+      background: transparent;
+      border-color: $green;
+      color: $green;
+      
+      &:before {
+        transform: translateX(500px) rotate(45deg);
+      }
+    }
+}
