@@ -490,7 +490,6 @@
     margin-right: 6px;
   }
 }
-
 .nav__sub-title {
   display: block;
   margin: 0.5rem 0;
@@ -501,18 +500,16 @@
   text-transform: uppercase;
   border-bottom: 1px solid $border-color;
 }
-
-.nav__sub-2-title {
-  margin: 0;
-  padding: 0.25rem 0.25rem 0.5rem 1rem;
+.nav__index {
+  margin: 0.3rem -1rem 0.3em 1rem;
+  padding: 0;
   font-family: $sans-serif-narrow;
   font-size: 0.9em;
   font-weight: bold;
 }
-
-.nav__index {
-  margin: 0.3em;
-  padding: 0;
+.nav__sub-2-title {
+  position: relative;
+  margin: 0.3rem 0rem 0.3rem 1rem;
   font-family: $sans-serif-narrow;
   font-size: 0.9em;
   font-weight: bold;
