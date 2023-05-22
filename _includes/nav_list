@@ -24,10 +24,11 @@
           {% for child in nav.children %}
             {% if child.icon %}
               <li>
-                <span style="font-weight:bold; padding-top:0.5rem;" class="nav__sub-2-title"></span>
+                <span style="font-weight:bold; padding-top:0.5rem;" class="nav__sub-2-title">
                   <a href="{{ child.url | relative_url }}"{% if child.url == page.url %} class="active"{% endif %}>
                     <i style="font-weight:bold" class="{{ child.icon | default: 'fas fa-circle' }}" aria-hidden="true"><span style="font-weight:bold">&nbsp;{{ child.title }}</span></i>
                   </a>
+                </span>
               </li>
             {% else %}
               {% if child.index %}
