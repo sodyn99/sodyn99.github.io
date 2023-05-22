@@ -31,7 +31,7 @@ home:
         url: /sports/football/
       - title: "Esports"
         icon: "fas fa-gamepad"
-        url: /sports/esorts/
+        url: /sports/esports/
 
 # main links
 main:
