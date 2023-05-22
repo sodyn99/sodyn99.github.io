@@ -29,7 +29,7 @@
 
       .nav__sub-title {
         display: block;
-        margin: 0.5rem 0;
+        margin: 0.5rem ;
         padding: 0.25rem 0;
         font-family: $sans-serif-narrow;
         font-size: 0.9em;
@@ -38,16 +38,16 @@
         border-bottom: 1px solid black;
       }
       .nav__index {
-        margin: 0.3rem -1rem 0.3em 1rem;
-        padding: 0;
+        position: relative;
+        margin: 1rem -1rem 5px 1rem;
         font-family: $sans-serif-narrow;
         font-size: 0.9em;
         font-weight: bold;
       }
       .nav__sub-2-title {
+        display: inline-block;
         position: relative;
         margin: 0.3rem 0rem 0.3rem 1rem;
-        font-family: $sans-serif-narrow;
         font-size: 0.9em;
         font-weight: bold;
       }
@@ -61,10 +61,12 @@
     <br><br><br><br>
     <span class="nav__sub-title">Sports</span>
     <span class="nav__index">1.1</span>
+    <span class="nav__sub-2-title">Football</span><br>
+    <span class="nav__index">1.2</span>
     <span class="nav__sub-2-title">Football</span>
 
     <span class="nav__sub-title">Sports</span>
-    <span class="nav__sub-2-title">Football</span>
+    <span style="padding-top:0.5rem;" class="nav__sub-2-title">Football</span>
 
     <hr>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
