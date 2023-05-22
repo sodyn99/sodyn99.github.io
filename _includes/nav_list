@@ -7,7 +7,6 @@
   <ul class="nav__items">
     {% for nav in navigation %}
       <li>
-        <br>
         {% if nav.icon %}
         <span style="font-weight:bold" class="nav__sub-title"><i class="{{ nav.icon | default: 'fas fa-circle' }}" aria-hidden="true"> {{ nav.title }}</i></span>
         {% else %}
@@ -24,7 +23,7 @@
           {% for child in nav.children %}
             {% if child.icon %}
               <li>
-                <span style="font-weight:bold" class="nav__sub-2-title"></span> <br> &nbsp;&nbsp;
+                <span style="font-weight:bold" class="nav__sub-2-title"></span> &nbsp;&nbsp;
                   <a href="{{ child.url | relative_url }}"{% if child.url == page.url %} class="active"{% endif %}>
                     <i style="font-weight:bold" class="{{ child.icon | default: 'fas fa-circle' }}" aria-hidden="true"><span style="font-weight:bold">&nbsp;{{ child.title }}</span></i>
                   </a>
