@@ -1,7 +1,7 @@
 ---
 layout: single
 title: "Premier League 22/23"
-categories: Sports Football Europe Premier-League
+categories: Sports Football Premier-League
 tag: Football
 toc: false
 sidebar:
