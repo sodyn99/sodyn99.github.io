@@ -328,11 +328,9 @@
         transform: translateX(500px) rotate(45deg);
       }
     }
-
-    .box__button-home > img {
-        position: relative;
-        max-height: 80%;
-        vertical-align: middle;
-        margin-right: 0px;
-    }
+}
+.box__button-football > img {
+    position: relative;
+    max-height: 80%;
+    vertical-align: middle;
 }
