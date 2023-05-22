@@ -295,7 +295,7 @@
     text-align: center;
     text-decoration: none;
     color: white;
-    line-height: 50px;
+    line-height: 47px;
     font-size: 18px;
     font-weight: bold;
     margin: 25px 25px;
@@ -327,5 +327,12 @@
       &:before {
         transform: translateX(500px) rotate(45deg);
       }
+    }
+
+    .box__button-home > img {
+        position: relative;
+        max-height: 80%;
+        vertical-align: middle;
+        margin-right: 0px;
     }
 }
