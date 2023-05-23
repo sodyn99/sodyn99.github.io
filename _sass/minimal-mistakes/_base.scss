@@ -46,6 +46,8 @@ details[open] .side::after {
   display: inline-block;
   padding-right: 15px;
   font-size: 180%;
+}
+details[open] .side {
   margin-bottom: 10px;
 }
 details[open] .side:hover {
