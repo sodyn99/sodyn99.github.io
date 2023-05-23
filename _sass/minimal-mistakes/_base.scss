@@ -23,14 +23,14 @@ body {
 
 /* details, summary tag*/
 .side {
-  //transition: background .5s ease;
+  transition: background .5s ease;
   width: 100%;
   outline: 0;
   display: flex;
   padding-left: 10px;
   justify-content: space-between;
   cursor: pointer;
-  transition-duration: 0.3s;
+  // transition: transform 0.3s;
   border-bottom: 1px solid $border-color;
 }
 // .side::after {
@@ -54,8 +54,8 @@ details[open] .side {
   margin-bottom: 10px;
 }
 .side:hover {
-  // background: #d3d3d3;
-  transform: scale(1.2);
+  background: #d3d3d3;
+  //transform: scale(1.1);
 }
 details .side {
   cursor: pointer;
