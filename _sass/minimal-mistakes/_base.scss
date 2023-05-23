@@ -47,19 +47,23 @@ details[open] .side::after {
   font-size: 180%;
 }
 details[open] .side:hover {
-background:none;
+  background:none;
+  margin-bottom: 10px;
 }
 .side:hover {
   background: #d3d3d3;
 }
+details .side {
+  cursor: pointer;
+  transition: margin .2s ease-out;
+}
 details .side::-webkit-details-marker {
-display:none;
+  display:none;
 }
 
 summary {
   cursor: pointer;
 }
-
 details summary {
   cursor: pointer;
   transition: margin .2s ease-out;
