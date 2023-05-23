@@ -60,6 +60,11 @@ summary {
   cursor: pointer;
 }
 
+details summary {
+  cursor: pointer;
+  transition: margin .5s ease-out;
+}
+
 h1,
 h2,
 h3,
