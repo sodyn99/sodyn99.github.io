@@ -62,7 +62,10 @@ summary {
 
 details summary {
   cursor: pointer;
-  transition: margin .5s ease-out;
+  transition: margin .2s ease-out;
+}
+details[open] summary {
+  margin-bottom: 10px;
 }
 
 h1,
