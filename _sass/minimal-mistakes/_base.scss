@@ -39,7 +39,7 @@ body {
   display: inline-block;
   padding-right: 15px;
   font-size: 180%;
-  color: #034171;
+  color: $border-color;//#034171;
 }
 details[open] .side::after {
   content: '\f106';
