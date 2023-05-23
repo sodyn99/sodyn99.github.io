@@ -64,13 +64,6 @@ details .side::-webkit-details-marker {
 summary {
   cursor: pointer;
 }
-details summary {
-  cursor: pointer;
-  transition: margin .2s ease-out;
-}
-details[open] summary {
-  margin-bottom: 10px;
-}
 
 h1,
 h2,
