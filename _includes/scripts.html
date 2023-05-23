@@ -94,7 +94,7 @@
 <!-- football -->
 
 <!-- top scroll button -->
-<script>
+<!-- <script>
   $(document).ready(function() {
   
     $(window).scroll(function() {
@@ -110,5 +110,21 @@
       $('html, body').animate({scrollTop:0}, '300');
     });
   
+  })(jQuery);
+</script> -->
+<script>
+  var btn = $('#topbutton');
+
+  $(window).scroll(function() {
+    if ($(window).scrollTop() > 300) {
+      btn.addClass('show');
+    } else {
+      btn.removeClass('show');
+    }
   });
-  </script>
+
+  btn.on('click', function(e) {
+    e.preventDefault();
+    $('html, body').animate({scrollTop:0}, '300');
+  });
+</script>
