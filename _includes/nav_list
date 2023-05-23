@@ -9,7 +9,7 @@
       <li>
         <br>
         <details>
-          <summary>
+          <summary class="side">
             {% if nav.icon %}
             <span style="font-weight:bold" class="nav__sub-title"><i class="{{ nav.icon | default: 'fas fa-circle' }}" aria-hidden="true"> {{ nav.title }}</i></span>
             {% else %}

@@ -22,7 +22,7 @@ body {
 }
 
 /* details, summary tag*/
-summary {
+.side {
   transition: background .5s ease;
   width: 100%;
   outline: 0;
@@ -31,7 +31,7 @@ summary {
   cursor: pointer;
   border-bottom: 1px solid $border-color;
 }
-summary::after {
+.side::after {
   font-family: "Font Awesome 5 Free";
   font-weight: 900;
   content: "\f107";
@@ -40,23 +40,23 @@ summary::after {
   font-size: 180%;
   color: #034171;
 }
-details[open] summary::after {
+details[open] .side::after {
   content: '\f106';
   display: inline-block;
   padding-right: 15px;
   font-size: 180%;
 }
-details[open] summary:hover {
+details[open] .side:hover {
 background:none;
 }
-summary:hover {
+.side:hover {
   background: #d3d3d3;
 }
-details summary::-webkit-details-marker {
+details .side::-webkit-details-marker {
 display:none;
 }
 
-.quiz {
+summary {
   cursor: pointer;
 }
 
