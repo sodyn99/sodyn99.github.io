@@ -34,18 +34,18 @@ body {
 }
 .side::after {
   font-family: "Font Awesome 5 Free";
-  font-weight: 900;
+  font-weight: 400;
   content: "\f107";
   display: inline-block;
   padding-right: 15px;
-  transition: all 0.1s;
+  transition: all 0.3s;
   font-size: 180%;
   color: #525252;//#034171;
 }
 details[open] .side::after {
   content: '\f106';
   display: inline-block;
-  transition: all 0.1s;
+  transition: all 0.3s;
   padding-right: 15px;
   font-size: 180%;
 }
