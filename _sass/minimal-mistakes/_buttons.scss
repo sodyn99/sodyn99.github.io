@@ -99,10 +99,11 @@
 /* ==========================================================================
    topbutton
    ========================================================================== */
+@import url(https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css);
 
 #topbutton {
   display: inline-block;
-  background-color: $green;
+  background-color: #034171;
   width: 50px;
   height: 50px;
   text-align: center;
@@ -117,8 +118,8 @@
   z-index: 1000;
 }
 #topbutton::after {
-  font-family: "Font Awesome 5 Free";
-  content: "\f106";
+  content: "\f077";
+  font-family: FontAwesome;
   font-weight: normal;
   font-style: normal;
   font-size: 2em;
