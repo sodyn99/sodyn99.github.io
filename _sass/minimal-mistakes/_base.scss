@@ -38,12 +38,14 @@ body {
   content: "\f107";
   display: inline-block;
   padding-right: 15px;
+  transition: all 0.1s;
   font-size: 180%;
   color: #525252;//#034171;
 }
 details[open] .side::after {
   content: '\f106';
   display: inline-block;
+  transition: all 0.1s;
   padding-right: 15px;
   font-size: 180%;
 }
