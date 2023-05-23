@@ -6,61 +6,61 @@
   <label for="ac-toc">{{ site.data.ui-text[site.locale].menu_label | default: "Toggle Menu" }}</label>
   <ul class="nav__items">
     {% for nav in navigation %}
-    <details>
       <li>
         <br>
-        <summary>
-          {% if nav.icon %}
-          <span style="font-weight:bold" class="nav__sub-title"><i class="{{ nav.icon | default: 'fas fa-circle' }}" aria-hidden="true"> {{ nav.title }}</i></span>
-          {% else %}
-            {% if nav.url %}
-            <a href="{{ nav.url | relative_url }}"><span class="nav__sub-title">{{ nav.title }}</span></a>
+        <details>
+          <summary>
+            {% if nav.icon %}
+            <span style="font-weight:bold" class="nav__sub-title"><i class="{{ nav.icon | default: 'fas fa-circle' }}" aria-hidden="true"> {{ nav.title }}</i></span>
             {% else %}
-              <span class="nav__sub-title">{{ nav.title }}</span>
+              {% if nav.url %}
+              <a href="{{ nav.url | relative_url }}"><span class="nav__sub-title">{{ nav.title }}</span></a>
+              {% else %}
+                <span class="nav__sub-title">{{ nav.title }}</span>
+              {% endif %}
             {% endif %}
-          {% endif %}
-        </summary>
+          </summary>
 
-        {% if nav.children != null %}
-        <ul>
-          {% for child in nav.children %}
-            {% if child.icon %}
-              <li>
-                <span style="font-weight:bold; padding-top:0.5rem;" class="nav__sub-2-title">
-                  <a href="{{ child.url | relative_url }}"{% if child.url == page.url %} class="active"{% endif %}>
-                    <i style="font-weight:bold" class="{{ child.icon | default: 'fas fa-circle' }}" aria-hidden="true"><span style="font-weight:bold">&nbsp;{{ child.title }}</span></i>
-                  </a>
-                </span>
-              </li>
-            {% else %}
-              {% if child.index %}
+          {% if nav.children != null %}
+          <ul>
+            {% for child in nav.children %}
+              {% if child.icon %}
                 <li>
-                  <span class="nav__index">
+                  <span style="font-weight:bold; padding-top:0.5rem;" class="nav__sub-2-title">
                     <a href="{{ child.url | relative_url }}"{% if child.url == page.url %} class="active"{% endif %}>
-                    {{ child.index }}
-                    </a>
-                  </span>
-                  <span class="nav__sub-2-title">
-                    <a href="{{ child.url | relative_url }}"{% if child.url == page.url %} class="active"{% endif %}>
-                    {{ child.title }}
+                      <i style="font-weight:bold" class="{{ child.icon | default: 'fas fa-circle' }}" aria-hidden="true"><span style="font-weight:bold">&nbsp;{{ child.title }}</span></i>
                     </a>
                   </span>
                 </li>
               {% else %}
-                <li>
-                  <span class="nav__sub-2-title">
-                    <a href="{{ child.url | relative_url }}"{% if child.url == page.url %} class="active"{% endif %}>
-                    {{ child.title }}
-                    </a>
-                  </span>
-                </li>
+                {% if child.index %}
+                  <li>
+                    <span class="nav__index">
+                      <a href="{{ child.url | relative_url }}"{% if child.url == page.url %} class="active"{% endif %}>
+                      {{ child.index }}
+                      </a>
+                    </span>
+                    <span class="nav__sub-2-title">
+                      <a href="{{ child.url | relative_url }}"{% if child.url == page.url %} class="active"{% endif %}>
+                      {{ child.title }}
+                      </a>
+                    </span>
+                  </li>
+                {% else %}
+                  <li>
+                    <span class="nav__sub-2-title">
+                      <a href="{{ child.url | relative_url }}"{% if child.url == page.url %} class="active"{% endif %}>
+                      {{ child.title }}
+                      </a>
+                    </span>
+                  </li>
+                {% endif %}
               {% endif %}
-            {% endif %}
-          {% endfor %}
-        </ul>
-        {% endif %}
+            {% endfor %}
+          </ul>
+          {% endif %}
+        </details>
       </li>
-    </details>
     {% endfor %}
   </ul>
 </nav>
