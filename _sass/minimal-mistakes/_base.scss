@@ -23,7 +23,42 @@ body {
 
 /* details, summary tag*/
 summary {
+  transition: background .75s ease;
+  width: 100%;
+  outline: 0;
+  text-align: center;
+  font-size: 85%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
   cursor: pointer;
+  border-top: 1px solid #D3D3D3;
+}
+summary::after {
+  font-family: "Font Awesome 5 Free";
+  font-weight: 900;
+  content: "\f107";
+  display: inline-block;
+  padding-right: 15px;
+  font-size: 180%;
+  color: #034171;
+}
+details[open] summary::after {
+  content: '\f106';
+  display: inline-block;
+  padding-right: 15px;
+  font-size: 180%;
+}
+
+details[open] summary:hover {
+background:none;
+}
+summary:hover {
+  background: #d3d3d3;
+}
+
+details summary::-webkit-details-marker {
+display:none;
 }
 
 h1,
