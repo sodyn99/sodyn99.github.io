@@ -102,7 +102,7 @@
 
 #topbutton {
   display: inline-block;
-  background-color: #FF9800;
+  background-color: $green;
   width: 50px;
   height: 50px;
   text-align: center;
@@ -118,7 +118,7 @@
 }
 #topbutton::after {
   content: "\f077";
-  font-family: FontAwesome;
+  font-family: "Font Awesome 5 Free";
   font-weight: normal;
   font-style: normal;
   font-size: 2em;
