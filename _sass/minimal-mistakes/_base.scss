@@ -52,9 +52,12 @@ background:none;
 summary:hover {
   background: #d3d3d3;
 }
-
 details summary::-webkit-details-marker {
 display:none;
+}
+
+.quiz {
+  cursor: pointer;
 }
 
 h1,
