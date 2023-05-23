@@ -43,10 +43,10 @@ summary::after {
   color: #034171;
 }
 details[open] summary::after {
-  content: '\f106';
   display: inline-block;
   padding-right: 15px;
   font-size: 180%;
+  transform: rotate(180deg);
 }
 details[open] summary:hover {
 background:none;
