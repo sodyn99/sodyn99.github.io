@@ -23,40 +23,39 @@ body {
 
 /* details, summary tag*/
 .side {
-  transition: background .5s ease;
+  //transition: background .5s ease;
   width: 100%;
   outline: 0;
   display: flex;
   padding-left: 10px;
   justify-content: space-between;
   cursor: pointer;
+  transition-duration: 0.3s;
   border-bottom: 1px solid $border-color;
 }
-.side::after {
-  font-family: "Font Awesome 5 Free";
-  font-weight: 900;
-  content: "\f107";
-  display: inline-block;
-  padding-right: 15px;
-  transition: all 0.3s;
-  font-size: 180%;
-  color: #525252;//#034171;
-}
-details[open] .side::after {
-  content: '\f106';
-  display: inline-block;
-  transition: all 0.3s;
-  padding-right: 15px;
-  font-size: 180%;
-}
+// .side::after {
+//   font-family: "Font Awesome 5 Free";
+//   font-weight: 900;
+//   content: "\f107";
+//   display: inline-block;
+//   padding-right: 15px;
+//   transition: all 0.3s;
+//   font-size: 180%;
+//   color: #525252;//#034171;
+// }
+// details[open] .side::after {
+//   content: '\f106';
+//   display: inline-block;
+//   transition: all 0.3s;
+//   padding-right: 15px;
+//   font-size: 180%;
+// }
 details[open] .side {
   margin-bottom: 10px;
 }
-details[open] .side:hover {
-  background:none;
-}
 .side:hover {
-  background: #d3d3d3;
+  // background: #d3d3d3;
+  transform: scale(1.2);
 }
 details .side {
   cursor: pointer;
