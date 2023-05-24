@@ -326,7 +326,20 @@ football:
           url: /sports/football/kleague1/
 
 ############ Esports ####################
-
+esports:
+    - title: "League of Legends"
+      image: "/images/esports/lol/lol-icon.png"
+      image_alt: "lol"
+      children:
+        - title: "LCK"
+          url: /sports/esports/lck/
+        - title: "MSI"
+          url: /sports/esports/msi/
+        - title: "Worlds"
+          url: /sports/esports/worlds/
+    # - title: "Overwatch"
+    #   image: "/images/esports/overwatch/overwatch-icon.png"
+    #   image_alt: "overwatch"
 
 
 lck:
