@@ -303,7 +303,27 @@ linux:
 
 
 ############ Football ####################
-
+football:
+    - title: "Europe"
+      children:
+        - title: "Premier League"
+          url: /sports/football/premierleague/
+        - title: "LaLiga"
+          url: /sports/football/laliga/
+        - title: "Serie A"
+          url: /sports/football/seriea/
+        - title: "Bundesliga"
+          url: /sports/football/bundesliga/
+        - title: "Ligue 1"
+          url: /sports/football/ligue1/
+        - title: "UEFA Champions League"
+          url: /sports/football/championsleague/
+        - title: "UEFA Europa League"
+          url: /sports/football/europaleague/
+    - title: "Asia"
+      children:
+        - title: "K League 1"
+          url: /sports/football/kleague1/
 
 ############ Esports ####################
 
