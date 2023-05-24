@@ -24,8 +24,8 @@
           --ratio: 0.72;
           --card-height: calc(50vmin * var(--ratio));
           --card-width: calc(var(--card-height) * 1.5);
-          --esports-height: calc(100vmin * var(--ratio));
-          --esports-margin: calc(0.9vmin * var(--ratio));
+          --esports-height: calc(80vmin * var(--ratio));
+          --esports-margin: calc(0.61vmin * var(--ratio));
       }
       .match-esports{
         position: relative;
@@ -154,6 +154,7 @@
       }
       .esports-ban{
         position: absolute;
+        background-color: #442EB8;
         width: calc(0.4 * var(--esports-height));
         height: calc(0.085 * var(--esports-height));
         margin: calc(1*var(--esports-margin)) 0 0 calc(2.3*var(--esports-margin));
@@ -162,6 +163,15 @@
         justify-content: space-between;
       }
       .esports-ban:before{
+        font-family:FontAwesome;
+        content: "\2f";
+        display: inline-block;
+        color: red;
+        margin: 0 0 0 calc(3.7*var(--esports-margin));
+        font-size: calc(0.055 * var(--esports-height));
+        transform: rotate(15deg);
+      }
+      .esports-ban::after{
         font-family:FontAwesome;
         content: "\2f";
         display: inline-block;
