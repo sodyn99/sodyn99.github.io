@@ -1,8 +1,202 @@
-// :root{
-//     --ratio: 0.72;
-//     --card-height: calc(50vmin * var(--ratio));
-//     --card-width: calc(var(--card-height) / 1.5);
-// }
+@font-face {
+  font-family: 'chaney-ultraextended';
+  src: url('/fonts/chaney-ultraextended.woff') format('woff');
+}
+:root{
+    --ratio: 0.72;
+    --card-height: calc(50vmin * var(--ratio));
+    --card-width: calc(var(--card-height) / 1.5);
+    --esports-height: calc(100vmin * var(--ratio));
+    --esports-margin: 0.5%;
+}
+
+/* lol */
+.match-esports{
+  position: absolute;
+  width: calc(1.78 * var(--esports-height));
+  height:  var(--esports-height);
+  background-color:  #F2F2F2;
+  margin: 5% 1%;
+  /* box-shadow: -1px -1px 4px 3px lightgrey; */
+  border-radius: 5px;
+  z-index: -1;
+}
+.esports-win1{
+  position: absolute;
+  width: calc(0.8 * var(--esports-height));
+  height: calc(0.16 * var(--esports-height));
+  background: linear-gradient(120deg, #cdb11167,#cdb11100,#cdb11100,#cdb11100,#cdb111b4);
+  margin: var(--esports-margin) 0 0 0;
+  z-index: 1;
+}
+.esports-win2{
+  position: absolute;
+  width: calc(0.8 * var(--esports-height));
+  height: calc(0.16 * var(--esports-height));
+  background: linear-gradient(120deg, #cdb11167,#cdb11100,#cdb11100,#cdb11100,#cdb111b4);
+  margin: var(--esports-margin) 0 0 0;
+  transform: translate(calc(0.98 * var(--esports-height)),0);
+  z-index: 1;
+}
+.esports-team1{
+  font-family: 'chaney-ultraextended';
+  float: left;
+  width: calc(0.8 * var(--esports-height));
+  height: calc(0.16 * var(--esports-height));
+  color: white;
+  background: linear-gradient(to right, #442EB8, #442EB866);
+  margin: var(--esports-margin) 0 0 0;
+  font-size: calc(0.08 * var(--esports-height));
+  line-height : calc(0.17 * var(--esports-height));
+  z-index: 0;
+
+  > img {
+    float:left;
+    position:relative;
+    top:calc(0.02 * var(--esports-height)); 
+    height:calc(0.12 * var(--esports-height));
+    margin-left: calc(0.08 * var(--esports-height));
+    vertical-align:middle;
+  }
+}
+.esports-team2{
+  font-family: 'chaney-ultraextended';
+  float: right;
+  width: calc(0.8 * var(--esports-height));
+  height: calc(0.16 * var(--esports-height));
+  color: white;
+  background: linear-gradient(to left, #EA0E2F, #EA0E2F66);
+  margin: var(--esports-margin) 0 0 0;
+  font-size: calc(0.08 * var(--esports-height));
+  line-height : calc(0.17 * var(--esports-height));
+  z-index: 0;
+  > img {
+    float:right;
+    position:relative;
+    top:calc(0.02 * var(--esports-height)); 
+    height:calc(0.12 * var(--esports-height));
+    margin-right: calc(0.08 * var(--esports-height));
+    vertical-align:middle;
+  }
+}
+.esports-set{
+  font-family: 'chaney-ultraextended';
+  float: left;
+  width: calc(0.18 * var(--esports-height));
+  height: calc(0.16 * var(--esports-height));
+  margin: var(--esports-margin) 0 0 0;
+  font-size: calc(0.04 * var(--esports-height));
+  text-align: center;
+  line-height : calc(0.08 * var(--esports-height));
+}
+.esports-champion1{
+  float: left;
+  width: calc(0.1367 * var(--esports-height));
+  height: calc(0.1367 * var(--esports-height));
+  margin: calc(1*var(--esports-margin)) 0 0 calc(1*var(--esports-margin));
+  z-index: 0;
+  > img {
+    width: 100%;
+    height: 100%;
+  }
+}
+.esports-champion2{
+  float: right;
+  width: calc(0.1367 * var(--esports-height));
+  height: calc(0.1367 * var(--esports-height));
+  margin: calc(1*var(--esports-margin)) calc(1*var(--esports-margin)) 0 0;
+  z-index: 0;
+  > img {
+    width: 100%;
+    height: 100%;
+  }
+}
+.esports-player1{
+  font-family: 'chaney-ultraextended';
+  float: left;
+  width: calc(0.729 * var(--esports-height));
+  height: calc(0.1367 * var(--esports-height));
+  background-color: #442EB8;
+  margin: calc(1*var(--esports-margin)) 0 0 calc(1*var(--esports-margin));
+  text-transform: uppercase;
+  align-items: center;
+  color: white;
+  font-size: calc(0.05 * var(--esports-height));
+  line-height : calc(0.14 * var(--esports-height));
+  z-index: 0;
+  > img {
+    float:left;
+    position:relative;
+    height:calc(0.16 * var(--esports-height));
+    vertical-align:middle;
+  }
+}
+.esports-player2{
+  font-family: 'chaney-ultraextended';
+  float: right;
+  width: calc(0.729 * var(--esports-height));
+  height: calc(0.1367 * var(--esports-height));
+  background-color: #F7434A;
+  margin: calc(1*var(--esports-margin)) calc(1*var(--esports-margin)) 0 0;
+  text-transform: uppercase;
+  align-items: center;
+  color: white;
+  font-size: calc(0.05 * var(--esports-height));
+  line-height : calc(0.14 * var(--esports-height));
+  z-index: 0;
+}
+.esports-ban1{
+  float: left;
+  width: calc(0.085 * var(--esports-height));
+  height: calc(0.085 * var(--esports-height));
+  background-color: gray;
+  margin: calc(1*var(--esports-margin)) 0 0 calc(1.5*var(--esports-margin));
+  z-index: 0;
+  > img {
+    filter:brightness(50%);
+    width: 100%;
+    height: 100%;
+  }
+}
+.esports-ban2{
+  float: right;
+  width: calc(0.085 * var(--esports-height));
+  height: calc(0.085 * var(--esports-height));
+  background-color: gray;
+  margin: calc(1*var(--esports-margin)) calc(1.5*var(--esports-margin)) 0 0;
+  z-index: 0;
+  > img {
+    filter:brightness(50%);
+    width: 100%;
+    height: 100%;
+  }
+}
+.esports-coach1{
+  font-family: 'chaney-ultraextended';
+  float: left;
+  width: calc(0.373 * var(--esports-height));
+  height: calc(0.085 * var(--esports-height));
+  background-color: #442EB8;
+  margin: calc(1*var(--esports-margin)) 0 0 calc(1.5*var(--esports-margin));
+  color: white;
+  font-size: calc(0.03 * var(--esports-height));
+  text-align: center;
+  line-height : calc(0.09 * var(--esports-height));
+  z-index: 0;
+}
+.esports-coach2{
+  font-family: 'chaney-ultraextended';
+  float: right;
+  width: calc(0.371 * var(--esports-height));
+  height: calc(0.085 * var(--esports-height));
+  background-color: #F7434A;
+  margin: calc(1*var(--esports-margin)) calc(1.5*var(--esports-margin)) 0 0;
+  color: white;
+  font-size: calc(0.03 * var(--esports-height));
+  text-align: center;
+  line-height : calc(0.09 * var(--esports-height));
+  z-index: 0;
+}
 
 // /* Football Field */
 // .football-field{

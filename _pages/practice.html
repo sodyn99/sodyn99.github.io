@@ -14,65 +14,334 @@
     <!-- <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
      -->
     <style>
-      .nav__title {
-        margin: 0;
-        padding: 0.5rem 0.75rem 0.85em 0em;
-        font-family: $sans-serif-narrow;
-        font-size: 1.5em;
-        font-weight: bold;
-        opacity: 0.9;
+      @font-face {
+        font-family: 'chaney-ultraextended';
+        src: url('/fonts/chaney-ultraextended.woff') format('woff');
+      }
+      :root{
+          --ratio: 0.72;
+          --card-height: calc(50vmin * var(--ratio));
+          --card-width: calc(var(--card-height) * 1.5);
+          --esports-height: calc(100vmin * var(--ratio));
+          --esports-margin: 0.5%;
+      }
+      .match-esports{
+        position: absolute;
+        width: calc(1.78 * var(--esports-height));
+        height:  var(--esports-height);
+        background-color:  #F2F2F2;
+        margin: 5% 1%;
+        /* box-shadow: -1px -1px 4px 3px lightgrey; */
+        border-radius: 5px;
+        z-index: -1;
+      }
+      .esports-win1{
+        position: absolute;
+        width: calc(0.8 * var(--esports-height));
+        height: calc(0.16 * var(--esports-height));
+        background: linear-gradient(120deg, #cdb11167,#cdb11100,#cdb11100,#cdb11100,#cdb111b4);
+        margin: var(--esports-margin) 0 0 0;
+        z-index: 1;
+      }
+      .esports-win2{
+        position: absolute;
+        width: calc(0.8 * var(--esports-height));
+        height: calc(0.16 * var(--esports-height));
+        background: linear-gradient(120deg, #cdb11167,#cdb11100,#cdb11100,#cdb11100,#cdb111b4);
+        margin: var(--esports-margin) 0 0 0;
+        transform: translate(calc(0.98 * var(--esports-height)),0);
+        z-index: 1;
+      }
+      .esports-team1{
+        font-family: 'chaney-ultraextended';
+        float: left;
+        width: calc(0.8 * var(--esports-height));
+        height: calc(0.16 * var(--esports-height));
+        color: white;
+        background: linear-gradient(to right, #442EB8, #442EB866);
+        margin: var(--esports-margin) 0 0 0;
+        font-size: calc(0.08 * var(--esports-height));
+        line-height : calc(0.17 * var(--esports-height));
+        z-index: 0;
 
-        i {
-          margin-right: 6px;
+        > img {
+          float:left;
+          position:relative;
+          top:calc(0.02 * var(--esports-height)); 
+          height:calc(0.12 * var(--esports-height));
+          margin-left: calc(0.08 * var(--esports-height));
+          vertical-align:middle;
         }
       }
-
-      .nav__sub-title {
-        display: block;
-        margin: 0.5rem ;
-        padding: 0.25rem 0;
-        font-family: $sans-serif-narrow;
-        font-size: 0.9em;
-        font-weight: bold;
+      .esports-team2{
+        font-family: 'chaney-ultraextended';
+        float: right;
+        width: calc(0.8 * var(--esports-height));
+        height: calc(0.16 * var(--esports-height));
+        color: white;
+        background: linear-gradient(to left, #EA0E2F, #EA0E2F66);
+        margin: var(--esports-margin) 0 0 0;
+        font-size: calc(0.08 * var(--esports-height));
+        line-height : calc(0.17 * var(--esports-height));
+        z-index: 0;
+        > img {
+          float:right;
+          position:relative;
+          top:calc(0.02 * var(--esports-height)); 
+          height:calc(0.12 * var(--esports-height));
+          margin-right: calc(0.08 * var(--esports-height));
+          vertical-align:middle;
+        }
+      }
+      .esports-set{
+        font-family: 'chaney-ultraextended';
+        float: left;
+        width: calc(0.18 * var(--esports-height));
+        height: calc(0.16 * var(--esports-height));
+        margin: var(--esports-margin) 0 0 0;
+        font-size: calc(0.04 * var(--esports-height));
+        text-align: center;
+        line-height : calc(0.08 * var(--esports-height));
+      }
+      .esports-champion1{
+        float: left;
+        width: calc(0.1367 * var(--esports-height));
+        height: calc(0.1367 * var(--esports-height));
+        margin: calc(1*var(--esports-margin)) 0 0 calc(1*var(--esports-margin));
+        z-index: 0;
+        > img {
+          width: 100%;
+          height: 100%;
+        }
+      }
+      .esports-champion2{
+        float: right;
+        width: calc(0.1367 * var(--esports-height));
+        height: calc(0.1367 * var(--esports-height));
+        margin: calc(1*var(--esports-margin)) calc(1*var(--esports-margin)) 0 0;
+        z-index: 0;
+        > img {
+          width: 100%;
+          height: 100%;
+        }
+      }
+      .esports-player1{
+        font-family: 'chaney-ultraextended';
+        float: left;
+        width: calc(0.729 * var(--esports-height));
+        height: calc(0.1367 * var(--esports-height));
+        background-color: #442EB8;
+        margin: calc(1*var(--esports-margin)) 0 0 calc(1*var(--esports-margin));
         text-transform: uppercase;
-        border-bottom: 1px solid black;
+        align-items: center;
+        color: white;
+        font-size: calc(0.05 * var(--esports-height));
+        line-height : calc(0.14 * var(--esports-height));
+        z-index: 0;
+        > img {
+          float:left;
+          position:relative;
+          height:calc(0.16 * var(--esports-height));
+          vertical-align:middle;
+        }
       }
-      .nav__index {
-        position: relative;
-        margin: 1rem -1rem 5px 1rem;
-        font-family: $sans-serif-narrow;
-        font-size: 0.9em;
-        font-weight: bold;
+      .esports-player2{
+        font-family: 'chaney-ultraextended';
+        float: right;
+        width: calc(0.729 * var(--esports-height));
+        height: calc(0.1367 * var(--esports-height));
+        background-color: #F7434A;
+        margin: calc(1*var(--esports-margin)) calc(1*var(--esports-margin)) 0 0;
+        text-transform: uppercase;
+        align-items: center;
+        color: white;
+        font-size: calc(0.05 * var(--esports-height));
+        line-height : calc(0.14 * var(--esports-height));
+        z-index: 0;
       }
-      .nav__sub-2-title {
-        display: inline-block;
-        position: relative;
-        margin: 0.3rem 0rem 0.3rem 1rem;
-        font-size: 0.9em;
-        font-weight: bold;
+      .esports-ban1{
+        float: left;
+        width: calc(0.085 * var(--esports-height));
+        height: calc(0.085 * var(--esports-height));
+        background-color: gray;
+        margin: calc(1*var(--esports-margin)) 0 0 calc(1.5*var(--esports-margin));
+        z-index: 0;
+        > img {
+          filter:brightness(50%);
+          width: 100%;
+          height: 100%;
+        }
       }
-
+      .esports-ban2{
+        float: right;
+        width: calc(0.085 * var(--esports-height));
+        height: calc(0.085 * var(--esports-height));
+        background-color: gray;
+        margin: calc(1*var(--esports-margin)) calc(1.5*var(--esports-margin)) 0 0;
+        z-index: 0;
+        > img {
+          filter:brightness(50%);
+          width: 100%;
+          height: 100%;
+        }
+      }
+      .esports-coach1{
+        font-family: 'chaney-ultraextended';
+        float: left;
+        width: calc(0.373 * var(--esports-height));
+        height: calc(0.085 * var(--esports-height));
+        background-color: #442EB8;
+        margin: calc(1*var(--esports-margin)) 0 0 calc(1.5*var(--esports-margin));
+        color: white;
+        font-size: calc(0.03 * var(--esports-height));
+        text-align: center;
+        line-height : calc(0.09 * var(--esports-height));
+        z-index: 0;
+      }
+      .esports-coach2{
+        font-family: 'chaney-ultraextended';
+        float: right;
+        width: calc(0.371 * var(--esports-height));
+        height: calc(0.085 * var(--esports-height));
+        background-color: #F7434A;
+        margin: calc(1*var(--esports-margin)) calc(1.5*var(--esports-margin)) 0 0;
+        color: white;
+        font-size: calc(0.03 * var(--esports-height));
+        text-align: center;
+        line-height : calc(0.09 * var(--esports-height));
+        z-index: 0;
+      }
       
 
     </style>
   </head>
 
   <body>
-    <br><br><br><br>
-    <span class="nav__sub-title">Sports</span>
-    <span class="nav__index">1.1</span>
-    <span class="nav__sub-2-title">Football</span><br>
-    <span class="nav__index">1.2</span>
-    <span class="nav__sub-2-title">Football</span>
-
-    <span class="nav__sub-title">Sports</span>
-    <span style="font-weight:bold; padding-top:0.5rem;" class="nav__sub-2-title">
-      <a href="{{ child.url | relative_url }}"{% if child.url == page.url %} class="active"{% endif %}>
-        <i style="font-weight:bold" class="{{ child.icon | default: 'fas fa-circle' }}" aria-hidden="true"><span style="font-weight:bold">&nbsp;Helloㅇㅇ</span></i>
-      </a>
-    </span>
-
-    <hr>
+    <div class="match-esports">
+      <div class="esports-win2""></div>
+      <!-------------------------------- team --------------------------------->
+      <div class="esports-team1">
+        <img src="/images/esports/lol/lck/t1-logo.png"/>
+        <span style="float:left;margin-left:10vmin;">t1</span>
+      </div>
+      <div class="esports-team2">
+        <img src="/images/esports/lol/lck/gen-logo.png"/>
+        <span style="float:right;margin-right:7vmin;">gen</span>
+      </div>
+      <!-------------------------------- set --------------------------------->
+      <div class="esports-set">
+        <span>SET</span><br>
+        <span>1</span>
+      </div>
+      <!-------------------------------- top --------------------------------->
+      <div class="esports-champion1">
+        <img src="/images/esports/lol/Champions/크산테.png" style="transform: scaleX(-1);"/>
+      </div>
+      <div class="esports-player1">
+        <span style="float:left;margin-left:1vmin;">zeus</span>
+        <span style="float:right;margin-right:2vmin;">3</span>
+      </div>
+      <div class="esports-champion2">
+        <img src="/images/esports/lol/Champions/나르.png" style="transform: scaleX(-1);"/>
+      </div>
+      <div class="esports-player2">
+        <span style="float:right;margin-right:1vmin;">doran</span>
+        <span style="float:left;margin-left:2vmin;">6</span>
+      </div>
+      <!-------------------------------- jungle --------------------------------->
+      <div class="esports-champion1">
+        <img src="/images/esports/lol/Champions/오공.png" style="transform: scaleX(-1);"/>
+      </div>
+      <div class="esports-player1">
+        <span style="float:left;margin-left:1vmin;">oner</span>
+        <span style="float:right;margin-right:2vmin;">3</span>
+      </div>
+      <div class="esports-champion2">
+        <img src="/images/esports/lol/Champions/세주아니.png" style="transform: scaleX(-1);"/>
+      </div>
+      <div class="esports-player2">
+        <span style="float:right;margin-right:1vmin;">peanut</span>
+        <span style="float:left;margin-left:2vmin;">6</span>
+      </div>
+      <!-------------------------------- mid --------------------------------->
+      <div class="esports-champion1">
+        <img src="/images/esports/lol/Champions/애니.png" style="transform: scaleX(-1);"/>
+      </div>
+      <div class="esports-player1">
+        <span style="float:left;margin-left:1vmin;">faker</span>
+        <span style="float:right;margin-right:2vmin;">5</span>
+      </div>
+      <div class="esports-champion2">
+        <img src="/images/esports/lol/Champions/빅토르.png" style="transform: scaleX();"/>
+      </div>
+      <div class="esports-player2">
+        <span style="float:right;margin-right:1vmin;">chovy</span>
+        <span style="float:left;margin-left:2vmin;">8</span>
+      </div>
+      <!-------------------------------- adc --------------------------------->
+      <div class="esports-champion1">
+        <img src="/images/esports/lol/Champions/바루스.png" style="transform: scaleX();"/>
+      </div>
+      <div class="esports-player1">
+        <span style="float:left;margin-left:1vmin;">gumayusi</span>
+        <span style="float:right;margin-right:2vmin;">5</span>
+      </div>
+      <div class="esports-champion2">
+        <img src="/images/esports/lol/Champions/케이틀린.png" style="transform: scaleX();"/>
+      </div>
+      <div class="esports-player2">
+        <span style="float:right;margin-right:1vmin;">peyz</span>
+        <span style="float:left;margin-left:2vmin;">7</span>
+      </div>
+      <!-------------------------------- support --------------------------------->
+      <div class="esports-champion1">
+        <img src="/images/esports/lol/Champions/하이머딩거.png" style="transform: scaleX(-1);"/>
+      </div>
+      <div class="esports-player1">
+        <span style="float:left;margin-left:1vmin;">keria</span>
+        <span style="float:right;margin-right:2vmin;">7</span>
+      </div>
+      <div class="esports-champion2">
+        <img src="/images/esports/lol/Champions/카르마.png" style="transform: scaleX();"/>
+      </div>
+      <div class="esports-player2">
+        <span style="float:right;margin-right:1vmin;">delight</span>
+        <span style="float:left;margin-left:2vmin;">8</span>
+      </div>
+      <!-------------------------------- ban --------------------------------->
+      <div class="esports-ban1" style="margin-left:1.5vmin;">
+        <img src="/images/esports/lol/Champions/마오카이.png" style="transform: scaleX(-1);"/>
+      </div>
+      <div class="esports-ban1">
+        <img src="/images/esports/lol/Champions/카르마.png" style="transform: scaleX(-1);"/>
+      </div>
+      <div class="esports-ban1">
+        <img src="/images/esports/lol/Champions/제이스.png" style="transform: scaleX(-1);"/>
+      </div>
+      <div class="esports-ban1">
+        <img src="/images/esports/lol/Champions/제리.png" style="transform: scaleX(-1);"/>
+      </div>
+      <div class="esports-ban1"></div>
+      <div class="esports-ban2" style="margin-right:1.5vmin;">
+        <img src="/images/esports/lol/Champions/애쉬.png" style="transform: scaleX(-1);"/>
+      </div>
+      <div class="esports-ban2">
+        <img src="/images/esports/lol/Champions/케이틀린.png" style="transform: scaleX(-1);"/>
+      </div>
+      <div class="esports-ban2">
+        <img src="/images/esports/lol/Champions/루시안.png" style="transform: scaleX(-1);"/>
+      </div>
+      <div class="esports-ban2">
+        <img src="/images/esports/lol/Champions/레넥톤.png" style="transform: scaleX(-1);"/>
+      </div>
+      <div class="esports-ban2">
+        <img src="/images/esports/lol/Champions/잭스.png" style="transform: scaleX(-1);"/>
+      </div>
+      <!-------------------------------- coach --------------------------------->
+      <div class="esports-coach1">bengi</div>
+      <div class="esports-coach2">score</div>
+    </div>
+    
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
 
     
