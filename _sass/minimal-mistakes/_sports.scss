@@ -136,24 +136,25 @@
   font-size: calc(0.05 * var(--esports-height));
   line-height : calc(0.14 * var(--esports-height));
 }
-.esports-ban{
+.esports-ban-slash1{
   position: absolute;
-  width: calc(0.4 * var(--esports-height));
+  display: flex;
+  width: calc(0.48 * var(--esports-height));
   height: calc(0.085 * var(--esports-height));
-  background-color: rgba(128, 128, 128, 0.596);
-  margin: calc(1*var(--esports-margin)) 0 0 calc(2.3*var(--esports-margin));
-  bottom: calc(1*var(--esports-margin));
+  margin: 0 0 0 calc(2*var(--esports-margin));
+  bottom: calc(0.8*var(--esports-margin));
   z-index: 1;
   justify-content: space-between;
 }
-.esports-ban::before{
-  font-family:'Font Awesome 5 Free';
-  content: "\f107";
-  display: inline-block;
-  font-weight: 900;
-  font-size: 180%;
-  color: red;
-  font-size: calc(0.05 * var(--esports-height));
+.esports-ban-slash2{
+  position: absolute;
+  display: flex;
+  width: calc(0.48 * var(--esports-height));
+  height: calc(0.085 * var(--esports-height));
+  right: calc(2*var(--esports-margin));
+  bottom: calc(0.8*var(--esports-margin));
+  z-index: 1;
+  justify-content: space-between;
 }
 .esports-ban1{
   float: left;

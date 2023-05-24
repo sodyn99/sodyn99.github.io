@@ -152,32 +152,25 @@
         font-size: calc(0.05 * var(--esports-height));
         line-height : calc(0.14 * var(--esports-height));
       }
-      .esports-ban{
+      .esports-ban-slash1{
         position: absolute;
-        width: calc(0.4 * var(--esports-height));
+        display: flex;
+        width: calc(0.48 * var(--esports-height));
         height: calc(0.085 * var(--esports-height));
-        margin: calc(1*var(--esports-margin)) 0 0 calc(2.3*var(--esports-margin));
-        bottom: calc(1.6*var(--esports-margin));
+        margin: 0 0 0 calc(2*var(--esports-margin));
+        bottom: calc(0.8*var(--esports-margin));
         z-index: 1;
         justify-content: space-between;
       }
-      .esports-ban:before{
-        font-family:FontAwesome;
-        content: "\2f";
-        display: inline-block;
-        color: red;
-        margin: 0 0 0 calc(3.7*var(--esports-margin));
-        font-size: calc(0.055 * var(--esports-height));
-        transform: rotate(15deg);
-      }
-      .esports-ban::after{
-        font-family:FontAwesome;
-        content: "\2f";
-        display: inline-block;
-        color: red;
-        margin: 0 0 0 calc(3.7*var(--esports-margin));
-        font-size: calc(0.055 * var(--esports-height));
-        transform: rotate(15deg);
+      .esports-ban-slash2{
+        position: absolute;
+        display: flex;
+        width: calc(0.48 * var(--esports-height));
+        height: calc(0.085 * var(--esports-height));
+        right: calc(2*var(--esports-margin));
+        bottom: calc(0.8*var(--esports-margin));
+        z-index: 1;
+        justify-content: space-between;
       }
       .esports-ban1{
         float: left;
@@ -325,7 +318,19 @@
         <span style="float:left;margin-left:2vmin;">8</span>
       </div>
       <!-------------------------------- ban --------------------------------->
-      <div class="esports-ban">
+      <div class="esports-ban-slash1">
+        <i class="fas fa-slash fa-rotate-90 fa-lg" style="color:red;margin-left:-1vmin;"></i>
+        <i class="fas fa-slash fa-rotate-90 fa-lg" style="color:red;margin-left:0vmin;"></i>
+        <i class="fas fa-slash fa-rotate-90 fa-lg" style="color:red;margin-left:0vmin;"></i>
+        <i class="fas fa-slash fa-rotate-90 fa-lg" style="color:red;margin-right:0vmin;"></i>
+        <i class="fas fa-slash fa-rotate-90 fa-lg" style="color:red;margin-right:2.7vmin;"></i>
+      </div>
+      <div class="esports-ban-slash2">
+        <i class="fas fa-slash fa-rotate-90 fa-lg" style="color:red;margin-left:-1vmin;"></i>
+        <i class="fas fa-slash fa-rotate-90 fa-lg" style="color:red;margin-left:0vmin;"></i>
+        <i class="fas fa-slash fa-rotate-90 fa-lg" style="color:red;margin-left:0vmin;"></i>
+        <i class="fas fa-slash fa-rotate-90 fa-lg" style="color:red;margin-right:0vmin;"></i>
+        <i class="fas fa-slash fa-rotate-90 fa-lg" style="color:red;margin-right:2.7vmin;"></i>
       </div>
       <div class="esports-ban1" style="margin-left:0.8vmin;">
         <img src="/images/esports/lol/Champions/마오카이.png" style="transform: scaleX(-1);"/>
@@ -337,20 +342,20 @@
         <img src="/images/esports/lol/Champions/제이스.png" style="transform: scaleX(-1);"/>
       </div>
       <div class="esports-ban1">
-        <img src="/images/esports/lol/Champions/제리.png" style="transform: scaleX(-1);"/>
+        <img src="/images/esports/lol/Champions/제리.png" style="transform: scaleX();"/>
       </div>
       <div class="esports-ban1"></div>
       <div class="esports-ban2" style="margin-right:0.8vmin;">
-        <img src="/images/esports/lol/Champions/애쉬.png" style="transform: scaleX(-1);"/>
+        <img src="/images/esports/lol/Champions/애쉬.png" style="transform: scaleX();"/>
       </div>
       <div class="esports-ban2">
-        <img src="/images/esports/lol/Champions/케이틀린.png" style="transform: scaleX(-1);"/>
+        <img src="/images/esports/lol/Champions/케이틀린.png" style="transform: scaleX();"/>
       </div>
       <div class="esports-ban2">
         <img src="/images/esports/lol/Champions/루시안.png" style="transform: scaleX(-1);"/>
       </div>
       <div class="esports-ban2">
-        <img src="/images/esports/lol/Champions/레넥톤.png" style="transform: scaleX(-1);"/>
+        <img src="/images/esports/lol/Champions/레넥톤.png" style="transform: scaleX();"/>
       </div>
       <div class="esports-ban2">
         <img src="/images/esports/lol/Champions/잭스.png" style="transform: scaleX(-1);"/>
