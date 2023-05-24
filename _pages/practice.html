@@ -159,6 +159,14 @@
         line-height : calc(0.14 * var(--esports-height));
         z-index: 0;
       }
+      .esports-ban{
+        position: absolute;
+        width: calc(0.8 * var(--esports-height));
+        height: calc(0.16 * var(--esports-height));
+        background-color: gray;
+        bottom: var(--esports-margin);
+        z-index: 1;
+      }
       .esports-ban1{
         float: left;
         width: calc(0.085 * var(--esports-height));
@@ -309,6 +317,7 @@
         <span style="float:left;margin-left:2vmin;">8</span>
       </div>
       <!-------------------------------- ban --------------------------------->
+      <div class="esports-ban"></div>
       <div class="esports-ban1" style="margin-left:1.5vmin;">
         <img src="/images/esports/lol/Champions/마오카이.png" style="transform: scaleX(-1);"/>
       </div>
