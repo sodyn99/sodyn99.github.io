@@ -80,7 +80,7 @@
   width: calc(0.18 * var(--esports-height));
   height: calc(0.16 * var(--esports-height));
   margin: var(--esports-margin) 0 0 0;
-  font-size: calc(0.04 * var(--esports-height));
+  font-size: calc(0.03 * var(--esports-height));
   text-align: center;
   line-height : calc(0.08 * var(--esports-height));
 }
@@ -141,7 +141,7 @@
   display: flex;
   width: calc(0.46 * var(--esports-height));
   height: calc(0.08 * var(--esports-height));
-  left: calc(1.5*var(--esports-margin));
+  left: calc(1.4*var(--esports-margin));
   bottom: calc(0.7*var(--esports-margin));
   z-index: 1;
   justify-content: space-between;
