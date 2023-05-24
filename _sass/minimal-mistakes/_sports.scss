@@ -7,7 +7,7 @@
     --card-height: calc(50vmin * var(--ratio));
     --card-width: calc(var(--card-height) / 1.5);
     --esports-height: calc(100vmin * var(--ratio));
-    --esports-margin: 0.5%;
+    --esports-margin: calc(0.9vmin * var(--ratio));
 }
 
 /* lol */
@@ -19,7 +19,6 @@
   margin: 5% 1%;
   /* box-shadow: -1px -1px 4px 3px lightgrey; */
   border-radius: 5px;
-  z-index: -1;
 }
 .esports-win1{
   position: absolute;
@@ -144,6 +143,14 @@
   font-size: calc(0.05 * var(--esports-height));
   line-height : calc(0.14 * var(--esports-height));
   z-index: 0;
+}
+.esports-ban{
+  position: absolute;
+  width: calc(0.8 * var(--esports-height));
+  height: calc(0.16 * var(--esports-height));
+  background-color: gray;
+  bottom: calc(1*var(--esports-margin));
+  z-index: 1;
 }
 .esports-ban1{
   float: left;
