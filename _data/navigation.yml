@@ -312,11 +312,11 @@ linux:
 lck:
     - title: "2023 Summer"
       children:
-        - title: "06.07 T1 |2 : 1| GEN"
-          url: /sports/esports/lck/2023_summer-06.07/
+        - title: "06.11 T1 2 : 1 GEN"
+          url: /sports/esports/lck/2023_summer-06.11/
     - title: "2023 Spring"
       children:
-        - title: "02.19 T1 |2 : 1| GEN"
+        - title: "02.19 T1 2 : 1 GEN"
           url: /sports/esports/lck/2023_spring-02.19/
 
 

@@ -29,11 +29,11 @@
 }
 .esports-win2{
   position: absolute;
+  right:0;
   width: calc(0.8 * var(--esports-height));
   height: calc(0.16 * var(--esports-height));
   background: linear-gradient(120deg, #cdb11167,#cdb11100,#cdb11100,#cdb11100,#cdb111b4);
   margin: var(--esports-margin) 0 0 0;
-  transform: translate(calc(0.98 * var(--esports-height)),0);
 }
 .esports-team1{
   font-family: 'chaney-ultraextended';
