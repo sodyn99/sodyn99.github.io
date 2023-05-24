@@ -36,28 +36,44 @@
         /* box-shadow: -1px -1px 4px 3px lightgrey; */
         border-radius: 5px;
       }
+      .esports-lose1{
+        position: absolute;
+        width: calc(0.8 * var(--esports-height));
+        height: calc(0.16 * var(--esports-height));
+        background: linear-gradient(90deg, #000,#cdb11100,#cdb11100,#cdb11100,#00000000);
+        margin: var(--esports-margin) 0 0 0;
+      }
+      .esports-lose2{
+        position: absolute;
+        width: calc(0.8 * var(--esports-height));
+        height: calc(0.16 * var(--esports-height));
+        background: linear-gradient(90deg, #cdb11100,#cdb11100,#cdb11100,#cdb11100,#000);
+        margin: var(--esports-margin) 0 0 0;
+        right:0;
+      }
       .esports-win1{
         position: absolute;
         width: calc(0.8 * var(--esports-height));
         height: calc(0.16 * var(--esports-height));
-        background: linear-gradient(120deg, #cdb11167,#cdb11100,#cdb11100,#cdb11100,#cdb111b4);
+        background: linear-gradient(90deg, #cdb111,#cdb11100,#cdb11100,#cdb11100,#00000000);
         margin: var(--esports-margin) 0 0 0;
       }
       .esports-win2{
         position: absolute;
         width: calc(0.8 * var(--esports-height));
         height: calc(0.16 * var(--esports-height));
-        background: linear-gradient(120deg, #cdb111,#cdb11100,#cdb11100,#cdb11100,#cdb111);
+        background: linear-gradient(90deg, #cdb11100,#cdb11100,#cdb11100,#cdb11100,#cdb111);
         margin: var(--esports-margin) 0 0 0;
-        transform: translate(calc(0.98 * var(--esports-height)),0);
+        right:0;
       }
+      
       .esports-team1{
         font-family: 'chaney-ultraextended';
         float: left;
         width: calc(0.8 * var(--esports-height));
         height: calc(0.16 * var(--esports-height));
-        color: white;
-        background: linear-gradient(to right, #442EB8, #442EB866);
+        color: black;
+        background: linear-gradient(to right, #442EB8, #f2f2f2);
         margin: var(--esports-margin) 0 0 0;
         font-size: calc(0.08 * var(--esports-height));
         line-height : calc(0.17 * var(--esports-height));
@@ -76,8 +92,8 @@
         float: right;
         width: calc(0.8 * var(--esports-height));
         height: calc(0.16 * var(--esports-height));
-        color: white;
-        background: linear-gradient(to left, #EA0E2F, #EA0E2F66);
+        color: black;
+        background: linear-gradient(to left, #EA0E2F, #f2f2f2);
         margin: var(--esports-margin) 0 0 0;
         font-size: calc(0.08 * var(--esports-height));
         line-height : calc(0.17 * var(--esports-height));
@@ -229,6 +245,7 @@
 
   <body>
     <div class="match-esports">
+      <div class="esports-lose1"></div>
       <div class="esports-win2"></div>
       <!-------------------------------- team --------------------------------->
       <div class="esports-team1">
@@ -369,7 +386,8 @@
       <div class="esports-coach2">bengi</div>
     </div>
     <div class="match-esports">
-      <div class="esports-win2"></div>
+      <div class="esports-win1"></div>
+      <div class="esports-lose2"></div>
       <!-------------------------------- team --------------------------------->
       <div class="esports-team1">
         <img src="/images/esports/lol/lck/gen-logo.png"/>
