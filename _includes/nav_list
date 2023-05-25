@@ -62,15 +62,17 @@
         </details>
       </li>
     {% endfor %}
-    <div class="box__button-Home" onclick="location.href='/';" style="width:80%; margin-top: 70px; margin-left: 15px;">
-      <img src="/assets/mstile-150x150.png"/>
-      Home
-    </span>
-    <div class="box__button-Study" onclick="location.href='/study/';" style="width:80%; margin-top: 5px; margin-left: 15px;">
-      Study
-    </span>
-    <div class="box__button-Football" onclick="location.href='/sports/';" style="width:80%; margin-top: 5px; margin-left: 15px;">
-      Sports
-    </span>
+    {% if page.sidebar.parent==true %}
+      <div class="box__button-Home" onclick="location.href='/';" style="width:80%; margin-top: 70px; margin-left: 15px;">
+        <img src="/assets/mstile-150x150.png"/>
+        Home
+      </div>
+      <div class="box__button-Study" onclick="location.href='/study/';" style="width:80%; margin-top: 5px; margin-left: 15px;">
+        Study
+      </div>
+      <div class="box__button-Football" onclick="location.href='/sports/';" style="width:80%; margin-top: 5px; margin-left: 15px;">
+        Sports
+      </div>
+    {% endif %}
   </ul>
 </nav>
