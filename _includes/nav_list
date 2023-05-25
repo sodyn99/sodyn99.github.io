@@ -63,4 +63,5 @@
       </li>
     {% endfor %}
   </ul>
+  {% if page.sidebar.parent %}<span class="nav__sub-2-title" style="padding-left: 0;">{{ page.sidebar.parent }}</span>{% endif %}
 </nav>
