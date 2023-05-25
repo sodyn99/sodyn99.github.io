@@ -68,11 +68,11 @@
         Home
       </div>
       <div class="box__button-Study" onclick="location.href='/study/';" style="width:80%; margin-top: 5px; margin-left: 15px;">
-        <i style="font-weight:bold" class="fas fa-book" aria-hidden="true"></i>  
+        <i style="font-weight:bold" class="fas fa-book" aria-hidden="true"></i>&nbsp;&nbsp;
         Study
       </div>
       <div class="box__button-Football" onclick="location.href='/sports/';" style="width:80%; margin-top: 5px; margin-left: 15px;">
-        <i style="font-weight:bold" class="fas fa-table-tennis" aria-hidden="true"></i>  
+        <i style="font-weight:bold" class="fas fa-table-tennis" aria-hidden="true"></i>&nbsp;&nbsp;
         Sports
       </div>
     {% endif %}
