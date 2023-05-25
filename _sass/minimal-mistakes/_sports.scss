@@ -487,7 +487,7 @@
 // }
 
 
-.box__button-football {
+.box__button-Football {
     display: block;
     position: relative;
     background: $green;
@@ -532,7 +532,7 @@
       }
     }
 }
-.box__button-football > img {
+.box__button-Football > img {
     position: relative;
     max-width: 40px;
     max-height: 60%;
@@ -540,7 +540,7 @@
     margin-right: 5px;
 }
 
-.box__button-esports {
+.box__button-Esports {
   display: block;
   position: relative;
   background: $text-color;
@@ -585,13 +585,13 @@
     }
   }
 }
-.box__button-esports > img {
+.box__button-Esports > img {
   position: relative;
   max-width: 40px;
   max-height: 60%;
   vertical-align: middle;
   margin-right: 5px;
 }
-.box__button-esports:hover > img {
+.box__button-Esports:hover > img {
   filter: invert(100%);
 }
