@@ -131,14 +131,15 @@
       <i style="font-weight:bold" class="fas fa-table-tennis" aria-hidden="true"></i>&nbsp;&nbsp;
       Sports
     </div>
+    
     <script src="https://t1.kakaocdn.net/kakao_js_sdk/2.1.0/kakao.min.js" integrity="sha384-dpu02ieKC6NUeKFoGMOKz6102CLEWi9+5RQjWSV0ikYSFFd8M3Wp2reIcquJOemx" crossorigin="anonymous"></script>
     <script>
       Kakao.init('c7061823133572c4f528e1e0725a59cc'); // 사용하려는 앱의 JavaScript 키 입력
     </script>
 
-    <a id="kakaotalk-sharing-btn" href="javascript:shareMessage()">
-      <img src="https://developers.kakao.com/assets/img/about/logos/kakaotalksharing/kakaotalk_sharing_btn_medium.png"
-        alt="카카오톡 공유 보내기 버튼" />
+    <a id="kakaotalk-sharing-btn" href="javascript:shareMessage()" class="btn btn--comment">
+      <i class="fa-fw fas fa-comment" aria-hidden="true"></i>
+      <span>KakaoTalk</span>
     </a>
 
     <script>
@@ -146,8 +147,9 @@
         Kakao.Share.sendCustom({
           templateId: 94266,
           templateArgs: {
-            title: '라이언이 즐겨먹던 바로 그 틴케이스 치즈볼',
-            description: '바라만 봐도 즐거워지는 힐링 패키지에는 시크릿 스토리가 숨어있어요.',
+            title: "{{ page.title }}",
+            description: "{{ page.excerpt }}",
+            url : "{{ page.url }}",
           },
         });
       }
