@@ -64,7 +64,7 @@
     {% endfor %}
   </ul>
   {% if page.sidebar.parent %}
-    <div class="box__button-study" onclick="location.href='{{ page.sidebar.url }}';" style="width:80%; margin-top: 70px;">
+    <div class="box__button-{{ page.sidebar.parent }}" onclick="location.href='{{ page.sidebar.url }}';" style="width:80%; margin-top: 70px; margin-left: 20px;">
       {{ page.sidebar.parent }}
     </span>
   {% endif %}
