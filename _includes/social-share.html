@@ -13,13 +13,14 @@
   <script>
       Kakao.init("c7061823133572c4f528e1e0725a59cc");   // 아까 복사해둔 JavaScript 키
       function sendLink() {
-        Kakao.Link.sendCustom({
+        Kakao.Share.sendCustom({
           templateId: 94266,   // 복사해둔 템플릿 ID
           templateArgs: {
             title: "{{ page.title }}",
             description: "{{ page.excerpt }}",
             url : "{{ page.url }}",
           },
+          installTalk : true
         });
       }
   </script>
