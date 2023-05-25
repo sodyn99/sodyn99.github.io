@@ -62,10 +62,15 @@
         </details>
       </li>
     {% endfor %}
-  </ul>
-  {% if page.sidebar.parent %}
-    <div class="box__button-{{ page.sidebar.parent }}" onclick="location.href='{{ page.sidebar.url }}';" style="width:80%; margin-top: 70px; margin-left: 20px;">
-      {{ page.sidebar.parent }}
+    <div class="box__button-Home" onclick="location.href='/';" style="width:80%; margin-top: 70px; margin-left: 15px;">
+      <img src="/assets/mstile-150x150.png"/>
+      Home
     </span>
-  {% endif %}
+    <div class="box__button-Study" onclick="location.href='/study/';" style="width:80%; margin-top: 5px; margin-left: 15px;">
+      Study
+    </span>
+    <div class="box__button-Football" onclick="location.href='/sports/';" style="width:80%; margin-top: 5px; margin-left: 15px;">
+      Sports
+    </span>
+  </ul>
 </nav>
