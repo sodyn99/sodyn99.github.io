@@ -91,10 +91,12 @@
 }
 .box__button-Home > img {
     position: relative;
+    width: auto;
     height: 100%;
     vertical-align: middle;
-    margin-right: 5px;
+    margin-top: 3px;
+    margin-right: -10px;
 }
 .box__button-Home:hover > img {
     filter: invert(100%);
-  }
+}
