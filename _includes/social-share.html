@@ -10,22 +10,24 @@
   <a href="https://www.linkedin.com/shareArticle?mini=true&url={{ page.url | absolute_url | url_encode }}" class="btn btn--linkedin" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="{{ site.data.ui-text[site.locale].share_on_label | default: 'Share on' }} LinkedIn"><i class="fab fa-fw fa-linkedin" aria-hidden="true"></i><span> LinkedIn</span></a>
 
   <script src="https://t1.kakaocdn.net/kakao_js_sdk/2.1.0/kakao.min.js" integrity="sha384-dpu02ieKC6NUeKFoGMOKz6102CLEWi9+5RQjWSV0ikYSFFd8M3Wp2reIcquJOemx" crossorigin="anonymous"></script>
-  <script>
-      Kakao.init("c7061823133572c4f528e1e0725a59cc");   // 아까 복사해둔 JavaScript 키
-      function sendLink() {
-        Kakao.Share.sendCustom({
-          templateId: 94266,   // 복사해둔 템플릿 ID
-          templateArgs: {
-            title: "{{ page.title }}",
-            description: "{{ page.excerpt }}",
-            url : "{{ page.url }}",
-          },
-          installTalk : true
-        });
-      }
-  </script>
-  <a id="kakao-sharing-btn" href="javascript:sendLink()" class="btn btn--comment">
+  
+  <a id="kakao-sharing-btn" href="javascript:shareMessage()" class="btn btn--comment">
     <i class="fa-fw fas fa-comment" aria-hidden="true"></i>
     <span>KakaoTalk</span>
   </a>
+
+  <script>
+    Kakao.init("c7061823133572c4f528e1e0725a59cc");
+    function shareMessage() {
+      Kakao.Share.sendCustom({
+        templateId: 94266,
+        templateArgs: {
+          title: "{{ page.title }}",
+          description: "{{ page.excerpt }}",
+          url : "{{ page.url }}",
+        },
+        installTalk : true,
+      });
+    }
+  </script>
 </section>
