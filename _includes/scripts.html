@@ -128,17 +128,3 @@
     $('html, body').animate({scrollTop:0}, 400);
   });
 </script>
-
-<!-- kakao share -->
-<script>
-  function shareMessage() {
-    Kakao.Share.sendCustom({
-      templateId: 94266,
-      templateArgs: {
-        title: "{{ page.title }}",
-        description: "{{ page.excerpt }}",
-        url : "{{ page.url }}",
-      },
-    });
-  }
-</script>
