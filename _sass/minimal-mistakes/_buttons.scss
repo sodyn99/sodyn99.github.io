@@ -39,7 +39,7 @@
   (info, $info-color),
   (facebook, $facebook-color),
   (twitter, $twitter-color),
-  (comment, #FDDC3F), // kakaotalk
+  (comment, #F9CD3E), // kakaotalk
   (linkedin, $linkedin-color);
 
   @each $buttoncolor, $color in $buttoncolors {
