@@ -95,17 +95,17 @@
 
 <!-- top scroll button -->
 <script>
-  var btn = $('#topbutton');
+  var topbtn = $('#topbutton');
 
   $(window).scroll(function() {
     if ($(window).scrollTop() > 600) {
-      btn.addClass('show');
+      topbtn.addClass('show');
     } else {
-      btn.removeClass('show');
+      topbtn.removeClass('show');
     }
   });
 
-  btn.on('click', function(e) {
+  topbtn.on('click', function(e) {
     e.preventDefault();
     $('html, body').animate({scrollTop:0}, 400);
   });
