@@ -202,7 +202,7 @@
   
   .box__description {
     position: absolute;
-    bottom: 0px;
+    bottom: -100px;
     left: 50%;
     transform: translateX(-50%);
     
@@ -211,7 +211,7 @@
       text-align: center;
       width: 500px;
       font-size: 16px;
-      margin: 0 auto;
+      margin-bottom:100px;
     
       .box__description-title {
         font-size: 24px;
