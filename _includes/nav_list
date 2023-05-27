@@ -8,7 +8,7 @@
     {% for nav in navigation %}
       <li>
         <br>
-        {% if child.url==page.url %}
+        {% if nav.children.url==page.url %}
         <details open>
         {% else %}
         <details>
