@@ -228,7 +228,7 @@
     .box__button-home {
       display: block;
       position: relative;
-      background: $blue;
+      background: #5c5c5c;
       border: 1px solid transparent;
       border-radius: 15px;
       width: 150px;
@@ -244,6 +244,7 @@
       margin-top: 25px;
       transition: background .5s ease;
       overflow: hidden;
+      cursor: pointer;
       -webkit-mask-image: -webkit-radial-gradient(white, black);
       
       &:before {
@@ -261,13 +262,23 @@
       
       &:hover {
         background: transparent;
-        border-color: $blue;
-        color: $blue;
+        border-color: #5c5c5c;
+        color: #5c5c5c;
         
         &:before {
           transform: translateX(250px) rotate(45deg);
         }
       }
+    }
+    .box__button-home > img {
+        position: relative;
+        width: auto;
+        height: 100%;
+        vertical-align: middle;
+        margin: 3px -10px 0 -10px;
+    }
+    .box__button-home:hover > img {
+        filter: invert(65%);
     }
     .box__button-back {
       display: block;
@@ -288,6 +299,7 @@
       margin-top: 25px;
       transition: background .5s ease;
       overflow: hidden;
+      cursor: pointer;
       -webkit-mask-image: -webkit-radial-gradient(white, black);
       
       &:before {
