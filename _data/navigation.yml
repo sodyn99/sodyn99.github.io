@@ -23,6 +23,9 @@ home:
       - title: "Linux"
         icon: "fab fa-linux"
         url: /study/linux/linux-1.1/
+      - title: "Lecture"
+        icon: "fas fa-chalkboard-teacher"
+        url: /study/lecture/1.1/
   - title: "Sports"
     icon: "fas fa-table-tennis"
     children:
@@ -48,7 +51,7 @@ main:
   # - title: "Sitemap"
   #   url: /sitemap/
 
-############ O-RAN ####################
+############ Study ####################
 o-ran:
   - title: "1. INTRO"
     children:
@@ -73,7 +76,6 @@ o-ran:
     children:
       - title: ""
 
-############ 4G LTE ####################
 4g_lte:
   - title: "1. INTRO"
     children:
@@ -109,7 +111,6 @@ o-ran:
         index: "3.3"
         url: /study/4g_lte/4g_lte-3.3/
 
-############ 5G NR ####################
 5g_nr:
   - title: "1. INTRO"
     children:
@@ -128,7 +129,6 @@ o-ran:
         index: "2.1"
         url: /study/5g_nr/5g_nr-2.1/
 
-############ AWS ####################
 aws:
   - title: "1. INTRO"
     children:
@@ -156,7 +156,6 @@ aws:
         index: "2.3"
         url: /study/aws/aws-2.3/
 
-############ JavaScript ####################
 java:
   - title: "1. 시작"
     children:
@@ -254,7 +253,6 @@ java:
         index: "4.10"
         url: /study/javascript/java-4.10/
 
-############ Drone ####################
 drone:
   - title: "1. 드론 특강"
     children:
@@ -268,7 +266,6 @@ drone:
         index: "1.3"
         url: /study/drone/drone-1.3/
 
-############ Orange Pi ####################
 linux:
     - title: "1. Linux 기초"
       children:
@@ -301,8 +298,18 @@ linux:
           index: "3.3"
           url: /study/linux/linux-3.3/
 
+lecture:
+  - title: "1. 논리회로"
+    children:
+      - title: "Introduction"
+        index: "1.1"
+        url: /study/lecture/1.1/
+      - title: "현충일 대체 과제"
+        index: "1.7"
+        url: /study/lecture/1.7/
+      
 
-############ Football ####################
+############ Sports ####################
 football:
     - title: "Europe"
       children:
@@ -325,7 +332,6 @@ football:
         - title: "K League 1"
           url: /sports/football/kleague1/
 
-############ Esports ####################
 esports:
     - title: "League of Legends"
       image: "/images/esports/lol/lol-icon.png"
