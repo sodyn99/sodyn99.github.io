@@ -42,7 +42,7 @@ th {
 /* lck standings */
 .lck_container {
   margin: 30px 0px;
-  width: 80vmin !important;
+  width: 100vmin !important;
   height: 56vmin !important;
   border: none;
   border-radius: 15px;
@@ -61,8 +61,8 @@ th {
   float: left;
   text-align: center;
   border-collapse: separate;
-  border-spacing: 0 1.3vmin;
-  margin: 0 0 0 1.6vmin;
+  border-spacing: 0 1.5vmin;
+  margin: -1.7vmin 0 0 2vmin;
 }
 .dataframe.lck-standings thead {
   height: 2vmin;
@@ -72,7 +72,7 @@ th {
 }
 .dataframe.lck-standings thead th {
   background: none;
-  font-size: 0.3vmin;
+  font-size: 0.5vmin;
   text-align: center;
 }
 .dataframe.lck-standings thead th:first-child,
@@ -109,6 +109,7 @@ th {
   border: $text-color 0.15vmin solid;
 }
 .dataframe.lck-standings tbody td:nth-child(2) {
+  width: 20vmin;
   font-family: 'chaney-ultraextended';
   font-weight : bold;
   border-right: #f2f2f2 1px solid;
