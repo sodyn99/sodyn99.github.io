@@ -22,10 +22,6 @@ body {
 }
 
 /* details, summary tag*/
-@keyframes animate {
-  from {grid-template-rows: 0fr;}
-  to {grid-template-rows: 1fr;}
-}
 .side {
   // transition: background .5s ease;
   width: 100%;
