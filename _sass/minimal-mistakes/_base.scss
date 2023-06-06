@@ -22,15 +22,18 @@ body {
 }
 
 /* details, summary tag*/
+@keyframes animate {
+  from {grid-template-rows: 0fr;}
+  to {grid-template-rows: 1fr;}
+}
 .side {
-  transition: background .5s ease;
+  // transition: background .5s ease;
   width: 100%;
   outline: 0;
   display: flex;
   padding-left: 10px;
   justify-content: space-between;
   cursor: pointer;
-  // transition: transform 0.3s;
   border-bottom: 1px solid $border-color;
 }
 // .side::after {
@@ -50,18 +53,18 @@ body {
 //   padding-right: 15px;
 //   font-size: 180%;
 // }
-details[open] .side {
+details[open] > .side {
   margin-bottom: 10px;
 }
 .side:hover {
   background: #d3d3d3;
   //transform: scale(1.1);
 }
-details .side {
+details > .side {
   cursor: pointer;
-  transition: margin .3s ease-out;
+  transition: all ease-in-out 0.09s;
 }
-details .side::-webkit-details-marker {
+details > .side::-webkit-details-marker {
   display:none;
 }
 
