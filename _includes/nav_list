@@ -7,12 +7,7 @@
   <ul class="nav__items">
     {% for nav in navigation %}
       <li>
-        {% for child in nav.children %}{{ child.url }}{% endfor %}
-        {% if nav.children.child.url == page.url %}
-        <details open>
-        {% else %}
-        <details style="margin-top: 40px;">
-        {% endif %}
+        <details {% for child in nav.children %}{% if child.url == page.url %} open {% endif %}{% endfor %} style="margin-top: 40px;">
           <summary class="side">
             {% if nav.icon %}
             <span style="font-weight:bold" class="nav__sub-title"><i class="{{ nav.icon | default: 'fas fa-circle' }}" aria-hidden="true"> {{ nav.title }}</i></span>
@@ -39,14 +34,9 @@
               {% else %}
                 {% if child.index %}
                   <li>
-                    <span class="nav__index">
-                      <a href="{{ child.url | relative_url }}"{% if child.url == page.url %} class="active"{% endif %}>
-                      {{ child.index }}
-                      </a>
-                    </span>
                     <span class="nav__sub-2-title">
                       <a href="{{ child.url | relative_url }}"{% if child.url == page.url %} class="active"{% endif %}>
-                      {{ child.title }}
+                        {{ child.index }} {{ child.title }}
                       </a>
                     </span>
                   </li>
@@ -60,7 +50,7 @@
                   </li>
                 {% endif %}
               {% endif %}
-            {% endfor %}
+              {% endfor %}
           </ul>
           {% endif %}
         </details>
