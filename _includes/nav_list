@@ -7,13 +7,11 @@
   <ul class="nav__items">
     {% for nav in navigation %}
       <li>
-        {{nav.children.url}}<br>
-        {{page.url}}
-        <br>
-        {% if nav.children.url == page.url %}
+        {% for child in nav.children %}{{ child.url }}{% endfor %}
+        {% if nav.children.child.url == page.url %}
         <details open>
         {% else %}
-        <details>
+        <details style="margin-top: 40px;">
         {% endif %}
           <summary class="side">
             {% if nav.icon %}

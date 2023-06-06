@@ -4,25 +4,25 @@ home:
     children:
       - title: "4G LTE"
         icon: "fas fa-filter"
-        url: /study/4g_lte/4g_lte-1.1/
+        url: /study/4g_lte/1.1/
       - title: "5G NR"
         icon: "fas fa-paper-plane"
-        url: /study/5g_nr/5g_nr-1.1/
+        url: /study/5g_nr/1.1/
       - title: "O-RAN"
         icon: "fas fa-code-branch"
-        url: /study/o-ran/o_ran-1.1/
+        url: /study/o-ran/1.1/
       - title: "Drone"
         icon: "fas fa-plane"
-        url: /study/drone/drone-1.1/
+        url: /study/drone/1.1/
       - title: "AWS"
         icon: "fab fa-aws"
-        url: /study/aws/aws-1.1/
+        url: /study/aws/1.1/
       - title: "JavaScript"
         icon: "fab fa-java"
-        url: /study/javascript/java-1.1/
+        url: /study/javascript/1.1/
       - title: "Linux"
         icon: "fab fa-linux"
-        url: /study/linux/linux-1.1/
+        url: /study/linux/1.1/
       - title: "Lecture"
         icon: "fas fa-chalkboard-teacher"
         url: /study/lecture/1.1/
@@ -57,21 +57,21 @@ o-ran:
     children:
       - title: "About"
         index: "1.1"
-        url: /study/o-ran/o_ran-1.1/
+        url: /study/o-ran/1.1/
   - title: "2. 논문 리뷰"
     children:
       - title: "Intelligence a..."
         index: "2.1"
-        url: /study/o-ran/o_ran-2.1/
+        url: /study/o-ran/2.1/
       - title: "ColO-RAN：D..."
         index: "2.2"
-        url: /study/o-ran/o_ran-2.2/
+        url: /study/o-ran/2.2/
       - title: "Colosseum：L..."
         index: "2.3"
-        url: /study/o-ran/o_ran-2.3/
+        url: /study/o-ran/2.3/
       - title: "OpenRAN Gym ..."
         index: "2.4"
-        url: /study/o-ran/o_ran-2.4/
+        url: /study/o-ran/2.4/
   - title: "3. 기타"
     children:
       - title: ""
@@ -81,222 +81,222 @@ o-ran:
     children:
       - title: "Introduction"
         index: "1.1"
-        url: /study/4g_lte/4g_lte-1.1/
+        url: /study/4g_lte/1.1/
       - title: "About"
         index: "1.2"
-        url: /study/4g_lte/4g_lte-1.2/
+        url: /study/4g_lte/1.2/
   - title: "2. HIGH DATA RATES IN MOBILE COMMUNICATION"
     children:
       - title: "High Data Rates"
         index: "2.1"
-        url: /study/4g_lte/4g_lte-2.1/
+        url: /study/4g_lte/2.1/
       - title: "Power Limited ..."
         index: "2.2"
-        url: /study/4g_lte/4g_lte-2.2/
+        url: /study/4g_lte/2.2/
       - title: "Bandwidth Lim..."
         index: "2.3"
-        url: /study/4g_lte/4g_lte-2.3/
+        url: /study/4g_lte/2.3/
       - title: "Multi-Carrier ..."
         index: "2.4"
-        url: /study/4g_lte/4g_lte-2.4/
+        url: /study/4g_lte/2.4/
   - title: "3. OFDM"
     children:
       - title: "Concept"
         index: "3.1"
-        url: /study/4g_lte/4g_lte-3.1/
+        url: /study/4g_lte/3.1/
       - title: "OFDM Impleme..."
         index: "3.2"
-        url: /study/4g_lte/4g_lte-3.2/
+        url: /study/4g_lte/3.2/
       - title: "Problem 1"
         index: "3.3"
-        url: /study/4g_lte/4g_lte-3.3/
+        url: /study/4g_lte/3.3/
 
 5g_nr:
   - title: "1. INTRO"
     children:
       - title: "Introduction"
         index: "1.1"
-        url: /study/5g_nr/5g_nr-1.1/
+        url: /study/5g_nr/1.1/
       - title: "About"
         index: "1.2"
-        url: /study/5g_nr/5g_nr-1.2/
+        url: /study/5g_nr/1.2/
       - title: "4G vs 5G"
         index: "1.3"
-        url: /study/5g_nr/5g_nr-1.3/
+        url: /study/5g_nr/1.3/
   - title: "2. 5G RESOURCE ALLOCATION"
     children:
       - title: "5G Resource A..."
         index: "2.1"
-        url: /study/5g_nr/5g_nr-2.1/
+        url: /study/5g_nr/2.1/
 
 aws:
   - title: "1. INTRO"
     children:
       - title: "Cloud Computi..."
         index: "1.1"
-        url: /study/aws/aws-1.1/
+        url: /study/aws/1.1/
       - title: "가상화"
         index: "1.2"
-        url: /study/aws/aws-1.2/
+        url: /study/aws/1.2/
       - title: "AWS"
         index: "1.3"
-        url: /study/aws/aws-1.3/
+        url: /study/aws/1.3/
       - title: "Problem 2"
         index: "1.4"
-        url: /study/aws/aws-1.4/
+        url: /study/aws/1.4/
   - title: "2. 시작하기"
     children:
       - title: "계정 생성"
         index: "2.1"
-        url: /study/aws/aws-2.1/
+        url: /study/aws/2.1/
       - title: "IAM"
         index: "2.2"
-        url: /study/aws/aws-2.2/
+        url: /study/aws/2.2/
       - title: "EC2"
         index: "2.3"
-        url: /study/aws/aws-2.3/
+        url: /study/aws/2.3/
 
 java:
   - title: "1. 시작"
     children:
       - title: "Introduction"
         index: "1.1"
-        url: /study/javascript/java-1.1/
+        url: /study/javascript/1.1/
       - title: "실행과 실습"
         index: "1.2"
-        url: /study/javascript/java-1.2/
+        url: /study/javascript/1.2/
   - title: "2. 기본 문법"
     children:
       - title: "숫자와 문자"
         index: "2.1"
-        url: /study/javascript/java-2.1/
+        url: /study/javascript/2.1/
       - title: "변수"
         index: "2.2"
-        url: /study/javascript/java-2.2/
+        url: /study/javascript/2.2/
       - title: "주석, 줄바꿈, 여백"
         index: "2.3"
-        url: /study/javascript/java-2.3/
+        url: /study/javascript/2.3/
       - title: "연산자"
         index: "2.4"
-        url: /study/javascript/java-2.4/
+        url: /study/javascript/2.4/
       - title: "조건문"
         index: "2.5"
-        url: /study/javascript/java-2.5/
+        url: /study/javascript/2.5/
       - title: "반복문"
         index: "2.6"
-        url: /study/javascript/java-2.6/
+        url: /study/javascript/2.6/
       - title: "함수"
         index: "2.7"
-        url: /study/javascript/java-2.7/
+        url: /study/javascript/2.7/
       - title: "배열"
         index: "2.8"
-        url: /study/javascript/java-2.8/
+        url: /study/javascript/2.8/
       - title: "객체"
         index: "2.9"
-        url: /study/javascript/java-2.9/
+        url: /study/javascript/2.9/
       - title: "모듈"
         index: "2.10"
-        url: /study/javascript/java-2.10/
+        url: /study/javascript/2.10/
   - title: "3. 심화 문법"
     children:
       - title: "UI, API"
         index: "3.1"
-        url: /study/javascript/java-3.1/
+        url: /study/javascript/3.1/
       - title: "정규표현식"
         index: "3.2"
-        url: /study/javascript/java-3.2/
+        url: /study/javascript/3.2/
       - title: "유효범위"
         index: "3.3"
-        url: /study/javascript/java-3.3/
+        url: /study/javascript/3.3/
       - title: "값으로서 함수와 ..."
         index: "3.4"
-        url: /study/javascript/java-3.4/
+        url: /study/javascript/3.4/
       - title: "클로저"
         index: "3.5"
-        url: /study/javascript/java-3.5/
+        url: /study/javascript/3.5/
       - title: "arguments"
         index: "3.6"
-        url: /study/javascript/java-3.6/
+        url: /study/javascript/3.6/
       - title: "함수의 호출"
         index: "3.7"
-        url: /study/javascript/java-3.7/
+        url: /study/javascript/3.7/
   - title: "4. 객체지향프로그래밍"
     children:
       - title: "객체지향프로..."
         index: "4.1"
-        url: /study/javascript/java-4.1/
+        url: /study/javascript/4.1/
       - title: "생성자와 new"
         index: "4.2"
-        url: /study/javascript/java-4.2/
+        url: /study/javascript/4.2/
       - title: "전역객체"
         index: "4.3"
-        url: /study/javascript/java-4.3/
+        url: /study/javascript/4.3/
       - title: "this"
         index: "4.4"
-        url: /study/javascript/java-4.4/
+        url: /study/javascript/4.4/
       - title: "상속"
         index: "4.5"
-        url: /study/javascript/java-4.5/
+        url: /study/javascript/4.5/
       - title: "prototype"
         index: "4.6"
-        url: /study/javascript/java-4.6/
+        url: /study/javascript/4.6/
       - title: "표준 내장 객..."
         index: "4.7"
-        url: /study/javascript/java-4.7/
+        url: /study/javascript/4.7/
       - title: "object"
         index: "4.8"
-        url: /study/javascript/java-4.8/
+        url: /study/javascript/4.8/
       - title: "데이터 타입"
         index: "4.9"
-        url: /study/javascript/java-4.9/
+        url: /study/javascript/4.9/
       - title: "참조"
         index: "4.10"
-        url: /study/javascript/java-4.10/
+        url: /study/javascript/4.10/
 
 drone:
   - title: "1. 드론 특강"
     children:
       - title: "드론 특강 1"
         index: "1.1"
-        url: /study/drone/drone-1.1/
+        url: /study/drone/1.1/
       - title: "드론 특강 2"
         index: "1.2"
-        url: /study/drone/drone-1.2/
+        url: /study/drone/1.2/
       - title: "드론 제어 시스템"
         index: "1.3"
-        url: /study/drone/drone-1.3/
+        url: /study/drone/1.3/
 
 linux:
     - title: "1. Linux 기초"
       children:
         - title: "Linux 소개"
           index: "1.1"
-          url: /study/linux/linux-1.1/
+          url: /study/linux/1.1/
         - title: "Linux 설치"
           index: "1.2"
-          url: /study/linux/linux-1.2/
+          url: /study/linux/1.2/
     - title: "2. Orange Pi"
       children:
         - title: "About"
           index: "2.1"
-          url: /study/linux/linux-2.1/
+          url: /study/linux/2.1/
         - title: "Start"
           index: "2.2"
-          url: /study/linux/linux-2.2/
+          url: /study/linux/2.2/
         - title: "LED 켜기"
           index: "2.3"
-          url: /study/linux/linux-2.3/
+          url: /study/linux/2.3/
     - title: "3. Virtualization"
       children:
         - title: "VirtualBox"
           index: "3.1"
-          url: /study/linux/linux-3.1/
+          url: /study/linux/3.1/
         - title: "Windows에 Li..."
           index: "3.2"
-          url: /study/linux/linux-3.2/
+          url: /study/linux/3.2/
         - title: "Docker"
           index: "3.3"
-          url: /study/linux/linux-3.3/
+          url: /study/linux/3.3/
 
 lecture:
   - title: "1. 논리회로"
