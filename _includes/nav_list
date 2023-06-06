@@ -7,8 +7,10 @@
   <ul class="nav__items">
     {% for nav in navigation %}
       <li>
+        {{nav.children.url}}<br>
+        {{page.url}}
         <br>
-        {% if nav.children.url==page.url %}
+        {% if nav.children.url == page.url %}
         <details open>
         {% else %}
         <details>
