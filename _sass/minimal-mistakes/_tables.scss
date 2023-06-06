@@ -1,7 +1,10 @@
 /* ==========================================================================
    TABLES
    ========================================================================== */
-
+@font-face {
+  font-family: 'chaney-ultraextended';
+  src: url('/fonts/chaney-ultraextended.woff') format('woff');
+}
 table {
   margin-bottom: 1em;
   width: 100%;
@@ -35,6 +38,89 @@ tr,
 td,
 th {
   vertical-align: middle;
+}
+/* lck standings */
+.lck_container {
+  margin: 30px 0px;
+  width: 80vmin !important;
+  height: 56vmin !important;
+  border: none;
+  border-radius: 15px;
+  background: #f2f2f2;
+}
+.lck_title{
+  margin: 1vmin 0;
+  font-family: 'chaney-ultraextended';
+  text-align: center;
+  font-size: 6vmin;
+}
+.dataframe.lck-standings {
+  width: 47%;
+  height: 79%;
+  position: relative;
+  float: left;
+  text-align: center;
+  border-collapse: separate;
+  border-spacing: 0 1.3vmin;
+  margin: 0 0 0 1.6vmin;
+}
+.dataframe.lck-standings thead {
+  height: 2vmin;
+  background: none;
+  font-weight: bold;
+  border-width: 0px !important;
+}
+.dataframe.lck-standings thead th {
+  background: none;
+  font-size: 0.3vmin;
+  text-align: center;
+}
+.dataframe.lck-standings thead th:first-child,
+.dataframe.lck-standings thead th:nth-child(2),
+.dataframe.lck-standings thead th:nth-child(3) {
+  border-right: $text-color 1px solid;
+}
+.dataframe.lck-standings tbody {
+  font-size: 2vmin;
+  font-weight: bold;
+  color: #fff;
+}
+
+.dataframe.lck-standings td{
+  border: none;
+}
+.dataframe.lck-standings tr{
+  border: none;
+}
+.dataframe.lck-standings tbody tr:first-child,
+.dataframe.lck-standings tbody tr:nth-child(2),
+.dataframe.lck-standings tbody tr:nth-child(3),
+.dataframe.lck-standings tbody tr:nth-child(4),
+.dataframe.lck-standings tbody tr:nth-child(5) {
+  border-radius: 5px;
+  background: $text-color;
+  box-shadow: 0px 0px 0px 4px $text-color;
+}
+.dataframe.lck-standings tbody td:first-child{
+  width: 6vmin;
+  background-color: #f2f2f2;
+  border-radius: 5px 0 0 5px;
+  color: $text-color;
+  border: $text-color 0.15vmin solid;
+}
+.dataframe.lck-standings tbody td:nth-child(2) {
+  font-family: 'chaney-ultraextended';
+  font-weight : bold;
+  border-right: #f2f2f2 1px solid;
+}
+.dataframe.lck-standings tbody td:nth-child(2) > img{
+  position: relative;
+  max-height: 5vmin;
+  vertical-align: middle;
+  margin-right: 2vmin;
+}
+.dataframe.lck-standings tbody td:nth-child(3) {
+  border-right: #f2f2f2 1px solid;
 }
 
 /* football standings */
