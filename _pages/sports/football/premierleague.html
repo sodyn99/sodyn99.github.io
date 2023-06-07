@@ -23,7 +23,6 @@ sidebar:
       <h1 id="date-this" class="date"></h1>
       <div class="notes">
         <ul class="noteList">
-          <li><a id="match_url">Match Review</a></li>
         </ul>
       </div>
     </div>
@@ -47,7 +46,7 @@ sidebar:
       <div class="clearfix"></div>
       <ul class="days">
         <script>
-
+          const now = new Date();
           const getCalendar = (date) => {
             const year = date.getFullYear();
             const month = date.getMonth() + 1;
@@ -76,14 +75,8 @@ sidebar:
 
             for (let i = 1; i <= lastDayNum; i++){
               var addClass = '';
-              if( i === day ){ addClass = ' class="selected"'; }
-              switch( i ){
-                case 8:
-                case 10:
-                case 27:
-                  addClass = ' class="event"';
-                break;
-              }
+
+              if( month === now.getMonth()+1 && i === now.getDate() ){ addClass = ' class="selected"'; } // selected = today
               var yearNew = new Date(year, month - 1, i).getFullYear();
               var weekNew = new Date(year, month - 1, i).getDay();
               var weekStrNew = weekFullArr[weekNew];
@@ -129,7 +122,6 @@ sidebar:
   function select(val){
     var date_info = $(val).attr('data-value').split('<br>');
     document.getElementById("date-this").innerHTML = date_info[0] + "<br>" + date_info[2] + " " + date_info[3];
-    console.log( 'itemdetailno :'+date_info);
 
     const xhr = new XMLHttpRequest();
 
@@ -146,11 +138,13 @@ sidebar:
         customers.forEach(function(customer){
           date_info[1] = String(date_info[1]).padStart(2, "0")
           date_info[3] = String(date_info[3]).padStart(2, "0")
-          console.log(customer.Date);
-          console.log(date_info[4]+'-'+date_info[1]+'-'+date_info[3]);
           if (customer.Date == date_info[4]+'-'+date_info[1]+'-'+date_info[3]) {
             output += `
-              <li>${customer.Wk}R ${customer.Home} ${customer.Score} ${customer.Away}</li>
+              <li>
+                <a class="match-list" href="/sports/football/{{ page.name|replace:'.html','' }}/${date_info[1]}.${date_info[3]}-${customer.Home}${customer.Away}" style="font-weight:bold; text-decoration:none; color:#f2f2f2;">
+                  <p style="padding-left: 3.5vmin; text-indent: -3.5vmin;">${customer.Wk}R | ${customer.Home} ${customer.Score} ${customer.Away}</p>
+                </a>
+              </li>
           `;
           }
         });

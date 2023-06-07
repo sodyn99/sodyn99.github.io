@@ -625,7 +625,8 @@
 }
 
 .calendar h1, .calendar h2{
-	font-weight: 300;
+  font-family: $global-font-family;
+	font-weight: 600;
 	font-size: 3vmin;
 	line-height: 3vmin;
 	text-transform: uppercase;
@@ -667,7 +668,7 @@
 .calendar .notes p,
 .calendar .notes input,
 .calendar .noteList li{
-  font-family: "Segoe UI";
+  font-family: $global-font-family;
 	font-weight: 300;
 	font-size: 1.5vmin;
 }
@@ -760,6 +761,7 @@
 	border-radius: 10px;
   margin-bottom: 3vmin;
   padding-top: 0.5vmin;
+  cursor: pointer;
 }
 
 

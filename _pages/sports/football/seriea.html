@@ -11,10 +11,148 @@ sidebar:
 
 <h2>Table</h2>
 <div class="table_container">
-    <div data-include-path="/data/football/europe/seriea-standings.html"></div>
+    <div data-include-path="/data/football/europe/{{ page.name|replace:'.html','' }}-standings.html"></div>
 </div>
 
 <h2>Match Review</h2>
-<p><a href="/sports/football/seriea/22-23_05.20/">Match Review</a></p>
+
+<div class="calendar">
+
+  <div class="col leftCol">
+    <div class="content">
+      <h1 id="date-this" class="date"></h1>
+      <div class="notes">
+        <ul class="noteList">
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <div class="col rightCol">
+    <div class="content">
+      <a class="go-prev" style="text-decoration: none;"><</a>
+      <h2 id="month-this" class="years"></h2>
+      <a class="go-next" style="text-decoration: none;">></a>
+      <div class="clearfix"></div>
+      <ul class="weekday">
+        <li><a style="text-decoration: none; color: #F0383B;" data-value="7">Sun</a></li>
+        <li><a style="text-decoration: none;" data-value="1">Mon</a></li>
+        <li><a style="text-decoration: none;" data-value="2">Tue</a></li>
+        <li><a style="text-decoration: none;" data-value="3">Wed</a></li>
+        <li><a style="text-decoration: none;" data-value="4">Thu</a></li>
+        <li><a style="text-decoration: none;" data-value="5">Fri</a></li>
+        <li><a style="text-decoration: none;" data-value="6">Sat</a></li>
+      </ul>
+      <div class="clearfix"></div>
+      <ul class="days">
+        <script>
+          const now = new Date();
+          const getCalendar = (date) => {
+            const year = date.getFullYear();
+            const month = date.getMonth() + 1;
+            const day = date.getDate();
+            const week = date.getDay();
+            const weekArr = ['Sun', 'Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat'];
+            const weekFullArr = ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'];
+            const weekStr = weekFullArr[week];
+            const monthArr = ['Jan','Feb','Mar','Apr','May','Jun','Jul','Aug','Sep','Oct','Nov','Dec'];
+            const monthStr = monthArr[month - 1];
+            const firstDay = new Date(date.setDate(1));
+            const lastDay = new Date(year, month, 0);
+            const lastDayNum = lastDay.getDate();
+            const startDay = firstDay.getDay();
+            const calendar = document.querySelector('.days');
+            const limitDay = startDay + lastDayNum;
+            const nextDay = Math.ceil(limitDay / 7) * 7;
+
+            let data = ''
+            document.getElementById("date-this").innerHTML = weekStr + "<br>" + monthStr + " " + day;
+            document.getElementById("month-this").innerHTML = year + "." + month;
+
+            for (let i = 0; i < startDay; i++){
+              data += '<li></li>';
+            }
+
+            for (let i = 1; i <= lastDayNum; i++){
+              var addClass = '';
+
+              if( month === now.getMonth()+1 && i === now.getDate() ){ addClass = ' class="selected"'; } // selected = today
+              var yearNew = new Date(year, month - 1, i).getFullYear();
+              var weekNew = new Date(year, month - 1, i).getDay();
+              var weekStrNew = weekFullArr[weekNew];
+              data += '<li><a onclick="select(this)" title="'+i+'" data-value="'+weekStrNew+'<br>'+month+'<br>'+monthStr+'<br>'+i+'<br>'+yearNew+'"'+addClass+'>'+i+'</a></li>';
+
+            }
+
+            for (let i = 0; i < startDay; i++){
+              data += '<li></li>';
+            }
+
+            calendar.innerHTML = data;
+
+          }
+          const date = new Date();
+          getCalendar(date);
+
+          document.querySelector(`.go-prev`).onclick = () => {
+          getCalendar(new Date(date.setMonth(date.getMonth() - 1)));
+          }
+
+          // 다음달 이동
+          document.querySelector(`.go-next`).onclick = () => {
+          getCalendar(new Date(date.setMonth(date.getMonth() + 1)));
+          }
+
+        </script>
+      </ul>
+      <div class="clearfix"></div>
+    </div>
+  </div>
+
+  <div class="clearfix"></div>
+
+</div>
+<p></p>
+
+<div id="customers"></div>
 <hr>
 
+<script>
+
+  function select(val){
+    var date_info = $(val).attr('data-value').split('<br>');
+    document.getElementById("date-this").innerHTML = date_info[0] + "<br>" + date_info[2] + " " + date_info[3];
+
+    const xhr = new XMLHttpRequest();
+
+    xhr.open('GET', "/data/football/europe/{{ page.name|replace:'.html','' }}-matches.json", true);
+
+    xhr.onload = function(){
+      if(this.status === 200) {
+        // console.log(this.responseText);
+
+        const customers = JSON.parse(this.responseText);
+
+        let output = '';
+
+        customers.forEach(function(customer){
+          date_info[1] = String(date_info[1]).padStart(2, "0")
+          date_info[3] = String(date_info[3]).padStart(2, "0")
+          if (customer.Date == date_info[4]+'-'+date_info[1]+'-'+date_info[3]) {
+            output += `
+              <li>
+                <a class="match-list" href="/sports/football/{{ page.name|replace:'.html','' }}/${date_info[1]}.${date_info[3]}-${customer.Home}${customer.Away}" style="font-weight:bold; text-decoration:none; color:#f2f2f2;">
+                  <p style="padding-left: 3.5vmin; text-indent: -3.5vmin;">${customer.Wk}R | ${customer.Home} ${customer.Score} ${customer.Away}</p>
+                </a>
+              </li>
+          `;
+          }
+        });
+
+        document.querySelector('.noteList').innerHTML = output;
+      }
+    }
+
+    xhr.send();
+  }
+</script>
