@@ -15,5 +15,113 @@ sidebar:
 </div>
 
 <h2>Match Review</h2>
-<p><a href="/sports/football/{{ page.name|replace:'.html','' }}/22-23_05.20/">Match Review</a></p>
+
+<div class="calendar">
+
+  <div class="col leftCol">
+    <div class="content">
+      <h1 id="date-this" class="date"></h1>
+      <div class="notes">
+        <ul class="noteList">
+          <li><a id="match_url">Match Review</a></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <div class="col rightCol">
+    <div class="content">
+      <a href="javascript:prevMonth();" class="go-prev" style="text-decoration: none;"><</a>
+      <h2 id="month-this" class="years"></h2>
+      <a href="javascript:nextmonth();" class="go-next" style="text-decoration: none;">></a>
+      <div class="clearfix"></div>
+      <ul class="weekday">
+        <li><a style="text-decoration: none; color: #F0383B;" data-value="7">Sun</a></li>
+        <li><a style="text-decoration: none;" data-value="1">Mon</a></li>
+        <li><a style="text-decoration: none;" data-value="2">Tue</a></li>
+        <li><a style="text-decoration: none;" data-value="3">Wed</a></li>
+        <li><a style="text-decoration: none;" data-value="4">Thu</a></li>
+        <li><a style="text-decoration: none;" data-value="5">Fri</a></li>
+        <li><a style="text-decoration: none;" data-value="6">Sat</a></li>
+      </ul>
+      <div class="clearfix"></div>
+      <ul class="days">
+        <script>
+          var date = new Date();
+          var year = date.getFullYear();
+          var month = date.getMonth() + 1;
+          var day = date.getDate();
+          var week = date.getDay();
+          var weekArr = ['Sun', 'Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat'];
+          var weekStr = weekArr[week];
+          var monthArr = ['Jan','Feb','Mar','Apr','May','Jun','Jul','Aug','Sep','Oct','Nov','Dec'];
+          var monthStr = monthArr[month - 1];
+          var firstDay = new Date(year, month - 1, 1);
+          var lastDay = new Date(year, month, 0);
+          var lastDayNum = lastDay.getDate();
+          var startDay = firstDay.getDay();
+          var calendar = document.querySelector('.days');
+          var calendarYM = document.querySelector('.years');
+          var calendarMon = document.querySelector('.months');
+          var calendarPrev = document.querySelector('#month-prev');
+          var calendarNext = document.querySelector('#month-next');
+          var calendarThis = document.querySelector('#month-this');
+
+          function prevMonth(){
+            if ( month === 1 ) {
+              year -= 1;
+              month = 12;
+            } else {
+              month -= 1;
+            }
+          }
+          function nextMonth(){
+            if ( month === 12 ) {
+              year += 1;
+              month = 1;
+            } else {
+              month += 1;
+            }
+          }
+
+          for( var _i = 1; _i <= lastDayNum; _i += 1 ){
+            var _addClass = '';
+            if ( _i === 1 ) {
+              for ( var j = 0; j < startDay; j += 1 ) {
+                calendar.innerHTML += '<li></li>';
+              }
+            }
+            if( _i === day ){ _addClass = ' class="selected"'; }
+
+            switch( _i ){
+              case 8:
+              case 10:
+              case 27:
+                _addClass = ' class="event"';
+              break;
+            }
+            document.getElementById("date-this").innerHTML = weekStr + "<br>" + monthStr + " " + _i + "th";
+            document.getElementById("month-this").innerHTML = year + "." + month;
+            document.write( '<li><a href="#" title="'+_i+'" data-value="'+_i+'"'+_addClass+'>'+_i+'</a></li>' );
+          }
+        </script>
+      </ul>
+      <div class="clearfix"></div>
+    </div>
+  </div>
+
+  <div class="clearfix"></div>
+
+</div>
+<p></p>
 <hr>
+
+
+<script>
+  function getMatchName() {
+    var matchname = document.getElementsByClassName("date")[0].getElementsByTagName("span")[0].innerHTML;
+    return matchname;
+  }
+  var match_url = "/sports/football/{{ page.name|replace:'.html','' }}/" + getMatchDate() + "/";
+  document.getElementById("match_url").href = match_url;
+</script>

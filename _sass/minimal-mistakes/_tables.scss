@@ -129,13 +129,13 @@ th {
   margin: 30px 0px;
   width: 600px !important;
   border: none;
-  border-radius: 25px;
+  border-radius: 15px;
   // box-shadow: 0px 0px 15px 0px lightslategray;
   overflow-x: auto;
   backdrop-filter: blur(10px);
   /* background: linear-gradient(45deg, #f2f2f2, lightgray); */
   background: #f2f2f2;//rgba(220, 220, 230, 0.6);
-  
+
 }
 .dataframe.premierleague-standings,
 .dataframe.laliga-standings,
@@ -149,7 +149,7 @@ th {
   border: none !important;
   border-collapse: collapse !important;
   display: table !important;
-  
+
 }
 .dataframe.premierleague-standings thead,
 .dataframe.laliga-standings thead,

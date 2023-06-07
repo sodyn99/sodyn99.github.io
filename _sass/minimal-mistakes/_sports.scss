@@ -49,7 +49,7 @@
   > img {
     float:left;
     position:relative;
-    top:calc(0.02 * var(--esports-height)); 
+    top:calc(0.02 * var(--esports-height));
     height:calc(0.12 * var(--esports-height));
     margin-left: calc(0.08 * var(--esports-height));
     vertical-align:middle;
@@ -68,7 +68,7 @@
   > img {
     float:right;
     position:relative;
-    top:calc(0.02 * var(--esports-height)); 
+    top:calc(0.02 * var(--esports-height));
     height:calc(0.12 * var(--esports-height));
     margin-right: calc(0.08 * var(--esports-height));
     vertical-align:middle;
@@ -231,7 +231,7 @@
 //     border-right-style:solid;
 //     border-right-width: calc(0.5vmin * var(--ratio));
 //     position:absolute;
-// }	
+// }
 // .goal-line1{
 //     width:  calc(12.38vmin * var(--ratio));
 //     height:  calc(31.63vmin * var(--ratio));
@@ -508,7 +508,7 @@
     overflow: hidden;
     cursor: pointer;
     -webkit-mask-image: -webkit-radial-gradient(white, black);
-    
+
     &:before {
       content: '';
       position: absolute;
@@ -521,12 +521,12 @@
       transform: translateX(-50px) rotate(45deg);
       transition: transform .3s ease;
     }
-    
+
     &:hover {
       background: transparent;
       border-color: $green;
       color: $green;
-      
+
       &:before {
         transform: translateX(500px) rotate(45deg);
       }
@@ -561,7 +561,7 @@
   overflow: hidden;
   cursor: pointer;
   -webkit-mask-image: -webkit-radial-gradient(white, black);
-  
+
   &:before {
     content: '';
     position: absolute;
@@ -574,12 +574,12 @@
     transform: translateX(-50px) rotate(45deg);
     transition: transform .3s ease;
   }
-  
+
   &:hover {
     background: transparent;
     border-color: $text-color;
     color: $text-color;
-    
+
     &:before {
       transform: translateX(500px) rotate(45deg);
     }
@@ -595,3 +595,191 @@
 .box__button-Esports:hover > img {
   filter: invert(100%);
 }
+
+
+/*  ###############################
+    Calender  ## Copyright (c) 2023 by Alex Oliver (https://codepen.io/alexoliverwd/pen/kKQgwo)
+###############################  */
+
+.clearfix{
+	clear: both;
+}
+
+.animate{
+	-webkit-transition: all 0.3s ease-in-out;
+	-moz-transition: all 0.3s ease-in-out;
+	transition: all 0.3s ease-in-out;
+}
+
+
+/* required */
+.calendar{
+	position: relative;
+	border-radius: 15px;
+	overflow: hidden;
+	width: 75vmin;
+	height: 55vmin;
+	background-color: #ffffff;
+	color: #333333;
+}
+
+.calendar h1, .calendar h2{
+	font-weight: 300;
+	font-size: 3vmin;
+	line-height: 3vmin;
+	text-transform: uppercase;
+}
+
+.calendar h1 span{
+	display: block;
+}
+
+.calendar .col{
+	position: relative;
+	float: left;
+	height: 100%;
+}
+
+.calendar .col .content{
+	padding: 3vmin;
+}
+
+.calendar ul{
+	margin: 0px;
+}
+
+.calendar ul li{
+	list-style: none;
+}
+
+.calendar .leftCol{
+	width: 30%;
+	background-color: $green;
+}
+
+.calendar .noteList li{
+	color: #ffffff;
+	margin-bottom: 1vmin;
+}
+
+.calendar .notes p,
+.calendar .notes input,
+.calendar .noteList li{
+	font-weight: 300;
+	font-size: 1.5vmin;
+}
+
+.calendar .leftCol h1{
+	color: #ffffff;
+  margin-bottom: 5vmin;
+  line-height: 4vmin;
+}
+
+.calendar .rightCol{
+	width: 70%;
+  background-color: #f2f2f2;
+}
+.go-prev{
+  position: absolute;
+  top: 8%;
+  left: 5%;
+  width: 4vmin;
+  height: 4vmin;
+  margin-top: -2.5vmin;
+  border-radius: 50%;
+  text-align: center;
+  line-height: 5vmin;
+  font-size: 3vmin;
+  color: #a5a5a5;
+  z-index: 1;
+  user-select:none;
+  cursor: pointer;
+  &:hover{
+    color: $green;
+  }
+}
+.go-next{
+  position: absolute;
+  top: 8%;
+  right: 5%;
+  width: 4vmin;
+  height: 4vmin;
+  margin-top: -2.5vmin;
+  border-radius: 50%;
+  text-align: center;
+  line-height: 5vmin;
+  font-size: 3vmin;
+  color: #a5a5a5;
+  z-index: 1;
+  user-select:none;
+  cursor: pointer;
+  &:hover{
+    color: $green;
+  }
+}
+.calendar .rightCol h2{
+	color: #a5a5a5;
+	text-align: center;
+  margin: -2vmin 0px 3vmin 0px;
+  padding-top: 2vmin;
+}
+
+.calendar .weekday li,
+.calendar .days li{
+	float: left;
+	text-transform: uppercase;
+}
+
+.calendar .weekday li a,
+.calendar .days li a{
+	display: block;
+	color: #747978;
+}
+
+.calendar .weekday li a{
+	width: 6vmin;
+	text-align: center;
+	margin-top: 2vmin;
+  margin-bottom: 3vmin;
+	font-size: 1.3vmin;
+}
+
+.calendar .days li{
+	width: 6vmin;
+}
+
+.calendar .days li a{
+	width: 3vmin;
+	height: 3vmin;
+	text-align: center;
+	margin: auto auto;
+	font-weight: bold;
+	border-radius: 10px;
+  margin-bottom: 3vmin;
+  padding-top: 0.5vmin;
+}
+
+
+.calendar .days li a:hover{
+	background-color: #cac9c4;
+  text-decoration: none;
+}
+
+.calendar .days li .selected{
+	background-color: $green!important;
+	color: #f2f2f2;
+  &:hover {
+    filter: brightness(90%)
+  }
+}
+
+.calendar .days li .event{
+	color: $green;
+}
+
+
+/* placeholder color */
+::-webkit-input-placeholder {color: #ffffff; }
+:-moz-placeholder {color: #ffffff; }
+::-moz-placeholder {color: #ffffff; }
+:-ms-input-placeholder {color: #ffffff; }
