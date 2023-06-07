@@ -11,10 +11,9 @@ sidebar:
 
 <h2>Table</h2>
 <div class="table_container">
-    <div data-include-path="/data/football/europe/premierleague-standings.html"></div>
+    <div data-include-path="/data/football/europe/{{ page.name|replace:'.html','' }}-standings.html"></div>
 </div>
 
 <h2>Match Review</h2>
-<p><a href="/sports/football/premierleague/22-23_05.20/">Match Review</a></p>
+<p><a href="/sports/football/{{ page.name|replace:'.html','' }}/22-23_05.20/">Match Review</a></p>
 <hr>
-
