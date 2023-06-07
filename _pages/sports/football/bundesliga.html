@@ -76,7 +76,7 @@ sidebar:
             for (let i = 1; i <= lastDayNum; i++){
               var addClass = '';
 
-              if( month === now.getMonth()+1 && i === now.getDate() ){ addClass = ' class="selected"'; } // selected = today
+              if( year === now.getFullYear() && month === now.getMonth()+1 && i === now.getDate() ){ addClass = ' class="selected"'; } // selected = today
               var yearNew = new Date(year, month - 1, i).getFullYear();
               var weekNew = new Date(year, month - 1, i).getDay();
               var weekStrNew = weekFullArr[weekNew];

@@ -11,7 +11,7 @@ sidebar:
 
 <h2>Table</h2>
 <div class="table_container">
-    <div data-include-path="/data/football/europe/{{ page.name|replace:'.html','' }}-standings.html"></div>
+    <div data-include-path="/data/football/asia/{{ page.name|replace:'.html','' }}-standings.html"></div>
 </div>
 
 <h2>Match Review</h2>
@@ -76,7 +76,7 @@ sidebar:
             for (let i = 1; i <= lastDayNum; i++){
               var addClass = '';
 
-              if( month === now.getMonth()+1 && i === now.getDate() ){ addClass = ' class="selected"'; } // selected = today
+              if( year === now.getFullYear() && month === now.getMonth()+1 && i === now.getDate() ){ addClass = ' class="selected"'; } // selected = today
               var yearNew = new Date(year, month - 1, i).getFullYear();
               var weekNew = new Date(year, month - 1, i).getDay();
               var weekStrNew = weekFullArr[weekNew];
@@ -125,7 +125,7 @@ sidebar:
 
     const xhr = new XMLHttpRequest();
 
-    xhr.open('GET', "/data/football/europe/{{ page.name|replace:'.html','' }}-matches.json", true);
+    xhr.open('GET', "/data/football/asia/{{ page.name|replace:'.html','' }}-matches.json", true);
 
     xhr.onload = function(){
       if(this.status === 200) {
