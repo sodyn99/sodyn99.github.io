@@ -15,6 +15,7 @@ sidebar:
 
 <div class="table_container">
   <div id="standings" class="football_title" style="text-transform:uppercase;">Standings</div>
+  <div id="continental" style="margin-left:6.5vmin;"></div>
   <div data-include-path="/data/football/europe/{{ page.name|replace:'.html','' }}-standings.html"></div>
 </div>
 
@@ -124,23 +125,69 @@ sidebar:
   let banner = document.getElementById("banner");
   let standings = document.getElementById("standings");
   let match_review = document.getElementById("match_review");
+  let continental = document.getElementById("continental");
   if (league == 'premierleague') {
+    continental.innerHTML = '<div style="display:inline-block;float:left; border-radius:0.7vmin; width:2vmin; height:2vmin; background-color:#1e746a;"></div>'+
+                            '<div style="display:inline-block;float:left;margin:-0.1vmin 2vmin 0 0.6vmin;">챔피언스 리그</div>'+
+                            '<div style="display:inline-block;float:left; border-radius:10px; width:2vmin; height:2vmin; background-color:#3426b1;"></div>'+
+                            '<div style="display:inline-block;float:left;margin:-0.1vmin 2vmin 0 0.6vmin;">유로파 리그</div>'+
+                            '<div style="display:inline-block;float:left; border-radius:10px; width:2vmin; height:2vmin; background-color:#15bfdd;"></div>'+
+                            '<div style="display:inline-block;float:left;margin:-0.1vmin 2vmin 0 0.6vmin;">컨퍼런스 리그</div>'+
+                            '<div style="display:inline-block;float:left; border-radius:10px; width:2vmin; height:2vmin; background-color:#ad2022;"></div>'+
+                            '<div style="display:inline-block;float:left;margin:-0.1vmin 0 0 0.6vmin;">강등</div>';
     match_review.style.fontFamily=standings.style.fontFamily=banner.style.fontFamily="Radikal Bold";
     banner.innerHTML = "<img style='height:8vmin;margin:0 4vmin 1vmin -4vmin;' src='/images/football/main_page/premierleague-logo.png'/>Premier League";}
+
   else if (league == 'laliga') {
+    continental.innerHTML = '<div style="display:inline-block;float:left; border-radius:0.7vmin; width:2vmin; height:2vmin; background-color:#1e746a;"></div>'+
+                            '<div style="display:inline-block;float:left;margin:-0.1vmin 2vmin 0 0.6vmin;">챔피언스 리그</div>'+
+                            '<div style="display:inline-block;float:left; border-radius:10px; width:2vmin; height:2vmin; background-color:#3426b1;"></div>'+
+                            '<div style="display:inline-block;float:left;margin:-0.1vmin 2vmin 0 0.6vmin;">유로파 리그</div>'+
+                            '<div style="display:inline-block;float:left; border-radius:10px; width:2vmin; height:2vmin; background-color:#15bfdd;"></div>'+
+                            '<div style="display:inline-block;float:left;margin:-0.1vmin 2vmin 0 0.6vmin;">컨퍼런스 리그</div>'+
+                            '<div style="display:inline-block;float:left; border-radius:10px; width:2vmin; height:2vmin; background-color:#ad2022;"></div>'+
+                            '<div style="display:inline-block;float:left;margin:-0.1vmin 0 0 0.6vmin;">강등</div>';
     match_review.style.color=standings.style.color=banner.style.color="#3D195B";
     match_review.style.fontFamily=standings.style.fontFamily=banner.style.fontFamily="Futura Maxi CG Bold";
     banner.innerHTML = "<img style='height:8vmin;margin:0 4vmin 1vmin -4vmin;' src='/images/football/main_page/laliga-logo.png'/>LaLiga";}
   else if (league == 'seriea') {
+    continental.innerHTML = '<div style="display:inline-block;float:left; border-radius:0.7vmin; width:2vmin; height:2vmin; background-color:#1e746a;"></div>'+
+                            '<div style="display:inline-block;float:left;margin:-0.1vmin 2vmin 0 0.6vmin;">챔피언스 리그</div>'+
+                            '<div style="display:inline-block;float:left; border-radius:10px; width:2vmin; height:2vmin; background-color:#3426b1;"></div>'+
+                            '<div style="display:inline-block;float:left;margin:-0.1vmin 2vmin 0 0.6vmin;">유로파 리그</div>'+
+                            '<div style="display:inline-block;float:left; border-radius:10px; width:2vmin; height:2vmin; background-color:#15bfdd;"></div>'+
+                            '<div style="display:inline-block;float:left;margin:-0.1vmin 2vmin 0 0.6vmin;">컨퍼런스 리그</div>'+
+                            '<div style="display:inline-block;float:left; border-radius:10px; width:2vmin; height:2vmin; background-color:#ad2022;"></div>'+
+                            '<div style="display:inline-block;float:left;margin:-0.1vmin 0 0 0.6vmin;">강등</div>';
     match_review.style.color=standings.style.color=banner.style.color="#1A1659";
     match_review.style.fontFamily=standings.style.fontFamily=banner.style.fontFamily="DIN Next Bold";
     banner.innerHTML = "<img style='height:8vmin;margin:0 4vmin 0 -4vmin;' src='/images/football/main_page/seriea-logo.png'/>SERIE A";}
   else if (league == 'bundesliga') {
+    continental.innerHTML = '<div style="display:inline-block;float:left; border-radius:0.7vmin; width:2vmin; height:2vmin; background-color:#1e746a;"></div>'+
+                            '<div style="display:inline-block;float:left;margin:-0.1vmin 2vmin 0 0.6vmin;">챔피언스 리그</div>'+
+                            '<div style="display:inline-block;float:left; border-radius:10px; width:2vmin; height:2vmin; background-color:#3426b1;"></div>'+
+                            '<div style="display:inline-block;float:left;margin:-0.1vmin 2vmin 0 0.6vmin;">유로파 리그</div>'+
+                            '<div style="display:inline-block;float:left; border-radius:10px; width:2vmin; height:2vmin; background-color:#15bfdd;"></div>'+
+                            '<div style="display:inline-block;float:left;margin:-0.1vmin 2vmin 0 0.6vmin;">컨퍼런스 리그</div>'+
+                            '<div style="display:inline-block;float:left; border-radius:10px; width:2vmin; height:2vmin; background-color:#637721;"></div>'+
+                            '<div style="display:inline-block;float:left;margin:-0.1vmin 2vmin 0 0.6vmin;">승강 플레이오프</div>'+
+                            '<div style="display:inline-block;float:left; border-radius:10px; width:2vmin; height:2vmin; background-color:#ad2022;"></div>'+
+                            '<div style="display:inline-block;float:left;margin:-0.1vmin 0 0 0.6vmin;">강등</div>';
     match_review.style.color=standings.style.color=banner.style.color="#000000";
     match_review.style.fontFamily=standings.style.fontFamily=banner.style.fontFamily="Futura Maxi CG Bold";
     banner.innerHTML = "<img style='height:8vmin;margin:0 4vmin 1vmin -4vmin;' src='/images/football/main_page/bundesliga-logo.png'/>BUNDESLIGA";
   }
   else if (league == 'ligue1') {
+    continental.innerHTML = '<div style="display:inline-block;float:left; border-radius:0.7vmin; width:2vmin; height:2vmin; background-color:#1e746a;"></div>'+
+                            '<div style="display:inline-block;float:left;margin:-0.1vmin 2vmin 0 0.6vmin;">챔피언스 리그</div>'+
+                            '<div style="display:inline-block;float:left; border-radius:10px; width:2vmin; height:2vmin; background-color:#637721;"></div>'+
+                            '<div style="display:inline-block;float:left;margin:-0.1vmin 2vmin 0 0.6vmin;">챔피언스 리그 예선</div>'+
+                            '<div style="display:inline-block;float:left; border-radius:10px; width:2vmin; height:2vmin; background-color:#3426b1;"></div>'+
+                            '<div style="display:inline-block;float:left;margin:-0.1vmin 2vmin 0 0.6vmin;">유로파 리그</div>'+
+                            '<div style="display:inline-block;float:left; border-radius:10px; width:2vmin; height:2vmin; background-color:#15bfdd;"></div>'+
+                            '<div style="display:inline-block;float:left;margin:-0.1vmin 2vmin 0 0.6vmin;">컨퍼런스 리그</div>'+
+                            '<div style="display:inline-block;float:left; border-radius:10px; width:2vmin; height:2vmin; background-color:#ad2022;"></div>'+
+                            '<div style="display:inline-block;float:left;margin:-0.1vmin 0 0 0.6vmin;">강등</div>';
     match_review.style.color=standings.style.color=banner.style.color="#091C3E";
     match_review.style.fontFamily=standings.style.fontFamily=banner.style.fontFamily="LigueV Bold";
     banner.innerHTML = "<img style='height:8vmin;margin:0 4vmin 1vmin -4vmin;' src='/images/football/main_page/ligue1-logo.png'/>LIGUE 1";
