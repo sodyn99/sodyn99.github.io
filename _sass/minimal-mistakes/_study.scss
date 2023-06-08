@@ -19,7 +19,7 @@
     overflow: hidden;
     cursor: pointer;
     -webkit-mask-image: -webkit-radial-gradient(white, black);
-    
+
     &:before {
       content: '';
       position: absolute;
@@ -32,16 +32,26 @@
       transform: translateX(-50px) rotate(45deg);
       transition: transform .3s ease;
     }
-    
+
     &:hover {
       background: transparent;
       border-color: #DC7D48;
       color: #DC7D48;
-      
+
       &:before {
         transform: translateX(500px) rotate(45deg);
       }
     }
+}
+.box__button-Study > img {
+    position: relative;
+    width: auto;
+    height: 40%;
+    vertical-align: middle;
+    margin: 0 5px 2px 0;
+}
+.box__button-Study:hover > img {
+    filter: invert(50%) sepia(53%) saturate(524%) hue-rotate(337deg) brightness(100%) contrast(94%);
 }
 
 .box__button-Home {
@@ -65,7 +75,7 @@
     overflow: hidden;
     cursor: pointer;
     -webkit-mask-image: -webkit-radial-gradient(white, black);
-    
+
     &:before {
       content: '';
       position: absolute;
@@ -78,12 +88,12 @@
       transform: translateX(-50px) rotate(45deg);
       transition: transform .3s ease;
     }
-    
+
     &:hover {
       background: transparent;
       border-color: #5c5c5c;
       color: #5c5c5c;
-      
+
       &:before {
         transform: translateX(500px) rotate(45deg);
       }

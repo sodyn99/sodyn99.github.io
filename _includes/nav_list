@@ -1,21 +1,21 @@
 {% assign navigation = site.data.navigation[include.nav] %}
 
 <nav class="nav__list">
-  {% if page.sidebar.title %}<h3 class="nav__title" style="padding-left: 0;">{{ page.sidebar.title }}</h3>{% endif %}
   <input id="ac-toc" name="accordion-toc" type="checkbox" />
   <label for="ac-toc">{{ site.data.ui-text[site.locale].menu_label | default: "Toggle Menu" }}</label>
   <ul class="nav__items">
+    {% if page.sidebar.title %}<h3 class="nav__title" style="padding-left: 0;">{{ page.sidebar.title }}</h3>{% endif %}
     {% for nav in navigation %}
       <li>
-        <details {% for child in nav.children %}{% if child.url == page.url %} open {% endif %}{% endfor %} style="margin-top: 40px;">
+        <details {% for child in nav.children %}{% if child.url == page.url or page.url == '/' or page.url == '/about/' or page.url == '/tags/' or page.url == '/categories/' or page.url == '/study/' or page.url == '/sports/' %} open {% endif %}{% endfor %} style="margin-top: 40px;">
           <summary class="side">
             {% if nav.icon %}
-            <span style="font-weight:bold" class="nav__sub-title"><i class="{{ nav.icon | default: 'fas fa-circle' }}" aria-hidden="true"> {{ nav.title }}</i></span>
+            <span style="font-weight:bold; user-select: none;" class="nav__sub-title"><i class="{{ nav.icon | default: 'fas fa-circle' }}" aria-hidden="true"></i> {{ nav.title }}</span>
             {% else %}
               {% if nav.url %}
-              <a href="{{ nav.url | relative_url }}"><span class="nav__sub-title">{{ nav.title }}</span></a>
+              <a href="{{ nav.url | relative_url }}"><span style="font-weight:bold; user-select: none;" class="nav__sub-title">{{ nav.title }}</span></a>
               {% else %}
-                <span class="nav__sub-title">{{ nav.title }}</span>
+                <span style="font-weight:bold; user-select: none;" class="nav__sub-title">{{ nav.title }}</span>
               {% endif %}
             {% endif %}
           </summary>
@@ -25,9 +25,15 @@
             {% for child in nav.children %}
               {% if child.icon %}
                 <li>
-                  <span style="font-weight:bold; padding-top:0.5rem;" class="nav__sub-2-title">
+                  <span style="font-weight:bold; padding-top:1rem;" class="nav__sub-2-title">
                     <a href="{{ child.url | relative_url }}"{% if child.url == page.url %} class="active"{% endif %}>
-                      <i style="font-weight:bold" class="{{ child.icon | default: 'fas fa-circle' }}" aria-hidden="true"><span style="font-weight:bold">&nbsp;{{ child.title }}</span></i>
+                      <i
+                      {% if child.icon == 'fas fa-mobile-alt' %}
+                      style="font-weight:bold; width:10px; margin:0 15px 0 5px;"
+                      {% else %}
+                      style="font-weight:bold; width:10px; margin-right:20px;"
+                      {% endif %}
+                      class="{{ child.icon | default: 'fas fa-circle' }}" aria-hidden="true"></i><span style="font-weight:bold">{{ child.title }}</span>
                     </a>
                   </span>
                 </li>

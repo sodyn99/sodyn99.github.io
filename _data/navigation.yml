@@ -2,30 +2,15 @@ home:
   - title: "Study"
     icon: "fas fa-book"
     children:
-      - title: "4G LTE"
-        icon: "fas fa-filter"
-        url: /study/4g_lte/1.1/
-      - title: "5G NR"
-        icon: "fas fa-paper-plane"
-        url: /study/5g_nr/1.1/
-      - title: "O-RAN"
-        icon: "fas fa-code-branch"
-        url: /study/o-ran/1.1/
-      - title: "Drone"
-        icon: "fas fa-plane"
-        url: /study/drone/1.1/
-      - title: "AWS"
-        icon: "fab fa-aws"
-        url: /study/aws/1.1/
-      - title: "JavaScript"
-        icon: "fab fa-java"
-        url: /study/javascript/1.1/
-      - title: "Linux"
-        icon: "fab fa-linux"
-        url: /study/linux/1.1/
+      - title: "Computer"
+        icon: "fas fa-laptop"
+        url: /study/computer/
+      - title: "Mobile"
+        icon: "fas fa-mobile-alt"
+        url: /study/mobile/
       - title: "Lecture"
         icon: "fas fa-chalkboard-teacher"
-        url: /study/lecture/1.1/
+        url: /study/lecture/
   - title: "Sports"
     icon: "fas fa-table-tennis"
     children:
@@ -307,7 +292,7 @@ lecture:
       - title: "현충일 대체 과제"
         index: "1.7"
         url: /study/lecture/1.7/
-      
+
 
 ############ Sports ####################
 football:
