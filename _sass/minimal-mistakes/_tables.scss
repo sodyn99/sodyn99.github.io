@@ -5,6 +5,30 @@
   font-family: 'chaney-ultraextended';
   src: url('/fonts/chaney-ultraextended.woff') format('woff');
 }
+@font-face {
+  font-family: 'Radikal Bold';
+  src: url('/fonts/Radikal-Bold.woff') format('woff');
+}
+@font-face {
+  font-family: 'Futura Maxi CG Bold';
+  src: url('/fonts/Futura-Maxi-CG-Bold.woff') format('woff');
+}
+@font-face {
+  font-family: 'DIN Next Bold';
+  src: url('/fonts/din-next-bold.woff') format('woff');
+}
+@font-face {
+  font-family: 'Novarese Bold';
+  src: url('/fonts/Novarese-Bold.woff') format('woff');
+}
+@font-face {
+  font-family: 'KLeagueBasic Medium';
+  src: url('/fonts/KLeagueBasic-Medium.woff') format('woff');
+}
+@font-face {
+  font-family: 'LigueV Bold';
+  src: url('/fonts/LigueV-Bold.woff') format('woff');
+}
 table {
   margin-bottom: 1em;
   width: 100%;
@@ -127,7 +151,7 @@ th {
 /* football standings */
 .table_container {
   margin: 30px 0px;
-  width: 600px !important;
+  width: 100vmin !important;
   border: none;
   border-radius: 15px;
   // box-shadow: 0px 0px 15px 0px lightslategray;
@@ -136,6 +160,14 @@ th {
   /* background: linear-gradient(45deg, #f2f2f2, lightgray); */
   background: #f2f2f2;//rgba(220, 220, 230, 0.6);
 
+}
+.football_title{
+  margin: 4vmin 0;
+  font-family: 'Futura Maxi CG Bold';
+  text-align: center;
+  font-size: 6vmin;
+  color: $text-color;
+  background-color: #f2f2f2;
 }
 .dataframe.premierleague-standings,
 .dataframe.laliga-standings,

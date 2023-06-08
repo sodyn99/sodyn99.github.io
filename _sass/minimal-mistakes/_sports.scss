@@ -598,7 +598,7 @@
 
 
 /*  ###############################
-    Calender  ## Copyright (c) 2023 by Alex Oliver (https://codepen.io/alexoliverwd/pen/kKQgwo)
+    Calendar  ## Copyright (c) 2023 by Alex Oliver (https://codepen.io/alexoliverwd/pen/kKQgwo)
 ###############################  */
 
 .clearfix{
@@ -617,18 +617,17 @@
   margin: 30px 0px;
 	position: relative;
 	border-radius: 15px;
-	overflow: hidden;
+	overflow-y: scroll;
 	width: 100vmin;
-	height: 60vmin;
-	background-color: #ffffff;
-	color: #333333;
+	max-height: 100vmin;
+	background-color: #f2f2f2;
+	color: $text-color;
 }
 
 .calendar h1, .calendar h2{
   font-family: $global-font-family;
 	font-weight: 600;
 	font-size: 3vmin;
-	line-height: 3vmin;
 	text-transform: uppercase;
 }
 
@@ -655,13 +654,18 @@
 }
 
 .calendar .leftCol{
+  margin-top: 8.2vmin;
+  padding-top: 3vmin;
 	width: 30%;
+  height: 100%;
 	background-color: $green;
+  border-radius: 0 15px 15px 0;
 }
-
+.calendar .noteList {
+  margin-top: 4vmin;
+}
 .calendar .noteList li{
 	color: #ffffff;
-	margin-bottom: 1vmin;
   margin-left: -2vmin;
 }
 
@@ -675,8 +679,7 @@
 
 .calendar .leftCol h1{
 	color: #ffffff;
-  margin-bottom: 5vmin;
-  line-height: 4vmin;
+  line-height: 4.5vmin;
 }
 
 .calendar .rightCol{

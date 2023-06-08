@@ -8,16 +8,17 @@ sidebar:
   nav: football
   parent: true
 ---
-
-<h2>Table</h2>
+<hr>
 <div class="table_container">
-    <div data-include-path="/data/football/asia/{{ page.name|replace:'.html','' }}-standings.html"></div>
+  <div id="banner" class="football_title"></div>
+</div>
+<div class="table_container">
+  <div id="standings" class="football_title" style="text-transform:uppercase;">Standings</div>
+  <div data-include-path="/data/football/europe/{{ page.name|replace:'.html','' }}-standings.html"></div>
 </div>
 
-<h2>Match Review</h2>
-
 <div class="calendar">
-
+  <div id="match_review" class="football_title" style="text-transform:uppercase;">Match Review</div>
   <div class="col leftCol">
     <div class="content">
       <h1 id="date-this" class="date"></h1>
@@ -118,6 +119,41 @@ sidebar:
 <hr>
 
 <script>
+  var league = "{{ page.name|replace:'.html','' }}";
+  let banner = document.getElementById("banner");
+  let standings = document.getElementById("standings");
+  let match_review = document.getElementById("match_review");
+  if (league == 'premierleague') {
+    match_review.style.fontFamily=standings.style.fontFamily=banner.style.fontFamily="Radikal Bold";
+    banner.innerHTML = "<img style='height:8vmin;margin:0 4vmin 1vmin -4vmin;' src='/images/football/main_page/premierleague-logo.png'/>Premier League";}
+  else if (league == 'laliga') {
+    match_review.style.color=standings.style.color=banner.style.color="#3D195B";
+    match_review.style.fontFamily=standings.style.fontFamily=banner.style.fontFamily="Futura Maxi CG Bold";
+    banner.innerHTML = "<img style='height:8vmin;margin:0 4vmin 1vmin -4vmin;' src='/images/football/main_page/laliga-logo.png'/>LaLiga";}
+  else if (league == 'seriea') {
+    match_review.style.color=standings.style.color=banner.style.color="#1A1659";
+    match_review.style.fontFamily=standings.style.fontFamily=banner.style.fontFamily="DIN Next Bold";
+    banner.innerHTML = "<img style='height:8vmin;margin:0 4vmin 0 -4vmin;' src='/images/football/main_page/seriea-logo.png'/>SERIE A";}
+  else if (league == 'bundesliga') {
+    match_review.style.color=standings.style.color=banner.style.color="#000000";
+    match_review.style.fontFamily=standings.style.fontFamily=banner.style.fontFamily="Futura Maxi CG Bold";
+    banner.innerHTML = "<img style='height:8vmin;margin:0 4vmin 1vmin -4vmin;' src='/images/football/main_page/bundesliga-logo.png'/>BUNDESLIGA";
+  }
+  else if (league == 'ligue1') {
+    match_review.style.color=standings.style.color=banner.style.color="#091C3E";
+    match_review.style.fontFamily=standings.style.fontFamily=banner.style.fontFamily="LigueV Bold";
+    banner.innerHTML = "<img style='height:8vmin;margin:0 4vmin 1vmin -4vmin;' src='/images/football/main_page/ligue1-logo.png'/>LIGUE 1";
+  }
+  else if (league == 'championsleague') {
+    match_review.style.fontFamily=standings.style.fontFamily=banner.style.color="#00004B";
+    match_review.style.fontFamily=standings.style.fontFamily=banner.style.fontFamily="Novarese Bold";
+    banner.innerHTML = "CHAMPIONS LEAGUE";}
+  else if (league == 'kleague1') {
+    match_review.style.color=standings.style.color=banner.style.color="#001A46";
+    match_review.style.fontFamily=standings.style.fontFamily=banner.style.fontFamily="KLeagueBasic Medium";
+    banner.innerHTML = "<img style='height:8vmin;margin:0 4vmin 1vmin -4vmin;' src='/images/football/main_page/kleague-logo.png'/>K LEAGUE 1";}
+
+  console.log(league);
 
   function select(val){
     var date_info = $(val).attr('data-value').split('<br>');
@@ -125,7 +161,7 @@ sidebar:
 
     const xhr = new XMLHttpRequest();
 
-    xhr.open('GET', "/data/football/asia/{{ page.name|replace:'.html','' }}-matches.json", true);
+    xhr.open('GET', "/data/football/europe/{{ page.name|replace:'.html','' }}-matches.json", true);
 
     xhr.onload = function(){
       if(this.status === 200) {
@@ -142,7 +178,7 @@ sidebar:
             output += `
               <li>
                 <a class="match-list" href="/sports/football/{{ page.name|replace:'.html','' }}/${date_info[1]}.${date_info[3]}-${customer.Home}${customer.Away}" style="font-weight:bold; text-decoration:none; color:#f2f2f2;">
-                  <p style="padding-left: 3.5vmin; text-indent: -3.5vmin;">${customer.Wk}R | ${customer.Home} ${customer.Score} ${customer.Away}</p>
+                  <p style="line-height: 2.5vmin; padding-left: 3.5vmin; text-indent: -3.5vmin;">${customer.Wk}R | ${customer.Home} ${customer.Score} ${customer.Away}</p>
                 </a>
               </li>
           `;
@@ -156,4 +192,3 @@ sidebar:
     xhr.send();
   }
 </script>
-
