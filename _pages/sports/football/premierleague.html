@@ -21,7 +21,7 @@ sidebar:
 
 <div class="calendar">
   <div id="match_review" class="football_title" style="text-transform:uppercase;">Match Review</div>
-  <div class="col leftCol">
+  <div id="left" class="col leftCol">
     <div class="content">
       <h1 id="date-this" class="date"></h1>
       <div class="notes">
@@ -115,9 +115,7 @@ sidebar:
   <div class="clearfix"></div>
 
 </div>
-<p></p>
 
-<div id="customers"></div>
 <hr>
 
 <script>
@@ -201,8 +199,6 @@ sidebar:
     match_review.style.fontFamily=standings.style.fontFamily=banner.style.fontFamily="KLeagueBasic Medium";
     banner.innerHTML = "<img style='height:8vmin;margin:0 4vmin 1vmin -4vmin;' src='/images/football/main_page/kleague-logo.png'/>K LEAGUE 1";}
 
-  console.log(league);
-
   function select(val){
     var date_info = $(val).attr('data-value').split('<br>');
     document.getElementById("date-this").innerHTML = date_info[0] + "<br>" + date_info[2] + " " + date_info[3];
@@ -238,5 +234,15 @@ sidebar:
     }
 
     xhr.send();
+
+    // var calen = document.getElementsByClassName("calendar")[0];
+    // var calenHeight = getComputedStyle(calen);
+    // var left = document.getElementsByClassName("leftCol")[0];
+    // var leftHeight = getComputedStyle(left);
+    // var l = document.getElementById("left");
+    // var i = calenHeight.height;
+    // l.style.height = calenHeight.height;
+    // calenHeight.height = i;
+    // console.log(l.style.height, leftHeight.height, calenHeight.height)
   }
 </script>
