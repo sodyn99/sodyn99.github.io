@@ -162,7 +162,7 @@ sidebar:
 
     const xhr = new XMLHttpRequest();
 
-    xhr.open('GET', "/data/football/europe/{{ page.name|replace:'.html','' }}-matches.json", true);
+    xhr.open('GET', "/data/football/asia/{{ page.name|replace:'.html','' }}-matches.json", true);
 
     xhr.onload = function(){
       if(this.status === 200) {
