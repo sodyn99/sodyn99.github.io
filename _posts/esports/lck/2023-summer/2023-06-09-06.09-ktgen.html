@@ -16,7 +16,7 @@ author_profile: false
 <script>
   const match = 1;
   var set = 1;
-  console.log('wow')
+  console.log('script start')
   var date_info = '{{page.name}}'.substr(0, 10);
 
   const xhr = new XMLHttpRequest();
@@ -24,6 +24,7 @@ author_profile: false
   xhr.open('GET', "/data/esports/lck/lck-matches.json", true);
 
   xhr.onload = function(){
+    this.status === 200 ? console.log('success') : console.log('fail');
     if(this.status === 200) {
       // console.log(this.responseText);
 
