@@ -1,6 +1,6 @@
 @font-face {
-  font-family: 'chaney-ultraextended';
-  src: url('/fonts/chaney-ultraextended.woff') format('woff');
+  font-family: 'LCKTitle Extended';
+  src: url('/fonts/LCKTitle-Extended.woff2') format('woff2');
 }
 :root{
     --ratio: 0.72;
@@ -36,7 +36,7 @@
   margin: var(--esports-margin) 0 0 0;
 }
 .esports-team1{
-  font-family: 'chaney-ultraextended';
+  font-family: 'LCKTitle Extended';
   float: left;
   width: calc(0.8 * var(--esports-height));
   height: calc(0.16 * var(--esports-height));
@@ -56,7 +56,7 @@
   }
 }
 .esports-team2{
-  font-family: 'chaney-ultraextended';
+  font-family: 'LCKTitle Extended';
   float: right;
   width: calc(0.8 * var(--esports-height));
   height: calc(0.16 * var(--esports-height));
@@ -75,7 +75,7 @@
   }
 }
 .esports-set{
-  font-family: 'chaney-ultraextended';
+  font-family: 'LCKTitle Extended';
   float: left;
   width: calc(0.18 * var(--esports-height));
   height: calc(0.16 * var(--esports-height));
@@ -105,7 +105,7 @@
   }
 }
 .esports-player1{
-  font-family: 'chaney-ultraextended';
+  font-family: 'LCKTitle Extended';
   float: left;
   width: calc(0.729 * var(--esports-height));
   height: calc(0.1367 * var(--esports-height));
@@ -124,7 +124,7 @@
   }
 }
 .esports-player2{
-  font-family: 'chaney-ultraextended';
+  font-family: 'LCKTitle Extended';
   float: right;
   width: calc(0.729 * var(--esports-height));
   height: calc(0.1367 * var(--esports-height));
@@ -183,7 +183,7 @@
   }
 }
 .esports-coach1{
-  font-family: 'chaney-ultraextended';
+  font-family: 'LCKTitle Extended';
   float: left;
   width: calc(0.373 * var(--esports-height));
   height: calc(0.085 * var(--esports-height));
@@ -195,7 +195,7 @@
   line-height : calc(0.09 * var(--esports-height));
 }
 .esports-coach2{
-  font-family: 'chaney-ultraextended';
+  font-family: 'LCKTitle Extended';
   float: right;
   width: calc(0.371 * var(--esports-height));
   height: calc(0.085 * var(--esports-height));

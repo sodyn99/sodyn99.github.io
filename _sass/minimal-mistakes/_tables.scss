@@ -2,8 +2,8 @@
    TABLES
    ========================================================================== */
 @font-face {
-  font-family: 'chaney-ultraextended';
-  src: url('/fonts/chaney-ultraextended.woff') format('woff');
+  font-family: 'LCKTitle Extended';
+  src: url('/fonts/LCKTitle-Extended.woff2') format('woff2');
 }
 @font-face {
   font-family: 'Radikal Bold';
@@ -32,6 +32,10 @@
 @font-face {
   font-family: 'DFLWeb Bd';
   src: url('/fonts/DFLWeb-Bd.woff2') format('woff2');
+}
+@font-face {
+  font-family: 'champions-bold';
+  src: url('/fonts/champions-bold.woff2') format('woff2');
 }
 table {
   margin-bottom: 1em;
@@ -70,7 +74,7 @@ th {
 /* lck standings */
 .lck_title{
   margin: 1vmin 0;
-  font-family: 'chaney-ultraextended';
+  font-family: 'LCKTitle Extended';
   text-align: center;
   font-size: 6vmin;
 }
@@ -130,7 +134,7 @@ th {
 }
 .dataframe.lck-standings tbody td:nth-child(2) {
   width: 20vmin;
-  font-family: 'chaney-ultraextended';
+  font-family: 'LCKTitle Extended';
   font-weight : bold;
   border-right: #f2f2f2 1px solid;
 }
