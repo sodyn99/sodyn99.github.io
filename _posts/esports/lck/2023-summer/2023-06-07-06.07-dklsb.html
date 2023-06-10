@@ -16,16 +16,12 @@ author_profile: false
   var match = 2;
   var set = 1;
   var date_info = "2023-{{ page.title|slice:0,5|replace:'.','-' }}";
-  console.log('script start')
 
   const xhr = new XMLHttpRequest();
 
-  console.log('xhr start')
   xhr.open('GET', "/data/esports/lck/lck-matches.json", true);
 
   xhr.onload = function(){
-    console.log(this.status)
-    this.status === 200 ? console.log('서버응답: success') : console.log('서버응답: fail');
       // console.log(this.responseText);
 
     const lol = JSON.parse(this.responseText);
@@ -33,7 +29,6 @@ author_profile: false
     let all = '';
 
     lol.forEach(function(lol){
-      console.log('forEach start')
       if (lol.Date == date_info && lol.Match == match) {
         all += `
           <div id="set${set}" class="match-esports">
@@ -55,70 +50,70 @@ author_profile: false
               </div>
               <div id="bluePlayer1" class="esports-player1">
                 <span>${lol.bluePlayer1}</span>
-                <img src="/images/esports/lol/top.png"/>
+                <img src="/images/esports/lol/top.svg"/>
               </div>
               <div id="redPicks1" class="esports-champion2">
                 <img src="/images/esports/lol/Champions/${lol.redPicks1}.png" style="transform: scaleX();"/>
               </div>
               <div id="redPlayer1" class="esports-player2">
                 <span>${lol.redPlayer1}</span>
-                <img src="/images/esports/lol/top.png"/>
+                <img src="/images/esports/lol/top.svg"/>
               </div>
               <div id="bluePicks2" class="esports-champion1">
                 <img src="/images/esports/lol/Champions/${lol.bluePicks2}.png" style="transform: scaleX(-1);"/>
               </div>
               <div id="bluePlayer2" class="esports-player1">
                 <span>${lol.bluePlayer2}</span>
-                <img src="/images/esports/lol/jug.png"/>
+                <img src="/images/esports/lol/jug.svg"/>
               </div>
               <div id="redPicks2" class="esports-champion2">
                 <img src="/images/esports/lol/Champions/${lol.redPicks2}.png" style="transform: scaleX();"/>
               </div>
               <div id="redPlayer2" class="esports-player2">
                 <span>${lol.redPlayer2}</span>
-                <img src="/images/esports/lol/jug.png"/>
+                <img src="/images/esports/lol/jug.svg"/>
               </div>
               <div id="bluePicks3" class="esports-champion1">
                 <img src="/images/esports/lol/Champions/${lol.bluePicks3}.png" style="transform: scaleX(-1);"/>
               </div>
               <div id="bluePlayer3" class="esports-player1">
                 <span>${lol.bluePlayer3}</span>
-                <img src="/images/esports/lol/mid.png"/>
+                <img src="/images/esports/lol/mid.svg"/>
               </div>
               <div id="redPicks3" class="esports-champion2">
                 <img src="/images/esports/lol/Champions/${lol.redPicks3}.png" style="transform: scaleX();"/>
               </div>
               <div id="redPlayer3" class="esports-player2">
                 <span>${lol.redPlayer3}</span>
-                <img src="/images/esports/lol/mid.png"/>
+                <img src="/images/esports/lol/mid.svg"/>
               </div>
               <div id="bluePicks4" class="esports-champion1">
                 <img src="/images/esports/lol/Champions/${lol.bluePicks4}.png" style="transform: scaleX(-1);"/>
               </div>
               <div id="bluePlayer4" class="esports-player1">
                 <span>${lol.bluePlayer4}</span>
-                <img src="/images/esports/lol/adc.png"/>
+                <img src="/images/esports/lol/adc.svg"/>
               </div>
               <div id="redPicks4" class="esports-champion2">
                 <img src="/images/esports/lol/Champions/${lol.redPicks4}.png" style="transform: scaleX(-1);"/>
               </div>
               <div id="redPlayer4" class="esports-player2">
                 <span>${lol.redPlayer4}</span>
-                <img src="/images/esports/lol/adc.png"/>
+                <img src="/images/esports/lol/adc.svg"/>
               </div>
               <div id="bluePicks5" class="esports-champion1">
                 <img src="/images/esports/lol/Champions/${lol.bluePicks5}.png" style="transform: scaleX(-1);"/>
               </div>
               <div id="bluePlayer5" class="esports-player1">
                 <span>${lol.bluePlayer5}</span>
-                <img src="/images/esports/lol/sup.png"/>
+                <img src="/images/esports/lol/sup.svg"/>
               </div>
               <div id="redPicks5" class="esports-champion2">
                 <img src="/images/esports/lol/Champions/${lol.redPicks5}.png" style="transform: scaleX();"/>
               </div>
               <div id="redPlayer5" class="esports-player2">
                 <span>${lol.redPlayer5}</span>
-                <img src="/images/esports/lol/sup.png"/>
+                <img src="/images/esports/lol/sup.svg"/>
               </div>
               <div class="esports-ban-slash1">
                 <i class="fas fa-slash fa-rotate-90 fa-lg" style="color:red;"></i>
@@ -171,11 +166,7 @@ author_profile: false
         set += 1;
       }
     });
-    console.log('set: ' + set);
-    console.log('innerHTML start')
     document.getElementById('all').innerHTML = all;
   }
-  console.log('innerHTML end')
-  console.log('xhr.send start')
   xhr.send();
 </script>
