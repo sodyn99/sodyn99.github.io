@@ -117,10 +117,16 @@
   font-size: calc(0.05 * var(--esports-height));
   line-height : calc(0.14 * var(--esports-height));
   > img {
-    float:left;
+    float:right;
     position:relative;
-    height:calc(0.16 * var(--esports-height));
+    height:calc(0.04 * var(--esports-height));
     vertical-align:middle;
+    filter: invert(100%);
+    margin: calc(0.05 * var(--esports-height));
+  }
+  > span{
+    float: left;
+    margin-left: calc(0.04 * var(--esports-height));
   }
 }
 .esports-player2{
@@ -135,6 +141,18 @@
   color: white;
   font-size: calc(0.05 * var(--esports-height));
   line-height : calc(0.14 * var(--esports-height));
+  > img {
+    float:left;
+    position:relative;
+    height:calc(0.04 * var(--esports-height));
+    vertical-align:middle;
+    filter: invert(100%);
+    margin: calc(0.05 * var(--esports-height));
+  }
+  > span{
+    float: right;
+    margin-right: calc(0.04 * var(--esports-height));
+  }
 }
 .esports-ban-slash1{
   position: absolute;
@@ -162,10 +180,9 @@
   float: left;
   width: calc(0.085 * var(--esports-height));
   height: calc(0.085 * var(--esports-height));
-  background-color: gray;
   margin: calc(1*var(--esports-margin)) 0 0 calc(1.5*var(--esports-margin));
   > img {
-    filter:brightness(50%);
+    filter:brightness(60%);
     width: 100%;
     height: 100%;
   }
@@ -174,10 +191,9 @@
   float: right;
   width: calc(0.085 * var(--esports-height));
   height: calc(0.085 * var(--esports-height));
-  background-color: gray;
   margin: calc(1*var(--esports-margin)) calc(1.5*var(--esports-margin)) 0 0;
   > img {
-    filter:brightness(50%);
+    filter:brightness(60%);
     width: 100%;
     height: 100%;
   }
@@ -194,6 +210,13 @@
   text-align: center;
   line-height : calc(0.09 * var(--esports-height));
 }
+.esports-coach1::after{
+  content: url("/images/esports/lol/coach.svg");
+  display: block;
+  margin-top: 0.7vmin;
+  margin-right: 2vmin;
+  float: right;
+}
 .esports-coach2{
   font-family: 'LCKTitle Extended';
   float: right;
@@ -205,6 +228,13 @@
   font-size: calc(0.03 * var(--esports-height));
   text-align: center;
   line-height : calc(0.09 * var(--esports-height));
+}
+.esports-coach2::before{
+  content: url("/images/esports/lol/coach.svg");
+  display: block;
+  margin-top: 0.65vmin;
+  margin-left: 2vmin;
+  float: left;
 }
 
 // /* Football Field */

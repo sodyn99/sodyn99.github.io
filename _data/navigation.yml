@@ -348,6 +348,10 @@ lck:
           url: /sports/esports/lck/06.09-ktgen/
         - title: "06.09 HLE 1 : 2 T1"
           url: /sports/esports/lck/06.09-hlet1/
+        - title: "06.10 LSB 2 : 0 NS"
+          url: /sports/esports/lck/06.10-lsbns/
+        - title: "06.10 KDF 0 : 2 BRO"
+          url: /sports/esports/lck/06.10-kdfbro/
 
     - title: "2023 Spring"
       children:

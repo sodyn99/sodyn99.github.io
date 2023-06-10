@@ -1,6 +1,6 @@
 ---
 layout: single
-title: "06.07 KT 2 : 1 HLE"
+title: "06.10 LSB 2 : 0 NS"
 categories: Sports Esports LCK
 tag: [Esports, LOL, LCK]
 toc: false
@@ -16,16 +16,12 @@ author_profile: false
   var match = 1;
   var set = 1;
   var date_info = "2023-{{ page.title|slice:0,5|replace:'.','-' }}";
-  console.log('script start')
 
   const xhr = new XMLHttpRequest();
 
-  console.log('xhr start')
   xhr.open('GET', "/data/esports/lck/lck-matches.json", true);
 
   xhr.onload = function(){
-    console.log(this.status)
-    this.status === 200 ? console.log('서버응답: success') : console.log('서버응답: fail');
       // console.log(this.responseText);
 
     const lol = JSON.parse(this.responseText);
@@ -33,7 +29,6 @@ author_profile: false
     let all = '';
 
     lol.forEach(function(lol){
-      console.log('forEach start')
       if (lol.Date == date_info && lol.Match == match) {
         all += `
           <div id="set${set}" class="match-esports">
@@ -171,11 +166,7 @@ author_profile: false
         set += 1;
       }
     });
-    console.log('set: ' + set);
-    console.log('innerHTML start')
     document.getElementById('all').innerHTML = all;
   }
-  console.log('innerHTML end')
-  console.log('xhr.send start')
   xhr.send();
 </script>
