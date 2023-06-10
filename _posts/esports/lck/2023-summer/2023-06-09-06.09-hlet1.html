@@ -13,10 +13,10 @@ author_profile: false
 <div id ="all"></div>
 
 <script>
-  const match = 1;
+  var match = 1;
   var set = 1;
+  var date_info = "2023-{{ page.title|slice:0,5|replace:'.','-' }}";
   console.log('script start')
-  var date_info = "{{ page.name|slice:0,10 }}";
 
   const xhr = new XMLHttpRequest();
 
