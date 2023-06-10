@@ -9,15 +9,14 @@ sidebar:
   nav: lck
   parent: true
 author_profile: false
-match: 1
 ---
 <div id ="all"></div>
 
 
 <script>
-  var match = '{{ page.match }}';
+  var match = 1;
   var set = 1;
-  var date_info = "{{ page.name|slice:0,10 }}";
+  var date_info = "2023-{{ page.title|slice:0,5|replace:'.','-' }}";
   console.log('script start')
 
   const xhr = new XMLHttpRequest();
