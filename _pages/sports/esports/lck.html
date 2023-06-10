@@ -7,7 +7,7 @@ sidebar:
   nav: esports
   parent: true
 ---
-<hr>
+
 <div class="table_container" style="height:20vmin;">
   <img src="/images/esports/lol/lck-banner_logo.svg" style="float:left; height:60%; margin-left:5vmin; margin-top:4vmin;">
   <img src="/images/esports/lol/lck-banner_bar.png" style="float:left; user-select:none; height:70%; width:9%; margin-top:3vmin;">
@@ -18,7 +18,7 @@ sidebar:
   <div id="round" class="lck_title" style="padding-top:1.6vmin; float:left; font-size:7vmin; line-height: 1.3vmin">
   </div>
 </div>
-
+<hr>
 <div class="table_container">
   <div class="lck_title" style="margin:4vmin 0;">Standings</div>
   <div data-include-path="/data/esports/lck-standings1.html"></div>
@@ -132,9 +132,9 @@ sidebar:
   const round = "1";
 
   if (season == "spring")
-    document.getElementById("season").innerHTML = year+'<br><span style="font-size:5.8vmin;">'+season+'</span>';
+    document.getElementById("season").innerHTML = year+'<br><span style="font-size:5.77vmin;">'+season+'</span>';
   else if (season == "summer")
-    document.getElementById("season").innerHTML = year+'<br><span style="font-size:5.1vmin;">'+season+'</span>';
+    document.getElementById("season").innerHTML = year+'<br><span style="font-size:5.05vmin;">'+season+'</span>';
 
   if (round == "1" || round == "2")
     document.getElementById("round").innerHTML = '<span style="font-size:3vmin;">regular<br>season</span><span style="user-select:none;"><br><br><br><br><br></span><span style="font-size:7vmin;">'+round+'R</span>';
