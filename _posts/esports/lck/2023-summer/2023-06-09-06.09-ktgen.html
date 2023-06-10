@@ -21,7 +21,8 @@ author_profile: false
 
   const xhr = new XMLHttpRequest();
 
-  xhr.open('GET', "/data/esports/lck/lck-matches.json", true);
+  console.log('xhr start')
+  xhr.open('GET', "https://asungajinli.github.io/data/esports/lck/lck-matches.json", true);
 
   xhr.onload = function(){
     console.log(this.status)
@@ -166,6 +167,6 @@ author_profile: false
     document.getElementById('all').innerHTML = all;
   }
   console.log('innerHTML end')
-  console.log('xhr.open start')
+  console.log('xhr.send start')
   xhr.send();
 </script>
