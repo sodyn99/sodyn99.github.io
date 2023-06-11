@@ -24,7 +24,7 @@
   position: absolute;
   width: calc(0.8 * var(--esports-height));
   height: calc(0.16 * var(--esports-height));
-  background: linear-gradient(120deg, #cdb111,#cdb11100,#cdb11100,#cdb11100,#cdb111);
+  background: linear-gradient(115deg, #cdb11100,#cdb11100,#cdb11100,#cdb11100,#cdb111c5);
   margin: var(--esports-margin) 0 0 0;
 }
 .esports-win2{
@@ -32,7 +32,7 @@
   right:0;
   width: calc(0.8 * var(--esports-height));
   height: calc(0.16 * var(--esports-height));
-  background: linear-gradient(120deg, #cdb111,#cdb11100,#cdb11100,#cdb11100,#cdb111);
+  background: linear-gradient(115deg, #cdb111,#cdb11100,#cdb11100,#cdb11100,#cdb11100);
   margin: var(--esports-margin) 0 0 0;
 }
 .esports-team1{
@@ -104,12 +104,13 @@
     height: 100%;
   }
 }
+
 .esports-player1{
   font-family: 'LCKTitle Extended';
   float: left;
   width: calc(0.729 * var(--esports-height));
   height: calc(0.1367 * var(--esports-height));
-  background-color: #442EB8;
+  background-color: #442EB8; // rgb(87, 65, 201)
   margin: calc(1*var(--esports-margin)) 0 0 calc(1*var(--esports-margin));
   text-transform: uppercase;
   align-items: center;
@@ -134,7 +135,7 @@
   float: right;
   width: calc(0.729 * var(--esports-height));
   height: calc(0.1367 * var(--esports-height));
-  background-color: #F7434A;
+  background-color: #F7434A; //rgb(224, 71, 63)
   margin: calc(1*var(--esports-margin)) calc(1*var(--esports-margin)) 0 0;
   text-transform: uppercase;
   align-items: center;
