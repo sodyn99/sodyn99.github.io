@@ -123,42 +123,59 @@ sidebar:
 <div style="background-color:#f2f2f2; overflow:hidden; width:100vmin; height:100vmin;border-radius:15px; padding:1.5vmin;">
   <div class="lck_title" style="margin:4vmin 0;">My Legendaries</div>
   <div style="position:relative;overflow:auto;background-color:#000; overflow:scroll; width:100%; height:82.5%;border-radius:15px; padding:1.5vmin;">
-    <video id="video1" autoplay muted loop width="70%" height="70%" style="margin:-5vmin 0 0 -14vmin;cursor:pointer;">
-      <source src="/videos/sports/esports/lol/lck/legendaries/chovy-1.mp4" type="video/mp4">
-      Your browser does not support the video.
-    </video>
-    <div style="line-height:4vmin;padding-top:6vmin;margin-top:-47vmin;z-index:1;position:absolute;left:40vmin;width:50vmin;height:40vmin;font-family:'termina';font-size:1.5vmin;float:right;color:white;">
-      <span style="font-size:4vmin;font-family:'LCKTitle Extended';">chovy</span><br>
-      <span>&nbsp;GEN | MID</span><br>
-      <span style="font-weight:bold;">&nbsp;Akali</span><br><br>
-      <span style="font-size:2vmin;">&nbsp;2023 Spring | 02.16</span><br>
-      <span style="font-size:2vmin;">&nbsp;Match 44 | Set 3</span>
+    <div id="video1" class="video-container">
+      <video autoplay muted loop width="70%" height="70%" style="margin:0 0 0 -14vmin;">
+        <source src="/videos/sports/esports/lol/lck/legendaries/chovy-1.mp4" type="video/mp4">
+        Your browser does not support the video.
+      </video>
+      <div class="video-help"></div>
+      <div class="dark-box">
+        <div class="dark-inner-box" style="font-size:4vmin;font-family:'LCKTitle Extended';">chovy</div>
+        <div class="dark-inner-box">&nbsp;GEN | MID</div>
+        <div class="dark-inner-box" style="font-weight: bold;">&nbsp;Akali</div><br>
+        <div class="dark-inner-box" style="font-size: 2vmin;">&nbsp;2023 Spring | 02.16</div>
+        <div class="dark-inner-box" style="font-size: 2vmin;">&nbsp;Match 44 | Set 3</div>
+      </div>
+      <div class="clearfix"></div>
     </div>
-    <div class="clearfix"></div>
-    <video id="video1" autoplay muted loop width="70%" height="70%" style="margin:-5vmin 0 0 -14vmin;cursor:pointer;">
-      <source src="/videos/sports/esports/lol/lck/legendaries/doran-1.mp4" type="video/mp4">
-      Your browser does not support the video.
-    </video>
-    <div style="line-height:4vmin;padding-top:6vmin;margin-top:-47vmin;z-index:1;position:absolute;left:40vmin;width:50vmin;height:40vmin;font-family:'termina';font-size:1.5vmin;float:right;color:white;">
-      <span style="font-size:4vmin;font-family:'LCKTitle Extended';">doran</span><br>
-      <span>&nbsp;GEN | TOP</span><br>
-      <span style="font-weight:bold;">&nbsp;Akali</span><br><br>
-      <span style="font-size:2vmin;">&nbsp;2023 Spring | 02.16</span><br>
-      <span style="font-size:2vmin;">&nbsp;Match 44 | Set 3</span>
+    <hr>
+    <div id="video2" class="video-container">
+      <video autoplay muted loop width="70%" height="70%" style="margin:0 0 0 -14vmin;">
+        <source src="/videos/sports/esports/lol/lck/legendaries/doran-1.mp4" type="video/mp4">
+        Your browser does not support the video.
+      </video>
+      <div class="video-help"></div>
+      <div class="dark-box">
+        <div class="dark-inner-box" style="font-size:4vmin;font-family:'LCKTitle Extended';">doran</div>
+        <div class="dark-inner-box">&nbsp;GEN | TOP</div>
+        <div class="dark-inner-box" style="font-weight: bold;">&nbsp;Jayce</div><br>
+        <div class="dark-inner-box" style="font-size: 2vmin;">&nbsp;2023 Spring | 02.16</div>
+        <div class="dark-inner-box" style="font-size: 2vmin;">&nbsp;Match 44 | Set 3</div>
+      </div>
+      <div class="clearfix"></div>
     </div>
-    <div class="clearfix"></div>
   </div>
 </div>
 <script>
-  var videos = document.querySelectorAll("video");
+  var videoContainers = document.querySelectorAll(".video-container");
 
-  videos.forEach(function(video) {
+  videoContainers.forEach(function(container) {
+    var video = container.querySelector("video");
+    var videoHelp = container.querySelector(".video-help");
+
     video.addEventListener("timeupdate", function() {
       if (!document.fullscreenElement && video.currentTime >= 3) {
         video.currentTime = 0.3;  // 시작 시간으로 이동
       }
     });
-    video.addEventListener("click", function() {
+    videoHelp.addEventListener("mouseover", function() {
+      video.style.transform = "scale(1.1)";
+      video.style.transition = "all 0.3s";
+    });
+    videoHelp.addEventListener("mouseout", function() {
+      video.style.transform = "scale(1)";
+    });
+    videoHelp.addEventListener("click", function() {
       if (video.requestFullscreen) {
         video.requestFullscreen();
       } else if (video.mozRequestFullScreen) {

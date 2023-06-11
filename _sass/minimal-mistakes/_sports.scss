@@ -28,6 +28,44 @@ font-display:auto;font-style:normal;font-weight:700;font-stretch:normal;
     --esports-height: calc(70vmin * var(--ratio));
     --esports-margin: calc(0.66vmin * var(--ratio));
 }
+.video-container {
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+}
+.video-help {
+  position:absolute;
+  width:14vmin;
+  height:23.5vmin;
+  margin:-32vmin 0 0 11vmin;
+  cursor:pointer;
+}
+.dark-box {
+  background-color:#000;
+  line-height:4vmin;
+  padding-top:6vmin;
+  margin-top:-37vmin;
+  z-index:1;
+  position:absolute;
+  left:40vmin;
+  width:50vmin;
+  height:35vmin;
+  font-family:'termina';
+  font-size:1.5vmin;
+  float:right;
+  color:white;
+}
+.dark-box::selection{
+  background-color:white;
+  color:black;
+}
+.dark-inner-box{
+  background-color: #000;
+}
+.dark-inner-box::selection{
+  background-color:white;
+  color:black;
+}
 
 /* lol */
 .match-esports{
