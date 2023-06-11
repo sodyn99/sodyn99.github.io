@@ -189,6 +189,7 @@ sidebar:
       }
       video.muted = false;
       video.controlsList.add('nodownload');
+      video.disablePictureInPicture = true;
     });
     video.addEventListener("fullscreenchange", function() {
       if (!document.fullscreenElement) {
