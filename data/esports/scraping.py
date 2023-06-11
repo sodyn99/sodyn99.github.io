@@ -61,7 +61,7 @@ table('lck', 'https://lol.fandom.com/wiki/LCK/2023_Season/Summer_Season')
 print('LCK standings done!')
 
 
-# In[75]:
+# In[4]:
 
 
 import pandas as pd
@@ -72,7 +72,7 @@ pd.set_option('mode.chained_assignment',  None)
 def list_chunk(lst, n):
     return [lst[i:i+n] for i in range(0, len(lst), n)]
 
-def matches(league, url):
+def summer_23_matches(league, url):
     response = requests.get(url)
     soup = BeautifulSoup(response.text, 'html.parser')
     table = soup.find('table', class_='wikitable')
@@ -115,6 +115,7 @@ def matches(league, url):
                    'Liiv SANDBOX': 'lsb',
                    'T1': 't1',
                    'OKSavingsBank BRION': 'bro',
+                   'BRION': 'bro',
                    'Gen.G': 'gen',
                    'DRX': 'drx',
                    'KT Rolster': 'kt',
@@ -174,14 +175,10 @@ def matches(league, url):
 
     df = df[::-1]
 
-    df.to_json(f'./lck/{league}-matches.json', orient='records')
+    return df
     
-    
-matches('lck', 'https://lol.fandom.com/wiki/LCK/2023_Season/Summer_Season/Match_History')
-
-
-# In[ ]:
-
-
-
+df_spring_23 = summer_23_matches('lck', 'https://lol.fandom.com/wiki/LCK/2023_Season/Spring_Season/Match_History')
+df_summer_23 = summer_23_matches('lck', 'https://lol.fandom.com/wiki/LCK/2023_Season/Summer_Season/Match_History')
+df = pd.concat([df_spring_23,df_summer_23])
+df.to_json(f'./lck/lck-matches.json', orient='records')
 
