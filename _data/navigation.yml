@@ -1,6 +1,7 @@
 home:
   - title: "Study"
     icon: "fas fa-book"
+    color: "#DC7D48"
     children:
       - title: "Computer"
         icon: "fas fa-laptop"
@@ -13,6 +14,7 @@ home:
         url: /study/lecture/
   - title: "Sports"
     icon: "fas fa-table-tennis"
+    color: "#24A091"
     children:
       - title: "Football"
         icon: "fas fa-volleyball-ball"

@@ -51,8 +51,7 @@ table {
 }
 
 thead {
-  background-color: $border-color;
-  border-bottom: 2px solid mix(#000, $border-color, 25%);
+  background-color: #f2f2f2;
 }
 
 th {
@@ -60,11 +59,21 @@ th {
   font-weight: bold;
   text-align: left;
 }
-
+th:first-child {
+  border-top-left-radius: 1.2em;
+  border-bottom-left-radius: 1.2em;
+}
+th:last-child {
+  border-top-right-radius: 1.2em;
+  border-bottom-right-radius: 1.2em;
+}
 td {
   padding: 0.5em;
-  border-bottom: 1px solid mix(#000, $border-color, 25%);
+  border-bottom: 1px solid #dddddd;
 }
+// tbody tr:last-child {
+//   border-bottom: 1.2em solid #f2f2f2;
+// }
 
 tr,
 td,
@@ -195,7 +204,8 @@ th {
   font-size:14px !important;
   text-align: center !important;
   font-weight: bold !important;
-  border-bottom: 0.2vmin solid #c2c2c2 !important;
+  border-radius: 0px;
+  border-bottom: 0.2vmin solid #dddddd !important;
 }
 .dataframe.premierleague-standings tbody td,
 .dataframe.laliga-standings tbody td,
