@@ -182,3 +182,5 @@ df_summer_23 = summer_23_matches('lck', 'https://lol.fandom.com/wiki/LCK/2023_Se
 df = pd.concat([df_spring_23,df_summer_23])
 df.to_json(f'./lck/lck-matches.json', orient='records')
 
+print('LCK matches done!')
+
