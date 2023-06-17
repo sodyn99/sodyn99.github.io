@@ -61,7 +61,7 @@ table('lck', 'https://lol.fandom.com/wiki/LCK/2023_Season/Summer_Season')
 print('LCK standings done!')
 
 
-# In[4]:
+# In[74]:
 
 
 import pandas as pd
@@ -83,14 +83,15 @@ def summer_23_matches(league, url):
     df.drop([0], inplace=True)
     df.reset_index(inplace=True, drop=True)
 
-    titles = [span.get('title') for span in table.find_all('span') if span.get('title')]
+    titles = [span.get('title') for span in table.find_all('span') if span.get('title') and 'Patch' not in span.get('title')]
     titles = list_chunk(titles, 5)
-    teams = [a.get('title') for a in table.find_all('a') if a.get('title')]
-    
+    teams = [a.get('title') for a in table.find_all('a') if a.get('title') and 'Patch' not in a.get('title')]
+
+    print(teams)
     for i in range(0, len(df)):
-        df['Blue'].loc[i] = teams[15*i+2]
-        df['Red'].loc[i] = teams[15*i+3]
-        df['Winner'].loc[i] = teams[15*i+4]
+        df['Blue'].loc[i] = teams[14*i+1]
+        df['Red'].loc[i] = teams[14*i+2]
+        df['Winner'].loc[i] = teams[14*i+3]
 
     for i in range(0, len(df)):
         df['Bans'].loc[i] = titles[4*i]
@@ -108,7 +109,7 @@ def summer_23_matches(league, url):
     df[[f'redPlayer{i+1}' for i in range(5)]] = df['Red Roster'].str.split(',', expand=True)
 
     df.drop(['Bans', 'Bans.1', 'Picks', 'Picks.1', 'Blue Roster', 'Red Roster' ], axis=1, inplace=True)
-    #df['Blue'] = df['Blue'].astype('string')
+    
     df=df.replace({'Dplus KIA': 'dk',
                    'Nongshim RedForce': 'ns',
                    'Hanwha Life Esports': 'hle',
@@ -179,6 +180,7 @@ def summer_23_matches(league, url):
     
 df_spring_23 = summer_23_matches('lck', 'https://lol.fandom.com/wiki/LCK/2023_Season/Spring_Season/Match_History')
 df_summer_23 = summer_23_matches('lck', 'https://lol.fandom.com/wiki/LCK/2023_Season/Summer_Season/Match_History')
+print(df_summer_23)
 df = pd.concat([df_spring_23,df_summer_23])
 df.to_json(f'./lck/lck-matches.json', orient='records')
 
