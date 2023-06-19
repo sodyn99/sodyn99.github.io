@@ -1,13 +1,12 @@
 ---
 layout: single
-permalink: /sports/football/premierleague/
+permalink: /sports/football/europaleague/
 author_profile: false
 sidebar:
   title: <a href="/sports/football/">Football</a>
   nav: football
   parent: true
 ---
-
 <div class="table_container">
   <div id="banner" class="football_title"></div>
 </div>
@@ -21,7 +20,7 @@ sidebar:
 
 <div class="calendar">
   <div id="match_review" class="football_title" style="text-transform:uppercase;">Match Review</div>
-  <div id="left" class="col leftCol">
+  <div class="col leftCol">
     <div class="content">
       <h1 id="date-this" class="date"></h1>
       <div class="notes">
@@ -115,7 +114,9 @@ sidebar:
   <div class="clearfix"></div>
 
 </div>
+<p></p>
 
+<div id="customers"></div>
 <hr>
 
 <script>
@@ -124,18 +125,18 @@ sidebar:
   let standings = document.getElementById("standings");
   let match_review = document.getElementById("match_review");
   let continental = document.getElementById("continental");
-  if (league == 'premierleague') {
-    continental.innerHTML = '<div style="display:inline-block;float:left; border-radius:0.7vmin; width:2vmin; height:2vmin; background-color:#1e746a;"></div>'+
-                            '<div style="display:inline-block;float:left;margin:-0.1vmin 2vmin 0 0.6vmin;">챔피언스 리그</div>'+
-                            '<div style="display:inline-block;float:left; border-radius:10px; width:2vmin; height:2vmin; background-color:#3426b1;"></div>'+
-                            '<div style="display:inline-block;float:left;margin:-0.1vmin 2vmin 0 0.6vmin;">유로파 리그</div>'+
-                            '<div style="display:inline-block;float:left; border-radius:10px; width:2vmin; height:2vmin; background-color:#15bfdd;"></div>'+
-                            '<div style="display:inline-block;float:left;margin:-0.1vmin 2vmin 0 0.6vmin;">컨퍼런스 리그</div>'+
+
+  if (league == 'europaleague') {
+    continental.innerHTML = '<div style="display:inline-block;float:left; border-radius:10px; width:2vmin; height:2vmin; background-color:#00004B;"></div>'+
+                            '<div style="display:inline-block;float:left;margin:-0.1vmin 2vmin 0 0.6vmin;">그룹</div>'+
+                            '<div style="display:inline-block;float:left; border-radius:0.7vmin; width:2vmin; height:2vmin; background-color:#1e746a;"></div>'+
+                            '<div style="display:inline-block;float:left;margin:-0.1vmin 2vmin 0 0.6vmin;">16강</div>'+
                             '<div style="display:inline-block;float:left; border-radius:10px; width:2vmin; height:2vmin; background-color:#ad2022;"></div>'+
-                            '<div style="display:inline-block;float:left;margin:-0.1vmin 0 0 0.6vmin;">강등</div>';
-    banner.style.color="#37023B";
-    match_review.style.fontFamily=standings.style.fontFamily=banner.style.fontFamily="Radikal Bold";
-    banner.innerHTML = "<img style='height:8vmin;margin:0 4vmin 1vmin -4vmin;' src='/images/football/main_page/premierleague-logo.png'/>Premier League";}
+                            '<div style="display:inline-block;float:left;margin:-0.1vmin 2vmin 0 0.6vmin;">유로파 컨퍼런스 리그 플레이오프</div>';
+    match_review.style.fontFamily=standings.style.fontFamily=banner.style.fontFamily="Europa";
+    banner.innerHTML = "<img style='height:10vmin;margin:0 4vmin 1vmin -4vmin;' src='/images/football/main_page/europaleague-logo-2.png'/>EUROPA LEAGUE";}
+
+  console.log(league);
 
   function select(val){
     var date_info = $(val).attr('data-value').split('<br>');
@@ -160,7 +161,7 @@ sidebar:
             output += `
               <li>
                 <a class="match-list" href="/sports/football/{{ page.name|replace:'.html','' }}/${date_info[1]}.${date_info[3]}-${customer.Home}${customer.Away}" style="font-weight:bold; text-decoration:none; color:#f2f2f2;">
-                  <p style="line-height:2.5vmin; padding-left:3.5vmin; text-indent:-3.5vmin;">${customer.Wk}R | ${customer.Home} ${customer.Score} ${customer.Away}</p>
+                  <p style="line-height: 2.5vmin; padding-left: 3.5vmin; text-indent: -3.5vmin;">${customer.Wk}R | ${customer.Home} ${customer.Score} ${customer.Away}</p>
                 </a>
               </li>
           `;
@@ -172,15 +173,5 @@ sidebar:
     }
 
     xhr.send();
-
-    // var calen = document.getElementsByClassName("calendar")[0];
-    // var calenHeight = getComputedStyle(calen);
-    // var left = document.getElementsByClassName("leftCol")[0];
-    // var leftHeight = getComputedStyle(left);
-    // var l = document.getElementById("left");
-    // var i = calenHeight.height;
-    // l.style.height = calenHeight.height;
-    // calenHeight.height = i;
-    // console.log(l.style.height, leftHeight.height, calenHeight.height)
   }
 </script>

@@ -37,6 +37,21 @@
   font-family: 'champions-bold';
   src: url('/fonts/champions-bold.woff2') format('woff2');
 }
+@font-face {
+	font-family: 'KFAGothic';
+	font-style: normal;
+	font-weight: bold;
+	src: url('/fonts/KFAGothicBold.woff2') format('woff2');
+}
+@font-face {
+  font-family: 'P26';
+  src: url('/fonts/P26.woff2') format('woff2');
+}
+@font-face {
+  font-family: 'Europa';
+  src: url('/fonts/europa.woff2') format('woff2');
+}
+
 table {
   margin-bottom: 1em;
   width: 100%;
@@ -168,7 +183,6 @@ th {
   backdrop-filter: blur(10px);
   /* background: linear-gradient(45deg, #f2f2f2, lightgray); */
   background: #f2f2f2;//rgba(220, 220, 230, 0.6);
-
 }
 .badge-rank {
   padding: 0.3vmin 1vmin;
@@ -191,6 +205,7 @@ th {
 .dataframe.bundesliga-standings,
 .dataframe.ligue1-standings,
 .dataframe.championsleague-standings,
+.dataframe.europaleague-standings,
 .dataframe.kleague1-standings {
   width: 100%!important;
   position: relative !important;
@@ -198,7 +213,7 @@ th {
   border: none !important;
   border-collapse: separate !important;
   display: table !important;
-  border-spacing: 5.6vmin 1vmin;
+  border-spacing: 5vmin 1vmin;
 }
 .dataframe.premierleague-standings thead th,
 .dataframe.laliga-standings thead th,
@@ -206,6 +221,7 @@ th {
 .dataframe.bundesliga-standings thead th,
 .dataframe.ligue1-standings thead th,
 .dataframe.championsleague-standings thead th,
+.dataframe.europaleague-standings thead th,
 .dataframe.kleague1-standings thead th {
   padding: 15px 10px;
   color:#000;
@@ -222,6 +238,7 @@ th {
 .dataframe.bundesliga-standings tbody td,
 .dataframe.ligue1-standings tbody td,
 .dataframe.championsleague-standings tbody td,
+.dataframe.europaleague-standings tbody td,
 .dataframe.kleague1-standings tbody td {
   padding: 5px 0px;
   font-size:14px !important;
@@ -242,6 +259,7 @@ th {
 .dataframe.bundesliga-standings tbody tr,
 .dataframe.ligue1-standings tbody tr,
 .dataframe.championsleague-standings tbody tr,
+.dataframe.europaleague-standings tbody tr,
 .dataframe.kleague1-standings tbody tr {
 color:#000;
 font-weight:bold;
@@ -334,7 +352,9 @@ font-weight:bold;
 .dataframe.seriea-standings tbody td:nth-child(2),
 .dataframe.bundesliga-standings tbody td:nth-child(2),
 .dataframe.ligue1-standings tbody td:nth-child(2),
-.dataframe.championsleague-standings tbody td:nth-child(2) {
+.dataframe.championsleague-standings tbody td:nth-child(2),
+.dataframe.europaleague-standings tbody td:nth-child(2),
+.dataframe.kleague1-standings tbody td:nth-child(2) {
   text-align:left;
   width: 30%;
 }

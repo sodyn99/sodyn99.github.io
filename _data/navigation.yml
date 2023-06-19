@@ -318,6 +318,12 @@ football:
       children:
         - title: "K League 1"
           url: /sports/football/kleague1/
+    - title: "International"
+      children:
+        - title: "국가대표"
+          url: /sports/football/national/
+        - title: "World Cup"
+          url: /sports/football/worldcup/
 
 esports:
     - title: "League of Legends"
