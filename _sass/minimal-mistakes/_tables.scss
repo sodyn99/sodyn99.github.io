@@ -170,6 +170,13 @@ th {
   background: #f2f2f2;//rgba(220, 220, 230, 0.6);
 
 }
+.badge-rank {
+  padding: 0.3vmin 1vmin;
+  border-radius: 10px;
+  margin-right: 1vmin;
+  color: #fff;
+  background-color: #1e746a;
+}
 .football_title{
   margin: 4vmin 0;
   font-family: 'Futura Maxi CG Bold';
@@ -183,6 +190,7 @@ th {
 .dataframe.seriea-standings,
 .dataframe.bundesliga-standings,
 .dataframe.ligue1-standings,
+.dataframe.championsleague-standings,
 .dataframe.kleague1-standings {
   width: 100%!important;
   position: relative !important;
@@ -197,6 +205,7 @@ th {
 .dataframe.seriea-standings thead th,
 .dataframe.bundesliga-standings thead th,
 .dataframe.ligue1-standings thead th,
+.dataframe.championsleague-standings thead th,
 .dataframe.kleague1-standings thead th {
   padding: 15px 10px;
   color:#000;
@@ -212,6 +221,7 @@ th {
 .dataframe.seriea-standings tbody td,
 .dataframe.bundesliga-standings tbody td,
 .dataframe.ligue1-standings tbody td,
+.dataframe.championsleague-standings tbody td,
 .dataframe.kleague1-standings tbody td {
   padding: 5px 0px;
   font-size:14px !important;
@@ -231,6 +241,7 @@ th {
 .dataframe.seriea-standings tbody tr,
 .dataframe.bundesliga-standings tbody tr,
 .dataframe.ligue1-standings tbody tr,
+.dataframe.championsleague-standings tbody tr,
 .dataframe.kleague1-standings tbody tr {
 color:#000;
 font-weight:bold;
@@ -317,6 +328,15 @@ font-weight:bold;
   background:#ad2022 !important;
   color: #f2f2f2;
   border-radius: 13px;
+}
+.dataframe.premierleague-standings tbody td:nth-child(2),
+.dataframe.laliga-standings tbody td:nth-child(2),
+.dataframe.seriea-standings tbody td:nth-child(2),
+.dataframe.bundesliga-standings tbody td:nth-child(2),
+.dataframe.ligue1-standings tbody td:nth-child(2),
+.dataframe.championsleague-standings tbody td:nth-child(2) {
+  text-align:left;
+  width: 30%;
 }
 // .dataframe.premierleague-standings tbody span {
 // font-weight:bold;
