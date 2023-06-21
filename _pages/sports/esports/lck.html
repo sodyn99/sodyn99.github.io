@@ -258,12 +258,12 @@ sidebar:
           date_info[3] = String(date_info[3]).padStart(2, "0")
           if (customer.Date == date_info[4]+'-'+date_info[1]+'-'+date_info[3] && customer.Game == 1) {
             output += `
-              <li style="padding:0.5vmin 0 0 3.5vmin;">
+              <li style="padding:0.5vmin 0 0 2.7vmin;">
                 <a class="match-list" href="/sports/esports/{{ page.name|replace:'.html','' }}/${date_info[1]}.${date_info[3]}-${customer.Blue}${customer.Red}" style="font-weight:bold; text-decoration:none; color:#f2f2f2;">
                   <p style="line-height: 2.5vmin; padding-left:3.5vmin; text-indent:-3.5vmin;">
                     <div style="margin-bottom:3vmin;float:left;">${customer.BlueLogo}</div>
-                    <div style="margin-left:1.5vmin;font-size:2.8vmin;width:1.5vmin;float:left;">|</div>
-                    <div style="margin-left:1.5vmin;float:left;">${customer.RedLogo}</div>
+                    <div style="margin-left:3vmin;font-size:2.8vmin;width:1.5vmin;float:left;">|</div>
+                    <div style="margin-left:2vmin;float:left;">${customer.RedLogo}</div>
                     <div class="clearfix"></div>
                   </p>
                 </a>
