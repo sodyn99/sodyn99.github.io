@@ -21,6 +21,9 @@ sidebar:
 <div class="calendar">
   <div id="match_review" class="football_title" style="text-transform:uppercase;">Match Review</div>
   <div class="col leftCol">
+    <input id="spoiler-toggle" onchange="toggleSpoilerClass()" type="checkbox" class="switch" style="float:right;margin-right:1.2vmin;" checked>
+      <label for="spoiler-toggle" style="font-size:1.3vmin;float:right;margin-right:0.5vmin;color:white;">스포일러</label>
+    </input>
     <div class="content">
       <h1 id="date-this" class="date"></h1>
       <div class="notes">
@@ -139,6 +142,8 @@ sidebar:
   console.log(league);
 
   function select(val){
+    var checkbox = document.getElementById("spoiler-toggle");
+    if (checkbox.checked == false){checkbox.checked = !checkbox.checked;}
     var date_info = $(val).attr('data-value').split('<br>');
     document.getElementById("date-this").innerHTML = date_info[0] + "<br>" + date_info[2] + " " + date_info[3];
 
@@ -149,7 +154,6 @@ sidebar:
     xhr.onload = function(){
       if(this.status === 200) {
         // console.log(this.responseText);
-
         const customers = JSON.parse(this.responseText);
 
         let output = '';
@@ -160,11 +164,14 @@ sidebar:
           if (customer.Date == date_info[4]+'-'+date_info[1]+'-'+date_info[3]) {
             output += `
               <li>
-                <a class="match-list" href="/sports/football/{{ page.name|replace:'.html','' }}/${date_info[1]}.${date_info[3]}-${customer.Home}${customer.Away}" style="font-weight:bold; text-decoration:none; color:#f2f2f2;">
-                  <p style="line-height: 2.5vmin; padding-left: 3.5vmin; text-indent: -3.5vmin;">${customer.Wk}R | ${customer.Home} ${customer.Score} ${customer.Away}</p>
+                <a class="match-list" href="/sports/football/{{ page.name|replace:'.html','' }}/${date_info[1]}.${date_info[3]}-${customer.Home}${customer.Away}" style="text-decoration:none; color:#f2f2f2;">
+                  <p style="line-height:2.5vmin;padding-left:3.5vmin;text-indent:-3.5vmin;">${customer.Wk}R&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;${customer.HomeLogo}
+                    <span class="spoiler active" onmouseleave="removeActiveClass(this)">&nbsp;${customer.Score}&nbsp;</span>
+                    ${customer.AwayLogo}
+                  </p>
                 </a>
-              </li>
-          `;
+              </li>`
+          ;
           }
         });
 
@@ -173,5 +180,28 @@ sidebar:
     }
 
     xhr.send();
+  }
+  function removeActiveClass(element) {
+    var spoilers = document.getElementsByClassName("spoiler");
+    for (var i = 0; i < spoilers.length; i++) {
+      var spoiler = spoilers[i];
+      if (spoiler === element) {
+        spoiler.classList.remove("active");
+      }
+    }
+  }
+  function toggleSpoilerClass() {
+    var checkbox = document.getElementById("spoiler-toggle");
+    var spoilers = document.getElementsByClassName("spoiler");
+
+    for (var i = 0; i < spoilers.length; i++) {
+      var spoiler = spoilers[i];
+
+      if (checkbox.checked) {
+        spoiler.classList.add("active");
+      } else {
+        spoiler.classList.remove("active");
+      }
+    }
   }
 </script>

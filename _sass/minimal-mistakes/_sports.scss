@@ -764,15 +764,25 @@ font-display:auto;font-style:normal;font-weight:700;font-stretch:normal;
 }
 .calendar .noteList li{
 	color: #ffffff;
-  margin-left: -2vmin;
+  margin-left: -37px;
+  padding-top:3.5vmin;
+  padding-bottom: 0.1vmin;
+  padding-left:1vmin;
+  cursor: pointer;
 }
-
 .calendar .notes p,
 .calendar .notes input,
 .calendar .noteList li{
   font-family: $global-font-family;
-	font-weight: 400;
-	font-size: 1.5vmin;
+	font-weight: 200;
+	font-size: 2.5vmin;
+  border-radius: 10px;
+  transition: all 0.3s ease-in-out;
+}
+.calendar .noteList li:hover{
+  scale: 1.05;
+  background-color: rgba(255,255,255,0.2);
+  transition: all 0.3s ease-in-out;
 }
 
 .calendar .leftCol h1{
