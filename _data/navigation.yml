@@ -356,6 +356,8 @@ lck:
           url: /sports/esports/lck/06.14-genkdf/
         - title: "06.15 DK 1 : 2 BRO"
           url: /sports/esports/lck/06.15-dkbro/
+        - title: "06.16 NS 0 : 2 GEN"
+          url: /sports/esports/lck/06.16-nsgen/
 
     - title: "2023 Spring"
       children:

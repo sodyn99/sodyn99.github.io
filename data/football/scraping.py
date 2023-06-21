@@ -11,7 +11,7 @@ print('Football scraping ------------------')
 
 # # Europe
 
-# In[1]:
+# In[102]:
 
 
 import requests
@@ -45,13 +45,77 @@ def table(league, url):
                             'Pts':'승점'},
                             inplace=True)
     
-    df[0].to_html(f'./europe/{league}-standings.html', index=False, classes=f'{league}-standings', border=0, justify='center')
+    def path_to_image_html(path):
+        if path == '':
+            return ''
+        return '<img src="/images/football/teams/'+ path + '.png" style="height:2vmin;"/>&nbsp;&nbsp;&nbsp;'+ path
+    
+    df[0].to_html(f'./europe/{league}-standings.html', index=False, classes=f'{league}-standings', border=0, justify='center', formatters=dict(팀=path_to_image_html), escape=False)
 
 table('premierleague', 'https://fbref.com/en/comps/9/Premier-League-Stats')
 table('laliga', 'https://fbref.com/en/comps/12/La-Liga-Stats')
 table('bundesliga', 'https://fbref.com/en/comps/20/Bundesliga-Stats')
 table('seriea', 'https://fbref.com/en/comps/11/Serie-A-Stats')
 table('ligue1', 'https://fbref.com/en/comps/13/Ligue-1-Stats')
+
+
+# In[119]:
+
+
+import requests
+import pandas as pd
+
+def table(league, url):
+    response = requests.get(url)
+    dfs = pd.read_html(response.text)
+
+    df = pd.concat(dfs[:8])  # 가져온 테이블 중에서 필요한 테이블의 인덱스를 지정합니다
+
+    df.drop(['xG', 'xGA', 'xGD', 'xGD/90', 'Notes'], axis=1, inplace=True)
+
+    df.rename(columns={'Rk': '순위', 'Squad': '팀', 'MP': '경기', 'W': '승', 'D': '무', 'L': '패',
+                       'GF': '득점', 'GA': '실점', 'GD': '득실차', 'Pts': '승점'}, inplace=True)
+
+    df['팀'] = df['팀'].str[3:]  # '팀' 열의 맨 앞 세글자 제거
+    df['팀'] = df['팀'].str.lstrip()  # '팀' 열의 왼쪽 공백 제거
+
+    df.loc[df['순위'] == 1, '순위'] = '<span class="badge-rank">1</span>'
+    df.loc[df['순위'] == 2, '순위'] = '<span class="badge-rank">2</span>'
+    if league == 'europaleague':
+        df.loc[df['순위'] == 2, '순위'] = '<span class="badge-rank">2</span>'
+    df.loc[df['순위'] == 3, '순위'] = '<span class="badge-rank" style="background-color:#ad2022;">3</span>'
+    df.loc[df['순위'] == 4, '순위'] = '<span class="badge-rank" style="color:black;background-color:#f2f2f2;">4</span>'
+
+    group_a_row = pd.DataFrame([['<span class="badge-rank" style="background-color:#00004B;padding:0.5vmin 3vmin;">A</span>', '', '', '', '', '', '', '', '', '']], columns=df.columns)
+    group_b_row = pd.DataFrame([['<span class="badge-rank" style="background-color:#00004B;padding:0.5vmin 3vmin;">B</span>', '', '', '', '', '', '', '', '', '']], columns=df.columns)
+    group_c_row = pd.DataFrame([['<span class="badge-rank" style="background-color:#00004B;padding:0.5vmin 3vmin;">C</span>', '', '', '', '', '', '', '', '', '']], columns=df.columns)
+    group_d_row = pd.DataFrame([['<span class="badge-rank" style="background-color:#00004B;padding:0.5vmin 3vmin;">D</span>', '', '', '', '', '', '', '', '', '']], columns=df.columns)
+    group_e_row = pd.DataFrame([['<span class="badge-rank" style="background-color:#00004B;padding:0.5vmin 3vmin;">E</span>', '', '', '', '', '', '', '', '', '']], columns=df.columns)
+    group_f_row = pd.DataFrame([['<span class="badge-rank" style="background-color:#00004B;padding:0.5vmin 3vmin;">F</span>', '', '', '', '', '', '', '', '', '']], columns=df.columns)
+    group_g_row = pd.DataFrame([['<span class="badge-rank" style="background-color:#00004B;padding:0.5vmin 3vmin;">G</span>', '', '', '', '', '', '', '', '', '']], columns=df.columns)
+    group_h_row = pd.DataFrame([['<span class="badge-rank" style="background-color:#00004B;padding:0.5vmin 3vmin;">H</span>', '', '', '', '', '', '', '', '', '']], columns=df.columns)
+
+    df = pd.concat([group_a_row, df.iloc[:4],
+                    group_b_row, df.iloc[4:8],
+                    group_c_row, df.iloc[8:12],
+                    group_d_row, df.iloc[12:16],
+                    group_e_row, df.iloc[16:20],
+                    group_f_row, df.iloc[20:24],
+                    group_g_row, df.iloc[24:28],
+                    group_h_row, df.iloc[28:32]
+                    ], ignore_index=True)
+    
+    df.loc[df['팀']=='Bodø/Glimt', '팀'] = 'Bodø／Glimt'
+
+    def path_to_image_html(path):
+        if path == '':
+            return ''
+        return '<img src="/images/football/teams/'+ path + '.png" style="height:2vmin;"/>&nbsp;&nbsp;&nbsp;'+ path
+
+    df.to_html(f'./europe/{league}-standings.html', index=False, classes=f'{league}-standings', border=0, justify='center', formatters=dict(팀=path_to_image_html), escape=False)
+
+table('championsleague', 'https://fbref.com/en/comps/8/Champions-League-Stats')
+table('europaleague', 'https://fbref.com/en/comps/19/Europa-League-Stats')
 
 print('Europe standings done!')
 
@@ -156,7 +220,7 @@ print('Europe matches done!')
 
 # # Asia
 
-# In[3]:
+# In[103]:
 
 
 import requests
@@ -223,8 +287,13 @@ def table(league, url):
     df[0].loc[df[0]['팀']=='Gyeongnam', '팀'] = '경남 FC'
     df[0].loc[df[0]['팀']=='Gyeongju HNP', '팀'] = '경주 한국프로축구단'
     df[0].loc[df[0]['팀']=='Gimcheon Sangmu', '팀'] = '김천 상무'
-
-    df[0].to_html(f'./asia/{league}-standings.html', index=False, classes=f'{league}-standings', border=0, justify='center')
+    
+    def path_to_image_html(path):
+        if path == '':
+            return ''
+        return '<img src="/images/football/teams/'+ path + '.png" style="height:2vmin;"/>&nbsp;&nbsp;&nbsp;'+ path
+    
+    df[0].to_html(f'./asia/{league}-standings.html', index=False, classes=f'{league}-standings', border=0, justify='center', formatters=dict(팀=path_to_image_html), escape=False)
 
 table('kleague1', 'https://fbref.com/en/comps/55/K-League-1-Stats')
 

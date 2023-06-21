@@ -71,15 +71,15 @@ font-display:auto;font-style:normal;font-weight:700;font-stretch:normal;
 .match-esports{
   position: relative;
   width: calc(1.78 * var(--esports-height));
-  height:  var(--esports-height);
+  height: calc(1.01 * var(--esports-height));
   background-color:  #F2F2F2;
   margin: 2% 1%;
   /* box-shadow: -1px -1px 4px 3px lightgrey; */
   border-radius: 5px;
 }
 .esports-win1{
-  border-top-right-radius: 5px;
-  border-bottom-right-radius: 5px;
+  border-top-right-radius: 1vmin;
+  border-bottom-right-radius: 1vmin;
   position: absolute;
   width: calc(0.8 * var(--esports-height));
   height: calc(0.16 * var(--esports-height));
@@ -87,9 +87,8 @@ font-display:auto;font-style:normal;font-weight:700;font-stretch:normal;
   margin: var(--esports-margin) 0 0 0;
 }
 .esports-win2{
-  border-top-left-radius: 5px;
-  border-bottom-left-radius: 5px;
-  border-radius: 5px;
+  border-top-left-radius: 1vmin;
+  border-bottom-left-radius: 1vmin;
   position: absolute;
   right:0;
   width: calc(0.8 * var(--esports-height));
@@ -98,8 +97,8 @@ font-display:auto;font-style:normal;font-weight:700;font-stretch:normal;
   margin: var(--esports-margin) 0 0 0;
 }
 .esports-team1{
-  border-top-right-radius: 5px;
-  border-bottom-right-radius: 5px;
+  border-top-right-radius: 1vmin;
+  border-bottom-right-radius: 1vmin;
   font-family: 'LCKTitle Extended';
   float: left;
   width: calc(0.8 * var(--esports-height));
@@ -120,8 +119,8 @@ font-display:auto;font-style:normal;font-weight:700;font-stretch:normal;
   }
 }
 .esports-team2{
-  border-top-left-radius: 5px;
-  border-bottom-left-radius: 5px;
+  border-top-left-radius: 1vmin;
+  border-bottom-left-radius: 1vmin;
   font-family: 'LCKTitle Extended';
   float: right;
   width: calc(0.8 * var(--esports-height));
@@ -172,7 +171,7 @@ font-display:auto;font-style:normal;font-weight:700;font-stretch:normal;
 }
 
 .esports-player1{
-  border-radius: 5px;
+  border-radius: 1vmin;
   font-family: 'LCKTitle Extended';
   float: left;
   width: calc(0.729 * var(--esports-height));
@@ -198,7 +197,7 @@ font-display:auto;font-style:normal;font-weight:700;font-stretch:normal;
   }
 }
 .esports-player2{
-  border-radius: 5px;
+  border-radius: 1vmin;
   font-family: 'LCKTitle Extended';
   float: right;
   width: calc(0.729 * var(--esports-height));
@@ -228,8 +227,8 @@ font-display:auto;font-style:normal;font-weight:700;font-stretch:normal;
   display: flex;
   width: calc(0.46 * var(--esports-height));
   height: calc(0.08 * var(--esports-height));
-  left: calc(0.9*var(--esports-margin));
-  bottom: calc(0.7*var(--esports-margin));
+  left: calc(0.8 * var(--esports-margin));
+  bottom: calc(1.8 * var(--esports-margin));
   z-index: 1;
   justify-content: space-between;
   font-size: calc(0.04 * var(--esports-height));
@@ -239,8 +238,8 @@ font-display:auto;font-style:normal;font-weight:700;font-stretch:normal;
   display: flex;
   width: calc(0.459 * var(--esports-height));
   height: calc(0.085 * var(--esports-height));
-  right: calc(5.3*var(--esports-margin));
-  bottom: calc(0.4*var(--esports-margin));
+  right: calc(5.2 * var(--esports-margin));
+  bottom: calc(1.6 * var(--esports-margin));
   z-index: 1;
   justify-content: space-between;
   font-size: calc(0.04 * var(--esports-height));
@@ -268,7 +267,7 @@ font-display:auto;font-style:normal;font-weight:700;font-stretch:normal;
   }
 }
 .esports-coach1{
-  border-radius: 5px;
+  border-radius: 1vmin;
   font-family: 'LCKTitle Extended';
   float: left;
   width: calc(0.373 * var(--esports-height));
@@ -286,7 +285,7 @@ font-display:auto;font-style:normal;font-weight:700;font-stretch:normal;
   }
 }
 .esports-coach2{
-  border-radius: 5px;
+  border-radius: 1vmin;
   font-family: 'LCKTitle Extended';
   float: right;
   width: calc(0.371 * var(--esports-height));

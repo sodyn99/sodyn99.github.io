@@ -180,7 +180,6 @@ def summer_23_matches(league, url):
     
 df_spring_23 = summer_23_matches('lck', 'https://lol.fandom.com/wiki/LCK/2023_Season/Spring_Season/Match_History')
 df_summer_23 = summer_23_matches('lck', 'https://lol.fandom.com/wiki/LCK/2023_Season/Summer_Season/Match_History')
-print(df_summer_23)
 df = pd.concat([df_spring_23,df_summer_23])
 df.to_json(f'./lck/lck-matches.json', orient='records')
 
