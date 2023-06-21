@@ -78,6 +78,8 @@ font-display:auto;font-style:normal;font-weight:700;font-stretch:normal;
   border-radius: 5px;
 }
 .esports-win1{
+  border-top-right-radius: 5px;
+  border-bottom-right-radius: 5px;
   position: absolute;
   width: calc(0.8 * var(--esports-height));
   height: calc(0.16 * var(--esports-height));
@@ -85,6 +87,9 @@ font-display:auto;font-style:normal;font-weight:700;font-stretch:normal;
   margin: var(--esports-margin) 0 0 0;
 }
 .esports-win2{
+  border-top-left-radius: 5px;
+  border-bottom-left-radius: 5px;
+  border-radius: 5px;
   position: absolute;
   right:0;
   width: calc(0.8 * var(--esports-height));
@@ -93,6 +98,8 @@ font-display:auto;font-style:normal;font-weight:700;font-stretch:normal;
   margin: var(--esports-margin) 0 0 0;
 }
 .esports-team1{
+  border-top-right-radius: 5px;
+  border-bottom-right-radius: 5px;
   font-family: 'LCKTitle Extended';
   float: left;
   width: calc(0.8 * var(--esports-height));
@@ -113,6 +120,8 @@ font-display:auto;font-style:normal;font-weight:700;font-stretch:normal;
   }
 }
 .esports-team2{
+  border-top-left-radius: 5px;
+  border-bottom-left-radius: 5px;
   font-family: 'LCKTitle Extended';
   float: right;
   width: calc(0.8 * var(--esports-height));
@@ -163,6 +172,7 @@ font-display:auto;font-style:normal;font-weight:700;font-stretch:normal;
 }
 
 .esports-player1{
+  border-radius: 5px;
   font-family: 'LCKTitle Extended';
   float: left;
   width: calc(0.729 * var(--esports-height));
@@ -188,6 +198,7 @@ font-display:auto;font-style:normal;font-weight:700;font-stretch:normal;
   }
 }
 .esports-player2{
+  border-radius: 5px;
   font-family: 'LCKTitle Extended';
   float: right;
   width: calc(0.729 * var(--esports-height));
@@ -257,6 +268,7 @@ font-display:auto;font-style:normal;font-weight:700;font-stretch:normal;
   }
 }
 .esports-coach1{
+  border-radius: 5px;
   font-family: 'LCKTitle Extended';
   float: left;
   width: calc(0.373 * var(--esports-height));
@@ -267,15 +279,14 @@ font-display:auto;font-style:normal;font-weight:700;font-stretch:normal;
   font-size: calc(0.03 * var(--esports-height));
   text-align: center;
   line-height : calc(0.09 * var(--esports-height));
-}
-.esports-coach1::after{
-  content: url("/images/esports/lol/coach.svg");
-  display: block;
-  margin-top: 0.7vmin;
-  margin-right: 2vmin;
-  float: right;
+  > img {
+    float:right;
+    height:75%;
+    margin: 0.7vmin 1.7vmin 0 -1.7vmin;
+  }
 }
 .esports-coach2{
+  border-radius: 5px;
   font-family: 'LCKTitle Extended';
   float: right;
   width: calc(0.371 * var(--esports-height));
@@ -286,13 +297,11 @@ font-display:auto;font-style:normal;font-weight:700;font-stretch:normal;
   font-size: calc(0.03 * var(--esports-height));
   text-align: center;
   line-height : calc(0.09 * var(--esports-height));
-}
-.esports-coach2::before{
-  content: url("/images/esports/lol/coach.svg");
-  display: block;
-  margin-top: 0.65vmin;
-  margin-left: 1.9vmin;
-  float: left;
+  > img {
+    float:left;
+    height:75%;
+    margin: 0.7vmin -1.7vmin 0 1.7vmin;
+  }
 }
 
 // /* Football Field */

@@ -78,12 +78,12 @@
   $(document).mousemove(function( event ) {
   //verticalAxis
   mouseY = event.pageY;
-  yAxis = (pageY-mouseY)/pageY*200; 
+  yAxis = (pageY-mouseY)/pageY*200;
   //horizontalAxis
   mouseX = event.pageX / -pageX;
   xAxis = -mouseX * 100 - 100;
 
-  $('.box__ghost-eyes').css({ 'transform': 'translate('+ xAxis +'%,-'+ yAxis +'%)' }); 
+  $('.box__ghost-eyes').css({ 'transform': 'translate('+ xAxis +'%,-'+ yAxis +'%)' });
 
   //console.log('X: ' + xAxis);
 
@@ -110,3 +110,139 @@
   });
 </script>
 
+<script>
+    var initialScale = 1;
+    var scaleStep = 0.1;
+    var isZooming = false;
+    var currentScale = initialScale;
+    var isDragging = false;
+    var startX, startY;
+    var translateX = 0;
+    var translateY = 0;
+    $(document).ready(function() {
+        $('.gallery-img').on('click', function() {
+            var imgSrc = $(this).attr('src');
+            var imgAlt = $(this).attr('alt');
+            $('#modalImg').attr('src', imgSrc);
+            $('#caption').text(imgAlt);
+            $('#myModal').fadeIn();
+            adjustModalSize();
+            $(document).mousedown(function(e) {
+                var modalContent = $('.modal-content');
+                if (!modalContent.is(e.target) && modalContent.has(e.target).length === 0) {
+                    $('#myModal').fadeOut('fast');
+                }
+            });
+        });
+        $('.close').on('click', function() {
+            $('#myModal').fadeOut('fast');
+        });
+        $(window).on('resize', function() {
+            adjustModalSize();
+        });
+        $('.modal-content').on('wheel', function(e) {
+          if (e.ctrlKey) {
+            e.preventDefault();
+
+            if (!isZooming) {
+              isZooming = true;
+              var delta = e.originalEvent.deltaY;
+
+              while(1) {
+                if (delta < 0 ) {
+                  zoomIn();
+                } else {
+                  zoomOut();
+                }
+                delta += delta;
+                console.log(delta)
+                if (delta < -200 || delta > 200) {
+                  break;
+                }
+              }
+            }
+          }
+        });
+        $('.modal-content').on('mouseenter', function(e) {
+          $(this).css('cursor', 'grab'); // 드래그 가능한 요소에 호버할 때 커서 스타일 변경
+        });
+        $('.modal-content').on('mousedown', function(e) {
+          isDragging = true;
+          startX = e.clientX;
+          startY = e.clientY;
+          $(this).css('cursor', 'grabbing'); // 드래그 중일 때 커서 스타일 변경
+        });
+        $(document).on('mousemove', function(e) {
+          if (isDragging) {
+            requestAnimationFrame(function() {
+              var deltaX = e.clientX - startX;
+              var deltaY = e.clientY - startY;
+
+              translateX += deltaX;
+              translateY += deltaY;
+
+              $('.modal-content').css('transform', 'translate(' + translateX + 'px, ' + translateY + 'px) scale(' + currentScale + ')');
+
+              startX = e.clientX;
+              startY = e.clientY;
+            });
+          }
+        });
+        $(document).on('mouseup', function() {
+          isDragging = false;
+          $('.modal-content').css('cursor', 'grab'); // 드래그 종료 후 커서 스타일 변경
+        });
+    });
+
+    function zoomIn() {
+        if (currentScale >= 5) {
+            isZooming = false;
+            return;
+        }
+        var newScale = currentScale + scaleStep;
+        adjustModalSize(newScale);
+        currentScale = newScale;
+        isZooming = false;
+    }
+
+    function zoomOut(count) {
+        if (currentScale <= 0.7) {
+            isZooming = false;
+            return;
+        }
+        var newScale = currentScale - scaleStep;
+        adjustModalSize(newScale);
+        currentScale = newScale;
+        isZooming = false;
+    }
+
+    function adjustModalSize(scale = 1) {
+        var modalContent = $('.modal-content');
+        var windowWidth = $(window).width();
+        var windowHeight = $(window).height();
+        var maxWidth = windowWidth * 0.95;
+        var maxHeight = windowHeight * 0.9;
+        var img = new Image();
+        img.src = $('#modalImg').attr('src');
+        img.onload = function() {
+            var modalWidth = img.width;
+            var modalHeight = img.height;
+            if (modalWidth > maxWidth || modalHeight > maxHeight) {
+                var widthRatio = maxWidth / modalWidth;
+                var heightRatio = maxHeight / modalHeight;
+                var scaleRatio = Math.min(widthRatio, heightRatio);
+                modalWidth = modalWidth * scaleRatio;
+                modalHeight = modalHeight * scaleRatio;
+            }
+            modalContent.css({
+                width: modalWidth + 'px',
+                height: modalHeight + 'px',
+                'top': (windowHeight - modalHeight*1.2) / 2 + 'px',
+                transform: 'scale(' + scale + ')'
+            });
+            initialScale = scale;
+            currentScale = scale;
+        };
+    }
+
+</script>
