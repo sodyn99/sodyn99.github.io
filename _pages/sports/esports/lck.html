@@ -88,7 +88,7 @@ sidebar:
               var yearNew = new Date(year, month - 1, i).getFullYear();
               var weekNew = new Date(year, month - 1, i).getDay();
               var weekStrNew = weekFullArr[weekNew];
-              data += '<li><a onclick="select(this)" title="'+i+'" data-value="'+weekStrNew+'<br>'+month+'<br>'+monthStr+'<br>'+i+'<br>'+yearNew+'"'+addClass+'>'+i+'</a></li>';
+              data += '<li><a class="date" onclick="select(this)" title="'+i+'" data-value="'+weekStrNew+'<br>'+month+'<br>'+monthStr+'<br>'+i+'<br>'+yearNew+'"'+addClass+'>'+i+'</a></li>';
 
             }
 
