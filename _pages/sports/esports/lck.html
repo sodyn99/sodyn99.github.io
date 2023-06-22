@@ -205,6 +205,9 @@ sidebar:
         video.msRequestFullscreen();
       }
       video.muted = false;
+      video.oncontextmenu = function() {
+        return false;
+      };
       video.controlsList.add('nodownload');
       video.disablePictureInPicture = true;
     });
