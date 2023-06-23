@@ -2,7 +2,7 @@
 
 <nav class="nav__list">
   <input class="menu" id="ac-toc" name="accordion-toc" type="checkbox" />
-  <label for="ac-toc"><span class="hidden-text">{{ site.data.ui-text[site.locale].menu_label | default: "Toggle Menu" }}</span></label>
+  <label for="ac-toc"><span class="pc-hidden">{{ site.data.ui-text[site.locale].menu_label | default: "Toggle Menu" }}</span></label>
   <ul class="nav__items">
     {% if page.sidebar.title %}<h3 class="nav__title" style="padding-left: 0;">{{ page.sidebar.title }}</h3>{% endif %}
     {% for nav in navigation %}
@@ -67,7 +67,7 @@
       </li>
     {% endfor %}
     {% if page.sidebar.parent==true %}
-      <div class="box__button-Home" onclick="location.href='/';" style="width:80%; margin-top: 2em; margin-left: 15px;">
+      <div class="box__button-Home mb-hidden" onclick="location.href='/';" style="width:80%; margin-top: 2em; margin-left: 15px;">
         <img src="/assets/mstile-150x150.png"/>
         Home
       </div>

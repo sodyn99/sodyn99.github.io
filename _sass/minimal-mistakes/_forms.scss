@@ -109,19 +109,20 @@ input[type="radio"] {
   border: 0 \9;
   box-shadow: none;
 }
-.hidden-text {
+.pc-hidden {
+  display: block;
+}
+.mb-hidden {
   display: block;
 }
 @media (min-width: 1024px) {
-  .hidden-text {
-    position:absolute;
-    overflow: hidden;
-    clip: rect(0 0 0 0);
-    height: 1px;
-    width: 1px;
-    margin: -1px;
-    padding: 0;
-    border: 0;
+  .pc-hidden {
+    display: none !important;
+  }
+}
+@media (max-width: 1024px) {
+  .mb-hidden {
+    display: none !important;
   }
 }
 input[type="checkbox"],
