@@ -347,21 +347,22 @@ esports:
 lck:
     - title: "2023 Summer"
       children:
-        - title: "06.07 DK 2 : 0 LSB"
-          url: /sports/esports/lck/06.07-dklsb/
-        - title: "06.09 KT 1 : 2 GEN"
-          url: /sports/esports/lck/06.09-ktgen/
-        - title: "06.09 HLE 1 : 2 T1"
-          url: /sports/esports/lck/06.09-hlet1/
-        - title: "06.11 GEN 2 : 1 T1"
-          url: /sports/esports/lck/06.11-gent1/
-        - title: "06.14 GEN 2 : 0 KDF"
-          url: /sports/esports/lck/06.14-genkdf/
-        - title: "06.15 DK 1 : 2 BRO"
-          url: /sports/esports/lck/06.15-dkbro/
+        - title: "06.22 GEN 2 : 0 DRX"
+          url: /sports/esports/lck/06.22-gendrx/
         - title: "06.16 NS 0 : 2 GEN"
           url: /sports/esports/lck/06.16-nsgen/
-
+        - title: "06.15 DK 1 : 2 BRO"
+          url: /sports/esports/lck/06.15-dkbro/
+        - title: "06.14 GEN 2 : 0 KDF"
+          url: /sports/esports/lck/06.14-genkdf/
+        - title: "06.11 GEN 2 : 1 T1"
+          url: /sports/esports/lck/06.11-gent1/
+        - title: "06.09 HLE 1 : 2 T1"
+          url: /sports/esports/lck/06.09-hlet1/
+        - title: "06.09 KT 1 : 2 GEN"
+          url: /sports/esports/lck/06.09-ktgen/
+        - title: "06.07 DK 2 : 0 LSB"
+          url: /sports/esports/lck/06.07-dklsb/
     - title: "2023 Spring"
       children:
         - title: "02.19 T1 2 : 1 GEN"
