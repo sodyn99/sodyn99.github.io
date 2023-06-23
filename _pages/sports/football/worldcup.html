@@ -1,5 +1,6 @@
 ---
 layout: single
+title: "World Cup"
 permalink: /sports/football/worldcup/
 author_profile: false
 sidebar:
@@ -21,79 +22,3 @@ sidebar:
 
 <hr>
 
-<script>
-  var league = "{{ page.name|replace:'.html','' }}";
-  let banner = document.getElementById("banner");
-  let standings = document.getElementById("standings");
-  let match_review = document.getElementById("match_review");
-  let continental = document.getElementById("continental");
-
-  if (league == 'worldcup') {
-    // continental.innerHTML = '<div style="display:inline-block;float:left; border-radius:10px; width:2vmin; height:2vmin; background-color:#00004B;"></div>'+
-    //                         '<div style="display:inline-block;float:left;margin:-0.1vmin 2vmin 0 0.6vmin;">그룹</div>'+
-    //                         '<div style="display:inline-block;float:left; border-radius:0.7vmin; width:2vmin; height:2vmin; background-color:#1e746a;"></div>'+
-    //                         '<div style="display:inline-block;float:left;margin:-0.1vmin 2vmin 0 0.6vmin;">16강</div>'+
-    //                         '<div style="display:inline-block;float:left; border-radius:10px; width:2vmin; height:2vmin; background-color:#ad2022;"></div>'+
-    //                         '<div style="display:inline-block;float:left;margin:-0.1vmin 2vmin 0 0.6vmin;">유로파 리그 플레이오프</div>';
-
-    match_review.style.fontSize=standings.style.fontSize=banner.style.fontSize="7vmin";
-    match_review.style.fontFamily=standings.style.fontFamily=banner.style.fontFamily="P26";
-    banner.innerHTML = "<img style='height:10vmin;margin:0 4vmin 1vmin -4vmin;' src='/images/football/main_page/worldcup-trophy.png'/>WORLD CUP";}
-
-  console.log(league);
-
-  function select(val){
-    var checkbox = document.getElementById("spoiler-toggle");
-    if (checkbox.checked == false){checkbox.checked = !checkbox.checked;}
-    var date_info = $(val).attr('data-value').split('<br>');
-    document.getElementById("date-this").innerHTML = date_info[0] + "<br>" + date_info[2] + " " + date_info[3];
-
-    const xhr = new XMLHttpRequest();
-
-    xhr.open('GET', "/data/football/europe/{{ page.name|replace:'.html','' }}-matches.json", true);
-
-    xhr.onload = function(){
-      if(this.status === 200) {
-        // console.log(this.responseText);
-        const customers = JSON.parse(this.responseText);
-
-        let output = '';
-
-        customers.forEach(function(customer){
-          date_info[1] = String(date_info[1]).padStart(2, "0")
-          date_info[3] = String(date_info[3]).padStart(2, "0")
-          if (customer.Date == date_info[4]+'-'+date_info[1]+'-'+date_info[3]) {
-            output += `
-              <li>
-                <a class="match-list" href="/sports/football/{{ page.name|replace:'.html','' }}/${date_info[1]}.${date_info[3]}-${customer.Home}${customer.Away}" style="font-weight:bold; text-decoration:none; color:#f2f2f2;">
-                  <p style="line-height:2.5vmin;padding-left:3.5vmin;text-indent:-3.5vmin;font-weight:bold;">${customer.Wk}R | ${customer.HomeLogo}
-                    <span class="spoiler active">${customer.Score}</span>
-                    ${customer.AwayLogo}
-                  </p>
-                </a>
-              </li>`
-          ;
-          }
-        });
-
-        document.querySelector('.noteList').innerHTML = output;
-      }
-    }
-
-    xhr.send();
-  }
-  function toggleSpoilerClass() {
-    var checkbox = document.getElementById("spoiler-toggle");
-    var spoilers = document.getElementsByClassName("spoiler");
-
-    for (var i = 0; i < spoilers.length; i++) {
-      var spoiler = spoilers[i];
-
-      if (checkbox.checked) {
-        spoiler.classList.add("active");
-      } else {
-        spoiler.classList.remove("active");
-      }
-    }
-  }
-</script>

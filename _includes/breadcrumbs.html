@@ -34,12 +34,6 @@
           {% assign crumb_all = '' %}
           {% for crumb in crumbs offset: 1 limit: j %}
             {% assign crumb_all = crumb_all | append: crumb | append: '/' %}
-            <script>
-              console.log("i : {{ i }}");
-              console.log("j : {{ j }}");
-              console.log("crumb_all : {{ crumb_all }}");
-              console.log("crumb : {{ crumb }}");
-            </script>
           {% endfor %}
           {% assign crumb_path = crumb_all %}
           <!-- <script>
