@@ -299,6 +299,7 @@ lecture:
 ############ Sports ####################
 football:
     - title: "Europe"
+      icon: "fas fa-globe-europe"
       children:
         - title: "Premier League"
           url: /sports/football/premierleague/
@@ -315,10 +316,12 @@ football:
         - title: "UEFA Europa League"
           url: /sports/football/europaleague/
     - title: "Asia"
+      icon: "fas fa-globe-asia"
       children:
         - title: "K League 1"
           url: /sports/football/kleague1/
     - title: "International"
+      icon: "fas fa-globe"
       children:
         - title: "국가대표"
           url: /sports/football/national/
@@ -327,8 +330,8 @@ football:
 
 esports:
     - title: "League of Legends"
-      image: "/images/esports/lol/lol-icon.png"
-      image_alt: "lol"
+      img: "/images/esports/lol/lol-icon.png"
+      img_alt: "lol"
       children:
         - title: "LCK"
           url: /sports/esports/lck/

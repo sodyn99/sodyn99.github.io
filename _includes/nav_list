@@ -12,10 +12,14 @@
             {% if nav.icon %}
             <span style="color:{{ nav.color }};font-weight:bold; user-select: none;" class="nav__sub-title"><i class="{{ nav.icon | default: 'fas fa-circle' }}" aria-hidden="true"></i> {{ nav.title }}</span>
             {% else %}
-              {% if nav.url %}
-              <a href="{{ nav.url | relative_url }}"><span style="font-weight:bold; user-select: none;" class="nav__sub-title">{{ nav.title }}</span></a>
+              {% if nav.img %}
+              <span style="color:{{ nav.color }};font-weight:bold; user-select: none;" class="nav__sub-title"><img src="{{ nav.img }}" style="display: inline-block; height:1.2rem; width:1.2rem;"/> {{ nav.title }}</span>
               {% else %}
+                {% if nav.url %}
+                <a href="{{ nav.url | relative_url }}"><span style="font-weight:bold; user-select: none;" class="nav__sub-title">{{ nav.title }}</span></a>
+                {% else %}
                 <span style="font-weight:bold; user-select: none;" class="nav__sub-title">{{ nav.title }}</span>
+                {% endif %}
               {% endif %}
             {% endif %}
           </summary>

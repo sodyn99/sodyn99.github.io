@@ -61,7 +61,7 @@ table('lck', 'https://lol.fandom.com/wiki/LCK/2023_Season/Summer_Season')
 print('LCK standings done!')
 
 
-# In[74]:
+# In[14]:
 
 
 import pandas as pd
@@ -175,13 +175,21 @@ def summer_23_matches(league, url):
         elif df['Winner'].loc[i] == df['Red'].loc[i]: df['Winner'].loc[i] = 2
 
     df = df[::-1]
+    df['BlueLogo'] = ''
+    df['RedLogo'] = ''
+    def path_to_image_html(path):
+        if path == '':
+            return ''
+        return '<img src="/images/esports/lol/lck/' + path + '-logo.png" class="gallery-img" style="box-shadow:none;width:6vmin;height:auto;" alt="' + path + '" title="' + path + '" style="height:2vmin;"/>'
+    df['BlueLogo'] = df['Blue'].apply(path_to_image_html)
+    df['RedLogo'] = df['Red'].apply(path_to_image_html)
 
     return df
     
 df_spring_23 = summer_23_matches('lck', 'https://lol.fandom.com/wiki/LCK/2023_Season/Spring_Season/Match_History')
 df_summer_23 = summer_23_matches('lck', 'https://lol.fandom.com/wiki/LCK/2023_Season/Summer_Season/Match_History')
 df = pd.concat([df_spring_23,df_summer_23])
-df.to_json(f'./lck/lck-matches.json', orient='records')
+df.to_json(f'./lck/lck-matches.json', orient='records', force_ascii=False)
 
 print('LCK matches done!')
 
