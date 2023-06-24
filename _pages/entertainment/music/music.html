@@ -15,7 +15,7 @@ sidebar:
 <div class="playlist">
   <div class="football_title" style="text-transform:uppercase;">Play List</div>
   <div style="float:left;width:45vmin;margin:0 3.2vmin 0 3.2vmin;border-radius:15px;overflow:hidden;">
-    <iframe id="player" width="720" height="720" src="https://www.youtube.com/embed/videoseries?list=PLK43-vRZrG5tCD5l2RDDBD62Kzbrk22oH" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+    <iframe id="player" width="720" height="720" src="https://www.youtube.com/embed/videoseries?list=PLK43-vRZrG5tCD5l2RDDBD62Kzbrk22oH&modestbranding=1&color=white&fs=0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
   </div>
   <ul id="playlistContainer"></ul>
 </div>
@@ -33,6 +33,7 @@ sidebar:
 <script src="https://apis.google.com/js/api.js"></script>
 <script>
   const API_KEY = 'AIzaSyCCrnLhPqPsH6bMo2DkKoeUyzyemP3XjWk';
+  var index = 0;
 
   function handleClientLoad() {
     gapi.load('client', initClient);
@@ -59,18 +60,50 @@ sidebar:
       console.error('Error loading playlist items:', err);
     });
   }
-
+  function extractHangulOnly(str) { // 한글만 추출
+    const hangulRegex = /[ㄱ-ㅎㅏ-ㅣ가-힣]/g;
+    const firstHangulRegex = /^[ㄱ-ㅎㅏ-ㅣ가-힣]/;
+    const charRegex = /\((.*?)\)/;
+    const match = str.match(charRegex);
+    const firstCharacter = str.charAt(0);
+    const hasHangul = hangulRegex.test(str);
+    if (hasHangul) {
+      if (firstHangulRegex.test(firstCharacter) == true) {
+        if (match && match[1]) {
+          return str.replace(match[0], '').trim(); // 괄호 안에 있는 문자열 제거
+        }
+        else {
+          return str;
+        }
+      }
+      else {
+        if (match && match[1]) {
+          return match[1].trim(); // 괄호 안에 있는 문자열만 추출
+        }
+        else {
+          return str;
+        }
+      }
+    }
+    else {
+      if (match && match[1]) {
+        return str.replace(match[0], '').trim(); // 괄호 안에 있는 문자열 제거
+      }
+      else {
+        return str;
+      }
+    }
+  }
   function displayPlaylistItems(items) {
     const playlistContainer = document.getElementById('playlistContainer');
 
-    items.forEach(item => {
+    items.forEach((item, index) => {
       const videoId = item.snippet.resourceId.videoId;
       const title = item.snippet.title;
-
       const videoLink = document.createElement('a');
       videoLink.href = `https://www.youtube.com/watch?v=${videoId}`;
       videoLink.target = '_blank';
-      videoLink.textContent = title;
+      videoLink.textContent = (index + 1) + '\u00A0\u00A0|\u00A0\u00A0' + extractHangulOnly(title);
       videoLink.classList.add('item');
 
       videoLink.addEventListener('click', function(event) {
@@ -86,7 +119,7 @@ sidebar:
   }
   function playVideo(videoId) {
     const iframe = document.getElementById('player');
-    const videoUrl = `https://www.youtube.com/embed/${videoId}?autoplay=1&cc_load_policy=1`;
+    const videoUrl = `https://www.youtube.com/embed/${videoId}?color=white&autoplay=1&cc_load_policy=1&modestbranding=1&fs=0`;
 
     iframe.src = videoUrl;
   }
