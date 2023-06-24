@@ -61,7 +61,7 @@ table('lck', 'https://lol.fandom.com/wiki/LCK/2023_Season/Summer_Season')
 print('LCK standings done!')
 
 
-# In[14]:
+# In[2]:
 
 
 import pandas as pd
@@ -87,7 +87,6 @@ def summer_23_matches(league, url):
     titles = list_chunk(titles, 5)
     teams = [a.get('title') for a in table.find_all('a') if a.get('title') and 'Patch' not in a.get('title')]
 
-    print(teams)
     for i in range(0, len(df)):
         df['Blue'].loc[i] = teams[14*i+1]
         df['Red'].loc[i] = teams[14*i+2]
