@@ -40,17 +40,11 @@
           {% assign crumb_path = crumb_all %}
           {% assign k = i | minus: 2 %}
           {% assign category = '' %}
-          <script>
-            console.log("category_array: {{ category_array }}");
-          </script>
-          {% if category_array[k] == nil or 'nil' %}
+          {% if category_array[k] == nil or category_array[k] == 'nil' %}
             {% assign category = crumb | capitalize %}
           {% else %}
             {% assign category = category_array[k] | replace:'%20',' ' | replace: '_',' ' %}
           {% endif %}
-          <script>
-            console.log("category: {{ category }}");
-          </script>
           <a href="{{ crumb_all | relative_url }}" itemprop="item"><span itemprop="name">{{ category }}</span></a>
           <!-- <a href="{{ crumb | downcase | replace: '%20', '-' | prepend: path_type | prepend: crumb_path | relative_url }}" property="item"><span itemprop="name">{{ crumb | replace: '-', ' ' | replace: '%20', ' ' | capitalize }}</span></a> -->
           <meta itemprop="position" content="{{ i }}" />

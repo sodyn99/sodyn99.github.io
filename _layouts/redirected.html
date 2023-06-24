@@ -1,13 +1,44 @@
 <!DOCTYPE html>
 <html>
 <head>
-<link rel="canonical" href=""/>
 <meta http-equiv="content-type" content="text/html; charset=utf-8" />
-<meta http-equiv="refresh" content="0;url=" />
+<meta http-equiv="refresh" content="5;url={{page.redirect_to}}" />
+<link rel="canonical" href="{{page.redirect_to}}" />
+<script>
+window.location.href = "{{page.redirect_to}}";
+</script>
 </head>
 <body>
     <h1>Redirecting...</h1>
-      <a href="">Click here if you are not redirected.<a>
-      <script>location=''</script>
+    <p>If you are not redirected, please <a href="javascript:goBack()">click here</a>.</p>
 </body>
 </html>
+<!-- <!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+<meta http-equiv="refresh" content="5;url={{page.redirect_to}}" />
+<link rel="canonical" href="{{page.redirect_to}}" />
+<script>
+var count = 4;
+window.onload = function() {
+  var countdown = document.getElementById('countdown');
+  var redirectLink = document.getElementById('redirect-link');
+  setInterval(function() {
+    countdown.textContent = count;
+    count--;
+    if (count === -1) {
+      window.location.href = "{{page.redirect_to}}";
+    }
+  }, 1000);
+};
+function goBack() {
+  window.history.back();
+}
+</script>
+</head>
+<body>
+    <h1><span id="countdown">5</span> 초 후 <a href="{{page.redirect_to}}">{{page.redirect_to}}</a> 로 이동합니다.</h1>
+    <p>취소하려면 <a id="redirect-link" href="javascript:goBack()">여기</a>를 클릭하십시오.</p>
+</body>
+</html> -->
