@@ -1,0 +1,176 @@
+
+.box__button-Entertainment {
+    display: block;
+    position: relative;
+    background: #6454ED;
+    border: 1px solid transparent;
+    border-radius: 15px;
+    max-width: 500px;
+    height: 50px;
+    text-align: center;
+    text-decoration: none;
+    color: white;
+    line-height: 47px;
+    font-size: 18px;
+    font-weight: bold;
+    margin: 25px 25px;
+    padding: 0 auto;
+    white-space: nowrap;
+    transition: background .3s ease;
+    overflow: hidden;
+    cursor: pointer;
+    -webkit-mask-image: -webkit-radial-gradient(white, black);
+
+    &:before {
+      content: '';
+      position: absolute;
+      width: 20px;
+      height: 100px;
+      background: white;
+      bottom: -25px;
+      left: 0;
+      border: 2px solid white;
+      transform: translateX(-50px) rotate(45deg);
+      transition: transform .3s ease;
+    }
+
+    &:hover {
+      background: transparent;
+      border-color: #6454ED;
+      color: #6454ED;
+
+      &:before {
+        transform: translateX(500px) rotate(45deg);
+      }
+    }
+}
+.box__button-Entertainment > img {
+    position: relative;
+    width: auto;
+    height: 40%;
+    vertical-align: middle;
+    margin: 0 5px 2px 0;
+}
+.box__button-Entertainment:hover > img {
+    filter: invert(50%) sepia(53%) saturate(524%) hue-rotate(337deg) brightness(100%) contrast(94%);
+}
+
+.playlist{
+  margin: 30px 0px;
+	position: relative;
+	border-radius: 15px;
+	overflow: hidden;
+	width: 100vmin;
+	height: 67vmin;
+	background-color: #f2f2f2;
+	color: $text-color;
+}
+
+.playlist .col{
+	position: relative;
+	float: left;
+	height: 100%;
+}
+
+.playlist .col .content{
+	padding: 3vmin;
+}
+
+.playlist ul{
+	margin: 0px;
+}
+
+.playlist ul li{
+	list-style: none;
+}
+
+.playlist .leftCol{
+  margin: 1vmin 0 0 4vmin;
+  padding: 3vmin;
+	width: 31vmin;
+  height: 50vmin;
+	background-color: #5043c0;
+  border-radius: 15px 0 0 15px;
+  overflow-y:scroll;
+  //box-shadow: 0 0 4vmin 0vmin #5044be;
+  z-index: 0;
+}
+
+.playlist .leftCol .content{
+  padding: 0px;
+}
+
+.playlist .leftCol .content .title{
+  margin: 0px;
+  padding: 0px;
+  font-size: 2.5vmin;
+  font-weight: bold;
+  color: white;
+}
+
+.playlist .leftCol .content .title span{
+  font-size: 2.5vmin;
+  font-weight: bold;
+  color: white;
+}
+
+.playlist .leftCol .content .title span:hover{
+  color: #f2f2f2;
+}
+
+.playlist .leftCol .content .title span:active{
+  color: #f2f2f2;
+}
+
+.playlist .leftCol .content .title span:focus{
+  color: #f2f2f2;
+}
+
+.playlist .leftCol .content .title span:visited{
+  color: #f2f2f2;
+}
+
+.playlist .leftCol .content .title span:link{
+  color: #f2f2f2;
+}
+
+.playlist .leftCol .content .title span:after{
+  color: #f2f2f2;
+}
+
+.playlist .leftCol .content .title span:before{
+  color: #f2f2f2;
+}
+.player {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.progress-bar {
+  width: 25vmin;
+  height: 7px;
+  background-color: #ccc;
+  position: relative;
+}
+.progress {
+  height: 100%;
+  background-color: #ff0000;
+  width: 0%;
+  position: absolute;
+}
+audio::-webkit-media-controls {
+  display: none !important;
+}
+audio {
+  width: 300px;
+}
+.playlist .rightCol {
+  margin: 1vmin 0 0 0vmin;
+  padding: 3vmin;
+  width: 61vmin;
+  height: 50vmin;
+  background-color: #fff;
+  border-radius: 0 15px 15px 0;
+  overflow-y:scroll;
+  z-index: 0;
+}

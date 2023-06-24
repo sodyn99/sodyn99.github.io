@@ -22,6 +22,19 @@ home:
       - title: "Esports"
         icon: "fas fa-gamepad"
         url: /sports/esports/
+  - title: "Entertainment"
+    icon: "fas fa-play"
+    color: "#6454ED"
+    children:
+      - title: "Movie"
+        icon: "fas fa-film"
+        url: /entertainment/movie/
+      - title: "Drama"
+        icon: "fas fa-desktop"
+        url: /entertainment/drama/
+      - title: "Music"
+        icon: "fas fa-music"
+        url: /entertainment/music/
 
 # main links
 main:

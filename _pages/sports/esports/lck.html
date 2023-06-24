@@ -36,12 +36,11 @@ sidebar:
       </div>
     </div>
   </div>
-
+  <a class="go-prev" style="text-decoration: none;">&#10094;</a>
+  <a class="go-next" style="text-decoration: none;">&#10095;</a>
   <div class="col rightCol">
     <div class="content">
-      <a class="go-prev" style="text-decoration: none;"><</a>
       <h2 id="month-this" class="years"></h2>
-      <a class="go-next" style="text-decoration: none;">></a>
       <div class="clearfix"></div>
       <ul class="weekday">
         <li><a style="text-decoration: none; color: #F0383B;" data-value="7">Sun</a></li>
@@ -85,7 +84,7 @@ sidebar:
             for (let i = 1; i <= lastDayNum; i++){
               var addClass = '';
 
-              if( year === now.getFullYear() && month === now.getMonth()+1 && i === now.getDate() ){ addClass = ' class="selected" style="background-color:#1C192B;"'; } // selected = today
+              if( year === now.getFullYear() && month === now.getMonth()+1 && i === now.getDate() ){ addClass = ' class="selected" style="background-color:#1C192B; color:#f2f2f2;"'; } // selected = today
               var yearNew = new Date(year, month - 1, i).getFullYear();
               var weekNew = new Date(year, month - 1, i).getDay();
               var weekStrNew = weekFullArr[weekNew];
@@ -265,8 +264,9 @@ sidebar:
           if (customer.Date == date_info[4]+'-'+date_info[1]+'-'+date_info[3] && customer.Game == 1) {
             output += `
               <li style="padding:0.5vmin 0 0 2.7vmin;">
-                <a class="match-list" href="/sports/esports/{{ page.name|replace:'.html','' }}/${date_info[1]}.${date_info[3]}-${customer.Blue}${customer.Red}" style="font-weight:bold; text-decoration:none; color:#f2f2f2;">
+                <a class="match-list" href="/sports/esports/{{ page.name|replace:'.html','' }}/${date_info[1]}.${date_info[3]}-${customer.Blue}${customer.Red}" style="text-decoration:none; color:#f2f2f2;">
                   <p style="line-height: 2.5vmin; padding-left:3.5vmin; text-indent:-3.5vmin;">
+                    <div style="font-size:1.2vmin;margin:-3vmin 0 2vmin -1.5vmin;">Game ${customer.Match}</div>
                     <div style="margin-bottom:3vmin;float:left;">${customer.BlueLogo}</div>
                     <div style="margin-left:3vmin;font-size:2.8vmin;width:1.5vmin;float:left;">|</div>
                     <div style="margin-left:2vmin;float:left;">${customer.RedLogo}</div>

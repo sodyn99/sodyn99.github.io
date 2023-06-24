@@ -110,7 +110,7 @@ th {
   text-align: center;
   border-collapse: separate;
   border-spacing: 0 1.5vmin;
-  margin: -1.7vmin 0 0 2vmin;
+  margin: -1.7vmin 0 0.5vmin 2vmin;
 }
 .dataframe.lck-standings thead {
   height: 2vmin;
@@ -134,9 +134,7 @@ th {
   color: #fff;
 }
 
-.dataframe.lck-standings td{
-  border: none;
-}
+.dataframe.lck-standings td,
 .dataframe.lck-standings tr{
   border: none;
 }
@@ -147,7 +145,7 @@ th {
 .dataframe.lck-standings tbody tr:nth-child(5) {
   border-radius: 5px;
   background: $text-color;
-  box-shadow: 0px 0px 0px 4px $text-color;
+  box-shadow: 0px 0px 0px 0.35vmin $text-color;
 }
 .dataframe.lck-standings tbody td:first-child{
   width: 6vmin;
