@@ -7,11 +7,96 @@ sidebar:
   nav: home
 ---
 <div class="table_container">
-  <div id="banner" class="football_title" style="font-weight: bold;"><i class="fas fa-music" style="font-size: 3rem; margin: 1rem 0;"></i>&nbsp;Music</div>
+  <div id="banner" class="football_title" style="color:#5043c0;font-weight: bold;"><i class="fas fa-music" style="font-size: 3rem; margin: 1rem 0;"></i>&nbsp;Music</div>
 </div>
 <hr>
 
+
 <div class="playlist">
+  <div class="football_title" style="text-transform:uppercase;">Play List</div>
+  <div style="float:left;width:45vmin;margin:0 3.2vmin 0 3.2vmin;border-radius:15px;overflow:hidden;">
+    <iframe id="player" width="720" height="720" src="https://www.youtube.com/embed/videoseries?list=PLK43-vRZrG5tCD5l2RDDBD62Kzbrk22oH" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+  </div>
+  <ul id="playlistContainer"></ul>
+</div>
+
+
+<script>
+  document.getElementById("page-title").style.display = "none";
+  let title = document.getElementsByClassName("football_title");
+  for (let i = 0; i < title.length; i++) {
+    title[i].style.margin = "3rem 0";
+    title[i].style.fontFamily = "Courier New";
+    title[i].style.fontSize = "1.5rem;";
+  }
+</script>
+<script src="https://apis.google.com/js/api.js"></script>
+<script>
+  const API_KEY = 'AIzaSyCCrnLhPqPsH6bMo2DkKoeUyzyemP3XjWk';
+
+  function handleClientLoad() {
+    gapi.load('client', initClient);
+  }
+
+  function initClient() {
+    gapi.client.init({
+      apiKey: API_KEY,
+      discoveryDocs: ['https://www.googleapis.com/discovery/v1/apis/youtube/v3/rest'],
+    }).then(() => {
+      getPlaylistItems();
+    });
+  }
+
+  function getPlaylistItems() {
+    gapi.client.youtube.playlistItems.list({
+      part: 'snippet',
+      playlistId: 'PLK43-vRZrG5tCD5l2RDDBD62Kzbrk22oH',
+      maxResults: 10,
+    }).then(response => {
+      const playlistItems = response.result.items;
+      displayPlaylistItems(playlistItems);
+    }).catch(err => {
+      console.error('Error loading playlist items:', err);
+    });
+  }
+
+  function displayPlaylistItems(items) {
+    const playlistContainer = document.getElementById('playlistContainer');
+
+    items.forEach(item => {
+      const videoId = item.snippet.resourceId.videoId;
+      const title = item.snippet.title;
+
+      const videoLink = document.createElement('a');
+      videoLink.href = `https://www.youtube.com/watch?v=${videoId}`;
+      videoLink.target = '_blank';
+      videoLink.textContent = title;
+      videoLink.classList.add('item');
+
+      videoLink.addEventListener('click', function(event) {
+        event.preventDefault();
+        playVideo(videoId);
+      });
+
+      const listItem = document.createElement('li');
+      listItem.appendChild(videoLink);
+      listItem.style.textDecoration = 'none';
+      playlistContainer.appendChild(listItem);
+    });
+  }
+  function playVideo(videoId) {
+    const iframe = document.getElementById('player');
+    const videoUrl = `https://www.youtube.com/embed/${videoId}?autoplay=1&cc_load_policy=1`;
+
+    iframe.src = videoUrl;
+  }
+</script>
+<script src="https://apis.google.com/js/client.js?onload=handleClientLoad"></script>
+
+
+
+
+<!-- <div class="playlist">
   <div class="football_title" style="margin:4vmin 0;text-transform:uppercase;">Play List</div>
   <div class="col leftCol" style="overflow:hidden;">
     <div class="progress-bar">
@@ -32,17 +117,6 @@ sidebar:
 </div>
 
 <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-<script>
-  document.getElementById("page-title").style.display = "none";
-  let title = document.getElementsByClassName("football_title");
-  for (let i = 0; i < title.length; i++) {
-    title[i].style.margin = "1rem 0";
-    title[i].style.fontFamily = "Courier New";
-    title[i].style.fontSize = "1.5rem;";
-  }
-</script>
-
-
 <script>
   var audioPlayer = document.getElementById('audioPlayer');
   var playBtn = document.getElementById('playBtn');
@@ -109,4 +183,4 @@ sidebar:
     seconds = seconds < 10 ? '0' + seconds : seconds;
     return minutes + ':' + seconds;
   }
-</script>
+</script> -->

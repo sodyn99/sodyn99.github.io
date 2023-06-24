@@ -138,7 +138,9 @@
             $('#myModal').fadeOut('fast');
         });
         $(window).on('resize', function() {
-            adjustModalSize();
+          if ($('.gallery-img').length > 0) {
+              adjustModalSize();
+          }
         });
         $('.modal-content').on('wheel', function(e) {
           if (e.ctrlKey) {
@@ -155,7 +157,6 @@
                   zoomOut();
                 }
                 delta += delta;
-                console.log(delta)
                 if (delta < -200 || delta > 200) {
                   break;
                 }

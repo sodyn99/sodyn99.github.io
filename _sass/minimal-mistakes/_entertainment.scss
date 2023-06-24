@@ -61,116 +61,45 @@
 	border-radius: 15px;
 	overflow: hidden;
 	width: 100vmin;
-	height: 67vmin;
+	height: 68vmin;
+  padding-bottom: 3vmin;
 	background-color: #f2f2f2;
 	color: $text-color;
 }
-
-.playlist .col{
-	position: relative;
-	float: left;
-	height: 100%;
+@media (max-width: 1024px) {
+  .playlist{
+    height: 74vmin;
+  }
 }
-
-.playlist .col .content{
-	padding: 3vmin;
-}
-
-.playlist ul{
-	margin: 0px;
-}
-
-.playlist ul li{
-	list-style: none;
-}
-
-.playlist .leftCol{
+.playlist ul {
   margin: 1vmin 0 0 4vmin;
-  padding: 3vmin;
-	width: 31vmin;
-  height: 50vmin;
+  padding: 2vmin;
+	width: 45vmin;
+  height: 45vmin;
 	background-color: #5043c0;
-  border-radius: 15px 0 0 15px;
+  border-radius: 15px;
   overflow-y:scroll;
   //box-shadow: 0 0 4vmin 0vmin #5044be;
   z-index: 0;
 }
-
-.playlist .leftCol .content{
-  padding: 0px;
+.playlist li {
+  list-style-type: none;
 }
-
-.playlist .leftCol .content .title{
-  margin: 0px;
-  padding: 0px;
-  font-size: 2.5vmin;
-  font-weight: bold;
-  color: white;
-}
-
-.playlist .leftCol .content .title span{
-  font-size: 2.5vmin;
-  font-weight: bold;
-  color: white;
-}
-
-.playlist .leftCol .content .title span:hover{
-  color: #f2f2f2;
-}
-
-.playlist .leftCol .content .title span:active{
-  color: #f2f2f2;
-}
-
-.playlist .leftCol .content .title span:focus{
-  color: #f2f2f2;
-}
-
-.playlist .leftCol .content .title span:visited{
-  color: #f2f2f2;
-}
-
-.playlist .leftCol .content .title span:link{
-  color: #f2f2f2;
-}
-
-.playlist .leftCol .content .title span:after{
-  color: #f2f2f2;
-}
-
-.playlist .leftCol .content .title span:before{
-  color: #f2f2f2;
-}
-.player {
-  display: flex;
-  align-items: center;
-  gap: 10px;
-}
-.progress-bar {
-  width: 25vmin;
-  height: 7px;
-  background-color: #ccc;
-  position: relative;
-}
-.progress {
-  height: 100%;
-  background-color: #ff0000;
-  width: 0%;
-  position: absolute;
-}
-audio::-webkit-media-controls {
-  display: none !important;
-}
-audio {
-  width: 300px;
-}
-.playlist .rightCol {
-  margin: 1vmin 0 0 0vmin;
-  padding: 3vmin;
-  width: 61vmin;
-  height: 50vmin;
-  background-color: #fff;
-  border-radius: 0 15px 15px 0;
-  overflow-y:scroll;
+.playlist .item {
+  text-decoration: none !important;
+  color: #fff !important;
+  font-size: 1.5vmin;
+  padding: 1vmin;
+  margin: 1vmin 0;
+  display: block;
+  border-radius: 15px;
+  transition: all 0.3s ease;
+  cursor: pointer;
+  background-color: #5043c0;
+  box-shadow: 0 0 1vmin 0vmin #5044be;
   z-index: 0;
+}
+.playlist .item:hover {
+  color: #fff !important;
+  background-color: #6454ED;
 }
