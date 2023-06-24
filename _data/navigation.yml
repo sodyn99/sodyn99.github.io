@@ -68,53 +68,53 @@ o-ran:
     children:
       - title: "Introduction"
         index: "1.1"
-        url: /study/mobile/4g-lte/1.1/
+        url: /study/mobile/4g_lte/1.1/
       - title: "About"
         index: "1.2"
-        url: /study/mobile/4g-lte/1.2/
+        url: /study/mobile/4g_lte/1.2/
   - title: "2. HIGH DATA RATES IN MOBILE COMMUNICATION"
     children:
       - title: "High Data Rates"
         index: "2.1"
-        url: /study/mobile/4g-lte/2.1/
+        url: /study/mobile/4g_lte/2.1/
       - title: "Power Limited ..."
         index: "2.2"
-        url: /study/mobile/4g-lte/2.2/
+        url: /study/mobile/4g_lte/2.2/
       - title: "Bandwidth Lim..."
         index: "2.3"
-        url: /study/mobile/4g-lte/2.3/
+        url: /study/mobile/4g_lte/2.3/
       - title: "Multi-Carrier ..."
         index: "2.4"
-        url: /study/mobile/4g-lte/2.4/
+        url: /study/mobile/4g_lte/2.4/
   - title: "3. OFDM"
     children:
       - title: "Concept"
         index: "3.1"
-        url: /study/mobile/4g-lte/3.1/
+        url: /study/mobile/4g_lte/3.1/
       - title: "OFDM Impleme..."
         index: "3.2"
-        url: /study/mobile/4g-lte/3.2/
+        url: /study/mobile/4g_lte/3.2/
       - title: "Problem 1"
         index: "3.3"
-        url: /study/mobile/4g-lte/3.3/
+        url: /study/mobile/4g_lte/3.3/
 
 5g_nr:
   - title: "1. INTRO"
     children:
       - title: "Introduction"
         index: "1.1"
-        url: /study/mobile/5g-nr/1.1/
+        url: /study/mobile/5g_nr/1.1/
       - title: "About"
         index: "1.2"
-        url: /study/mobile/5g-nr/1.2/
+        url: /study/mobile/5g_nr/1.2/
       - title: "4G vs 5G"
         index: "1.3"
-        url: /study/mobile/5g-nr/1.3/
+        url: /study/mobile/5g_nr/1.3/
   - title: "2. 5G RESOURCE ALLOCATION"
     children:
       - title: "5G Resource A..."
         index: "2.1"
-        url: /study/mobile/5g-nr/2.1/
+        url: /study/mobile/5g_nr/2.1/
 
 aws:
   - title: "1. INTRO"

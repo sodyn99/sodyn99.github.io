@@ -1,5 +1,6 @@
 ---
 layout: single
+title: 'LCK'
 permalink: /sports/esports/lck/
 author_profile: false
 sidebar:
@@ -221,12 +222,14 @@ sidebar:
 <hr>
 
 <script>
+  let pageTitle = document.getElementById("page-title");
   const year = "2023";
   const season = "summer";
   const league = "lck";
   // round : regular(1, 2), playoff(3, 4), final
   const round = "1";
 
+  pageTitle.style.display = "none";
   if (season == "spring")
     document.getElementById("season").innerHTML = year+'<br><span style="font-size:5.77vmin;">'+season+'</span>';
   else if (season == "summer")

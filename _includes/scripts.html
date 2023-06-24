@@ -255,6 +255,7 @@
   let continental = document.getElementById("continental");
   let pageTitle = document.getElementById("page-title");
   var continent = 'europe';
+  var year = "2023";
 
   if (league == 'bundesliga') {
     continental.innerHTML = '<div style="display:inline-block;float:left; border-radius:0.7vmin; width:2vmin; height:2vmin; background-color:#1e746a;"></div>'+
@@ -347,6 +348,7 @@
     match_review.style.fontFamily=standings.style.fontFamily=banner.style.fontFamily="Europa";
     banner.innerHTML = "<img style='height:10vmin;margin:0 4vmin 1vmin -4vmin;' src='/images/football/main_page/europaleague-logo-2.png'/>EUROPA LEAGUE";}
   else if (league == 'kleague1') {
+    pageTitle.style.display = "none";
     continent = "asia";
     banner.style.color="#001A46";
     match_review.style.fontFamily=standings.style.fontFamily=banner.style.fontFamily="KLeagueBasic Medium";
@@ -358,11 +360,12 @@
     //                         '<div style="display:inline-block;float:left;margin:-0.1vmin 2vmin 0 0.6vmin;">16강</div>'+
     //                         '<div style="display:inline-block;float:left; border-radius:10px; width:2vmin; height:2vmin; background-color:#ad2022;"></div>'+
     //                         '<div style="display:inline-block;float:left;margin:-0.1vmin 2vmin 0 0.6vmin;">유로파 리그 플레이오프</div>';
-
+    pageTitle.style.display = "none";
     standings.style.fontSize=banner.style.fontSize="7vmin";
     standings.style.fontFamily=banner.style.fontFamily="P26";
     banner.innerHTML = "<img style='height:10vmin;margin:0 4vmin 1vmin -4vmin;' src='/images/football/main_page/worldcup-trophy.png'/>WORLD CUP";}
   else if (league == 'national') {
+    pageTitle.style.display = "none";
     banner.style.color="#B40028";
     match_review.style.fontFamily=banner.style.fontFamily="KFAGothic";
     banner.innerHTML = "<img style='height:8vmin;margin:0 4vmin 1vmin -4vmin;' src='/images/football/main_page/kfa-logo.png'/>국가대표";}

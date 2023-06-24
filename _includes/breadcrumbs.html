@@ -15,13 +15,15 @@
 <nav class="breadcrumbs">
   <ol itemscope itemtype="https://schema.org/BreadcrumbList">
     {% assign crumbs = page.url | split: '/' %}
+    {% assign category_array = page.categories | inspect | remove:'&quot;' %}
+    {% assign category_array = category_array | remove: '[' | remove: ']' | split: ', ' %}
     {% assign i = 1 %}
     {% for crumb in crumbs offset: 1 %}
       {% if forloop.first %}
-        <li property="itemListElement" itemscope itemtype="https://schema.org/ListItem">
-          <a href="{{ '/' | relative_url }}" property="item"><span property="name">{{ site.data.ui-text[site.locale].breadcrumb_home_label | default: "Home" }}</span></a>
+        <li itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+          <a href="{{ '/' | relative_url }}" itemprop="item"><span itemprop="name">{{ site.data.ui-text[site.locale].breadcrumb_home_label | default: "Home" }}</span></a>
 
-          <meta property="position" content="{{ i }}" />
+          <meta itemprop="position" content="{{ i }}" />
         </li>
         <span class="sep">{{ site.data.ui-text[site.locale].breadcrumb_separator | default: "/" }}</span>
       {% endif %}
@@ -29,20 +31,29 @@
         <li class="current">{{ page.title }}</li>
       {% else %}
         {% assign i = i | plus: 1 %}
-        <li property="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+        <li itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
           {% assign j = i | minus: 1 %}
           {% assign crumb_all = '' %}
           {% for crumb in crumbs offset: 1 limit: j %}
             {% assign crumb_all = crumb_all | append: crumb | append: '/' %}
           {% endfor %}
           {% assign crumb_path = crumb_all %}
-          <!-- <script>
-            console.log("crumb_all : {{ crumb_all }}");
-            console.log("crumb_path : {{ crumb_path }}");
-          </script> -->
-          <a href="{{ crumb_all | relative_url }}" property="item"><span itemprop="name">{{ crumb | replace: '-', ' ' | replace: '%20', ' ' | capitalize }}</span></a>
+          {% assign k = i | minus: 2 %}
+          {% assign category = '' %}
+          <script>
+            console.log("category_array: {{ category_array }}");
+          </script>
+          {% if category_array[k] == nil or 'nil' %}
+            {% assign category = crumb | capitalize %}
+          {% else %}
+            {% assign category = category_array[k] | replace:'%20',' ' | replace: '_',' ' %}
+          {% endif %}
+          <script>
+            console.log("category: {{ category }}");
+          </script>
+          <a href="{{ crumb_all | relative_url }}" itemprop="item"><span itemprop="name">{{ category }}</span></a>
           <!-- <a href="{{ crumb | downcase | replace: '%20', '-' | prepend: path_type | prepend: crumb_path | relative_url }}" property="item"><span itemprop="name">{{ crumb | replace: '-', ' ' | replace: '%20', ' ' | capitalize }}</span></a> -->
-          <meta property="position" content="{{ i }}" />
+          <meta itemprop="position" content="{{ i }}" />
         </li>
         <span class="sep">{{ site.data.ui-text[site.locale].breadcrumb_separator | default: "/" }}</span>
       {% endif %}
