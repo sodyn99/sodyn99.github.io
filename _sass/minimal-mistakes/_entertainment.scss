@@ -66,11 +66,6 @@
 	background-color: #f2f2f2;
 	color: $text-color;
 }
-@media (max-width: 1024px) {
-  .playlist{
-    height: 74vmin;
-  }
-}
 .playlist ul {
   margin: 1vmin 0 0 4vmin;
   padding: 2vmin;
@@ -84,6 +79,13 @@
 }
 .playlist li {
   list-style-type: none;
+}
+.playlist .player-container {
+  float:left;
+  width:45vmin;
+  margin:0 3.2vmin 0 3.2vmin;
+  border-radius:15px;
+  overflow:hidden;
 }
 .playlist .item {
   text-decoration: none !important;
@@ -126,4 +128,18 @@
   border-top: 0.8vmin solid transparent;
   border-bottom: 0.8vmin solid transparent;
   border-left: 1.5vmin solid #5043c0;
+}
+@media (max-width: 1024px) {
+  .playlist{
+    height: 205vmin;
+  }
+  .playlist .player-container {
+    width: 90%;
+    margin: 0 5% 3% 5%;
+  }
+  .playlist ul {
+    width: 90%;
+    height: 40%;
+    margin: 0 5% 0 5%;
+  }
 }
