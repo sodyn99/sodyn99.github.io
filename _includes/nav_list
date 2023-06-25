@@ -81,7 +81,7 @@
       </div>
       <div class="box__button-Entertainment" onclick="location.href='/entertainment/';" style="width:80%; margin-bottom:2em; margin-top: 1.5em; margin-left: 15px;">
         <i style="font-weight:bold" class="fas fa-play" aria-hidden="true"></i>&nbsp;&nbsp;
-        Entertainment
+        Ent
       </div>
     {% endif %}
   </ul>

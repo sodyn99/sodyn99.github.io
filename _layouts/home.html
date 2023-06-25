@@ -1,12 +1,282 @@
 ---
-layout: archive
+layout: default
 ---
-
+<head>
+  <style>
+    :root {
+      --bg-color: #fff;
+      --con-color: #f2f2f2;
+      --text-color: #333;
+      --button-color: #24A091;
+    }
+    body {
+      background-color: var(--bg-color);
+      color: var(--text-color);
+      font-family: 'termina', sans-serif;
+      font-weight: 400;
+      overflow-x: hidden;
+    }
+    .masthead {
+      border-bottom: #f2f2f2 2px solid;
+    }
+    .masthead .site-title {
+      display: none;
+    }
+    .background-square {
+      background-color: #24A091;
+      transform: rotate(-50deg);
+      border-radius: 50%;
+      opacity: 0.3;
+      position: absolute;
+      width: 50rem;
+      height: 50rem;
+      top: -20rem;
+      left: 80vw;
+    }
+    .welcome {
+      margin: 20vh 0 0 15vw;
+      position: relative;
+      line-height: 3.5rem;
+      font-size: 2rem;
+      color: var(--text-color);
+      padding: 4rem;
+      width: 20rem;
+      height: 15rem;
+      display: flex;
+      overflow: visible;
+      flex-direction: column;
+      justify-content: center;
+      white-space: nowrap;
+      > h1 {
+        font-family: 'termina', sans-serif;
+        font-weight: 700;
+        position: relative;
+        margin-bottom: 0;
+        width: 25rem;
+        > a {
+          color: var(--text-color);
+          text-decoration: none;
+          display: flex;
+          > img {
+            transform: scaleX(-1);
+            height: 3.5rem;
+            margin-right: 0.5rem;
+          }
+        }
+        > a:hover {
+          /* color: #24A091; */
+          text-decoration: none;
+          filter: brightness(0.5);
+        }
+      }
+    }
+    .welcome::before {
+      content: '';
+      /* background: url('/images/background/welcome.jpg'); */
+      background-color: #24A091;
+      background-size: cover;
+      background-position: center;
+      transform: rotate(-60deg);
+      border-radius: 50%;
+      opacity: 0.3;
+      position: absolute;
+      top: 0px;
+      left: 0px;
+      right: 0px;
+      bottom: 0px;
+    }
+    .container {
+      overflow-x: scroll;
+      position: relative;
+      background-color: var(--con-color);
+      border-radius: 1rem;
+      padding: 3rem 3rem 1rem 3rem;
+      margin-top: 1rem;
+      margin-bottom: 5rem;
+      > h1 {
+        font-size:2.5rem;
+        font-family: 'termina', sans-serif;
+        position: relative;
+        > a {
+          color: var(--text-color);
+          text-decoration: none;
+          display: flex;
+          > img {
+            height: 3.5rem;
+            margin-right: 0.5rem;
+          }
+        }
+        > a:hover {
+          color: var(--text-color);
+          text-decoration: none;
+          filter: brightness(0.5);
+        }
+      }
+      > h2 {
+        font-family: 'termina', sans-serif;
+        font-weight: 500;
+      }
+    }
+    .buttons {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      > button {
+        margin: 0.5rem 5vmin;
+        padding: 1rem;
+        width: 10rem;
+        height: 10rem;
+        border: 1px solid var(--button-color);
+        border-radius: 0.5rem;
+        background-color: transparent;
+        color: var(--button-color);
+        font-family: 'termina', sans-serif;
+        font-weight: 500;
+        cursor: pointer;
+        outline: none;
+        transition: all 0.3s ease-in-out;
+        &:hover {
+          background-color: var(--button-color);
+          color: #fff;
+        }
+      }
+    }
+    .recent-posts {
+      border: none;
+      position: relative;
+      margin-top: 1rem;
+      > h2 {
+        font-family: 'termina', sans-serif;
+        font-weight: 500;
+      }
+      .post-image {
+        overflow: hidden;
+      }
+      .post-image img {
+        transition: transform 0.3s ease-in-out;
+        &:hover {
+          transform: scale(1.1);
+        }
+      }
+    }
+  </style>
+</head>
 {{ content }}
 
-<img src="/images/home_intro.png" alt = "Home" style="-webkit-user-drag: none;"/>
+<div class="background-square"></div>
+<div style="height:60vh;">
+  <div class="welcome">
+    <span>welcome to</span>
+    <h1><a href="/">Asungajinli<img src="/images/logo.png"/></a></h1>
+    <span>blog</span>
+  </div>
+</div>
+<div class="container">
+  <h1><a href="/study/">Study</a></h1>
+  <div id="studyButton" class="buttons">
+    <button onclick="location.href='/study/computer/'" style="cursor:pointer;">Computer</button>
+    <button onclick="location.href='/study/mobile/'" style="cursor:pointer;">Mobile</button>
+    <button onclick="location.href='/study/lecture/'" style="cursor:pointer;">Lecture</button>
+  </div>
+  <div class="recent-posts">
+    <buttom onclick="location.href='/categories/#study'" style="cursor:pointer;position:absolute;right:1rem;">More</buttom>
+    <h2>Recent Posts</h2>
+    <div style="display:flex;flex-wrap:wrap;">
+      {% for post in site.categories.Study limit:6 %}
+        <div style="width:33.33%;padding:0.5rem;">
+          <a href="{{ post.url }}">
+            <div class="post-image">
+            {% if post.image %}
+              <img src="{{ post.image }}" style="width:100%;height:10rem;object-fit:cover;"/>
+            {% else %}
+              <img src="/images/logo.png" style="width:100%;height:10rem;object-fit:cover;"/>
+            {% endif %}
+            </div>
+            <h3 style="margin:0.5rem 0 0 0;">{{ post.title }}</h3>
+            <p style="margin:0.5rem 0 0 0;">{{ post.description }}</p>
+          </a>
+        </div>
+      {% endfor %}
+    </div>
+  </div>
+</div>
+<div class="container">
+  <h1><a href="/sports/">Sports</a></h1>
+  <div id="sportsButton" class="buttons">
+    <button onclick="location.href='/sports/football/'" style="cursor:pointer;">Football</button>
+    <button onclick="location.href='/sports/esports/'" style="cursor:pointer;">Esports</button>
+  </div>
+  <div class="recent-posts">
+    <buttom onclick="location.href='/categories/#sports'" style="cursor:pointer;position:absolute;right:1rem;">More</buttom>
+    <h2>Recent Posts</h2>
+    <div style="display:flex;flex-wrap:wrap;">
+      {% for post in site.categories.Sports limit:6 %}
+        <div class="post" style="width:33.33%;padding:0.5rem;">
+          <a href="{{ post.url }}">
+            <div class="post-image">
+            {% if post.image %}
+              <img src="{{ post.image }}" style="width:100%;height:10rem;object-fit:cover;"/>
+            {% else %}
+              <img src="/images/logo.png" style="width:100%;height:10rem;object-fit:cover;"/>
+            {% endif %}
+            </div>
+            <h3 style="margin:0.5rem 0 0 0;">{{ post.title }}</h3>
+            <p style="margin:0.5rem 0 0 0;">{{ post.description }}</p>
+          </a>
+        </div>
+      {% endfor %}
+    </div>
+  </div>
+</div>
+<div class="container">
+  <h1><a href="/entertainment/">Entertainment</a></h1>
+  <div id="entertainmentButton" class="buttons">
+    <button onclick="location.href='/entertainment/movie/'" style="cursor:pointer;">Movie</button>
+    <button onclick="location.href='/entertainment/drama/'" style="cursor:pointer;">Drama</button>
+    <button onclick="location.href='/entertainment/music/'" style="cursor:pointer;">Music</button>
+  </div>
+  <div class="recent-posts">
+    <buttom onclick="location.href='/categories/#study'" style="cursor:pointer;position:absolute;right:1rem;">More</buttom>
+    <h2>Recent Posts</h2>
+    <div style="display:flex;flex-wrap:wrap;">
+      {% if site.categories.Entertainment.size == 0 %}
+        <div style="width:100%;padding:0.5rem;">
+          <h3 style="margin:0.5rem 0 0 0;">No posts</h3>
+        </div>
+      {% else %}
+        {% for post in site.categories.Entertainment limit:6 %}
+          <div style="width:33.33%;padding:0.5rem;">
+            <a href="{{ post.url }}">
+              {% if post.image %}
+              <div class="post-image">
+                <img src="{{ post.image }}" style="width:100%;height:10rem;object-fit:cover;"/>
+              {% else %}
+                <img src="/images/logo.png" style="width:100%;height:10rem;object-fit:cover;"/>
+              {% endif %}
+              </div>
+              <h3 style="margin:0.5rem 0 0 0;">{{ post.title }}</h3>
+              <p style="margin:0.5rem 0 0 0;">{{ post.description }}</p>
+            </a>
+          </div>
+        {% endfor %}
+      {% endif %}
+    </div>
+  </div>
+</div>
 
-<h3 class="archive__subtitle">{{ site.data.ui-text[site.locale].recent_posts | default: "Recent Posts" }}</h3>
+<script>
+  changeColor();
+  function changeColor() {
+    var studyButton = document.getElementById("studyButton");
+    var entertainmentButton = document.getElementById("entertainmentButton");
+    studyButton.style.setProperty("--button-color", "#DC7D48");
+    entertainmentButton.style.setProperty("--button-color", "#6454ED");
+  }
+</script>
+
+<!-- <img src="/images/home_intro.png" alt = "Home" style="-webkit-user-drag:none;user-select:none;"/> -->
+
+<!-- <h3 class="archive__subtitle">{{ site.data.ui-text[site.locale].recent_posts | default: "Recent Posts" }}</h3>
 
 {% if paginator %}
   {% assign posts = paginator.posts %}
@@ -21,4 +291,4 @@ layout: archive
   {% endfor %}
 </div>
 
-{% include paginator.html %}
+{% include paginator.html %} -->
