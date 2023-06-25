@@ -588,7 +588,7 @@ body:hover .visually-hidden button {
 }
 .spoiler.active {
   color: transparent;
-  text-shadow: 0 0 1vmin #fff;
+  text-shadow: 0 0 15px #fff;
   transition : all 0.5s;
 }
 .spoiler:hover {

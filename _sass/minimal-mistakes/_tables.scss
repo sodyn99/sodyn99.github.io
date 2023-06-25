@@ -369,3 +369,9 @@ font-weight:bold;
 // background:#262626;
 // color:#747474;
 // }
+
+@media (max-width: 1024px) {
+  .table_container {
+    overflow-x: scroll;
+  }
+}

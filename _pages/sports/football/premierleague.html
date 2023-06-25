@@ -22,20 +22,7 @@ sidebar:
 
 <div class="calendar">
   <div id="match_review" class="football_title" style="text-transform:uppercase;">Match Review</div>
-  <div id="left" class="col leftCol">
-    <input id="spoiler-toggle" onchange="toggleSpoilerClass()" type="checkbox" class="switch" style="float:right;margin-right:1.2vmin;" checked>
-      <label for="spoiler-toggle" style="font-size:1.3vmin;float:right;margin-right:0.5vmin;color:white;">스포일러</label>
-    </input>
-    <div class="content">
-      <h1 id="date-this" class="date"></h1>
-      <div class="notes">
-        <ul class="noteList">
-        </ul>
-      </div>
-    </div>
-  </div>
   <a class="go-prev" style="text-decoration: none;">&#10094;</a>
-  <a class="go-next" style="text-decoration: none;">&#10095;</a>
   <div class="col rightCol">
     <div class="content">
       <h2 id="month-this" class="years"></h2>
@@ -51,69 +38,23 @@ sidebar:
       </ul>
       <div class="clearfix"></div>
       <ul class="days">
-        <script>
-          const now = new Date();
-          const getCalendar = (date) => {
-            const year = date.getFullYear();
-            const month = date.getMonth() + 1;
-            const day = date.getDate();
-            const week = date.getDay();
-            const weekArr = ['Sun', 'Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat'];
-            const weekFullArr = ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'];
-            const weekStr = weekFullArr[week];
-            const monthArr = ['Jan','Feb','Mar','Apr','May','Jun','Jul','Aug','Sep','Oct','Nov','Dec'];
-            const monthStr = monthArr[month - 1];
-            const firstDay = new Date(date.setDate(1));
-            const lastDay = new Date(year, month, 0);
-            const lastDayNum = lastDay.getDate();
-            const startDay = firstDay.getDay();
-            const calendar = document.querySelector('.days');
-            const limitDay = startDay + lastDayNum;
-            const nextDay = Math.ceil(limitDay / 7) * 7;
-
-            let data = ''
-            document.getElementById("date-this").innerHTML = weekStr + "<br>" + monthStr + " " + day;
-            document.getElementById("month-this").innerHTML = year + "." + month;
-
-            for (let i = 0; i < startDay; i++){
-              data += '<li></li>';
-            }
-
-            for (let i = 1; i <= lastDayNum; i++){
-              var addClass = '';
-
-              if( year === now.getFullYear() && month === now.getMonth()+1 && i === now.getDate() ){ addClass = ' class="selected"'; } // selected = today
-              var yearNew = new Date(year, month - 1, i).getFullYear();
-              var weekNew = new Date(year, month - 1, i).getDay();
-              var weekStrNew = weekFullArr[weekNew];
-              data += '<li><a onclick="select(this)" title="'+i+'" data-value="'+weekStrNew+'<br>'+month+'<br>'+monthStr+'<br>'+i+'<br>'+yearNew+'"'+addClass+'>'+i+'</a></li>';
-
-            }
-
-            for (let i = 0; i < startDay; i++){
-              data += '<li></li>';
-            }
-
-            calendar.innerHTML = data;
-
-          }
-          const date = new Date();
-          getCalendar(date);
-
-          document.querySelector(`.go-prev`).onclick = () => {
-          getCalendar(new Date(date.setMonth(date.getMonth() - 1)));
-          }
-
-          // 다음달 이동
-          document.querySelector(`.go-next`).onclick = () => {
-          getCalendar(new Date(date.setMonth(date.getMonth() + 1)));
-          }
-
-        </script>
       </ul>
       <div class="clearfix"></div>
     </div>
   </div>
+  <div id="left" class="col leftCol">
+    <input id="spoiler-toggle" onchange="toggleSpoilerClass()" type="checkbox" class="switch" style="float:right;margin-right:1.2vmin;" checked>
+      <label for="spoiler-toggle" style="font-size:1.3vmin;float:right;margin-right:0.5vmin;color:white;">스포일러</label>
+    </input>
+    <div class="content">
+      <h1 id="date-this" class="date"></h1>
+      <div class="notes">
+        <ul class="noteList">
+        </ul>
+      </div>
+    </div>
+  </div>
+  <a class="go-next" style="text-decoration: none;">&#10095;</a>
 
   <div class="clearfix"></div>
 

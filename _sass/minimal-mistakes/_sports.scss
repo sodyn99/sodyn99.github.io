@@ -733,7 +733,7 @@ font-display:auto;font-style:normal;font-weight:700;font-stretch:normal;
 
 .calendar .col{
 	position: relative;
-	float: left;
+	float: right;
 	height: 100%;
 }
 
@@ -798,7 +798,7 @@ font-display:auto;font-style:normal;font-weight:700;font-stretch:normal;
   height: 4vmin;
   line-height: 3.8vmin;
   padding: 0 0.3vmin 0 0;
-  margin: -1vmin 0 0 -28vmin;
+  margin: -1vmin 0 0 1.5vmin;
   background-color: #747978;
   border-radius: 50%;
   text-align: center;
@@ -821,7 +821,7 @@ font-display:auto;font-style:normal;font-weight:700;font-stretch:normal;
   height: 4vmin;
   line-height: 3.8vmin;
   padding:0 0 0 0.3vmin;
-  margin: -1vmin 0 0 63vmin;
+  margin: -1vmin 0 0 93vmin;
   background-color: #747978;
   border-radius: 50%;
   text-align: center;
@@ -902,13 +902,75 @@ font-display:auto;font-style:normal;font-weight:700;font-stretch:normal;
 }
 
 @media (max-width: 1024px) {
+  .calendar {
+    height: 75vmin;
+  }
   .calendar .rightCol {
+    margin-top: 1vmin;
+    width: 100%;
+    height: 10%;
+    padding: 0;
+  }
+  .calendar .rightCol .years {
+    padding-left: 0;
+    height: 4vmin;
+    margin-left: 0vmin;
+    margin-top:-9vmin;
+    padding-left: 2vmin;
+    border-bottom: none;
+    border-left: gray solid 4px;
+  }
+  .calendar .rightCol .weekday {
     display: none;
   }
+  .calendar .rightCol .days {
+    margin: -0.5vmin 0 0 4vmin;
+    width: 90%;
+    height: 10%;
+    overflow-x: scroll;
+    display: flex;
+    flex-wrap: nowrap;
+  }
+  .calendar .rightCol .days li {
+    flex: 0 0 auto;
+    white-space: nowrap;
+  }
   .calendar .leftCol {
-    width: 100%;
-    height: 100%;
-    border-radius: 0;
+    margin: 2.5vmin 1.5vmin 0 0;
+    width: 97vmin;
+    height: 45vmin;
+    border-radius: 10px;
+    overflow-y: scroll !important;
+  }
+  .calendar .leftCol .noteList li {
+    margin-left: -2vmin;
+    padding-left: 23vmin;
+    padding-top: 6vmin;
+  }
+  .calendar .leftCol .noteList li p {
+    font-size: 5vmin;
+  }
+  .calendar .leftCol .noteList li p img {
+    width: 5vmin !important;
+    height: 5vmin !important;
+  }
+  .calendar .leftCol .noteList .lck-list {
+    margin-left: -2vmin;
+    padding-left: 20vmin !important;
+    padding-top: 6vmin;
+  }
+  .calendar .leftCol .noteList .lck-list .lck-list-logo img {
+    width: 20vmin !important;
+    height: auto !important;
+  }
+  .calendar .leftCol .noteList .lck-list .lck-list-logo-bar {
+    font-size: 10vmin !important;
+  }
+  .go-prev {
+    margin: 0.5vmin 0 0 2vmin;
+  }
+  .go-next {
+    margin: 0.5vmin 0 0 93vmin;
   }
 }
 
