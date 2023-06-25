@@ -22,16 +22,33 @@ layout: default
     .masthead .site-title {
       display: none;
     }
-    .background-square {
+    .background-square{
       background-color: #24A091;
-      transform: rotate(-50deg);
-      border-radius: 50%;
+      border-radius: 1rem;
       opacity: 0.3;
       position: absolute;
-      width: 50rem;
-      height: 50rem;
-      top: -20rem;
-      left: 80vw;
+      &:nth-child(2) {
+        border-radius: 50%;
+        transform: rotate(-50deg);
+        width: 50rem;
+        height: 50rem;
+        top: -10rem;
+        left: 75vw;
+      }
+      &:nth-child(3) {
+        transform: rotate(10deg);
+        width: 80rem;
+        height: 80rem;
+        top: 90vh;
+        left: -10vw;
+      }
+      &:nth-child(4) {
+        transform: rotate(-10deg);
+        width: 80rem;
+        height: 80rem;
+        top: 180vh;
+        left: 50vw;
+      }
     }
     .welcome {
       margin: 20vh 0 0 15vw;
@@ -164,6 +181,8 @@ layout: default
 {{ content }}
 
 <div class="background-square"></div>
+<!-- <div class="background-square"></div>
+<div class="background-square"></div> -->
 <div style="height:60vh;">
   <div class="welcome">
     <span>welcome to</span>
