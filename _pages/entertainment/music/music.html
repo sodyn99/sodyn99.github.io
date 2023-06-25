@@ -53,7 +53,7 @@ sidebar:
     gapi.client.youtube.playlistItems.list({
       part: 'snippet',
       playlistId: 'PLK43-vRZrG5tCD5l2RDDBD62Kzbrk22oH',
-      maxResults: 10,
+      maxResults: 20,
     }).then(response => {
       const playlistItems = response.result.items;
       displayPlaylistItems(playlistItems);
@@ -66,10 +66,10 @@ sidebar:
     const firstHangulRegex = /^[ㄱ-ㅎㅏ-ㅣ가-힣]/;
     const charRegex = /\((.*?)\)/;
     const match = str.match(charRegex);
-    const firstCharacter = str.charAt(0);
     const hasHangul = hangulRegex.test(str);
+    var currentStr = '';
     if (hasHangul) {
-      if (firstHangulRegex.test(firstCharacter) == true) {
+      if (firstHangulRegex.test(str.charAt(0)) == true) {
         if (match && match[1]) {
           return str.replace(match[0], '').trim(); // 괄호 안에 있는 문자열 제거
         }
@@ -79,7 +79,26 @@ sidebar:
       }
       else {
         if (match && match[1]) {
-          return match[1].trim(); // 괄호 안에 있는 문자열만 추출
+          if (firstHangulRegex.test(match[1].trim().charAt(0)) == true) { //괄호 안이 한국어면
+            return match[1].trim(); // 괄호 안에 있는 문자열만 추출
+          }
+          else {
+            //return str.replace(match[0], '').trim().replace('...', ')'); // 괄호 안에 있는 문자열 제거
+            // console.log (str);
+            // console.log (str.replace(match[0], '').trim().replace('...', ')'));
+            // console.log (str.replace(match[0], '').trim().replace('...', ')').match(charRegex)[1].trim());
+            if (firstHangulRegex.test(str.replace(match[0], '').trim().replace('...', ')').match(charRegex)[1].trim().charAt(0)) == true) { // 괄호 안이 한국어면
+              if (str.replace(match[0], '').trim().replace('...', ')').match(charRegex)[1].trim().includes('(') == true && str.replace(match[0], '').trim().replace('...', ')').match(charRegex)[1].trim().includes(')') == false){
+                return str.replace(match[0], '').trim().replace('...', ')').match(charRegex)[1].trim() + ')'; // 괄호 안에 있는 문자열만 추출
+              }
+              else {
+                return str.replace(match[0], '').trim().replace('...', ')').match(charRegex)[1].trim(); // 괄호 안에 있는 문자열만 추출
+              }
+            }
+            else {
+              return str.replace(match[0], '').trim().replace(str.replace(match[0], '').trim().replace('...', ')').match(charRegex)[0], '').trim(); // 괄호 안에 있는 문자열 제거
+            }
+          }
         }
         else {
           return str;
@@ -102,7 +121,7 @@ sidebar:
       const videoId = item.snippet.resourceId.videoId;
       const title = item.snippet.title;
       const videoLink = document.createElement('a');
-      videoLink.href = `https://www.youtube.com/watch?v=${videoId}`;
+      videoLink.href = `https://www.youtube.com/embed/${videoId}`;
       videoLink.target = '_blank';
       videoLink.textContent = (index + 1) + '\u00A0\u00A0|\u00A0\u00A0' + extractHangulOnly(title);
       videoLink.classList.add('item');

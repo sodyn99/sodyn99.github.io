@@ -514,6 +514,10 @@
   font-family: $sans-serif-narrow;
   font-size: 0.9em;
   font-weight: bold;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  max-width: 80%;
 }
 
 /*

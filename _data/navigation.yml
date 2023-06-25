@@ -60,16 +60,16 @@ o-ran:
         url: /study/mobile/o-ran/1.1/
   - title: "2. 논문 리뷰"
     children:
-      - title: "Intelligence a..."
+      - title: "Intelligence and Learning in O-RAN for Data-Driven NextG Cellular Networks"
         index: "2.1"
         url: /study/mobile/o-ran/2.1/
-      - title: "ColO-RAN：D..."
+      - title: "ColO-RAN: Developing Machine Learning-based xApps for Open RAN Closed-loop Control on Programmable Experimental Platforms"
         index: "2.2"
         url: /study/mobile/o-ran/2.2/
-      - title: "Colosseum：L..."
+      - title: "Colosseum: Large-Scale Wireless Experimentation Through Hardware-in-the-Loop Network Emulation"
         index: "2.3"
         url: /study/mobile/o-ran/2.3/
-      - title: "OpenRAN Gym ..."
+      - title: "OpenRAN Gym: An Open Toolbox for Data Collection and Experimentation with AI in O-RAN"
         index: "2.4"
         url: /study/mobile/o-ran/2.4/
   - title: "3. 기타"
@@ -90,13 +90,13 @@ o-ran:
       - title: "High Data Rates"
         index: "2.1"
         url: /study/mobile/4g_lte/2.1/
-      - title: "Power Limited ..."
+      - title: "Power Limited Scenarios"
         index: "2.2"
         url: /study/mobile/4g_lte/2.2/
-      - title: "Bandwidth Lim..."
+      - title: "Bandwidth Limited Scenarios"
         index: "2.3"
         url: /study/mobile/4g_lte/2.3/
-      - title: "Multi-Carrier ..."
+      - title: "Multi-Carrier Transmission"
         index: "2.4"
         url: /study/mobile/4g_lte/2.4/
   - title: "3. OFDM"
@@ -104,7 +104,7 @@ o-ran:
       - title: "Concept"
         index: "3.1"
         url: /study/mobile/4g_lte/3.1/
-      - title: "OFDM Impleme..."
+      - title: "OFDM Implementation"
         index: "3.2"
         url: /study/mobile/4g_lte/3.2/
       - title: "Problem 1"
@@ -125,14 +125,14 @@ o-ran:
         url: /study/mobile/5g_nr/1.3/
   - title: "2. 5G RESOURCE ALLOCATION"
     children:
-      - title: "5G Resource A..."
+      - title: "5G Resource Allocation"
         index: "2.1"
         url: /study/mobile/5g_nr/2.1/
 
 aws:
   - title: "1. INTRO"
     children:
-      - title: "Cloud Computi..."
+      - title: "Cloud Computing"
         index: "1.1"
         url: /study/computer/aws/1.1/
       - title: "가상화"
@@ -208,7 +208,7 @@ java:
       - title: "유효범위"
         index: "3.3"
         url: /study/computer/javascript/3.3/
-      - title: "값으로서 함수와 ..."
+      - title: "값으로서 함수와 콜백"
         index: "3.4"
         url: /study/computer/javascript/3.4/
       - title: "클로저"
@@ -222,7 +222,7 @@ java:
         url: /study/computer/javascript/3.7/
   - title: "4. 객체지향프로그래밍"
     children:
-      - title: "객체지향프로..."
+      - title: "객체지향프로그래밍"
         index: "4.1"
         url: /study/computer/javascript/4.1/
       - title: "생성자와 new"
@@ -240,7 +240,7 @@ java:
       - title: "prototype"
         index: "4.6"
         url: /study/computer/javascript/4.6/
-      - title: "표준 내장 객..."
+      - title: "표준 내장 객체"
         index: "4.7"
         url: /study/computer/javascript/4.7/
       - title: "object"
@@ -271,32 +271,32 @@ linux:
       children:
         - title: "Linux 소개"
           index: "1.1"
-          url: /study/linux/1.1/
+          url: /study/computer/linux/1.1/
         - title: "Linux 설치"
           index: "1.2"
-          url: /study/linux/1.2/
+          url: /study/computer/linux/1.2/
     - title: "2. Orange Pi"
       children:
         - title: "About"
           index: "2.1"
-          url: /study/linux/2.1/
+          url: /study/computer/linux/2.1/
         - title: "Start"
           index: "2.2"
-          url: /study/linux/2.2/
+          url: /study/computer/linux/2.2/
         - title: "LED 켜기"
           index: "2.3"
-          url: /study/linux/2.3/
+          url: /study/computer/linux/2.3/
     - title: "3. Virtualization"
       children:
         - title: "VirtualBox"
           index: "3.1"
-          url: /study/linux/3.1/
-        - title: "Windows에 Li..."
+          url: /study/computer/linux/3.1/
+        - title: "Windows에 Linux 설치"
           index: "3.2"
-          url: /study/linux/3.2/
+          url: /study/computer/linux/3.2/
         - title: "Docker"
           index: "3.3"
-          url: /study/linux/3.3/
+          url: /study/computer/linux/3.3/
 
 lecture:
   - title: "1. 논리회로"
