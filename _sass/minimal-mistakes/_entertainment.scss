@@ -89,8 +89,8 @@
   text-decoration: none !important;
   color: #fff !important;
   font-size: 1.5vmin;
-  padding: 1vmin;
-  margin: 1vmin 0;
+  padding: 1vmin 2vmin;
+  margin: 1vmin 0 1vmin 0.5vmin;
   display: block;
   border-radius: 15px;
   transition: all 0.3s ease;
@@ -102,4 +102,25 @@
 .playlist .item:hover {
   color: #fff !important;
   background-color: #6454ED;
+}
+.playlist .active {
+  color: #5043c0 !important;
+  background-color: #f2f2f2;
+
+  &:hover {
+    color: #5043c0 !important;
+    background-color: #f2f2f2;
+  }
+}
+.playlist .active::after {
+  content: '';
+  position: relative;
+  float: right;
+  top: 0.5vmin;
+  right: 0;
+  width: 0;
+  height: 0;
+  border-top: 0.8vmin solid transparent;
+  border-bottom: 0.8vmin solid transparent;
+  border-left: 1.5vmin solid #5043c0;
 }

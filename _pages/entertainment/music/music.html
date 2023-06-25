@@ -15,7 +15,7 @@ sidebar:
 <div class="playlist">
   <div class="football_title" style="text-transform:uppercase;">Play List</div>
   <div style="float:left;width:45vmin;margin:0 3.2vmin 0 3.2vmin;border-radius:15px;overflow:hidden;">
-    <iframe id="player" width="720" height="720" src="https://www.youtube.com/embed/videoseries?list=PLK43-vRZrG5tCD5l2RDDBD62Kzbrk22oH&modestbranding=1&color=white&fs=0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+    <iframe id="player" width="720" height="720" src="https://www.youtube.com/embed/videoseries?list=PLK43-vRZrG5tCD5l2RDDBD62Kzbrk22oH&modestbranding=1&color=white&fs=0&rel=0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
   </div>
   <ul id="playlistContainer"></ul>
 </div>
@@ -33,6 +33,7 @@ sidebar:
 <script src="https://apis.google.com/js/api.js"></script>
 <script>
   const API_KEY = 'AIzaSyCCrnLhPqPsH6bMo2DkKoeUyzyemP3XjWk';
+  const iframe = document.getElementById('player');
   var index = 0;
 
   function handleClientLoad() {
@@ -109,6 +110,11 @@ sidebar:
       videoLink.addEventListener('click', function(event) {
         event.preventDefault();
         playVideo(videoId);
+        const activeLink = document.querySelector('.active');
+        if (activeLink) {
+          activeLink.classList.remove('active');
+        }
+        videoLink.classList.add('active');
       });
 
       const listItem = document.createElement('li');
@@ -118,8 +124,7 @@ sidebar:
     });
   }
   function playVideo(videoId) {
-    const iframe = document.getElementById('player');
-    const videoUrl = `https://www.youtube.com/embed/${videoId}?color=white&autoplay=1&cc_load_policy=1&modestbranding=1&fs=0`;
+    const videoUrl = `https://www.youtube.com/embed/${videoId}?color=white&autoplay=1&cc_load_policy=1&modestbranding=1&fs=0&rel=0`;
 
     iframe.src = videoUrl;
   }
