@@ -14,7 +14,7 @@ layout: default
       color: var(--text-color);
       font-family: 'termina', sans-serif;
       font-weight: 400;
-      overflow-x: hidden;
+      overflow-x: hidden !important;
     }
     .masthead {
       border-bottom: #f2f2f2 2px solid;
@@ -255,7 +255,7 @@ layout: default
     <button onclick="location.href='/entertainment/music/'" style="cursor:pointer;">Music</button>
   </div>
   <div class="recent-posts">
-    <buttom onclick="location.href='/categories/#study'" style="cursor:pointer;position:absolute;right:1rem;">More</buttom>
+    <buttom onclick="location.href='/categories/#entertainment'" style="cursor:pointer;position:absolute;right:1rem;">More</buttom>
     <h2>Recent Posts</h2>
     <div style="display:flex;flex-wrap:wrap;">
       {% if site.categories.Entertainment.size == 0 %}
