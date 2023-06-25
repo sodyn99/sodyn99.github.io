@@ -20,6 +20,7 @@
     overflow: hidden;
     cursor: pointer;
     -webkit-mask-image: -webkit-radial-gradient(white, black);
+    mask-image: radial-gradient(white, black);
 
     &:before {
       content: '';
