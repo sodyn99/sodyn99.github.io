@@ -14,7 +14,6 @@ layout: default
       color: var(--text-color);
       font-family: 'termina', sans-serif;
       font-weight: 400;
-      overflow-x: hidden !important;
     }
     .masthead {
       border-bottom: #f2f2f2 2px solid;
@@ -22,33 +21,24 @@ layout: default
     .masthead .site-title {
       display: none;
     }
-    .background-square{
+    .square-container {
+      position:absolute;
+      background:none;
+      overflow: hidden;
+      width:100vw;
+      height: 90vh;
+    }
+    .square-container .background-square {
       background-color: #24A091;
       border-radius: 1rem;
       opacity: 0.3;
-      position: absolute;
-      &:nth-child(2) {
-        border-radius: 50%;
-        transform: rotate(-50deg);
-        width: 50rem;
-        height: 50rem;
-        top: -10rem;
-        left: 75vw;
-      }
-      &:nth-child(3) {
-        transform: rotate(10deg);
-        width: 80rem;
-        height: 80rem;
-        top: 90vh;
-        left: -10vw;
-      }
-      &:nth-child(4) {
-        transform: rotate(-10deg);
-        width: 80rem;
-        height: 80rem;
-        top: 180vh;
-        left: 50vw;
-      }
+      position: relative;
+      border-radius: 50%;
+      transform: rotate(-50deg);
+      width: 50rem;
+      height: 50rem;
+      top: -10rem;
+      left: 75vw;
     }
     .welcome {
       margin: 20vh 0 0 15vw;
@@ -179,8 +169,9 @@ layout: default
   </style>
 </head>
 {{ content }}
-
-<div class="background-square"></div>
+<div class="square-container">
+  <div class="background-square"></div>
+</div>
 <!-- <div class="background-square"></div>
 <div class="background-square"></div> -->
 <div style="height:60vh;">
