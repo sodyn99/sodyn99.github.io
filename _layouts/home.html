@@ -42,8 +42,7 @@ layout: default
       left: 75vw;
     }
     .welcome {
-      right: -15%;
-      margin: 20vh 0 0 0;
+      margin: 20vh 0 0 30vw;
       position: relative;
       line-height: 3.5rem;
       font-size: 2rem;
@@ -94,6 +93,11 @@ layout: default
       left: 0px;
       right: 0px;
       bottom: 0px;
+    }
+    @media (max-width: 1024px) {
+      .welcome{
+        margin-left:5vmin;
+      }
     }
     .container {
       overflow-x: scroll;
