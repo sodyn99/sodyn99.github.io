@@ -307,6 +307,11 @@ lecture:
       - title: "현충일 대체 과제"
         index: "1.7"
         url: /study/lecture/%EB%85%BC%EB%A6%AC%ED%9A%8C%EB%A1%9C/1.7/
+  - title: "2. 요트"
+    children:
+      - title: "요트"
+        index: "2.1"
+        url: /study/lecture/%EC%9A%94%ED%8A%B8/2.1/
 
 
 ############ Sports ####################
