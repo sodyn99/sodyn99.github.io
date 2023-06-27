@@ -41,7 +41,8 @@ layout: default
       left: 75vw;
     }
     .welcome {
-      margin: 20vh 0 0 15vw;
+      right: -15%;
+      margin: 20vh 0 0 0;
       position: relative;
       line-height: 3.5rem;
       font-size: 2rem;
@@ -73,7 +74,7 @@ layout: default
         > a:hover {
           /* color: #24A091; */
           text-decoration: none;
-          filter: brightness(0.5);
+          filter: brightness(0.8);
         }
       }
     }
@@ -116,7 +117,7 @@ layout: default
         > a:hover {
           color: var(--text-color);
           text-decoration: none;
-          filter: brightness(0.5);
+          filter: brightness(1.8);
         }
       }
       > h2 {
@@ -129,11 +130,11 @@ layout: default
       flex-wrap: wrap;
       justify-content: center;
       > button {
-        margin: 0.5rem 5vmin;
+        margin: 0.5rem 2%;
         padding: 1rem;
         width: 10rem;
         height: 10rem;
-        border: 1px solid var(--button-color);
+        border: 2px solid #ddd;
         border-radius: 0.5rem;
         background-color: transparent;
         color: var(--button-color);
@@ -142,9 +143,15 @@ layout: default
         cursor: pointer;
         outline: none;
         transition: all 0.3s ease-in-out;
+        > i {
+          transition: none;
+          font-size: 2.5rem;
+          margin-bottom: 1rem;
+        }
         &:hover {
           background-color: var(--button-color);
           color: #fff;
+          border-color: var(--button-color);
         }
       }
     }
@@ -155,6 +162,12 @@ layout: default
       > h2 {
         font-family: 'termina', sans-serif;
         font-weight: 500;
+      }
+      > div a h3 {
+        font-family: rixgwangalli-pro, sans-serif;
+        font-style: normal;
+        font-weight: 100;
+        font-weight: 400;
       }
       .post-image {
         overflow: hidden;
@@ -178,15 +191,23 @@ layout: default
   <div class="welcome">
     <span>welcome to</span>
     <h1><a href="/">Asungajinli<img src="/images/logo.png"/></a></h1>
-    <span>blog</span>
   </div>
 </div>
 <div class="container">
   <h1><a href="/study/">Study</a></h1>
   <div id="studyButton" class="buttons">
-    <button onclick="location.href='/study/computer/'" style="cursor:pointer;">Computer</button>
-    <button onclick="location.href='/study/mobile/'" style="cursor:pointer;">Mobile</button>
-    <button onclick="location.href='/study/lecture/'" style="cursor:pointer;">Lecture</button>
+    <button onclick="location.href='/study/computer/'" style="cursor:pointer;">
+      <i class="fas fa-laptop"></i></br>
+      Computer
+    </button>
+    <button onclick="location.href='/study/mobile/'" style="cursor:pointer;">
+      <i class="fas fa-mobile-alt"></i></br>
+      Mobile
+    </button>
+    <button onclick="location.href='/study/lecture/'" style="cursor:pointer;">
+      <i class="fas fa-book"></i></br>
+      Lecture
+    </button>
   </div>
   <div class="recent-posts">
     <buttom onclick="location.href='/categories/#study'" style="cursor:pointer;position:absolute;right:1rem;">More</buttom>
@@ -213,8 +234,14 @@ layout: default
 <div class="container">
   <h1><a href="/sports/">Sports</a></h1>
   <div id="sportsButton" class="buttons">
-    <button onclick="location.href='/sports/football/'" style="cursor:pointer;">Football</button>
-    <button onclick="location.href='/sports/esports/'" style="cursor:pointer;">Esports</button>
+    <button onclick="location.href='/sports/football/'" style="cursor:pointer;">
+      <i class="fas fa-futbol"></i></br>
+      Football
+    </button>
+    <button onclick="location.href='/sports/esports/'" style="cursor:pointer;">
+      <i class="fas fa-gamepad"></i></br>
+      Esports
+    </button>
   </div>
   <div class="recent-posts">
     <buttom onclick="location.href='/categories/#sports'" style="cursor:pointer;position:absolute;right:1rem;">More</buttom>
@@ -241,9 +268,18 @@ layout: default
 <div class="container">
   <h1><a href="/entertainment/">Entertainment</a></h1>
   <div id="entertainmentButton" class="buttons">
-    <button onclick="location.href='/entertainment/movie/'" style="cursor:pointer;">Movie</button>
-    <button onclick="location.href='/entertainment/drama/'" style="cursor:pointer;">Drama</button>
-    <button onclick="location.href='/entertainment/music/'" style="cursor:pointer;">Music</button>
+    <button onclick="location.href='/entertainment/movie/'" style="cursor:pointer;">
+      <i class="fas fa-film"></i></br>
+      Movie
+    </button>
+    <button onclick="location.href='/entertainment/drama/'" style="cursor:pointer;">
+      <i class="fas fa-theater-masks"></i></br>
+      Drama
+    </button>
+    <button onclick="location.href='/entertainment/music/'" style="cursor:pointer;">
+      <i class="fas fa-music"></i></br>
+      Music
+    </button>
   </div>
   <div class="recent-posts">
     <buttom onclick="location.href='/categories/#entertainment'" style="cursor:pointer;position:absolute;right:1rem;">More</buttom>
