@@ -8,11 +8,12 @@ layout: default
       --con-color: #f2f2f2;
       --text-color: #333;
       --button-color: #24A091;
+      --font: 'termina', sans-serif;
     }
     body {
       background-color: var(--bg-color);
       color: var(--text-color);
-      font-family: 'termina', sans-serif;
+      font-family: var(--font);
       font-weight: 400;
     }
     .masthead {
@@ -56,12 +57,13 @@ layout: default
       justify-content: center;
       white-space: nowrap;
       > h1 {
-        font-family: 'termina', sans-serif;
+        font-family: var(--font);
         font-weight: 700;
         position: relative;
         margin-bottom: 0;
         width: 25rem;
         > a {
+          font-family: var(--font);
           color: var(--text-color);
           text-decoration: none;
           display: flex;
@@ -103,7 +105,7 @@ layout: default
       margin-bottom: 5rem;
       > h1 {
         font-size:2.5rem;
-        font-family: 'termina', sans-serif;
+        font-family: var(--font);
         position: relative;
         > a {
           color: var(--text-color);
@@ -121,7 +123,7 @@ layout: default
         }
       }
       > h2 {
-        font-family: 'termina', sans-serif;
+        font-family: var(--font);
         font-weight: 500;
       }
     }
@@ -138,7 +140,7 @@ layout: default
         border-radius: 0.5rem;
         background-color: transparent;
         color: var(--button-color);
-        font-family: 'termina', sans-serif;
+        font-family: var(--font);
         font-weight: 500;
         cursor: pointer;
         outline: none;
@@ -160,14 +162,13 @@ layout: default
       position: relative;
       margin-top: 1rem;
       > h2 {
-        font-family: 'termina', sans-serif;
+        font-family: var(--font);
         font-weight: 500;
       }
       > div a h3 {
-        font-family: rixgwangalli-pro, sans-serif;
+        font-family: 'rixgwangalli-pro', sans-serif;
         font-style: normal;
         font-weight: 100;
-        font-weight: 400;
       }
       .post-image {
         overflow: hidden;

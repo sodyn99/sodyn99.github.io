@@ -156,6 +156,9 @@ footer:
     - label: "Email"
       icon: "fas fa-fw fa-envelope-square"
       url: "mailto:ssjj3552@gmail.com"
+    - label: "Copyright"
+      icon: "fas fa-fw fa-copyright"
+      url: "/copyright/"
 
 
 # Reading Files

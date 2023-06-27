@@ -10,12 +10,12 @@ sidebar:
 ---
 <div class="table_container" style="height:20vmin;">
   <img src="/images/esports/lol/lck-banner_logo.svg" style="float:left; height:60%; margin-left:5vmin; margin-top:4vmin;">
-  <img src="/images/esports/lol/lck-banner_bar.png" style="float:left; user-select:none; -webkit-user-drag:none; height:70%; width:9%; margin-top:3vmin;">
-  <div id="season" class="lck_title" style="padding-top:4vmin; float:left; font-size:8vmin; line-height: 5vmin">
+  <img src="/images/esports/lol/lck-banner_bar.png" style="float:left; user-select:none; -webkit-user-drag:none; height:70%; width:8%; margin-top:3vmin;">
+  <div id="season" class="lck_title" style="padding-top:4vmin; float:left; font-size:7vmin; line-height: 5vmin">
     <!-- <span style="font-size:5.8vmin;">spring</span> -->
   </div>
-  <img src="/images/esports/lol/lck-banner_bar.png" style="float:left; user-select:none; -webkit-user-drag:none; height:70%; width:9%; margin-top:3vmin;">
-  <div id="round" class="lck_title" style="padding-top:1.6vmin; float:left; font-size:7vmin; line-height: 1.3vmin">
+  <img src="/images/esports/lol/lck-banner_bar.png" style="float:left; user-select:none; -webkit-user-drag:none; height:70%; width:8%; margin-top:3vmin;">
+  <div id="round" class="lck_title" style="padding-top:1.6vmin; float:left; font-size:5vmin; line-height: 2.2vmin">
   </div>
 </div>
 <hr>
@@ -70,7 +70,7 @@ sidebar:
       </video>
       <div class="video-help"></div>
       <div class="dark-box">
-        <div class="dark-inner-box" style="font-size:4vmin;font-family:'LCKTitle Extended';">chovy</div>
+        <div class="dark-inner-box" style="font-size:4vmin;font-family:'ChaneyUltraextended';">chovy</div>
         <!-- <img style="float:left;height:6%;margin-top:1vmin;" src="/images/esports/lol/lck/gen-logo.png"/> -->
         <div class="dark-inner-box">&nbsp;Akali | GEN</div>
         <div class="dark-inner-box" style="font-weight:bold; margin-bottom:4.5vmin;">&nbsp;SKIRMISH</div>
@@ -87,7 +87,7 @@ sidebar:
       </video>
       <div class="video-help"></div>
       <div class="dark-box">
-        <div class="dark-inner-box" style="font-size:4vmin;font-family:'LCKTitle Extended';">doran</div>
+        <div class="dark-inner-box" style="font-size:4vmin;font-family:'ChaneyUltraextended';">doran</div>
         <!-- <img style="float:left;height:6%;margin-top:1vmin;" src="/images/esports/lol/lck/gen-logo.png"/> -->
         <div class="dark-inner-box">&nbsp;Jayce | GEN</div>
         <div class="dark-inner-box" style="font-weight:bold; margin-bottom:4.5vmin;">&nbsp;TEAMFIGHT</div>
@@ -104,7 +104,7 @@ sidebar:
       </video>
       <div class="video-help"></div>
       <div class="dark-box">
-        <div class="dark-inner-box" style="font-size:4vmin;font-family:'LCKTitle Extended';">doran</div>
+        <div class="dark-inner-box" style="font-size:4vmin;font-family:'ChaneyUltraextended';">doran</div>
         <!-- <img style="float:left;height:6%;margin-top:1vmin;" src="/images/esports/lol/lck/gen-logo.png"/> -->
         <div class="dark-inner-box">&nbsp;Gwen | GEN</div>
         <div class="dark-inner-box" style="font-weight:bold; margin-bottom:4.5vmin;">&nbsp;PLAYMAKING</div>
@@ -166,22 +166,22 @@ sidebar:
   const season = "summer";
   const league = "lck";
   // round : regular(1, 2), playoff(3, 4), final
-  const round = "1";
+  const round = "final";
 
   pageTitle.style.display = "none";
   if (season == "spring")
-    document.getElementById("season").innerHTML = year+'<br><span style="font-size:5.77vmin;">'+season+'</span>';
+    document.getElementById("season").innerHTML = year+'<br><span style="font-size:5.1vmin;">'+season+'</span>';
   else if (season == "summer")
-    document.getElementById("season").innerHTML = year+'<br><span style="font-size:5.05vmin;">'+season+'</span>';
+    document.getElementById("season").innerHTML = year+'<br><span style="font-size:4.4vmin;">'+season+'</span>';
 
   if (round == "1" || round == "2")
-    document.getElementById("round").innerHTML = '<span style="font-size:3vmin;">regular<br>season</span><span style="user-select:none;"><br><br><br><br><br></span><span style="font-size:7vmin;">'+round+'R</span>';
+    document.getElementById("round").innerHTML = '<span style="font-size:3vmin;">regular<br>season</span><span style="user-select:none;"><br><br><br></span><span style="font-size:7vmin;">'+round+'R</span>';
   else if (round == "3" || round == "4")
-    document.getElementById("round").innerHTML = '<span style="margin-left:4vmin; font-size:3vmin;">play</span><br><span style="margin-left:4vmin; font-size:3vmin;">off</span><span style="user-select:none;"><br><br><br><br><br></span><span style="margin-left:4vmin; font-size:7vmin;">'+round+'R</span>';
+    document.getElementById("round").innerHTML = '<span style="margin-left:4vmin; font-size:3vmin;">play</span><br><span style="margin-left:4vmin; font-size:3vmin;">off</span><span style="user-select:none;"><br><br><br></span><span style="margin-left:4vmin; font-size:7vmin;">'+round+'R</span>';
   else if (round == "final")
-    document.getElementById("round").innerHTML = '<span style="user-select:none;"><br><br><br><br><br></span><span style="font-size:5.5vmin;">'+round+'</span>';
+    document.getElementById("round").innerHTML = '<span style="user-select:none;"><br><br><br></span><span style="font-size:5.5vmin;">'+round+'</span>';
   else
-    document.getElementById("round").innerHTML = '<span style="user-select:none; font-size:5vmin;"><br><br><br><br><br></span><span style="font-size:5.5vmin;">'+round+'</span>';
+    document.getElementById("round").innerHTML = '<span style="user-select:none; font-size:5vmin;"><br><br><br></span><span style="font-size:5.5vmin;">'+round+'</span>';
 
   function select(val){
     var date_info = $(val).attr('data-value').split('<br>');
