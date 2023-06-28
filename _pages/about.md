@@ -30,7 +30,7 @@ Asungajinli
   💼 Student.<br><br>
 </div>
 
-#### 🌐&nbsp;Contact
+#### 🌐&nbsp;Contact Me
 
 <a href="https://github.com/asungajinli" style="text-decoration:none;color:black;" rel="nofollow noopener noreferrer">
   <i class="fab fa-fw fa-github" aria-hidden="true"></i>
@@ -40,14 +40,17 @@ Asungajinli
   <i class="fab fa-fw fa-instagram" aria-hidden="true"></i>
 </a>
 &nbsp;&nbsp;
+<span class="modal-link" data-target="myModal" style="text-decoration:none;color:black;" rel="nofollow noopener noreferrer me">
+  <i class="fas fa-fw fa-comment" style="cursor:pointer;" aria-hidden="true"></i>
+</span>
+&nbsp;&nbsp;
 <a href="https://www.linkedin.com/in/asungajinli" style="text-decoration:none;color:black;" rel="nofollow noopener noreferrer me">
   <i class="fab fa-fw fa-linkedin" aria-hidden="true"></i>
 </a>
 &nbsp;&nbsp;
-<a href="mailto:ssjj3552@gmail.com" style="text-decoration:none;color:black;" rel="me">
+<a href="mailto:ssjj3552@gmail.com" style="text-decoration:none;color:black;margin-bottom:8rem;" rel="me">
   <i class="fas fa-fw fa-envelope-square" aria-hidden="true"></i>
 </a>
-<br><br>
 
 
 ## About Blog
@@ -79,6 +82,32 @@ Asungajinli
 
 #### <i class="fas fa-fw fa-copyright" aria-hidden="true"></i> Copyright
 Copyright 2023. Lee Sung Jin All pictures cannot be copied without permission.<br>
-<a href="/copyright/" style="text-decoration:none;" rel="nofollow noopener noreferrer"> Copyright 출처</a>
+<a href="/copyright/" style="text-decoration:none;" rel="nofollow noopener noreferrer"> Copyright Attribution</a>
 
 ---
+
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script>
+$(document).ready(function() {
+  // 모달 링크 클릭 이벤트 처리
+  $(".modal-link").click(function(event) {
+    imgSrc='/images/to/KakaoAddFriend.png'
+    imgAlt = 'QR코드를 찍으세요';
+    $('#modalImg').attr('src', imgSrc);
+    $('#caption').text(imgAlt);
+    $('#myModal').fadeIn();
+    adjustModalSize();
+    $(document).mousedown(function(e) {
+        var modalContent = $('.modal-content');
+        if (!modalContent.is(e.target) && modalContent.has(e.target).length === 0) {
+            $('#myModal').fadeOut('fast');
+        }
+    });
+  });
+  // 모달 닫기 버튼 클릭 이벤트 처리
+  $('.close').on('click', function() {
+      $('#myModal').fadeOut('fast');
+  });
+});
+
+</script>

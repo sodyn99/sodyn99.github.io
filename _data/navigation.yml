@@ -30,7 +30,7 @@ home:
         icon: "fas fa-film"
         url: /entertainment/movie/
       - title: "Drama"
-        icon: "fas fa-desktop"
+        icon: "fas fa-theater-masks"
         url: /entertainment/drama/
       - title: "Music"
         icon: "fas fa-music"
