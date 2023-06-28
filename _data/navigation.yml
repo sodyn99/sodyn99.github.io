@@ -341,7 +341,7 @@ football:
     - title: "International"
       icon: "fas fa-globe"
       children:
-        - title: "국가대표"
+        - title: "National Team"
           url: /sports/football/national/
         - title: "World Cup"
           url: /sports/football/worldcup/
