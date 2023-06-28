@@ -9,6 +9,7 @@ layout: default
       --text-color: #333;
       --button-color: #24A091;
       --font: 'termina', sans-serif;
+      --back-height: 200vh;
     }
     body {
       background-color: var(--bg-color);
@@ -23,26 +24,34 @@ layout: default
       display: none;
     }
     .square-container {
-      position:absolute;
+      position:relative;
       background:none;
       overflow: hidden;
       width:100vw;
-      height: 90vh;
+      height: var(--back-height);
     }
     .square-container .background-square {
       background-color: #24A091;
       border-radius: 1rem;
       opacity: 0.3;
-      position: relative;
+      position: absolute;
       border-radius: 50%;
       transform: rotate(-50deg);
-      width: 50rem;
-      height: 50rem;
-      top: -18rem;
-      left: 75vw;
+      &:nth-child(1) {
+        width: 50rem;
+        height: 50rem;
+        top: -18rem;
+        left: 75vw;
+      }
+      &:nth-child(2) {
+        width: 50rem;
+        height: 50rem;
+        top: 32em;
+        left: -20rem;
+      }
     }
     .welcome {
-      margin: 20vh 0 0 30vw;
+      margin: calc(20vh - var(--back-height)) 0 0 30vw;
       position: relative;
       line-height: 3.5rem;
       font-size: 2rem;
@@ -169,11 +178,6 @@ layout: default
         font-family: var(--font);
         font-weight: 500;
       }
-      > div a h3 {
-        font-family: 'rixgwangalli-pro', sans-serif;
-        font-style: normal;
-        font-weight: 100;
-      }
       .post-image {
         border-radius: 0.5rem;
         filter: opacity(0.7);
@@ -185,11 +189,18 @@ layout: default
           transform: scale(1.1);
         }
       }
+      > div a h3 {
+        color: var(--text-color);
+        font-family: 'rixgwangalli-pro', sans-serif;
+        font-style: normal;
+        font-weight: 100;
+      }
     }
   </style>
 </head>
-{{ content }}
+
 <div class="square-container">
+  <div class="background-square"></div>
   <div class="background-square"></div>
 </div>
 <!-- <div class="background-square"></div>
