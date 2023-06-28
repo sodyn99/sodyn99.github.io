@@ -14,7 +14,8 @@
   animation: $intro-transition;
   -webkit-animation-delay: 0.45s;
   animation-delay: 0.45s;
-  background-color: $footer-background-color;
+  //background-color: $footer-background-color;
+  border-top: #f2f2f2 4px solid;
 
   footer {
     @include clearfix;
@@ -34,7 +35,9 @@
     text-decoration: none;
 
     &:hover {
-      text-decoration: underline;
+      text-decoration: none;
+      color: $masthead-link-color-hover;
+      transition: none;
     }
   }
 
