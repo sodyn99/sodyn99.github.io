@@ -9,8 +9,8 @@ sidebar:
 
 <br><br>
 <p><img src="/images/account.png" width="10%" height="10%"></p>
-아성가진리  
-Asungajinli  
+아성가진리
+Asungajinli
 
 ## About Me
 <p></p>
@@ -32,19 +32,19 @@ Asungajinli
 
 #### 🌐&nbsp;Contact
 
-<a href="https://github.com/asungajinli" itemprop="sameAs" rel="nofollow noopener noreferrer me">
+<a href="https://github.com/asungajinli" style="text-decoration:none;color:black;" rel="nofollow noopener noreferrer">
   <i class="fab fa-fw fa-github" aria-hidden="true"></i>
 </a>
 &nbsp;&nbsp;
-<a href="https://instagram.com/s_din.99" itemprop="sameAs" rel="nofollow noopener noreferrer me">
+<a href="https://instagram.com/s_din.99" style="text-decoration:none;color:black;" rel="nofollow noopener noreferrer me">
   <i class="fab fa-fw fa-instagram" aria-hidden="true"></i>
 </a>
 &nbsp;&nbsp;
-<a href="https://www.linkedin.com/in/asungajinli" itemprop="sameAs" rel="nofollow noopener noreferrer me">
+<a href="https://www.linkedin.com/in/asungajinli" style="text-decoration:none;color:black;" rel="nofollow noopener noreferrer me">
   <i class="fab fa-fw fa-linkedin" aria-hidden="true"></i>
 </a>
 &nbsp;&nbsp;
-<a href="mailto:ssjj3552@gmail.com" itemprop="email" rel="me">
+<a href="mailto:ssjj3552@gmail.com" style="text-decoration:none;color:black;" rel="me">
   <i class="fas fa-fw fa-envelope-square" aria-hidden="true"></i>
 </a>
 <br><br>
@@ -76,5 +76,9 @@ Asungajinli
 <span class = "box" style="display: inline-block; width: 25px; text-align: center;" markdown = "1">
   <span style="color:#6454ED">■</span>
 &nbsp;#6454ED&nbsp;&nbsp;|&nbsp;&nbsp;Blue</p>
+
+#### <i class="fas fa-fw fa-copyright" aria-hidden="true"></i> Copyright
+Copyright 2023. Lee Sung Jin All pictures cannot be copied without permission.<br>
+<a href="/copyright/" style="text-decoration:none;" rel="nofollow noopener noreferrer"> Copyright 출처</a>
 
 ---

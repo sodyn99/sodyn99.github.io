@@ -68,6 +68,21 @@
   });
 </script>
 
+<!-- kakaotalk sharing -->
+<script src="https://t1.kakaocdn.net/kakao_js_sdk/2.1.0/kakao.min.js" integrity="sha384-dpu02ieKC6NUeKFoGMOKz6102CLEWi9+5RQjWSV0ikYSFFd8M3Wp2reIcquJOemx" crossorigin="anonymous"></script>
+<script>
+  Kakao.init('c7061823133572c4f528e1e0725a59cc'); // 사용하려는 앱의 JavaScript 키 입력
+  function shareMessage() {
+    Kakao.Share.sendCustom({
+      templateId: 94266,
+      templateArgs: {
+        title: "{{ page.title }}",
+        url : "{{ page.url }}",
+      },
+    });
+  }
+</script>
+
 <!-- 404.html -->
 <script>
   var pageX = $(document).width();
