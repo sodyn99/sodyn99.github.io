@@ -1,0 +1,199 @@
+---
+layout: single
+title: "Module"
+categories: Study Computer Python
+tag: Python
+toc: false
+sidebar:
+  title: "Python"
+  nav: python
+  parent: true
+author_profile: false
+---
+<!-- abcdefghijklmnopqrstuvwxyz -->
+<ol>
+  <li>
+    <dt>fnmatch</dt>
+    <dd>파일 이름을 패턴으로 매칭시키는 함수</dd>
+    <dd class="small"><details>
+      <summary>함수</summary>
+      <ul>
+        <li><code>fnmatch.fnmatch(name, pat)</code> : name이 pat과 매칭되면 True</li>
+        <li><code>fnmatch.fnmatchcase(name, pat)</code> : name이 pat과 매칭되면 True, 대소문자 구분</li>
+        <li><code>fnmatch.filter(names, pat)</code> : names에서 pat과 매칭되는 이름만 반환</li>
+        <li><code>fnmatch.translate(pat)</code> : 패턴을 정규식으로 변환</li>
+      </ul>
+    </details></dd>
+    <dd class="small"><details>
+      <summary>패턴</summary>
+      <ul>
+        <li><code>*</code> : 모든 문자열</li>
+        <li><code>?</code> : 한 문자</li>
+        <li><code>[seq]</code> : seq 안에 있는 문자 중 하나</li>
+        <li><code>[!seq]</code> : seq 안에 없는 문자 중 하나</li>
+      </ul>
+    </details></dd>
+    <dd class="small"><details>
+      <summary>예제</summary>
+      <ul>
+        <li><code>fnmatch.fnmatch('foo.txt', '*.txt')</code> : True</li>
+        <li><code>fnmatch.fnmatch('foo.txt', '?oo.txt')</code> : True</li>
+        <li><code>fnmatch.fnmatch('Dat45.csv', 'Dat[0-9]*')</code> : True</li>
+        <li><code>fnmatch.fnmatch('foo.txt', '*.TXT')</code> : False</li>
+      </ul>
+    </details></dd>
+  </li>
+  <li>
+    <dt>os</dt>
+    <dd>운영체제와 상호작용하기 위한 함수<br>파일 및 디렉토리 조작, 환경 변수 액세스, 프로세스 관리 등 다양한 작업을 수행.</dd>
+    <dd class="small"><details>
+      <summary>함수</summary>
+      <ul>
+        <li><code>os.getcwd()</code> : 현재 작업 디렉토리</li>
+        <li><code>os.chdir(path)</code> : 작업 디렉토리 변경</li>
+        <li><code>os.system(command)</code> : 시스템 명령어 실행</li>
+        <li><code>os.listdir(path)</code> : 디렉토리 내 파일 목록</li>
+        <li><code>os.remove(path)</code> : 파일 삭제</li>
+        <li><code>os.rename(src, dst)</code> : 파일 이름 변경</li>
+        <li><code>os.mkdir(path)</code> : 디렉토리 생성</li>
+      </ul>
+    </details></dd>
+    <dd class="small"><details>
+      <summary>예제</summary>
+      <ul>
+
+      </ul>
+    </details></dd>
+  </li>
+  <li>
+    <dt>optparse</dt>
+    <dd>명령행 옵션 파싱을 위한 모듈</dd>
+    <dd class="small"><details>
+      <summary>함수</summary>
+      <ul>
+        <li><code>optparse.OptionParser()</code> : 파서 생성</li>
+        <li><code>parser.add_option()</code> : 옵션 추가</li>
+        <li><code>parser.parse_args()</code> : 옵션 파싱</li>
+      </ul>
+    </details></dd>
+    <dd class="small"><details>
+      <summary>예제</summary>
+      <ul>
+
+      </ul>
+    </details></dd>
+  </li>
+  <li>
+    <dt>shutil</dt>
+    <dd>파일과 디렉토리 관리를 위한 함수</dd>
+    <dd class="small"><details>
+      <summary>함수</summary>
+      <ul>
+        <li><code>shutil.copyfile(src, dst)</code> : src를 dst로 복사</li>
+        <li><code>shutil.move(src, dst)</code> : src를 dst로 이동</li>
+        <li><code>shutil.copytree(src, dst)</code> : src 디렉토리를 dst로 복사</li>
+        <li><code>shutil.rmtree(path)</code> : 디렉토리 삭제</li>
+      </ul>
+    </details></dd>
+  </li>
+  <li>
+    <dt>signal</dt>
+    <dd>시그널 처리를 위한 함수</dd>
+    <dd class="small"><details>
+      <summary>함수</summary>
+      <ul>
+        <li><code>signal.signal(signalnum, handler)</code> : 시그널 핸들러 등록</li>
+        <li><code>signal.pause()</code> : 시그널 대기</li>
+      </ul>
+    </details></dd>
+  </li>
+  <li>
+    <dt>subprocess</dt>
+    <dd>서브프로세스 생성을 위한 함수</dd>
+    <dd class="small"><details>
+      <summary>함수</summary>
+      <ul>
+        <li><code>subprocess.call(args, *, stdin=None, stdout=None, stderr=None, shell=False)</code> : 외부 명령어 실행</li>
+        <li><code>subprocess.check_call(args, *, stdin=None, stdout=None, stderr=None, shell=False)</code> : 외부 명령어 실행, 성공 시 0 반환</li>
+        <li><code>subprocess.check_output(args, *, stdin=None, stderr=None, shell=False, universal_newlines=False)</code> : 외부 명령어 실행, 성공 시 결과 반환</li>
+        <li><code>subprocess.Popen(args, bufsize=-1, executable=None, stdin=None, stdout=None, stderr=None, preexec_fn=None, close_fds=True, shell=False, cwd=None, env=None, universal_newlines=False, startupinfo=None, creationflags=0, restore_signals=True, start_new_session=False, pass_fds=(), *, encoding=None, errors=None)</code> : 외부 명령어 실행, Popen 객체 반환</li>
+      </ul>
+    </details></dd>
+  </li>
+  <li>
+    <dt><a href="https://docs.python.org/ko/3/library/sys.html#module-sys"></a>sys</a></dt>
+    <dd> 시스템 수준의 조작을 수행하는 함수와 변수를 제공</dd>
+    <dd class="small"><details>
+      <summary>함수</summary>
+      <ul>
+        <li><code>sys.argv</code> : 명령행 인자</li>
+        <li><code>sys.exit([arg])</code> : 프로그램 종료</li>
+        <li><code>sys.path</code> : 모듈 검색 경로</li>
+        <li><code>sys.platform</code> : 운영체제</li>
+        <li><code>sys.stdin</code> : 표준 입력</li>
+        <li><code>sys.stdout</code> : 표준 출력</li>
+        <li><code>sys.stderr</code> : 표준 에러 출력</li>
+        <li><code>sys.exc_info()</code> : 예외 정보</li>
+        <li><code>sys.version</code> : 파이썬 버전</li>
+        <li><code>sys.maxint</code> : 정수의 최대값</li>
+        <li><code>sys.maxsize</code> : 정수의 최대값</li>
+        <li><code>sys.maxunicode</code> : 유니코드의 최대값</li>
+      </ul>
+    </details></dd>
+  </li>
+  <li>
+    <dt>threading</dt>
+    <dd>스레드 생성을 위한 함수</dd>
+    <dd class="small"><details>
+      <summary>함수</summary>
+      <ul>
+        <li><code>threading.Thread()</code> : 스레드 생성</li>
+        <li><code>threading.activeCount()</code> : 활성화된 스레드 수</li>
+        <li><code>threading.currentThread()</code> : 현재 스레드 객체</li>
+        <li><code>threading.enumerate()</code> : 활성화된 스레드 목록</li>
+        <li><code>threading.activeCount()</code> : 활성화된 스레드 수</li>
+        <li><code>threading.Lock()</code> : 락 객체 생성</li>
+        <li><code>threading.RLock()</code> : 재진입 락 객체 생성</li>
+        <li><code>threading.Condition()</code> : 조건 객체 생성</li>
+        <li><code>threading.Semaphore()</code> : 세마포어 객체 생성</li>
+        <li><code>threading.BoundedSemaphore()</code> : 바운드 세마포어 객체 생성</li>
+        <li><code>threading.Timer()</code> : 타이머 객체 생성</li>
+        <li><code>threading.Event()</code> : 이벤트 객체 생성</li>
+        <li><code>threading.Barrier()</code> : 바리어 객체 생성</li>
+        <li><code>threading.Thread.isAlive()</code> : 스레드가 활성화되었는지 확인</li>
+        <li><code>threading.Thread.getName()</code> : 스레드 이름</li>
+        <li><code>threading.Thread.setName(name)</code> : 스레드 이름 설정</li>
+        <li><code>threading.Thread.isDaemon()</code> : 데몬 스레드인지 확인</li>
+        <li><code>threading.Thread.setDaemon(daemonic)</code> : 데몬 스레드 설정</li>
+        <li><code>threading.Thread.start()</code> : 스레드 시작</li>
+        <li><code>threading.Thread.run()</code> : 스레드 실행</li>
+        <li><code>threading.Thread.join(timeout=None)</code> : 스레드 종료 대기</li>
+        <li><code>threading.Thread.ident</code> : 스레드 식별자</li>
+    </details></dd>
+  </li>
+  <li>
+    <dt>time</dt>
+    <dd>시간과 관련된 함수</dd>
+    <dd class="small"><details>
+      <summary>함수</summary>
+      <ul>
+        <li><code>time.time()</code> : 1970년 1월 1일 0시 0분 0초 이후 경과 시간</li>
+        <li><code>time.localtime()</code> : time.time()을 struct_time 객체로 변환</li>
+        <li><code>time.strftime(format, t)</code> : struct_time 객체를 format 형식으로 변환</li>
+        <li><code>time.sleep(secs)</code> : secs만큼 대기</li>
+      </ul>
+    </details></dd>
+  </li>
+  <li>
+    <dt>utils</dt>
+    <dd>파이썬 인터프리터가 제공하는 변수와 함수</dd>
+
+  </li>
+  <li>
+    <dt>xml.dom.minidom</dt>
+  </li>
+
+</ol>
+<hr>
+<h1>Reference</h1>
+<p>Chat GPT의 설명을 참고함.</p>
