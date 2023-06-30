@@ -1,0 +1,181 @@
+:root {
+    --bg-color: #fff;
+    --con-color: #f2f2f2;
+    --text-color: #333;
+    --button-color: #24A091;
+    --font: 'termina', sans-serif;
+    --back-height: 200vh;
+}
+.square-container {
+    position:relative;
+    background:none;
+    overflow: hidden;
+    width:100vw;
+    height: var(--back-height);
+    }
+    .square-container .background-square {
+    background-color: #24A091;
+    border-radius: 1rem;
+    opacity: 0.3;
+    position: absolute;
+    border-radius: 50%;
+    transform: rotate(-50deg);
+    &:nth-child(1) {
+        width: 50rem;
+        height: 50rem;
+        top: -18rem;
+        left: 75vw;
+    }
+    &:nth-child(2) {
+        width: 50rem;
+        height: 50rem;
+        top: 32em;
+        left: -20rem;
+    }
+}
+.welcome {
+    margin: calc(20vh - var(--back-height)) 0 0 30vw;
+    position: relative;
+    line-height: 3.5rem;
+    font-size: 2rem;
+    color: var(--text-color);
+    padding: 4rem;
+    width: 20rem;
+    height: 15rem;
+    display: flex;
+    overflow: visible;
+    flex-direction: column;
+    justify-content: center;
+    white-space: nowrap;
+    > h1 {
+        font-family: var(--font);
+        font-weight: 700;
+        position: relative;
+        margin-bottom: 0;
+        width: 25rem;
+        > a {
+        font-family: var(--font);
+        color: var(--text-color);
+        text-decoration: none;
+        display: flex;
+        > img {
+            transform: scaleX(-1);
+            height: 3.5rem;
+            margin-right: 0.5rem;
+        }
+        }
+        > a:hover {
+        /* color: #24A091; */
+        text-decoration: none;
+        filter: brightness(0.8);
+        }
+    }
+}
+.welcome::before {
+    content: '';
+    /* background: url('/images/background/welcome.jpg'); */
+    background-color: #24A091;
+    background-size: cover;
+    background-position: center;
+    transform: rotate(-60deg);
+    border-radius: 50%;
+    opacity: 0.3;
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    right: 0px;
+    bottom: 0px;
+    }
+    @media (max-width: 1024px) {
+    .welcome{
+        margin-left:5vmin;
+    }
+}
+.container {
+    overflow-x: scroll;
+    position: relative;
+    background-color: var(--con-color);
+    border-radius: 1rem;
+    padding: 3rem 3rem 1rem 3rem;
+    margin-top: 1rem;
+    margin-bottom: 5rem;
+    > h1 {
+        font-size:2.5rem;
+        font-family: var(--font);
+        position: relative;
+        > a {
+        color: var(--text-color);
+        text-decoration: none;
+        display: flex;
+        > img {
+            height: 3.5rem;
+            margin-right: 0.5rem;
+        }
+        }
+        > a:hover {
+        color: var(--text-color);
+        text-decoration: none;
+        filter: brightness(1.8);
+        }
+    }
+    > h2 {
+        font-family: var(--font);
+        font-weight: 500;
+    }
+}
+.buttons {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    > button {
+        margin: 0.5rem 2%;
+        padding: 1rem;
+        width: 10rem;
+        height: 10rem;
+        border: 2px solid #ddd;
+        border-radius: 0.5rem;
+        background-color: transparent;
+        color: var(--button-color);
+        font-family: var(--font);
+        font-weight: 500;
+        cursor: pointer;
+        outline: none;
+        transition: all 0.3s ease-in-out;
+        > i {
+        transition: none;
+        font-size: 2.5rem;
+        margin-bottom: 1rem;
+        }
+        &:hover {
+        background-color: var(--button-color);
+        color: #fff;
+        border-color: var(--button-color);
+        }
+    }
+}
+.recent-posts {
+    border: none;
+    position: relative;
+    margin-top: 1rem;
+    > h2 {
+        font-family: var(--font);
+        font-weight: 500;
+    }
+    .post-image {
+        border-radius: 0.5rem;
+        filter: opacity(0.7);
+        overflow: hidden;
+    }
+    .post-image img {
+        transition: transform 0.3s ease-in-out;
+        &:hover {
+        transform: scale(1.1);
+        }
+    }
+    > div a h3 {
+        color: var(--text-color);
+        font-family: 'rixgwangalli-pro', sans-serif;
+        font-style: normal;
+        font-weight: 100;
+    }
+}
