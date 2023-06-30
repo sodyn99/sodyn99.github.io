@@ -55,7 +55,7 @@ Asungajinli
 
 ## About Blog
 #### 🅰️&nbsp;Font
-[Noto Sans KR](https://fonts.google.com/share?selection.family=Noto%20Sans%20KR:wght@100;300;400)
+[SUIT](https://sunn.us/suit/)
 <!--Spoqa Han Sans Neo-->
 
 #### 🎨&nbsp;Color

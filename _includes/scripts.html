@@ -309,15 +309,17 @@
 
   }
   const date = new Date();
-  getCalendar(date);
+  if (document.getElementById("date-this")){
+    getCalendar(date);
 
-  document.querySelector(`.go-prev`).onclick = () => {
-  getCalendar(new Date(date.setMonth(date.getMonth() - 1)));
-  }
+    document.querySelector(`.go-prev`).onclick = () => {
+    getCalendar(new Date(date.setMonth(date.getMonth() - 1)));
+    }
 
-  // 다음달 이동
-  document.querySelector(`.go-next`).onclick = () => {
-  getCalendar(new Date(date.setMonth(date.getMonth() + 1)));
+    // 다음달 이동
+    document.querySelector(`.go-next`).onclick = () => {
+    getCalendar(new Date(date.setMonth(date.getMonth() + 1)));
+    }
   }
 
 </script>

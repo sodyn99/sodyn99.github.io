@@ -3,9 +3,6 @@
 ## 🌱&nbsp;Blog Theme
 Minimal Mistakes
 
-## 🅰️&nbsp;Font
-[Noto Sans KR](https://fonts.google.com/share?selection.family=Noto%20Sans%20KR:wght@100;300;400)
-
 ## 🎨&nbsp;Color
 
 ![#1C192B](https://placehold.co/15x15/1C192B/1C192B.png)
@@ -18,12 +15,12 @@ Minimal Mistakes
 &nbsp;#D1F951&nbsp;&nbsp;|&nbsp;&nbsp;Yellow<br>
 
 ![#F0383B](https://placehold.co/15x15/F0383B/F0383B.png)
-&nbsp;#F0383B&nbsp;&nbsp;|&nbsp;&nbsp;Red&nbsp;(LCK Red)<br>
+&nbsp;#F0383B&nbsp;&nbsp;|&nbsp;&nbsp;Red<br>
 
 ![#6454ED](https://placehold.co/15x15/6454ED/6454ED.png)
-&nbsp;#6454ED&nbsp;&nbsp;|&nbsp;&nbsp;Blue&nbsp;(LCK Blue)<br>
+&nbsp;#6454ED&nbsp;&nbsp;|&nbsp;&nbsp;Blue<br>
 
-## 📃&nbsp;Contents
+<!-- ## 📃&nbsp;Contents
 - Study
   - 4G LTE (unfinished)
   - 5G NR (unfinished)
@@ -35,7 +32,7 @@ Minimal Mistakes
   - ~~Football~~
   - ~~Esports~~
 
-**Updating content daily**
+**Updating content daily** -->
 
-## Reference
-404 Page : based on https://codepen.io/diogo_ml_gomes/pen/PyWdLb
+## Attribution
+[Copyright Attribution](https://asungajinli.github.io/copyright/)
