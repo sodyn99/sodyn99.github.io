@@ -300,6 +300,17 @@ linux:
         - title: "Docker"
           index: "3.3"
           url: /study/computer/linux/3.3/
+    - title: "4. ns-3"
+      children:
+        - title: "About"
+          index: "4.1"
+          url: /study/computer/linux/4.1/
+        - title: "ns-3 설치"
+          index: "4.2"
+          url: /study/computer/linux/4.2/
+        - title: "ns-3 시작"
+          index: "4.3"
+          url: /study/computer/linux/4.3/
 
 mobility:
     - title: "V2X"
