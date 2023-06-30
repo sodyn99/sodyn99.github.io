@@ -168,13 +168,17 @@
   var chkClick = false;
 
   $("#list li").click(function(event) {
-    if ($(event.target).is('summary')) {
+    if ($(event.target).is('dd, dd *')) {
         return;
     }
     if($(this).find('dd').css('display') == 'none'){
       $(this).find('dd').css('display','block');
-    }else if ($(this).find('dd').css('display') == 'block'){
+      $(this).css("--after-degree", "45deg");
+      $(this).css("--after-top", "2.2rem");
+    }else {
       $(this).find('dd').css('display','none');
+      $(this).css("--after-degree", "-135deg");
+      $(this).css("--after-top", "1.8rem");
     }
   });
 

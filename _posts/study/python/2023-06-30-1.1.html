@@ -14,27 +14,21 @@ author_profile: false
   <style>
         /* this declares a better box model */
     * { -moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: border-box; }
-
-
+    :root {
+      --after-degree: -135deg;
+      --after-top: 1.8rem;
+    }
 
     .list-wrap label {
       float:left;
       color:#00BDE8;
     }
-    .search-box {
-      float:left;
-      clear:left;
-      width:70%;
-      padding:0.4em;
-      font-size:1em;
-      color:#555;
-    }
 
     .list-count {
-      float:left;
-      text-align:center;
-      width:30%;
-      padding:0.5em;
+      width: 30%;
+      display: block;
+      text-align:left;
+      margin:0.5em 0.5em 0em 1em;
       color:#aaa;
     }
 
@@ -68,34 +62,45 @@ author_profile: false
     }
 
     ol {
-      float:left;
       width:100%;
-      margin:2em 0;
+      margin:1em 0;
       padding:0;
       position:relative;
     }
 
     .in {
+      vertical-align: middle;
       float:left;
       clear:left;
       width:100%;
-      margin:0.2em 0;
-      padding:0.5em 0.8em;
+      margin:0.4em 0;
+      padding:0.1em 0em 0.6em 1.5em;
       list-style:none;
       background-color:#f2f2f2;
-      border-radius: 0.8rem;
+      border-radius: 1.5rem;
       /* border-left:5px solid #003842; */
       color:#333;
       position:relative;
       z-index:2;
     }
-
     .in:hover {
       background-color:#f9f9f9;
       border-color:#00BDE8;
       cursor:pointer;
     }
-
+    .in::after {
+      content: "";
+      position: absolute;
+      top: var(--after-top);
+      right: 1.5rem;
+      width: 0.6rem;
+      height:0.6rem;
+      -webkit-transform: translate(-50%, -50%) rotate(var(--after-degree));
+      transform: translate(-50%, -50%) rotate(var(--after-degree));
+      margin-top: 2px;
+      border-top: 1px solid #333;
+      border-left: 1px solid #333;
+    }
     .empty-item {
       background:#fff;
       color:#aaa;
@@ -115,7 +120,6 @@ author_profile: false
       opacity:1;
       visibility:visible;
     }
-
     /*
     The following are styles purely for the surroundings
     */
@@ -141,11 +145,13 @@ author_profile: false
       font-weight:bold;
       line-height:1.5em;
     }
-
-    input::placeholder {
-      color: #aaa;
-      font-style: italic;
+    .more {
+      font-size:smaller !important;
+      margin-top:0.5em;
+      margin-right:6em;
+      float:right;
     }
+
     details {
       width:95%;
       border-radius: 1rem;
@@ -153,18 +159,25 @@ author_profile: false
       padding: 0.5em;
       padding-left: 1em;
     }
+    dt {
+      font-weight: bold;
+      font-size: 1.2em;
+      -webkit-user-drag: none;
+      user-select: none;
+      -webkit-user-select: none;
+    }
 
   </style>
 </head>
 <!-- abcdefghijklmnopqrstuvwxyz -->
 <section>
   <!-- <label for="search-text">Search Module</label> -->
-  <input type="text" id="search-text" placeholder="Search Module" class="search-box">
-  <span class="list-count"></span>
+  <input type="text" id="search-text" placeholder="Search Module" class="search-box"></input>
+  <div class="list-count"></div>
 
   <ol id="list">
     <li class="in">
-      <dt><a href="https://docs.python.org/ko/3/library/fnmatch.html" target="_blank">fnmatch</a></dt>
+      <dt>fnmatch</dt>
       <dd class="co">파일 이름을 패턴으로 매칭시키기 위한 함수 제공.</dd>
       <dd class="co"><details>
         <summary>함수</summary>
@@ -193,9 +206,10 @@ author_profile: false
           <li><code>fnmatch.fnmatch('foo.txt', '*.TXT')</code> : False</li>
         </ul>
       </details></dd>
+      <dd class="co more"><a href="https://docs.python.org/ko/3/library/fnmatch.html" target="_blank" style="text-decoration:none;">More</a></dd>
     </li>
     <li class="in">
-      <dt><a href="https://docs.python.org/ko/3/library/os.html" target="_blank">os</a></dt>
+      <dt>os</dt>
       <dd  class="co">운영체제와 상호작용하기 위한 함수 제공.<br>파일 및 디렉토리 조작, 환경 변수 액세스, 프로세스 관리 등 다양한 작업을 수행.</dd>
       <dd class="co"><details>
         <summary>함수</summary>
@@ -239,9 +253,10 @@ author_profile: false
 
         </ul>
       </details></dd>
+      <dd class="co more"><a href="https://docs.python.org/ko/3/library/os.html" target="_blank" style="text-decoration:none;">More</a></dd>
     </li>
     <li class="in">
-      <dt><a href="https://docs.python.org/ko/3/library/optparse.html" target="_blank">optparse</a></dt>
+      <dt>optparse</dt>
       <dd class="co">명령행 옵션 파싱 위한 모듈</dd>
       <dd class="co"><details>
         <summary>함수</summary>
@@ -257,9 +272,10 @@ author_profile: false
 
         </ul>
       </details></dd>
+      <dd class="co more"><a href="https://docs.python.org/ko/3/library/optparse.html" target="_blank" style="text-decoration:none;">More</a></dd>
     </li>
     <li class="in">
-      <dt><a href="https://docs.python.org/ko/3/library/shutil.html" target="_blank">shutil</a></dt>
+      <dt>shutil</dt>
       <dd class="co">파일 및 디렉토리 조작에 대한 고수준 인터페이스를 제공.<br>파일 복사, 이동, 삭제 등의 작업을 수행 가능.</dd>
       <dd class="co"><details>
         <summary>함수</summary>
@@ -270,9 +286,10 @@ author_profile: false
           <li><code>shutil.rmtree(path)</code> : 디렉토리 삭제</li>
         </ul>
       </details></dd>
+      <dd class="co more"><a href="https://docs.python.org/ko/3/library/shutil.html" target="_blank" style="text-decoration:none;">More</a></dd>
     </li>
     <li class="in">
-      <dt><a href="https://docs.python.org/ko/3/library/signal.html" target="_blank">signal</a></dt>
+      <dt>signal</dt>
       <dd class="co">시그널 처리를 위한 함수와 상수 제공.<br>프로그램이 특정 시그널을 받았을 때 특정 동작을 수행하도록 지정 가능.</dd>
       <dd class="co"><details>
         <summary>함수</summary>
@@ -281,9 +298,10 @@ author_profile: false
           <li><code>signal.pause()</code> : 시그널 대기</li>
         </ul>
       </details></dd>
+      <dd class="co more"><a href="https://docs.python.org/ko/3/library/signal.html" target="_blank" style="text-decoration:none;">More</a></dd>
     </li>
     <li class="in">
-      <dt><a href="https://docs.python.org/ko/3/library/subprocess.html" target="_blank">subprocess</a></dt>
+      <dt>subprocess</dt>
       <dd class="co">외부 프로세스를 생성하고 제어하는 기능을 제공.<br>다른 프로그램을 실행하고 그 결과를 가져오는 등의 작업을 수행할 때 사용.</dd>
       <dd class="co"><details>
         <summary>함수</summary>
@@ -294,9 +312,10 @@ author_profile: false
           <li><code>subprocess.Popen(args, bufsize=-1, executable=None, stdin=None, stdout=None, stderr=None, preexec_fn=None, close_fds=True, shell=False, cwd=None, env=None, universal_newlines=False, startupinfo=None, creationflags=0, restore_signals=True, start_new_session=False, pass_fds=(), *, encoding=None, errors=None)</code> : 외부 명령어 실행, Popen 객체 반환</li>
         </ul>
       </details></dd>
+      <dd class="co more"><a href="https://docs.python.org/ko/3/library/subprocess.html" target="_blank" style="text-decoration:none;">More</a></dd>
     </li>
     <li class="in">
-      <dt><a href="https://docs.python.org/ko/3/library/sys.html" target="_blank">sys</a></dt>
+      <dt>sys</dt>
       <dd class="co">파이썬 인터프리터와 상호작용하기 위한 기능을 제공.<br>시스템 수준의 조작을 수행하는 함수와 변수를 제공.</dd>
       <dd class="co"><details>
         <summary>함수</summary>
@@ -315,9 +334,10 @@ author_profile: false
           <li><code>sys.maxunicode</code> : 유니코드의 최대값</li>
         </ul>
       </details></dd>
+      <dd class="co more"><a href="https://docs.python.org/ko/3/library/sys.html" target="_blank" style="text-decoration:none;">More</a></dd>
     </li>
     <li class="in">
-      <dt><a href="https://docs.python.org/ko/3/library/threading.html" target="_blank">threading</a></dt>
+      <dt>threading</dt>
       <dd class="co">스레드 기반의 병렬 프로그래밍을 지원하는 기능을 제공.<br>동시에 여러 작업을 처리하거나 동기화된 작업을 수행할 때 사용.</dd>
       <dd class="co"><details>
         <summary>함수</summary>
@@ -345,9 +365,10 @@ author_profile: false
           <li><code>threading.Thread.join(timeout=None)</code> : 스레드 종료 대기</li>
           <li><code>threading.Thread.ident</code> : 스레드 식별자</li>
       </details></dd>
+      <dd class="co more"><a href="https://docs.python.org/ko/3/library/threading.html" target="_blank" style="text-decoration:none;">More</a></dd>
     </li>
     <li class="in">
-      <dt><a href="https://docs.python.org/ko/3/library/time.html" target="_blank">time</a></dt>
+      <dt>time</dt>
       <dd class="co">시간과 관련된 기능을 제공.<br>시간 측정, 지연, 형식 변환 등의 작업 수행 가능.</dd>
       <dd class="co"><details>
         <summary>함수</summary>
@@ -358,17 +379,21 @@ author_profile: false
           <li><code>time.sleep(secs)</code> : secs만큼 대기</li>
         </ul>
       </details></dd>
+      <dd class="co more"><a href="https://docs.python.org/ko/3/library/time.html" target="_blank" style="text-decoration:none;">More</a></dd>
     </li>
     <li class="in">
-      <dt><a href="https://docs.python.org/ko/3/library/xml.dom.minidom.html" target="_blank">xml.dom.minidom</a></dt>
+      <dt>xml.dom.minidom</dt>
       <dd class="co">XML 문서를 파싱하고, XML 문서를 생성하는 기능을 제공.</dd>
+      <dd class="co more"><a href="https://docs.python.org/ko/3/library/xml.dom.minidom.html" target="_blank">More</a></dd>
     </li>
     <span class="empty-item">no results</span>
   </ol>
 </section>
-<hr>
-<h1>Reference</h1>
-<p>Chat GPT의 설명을 참고함.</p>
+<section>
+  <hr>
+  <h1>Reference</h1>
+  <p>Chat GPT의 설명을 참고함.</p>
+</section>
 
 
 <!--
