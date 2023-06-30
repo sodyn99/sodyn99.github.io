@@ -9,6 +9,9 @@ home:
       - title: "Mobile"
         icon: "fas fa-mobile-alt"
         url: /study/mobile/
+      - title: "Mobility"
+        icon: "fas fa-car"
+        url: /study/mobility/
       - title: "Lecture"
         icon: "fas fa-chalkboard-teacher"
         url: /study/lecture/
@@ -297,6 +300,18 @@ linux:
         - title: "Docker"
           index: "3.3"
           url: /study/computer/linux/3.3/
+
+mobility:
+    - title: "V2X"
+      children:
+        - title: "About"
+          url: /study/mobility/1.1/
+        - title: "V2X 표준"
+          url: /study/mobility/1.2/
+        - title: "RAN AI"
+          url: /study/mobility/1.3/
+        - title: "V2X 표준 2"
+          url: /study/mobility/1.4/
 
 lecture:
   - title: "1. 논리회로"
