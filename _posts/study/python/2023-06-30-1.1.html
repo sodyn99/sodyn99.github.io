@@ -10,190 +10,462 @@ sidebar:
   parent: true
 author_profile: false
 ---
+<head>
+  <style>
+        /* this declares a better box model */
+    * { -moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: border-box; }
+
+
+
+    .list-wrap label {
+      float:left;
+      color:#00BDE8;
+    }
+    .search-box {
+      float:left;
+      clear:left;
+      width:70%;
+      padding:0.4em;
+      font-size:1em;
+      color:#555;
+    }
+
+    .list-count {
+      float:left;
+      text-align:center;
+      width:30%;
+      padding:0.5em;
+      color:#aaa;
+    }
+
+    .in {
+      transition-property: margin, background-color, border-color;
+      transition-duration: .4s, .2s, .2s;
+      transition-timing-function: ease-in-out, ease, ease;
+    }
+
+    .empty-item {
+      transition-property: opacity;
+      transition-duration: 0s;
+      transition-delay: 0s;
+      transition-timing-function: ease;
+    }
+
+    .empty .empty-item {
+      transition-property: opacity;
+      transition-duration: .2s;
+      transition-delay: .3s;
+      transition-timing-function: ease;
+    }
+
+    .hiding {
+      margin-left:-100%;
+      opacity:0.5;
+    }
+
+    .hidden {
+      display:none;
+    }
+
+    ol {
+      float:left;
+      width:100%;
+      margin:2em 0;
+      padding:0;
+      position:relative;
+    }
+
+    .in {
+      float:left;
+      clear:left;
+      width:100%;
+      margin:0.2em 0;
+      padding:0.5em 0.8em;
+      list-style:none;
+      background-color:#f2f2f2;
+      border-radius: 0.8rem;
+      /* border-left:5px solid #003842; */
+      color:#333;
+      position:relative;
+      z-index:2;
+    }
+
+    .in:hover {
+      background-color:#f9f9f9;
+      border-color:#00BDE8;
+      cursor:pointer;
+    }
+
+    .empty-item {
+      background:#fff;
+      color:#aaa;
+      font-size: 1.5em;
+      padding:0.5em 0.8em;
+      font-style:italic;
+      border:none;
+      text-align:center;
+      visibility:hidden;
+      opacity:0;
+      float:left;
+      clear:left;
+      width:100%;
+    }
+
+    .empty .empty-item {
+      opacity:1;
+      visibility:visible;
+    }
+
+    /*
+    The following are styles purely for the surroundings
+    */
+
+    .info {
+      float:left;
+      width:60%;
+      margin:2em 20%;
+      padding:2em 0;
+      background:#f9f9f9;
+      border-left:5px solid #003842;
+      padding:10px 20px;
+    }
+
+    .list-wrap {
+      float:left;
+      width:40%;
+      margin:2em 30%;
+      padding:2em 0;
+    }
+
+    .co{
+      font-weight:bold;
+      line-height:1.5em;
+    }
+
+    input::placeholder {
+      color: #aaa;
+      font-style: italic;
+    }
+    details {
+      width:95%;
+      border-radius: 1rem;
+      background-color: #f2f2f2;
+      padding: 0.5em;
+      padding-left: 1em;
+    }
+
+  </style>
+</head>
 <!-- abcdefghijklmnopqrstuvwxyz -->
-<ol>
-  <li>
-    <dt>fnmatch</dt>
-    <dd>파일 이름을 패턴으로 매칭시키는 함수</dd>
-    <dd class="small"><details>
-      <summary>함수</summary>
-      <ul>
-        <li><code>fnmatch.fnmatch(name, pat)</code> : name이 pat과 매칭되면 True</li>
-        <li><code>fnmatch.fnmatchcase(name, pat)</code> : name이 pat과 매칭되면 True, 대소문자 구분</li>
-        <li><code>fnmatch.filter(names, pat)</code> : names에서 pat과 매칭되는 이름만 반환</li>
-        <li><code>fnmatch.translate(pat)</code> : 패턴을 정규식으로 변환</li>
-      </ul>
-    </details></dd>
-    <dd class="small"><details>
-      <summary>패턴</summary>
-      <ul>
-        <li><code>*</code> : 모든 문자열</li>
-        <li><code>?</code> : 한 문자</li>
-        <li><code>[seq]</code> : seq 안에 있는 문자 중 하나</li>
-        <li><code>[!seq]</code> : seq 안에 없는 문자 중 하나</li>
-      </ul>
-    </details></dd>
-    <dd class="small"><details>
-      <summary>예제</summary>
-      <ul>
-        <li><code>fnmatch.fnmatch('foo.txt', '*.txt')</code> : True</li>
-        <li><code>fnmatch.fnmatch('foo.txt', '?oo.txt')</code> : True</li>
-        <li><code>fnmatch.fnmatch('Dat45.csv', 'Dat[0-9]*')</code> : True</li>
-        <li><code>fnmatch.fnmatch('foo.txt', '*.TXT')</code> : False</li>
-      </ul>
-    </details></dd>
-  </li>
-  <li>
-    <dt>os</dt>
-    <dd>운영체제와 상호작용하기 위한 함수<br>파일 및 디렉토리 조작, 환경 변수 액세스, 프로세스 관리 등 다양한 작업을 수행.</dd>
-    <dd class="small"><details>
-      <summary>함수</summary>
-      <ul>
-        <li><code>os.getcwd()</code> : 현재 작업 디렉토리</li>
-        <li><code>os.chdir(path)</code> : 작업 디렉토리 변경</li>
-        <li><code>os.system(command)</code> : 시스템 명령어 실행</li>
-        <li><code>os.listdir(path)</code> : 디렉토리 내 파일 목록</li>
-        <li><code>os.remove(path)</code> : 파일 삭제</li>
-        <li><code>os.rename(src, dst)</code> : 파일 이름 변경</li>
-        <li><code>os.mkdir(path)</code> : 디렉토리 생성</li>
-      </ul>
-    </details></dd>
-    <dd class="small"><details>
-      <summary>예제</summary>
-      <ul>
+<section>
+  <!-- <label for="search-text">Search Module</label> -->
+  <input type="text" id="search-text" placeholder="Search Module" class="search-box">
+  <span class="list-count"></span>
 
-      </ul>
-    </details></dd>
-  </li>
-  <li>
-    <dt>optparse</dt>
-    <dd>명령행 옵션 파싱을 위한 모듈</dd>
-    <dd class="small"><details>
-      <summary>함수</summary>
-      <ul>
-        <li><code>optparse.OptionParser()</code> : 파서 생성</li>
-        <li><code>parser.add_option()</code> : 옵션 추가</li>
-        <li><code>parser.parse_args()</code> : 옵션 파싱</li>
-      </ul>
-    </details></dd>
-    <dd class="small"><details>
-      <summary>예제</summary>
-      <ul>
+  <ol id="list">
+    <li class="in">
+      <dt><a href="https://docs.python.org/ko/3/library/fnmatch.html" target="_blank">fnmatch</a></dt>
+      <dd class="co">파일 이름을 패턴으로 매칭시키기 위한 함수 제공.</dd>
+      <dd class="co"><details>
+        <summary>함수</summary>
+        <ul>
+          <li><code>fnmatch.fnmatch(name, pat)</code> : name이 pat과 매칭되면 True</li>
+          <li><code>fnmatch.fnmatchcase(name, pat)</code> : name이 pat과 매칭되면 True, 대소문자 구분</li>
+          <li><code>fnmatch.filter(names, pat)</code> : names에서 pat과 매칭되는 이름만 반환</li>
+          <li><code>fnmatch.translate(pat)</code> : 패턴을 정규식으로 변환</li>
+        </ul>
+      </details></dd>
+      <dd class="co"><details>
+        <summary>패턴</summary>
+        <ul>
+          <li><code>*</code> : 모든 문자열</li>
+          <li><code>?</code> : 한 문자</li>
+          <li><code>[seq]</code> : seq 안에 있는 문자 중 하나</li>
+          <li><code>[!seq]</code> : seq 안에 없는 문자 중 하나</li>
+        </ul>
+      </details></dd>
+      <dd class="co"><details>
+        <summary>예제</summary>
+        <ul>
+          <li><code>fnmatch.fnmatch('foo.txt', '*.txt')</code> : True</li>
+          <li><code>fnmatch.fnmatch('foo.txt', '?oo.txt')</code> : True</li>
+          <li><code>fnmatch.fnmatch('Dat45.csv', 'Dat[0-9]*')</code> : True</li>
+          <li><code>fnmatch.fnmatch('foo.txt', '*.TXT')</code> : False</li>
+        </ul>
+      </details></dd>
+    </li>
+    <li class="in">
+      <dt><a href="https://docs.python.org/ko/3/library/os.html" target="_blank">os</a></dt>
+      <dd  class="co">운영체제와 상호작용하기 위한 함수 제공.<br>파일 및 디렉토리 조작, 환경 변수 액세스, 프로세스 관리 등 다양한 작업을 수행.</dd>
+      <dd class="co"><details>
+        <summary>함수</summary>
+        <ul>
+          <li><code>os.name</code> : 운영체제 이름</li>
+          <li><code>os.environ</code> : 환경 변수</li>
+          <li><code>os.getenv(key[, default])</code> : 환경 변수 값</li>
+          <li><code>os.putenv(key, value)</code> : 환경 변수 설정</li>
+          <li><code>os.unsetenv(key)</code> : 환경 변수 삭제</li>
+          <li><code>os.getcwd()</code> : 현재 작업 디렉토리</li>
+          <li><code>os.chdir(path)</code> : 작업 디렉토리 변경</li>
+          <li><code>os.system(command)</code> : 시스템 명령어 실행</li>
+          <li><code>os.listdir(path)</code> : 디렉토리 내 파일 목록</li>
+          <li><code>os.remove(path)</code> : 파일 삭제</li>
+          <li><code>os.rename(src, dst)</code> : 파일 이름 변경</li>
+          <li><code>os.mkdir(path)</code> : 디렉토리 생성</li>
+          <li><code>os.rmdir(path)</code> : 디렉토리 삭제</li>
+          <li><code>os.path.join(path, *paths)</code> : 경로 생성</li>
+          <li><code>os.path.abspath(path)</code> : 절대 경로</li>
+          <li><code>os.path.relpath(path)</code> : 상대 경로</li>
+          <li><code>os.path.dirname(path)</code> : 디렉토리 이름</li>
+          <li><code>os.path.basename(path)</code> : 파일 이름</li>
+          <li><code>os.path.exists(path)</code> : 파일 존재 여부</li>
+          <li><code>os.path.isfile(path)</code> : 파일 여부</li>
+          <li><code>os.path.isdir(path)</code> : 디렉토리 여부</li>
+          <li><code>os.path.getsize(path)</code> : 파일 크기</li>
+          <li><code>os.path.split(path)</code> : 디렉토리와 파일 이름</li>
+          <li><code>os.path.splitext(path)</code> : 파일 이름과 확장자</li>
+          <li><code>os.path.expanduser(path)</code> : 사용자 디렉토리 치환</li>
+          <li><code>os.path.commonprefix(list)</code> : 공통 경로</li>
+          <li><code>os.path.normpath(path)</code> : 경로 정규화</li>
+          <li><code>os.path.samefile(path1, path2)</code> : 동일 파일 여부</li>
+          <li><code>os.walk(top[, topdown=True[, onerror=None[, followlinks=False]]])</code> : 디렉토리 트리 순회</li>
+          <li><code>os.path.walk(top, topdown=True, onerror=None, followlinks=False)</code> : 디렉토리 트리 순회</li>
+          <li><code>os.path.expandvars(path)</code> : 환경 변수 치환</li>
+        </ul>
+      </details></dd>
+      <dd class="co"><details>
+        <summary>예제</summary>
+        <ul>
 
-      </ul>
-    </details></dd>
-  </li>
-  <li>
-    <dt>shutil</dt>
-    <dd>파일과 디렉토리 관리를 위한 함수</dd>
-    <dd class="small"><details>
-      <summary>함수</summary>
-      <ul>
-        <li><code>shutil.copyfile(src, dst)</code> : src를 dst로 복사</li>
-        <li><code>shutil.move(src, dst)</code> : src를 dst로 이동</li>
-        <li><code>shutil.copytree(src, dst)</code> : src 디렉토리를 dst로 복사</li>
-        <li><code>shutil.rmtree(path)</code> : 디렉토리 삭제</li>
-      </ul>
-    </details></dd>
-  </li>
-  <li>
-    <dt>signal</dt>
-    <dd>시그널 처리를 위한 함수</dd>
-    <dd class="small"><details>
-      <summary>함수</summary>
-      <ul>
-        <li><code>signal.signal(signalnum, handler)</code> : 시그널 핸들러 등록</li>
-        <li><code>signal.pause()</code> : 시그널 대기</li>
-      </ul>
-    </details></dd>
-  </li>
-  <li>
-    <dt>subprocess</dt>
-    <dd>서브프로세스 생성을 위한 함수</dd>
-    <dd class="small"><details>
-      <summary>함수</summary>
-      <ul>
-        <li><code>subprocess.call(args, *, stdin=None, stdout=None, stderr=None, shell=False)</code> : 외부 명령어 실행</li>
-        <li><code>subprocess.check_call(args, *, stdin=None, stdout=None, stderr=None, shell=False)</code> : 외부 명령어 실행, 성공 시 0 반환</li>
-        <li><code>subprocess.check_output(args, *, stdin=None, stderr=None, shell=False, universal_newlines=False)</code> : 외부 명령어 실행, 성공 시 결과 반환</li>
-        <li><code>subprocess.Popen(args, bufsize=-1, executable=None, stdin=None, stdout=None, stderr=None, preexec_fn=None, close_fds=True, shell=False, cwd=None, env=None, universal_newlines=False, startupinfo=None, creationflags=0, restore_signals=True, start_new_session=False, pass_fds=(), *, encoding=None, errors=None)</code> : 외부 명령어 실행, Popen 객체 반환</li>
-      </ul>
-    </details></dd>
-  </li>
-  <li>
-    <dt><a href="https://docs.python.org/ko/3/library/sys.html#module-sys"></a>sys</a></dt>
-    <dd> 시스템 수준의 조작을 수행하는 함수와 변수를 제공</dd>
-    <dd class="small"><details>
-      <summary>함수</summary>
-      <ul>
-        <li><code>sys.argv</code> : 명령행 인자</li>
-        <li><code>sys.exit([arg])</code> : 프로그램 종료</li>
-        <li><code>sys.path</code> : 모듈 검색 경로</li>
-        <li><code>sys.platform</code> : 운영체제</li>
-        <li><code>sys.stdin</code> : 표준 입력</li>
-        <li><code>sys.stdout</code> : 표준 출력</li>
-        <li><code>sys.stderr</code> : 표준 에러 출력</li>
-        <li><code>sys.exc_info()</code> : 예외 정보</li>
-        <li><code>sys.version</code> : 파이썬 버전</li>
-        <li><code>sys.maxint</code> : 정수의 최대값</li>
-        <li><code>sys.maxsize</code> : 정수의 최대값</li>
-        <li><code>sys.maxunicode</code> : 유니코드의 최대값</li>
-      </ul>
-    </details></dd>
-  </li>
-  <li>
-    <dt>threading</dt>
-    <dd>스레드 생성을 위한 함수</dd>
-    <dd class="small"><details>
-      <summary>함수</summary>
-      <ul>
-        <li><code>threading.Thread()</code> : 스레드 생성</li>
-        <li><code>threading.activeCount()</code> : 활성화된 스레드 수</li>
-        <li><code>threading.currentThread()</code> : 현재 스레드 객체</li>
-        <li><code>threading.enumerate()</code> : 활성화된 스레드 목록</li>
-        <li><code>threading.activeCount()</code> : 활성화된 스레드 수</li>
-        <li><code>threading.Lock()</code> : 락 객체 생성</li>
-        <li><code>threading.RLock()</code> : 재진입 락 객체 생성</li>
-        <li><code>threading.Condition()</code> : 조건 객체 생성</li>
-        <li><code>threading.Semaphore()</code> : 세마포어 객체 생성</li>
-        <li><code>threading.BoundedSemaphore()</code> : 바운드 세마포어 객체 생성</li>
-        <li><code>threading.Timer()</code> : 타이머 객체 생성</li>
-        <li><code>threading.Event()</code> : 이벤트 객체 생성</li>
-        <li><code>threading.Barrier()</code> : 바리어 객체 생성</li>
-        <li><code>threading.Thread.isAlive()</code> : 스레드가 활성화되었는지 확인</li>
-        <li><code>threading.Thread.getName()</code> : 스레드 이름</li>
-        <li><code>threading.Thread.setName(name)</code> : 스레드 이름 설정</li>
-        <li><code>threading.Thread.isDaemon()</code> : 데몬 스레드인지 확인</li>
-        <li><code>threading.Thread.setDaemon(daemonic)</code> : 데몬 스레드 설정</li>
-        <li><code>threading.Thread.start()</code> : 스레드 시작</li>
-        <li><code>threading.Thread.run()</code> : 스레드 실행</li>
-        <li><code>threading.Thread.join(timeout=None)</code> : 스레드 종료 대기</li>
-        <li><code>threading.Thread.ident</code> : 스레드 식별자</li>
-    </details></dd>
-  </li>
-  <li>
-    <dt>time</dt>
-    <dd>시간과 관련된 함수</dd>
-    <dd class="small"><details>
-      <summary>함수</summary>
-      <ul>
-        <li><code>time.time()</code> : 1970년 1월 1일 0시 0분 0초 이후 경과 시간</li>
-        <li><code>time.localtime()</code> : time.time()을 struct_time 객체로 변환</li>
-        <li><code>time.strftime(format, t)</code> : struct_time 객체를 format 형식으로 변환</li>
-        <li><code>time.sleep(secs)</code> : secs만큼 대기</li>
-      </ul>
-    </details></dd>
-  </li>
-  <li>
-    <dt>utils</dt>
-    <dd>파이썬 인터프리터가 제공하는 변수와 함수</dd>
+        </ul>
+      </details></dd>
+    </li>
+    <li class="in">
+      <dt><a href="https://docs.python.org/ko/3/library/optparse.html" target="_blank">optparse</a></dt>
+      <dd class="co">명령행 옵션 파싱 위한 모듈</dd>
+      <dd class="co"><details>
+        <summary>함수</summary>
+        <ul>
+          <li><code>optparse.OptionParser()</code> : 파서 생성</li>
+          <li><code>parser.add_option()</code> : 옵션 추가</li>
+          <li><code>parser.parse_args()</code> : 옵션 파싱</li>
+        </ul>
+      </details></dd>
+      <dd class="co"><details>
+        <summary>예제</summary>
+        <ul>
 
-  </li>
-  <li>
-    <dt>xml.dom.minidom</dt>
-  </li>
-
-</ol>
+        </ul>
+      </details></dd>
+    </li>
+    <li class="in">
+      <dt><a href="https://docs.python.org/ko/3/library/shutil.html" target="_blank">shutil</a></dt>
+      <dd class="co">파일 및 디렉토리 조작에 대한 고수준 인터페이스를 제공.<br>파일 복사, 이동, 삭제 등의 작업을 수행 가능.</dd>
+      <dd class="co"><details>
+        <summary>함수</summary>
+        <ul>
+          <li><code>shutil.copyfile(src, dst)</code> : src를 dst로 복사</li>
+          <li><code>shutil.move(src, dst)</code> : src를 dst로 이동</li>
+          <li><code>shutil.copytree(src, dst)</code> : src 디렉토리를 dst로 복사</li>
+          <li><code>shutil.rmtree(path)</code> : 디렉토리 삭제</li>
+        </ul>
+      </details></dd>
+    </li>
+    <li class="in">
+      <dt><a href="https://docs.python.org/ko/3/library/signal.html" target="_blank">signal</a></dt>
+      <dd class="co">시그널 처리를 위한 함수와 상수 제공.<br>프로그램이 특정 시그널을 받았을 때 특정 동작을 수행하도록 지정 가능.</dd>
+      <dd class="co"><details>
+        <summary>함수</summary>
+        <ul>
+          <li><code>signal.signal(signalnum, handler)</code> : 시그널 핸들러 등록</li>
+          <li><code>signal.pause()</code> : 시그널 대기</li>
+        </ul>
+      </details></dd>
+    </li>
+    <li class="in">
+      <dt><a href="https://docs.python.org/ko/3/library/subprocess.html" target="_blank">subprocess</a></dt>
+      <dd class="co">외부 프로세스를 생성하고 제어하는 기능을 제공.<br>다른 프로그램을 실행하고 그 결과를 가져오는 등의 작업을 수행할 때 사용.</dd>
+      <dd class="co"><details>
+        <summary>함수</summary>
+        <ul>
+          <li><code>subprocess.call(args, *, stdin=None, stdout=None, stderr=None, shell=False)</code> : 외부 명령어 실행</li>
+          <li><code>subprocess.check_call(args, *, stdin=None, stdout=None, stderr=None, shell=False)</code> : 외부 명령어 실행, 성공 시 0 반환</li>
+          <li><code>subprocess.check_output(args, *, stdin=None, stderr=None, shell=False, universal_newlines=False)</code> : 외부 명령어 실행, 성공 시 결과 반환</li>
+          <li><code>subprocess.Popen(args, bufsize=-1, executable=None, stdin=None, stdout=None, stderr=None, preexec_fn=None, close_fds=True, shell=False, cwd=None, env=None, universal_newlines=False, startupinfo=None, creationflags=0, restore_signals=True, start_new_session=False, pass_fds=(), *, encoding=None, errors=None)</code> : 외부 명령어 실행, Popen 객체 반환</li>
+        </ul>
+      </details></dd>
+    </li>
+    <li class="in">
+      <dt><a href="https://docs.python.org/ko/3/library/sys.html" target="_blank">sys</a></dt>
+      <dd class="co">파이썬 인터프리터와 상호작용하기 위한 기능을 제공.<br>시스템 수준의 조작을 수행하는 함수와 변수를 제공.</dd>
+      <dd class="co"><details>
+        <summary>함수</summary>
+        <ul>
+          <li><code>sys.argv</code> : 명령행 인자</li>
+          <li><code>sys.exit([arg])</code> : 프로그램 종료</li>
+          <li><code>sys.path</code> : 모듈 검색 경로</li>
+          <li><code>sys.platform</code> : 운영체제</li>
+          <li><code>sys.stdin</code> : 표준 입력</li>
+          <li><code>sys.stdout</code> : 표준 출력</li>
+          <li><code>sys.stderr</code> : 표준 에러 출력</li>
+          <li><code>sys.exc_info()</code> : 예외 정보</li>
+          <li><code>sys.version</code> : 파이썬 버전</li>
+          <li><code>sys.maxint</code> : 정수의 최대값</li>
+          <li><code>sys.maxsize</code> : 정수의 최대값</li>
+          <li><code>sys.maxunicode</code> : 유니코드의 최대값</li>
+        </ul>
+      </details></dd>
+    </li>
+    <li class="in">
+      <dt><a href="https://docs.python.org/ko/3/library/threading.html" target="_blank">threading</a></dt>
+      <dd class="co">스레드 기반의 병렬 프로그래밍을 지원하는 기능을 제공.<br>동시에 여러 작업을 처리하거나 동기화된 작업을 수행할 때 사용.</dd>
+      <dd class="co"><details>
+        <summary>함수</summary>
+        <ul>
+          <li><code>threading.Thread()</code> : 스레드 생성</li>
+          <li><code>threading.activeCount()</code> : 활성화된 스레드 수</li>
+          <li><code>threading.currentThread()</code> : 현재 스레드 객체</li>
+          <li><code>threading.enumerate()</code> : 활성화된 스레드 목록</li>
+          <li><code>threading.activeCount()</code> : 활성화된 스레드 수</li>
+          <li><code>threading.Lock()</code> : 락 객체 생성</li>
+          <li><code>threading.RLock()</code> : 재진입 락 객체 생성</li>
+          <li><code>threading.Condition()</code> : 조건 객체 생성</li>
+          <li><code>threading.Semaphore()</code> : 세마포어 객체 생성</li>
+          <li><code>threading.BoundedSemaphore()</code> : 바운드 세마포어 객체 생성</li>
+          <li><code>threading.Timer()</code> : 타이머 객체 생성</li>
+          <li><code>threading.Event()</code> : 이벤트 객체 생성</li>
+          <li><code>threading.Barrier()</code> : 바리어 객체 생성</li>
+          <li><code>threading.Thread.isAlive()</code> : 스레드가 활성화되었는지 확인</li>
+          <li><code>threading.Thread.getName()</code> : 스레드 이름</li>
+          <li><code>threading.Thread.setName(name)</code> : 스레드 이름 설정</li>
+          <li><code>threading.Thread.isDaemon()</code> : 데몬 스레드인지 확인</li>
+          <li><code>threading.Thread.setDaemon(daemonic)</code> : 데몬 스레드 설정</li>
+          <li><code>threading.Thread.start()</code> : 스레드 시작</li>
+          <li><code>threading.Thread.run()</code> : 스레드 실행</li>
+          <li><code>threading.Thread.join(timeout=None)</code> : 스레드 종료 대기</li>
+          <li><code>threading.Thread.ident</code> : 스레드 식별자</li>
+      </details></dd>
+    </li>
+    <li class="in">
+      <dt><a href="https://docs.python.org/ko/3/library/time.html" target="_blank">time</a></dt>
+      <dd class="co">시간과 관련된 기능을 제공.<br>시간 측정, 지연, 형식 변환 등의 작업 수행 가능.</dd>
+      <dd class="co"><details>
+        <summary>함수</summary>
+        <ul>
+          <li><code>time.time()</code> : 1970년 1월 1일 0시 0분 0초 이후 경과 시간</li>
+          <li><code>time.localtime()</code> : time.time()을 struct_time 객체로 변환</li>
+          <li><code>time.strftime(format, t)</code> : struct_time 객체를 format 형식으로 변환</li>
+          <li><code>time.sleep(secs)</code> : secs만큼 대기</li>
+        </ul>
+      </details></dd>
+    </li>
+    <li class="in">
+      <dt><a href="https://docs.python.org/ko/3/library/xml.dom.minidom.html" target="_blank">xml.dom.minidom</a></dt>
+      <dd class="co">XML 문서를 파싱하고, XML 문서를 생성하는 기능을 제공.</dd>
+    </li>
+    <span class="empty-item">no results</span>
+  </ol>
+</section>
 <hr>
 <h1>Reference</h1>
 <p>Chat GPT의 설명을 참고함.</p>
+
+<script type="text/javascript" src="http://code.jquery.com/jquery-2.1.3.js" ></script>
+<script>
+  $(document).ready(function() {
+
+    var jobCount = $('#list .in').length;
+    $('.list-count').text(jobCount + ' items');
+
+    $('.co').css('display','none');
+
+    $("#search-text").keyup(function () {
+      //$(this).addClass('hidden');
+
+      var searchTerm = $("#search-text").val();
+      var listItem = $('#list').children('li');
+
+
+      var searchSplit = searchTerm.replace(/ /g, "'):containsi('")
+
+        //extends :contains to be case insensitive
+    $.extend($.expr[':'], {
+    'containsi': function(elem, i, match, array)
+    {
+      return (elem.textContent || elem.innerText || '').toLowerCase()
+      .indexOf((match[3] || "").toLowerCase()) >= 0;
+    }
+  });
+
+
+    $("#list li").not(":containsi('" + searchSplit + "')").each(function(e)   {
+      $(this).addClass('hiding out').removeClass('in');
+      setTimeout(function() {
+          $('.out').addClass('hidden');
+        }, 300);
+    });
+
+    $("#list li:containsi('" + searchSplit + "')").each(function(e) {
+      $(this).removeClass('hidden out').addClass('in');
+      setTimeout(function() {
+          $('.in').removeClass('hiding');
+        }, 1);
+    });
+
+
+      var jobCount = $('#list .in').length;
+    $('.list-count').text(jobCount + ' items');
+
+    //shows empty state text when no jobs found
+    if(jobCount == '0') {
+      $('#list').addClass('empty');
+    }
+    else {
+      $('#list').removeClass('empty');
+    }
+
+  });
+
+  var chkClick = false;
+
+  $("#list li").click(function(event) {
+    if ($(event.target).is('summary')) {
+        return;
+    }
+    if($(this).find('dd').css('display') == 'none'){
+      $(this).find('dd').css('display','block');
+    }else if ($(this).find('dd').css('display') == 'block'){
+      $(this).find('dd').css('display','none');
+    }
+  });
+
+  });
+
+  !function(){function e(e,r){
+	return[].slice.call((r||document).querySelectorAll(e))}
+	if(window.addEventListener){
+		var r=window.StyleFix={link:function(e){try{if("stylesheet"!==e.rel||e.hasAttribute("data-noprefix"))
+			return
+			}catch(t){
+			return
+				}
+			var n,i=e.href||e.getAttribute("data-href"),
+				a=i.replace(/[^\/]+$/,""),
+				o=(/^[a-z]{3,10}:/.exec(a)||[""])[0],
+				s=(/^[a-z]{3,10}:\/\/[^\/]+/.exec(a)||[""])[0],l=/^([^?]*)\??/.exec(i)[1],
+				u=e.parentNode,p=new XMLHttpRequest;p.onreadystatechange=function(){4===p.readyState&&n()},
+				n=function(){var t=p.responseText;
+			if(t&&e.parentNode&&(!p.status||p.status<400||p.status>600)){
+				if(t=r.fix(t,!0,e),a){
+					t=t.replace(/url\(\s*?((?:"|')?)(.+?)\1\s*?\)/gi,function(e,r,t){return/^([a-z]{3,10}:|#)/i.test(t)?e:/^\/\//.test(t)?'url("'+o+t+'")':/^\//.test(t)?'url("'+s+t+'")':/^\?/.test(t)?'url("'+l+t+'")':'url("'+a+t+'")'});var n=a.replace(/([\\\^\$*+[\]?{}.=!:(|)])/g,"\\$1");t=t.replace(RegExp("\\b(behavior:\\s*?url\\('?\"?)"+n,"gi"),"$1")}var i=document.createElement("style");i.textContent=t,i.media=e.media,i.disabled=e.disabled,i.setAttribute("data-href",e.getAttribute("href")),u.insertBefore(i,e),u.removeChild(e),i.media=e.media}};try{p.open("GET",i),p.send(null)}catch(t){"undefined"!=typeof XDomainRequest&&(p=new XDomainRequest,p.onerror=p.onprogress=function(){},p.onload=n,p.open("GET",i),p.send(null))}e.setAttribute("data-inprogress","")},styleElement:function(e){if(!e.hasAttribute("data-noprefix")){var t=e.disabled;e.textContent=r.fix(e.textContent,!0,e),e.disabled=t}},styleAttribute:function(e){var t=e.getAttribute("style");t=r.fix(t,!1,e),e.setAttribute("style",t)},process:function(){e("style").forEach(StyleFix.styleElement),e("[style]").forEach(StyleFix.styleAttribute)},register:function(e,t){(r.fixers=r.fixers||[]).splice(void 0===t?r.fixers.length:t,0,e)},fix:function(e,t,n){for(var i=0;i<r.fixers.length;i++)e=r.fixers[i](e,t,n)||e;return e},camelCase:function(e){return e.replace(/-([a-z])/g,function(e,r){return r.toUpperCase()}).replace("-","")},deCamelCase:function(e){return e.replace(/[A-Z]/g,function(e){return"-"+e.toLowerCase()})}};!function(){setTimeout(function(){},10),document.addEventListener("DOMContentLoaded",StyleFix.process,!1)}()}}(),function(e){function r(e,r,n,i,a){if(e=t[e],e.length){var o=RegExp(r+"("+e.join("|")+")"+n,"gi");a=a.replace(o,i)}return a}if(window.StyleFix&&window.getComputedStyle){var t=window.PrefixFree={prefixCSS:function(e,n){var i=t.prefix;if(t.functions.indexOf("linear-gradient")>-1&&(e=e.replace(/(\s|:|,)(repeating-)?linear-gradient\(\s*(-?\d*\.?\d*)deg/gi,function(e,r,t,n){return r+(t||"")+"linear-gradient("+(90-n)+"deg"})),e=r("functions","(\\s|:|,)","\\s*\\(","$1"+i+"$2(",e),e=r("keywords","(\\s|:)","(\\s|;|\\}|$)","$1"+i+"$2$3",e),e=r("properties","(^|\\{|\\s|;)","\\s*:","$1"+i+"$2:",e),t.properties.length){var a=RegExp("\\b("+t.properties.join("|")+")(?!:)","gi");e=r("valueProperties","\\b",":(.+?);",function(e){return e.replace(a,i+"$1")},e)}return n&&(e=r("selectors","","\\b",t.prefixSelector,e),e=r("atrules","@","\\b","@"+i+"$1",e)),e=e.replace(RegExp("-"+i,"g"),"-"),e=e.replace(/-\*-(?=[a-z]+)/gi,t.prefix)},property:function(e){return(t.properties.indexOf(e)?t.prefix:"")+e},value:function(e){return e=r("functions","(^|\\s|,)","\\s*\\(","$1"+t.prefix+"$2(",e),e=r("keywords","(^|\\s)","(\\s|$)","$1"+t.prefix+"$2$3",e)},prefixSelector:function(e){return e.replace(/^:{1,2}/,function(e){return e+t.prefix})},prefixProperty:function(e,r){var n=t.prefix+e;return r?StyleFix.camelCase(n):n}};!function(){var e={},r=[],n=getComputedStyle(document.documentElement,null),i=document.createElement("div").style,a=function(t){if("-"===t.charAt(0)){r.push(t);var n=t.split("-"),i=n[1];for(e[i]=++e[i]||1;n.length>3;){n.pop();var a=n.join("-");o(a)&&-1===r.indexOf(a)&&r.push(a)}}},o=function(e){return StyleFix.camelCase(e)in i};if(n.length>0)for(var s=0;s<n.length;s++)a(n[s]);else for(var l in n)a(StyleFix.deCamelCase(l));var u={uses:0};for(var p in e){var f=e[p];u.uses<f&&(u={prefix:p,uses:f})}t.prefix="-"+u.prefix+"-",t.Prefix=StyleFix.camelCase(t.prefix),t.properties=[];for(var s=0;s<r.length;s++){var l=r[s];if(0===l.indexOf(t.prefix)){var c=l.slice(t.prefix.length);o(c)||t.properties.push(c)}}"Ms"!=t.Prefix||"transform"in i||"MsTransform"in i||!("msTransform"in i)||t.properties.push("transform","transform-origin"),t.properties.sort()}(),function(){function e(e,r){return i[r]="",i[r]=e,!!i[r]}var r={"linear-gradient":{property:"backgroundImage",params:"red, teal"},calc:{property:"width",params:"1px + 5%"},element:{property:"backgroundImage",params:"#foo"},"cross-fade":{property:"backgroundImage",params:"url(a.png), url(b.png), 50%"}};r["repeating-linear-gradient"]=r["repeating-radial-gradient"]=r["radial-gradient"]=r["linear-gradient"];var n={initial:"color","zoom-in":"cursor","zoom-out":"cursor",box:"display",flexbox:"display","inline-flexbox":"display",flex:"display","inline-flex":"display",grid:"display","inline-grid":"display","min-content":"width"};t.functions=[],t.keywords=[];var i=document.createElement("div").style;for(var a in r){var o=r[a],s=o.property,l=a+"("+o.params+")";!e(l,s)&&e(t.prefix+l,s)&&t.functions.push(a)}for(var u in n){var s=n[u];!e(u,s)&&e(t.prefix+u,s)&&t.keywords.push(u)}}(),function(){function r(e){return a.textContent=e+"{}",!!a.sheet.cssRules.length}var n={":read-only":null,":read-write":null,":any-link":null,"::selection":null},i={keyframes:"name",viewport:null,document:'regexp(".")'};t.selectors=[],t.atrules=[];var a=e.appendChild(document.createElement("style"));for(var o in n){var s=o+(n[o]?"("+n[o]+")":"");!r(s)&&r(t.prefixSelector(s))&&t.selectors.push(o)}for(var l in i){var s=l+" "+(i[l]||"");!r("@"+s)&&r("@"+t.prefix+s)&&t.atrules.push(l)}e.removeChild(a)}(),t.valueProperties=["transition","transition-property"],e.className+=" "+t.prefix,StyleFix.register(t.prefixCSS)}}(document.documentElement);
+</script>
+
+<!--
+Copyright (c) 2015 by robooneus (http://codepen.io/robooneus/pen/ivdFH)
+
+Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the "Software"), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
+-->

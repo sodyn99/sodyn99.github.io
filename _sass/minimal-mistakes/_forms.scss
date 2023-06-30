@@ -293,7 +293,73 @@ select,
 input[type="file"] {
   *margin-top: 4px;
 }
-
+// input[type="text"] {
+//   -webkit-appearance: none;
+//   -moz-appearance: none;
+//   appearance: none;
+//   border-radius: 0;
+//   border: 1px solid #d9d9d9;
+//   background-color: #fff;
+//   height: 32px;
+//   padding: 0 11px;
+//   font-size: 14px;
+//   line-height: 1.5715;
+//   color: rgba(0, 0, 0, 0.65);
+//   transition: all 0.3s;
+//   box-sizing: border-box;
+//   outline: none;
+//   &:hover {
+//     border-color: #40a9ff;
+//   }
+//   &:focus {
+//     border-color: #40a9ff;
+//     box-shadow: 0 0 0 2px rgba(24, 144, 255, 0.2);
+//   }
+//   &::placeholder {
+//     color: #bfbfbf;
+//   }
+//   &.disabled {
+//     background-color: #f5f5f5;
+//     cursor: not-allowed;
+//     &:hover {
+//       border-color: #d9d9d9;
+//     }
+//   }
+//   &.error {
+//     border-color: #ff4d4f;
+//     &:hover {
+//       border-color: #ff4d4f;
+//     }
+//     &:focus {
+//       border-color: #ff4d4f;
+//       box-shadow: 0 0 0 2px rgba(255, 77, 79, 0.2);
+//     }
+//   }
+//   &.success {
+//     border-color: #52c41a;
+//     &:hover {
+//       border-color: #52c41a;
+//     }
+//     &:focus {
+//       border-color: #52c41a;
+//       box-shadow: 0 0 0 2px rgba(82, 196, 26, 0.2);
+//     }
+//   }
+//   &.warning {
+//     border-color: #faad14;
+//     &:hover {
+//       border-color: #faad14;
+//     }
+//     &:focus {
+//       border-color: #faad14;
+//       box-shadow: 0 0 0 2px rgba(250, 173, 20, 0.2);
+//     }
+//   }
+//   &.validating {
+//     border-color: #1890ff;
+//     &:hover {
+//       border-color: $border-color;
+// }
 select {
   width: auto;
   background-color: #fff;
