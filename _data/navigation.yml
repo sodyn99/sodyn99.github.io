@@ -308,7 +308,7 @@ linux:
         - title: "ns-3 설치"
           index: "4.2"
           url: /study/computer/linux/4.2/
-        - title: "ns-3 시작"
+        - title: "예제: RAN-AI"
           index: "4.3"
           url: /study/computer/linux/4.3/
 
