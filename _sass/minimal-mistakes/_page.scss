@@ -358,6 +358,7 @@ body {
   border-radius: $border-radius;
 
   &:hover {
+    background-color: #eee;
     text-decoration: none;
     color: $link-color-hover;
   }

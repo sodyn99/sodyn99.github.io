@@ -311,6 +311,9 @@ linux:
         - title: "예제: RAN-AI"
           index: "4.3"
           url: /study/computer/linux/4.3/
+        - title: "예제"
+          index: "4.4"
+          url: /study/computer/linux/4.4/
 
 mobility:
     - title: "V2X"
