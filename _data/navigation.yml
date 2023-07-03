@@ -305,15 +305,18 @@ linux:
         - title: "About"
           index: "4.1"
           url: /study/computer/linux/4.1/
-        - title: "ns-3 설치"
+        - title: "Class"
           index: "4.2"
           url: /study/computer/linux/4.2/
-        - title: "예제: RAN-AI"
+        - title: "ns-3 설치"
           index: "4.3"
           url: /study/computer/linux/4.3/
         - title: "예제"
           index: "4.4"
           url: /study/computer/linux/4.4/
+        - title: "예제: RAN-AI"
+          index: "4.5"
+          url: /study/computer/linux/4.5/
 
 mobility:
     - title: "V2X"

@@ -48,11 +48,12 @@
 .match-esports{
   position: relative;
   width: calc(1.78 * var(--esports-height));
-  height: calc(1.01 * var(--esports-height));
+  height: calc(1.025 * var(--esports-height));
   background-color:  #F2F2F2;
   margin: 2% 1%;
   /* box-shadow: -1px -1px 4px 3px lightgrey; */
-  border-radius: 5px;
+  border-radius: 1vmin;
+  padding-top: calc(0.015 * var(--esports-height));
 }
 .esports-win1{
   border-top-right-radius: 1vmin;
@@ -85,8 +86,10 @@
   margin: var(--esports-margin) 0 0 0;
   font-size: calc(0.08 * var(--esports-height));
   line-height : calc(0.17 * var(--esports-height));
-
   > img {
+    user-select: none;
+    -webkit-user-select: none;
+    -webkit-user-drag: none;
     float:left;
     position:relative;
     top:calc(0.02 * var(--esports-height));
@@ -108,6 +111,9 @@
   font-size: calc(0.08 * var(--esports-height));
   line-height : calc(0.17 * var(--esports-height));
   > img {
+    user-select: none;
+    -webkit-user-select: none;
+    -webkit-user-drag: none;
     float:right;
     position:relative;
     top:calc(0.02 * var(--esports-height));
@@ -161,6 +167,9 @@
   font-size: calc(0.05 * var(--esports-height));
   line-height : calc(0.14 * var(--esports-height));
   > img {
+    user-select: none;
+    -webkit-user-select: none;
+    -webkit-user-drag: none;
     float:right;
     position:relative;
     height:calc(0.04 * var(--esports-height));
@@ -187,6 +196,9 @@
   font-size: calc(0.05 * var(--esports-height));
   line-height : calc(0.14 * var(--esports-height));
   > img {
+    user-select: none;
+    -webkit-user-select: none;
+    -webkit-user-drag: none;
     float:left;
     position:relative;
     height:calc(0.04 * var(--esports-height));
@@ -256,6 +268,9 @@
   text-align: center;
   line-height : calc(0.09 * var(--esports-height));
   > img {
+    user-select: none;
+    -webkit-user-select: none;
+    -webkit-user-drag: none;
     float:right;
     height:75%;
     margin: 0.7vmin 1.7vmin 0 -1.7vmin;
@@ -274,6 +289,9 @@
   text-align: center;
   line-height : calc(0.09 * var(--esports-height));
   > img {
+    user-select: none;
+    -webkit-user-select: none;
+    -webkit-user-drag: none;
     float:left;
     height:75%;
     margin: 0.7vmin -1.7vmin 0 1.7vmin;

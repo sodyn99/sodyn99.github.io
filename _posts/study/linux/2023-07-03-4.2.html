@@ -1,0 +1,542 @@
+---
+layout: single
+title: "Class"
+categories: Study Computer Linux
+tag: Linux Ubuntu NS3
+toc: false
+sidebar:
+  title: "Linux"
+  nav: linux
+  parent: true
+author_profile: false
+release: 3.33
+---
+
+<!-- abcdefghijklmnopqrstuvwxyz -->
+<section>
+  <!-- <label for="search-text">Search Module</label> -->
+  <label for="search-text" style="margin:1em;margin-top:0;">자주 쓰는 Class 목록</label>
+  <input type="text" id="search-text" placeholder="Search Class" class="search-box"></input>
+  <div class="list-count"></div>
+
+  <ol id="list">
+    <li class="in">
+      <dt class="ct">LogLevel</dt>
+      <dd class="co">로그 레벨을 지정하는 열거형.</dd>
+      <dd class="co"><details>
+        <summary>Class & Level</summary>
+        <ul>
+          <li>
+            <dt>LOG_NONE</dt>
+            <dd>로그를 출력하지 않음.</dd>
+          </li>
+          <li>
+            <dt>LOG_ERROR</dt>
+            <dd>오류 발생 시 로그를 출력.</dd>
+          </li>
+          <li>
+            <dt>LOG_WARN</dt>
+            <dd>경고 발생 시 로그를 출력.</dd>
+          </li>
+          <li>
+            <dt>LOG_INFO</dt>
+            <dd>정보 발생 시 로그를 출력.</dd>
+          </li>
+          <li>
+            <dt>LOG_FUNCTION</dt>
+            <dd>함수 호출 시 로그를 출력.</dd>
+          </li>
+          <li>
+            <dt>LOG_LOGIC</dt>
+            <dd>논리적 오류 발생 시 로그를 출력.</dd>
+          </li>
+          <li>
+            <dt>LOG_DEBUG</dt>
+            <dd>디버깅 시 로그를 출력.</dd>
+          </li>
+          <li>
+            <dt>LOG_ALL</dt>
+            <dd>모든 로그를 출력.</dd>
+          </li>
+        </ul>
+      </details></dd>
+      <dd class="co more"><a href="https://www.nsnam.org/docs/release/{{ page.release }}/doxygen/classns3_1_1_log_level.html" target="_blank" style="text-decoration:none;">More</a></dd>
+    </li>
+    <li class="in">
+      <dt class="ct">LogComponent</dt>
+      <dd class="co">로그 컴포넌트를 나타내는 클래스.</dd>
+      <dd class="co"><details>
+        <summary>LogComponentEnable</summary>
+        <div style="margin:0.5em;">로그 컴포넌트를 활성화하는 함수.</div>
+<div class="language-bash highlighter-rouge">
+<div class="highlight">
+<pre class="highlight">
+<span class="nv">LogComponentEnable</span>(<span class="s2">&quot;LogComponent&quot;</span>, <span class="mi">0</span>); <span class="c1">// 로그 컴포넌트를 활성화</span>
+</pre>
+</div>
+</div>
+      </details></dd>
+      <dd class="co"><details>
+        <summary>LogComponentDisable</summary>
+        <div style="margin:0.5em;">로그 컴포넌트를 비활성화하는 함수.</div>
+<div class="language-bash highlighter-rouge">
+<div class="highlight">
+<pre class="highlight">
+<span class="nv">LogComponentDisable</span>(<span class="s2">&quot;LogComponent&quot;</span>, <span class="mi">0</span>); <span class="c1">// 로그 컴포넌트를 비활성화</span>
+</pre>
+</div>
+</div>
+      </details></dd>
+      <dd class="co"><details>
+        <summary>LogComponentPrintList</summary>
+        <div style="margin:0.5em;">로그 컴포넌트의 목록을 출력하는 함수.</div>
+<div class="language-bash highlighter-rouge">
+<div class="highlight">
+<pre class="highlight">
+<span class="nv">LogComponentPrintList</span>(<span class="s2">&quot;LogComponent&quot;</span>, <span class="mi">0</span>); <span class="c1">// 로그 컴포넌트의 목록을 출력</span>
+</pre>
+</div>
+</div>
+      </details></dd>
+      <dd class="co"><details>
+        <summary>LogComponentPrintAll</summary>
+        <div style="margin:0.5em;">모든 로그 컴포넌트의 목록을 출력하는 함수.</div>
+<div class="language-bash highlighter-rouge">
+<div class="highlight">
+<pre class="highlight">
+<span class="nv">LogComponentPrintAll</span>(); <span class="c1">// 모든 로그 컴포넌트의 목록을 출력</span>
+</pre>
+</div>
+</div>
+      </details></dd>
+      <dd class="co more"><a href="https://www.nsnam.org/docs/release/{{ page.release }}/doxygen/classns3_1_1_log_component.html" target="_blank" style="text-decoration:none;">More</a></dd>
+    </li>
+    <li class="in">
+      <dt class="ct">CommandLine</dt>
+      <dd class="co">명령행 인자를 처리하는 클래스.</dd>
+      <dd class="co"><details>
+        <summary>AddValue</summary>
+        <div style="margin:0.5em;">명령행 인자를 추가하는 함수.</div>
+<div class="language-bash highlighter-rouge">
+<div class="highlight">
+<pre class="highlight">
+<span class="nv">CommandLine</span> cmd; <span class="c1">// 명령행 인자를 처리하는 객체</span>
+cmd.<span class="nv">AddValue</span>(<span class="s2">&quot;arg&quot;</span>, <span class="s2">&quot;arg description&quot;</span>, <span class="mi">0</span>); <span class="c1">// 명령행 인자를 추가</span>
+</pre>
+</div>
+</div>
+      </details></dd>
+      <dd class="co"><details>
+        <summary>Parse</summary>
+        <div style="margin:0.5em;">명령행 인자를 파싱하는 함수.</div>
+<div class="language-bash highlighter-rouge">
+<div class="highlight">
+<pre class="highlight">
+cmd.<span class="nv">Parse</span>(argc, argv); <span class="c1">// 명령행 인자를 파싱</span>
+</pre>
+</div>
+</div>
+      </details></dd>
+      <dd class="co"><details>
+        <summary>GetNCommandLine</summary>
+        <div style="margin:0.5em;">명령행 인자의 개수를 반환하는 함수.</div>
+<div class="language-bash highlighter-rouge">
+<div class="highlight">
+<pre class="highlight">
+<span class="kt">int</span> n = cmd.<span class="nv">GetNCommandLine</span>(); <span class="c1">// 명령행 인자의 개수를 반환</span>
+</pre>
+</div>
+</div>
+      </details></dd>
+      <dd class="co"><details>
+        <summary>GetCommandLine</summary>
+        <div style="margin:0.5em;">명령행 인자를 반환하는 함수.</div>
+<div class="language-bash highlighter-rouge">
+<div class="highlight">
+<pre class="highlight">
+<span class="kt">char</span> *arg = cmd.<span class="nv">GetCommandLine</span>(<span class="mi">0</span>); <span class="c1">// 명령행 인자를 반환</span>
+</pre>
+</div>
+</div>
+      </details></dd>
+      <dd class="co more"><a href="https://www.nsnam.org/docs/release/{{ page.release }}/doxygen/classns3_1_1_command_line.html">More</a></dd>
+    </li>
+    <li class="in">
+      <dt class="ct">Node</dt>
+      <dd class="co">노드를 나타내는 클래스.</dd>
+      <dd class="co"><details>
+        <summary>GetId</summary>
+        <div style="margin:0.5em;">노드의 ID를 반환하는 함수.</div>
+<div class="language-bash highlighter-rouge">
+<div class="highlight">
+<pre class="highlight">
+<span class="kt">int</span> id = node.<span class="nv">GetId</span>(); <span class="c1">// 노드의 ID를 반환</span>
+</pre>
+</div>
+</div>
+      </details></dd>
+      <dd class="co"><details>
+        <summary>GetDevice</summary>
+        <div style="margin:0.5em;">노드에 연결된 디바이스를 반환하는 함수.</div>
+<div class="language-bash highlighter-rouge">
+<div class="highlight">
+<pre class="highlight">
+Ptr&lt;<span class="nt">NetDevice</span>&gt; device = node.<span class="nv">GetDevice</span>(<span class="mi">0</span>); <span class="c1">// 노드에 연결된 첫번째 디바이스를 반환</span>
+</pre>
+</div>
+</div>
+      </details></dd>
+      <dd class="co"><details>
+        <summary>GetNDevices</summary>
+        <div style="margin:0.5em;">노드에 연결된 디바이스의 개수를 반환하는 함수.</div>
+<div class="language-bash highlighter-rouge">
+<div class="highlight">
+<pre class="highlight">
+<span class="kt">int</span> n = node.<span class="nv">GetNDevices</span>(); <span class="c1">// 노드에 연결된 디바이스의 개수를 반환</span>
+</pre>
+</div>
+</div>
+      </details></dd>
+      <dd class="co"><details>
+        <summary>GetApplication</summary>
+        <div style="margin:0.5em;">노드에 연결된 애플리케이션을 반환하는 함수.</div>
+<div class="language-bash highlighter-rouge">
+<div class="highlight">
+<pre class="highlight">
+Ptr&lt;<span class="nt">Application</span>&gt; app = node.<span class="nv">GetApplication</span>(<span class="mi">0</span>); <span class="c1">// 노드에 연결된 첫번째 애플리케이션을 반환</span>
+</pre>
+</div>
+</div>
+      </details></dd>
+      <dd class="co"><details>
+        <summary>GetNApplications</summary>
+        <div style="margin:0.5em;">노드에 연결된 애플리케이션의 개수를 반환하는 함수.</div>
+<div class="language-bash highlighter-rouge">
+<div class="highlight">
+<pre class="highlight">
+<span class="kt">int</span> n = node.<span class="nv">GetNApplications</span>(); <span class="c1">// 노드에 연결된 애플리케이션의 개수를 반환</span>
+</pre>
+</div>
+</div>
+      </details></dd>
+      <dd class="co"><details>
+        <summary>GetDevice</summary>
+        <div style="margin:0.5em;">노드에 연결된 디바이스를 반환하는 함수.</div>
+<div class="language-bash highlighter-rouge">
+<div class="highlight">
+<pre class="highlight">
+Ptr&lt;<span class="nt">NetDevice</span>&gt; device = node.<span class="nv">GetDevice</span>(<span class="mi">0</span>); <span class="c1">// 노드에 연결된 첫번째 디바이스를 반환</span>
+</pre>
+</div>
+</div>
+      </details></dd>
+      <dd class="co"><details>
+        <summary>GetNDevices</summary>
+        <div style="margin:0.5em;">노드에 연결된 디바이스의 개수를 반환하는 함수.</div>
+<div class="language-bash highlighter-rouge">
+<div class="highlight">
+<pre class="highlight">
+<span class="kt">int</span> n = node.<span class="nv">GetNDevices</span>(); <span class="c1">// 노드에 연결된 디바이스의 개수를 반환</span>
+</pre>
+</div>
+</div>
+      </details></dd>
+    </li>
+    <li class="in">
+      <dt class="ct">NodeContainer</dt>
+      <dd class="co">노드를 저장하는 컨테이너.</dd>
+      <dd class="co"><details>
+        <summary>Create</summary>
+        <div style="margin:0.5em;">노드를 생성하는 함수. 인자로 생성할 노드의 개수를 받는다.</div>
+<div class="language-bash highlighter-rouge">
+<div class="highlight">
+<pre class="highlight">
+<span class="nt">NodeContainer</span> n; <span class="c1">// 노드 컨테이너 생성</span>
+n.<span class="nv">Create</span>(<span class="mi">2</span>); <span class="c1">// 노드 2개 생성</span>
+</pre>
+</div>
+</div>
+      </details></dd>
+      <dd class="co more"><a href="https://www.nsnam.org/docs/release/{{ page.release }}/doxygen/classns3_1_1_node_container.html" target="_blank" style="text-decoration:none;">More</a></dd>
+    </li>
+    <li class="in">
+      <dt class="ct">NetDeviceContainer</dt>
+      <dd class="co">네트워크 장치를 저장하는 컨테이너.</dd>
+      <dd class="co"><details>
+        <summary>Get</summary>
+        <div style="margin:0.5em;">인덱스에 해당하는 네트워크 장치를 반환하는 함수.</div>
+<div class="language-bash highlighter-rouge">
+<div class="highlight">
+<pre class="highlight">
+<span class="nt">NetDeviceContainer</span> d; <span class="c1">// 네트워크 장치 컨테이너 생성</span>
+<span class="nt">Ptr</span><<span class="nt">NetDevice</span>> nd; <span class="c1">// 네트워크 장치 포인터 생성</span>
+nd = d.<span class="nv">Get</span>(<span class="mi">0</span>); <span class="c1">// 인덱스 0에 해당하는 네트워크 장치 반환</span>
+</pre>
+</div>
+</div>
+      </details></dd>
+      <dd class="co more"><a href="https://www.nsnam.org/docs/release/{{ page.release }}/doxygen/classns3_1_1_net_device_container.html" target="_blank" style="text-decoration:none;">More</a></dd>
+    </li>
+    <li class="in">
+      <dt class="ct">PointToPointHelper</dt>
+      <dd class="co">Point to Point 네트워크를 생성하는 Helper.</dd>
+      <dd class="co"><details>
+        <summary>SetDeviceAttribute</summary>
+        <div style="margin:0.5em;">네트워크 장치의 속성을 설정하는 함수.</div>
+<div class="language-bash highlighter-rouge">
+<div class="highlight">
+<pre class="highlight">
+<span class="nt">PointToPointHelper</span> p2p; <span class="c1">// Point to Point 네트워크 생성 Helper</span>
+p2p.<span class="nv">SetDeviceAttribute</span>(<span class="s2">&quot;DataRate&quot;</span>, <span class="nt">DataRateValue</span>(<span class="mi">5</span> * <span class="nt">1000</span> * <span class="nt">1000</span>)); <span class="c1">// 데이터 전송 속도 설정</span>
+</pre>
+</div>
+</div>
+      </details></dd>
+      <dd class="co"><details>
+        <summary>SetChannelAttribute</summary>
+        <div style="margin:0.5em;">채널의 속성을 설정하는 함수.</div>
+<div class="language-bash highlighter-rouge">
+<div class="highlight">
+<pre class="highlight">
+<span class="nt">PointToPointHelper</span> p2p; <span class="c1">// Point to Point 네트워크 생성 Helper</span>
+p2p.<span class="nv">SetChannelAttribute</span>(<span class="s2">&quot;Delay&quot;</span>, <span class="nt">TimeValue</span>(<span class="nt">MilliSeconds</span>(<span class="mi">2</span>))); <span class="c1">// 전송 지연 시간 설정</span>
+</pre>
+</div>
+</div>
+      </details></dd>
+      <dd class="co"><details>
+        <summary>Install</summary>
+        <div style="margin:0.5em;">노드에 네트워크 장치를 설치하는 함수.</div>
+<div class="language-bash highlighter-rouge">
+<div class="highlight">
+<pre class="highlight">
+<span class="nt">NodeContainer</span> n; <span class="c1">// 노드 컨테이너 생성</span>
+<span class="nt">NetDeviceContainer</span> d; <span class="c1">// 네트워크 장치 컨테이너 생성</span>
+d = p2p.<span class="nv">Install</span>(n); <span class="c1">// 노드에 네트워크 장치를 설치</span>
+</pre>
+</div>
+</div>
+      </details></dd>
+      <dd class="co more"><a href="https://www.nsnam.org/docs/release/{{ page.release }}/doxygen/classns3_1_1_point_to_point_helper.html" target="_blank" style="text-decoration:none;">More</a></dd>
+    </li>
+    <li class="in">
+      <dt class="ct">InternetStackHelper</dt>
+      <dd class="co">인터넷 스택을 생성하는 Helper.</dd>
+      <dd class="co"><details>
+        <summary>Install</summary>
+        <div style="margin:0.5em;">노드에 인터넷 스택을 설치하는 함수.</div>
+<div class="language-bash highlighter-rouge">
+<div class="highlight">
+<pre class="highlight">
+<span class="nt">NodeContainer</span> n; <span class="c1">// 노드 컨테이너 생성</span>
+<span class="nt">InternetStackHelper</span> ish; <span class="c1">// 인터넷 스택 생성 Helper</span>
+ish.<span class="nv">Install</span>(n); <span class="c1">// 노드에 인터넷 스택을 설치</span>
+</pre>
+</div>
+</div>
+      </details></dd>
+      <dd class="co more"><a href="https://www.nsnam.org/docs/release/{{ page.release }}/doxygen/classns3_1_1_internet_stack_helper.html" target="_blank" style="text-decoration:none;">More</a></dd>
+    </li>
+    <li class="in">
+      <dt class="ct">Ipv4AddressHelper</dt>
+      <dd class="co">IPv4 주소를 생성하는 Helper.</dd>
+      <dd class="co"><details>
+        <summary>SetBase</summary>
+        <div style="margin:0.5em;">네트워크 주소와 넷마스크를 설정하는 함수.<br>같은 주소가 두 번 생성되는 실수를 발생시키면 치명적인 오류가 발생한다 (이는 매우 디버그하기 어려운 오류이므로 유의해야한다).</div>
+<div class="language-bash highlighter-rouge">
+<div class="highlight">
+<pre class="highlight">
+<span class="nt">Ipv4AddressHelper</span> ipv4; <span class="c1">// IPv4 주소 생성 Helper</span>
+ipv4.<span class="nv">SetBase</span>(<span class="s2">&quot;10.1.1.0&quot;</span>, <span class="s2">&quot;255.255.255.0&quot;</span>); <span class="c1">// 네트워크 주소와 넷마스크 설정</span>
+</pre>
+</div>
+</div>
+      </details></dd>
+      <dd class="co"><details>
+        <summary>Assign</summary>
+        <div style="margin:0.5em;">노드에 IPv4 주소를 할당하는 함수.</div>
+<div class="language-bash highlighter-rouge">
+<div class="highlight">
+<pre class="highlight">
+<span class="nt">NodeContainer</span> n; <span class="c1">// 노드 컨테이너 생성</span>
+<span class="nt">NetDeviceContainer</span> d; <span class="c1">// 네트워크 장치 컨테이너 생성</span>
+<span class="nt">Ipv4InterfaceContainer</span> i; <span class="c1">// IPv4 인터페이스 컨테이너 생성</span>
+i = ipv4.<span class="nv">Assign</span>(d); <span class="c1">// 노드에 IPv4 주소를 할당</span>
+</pre>
+</div>
+</div>
+      </details></dd>
+      <dd class="co more"><a href="https://www.nsnam.org/docs/release/{{ page.release }}/doxygen/classns3_1_1_ipv4_address_helper.html" target="_blank" style="text-decoration:none;">More</a></dd>
+    </li>
+    <li class="in">
+      <dt class="ct">UdpEchoServerHelper</dt>
+      <dd class="co">UDP 에코 서버를 생성하는 Helper.</dd>
+      <dd class="co"><details>
+        <summary>echoServer</summary>
+        <div style="margin:0.5em;">생성된 에코 서버를 가리키는 포인터.</div>
+<div class="language-bash highlighter-rouge">
+<div class="highlight">
+<pre class="highlight">
+<span class="nt">UdpEchoServerHelper</span> echoServer(9); <span class="c1">// 9번 포트에 에코 서버 생성</span>
+</pre>
+</div>
+</div>
+      </details></dd>
+      <dd class="co"><details>
+        <summary>SetAttribute</summary>
+        <div style="margin:0.5em;">에코 서버의 속성을 설정하는 함수.</div>
+<div class="language-bash highlighter-rouge">
+<div class="highlight">
+<pre class="highlight">
+<span class="nt">UdpEchoServerHelper</span> echoServer; <span class="c1">// UDP 에코 서버 생성 Helper</span>
+echoServer.<span class="nv">SetAttribute</span>(<span class="s2">&quot;Port&quot;</span>, <span class="nt">UintegerValue</span>(<span class="mi">9</span>)); <span class="c1">// 9번 포트에 에코 서버 생성</span>
+</pre>
+</div>
+</div>
+      </details></dd>
+      <dd class="co"><details>
+        <summary>Install</summary>
+        <div style="margin:0.5em;">노드에 UDP 에코 서버를 설치하는 함수.</div>
+<div class="language-bash highlighter-rouge">
+<div class="highlight">
+<pre class="highlight">
+<span class="nt">NodeContainer</span> n; <span class="c1">// 노드 컨테이너 생성</span>
+<span class="nt">ApplicationContainer</span> a; <span class="c1">// 애플리케이션 컨테이너 생성</span>
+a = echoServer.<span class="nv">Install</span>(n.Get(1)); <span class="c1">// 노드에 UDP 에코 서버를 설치</span>
+</pre>
+</div>
+</div>
+      </details></dd>
+      <dd class="co more"><a href="https://www.nsnam.org/docs/release/{{ page.release }}/doxygen/classns3_1_1_udp_echo_server_helper.html" target="_blank" style="text-decoration:none;">More</a></dd>
+    </li>
+    <li class="in">
+      <dt class="ct">ApplicationContainer</dt>
+      <dd class="co">애플리케이션을 가리키는 포인터의 컨테이너.</dd>
+      <dd class="co"><details>
+        <summary>Start</summary>
+        <div style="margin:0.5em;">애플리케이션을 시작하는 함수.</div>
+<div class="language-bash highlighter-rouge">
+<div class="highlight">
+<pre class="highlight">
+<span class="nt">ApplicationContainer</span> a; <span class="c1">// 애플리케이션 컨테이너 생성</span>
+a.<span class="nv">Start</span>(<span class="nt">Seconds</span>(<span class="mi">1.0</span>)); <span class="c1">// 1초 후 애플리케이션 시작</span>
+</pre>
+</div>
+</div>
+      </details></dd>
+      <dd class="co"><details>
+        <summary>Stop</summary>
+        <div style="margin:0.5em;">애플리케이션을 종료하는 함수.</div>
+<div class="language-bash highlighter-rouge">
+<div class="highlight">
+<pre class="highlight">
+<span class="nt">ApplicationContainer</span> a; <span class="c1">// 애플리케이션 컨테이너 생성</span>
+a.<span class="nv">Stop</span>(<span class="nt">Seconds</span>(<span class="mi">10.0</span>)); <span class="c1">// 10초 후 애플리케이션 종료</span>
+</pre>
+</div>
+</div>
+      </details></dd>
+      <dd class="co more"><a href="https://www.nsnam.org/docs/release/{{ page.release }}/doxygen/classns3_1_1_application_container.html" target="_blank" style="text-decoration:none;">More</a></dd>
+    </li>
+    <li class="in">
+      <dt class="ct">UdpEchoClientHelper</dt>
+      <dd class="co">UDP 에코 클라이언트를 생성하는 Helper.</dd>
+      <dd class="co"><details>
+        <summary>SetAttribute</summary>
+        <div style="margin:0.5em;">에코 서버의 주소와 포트를 설정하는 함수.</div>
+<div class="language-bash highlighter-rouge">
+<div class="highlight">
+<pre class="highlight">
+<span class="nt">UdpEchoClientHelper</span> UdpEchoClientHelper echoClient (interfaces.GetAddress (1), 9); <span class="c1">// 1번 노드의 주소와 9번 포트에 에코 클라이언트 생성</span>
+<span class="c1">// echoClient.SetAttribute(&quot;RemoteAddress&quot;, AddressValue(InetSocketAddress(interfaces.GetAddress (1), 9))); // 에코 서버의 주소와 포트 설정</span>
+<span class="c1">// echoClient.SetAttribute(&quot;RemoteAddress&quot;, AddressValue(InetSocketAddress(Ipv4Address::GetAny(), 9)));</span>
+<span class="c1">// echoClient.SetAttribute(&quot;RemotePort&quot;, UintegerValue(9)); // 에코 서버의 포트 설정</span>
+echoClient.<span class="nv">SetAttribute</span>(<span class="s2">&quot;MaxPackets&quot;</span>, <span class="nt">UintegerValue</span>(<span class="mi">1</span>)); <span class="c1">// 최대 패킷 수를 1로 설정</span>
+echoClient.<span class="nv">SetAttribute</span>(<span class="s2">&quot;Interval&quot;</span>, <span class="nt">TimeValue</span>(<span class="nt">Seconds</span>(<span class="mi">1.0</span>))); <span class="c1">// 패킷 전송 간격을 1초로 설정</span>
+echoClient.<span class="nv">SetAttribute</span>(<span class="s2">&quot;PacketSize&quot;</span>, <span class="nt">UintegerValue</span>(<span class="mi">1024</span>)); <span class="c1">// 패킷 크기를 1024바이트로 설정</span>
+</pre>
+</div>
+</div>
+      </details></dd>
+      <dd class="co"><details>
+        <summary>Install</summary>
+        <div style="margin:0.5em;">노드에 UDP 에코 클라이언트를 설치하는 함수.</div>
+<div class="language-bash highlighter-rouge">
+<div class="highlight">
+<pre class="highlight">
+<span class="nt">NodeContainer</span> n; <span class="c1">// 노드 컨테이너 생성</span>
+<span class="nt">ApplicationContainer</span> a; <span class="c1">// 애플리케이션 컨테이너 생성</span>
+a = echoClient.<span class="nv">Install</span>(n); <span class="c1">// 노드에 에코 클라이언트를 설치</span>
+</pre>
+</div>
+</div>
+      </details></dd>
+      <dd class="co more"><a href="https://www.nsnam.org/docs/release/{{ page.release }}/doxygen/classns3_1_1_udp_echo_client_helper.html" target="_blank" style="text-decoration:none;">More</a></dd>
+    </li>
+    <li class="in">
+      <dt class="ct">CsmaHelper</dt>
+      <dd class="co">CSMA/CD 링크를 생성하는 Helper.</dd>
+      <dd class="co"><details>
+        <summary>SetChannelAttribute</summary>
+        <div style="margin:0.5em;">링크의 속도를 설정하는 함수.</div>
+<div class="language-bash highlighter-rouge">
+<div class="highlight">
+<pre class="highlight">
+<span class="nt">CsmaHelper</span> csma; <span class="c1">// CSMA/CD 링크 생성</span>
+csma.<span class="nv">SetChannelAttribute</span>(<span class="s2">&quot;DataRate&quot;</span>, <span class="nt">DataRateValue</span>(<span class="nt">DataRate</span>(<span class="mi">5000000</span>))); <span class="c1">// 링크의 속도를 5Mbps로 설정</span>
+csma.<span class="nv">SetChannelAttribute</span>(<span class="s2">&quot;Delay&quot;</span>, <span class="nt">TimeValue</span>(<span class="nt">MilliSeconds</span>(<span class="mi">2</span>))); <span class="c1">// 링크의 지연을 2ms로 설정</span>
+</pre>
+</div>
+</div>
+      </details></dd>
+      <dd class="co"><details>
+        <summary>Install</summary>
+        <div style="margin:0.5em;">노드에 CSMA/CD 링크를 설치하는 함수.</div>
+<div class="language-bash highlighter-rouge">
+<div class="highlight">
+<pre class="highlight">
+<span class="nt">NodeContainer</span> n; <span class="c1">// 노드 컨테이너 생성</span>
+<span class="nt">NetDeviceContainer</span> d; <span class="c1">// 네트워크 디바이스 컨테이너 생성</span>
+d = csma.<span class="nv">Install</span>(n); <span class="c1">// 노드에 CSMA/CD 링크를 설치</span>
+</pre>
+</div>
+</div>
+      </details></dd>
+      <dd class="co more"><a href="https://www.nsnam.org/docs/release/{{ page.release }}/doxygen/classns3_1_1_csma_helper.html" target="_blank" style="text-decoration:none;">More</a></dd>
+    </li>
+    <li class="in">
+      <dt class="ct">Simulator</dt>
+      <dd class="co">네트워크 시뮬레이션을 위한 시뮬레이터.</dd>
+      <dd class="co"><details>
+        <summary>Run</summary>
+        <div style="margin:0.5em;">시뮬레이션을 실행하는 함수.</div>
+<div class="language-bash highlighter-rouge">
+<div class="highlight">
+<pre class="highlight">
+<span class="nt">Simulator</span>::<span class="nt">Run</span>(); <span class="c1">// 시뮬레이션 실행</span>
+</pre>
+</div>
+</div>
+      </details></dd>
+      <dd class="co"><details>
+        <summary>Destroy</summary>
+        <div style="margin:0.5em;">시뮬레이션을 종료하고 시뮬레이션 객체를 삭제하는 함수.</div>
+<div class="language-bash highlighter-rouge">
+<div class="highlight">
+<pre class="highlight">
+<span class="nt">Simulator</span>::<span class="nt">Destroy</span>(); <span class="c1">// 시뮬레이션 종료</span>
+</pre>
+</div>
+</div>
+      </details></dd>
+      <dd class="co more"><a href="https://www.nsnam.org/docs/release/{{ page.release }}/doxygen/classns3_1_1_simulator.html" target="_blank" style="text-decoration:none;">More</a></dd>
+    </li>
+
+    <span class="empty-item">no results</span>
+  </ol>
+</section>
+<section>
+  <hr>
+  <h1>Reference</h1>
+  <p>Chat GPT의 설명을 참고함.</p>
+</section>

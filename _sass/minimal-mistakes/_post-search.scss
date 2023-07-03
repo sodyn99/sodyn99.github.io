@@ -1,0 +1,161 @@
+/*
+Copyright (c) 2015 by robooneus (http://codepen.io/robooneus/pen/ivdFH)
+
+Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the "Software"), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
+*/
+* { -moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: border-box; }
+:root {
+    --after-degree: -135deg;
+    --after-top: 1.8rem;
+}
+
+.list-wrap label {
+    float:left;
+    color:#00BDE8;
+}
+
+.list-count {
+    width: 30%;
+    display: block;
+    text-align:left;
+    margin:0.5em 0.5em 0em 1em;
+    color:#aaa;
+}
+
+.in {
+    transition-property: margin, background-color, border-color;
+    transition-duration: .4s, .2s, .2s;
+    transition-timing-function: ease-in-out, ease, ease;
+}
+
+.empty-item {
+    transition-property: opacity;
+    transition-duration: 0s;
+    transition-delay: 0s;
+    transition-timing-function: ease;
+}
+
+.empty .empty-item {
+    transition-property: opacity;
+    transition-duration: .2s;
+    transition-delay: .3s;
+    transition-timing-function: ease;
+}
+
+.hiding {
+    margin-left:-100%;
+    opacity:0.5;
+}
+
+.hidden {
+    display:none;
+}
+
+#list {
+    width:100%;
+    margin:1em 0;
+    padding:0;
+    position:relative;
+}
+
+.in {
+    vertical-align: middle;
+    float:left;
+    clear:left;
+    width:100%;
+    margin:0.4em 0;
+    padding:0.1em 0em 0.6em 1.5em;
+    list-style:none;
+    background-color:#f2f2f2;
+    border-radius: 1.5rem;
+    /* border-left:5px solid #003842; */
+    color:#333;
+    position:relative;
+    z-index:2;
+}
+.in:hover {
+    background-color:#f9f9f9;
+    border-color:#00BDE8;
+    cursor:pointer;
+}
+.in::after {
+    content: "";
+    position: absolute;
+    top: var(--after-top);
+    right: 1.5rem;
+    width: 0.6rem;
+    height:0.6rem;
+    -webkit-transform: translate(-50%, -50%) rotate(var(--after-degree));
+    transform: translate(-50%, -50%) rotate(var(--after-degree));
+    margin-top: 2px;
+    border-top: 1px solid #333;
+    border-left: 1px solid #333;
+}
+.empty-item {
+    background:#fff;
+    color:#aaa;
+    font-size: 1.5em;
+    padding:0.5em 0.8em;
+    font-style:italic;
+    border:none;
+    text-align:center;
+    visibility:hidden;
+    opacity:0;
+    float:left;
+    clear:left;
+    width:100%;
+}
+
+.empty .empty-item {
+    opacity:1;
+    visibility:visible;
+}
+
+.info {
+    float:left;
+    width:60%;
+    margin:2em 20%;
+    padding:2em 0;
+    background:#f9f9f9;
+    border-left:5px solid #003842;
+    padding:10px 20px;
+}
+
+.list-wrap {
+    float:left;
+    width:40%;
+    margin:2em 30%;
+    padding:2em 0;
+}
+
+.co{
+    font-weight:bold;
+    line-height:1.5em;
+
+    > details {
+    width:95%;
+    border-radius: 1rem;
+    background-color: #f2f2f2;
+    padding: 0.5em;
+    padding-left: 1em;
+    }
+}
+.more {
+    font-size:smaller !important;
+    margin-top:0.5em;
+    margin-right:6em;
+    float:right;
+}
+
+
+.ct {
+    font-weight: bold;
+    font-size: 1.2em;
+    -webkit-user-drag: none;
+    user-select: none;
+    -webkit-user-select: none;
+}
