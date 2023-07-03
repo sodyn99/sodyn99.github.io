@@ -25,8 +25,7 @@ sidebar:
   document.getElementById("page-title").style.display = "none";
   let title = document.getElementsByClassName("football_title");
   for (let i = 0; i < title.length; i++) {
-    title[i].style.margin = "3rem 0";
-    title[i].style.fontFamily = "Courier New";
+    title[i].style.fontFamily = "'yeonpilsketch', sans-serif";
     title[i].style.fontSize = "1.5rem;";
   }
 </script>
@@ -116,6 +115,17 @@ sidebar:
   }
   function displayPlaylistItems(items) {
     const playlistContainer = document.getElementById('playlistContainer');
+    const equalizer =
+    '<div class="eq__container">'+
+      '<svg width="16px" height="16px" viewBox="0 0 16 16" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">'+
+        '<defs></defs>'+
+            '<g id="icon-equalizer-anim" fill="#4A4A4A">'+
+                '<rect class="eq__bar" id="eq1" x="1" y="8" width="4" height="8"></rect>'+
+                '<rect class="eq__bar" id="eq2" x="6" y="1" width="4" height="15"></rect>'+
+                '<rect class="eq__bar" id="eq3" x="11" y="4" width="4" height="12"></rect>'+
+            '</g>'+
+      '</svg>'+
+    '</div>';
 
     items.forEach((item, index) => {
       const videoId = item.snippet.resourceId.videoId;
@@ -130,10 +140,12 @@ sidebar:
         event.preventDefault();
         playVideo(videoId);
         const activeLink = document.querySelector('.active');
+        videoLink.classList.add('active');
+        videoLink.innerHTML = videoLink.textContent + equalizer;
         if (activeLink) {
           activeLink.classList.remove('active');
+          activeLink.innerHTML = activeLink.textContent;
         }
-        videoLink.classList.add('active');
       });
 
       const listItem = document.createElement('li');

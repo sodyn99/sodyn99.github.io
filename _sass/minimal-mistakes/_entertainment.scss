@@ -105,30 +105,10 @@
   overflow: hidden;
   text-overflow: ellipsis;
 }
-.playlist .item:hover {
-  color: #fff !important;
-  background-color: #6454ED;
-}
 .playlist .active {
+  font-weight: bold;
   color: #5043c0 !important;
   background-color: #f2f2f2;
-
-  &:hover {
-    color: #5043c0 !important;
-    background-color: #f2f2f2;
-  }
-}
-.playlist .active::after {
-  content: '';
-  position: relative;
-  float: right;
-  top: 0.5vmin;
-  right: 0;
-  width: 0;
-  height: 0;
-  border-top: 0.8vmin solid transparent;
-  border-bottom: 0.8vmin solid transparent;
-  border-left: 1.5vmin solid #5043c0;
 }
 @media (max-width: 1024px) {
   .playlist{
@@ -145,5 +125,56 @@
   }
   .playlist .item {
     font-size:1.5rem;
+  }
+}
+
+@keyframes eq-uppydowny {
+  0% {
+    //height: 20px;
+    transform: scaleY(1);
+  }
+  50% {
+    //height: 3px;
+    transform: scaleY(.5);
+  }
+  100% {
+    //height: 20px;
+    transform: scaleY(1);
+  }
+}
+
+.eq__container {
+  display: block;
+  float: right;
+}
+.eq__bar {
+  position: absolute;
+  bottom: 0px;
+  fill: #5043c0;
+  transition: all 0.3s ease;
+  animation-name: eq-uppydowny;
+  animation-fill: forwards;
+  animation-iteration-count: infinite;
+  transform-origin: 8px 16px;
+  -webkit-transform-origin: 8px 16px;
+  rx:3;
+  ry:3;
+}
+#eq1 {
+  animation-duration: 0.5s;
+}
+#eq2 {
+  animation-duration: 1.3s;
+}
+#eq3 {
+  animation-duration: 0.7s;
+}
+
+.playlist .item:hover {
+  color: #fff !important;
+  background-color: #6454ED;
+
+  .eq__bar {
+    fill: #fff;
   }
 }
