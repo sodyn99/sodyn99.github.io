@@ -55,7 +55,7 @@ Asungajinli
 
 ## About Blog
 #### 🅰️&nbsp;Font
-[SUIT](https://sunn.us/suit/)
+[SUIT](https://sunn.us/suit/){:target="_blank"}
 <!--Spoqa Han Sans Neo-->
 
 #### 🎨&nbsp;Color
