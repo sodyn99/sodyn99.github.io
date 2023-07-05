@@ -296,14 +296,16 @@ input[type="text"] {
   border: 0;
   border-radius: 2em;
   outline: none;
-  padding-left: 1em;
+  padding-left: 1.5em;
+  margin-left: 1em;
   background-color: #f2f2f2;
+  box-shadow: none;
   &::placeholder {
     color: #aaa;
     font-style: italic;
   }
   &:focus {
-    box-shadow: 0 0 0 2px rgba(39, 94, 254, .3);
+    box-shadow: 0 0 0 2px rgba(160, 105, 195, .3);//rgba(39, 94, 254, .3);
   }
 }
 

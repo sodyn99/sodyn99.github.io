@@ -278,6 +278,9 @@ linux:
         - title: "Linux 설치"
           index: "1.2"
           url: /study/computer/linux/1.2/
+        - title: "Linux 명령어"
+          index: "1.3"
+          url: /study/computer/linux/1.3/
     - title: "2. Orange Pi"
       children:
         - title: "About"
@@ -302,10 +305,10 @@ linux:
           url: /study/computer/linux/3.3/
     - title: "4. ns-3"
       children:
-        - title: "About"
+        - title: "ns-3 소개"
           index: "4.1"
           url: /study/computer/linux/4.1/
-        - title: "Class"
+        - title: "ns-3 Class"
           index: "4.2"
           url: /study/computer/linux/4.2/
         - title: "ns-3 설치"
