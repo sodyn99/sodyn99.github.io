@@ -158,6 +158,18 @@ aws:
       - title: "EC2"
         index: "2.3"
         url: /study/computer/aws/2.3/
+  - title: "AWS X 경희 캠타"
+    children:
+      - title: "오리엔테이션"
+        url: /study/computer/aws/khu.1/
+      - title: "AWS Online 교육"
+        url: /study/computer/aws/khu.2/
+      - title: "Elasticsearch Engineering"
+        url: /study/computer/aws/khu.3/
+      - title: "Elastic with Chat GPT"
+        url: /study/computer/aws/khu.4/
+      - title: "팀프로젝트"
+        url: /study/computer/aws/khu.5/
 
 java:
   - title: "1. 시작"
