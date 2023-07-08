@@ -63,7 +63,7 @@ layout: default
     <h2>Recent Posts</h2>
     <div style="display:flex;flex-wrap:wrap;">
       {% for post in site.categories.Study limit:6 %}
-        <div style="width:33.33%;padding:0.5rem;">
+        <div class="posts">
           <a href="{{ post.url }}">
             <div class="post-image">
             {% if post.image %}
@@ -73,7 +73,12 @@ layout: default
             {% endif %}
             </div>
             <h3 style="margin:0.5rem 0 0 0;">{{ post.title }}</h3>
-            <p style="margin:0.5rem 0 0 0;">{{ post.description }}</p>
+            {% assign categories = post.categories | remove:'[' | remove:']' | remove:'"' | split:',' %}
+            {% assign i = 0 %}
+            {% for category in categories %}
+              {% assign i = i | plus: 1 %}
+              <span style="color:#0c332e;font-weight:300;margin:0.5rem 0 0 0;font-size:0.6em;">{{ categories[i] }}</span>
+            {% endfor %}
           </a>
         </div>
       {% endfor %}
@@ -97,7 +102,7 @@ layout: default
     <h2>Recent Posts</h2>
     <div style="display:flex;flex-wrap:wrap;">
       {% for post in site.categories.Sports limit:6 %}
-        <div class="post" style="width:33.33%;padding:0.5rem;">
+        <div class="posts">
           <a href="{{ post.url }}">
             <div class="post-image">
             {% if post.image %}
@@ -107,7 +112,12 @@ layout: default
             {% endif %}
             </div>
             <h3 style="margin:0.5rem 0 0 0;">{{ post.title }}</h3>
-            <p style="margin:0.5rem 0 0 0;">{{ post.description }}</p>
+            {% assign categories = post.categories | remove:'[' | remove:']' | remove:'"' | split:',' %}
+            {% assign i = 0 %}
+            {% for category in categories %}
+              {% assign i = i | plus: 1 %}
+              <span style="color:#0c332e;font-weight:300;margin:0.5rem 0 0 0;font-size:0.6em;">{{ categories[i] }}</span>
+            {% endfor %}
           </a>
         </div>
       {% endfor %}
@@ -129,33 +139,6 @@ layout: default
       <i class="fas fa-music"></i></br>
       Music
     </button>
-  </div>
-  <div class="recent-posts">
-    <buttom onclick="location.href='/categories/#entertainment'" style="cursor:pointer;position:absolute;right:1rem;">More</buttom>
-    <h2>Recent Posts</h2>
-    <div style="display:flex;flex-wrap:wrap;">
-      {% if site.categories.Entertainment.size == 0 %}
-        <div style="width:100%;padding:0.5rem;">
-          <h3 style="margin:0.5rem 0 0 0;">No posts</h3>
-        </div>
-      {% else %}
-        {% for post in site.categories.Entertainment limit:6 %}
-          <div style="width:33.33%;padding:0.5rem;">
-            <a href="{{ post.url }}">
-              {% if post.image %}
-              <div class="post-image">
-                <img src="{{ post.image }}" style="width:100%;height:10rem;object-fit:cover;"/>
-              {% else %}
-                <img src="/images/logo.png" style="width:100%;height:10rem;object-fit:cover;"/>
-              {% endif %}
-              </div>
-              <h3 style="margin:0.5rem 0 0 0;">{{ post.title }}</h3>
-              <p style="margin:0.5rem 0 0 0;">{{ post.description }}</p>
-            </a>
-          </div>
-        {% endfor %}
-      {% endif %}
-    </div>
   </div>
 </div>
 

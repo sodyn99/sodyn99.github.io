@@ -126,9 +126,9 @@ o-ran:
       - title: "4G vs 5G"
         index: "1.3"
         url: /study/mobile/5g_nr/1.3/
-  - title: "2. 5G RESOURCE ALLOCATION"
+  - title: "2. 5G 개요"
     children:
-      - title: "5G Resource Allocation"
+      - title: "Summary"
         index: "2.1"
         url: /study/mobile/5g_nr/2.1/
 

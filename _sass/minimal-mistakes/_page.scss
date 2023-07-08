@@ -97,6 +97,12 @@ body {
 }
 
 .page__content {
+  h1 {
+    margin-top: 1em;
+    &:nth-child(1) {
+      margin-top: 0;
+    }
+  }
   h2 {
     padding-bottom: 0.5em;
     border-bottom: 1px solid $border-color;
@@ -127,7 +133,7 @@ body {
 
   /* paragraph indents */
   p {
-    margin: 0 0 $indent-var;
+    margin: $indent-var 0 $indent-var;
 
     /* sibling indentation*/
     @if $paragraph-indent == true {
@@ -584,6 +590,58 @@ body {
 
     @include breakpoint($x-large) {
       padding-right: 0;
+    }
+  }
+}
+
+/*
+   Notebook style
+   ========================================================================== */
+.note {
+  border-radius: 1em;
+  padding: 1em 4% 2em;
+  background-color: #FFFBEF;
+}
+.note-top {
+  border-bottom: #dbdbdb 1px solid;
+  .title {
+    padding: 0.1em 0.5em;
+    font-size: 4em;
+    font-family: 'rixfreestyle-pro', sans-serif;
+  }
+  .date {
+    font-weight: bold;
+    float: right;
+    margin-top: 3.5em;
+    margin-right: 1em;
+    > #date {
+      padding: 0.1em 0.5em;
+      font-size: 1.5em;
+      font-family: 'rixfreestyle-pro', sans-serif;
+    }
+  }
+}
+.multistage {
+  padding-top:1.5em;
+  font-size: 1.2em;
+  font-family: 'rixfreestyle-pro', sans-serif;
+  >h1 {
+    font-size: 2em;
+    font-family: 'rixfreestyle-pro', sans-serif;
+  }
+  &.two {
+    @include breakpoint($large) {
+      padding-top:2em;
+      float: left;
+      width: 50%;
+      &.first {
+        padding-left: 3%;
+        padding-right:1%;
+        border-right: #dbdbdb 1px solid;
+      }
+      &.second {
+        padding-left:3%;
+      }
     }
   }
 }

@@ -26,12 +26,6 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
     color:#aaa;
 }
 
-.in {
-    transition-property: margin, background-color, border-color;
-    transition-duration: .4s, .2s, .2s;
-    transition-timing-function: ease-in-out, ease, ease;
-}
-
 .empty-item {
     transition-property: opacity;
     transition-duration: 0s;
@@ -63,6 +57,9 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
 }
 
 .in {
+    transition-property: margin, background-color, border-color;
+    transition-duration: .4s, .2s, .2s;
+    transition-timing-function: ease-in-out, ease, ease;
     vertical-align: middle;
     float:left;
     clear:left;
