@@ -12,10 +12,10 @@
 }
 .video-help {
   position:absolute;
-  width:14vmin;
-  height:23.5vmin;
-  margin:-32vmin 0 0 11vmin;
   cursor:pointer;
+  width:15%;
+  height:61.5%;
+  margin:-34% 0 0 17%;
 }
 .dark-box {
   background-color:#000;
@@ -24,7 +24,7 @@
   margin-top:-37vmin;
   z-index:1;
   position:absolute;
-  left:40vmin;
+  left:50%;
   width:50vmin;
   height:35vmin;
   font-family:'termina';
@@ -709,7 +709,7 @@
 	position: relative;
 	border-radius: 15px;
 	overflow: hidden;
-	width: 100vmin;
+	width: 100%;
 	height: 71.3vmin;
 	background-color: #f2f2f2;
 	color: $text-color;
@@ -748,21 +748,24 @@
   margin-top: 4.3vmin;
   padding-top: 3vmin;
 	width: 30%;
-  height: 50vmin;
+  height: 55vmin;
 	background-color: $green;
   border-radius: 0 15px 0px 0;
   overflow-y:scroll;
   box-shadow: 0.5vmin 0.5vmin 2vmin 0vmin gray;
 }
 .calendar .noteList {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
   margin-top: 4vmin;
+  padding: 0;
 }
 .calendar .noteList li{
+  width: 90%;
 	color: #ffffff;
-  margin-left: -37px;
-  padding-top:3.5vmin;
-  padding-bottom: 0.1vmin;
-  padding-left:1vmin;
+  padding: 1vmin 1vmin;
   cursor: pointer;
 }
 .calendar .notes p,
@@ -816,7 +819,7 @@
   height: 4vmin;
   line-height: 3.8vmin;
   padding:0 0 0 0.3vmin;
-  margin: -1vmin 0 0 93vmin;
+  margin: -1vmin 0 0 94%;
   background-color: #747978;
   border-radius: 50%;
   text-align: center;
@@ -837,13 +840,18 @@
   margin-top: -10vmin;
 }
 .calendar .rightCol .years{
-  padding-left: 27vmin;
+  padding-left: 45%;
 }
 
 .calendar .weekday li,
 .calendar .days li{
-	float: left;
-	text-transform: uppercase;
+  display: flex;
+  margin-bottom: 2.5%;
+  justify-content: center;
+  align-items: center;
+  width: 14%;
+  float: left;
+  text-transform: uppercase;
 }
 
 .calendar .weekday li a,
@@ -853,26 +861,22 @@
 }
 
 .calendar .weekday li a{
-	width: 8.5vmin;
+
 	text-align: center;
 	margin-top: 2vmin;
   margin-bottom: 3vmin;
 	font-size: 1.3vmin;
 }
 
-.calendar .days li{
-	width: 8.5vmin;
-}
-
 .calendar .days li a{
 	width: 5vmin;
 	height: 5vmin;
 	text-align: center;
-	margin: auto auto;
 	font-weight: bold;
 	border-radius: 10px;
-  margin-bottom: 1vmin;
-  padding-top: 1.5vmin;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   cursor: pointer;
 }
 
@@ -891,14 +895,21 @@
     filter: brightness(70%)
   }
 }
-
 .calendar .days li .event{
 	color: $green;
 }
 
+.lck-list-logo-container {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+}
+
+
 @media (max-width: 1024px) {
   .calendar {
-    height: 75vmin;
+    height: 120vmin;
   }
   .calendar .rightCol {
     margin-top: 1vmin;
@@ -910,7 +921,7 @@
     padding-left: 0;
     height: 4vmin;
     margin-left: 0vmin;
-    margin-top:-9vmin;
+    margin-top:-8vmin;
     padding-left: 2vmin;
     border-bottom: none;
     border-left: gray solid 4px;
@@ -931,16 +942,18 @@
     white-space: nowrap;
   }
   .calendar .leftCol {
-    margin: 2.5vmin 1.5vmin 0 0;
-    width: 97vmin;
-    height: 45vmin;
+    margin: 2vmin 3vmin 0 0;
+    width: 87vmin;
+    height: 85vmin;
     border-radius: 10px;
     overflow-y: scroll !important;
   }
   .calendar .leftCol .noteList li {
-    margin-left: -2vmin;
-    padding-left: 23vmin;
-    padding-top: 6vmin;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 0 3.5vmin 0;
+    padding-top: 2vmin;
   }
   .calendar .leftCol .noteList li p {
     font-size: 5vmin;
@@ -951,7 +964,6 @@
   }
   .calendar .leftCol .noteList .lck-list {
     margin-left: -2vmin;
-    padding-left: 20vmin !important;
     padding-top: 6vmin;
   }
   .calendar .leftCol .noteList .lck-list .lck-list-logo img {
@@ -962,10 +974,10 @@
     font-size: 10vmin !important;
   }
   .go-prev {
-    margin: 0.5vmin 0 0 2vmin;
+    margin: 2.2vmin 0 0 2vmin;
   }
   .go-next {
-    margin: 0.5vmin 0 0 93vmin;
+    margin: 2.2vmin 0 0 86.5vmin;
   }
 }
 
