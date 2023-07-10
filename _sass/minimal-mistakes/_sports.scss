@@ -20,9 +20,11 @@
 .dark-box {
   background-color:#000;
   line-height:4vmin;
-  padding-top:6vmin;
-  margin-top:-37vmin;
+  margin-top:-39vmin;
   z-index:1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
   position:absolute;
   left:50%;
   width:50vmin;
@@ -45,6 +47,12 @@
 }
 
 /* lol */
+.highlight-container {
+  margin-left: 1%;
+  overflow: hidden;
+  border-radius: 1em;
+  width: calc(1.78 * var(--esports-height));
+}
 .match-esports{
   position: relative;
   width: calc(1.78 * var(--esports-height));

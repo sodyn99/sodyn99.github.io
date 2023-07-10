@@ -412,6 +412,10 @@ esports:
 lck:
     - title: "2023 Summer"
       children:
+        - title: "07.08 GEN 2 : 0 T1"
+          url: /sports/esports/lck/07.08-t1gen/
+        - title: "07.02 GEN 2 : 0 HLE"
+          url: /sports/esports/lck/07.02-genhle/
         - title: "06.24 DK 1 : 2 GEN"
           url: /sports/esports/lck/06.24-dkgen/
         - title: "06.22 GEN 2 : 0 DRX"
