@@ -67,14 +67,14 @@ video:not(.fullscreen) {
 }
 .dark-box::selection{
   background-color:white;
-  color:black;
+  color:#1C192B;
 }
 .dark-inner-box{
-  background-color: #000;
+  background-color: none;
 }
 .dark-inner-box::selection{
   background-color:white;
-  color:black;
+  color:#1C192B;
 }
 
 /* lol */
