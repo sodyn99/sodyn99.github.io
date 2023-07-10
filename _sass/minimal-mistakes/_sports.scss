@@ -5,33 +5,64 @@
     --esports-height: calc(70vmin * var(--ratio));
     --esports-margin: calc(0.66vmin * var(--ratio));
 }
+video.fullscreen {
+  opacity: 1;
+}
+video:not(.fullscreen) {
+  opacity: 0;
+}
 .video-container {
   position: relative;
   width: 100%;
+  height: 40vmin;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   overflow: hidden;
 }
-.video-help {
-  position:absolute;
-  cursor:pointer;
-  width:15%;
-  height:61.5%;
-  margin:-34% 0 0 17%;
-}
-.dark-box {
-  background-color:#000;
-  line-height:4vmin;
-  margin-top:-39vmin;
-  z-index:1;
+.video-container .card-image {
+  margin-top: 6%;
+  margin-left: -10%;
+  width: 17%;
+  object-fit: cover;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
   display: flex;
   flex-direction: column;
   justify-content: center;
-  position:absolute;
-  left:50%;
-  width:50vmin;
-  height:35vmin;
+  align-items: center;
+  overflow: visible;
+  > img {
+    height: 100%;
+    width: 100%;
+    z-index: 1;
+  }
+  &:hover {
+    transform: scale(1.1);
+  }
+
+  .rare {
+    margin-top: -15%;
+    z-index: 0;
+    content: url(/images/esports/lol/lck/legendaries/img_shadow_rare.webp);
+    width: 155%;
+  }
+  .super-rare {
+    margin-top: -15%;
+    z-index: 0;
+    content: url(/images/esports/lol/lck/legendaries/img_shadow_super_rare.webp);
+    width: 155%;
+  }
+}
+.dark-box {
+  margin-left: 15%;
+  line-height:4vmin;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  height:100%;
   font-family:'termina';
   font-size:1.5vmin;
-  float:right;
   color:white;
 }
 .dark-box::selection{
