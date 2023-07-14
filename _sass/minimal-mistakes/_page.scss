@@ -733,11 +733,9 @@ body {
 }
 
 #mindmap circle {
-  stroke: #44b78b;
-}
-
-#mindmap circle {
-  fill: #44b78b;
+  display: none;
+  // stroke: #44b78b;
+  // fill: #44b78b;
 }
 
 #mindmap rect {
