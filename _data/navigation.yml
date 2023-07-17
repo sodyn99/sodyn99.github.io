@@ -131,6 +131,11 @@ o-ran:
       - title: "Summary"
         index: "2.1"
         url: /study/mobile/5g_nr/2.1/
+  - title: "3. 무선 인터페이스 구조"
+    children:
+      - title: "Summary"
+        index: "3.1"
+        url: /study/mobile/5g_nr/3.1/
 
 aws:
   - title: "1. INTRO"
