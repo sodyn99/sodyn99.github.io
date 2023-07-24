@@ -581,9 +581,8 @@ body:hover .visually-hidden button {
 }
 
 .fold-img {
-  border-radius: $border-radius;
   position: relative;
-  background-color: white;
+  background-color: #fff;
   height: 10em;
   overflow: hidden;
 }
@@ -597,15 +596,14 @@ body:hover .visually-hidden button {
   display: flex;
   justify-content: center;
   align-items: center;
-  border-bottom: #aaa 2px solid;
-  border-radius: 0 0 $border-radius $border-radius;
+  border-bottom: #fff 2px solid;
   cursor: pointer;
   position: absolute;
   bottom: 0;
   left: 0;
   width: 100%;
   height: 4em;
-  background: linear-gradient(transparent, #aaa);
+  background: linear-gradient(transparent, #fff);
   z-index: 2;
 }
 .fold-img-foot::after {
@@ -621,6 +619,9 @@ body:hover .visually-hidden button {
     transform: translate(0, 0.3em);
   }
 }
+.fold-img.clicked img {
+  border-radius: $border-radius $border-radius 0 0;
+}
 .fold-img.clicked .fold-img-foot {
   border: none;
   border-radius: 0 0 $border-radius $border-radius;
@@ -630,7 +631,7 @@ body:hover .visually-hidden button {
   left: 0;
   width: 100%;
   height: 4em;
-  background: linear-gradient(#aaa, white);
+  background: linear-gradient(#aaa, #ccc, #fff);
   z-index: 0;
 }
 .fold-img.clicked .fold-img-foot::after {
