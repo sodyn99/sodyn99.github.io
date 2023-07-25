@@ -237,6 +237,8 @@
         $('.gallery-img').on('click', function() {
             var imgSrc = $(this).attr('src');
             var imgAlt = $(this).attr('alt');
+            translateX = 0;
+            translateY = 0;
             $('#modalImg').attr('src', imgSrc);
             $('#caption').text(imgAlt);
             $('#myModal').fadeIn();
@@ -256,38 +258,38 @@
               adjustModalSize();
           }
         });
-        $('.modal-content').on('wheel', function(e) {
-          if (e.ctrlKey) {
-            e.preventDefault();
+        $('.modal-content').on('wheel', function (e) {
+          e.preventDefault();
 
-            if (!isZooming) {
-              isZooming = true;
-              var delta = e.originalEvent.deltaY;
+          if (!isZooming) {
+            isZooming = true;
+            var delta = e.originalEvent.deltaY;
 
-              while(1) {
-                if (delta < 0 ) {
-                  zoomIn();
-                } else {
-                  zoomOut();
-                }
-                delta += delta;
-                if (delta < -200 || delta > 200) {
-                  break;
-                }
-              }
+            if (delta < 0) {
+              zoomIn();
+            } else {
+              zoomOut();
             }
           }
+          translateX = 0;
+          translateY = 0;
         });
         $('.modal-content').on('mouseenter', function(e) {
-          $(this).css('cursor', 'grab'); // 드래그 가능한 요소에 호버할 때 커서 스타일 변경
+          $(this).css('cursor', 'grab');
         });
         $('.modal-content').on('mousedown', function(e) {
           isDragging = true;
           startX = e.clientX;
           startY = e.clientY;
-          $(this).css('cursor', 'grabbing'); // 드래그 중일 때 커서 스타일 변경
+          $(this).css('cursor', 'grabbing');
         });
         $(document).on('mousemove', function(e) {
+          var mouseX = event.pageX;
+          var mouseY = event.pageY;
+
+          var modal = $('.modal');
+          var modalX = modal.offset().left + modal.outerWidth() / 2;
+          var modalY = modal.offset().top + modal.outerHeight() / 2;
           if (isDragging) {
             requestAnimationFrame(function() {
               var deltaX = e.clientX - startX;
