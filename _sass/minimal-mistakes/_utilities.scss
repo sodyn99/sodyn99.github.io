@@ -565,6 +565,7 @@ body:hover .visually-hidden button {
   height: auto;
   -webkit-user-drag: none;
   user-select: none;
+  -webkit-user-select: none;
 }
 
 .caption {
@@ -574,11 +575,31 @@ body:hover .visually-hidden button {
 }
 
 .gallery-img {
-  margin: 0.5em 0;
   object-fit: cover;
   cursor: pointer;
   border-radius: $border-radius;
   box-shadow: none;
+  transition: all 0.2s;
+  &:hover {
+    opacity: 0.6;
+  }
+}
+
+.gallery2 {
+  margin: 0.5em 0;
+  overflow: hidden;
+  border-radius: $border-radius;
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  align-content: space-between;
+  > img {
+    width: 49.5%;
+    margin: 0;
+    padding: 0;
+  }
 }
 
 .fold-img {

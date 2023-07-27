@@ -153,7 +153,7 @@ sidebar:
         playVideo(videoId);
         const activeLink = document.querySelector('.active');
         videoLink.classList.add('active');
-        videoLink.innerHTML = videoLink.textContent + equalizer;
+        videoLink.innerHTML = '<div class="text-container">' + videoLink.textContent + '</div>' + equalizer;
         if (activeLink) {
           activeLink.classList.remove('active');
           activeLink.innerHTML = activeLink.textContent;
