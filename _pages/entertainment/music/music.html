@@ -12,14 +12,26 @@ sidebar:
 <hr>
 
 
-<div class="playlist">
+<div class="table_container">
   <div class="football_title" style="text-transform:uppercase;">My Play List</div>
-  <div class="player-container">
-    <iframe id="player" width="720" height="720" src="https://www.youtube.com/embed/videoseries?list=PLK43-vRZrG5tCD5l2RDDBD62Kzbrk22oH&modestbranding=1&color=white&fs=0&rel=0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+  <div class="playlist">
+    <div class="player-container">
+      <iframe id="player" width="720" height="720" src="https://www.youtube.com/embed/videoseries?list=PLK43-vRZrG5tCD5l2RDDBD62Kzbrk22oH&modestbranding=1&color=white&fs=0&rel=0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+    </div>
+    <ul id="playlistContainer"></ul>
   </div>
-  <ul id="playlistContainer"></ul>
 </div>
+<script>
+  // Function to update the height of the div to match its width
+  function updateHeightToMatchWidth() {
+    const square = document.getElementById('playlistContainer');
+    square.style.height = square.offsetWidth + 'px';
+  }
 
+  // Call the function initially and listen for window resize events
+  updateHeightToMatchWidth();
+  window.addEventListener('resize', updateHeightToMatchWidth);
+</script>
 
 <script>
   document.getElementById("page-title").style.display = "none";
