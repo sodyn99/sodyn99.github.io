@@ -11,7 +11,7 @@ print('Football scraping ------------------')
 
 # # Europe
 
-# In[102]:
+# In[2]:
 
 
 import requests
@@ -22,10 +22,10 @@ def table(league, url):
     df = pd.read_html(response.text)
 
     df[0].drop(['Pts/MP',
-                'xG',
-                'xGA',
-                'xGD',
-                'xGD/90',
+                #'xG',
+                #'xGA',
+                #'xGD',
+                #'xGD/90',
                 # 'Last 5',
                 'Attendance',
                 'Top Team Scorer',
@@ -59,7 +59,7 @@ table('seriea', 'https://fbref.com/en/comps/11/Serie-A-Stats')
 table('ligue1', 'https://fbref.com/en/comps/13/Ligue-1-Stats')
 
 
-# In[119]:
+# In[3]:
 
 
 import requests
