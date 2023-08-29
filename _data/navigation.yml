@@ -149,6 +149,16 @@ o-ran:
       - title: "Summary"
         index: "5.1"
         url: /study/mobile/5g_nr/5.1/
+  - title: "6. 전송 채널 프로세싱"
+    children:
+      - title: "Summary"
+        index: "6.1"
+        url: /study/mobile/5g_nr/6.1/
+  - title: "8. 물리 계층 제어 시그널링"
+    children:
+      - title: "Summary"
+        index: "7.1"
+        url: /study/mobile/5g_nr/7.1/
 
 aws:
   - title: "1. INTRO"
