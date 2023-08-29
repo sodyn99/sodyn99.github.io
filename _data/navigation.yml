@@ -154,11 +154,16 @@ o-ran:
       - title: "Summary"
         index: "6.1"
         url: /study/mobile/5g_nr/6.1/
-  - title: "8. 물리 계층 제어 시그널링"
+  - title: "7. 물리 계층 제어 시그널링 (Downlink)"
     children:
       - title: "Summary"
         index: "7.1"
         url: /study/mobile/5g_nr/7.1/
+  - title: "8. 물리 계층 제어 시그널링 (Uplink)"
+    children:
+      - title: "Summary"
+        index: "8.1"
+        url: /study/mobile/5g_nr/8.1/
 
 aws:
   - title: "1. INTRO"
