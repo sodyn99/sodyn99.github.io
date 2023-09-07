@@ -53,17 +53,26 @@ details[open] > .side {
   margin-bottom: 10px;
 }
 .side:hover {
-  background: #d3d3d3;
+  background: #f2f2f2;
   //transform: scale(1.1);
 }
 details > .side {
+  border-top-left-radius: 1em;
+  border-top-right-radius: 1em;
   cursor: pointer;
   transition: all ease-in-out 0.09s;
 }
 details > .side::-webkit-details-marker {
   display:none;
 }
-
+.sidebar-details {
+  margin-bottom: 1.5em;
+  border-top-left-radius: 1em;
+  border-top-right-radius: 1em;
+}
+.sidebar-details[open] {
+  border-radius: 1em;
+}
 summary {
   cursor: pointer;
 }

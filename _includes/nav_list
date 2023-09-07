@@ -1,5 +1,4 @@
 {% assign navigation = site.data.navigation[include.nav] %}
-
 <nav class="nav__list">
   <input class="menu" id="ac-toc" name="accordion-toc" type="checkbox" />
   <label for="ac-toc"><span class="pc-hidden">{{ site.data.ui-text[site.locale].menu_label | default: "Toggle Menu" }}</span></label>
@@ -7,7 +6,7 @@
     {% if page.sidebar.title %}<h3 class="nav__title" style="padding-left: 0;">{{ page.sidebar.title }}</h3>{% endif %}
     {% for nav in navigation %}
       <li>
-        <details {% for child in nav.children %}{% if child.url == page.url or page.url == '/' or page.url == '/about/' or page.url == '/tags/' or page.url == '/categories/' or page.url == '/study/' or page.url == '/sports/' %} open {% endif %}{% endfor %} style="margin-bottom: 1.5em;">
+        <details class="sidebar-details" {% for child in nav.children %}{% if child.url == page.url or page.url == '/' or page.url == '/about/' or page.url == '/tags/' or page.url == '/categories/' or page.url == '/study/' or page.url == '/sports/' %} open style="background-color: #f2f2f2;" {% endif %}{% endfor %}>
           <summary class="side">
             {% if nav.icon %}
             <span style="color: {{ nav.color }};font-weight:bold; user-select: none;" class="nav__sub-title"><i class="{{ nav.icon | default: 'fas fa-circle' }}" aria-hidden="true"></i> {{ nav.title }}</span>
