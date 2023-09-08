@@ -22,11 +22,11 @@ def table(league, url):
     df = pd.read_html(response.text)
 
     df[0].drop(['Pts/MP',
-                #'xG',
-                #'xGA',
-                #'xGD',
-                #'xGD/90',
-                # 'Last 5',
+                'xG',
+                'xGA',
+                'xGD',
+                'xGD/90',
+                'Last 5',
                 'Attendance',
                 'Top Team Scorer',
                 'Goalkeeper',
