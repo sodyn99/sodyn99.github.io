@@ -364,7 +364,7 @@ body {
   border-radius: $border-radius;
 
   &:hover {
-    background-color: #eee;
+    background-color: $box-color;
     text-decoration: none;
     color: $link-color-hover;
   }
@@ -600,7 +600,7 @@ body {
 .note {
   border-radius: 1em;
   padding: 1em 4% 2em;
-  background-color: #FFFBEF;
+  background-color: $box-color;
 }
 .note-top {
   border-bottom: #dbdbdb 1px solid;

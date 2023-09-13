@@ -11,9 +11,6 @@
           {{ site.masthead_title | default: site.title }}
           {% if site.subtitle %}<span class="site-subtitle">{{ site.subtitle }}</span>{% endif %}
         </a> -->
-        <li class="masthead__menu-item">
-          <a id="toggle-theme"></a>
-        </li>
         <ul class="visible-links">
           {%- for link in site.data.navigation.main -%}
             <li class="masthead__menu-item">
@@ -26,6 +23,12 @@
           <span class="visually-hidden">{{ site.data.ui-text[site.locale].search_label | default: "Toggle search" }}</span>
           <i class="fas fa-search"></i>
         </button>
+        {% endif %}
+        <!-- 다크 모드 토글 버튼 -->
+        {% if site.dark_theme_toggle == true %}
+        <li class="masthead__menu-item">
+          <a id="toggle-theme"></a>
+        </li>
         {% endif %}
         <button class="greedy-nav__toggle hidden" type="button">
           <span class="visually-hidden">{{ site.data.ui-text[site.locale].menu_label | default: "Toggle menu" }}</span>

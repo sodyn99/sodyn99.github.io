@@ -1,25 +1,29 @@
 /* assets/js/custom/dark-theme.js */
 
-const defaultTheme = [...document.styleSheets].find((style) => /(main.css)$/.test(style.href));
-const darkTheme = [...document.styleSheets].find((style) => /(main_dark.css)$/.test(style.href));
+const defaultTheme = [...document.styleSheets].find((style) =>
+  /(main.css)$/.test(style.href)
+);
+const darkTheme = [...document.styleSheets].find((style) =>
+  /(main-dark.css)$/.test(style.href)
+);
 
-const toggleThemeBtn = document.getElementById('toggle-theme');
+const toggleThemeBtn = document.getElementById("toggle-theme");
 
 const toLight = () => {
-  toggleThemeBtn.innerHTML = `<i class="fa-solid fa-sun"></i>`;
+  toggleThemeBtn.innerHTML = `<i class="fas fa-sun"></i>`;
   defaultTheme.disabled = false;
   darkTheme.disabled = true;
-  localStorage.setItem('theme', 'default');
+  localStorage.setItem("theme", "default");
 };
 
 const toDark = () => {
-  toggleThemeBtn.innerHTML = `<i class="fa-solid fa-moon"></i>`;
+  toggleThemeBtn.innerHTML = `<i class="fas fa-moon"></i>`;
   defaultTheme.disabled = true;
   darkTheme.disabled = false;
-  localStorage.setItem('theme', 'dark');
+  localStorage.setItem("theme", "dark");
 };
 
-const currentTheme = () => localStorage.getItem('theme');
+const currentTheme = () => localStorage.getItem("theme");
 
 const setDarkMode = (isDark) => {
   if (isDark) {
@@ -31,12 +35,12 @@ const setDarkMode = (isDark) => {
 
 if (darkTheme) {
   let isDarkMode = false;
-  if (currentTheme() === 'dark') {
+  if (currentTheme() === "dark") {
     isDarkMode = true;
-  } else if (currentTheme() === 'default') {
+  } else if (currentTheme() === "default") {
     isDarkMode = false;
   } else {
-    isDarkMode = matchMedia('(prefers-color-scheme: dark)').matches;
+    isDarkMode = matchMedia("(prefers-color-scheme: dark)").matches;
   }
 
   if (toggleThemeBtn) {
@@ -48,8 +52,8 @@ if (darkTheme) {
   }
 
   const changeTheme = () => {
-    setDarkMode(currentTheme() === 'dark');
+    setDarkMode(currentTheme() === "dark");
   };
 
-  toggleThemeBtn.addEventListener('click', changeTheme);
+  toggleThemeBtn.addEventListener("click", changeTheme);
 }

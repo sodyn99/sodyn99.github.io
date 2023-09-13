@@ -4,7 +4,7 @@
 
 .masthead {
   position: relative;
-  background-color: #fff;
+  background-color: $background-color;
   border-bottom: 0px solid $border-color;
   -webkit-animation: $intro-transition;
   animation: $intro-transition;
@@ -86,7 +86,8 @@
   display: block;
   list-style-type: none;
   white-space: nowrap;
-
+  cursor: pointer;
+  
   &--lg {
     padding-right: 2em;
     font-weight: 700;

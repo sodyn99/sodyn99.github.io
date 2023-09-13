@@ -1,10 +1,10 @@
 :root {
-    --bg-color: #fff;
+    --bg-color: $background-color;
     --con-color: #f2f2f2;
-    --text-color: #333;
+    --text-color: $text-color;
     --button-color: #24A091;
     --font: 'termina', sans-serif;
-    --back-height: 200px;
+    --back-height: 200vh;
 }
 
 .square-container {
@@ -16,7 +16,7 @@
     display: flex;
     flex-direction: column;
     justify-content: center;
-    background-color: #1C192B;
+    background-color: $background-color;
     border-radius: 1rem;
     margin: 0 3vw;
 }
@@ -45,7 +45,7 @@
 .welcome-container {
     height:90vh;
     // border:1px solid red;
-    background:none;
+    background-color:$background-color;
     display: flex;
     overflow: hidden;
     flex-direction: column;
@@ -75,7 +75,7 @@
     // border:1px solid red;
     line-height: 3.5rem;
     font-size: 2.5rem;
-    color: var(--text-color);
+    color: $text-color;
     width: 28rem;
     white-space: nowrap;
     > h1 {
@@ -86,7 +86,7 @@
         width: 25rem;
         > a {
         font-family: var(--font);
-        color: var(--text-color);
+        color: $text-color;
         text-decoration: none;
         display: flex;
         > img {
@@ -122,10 +122,20 @@
 //         margin-left:5vmin;
 //     }
 // }
-.container {
+.home-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.contents-container {
     overflow-x: scroll;
     position: relative;
-    background-color: var(--con-color);
+    background-color: $box-color;
+    @include breakpoint($large) {
+        width: 60%;
+    }
+    width: 90%;
     border-radius: 1rem;
     padding: 3rem;
     margin-top: 1rem;
@@ -135,7 +145,7 @@
         font-family: var(--font);
         position: relative;
         > a {
-        color: var(--text-color);
+        color: $text-color;
         text-decoration: none;
         display: flex;
         > img {
@@ -144,7 +154,7 @@
         }
         }
         > a:hover {
-        color: var(--text-color);
+        color: $text-color;
         text-decoration: none;
         filter: brightness(1.8);
         }
@@ -179,7 +189,7 @@
         }
         &:hover {
         background-color: var(--button-color);
-        color: #fff;
+        color: $text-color;
         border-color: var(--button-color);
         }
     }
@@ -190,6 +200,7 @@
     margin-top: 1rem;
     > h2 {
         font-family: var(--font);
+        color: $text-color;
         font-weight: 500;
     }
     .post-image {
@@ -202,7 +213,7 @@
         transition: all 0.3s ease-in-out;
     }
     > div a h3 {
-        color: var(--text-color);
+        color: $text-color;
         font-family: 'rixgwangalli-pro', sans-serif;
         font-style: normal;
         font-weight: 100;
@@ -220,4 +231,12 @@
     .post-image {
         filter: opacity(1);
     }
+}
+.post-category {
+    color:$text-color;
+    font-weight:300;
+    font-size:0.6em;
+}
+.more {
+    color: $text-color;
 }

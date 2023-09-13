@@ -3,14 +3,6 @@ layout: default
 ---
 <head>
   <style>
-    :root {
-        --bg-color: #fff;
-        --con-color: #f2f2f2;
-        --text-color: #333;
-        --button-color: #24A091;
-        --font: 'termina', sans-serif;
-        --back-height: 200vh;
-    }
     body {
         background-color: var(--bg-color);
         color: var(--text-color);
@@ -46,110 +38,111 @@ layout: default
     </div>
   </div>
 </div>
-<div class="container">
-  <h1><a href="/study/">Study</a></h1>
-  <div id="studyButton" class="buttons">
-    <button onclick="location.href='/study/computer/'" style="cursor:pointer;">
-      <i class="fas fa-laptop"></i></br>
-      Computer
-    </button>
-    <button onclick="location.href='/study/mobile/'" style="cursor:pointer;">
-      <i class="fas fa-mobile-alt"></i></br>
-      Mobile
-    </button>
-    <button onclick="location.href='/study/mobility/'" style="cursor:pointer;">
-      <i class="fas fa-car"></i></br>
-      Mobility
-    </button>
-    <button onclick="location.href='/study/lecture/'" style="cursor:pointer;">
-      <i class="fas fa-book"></i></br>
-      Lecture
-    </button>
+<div class="home-container">
+  <div class="contents-container">
+    <h1><a href="/study/">Study</a></h1>
+    <div id="studyButton" class="buttons">
+      <button onclick="location.href='/study/computer/'" style="cursor:pointer;">
+        <i class="fas fa-laptop"></i></br>
+        Computer
+      </button>
+      <button onclick="location.href='/study/mobile/'" style="cursor:pointer;">
+        <i class="fas fa-mobile-alt"></i></br>
+        Mobile
+      </button>
+      <button onclick="location.href='/study/mobility/'" style="cursor:pointer;">
+        <i class="fas fa-car"></i></br>
+        Mobility
+      </button>
+      <button onclick="location.href='/study/lecture/'" style="cursor:pointer;">
+        <i class="fas fa-book"></i></br>
+        Lecture
+      </button>
+    </div>
+    <div class="recent-posts">
+      <buttom onclick="location.href='/categories/#study'" style="cursor:pointer;position:absolute;right:1rem;"><span class="more">More</span></buttom>
+      <h2>Recent Posts</h2>
+      <div style="display:flex;flex-wrap:wrap;">
+        {% for post in site.categories.Study limit:6 %}
+          <div class="posts">
+            <a href="{{ post.url }}">
+              <div class="post-image">
+              {% if post.image %}
+                <img src="{{ post.image }}" style="width:100%;height:10rem;object-fit:cover;"/>
+              {% else %}
+                <img src="/images/logo.png" style="width:100%;height:10rem;object-fit:cover;"/>
+              {% endif %}
+              </div>
+              <h3 style="margin:0.5rem 0 0 0;">{{ post.title }}</h3>
+              {% assign categories = post.categories | remove:'[' | remove:']' | replace:'_',' ' | remove:'"' | split:',' %}
+              {% assign i = 0 %}
+              {% for category in categories %}
+                <span class="post-category">{% if i>1 %}<span style="margin:0 0.5em 0 0.3em;">|</span>{% endif %}{% if i>0 %}{{ categories[i] }}{% endif %}</span>
+                {% assign i = i | plus: 1 %}
+              {% endfor %}
+            </a>
+          </div>
+        {% endfor %}
+      </div>
+    </div>
   </div>
-  <div class="recent-posts">
-    <buttom onclick="location.href='/categories/#study'" style="cursor:pointer;position:absolute;right:1rem;">More</buttom>
-    <h2>Recent Posts</h2>
-    <div style="display:flex;flex-wrap:wrap;">
-      {% for post in site.categories.Study limit:6 %}
-        <div class="posts">
-          <a href="{{ post.url }}">
-            <div class="post-image">
-            {% if post.image %}
-              <img src="{{ post.image }}" style="width:100%;height:10rem;object-fit:cover;"/>
-            {% else %}
-              <img src="/images/logo.png" style="width:100%;height:10rem;object-fit:cover;"/>
-            {% endif %}
-            </div>
-            <h3 style="margin:0.5rem 0 0 0;">{{ post.title }}</h3>
-            {% assign categories = post.categories | remove:'[' | remove:']' | replace:'_',' ' | remove:'"' | split:',' %}
-            {% assign i = 0 %}
-            {% for category in categories %}
-              <span style="color:#0c332e;font-weight:300;font-size:0.6em;">{% if i>1 %}<span style="margin:0 0.5em 0 0.3em;">|</span>{% endif %}{% if i>0 %}{{ categories[i] }}{% endif %}</span>
-              {% assign i = i | plus: 1 %}
-            {% endfor %}
-          </a>
-        </div>
-      {% endfor %}
+  <div class="contents-container">
+    <h1><a href="/sports/">Sports</a></h1>
+    <div id="sportsButton" class="buttons">
+      <button onclick="location.href='/sports/football/'" style="cursor:pointer;">
+        <i class="fas fa-futbol"></i></br>
+        Football
+      </button>
+      <button onclick="location.href='/sports/esports/'" style="cursor:pointer;">
+        <i class="fas fa-gamepad"></i></br>
+        Esports
+      </button>
+    </div>
+    <div class="recent-posts">
+      <buttom onclick="location.href='/categories/#sports'" style="cursor:pointer;position:absolute;right:1rem;"><span class="more">More</span></buttom>
+      <h2>Recent Posts</h2>
+      <div style="display:flex;flex-wrap:wrap;">
+        {% for post in site.categories.Sports limit:6 %}
+          <div class="posts">
+            <a href="{{ post.url }}">
+              <div class="post-image">
+              {% if post.image %}
+                <img src="{{ post.image }}" style="width:100%;height:10rem;object-fit:cover;"/>
+              {% else %}
+                <img src="/images/logo.png" style="width:100%;height:10rem;object-fit:cover;"/>
+              {% endif %}
+              </div>
+              <h3>{{ post.title }}</h3>
+              {% assign categories = post.categories | remove:'[' | remove:']' | replace:'_',' ' | remove:'"' | split:',' %}
+              {% assign i = 0 %}
+              {% for category in categories %}
+                <span class="post-category">{% if i>1 %}<span style="margin:0 0.5em 0 0.3em;">|</span>{% endif %}{% if i>0 %}{{ categories[i] }}{% endif %}</span>
+                {% assign i = i | plus: 1 %}
+              {% endfor %}
+            </a>
+          </div>
+        {% endfor %}
+      </div>
+    </div>
+  </div>
+  <div class="contents-container">
+    <h1><a href="/entertainment/">Entertainment</a></h1>
+    <div id="entertainmentButton" class="buttons">
+      <button onclick="location.href='/entertainment/movie/'" style="cursor:pointer;">
+        <i class="fas fa-film"></i></br>
+        Movie
+      </button>
+      <button onclick="location.href='/entertainment/drama/'" style="cursor:pointer;">
+        <i class="fas fa-theater-masks"></i></br>
+        Drama
+      </button>
+      <button onclick="location.href='/entertainment/music/'" style="cursor:pointer;">
+        <i class="fas fa-music"></i></br>
+        Music
+      </button>
     </div>
   </div>
 </div>
-<div class="container">
-  <h1><a href="/sports/">Sports</a></h1>
-  <div id="sportsButton" class="buttons">
-    <button onclick="location.href='/sports/football/'" style="cursor:pointer;">
-      <i class="fas fa-futbol"></i></br>
-      Football
-    </button>
-    <button onclick="location.href='/sports/esports/'" style="cursor:pointer;">
-      <i class="fas fa-gamepad"></i></br>
-      Esports
-    </button>
-  </div>
-  <div class="recent-posts">
-    <buttom onclick="location.href='/categories/#sports'" style="cursor:pointer;position:absolute;right:1rem;">More</buttom>
-    <h2>Recent Posts</h2>
-    <div style="display:flex;flex-wrap:wrap;">
-      {% for post in site.categories.Sports limit:6 %}
-        <div class="posts">
-          <a href="{{ post.url }}">
-            <div class="post-image">
-            {% if post.image %}
-              <img src="{{ post.image }}" style="width:100%;height:10rem;object-fit:cover;"/>
-            {% else %}
-              <img src="/images/logo.png" style="width:100%;height:10rem;object-fit:cover;"/>
-            {% endif %}
-            </div>
-            <h3>{{ post.title }}</h3>
-            {% assign categories = post.categories | remove:'[' | remove:']' | replace:'_',' ' | remove:'"' | split:',' %}
-            {% assign i = 0 %}
-            {% for category in categories %}
-              <span style="color:#0c332e;font-weight:300;font-size:0.6em;">{% if i>1 %}<span style="margin:0 0.5em 0 0.3em;">|</span>{% endif %}{% if i>0 %}{{ categories[i] }}{% endif %}</span>
-              {% assign i = i | plus: 1 %}
-            {% endfor %}
-          </a>
-        </div>
-      {% endfor %}
-    </div>
-  </div>
-</div>
-<div class="container">
-  <h1><a href="/entertainment/">Entertainment</a></h1>
-  <div id="entertainmentButton" class="buttons">
-    <button onclick="location.href='/entertainment/movie/'" style="cursor:pointer;">
-      <i class="fas fa-film"></i></br>
-      Movie
-    </button>
-    <button onclick="location.href='/entertainment/drama/'" style="cursor:pointer;">
-      <i class="fas fa-theater-masks"></i></br>
-      Drama
-    </button>
-    <button onclick="location.href='/entertainment/music/'" style="cursor:pointer;">
-      <i class="fas fa-music"></i></br>
-      Music
-    </button>
-  </div>
-</div>
-
 <script>
   changeColor();
   function changeColor() {
