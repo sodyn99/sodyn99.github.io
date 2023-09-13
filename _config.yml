@@ -24,7 +24,7 @@ description              : "아성가진리 블로그에 오신 것을 환영합
 url                      : "https://asungajinli.github.io"
 baseurl                  : "/"
 repository               : "asungajinli/asungajinli.github.io"
-teaser                   : "/images/logo.png"
+teaser                   : #"/images/logo.png"
 logo                     : "/images/logo.png"
 masthead_title           : " "
 breadcrumbs              : true # true, false (default)
