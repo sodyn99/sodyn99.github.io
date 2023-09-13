@@ -673,7 +673,7 @@ video:not(.fullscreen) {
 .box__button-Esports {
   display: block;
   position: relative;
-  background: $text-color;
+  background: #1C192B;
   border: 1px solid transparent;
   border-radius: 15px;
   max-width: 500px;
@@ -750,7 +750,7 @@ video:not(.fullscreen) {
 	overflow: hidden;
 	width: 100%;
 	height: 71.3vmin;
-	background-color: #f2f2f2;
+	background-color: $box-color;
 	color: $text-color;
 }
 
@@ -803,7 +803,7 @@ video:not(.fullscreen) {
 }
 .calendar .noteList li{
   width: 90%;
-	color: #ffffff;
+	color: $background-color;
   padding: 1vmin 1vmin;
   cursor: pointer;
 }
@@ -845,7 +845,7 @@ video:not(.fullscreen) {
   user-select:none;
   cursor: pointer;
   &:hover{
-    color: #f2f2f2;
+    color: $box-color;
     background-color: $text-color;
   }
 }
@@ -868,14 +868,14 @@ video:not(.fullscreen) {
   user-select:none;
   cursor: pointer;
   &:hover{
-    color: #f2f2f2;
+    color: $box-color;
     background-color: $text-color;
   }
 }
 
 .calendar .rightCol{
 	width: 70%;
-  color: #747978;
+  color: $text-color;
   margin-top: -10vmin;
 }
 .calendar .rightCol .years{
@@ -896,7 +896,7 @@ video:not(.fullscreen) {
 .calendar .weekday li a,
 .calendar .days li a{
 	display: block;
-	color: #747978;
+	color: $text-color;
 }
 
 .calendar .weekday li a{
@@ -921,7 +921,8 @@ video:not(.fullscreen) {
 
 
 .calendar .days li a:hover{
-	background-color: #cac9c4;
+	background-color: $text-color;
+  color: $background-color;
   text-decoration: none;
   cursor: pointer;
 }

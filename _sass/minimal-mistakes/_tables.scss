@@ -81,7 +81,7 @@ th {
 .dataframe.lck-standings tbody {
   font-size: 2vmin;
   font-weight: bold;
-  color: #fff;
+  color: $background-color;
 }
 
 .dataframe.lck-standings td,
@@ -99,7 +99,7 @@ th {
 }
 .dataframe.lck-standings tbody td:first-child{
   width: 6vmin;
-  background-color: #f2f2f2;
+  background-color: $box-color;
   border-radius: 5px 0 0 5px;
   color: $text-color;
   border: $text-color 0.15vmin solid;
@@ -108,7 +108,7 @@ th {
   width: 20vmin;
   font-family: 'ChaneyUltraextended';
   font-weight : bold;
-  border-right: #f2f2f2 1px solid;
+  border-right: $box-color 1px solid;
 }
 .dataframe.lck-standings tbody td:nth-child(2) > img{
   position: relative;
@@ -117,7 +117,7 @@ th {
   margin-right: 2vmin;
 }
 .dataframe.lck-standings tbody td:nth-child(3) {
-  border-right: #f2f2f2 1px solid;
+  border-right: $box-color 1px solid;
 }
 
 /* football standings */
@@ -145,7 +145,7 @@ th {
   text-align: center;
   font-size: 6vmin;
   color: $text-color;
-  background-color: #f2f2f2;
+  background-color: $box-color;
 }
 .dataframe.premierleague-standings,
 .dataframe.laliga-standings,
@@ -173,8 +173,8 @@ th {
 .dataframe.europaleague-standings thead th,
 .dataframe.kleague1-standings thead th {
   padding: 15px 10px;
-  color:#000;
-  background-color: #f2f2f2 !important;
+  color:$text-color;
+  background-color: $box-color !important;
   font-size:0.7em;
   text-align: center !important;
   font-weight: bold !important;
@@ -209,7 +209,7 @@ th {
 .dataframe.championsleague-standings tbody tr,
 .dataframe.europaleague-standings tbody tr,
 .dataframe.kleague1-standings tbody tr {
-color:#000;
+color:$text-color;
 font-weight:bold;
 }
 

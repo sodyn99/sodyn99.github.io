@@ -60,7 +60,7 @@ layout: default
       </button>
     </div>
     <div class="recent-posts">
-      <buttom onclick="location.href='/categories/#study'" style="cursor:pointer;position:absolute;right:1rem;"><span class="more">More</span></buttom>
+      <buttom onclick="location.href='/categories/#study'" class="home-more">More</buttom>
       <h2>Recent Posts</h2>
       <div style="display:flex;flex-wrap:wrap;">
         {% for post in site.categories.Study limit:6 %}
@@ -99,7 +99,7 @@ layout: default
       </button>
     </div>
     <div class="recent-posts">
-      <buttom onclick="location.href='/categories/#sports'" style="cursor:pointer;position:absolute;right:1rem;"><span class="more">More</span></buttom>
+      <buttom onclick="location.href='/categories/#sports'" class="home-more">More</buttom>
       <h2>Recent Posts</h2>
       <div style="display:flex;flex-wrap:wrap;">
         {% for post in site.categories.Sports limit:6 %}

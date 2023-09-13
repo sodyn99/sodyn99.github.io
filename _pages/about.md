@@ -35,30 +35,30 @@ Asungajinli
 
 #### 🌐&nbsp;Contact Me
 
-<a href="https://github.com/asungajinli" style="text-decoration:none;color:black;" rel="nofollow noopener noreferrer">
+<a href="https://github.com/asungajinli" class="contact" target="_blank" rel="me">
   <i class="fab fa-fw fa-github" aria-hidden="true"></i>
 </a>
 &nbsp;&nbsp;
-<a href="https://instagram.com/s_din.99" style="text-decoration:none;color:black;" rel="nofollow noopener noreferrer me">
+<a href="https://instagram.com/s_din.99" class="contact" target="_blank" rel="me">
   <i class="fab fa-fw fa-instagram" aria-hidden="true"></i>
 </a>
 &nbsp;&nbsp;
-<span class="modal-link" data-target="myModal" style="text-decoration:none;color:black;" rel="nofollow noopener noreferrer me">
+<span class="contact modal-link" data-target="myModal" rel="me">
   <i class="fas fa-fw fa-comment" style="cursor:pointer;" aria-hidden="true"></i>
 </span>
 &nbsp;&nbsp;
-<a href="https://www.linkedin.com/in/asungajinli" style="text-decoration:none;color:black;" rel="nofollow noopener noreferrer me">
+<a href="https://www.linkedin.com/in/asungajinli" class="contact" target="_blank" rel="me">
   <i class="fab fa-fw fa-linkedin" aria-hidden="true"></i>
 </a>
 &nbsp;&nbsp;
-<a href="mailto:ssjj3552@gmail.com" style="text-decoration:none;color:black;margin-bottom:8rem;" rel="me">
+<a href="mailto:ssjj3552@gmail.com" class="contact" style="margin-bottom:8rem;" rel="me">
   <i class="fas fa-fw fa-envelope-square" aria-hidden="true"></i>
 </a>
 
 
 ## About Blog
 #### 🅰️&nbsp;Font
-[SUIT](https://sunn.us/suit/){:target="_blank"}
+<a href="[/copyright/](https://sunn.us/suit/)" style="text-decoration:none;" target="_blank">SUIT</a>
 <!--Spoqa Han Sans Neo-->
 
 #### 🎨&nbsp;Color

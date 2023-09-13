@@ -20,13 +20,13 @@ title                    : "ASUNGAJINLI"
 title_separator          : "|"
 subtitle                 : # site tagline that appears below site title in masthead
 name                     : "s_din99"
-description              : "블로그 아성가진리 입니다."
+description              : "아성가진리 블로그에 오신 것을 환영합니다."
 url                      : "https://asungajinli.github.io"
-baseurl                  : # the subpath of your site, e.g. "/blog"
-repository               : # GitHub username/repo-name e.g. "mmistakes/minimal-mistakes"
-teaser                   : # path of fallback teaser image, e.g. "/assets/images/500x300.png"
+baseurl                  : "/"
+repository               : "asungajinli/asungajinli.github.io"
+teaser                   : "/images/logo.png"
 logo                     : "/images/logo.png"
-masthead_title           : # overrides the website title displayed in the masthead, use " " for no title
+masthead_title           : " "
 breadcrumbs              : true # true, false (default)
 words_per_minute         : 200
 comments:

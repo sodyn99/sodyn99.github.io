@@ -173,7 +173,7 @@
         padding: 1rem;
         width: 10rem;
         height: 10rem;
-        border: 2px solid #ddd;
+        border: 2px solid mix(#777, $background-color, 30%);
         border-radius: 0.5rem;
         background-color: transparent;
         color: var(--button-color);
@@ -189,7 +189,7 @@
         }
         &:hover {
         background-color: var(--button-color);
-        color: $text-color;
+        color: #fff;
         border-color: var(--button-color);
         }
     }
@@ -237,6 +237,9 @@
     font-weight:300;
     font-size:0.6em;
 }
-.more {
+.home-more {
+    cursor: pointer;
+    position: absolute;
+    right: 0px;
     color: $text-color;
 }
