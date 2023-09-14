@@ -4,7 +4,8 @@
 
 .masthead {
   position: relative;
-  background-color: $background-color;
+  background: none;
+  // background-color: $background-color;
   border-bottom: 0px solid $border-color;
   -webkit-animation: $intro-transition;
   animation: $intro-transition;

@@ -142,7 +142,29 @@ layout: default
       </button>
     </div>
   </div>
+  <div id="contact" class="home-contact">
+    <h2>Get In Touch</h2>
+    <div id="contact-form" class="contact-container">
+          <form action="https://formspree.io/f/mjvqogqw" method="POST">
+            <label class="label__email">
+              <span>Email</span>
+              <input id="email" name="_replyto" type="email" required="" placeholder="example@gmail.com" value="">
+            </label>
+            <label class="label__name">
+              <span>Name</span>
+              <input name="name" type="text" required="" placeholder="Sungjin Lee" value="">
+            </label>
+            <label class="label__message">
+              <span>Message</span>
+              <textarea name="message" required="" placeholder="Hey there!"></textarea>
+            </label>
+            <button type="submit" value="send">Send</button>
+        </form>
+    </div>
+  </div>
 </div>
+
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 <script>
   changeColor();
   function changeColor() {
@@ -151,6 +173,20 @@ layout: default
     studyButton.style.setProperty("--button-color", "#DC7D48");
     entertainmentButton.style.setProperty("--button-color", "#6454ED");
   }
+  window.addEventListener('load', function() {
+    var masthead = document.getElementsByClassName("masthead")[0];
+    masthead.className += ' sticky';
+  });
+  
+  // var mastheadItem = $('#site-nav');
+
+  // $(window).scroll(function() {
+  //   if ($(window).scrollTop() > 1000) {
+  //     masthead.addClass('right-side');
+  //   } else {
+  //     masthead.removeClass('right-side');
+  //   }
+  // });
 </script>
 
 <!-- <img src="/images/home_intro.png" alt = "Home" style="-webkit-user-drag:none;user-select:none;"/> -->
