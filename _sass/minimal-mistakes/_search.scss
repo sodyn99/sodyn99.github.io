@@ -19,6 +19,7 @@
   cursor: pointer;
   -webkit-transition: 0.2s;
   transition: 0.2s;
+  font-size: $type-size-3;
 
   &:hover {
     color: mix(#000, $primary-color, 25%);

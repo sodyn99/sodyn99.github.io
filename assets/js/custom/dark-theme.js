@@ -10,14 +10,14 @@ const darkTheme = [...document.styleSheets].find((style) =>
 const toggleThemeBtn = document.getElementById("toggle-theme");
 
 const toLight = () => {
-  toggleThemeBtn.innerHTML = `<i class="fas fa-sun"></i>`;
+  toggleThemeBtn.innerHTML = `<i style="color:#F0383B" class="fas fa-sun"></i>`;
   defaultTheme.disabled = false;
   darkTheme.disabled = true;
   localStorage.setItem("theme", "default");
 };
 
 const toDark = () => {
-  toggleThemeBtn.innerHTML = `<i class="fas fa-moon"></i>`;
+  toggleThemeBtn.innerHTML = `<i style="color:#D1F951" class="fas fa-moon"></i>`;
   defaultTheme.disabled = true;
   darkTheme.disabled = false;
   localStorage.setItem("theme", "dark");
