@@ -4,7 +4,7 @@
 
 /* Colors */
 $background-color: #252a34 !default;
-$box-color: #444 !default;
+$box-color: mix(#777, $background-color, 30%) !default; //#444 !default;
 $text-color: #eaeaea !default;
 $primary-color: #00adb5 !default;
 $thead-color: #212631 !default;

@@ -152,7 +152,7 @@ layout: default
             </label>
             <label class="label__name">
               <span>Name</span>
-              <input name="name" type="text" required="" placeholder="Sungjin Lee" value="">
+              <input name="name" type="text" required="" placeholder="John Smith" value="">
             </label>
             <label class="label__message">
               <span>Message</span>
@@ -164,7 +164,40 @@ layout: default
   </div>
 </div>
 
+{% capture logo_path %}{{ site.logo }}{% endcapture %}
+<div id="leftSide" class="left-side">
+  <div id="leftSideContainer" class="left-side-menu-container">
+    {% unless logo_path == empty %}
+      <a class="site-logo" href="{{ '/' | relative_url }}"><img src="{{ logo_path | relative_url }}" alt="{{ site.masthead_title | default: site.title }}"></a>
+    {% endunless %}
+  </div>
+</div>
+<div id="rightSide" class="right-side">
+  <div id="rightSideContainer" class="right-side-menu-container">
+    <ul class="visible-links">
+      {%- for link in site.data.navigation.main -%}
+        <li class="masthead__menu-item">
+          <a href="{{ link.url | relative_url }}"{% if link.description %} title="{{ link.description }}"{% endif %}><i class="{{ link.icon }}"></i></a>
+        </li>
+      {%- endfor -%}
+    </ul>
+    {% if site.search == true %}
+    <button class="search__toggle" type="button">
+      <span class="visually-hidden">{{ site.data.ui-text[site.locale].search_label | default: "Toggle search" }}</span>
+      <i class="fas fa-search"></i>
+    </button>
+    {% endif %}
+    <!-- 다크 모드 토글 버튼 -->
+    {% if site.dark_theme_toggle == true %}
+    <li class="masthead__menu-item">
+      <a class="toggle-theme"></a>
+    </li>
+    {% endif %}
+  </div>
+</div>
+
 <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script src="/assets/js/custom/dark-theme.js"></script>
 <script>
   changeColor();
   function changeColor() {
@@ -173,20 +206,34 @@ layout: default
     studyButton.style.setProperty("--button-color", "#DC7D48");
     entertainmentButton.style.setProperty("--button-color", "#6454ED");
   }
-  window.addEventListener('load', function() {
-    var masthead = document.getElementsByClassName("masthead")[0];
-    masthead.className += ' sticky';
-  });
-  
-  // var mastheadItem = $('#site-nav');
-
-  // $(window).scroll(function() {
-  //   if ($(window).scrollTop() > 1000) {
-  //     masthead.addClass('right-side');
-  //   } else {
-  //     masthead.removeClass('right-side');
-  //   }
+  // window.addEventListener('load', function() {
+  //   var masthead = document.getElementsByClassName("masthead")[0];
+  //   masthead.className += ' sticky';
   // });
+  
+  var rightSide = $('#rightSideContainer');
+  var leftSide = $('#leftSideContainer');
+  var rightSideRail = $('#rightSide');
+  var rightSideRail = $('#leftSide');
+
+  $(document).ready(function(){
+    rightSide.addClass(' sticky');
+    leftSide.addClass(' sticky');
+  })
+
+  $(window).scroll(function() {
+    if ($(window).scrollTop() > 1000) {
+      rightSide.slideDown();
+      leftSide.slideDown();
+      rightSide.css('display', 'flex');
+      leftSide.css('display', 'flex');
+      // rightSideRail.css("display", "block");
+    } else {
+      rightSide.slideUp();
+      leftSide.slideUp();
+      // rightSideRail.css("display", "none");
+    }
+  });
 </script>
 
 <!-- <img src="/images/home_intro.png" alt = "Home" style="-webkit-user-drag:none;user-select:none;"/> -->

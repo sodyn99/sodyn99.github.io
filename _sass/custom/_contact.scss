@@ -16,12 +16,13 @@
         color: $text-color;
         font-size: $type-size-1;
         font-family: 'termina', sans-serif;
+        margin-bottom: 2em;
     }
     >div {
         width: 100%;
     }
     .contact-container {
-        background-color: mix(#777, $background-color, 30%);
+        background-color: $box-color;
         border-radius: $border-radius;
         display: flex;
         flex-direction: column;

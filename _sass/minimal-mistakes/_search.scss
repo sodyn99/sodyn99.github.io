@@ -59,6 +59,7 @@
   }
 
   .search-input {
+    border-radius: 0em;
     display: block;
     margin-bottom: 0;
     padding: 0;
@@ -67,6 +68,11 @@
     box-shadow: none;
     background-color: transparent;
     font-size: $type-size-3;
+    color: $text-color;
+
+    &::placeholder {
+      color: #777;
+    }
 
     @include breakpoint($large) {
       font-size: $type-size-2;
@@ -88,6 +94,7 @@
   }
 
   .results__found {
+    color: $text-color;
     margin-top: 0.5em;
     font-size: $type-size-6;
   }

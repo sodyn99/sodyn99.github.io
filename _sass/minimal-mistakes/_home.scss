@@ -182,7 +182,7 @@
         padding: 1rem;
         width: 10rem;
         height: 10rem;
-        border: 2px solid mix(#777, $background-color, 30%);
+        border: 2px solid var(--button-color);
         border-radius: 0.5rem;
         background-color: transparent;
         color: var(--button-color);
