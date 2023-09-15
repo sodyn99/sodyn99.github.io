@@ -140,6 +140,7 @@ th {
   background-color: #1e746a;
 }
 .football_title{
+  position: sticky;
   margin: 4vmin 0;
   font-family: 'Futura Maxi CG Bold';
   text-align: center;
@@ -209,8 +210,11 @@ th {
 .dataframe.championsleague-standings tbody tr,
 .dataframe.europaleague-standings tbody tr,
 .dataframe.kleague1-standings tbody tr {
-color:$text-color;
-font-weight:bold;
+  color:$text-color;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  font-weight:bold;
 }
 
 /* --------- Champions League ---------- */
