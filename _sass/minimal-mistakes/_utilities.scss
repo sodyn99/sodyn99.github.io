@@ -531,37 +531,35 @@ body:hover .visually-hidden button {
 }
 
 .modal-content {
-  margin: auto;
-  border: none;
   background: none;
   -webkit-user-drag: none;
   transition: transform 0.3s ease;
   display: block;
 }
-.close {
-  background-color: $border-color;
-  border-radius: 50%;
-  position: absolute;
-  width: 3vmin;
-  height: 3vmin;
-  text-align: center;
-  line-height: 2.8vmin;
-  top: 1vmin;
-  right: 1.5vmin;
-  color: #fff;
-  font-size: 2vmin;
-  font-weight: 900;
-  cursor: pointer;
-  z-index: 9999;
-  transition: 0.3s ease;
-}
-.close:hover,
-.close:focus {
-  background-color: $text-color;
-  color: #fff;
-  text-decoration: none;
-  cursor: pointer;
-}
+// .close {
+//   background-color: $border-color;
+//   border-radius: 50%;
+//   position: absolute;
+//   width: 3vmin;
+//   height: 3vmin;
+//   text-align: center;
+//   line-height: 2.8vmin;
+//   top: 1vmin;
+//   right: 1.5vmin;
+//   color: #fff;
+//   font-size: 2vmin;
+//   font-weight: 900;
+//   cursor: pointer;
+//   z-index: 9999;
+//   transition: 0.3s ease;
+// }
+// .close:hover,
+// .close:focus {
+//   background-color: $text-color;
+//   color: #fff;
+//   text-decoration: none;
+//   cursor: pointer;
+// }
 
 .modal-image {
   display: block;

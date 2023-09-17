@@ -114,3 +114,25 @@ layout: default
       <div id="caption" class="caption"></div>
   </div>
 </div>
+
+<!-- Right Side Menu -->
+<div id="singleRightSide">
+  <a id="sideHome" href='/'>
+    <!-- <img class="invert-images" src="/assets/mstile-150x150.png"/> -->
+    <img src="/images/logo.png"/>
+  </a>
+  <a id="sideStudy" href='/study/'>
+    <i style="font-weight:bold" class="fas fa-book" aria-hidden="true"></i>
+  </a>
+  <a id="sideSports" href='/sports/'>
+    <i style="font-weight:bold" class="fas fa-table-tennis" aria-hidden="true"></i>
+  </a>
+  <a id="sideEntertainment" href='/entertainment/'>
+    <i style="font-weight:bold" class="fas fa-play" aria-hidden="true"></i>
+  </a>
+  {% if site.dark_theme_toggle == true %}
+  <li class="masthead__menu-item">
+    <a class="toggle-theme"></a>
+  </li>
+  {% endif %}
+</div>

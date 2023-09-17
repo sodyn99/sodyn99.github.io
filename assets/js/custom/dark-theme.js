@@ -8,6 +8,7 @@ const darkTheme = [...document.styleSheets].find((style) =>
 );
 
 const toggleThemeBtns = document.querySelectorAll('.toggle-theme');
+const invertImages = document.querySelectorAll('.invert-images');
 
 toggleThemeBtns.forEach(function(toggleThemeBtn) {
   const toLight = () => {
@@ -15,6 +16,9 @@ toggleThemeBtns.forEach(function(toggleThemeBtn) {
       defaultTheme.disabled = false;
       darkTheme.disabled = true;
       localStorage.setItem("theme", "default");
+      invertImages.forEach(function(invertImage) {
+        invertImage.classList.remove('invert');
+      });
   };
 
   const toDark = () => {
@@ -22,6 +26,9 @@ toggleThemeBtns.forEach(function(toggleThemeBtn) {
     defaultTheme.disabled = true;
     darkTheme.disabled = false;
     localStorage.setItem("theme", "dark");
+    invertImages.forEach(function(invertImage) {
+      invertImage.classList.add('invert');
+    });
   };
 
   const currentTheme = () => localStorage.getItem("theme");

@@ -65,7 +65,7 @@
         </details>
       </li>
     {% endfor %}
-    {% if page.sidebar.parent==true %}
+    <!-- {% if page.sidebar.parent==true %}
       <div class="box__button-Home mb-hidden" onclick="location.href='/';" style="width:80%; margin-top: 2em; margin-left: 15px;">
         <img src="/assets/mstile-150x150.png"/>
         Home
@@ -82,6 +82,6 @@
         <i style="font-weight:bold" class="fas fa-play" aria-hidden="true"></i>&nbsp;&nbsp;
         Ent
       </div>
-    {% endif %}
+    {% endif %} -->
   </ul>
 </nav>
