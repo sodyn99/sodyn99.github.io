@@ -138,7 +138,6 @@
     align-items: center;
 }
 .contents-container {
-    overflow-x: scroll;
     position: relative;
     background-color: $box-color;
     @include breakpoint($large) {

@@ -304,8 +304,6 @@
           var mouseY = event.pageY;
 
           var modal = $('.modal');
-          var modalX = modal.offset().left + modal.outerWidth() / 2;
-          var modalY = modal.offset().top + modal.outerHeight() / 2;
           if (isDragging) {
             requestAnimationFrame(function() {
               var deltaX = e.clientX - startX;
