@@ -88,7 +88,7 @@ video:not(.fullscreen) {
   position: relative;
   width: calc(1.78 * var(--esports-height));
   height: calc(1.025 * var(--esports-height));
-  background-color:  #F2F2F2;
+  background-color:  $box-color;
   margin: 2% 1%;
   /* box-shadow: -1px -1px 4px 3px lightgrey; */
   border-radius: 1vmin;
