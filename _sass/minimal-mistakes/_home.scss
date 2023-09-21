@@ -2,6 +2,7 @@
     --bg-color: $background-color;
     --con-color: #f2f2f2;
     --text-color: $text-color;
+    --default-font: $sans-serif;
     --button-color: #24A091;
     --font: 'termina', sans-serif;
     --back-height: 200vh;
@@ -59,7 +60,6 @@
     justify-content: center;
     align-items: center;
     height: 10rem;
-    width: 100rem;
 }
 .welcome-logo {
     // border:1px solid blue;
@@ -75,14 +75,13 @@
     }
 }
 .welcome {
-    // border:1px solid red;
     line-height: 3.5rem;
-    font-size: 2rem;
+    font-size: $type-size-3;
     @include breakpoint($large){
         font-size: 4.5rem;
     }
     color: $text-color;
-    width: 23rem;
+    width: 18rem;
     @include breakpoint($large){
         width: 50rem;
     }
@@ -92,7 +91,6 @@
         font-weight: 700;
         position: relative;
         margin-bottom: 0;
-        width: 25rem;
         > a {
         font-family: var(--font);
         color: $text-color;
@@ -149,7 +147,7 @@
     margin-top: 1rem;
     margin-bottom: 5rem;
     > h1 {
-        font-size:2.5rem;
+        font-size: $type-size-2;
         font-family: var(--font);
         position: relative;
         > a {
@@ -178,21 +176,25 @@
     justify-content: center;
     > button {
         margin: 0.5rem 2%;
-        padding: 1rem;
-        width: 10rem;
-        height: 10rem;
+        width: 11em;
+        height: 11em;
         border: 2px solid var(--button-color);
         border-radius: 0.5rem;
         background-color: transparent;
         color: var(--button-color);
         font-family: var(--font);
         font-weight: 500;
+        font-size: $type-size-6;
         cursor: pointer;
         outline: none;
         transition: all 0.3s ease-in-out;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
         > i {
         transition: none;
-        font-size: 2.5rem;
+        font-size: $type-size-1;
         margin-bottom: 1rem;
         }
         &:hover {
@@ -215,6 +217,15 @@
         border-radius: 0.5rem;
         filter: opacity(0.5);
         overflow: hidden;
+        height: 5em;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        
+        @include breakpoint($large){
+            height: 10em;
+        }
         transition: all 0.3s ease-in-out;
     }
     .post-image img {
@@ -225,6 +236,15 @@
         font-family: 'rixgwangalli-pro', sans-serif;
         font-style: normal;
         font-weight: 100;
+        font-size: $type-size-5;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+    }
+    div a .category-container {
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
     }
 }
 .posts {
@@ -243,7 +263,24 @@
 .post-category {
     color:$text-color;
     font-weight:300;
-    font-size:0.6em;
+    font-size: 0.1em;
+    font-family: $sans-serif;
+    @include breakpoint($large){
+        font-size: 0.6em;
+    }
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    span {
+        font-family: $sans-serif;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        font-size: 0.1em;
+        @include breakpoint($large){
+            font-size: 0.6em;
+        }
+    }
 }
 .home-more {
     cursor: pointer;
