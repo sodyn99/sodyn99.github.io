@@ -75,60 +75,62 @@
 }
 
 #singleRightSide {
-    @include breakpoint($large){
-        position: fixed;
-        display: none;
-        bottom: 150px;
-        width: 60px;
-        height: 230px;
-        right: 0px;
-        margin: 0em;
-        background-color: $box-color;
-        //padding: 10px;
-        border-top-left-radius: $border-radius;
-        border-bottom-left-radius: $border-radius;
-        flex-direction: column;
+    display: none;
+    position: fixed;
+    bottom: 150px;
+    width: 0px;
+    height: 230px;
+    right: -60px;
+    margin: 0em;
+    background-color: $box-color;
+    //padding: 10px;
+    border-top-left-radius: $border-radius;
+    border-bottom-left-radius: $border-radius;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    z-index: 20;
+    a {
+        width: 20px;
+        color: $text-color;
+        display: flex;
         align-items: center;
         justify-content: center;
-        z-index: 20;
-        a {
-            width: 20px;
-            color: $text-color;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 1em;
-            margin-bottom: 20px;
-            i {
-                transition: .1s;
-            }
-            img {
-                width: 100%;
-                scale: 1.3;
-            }
+        font-size: 1em;
+        margin-bottom: 20px;
+        i {
+            transition: .1s;
         }
-        #sideStudy:hover {
-            color: $orange; //#DC7D48;
+        img {
+            width: 100%;
+            scale: 1.3;
         }
-        #sideSports:hover {
-            color: $green;
-        }
-        #sideEntertainment:hover {
-            color: $blue;
-        }
-        .masthead__menu-item {
-            width: 20px;
+    }
+    #sideStudy:hover {
+        color: $orange; //#DC7D48;
+    }
+    #sideSports:hover {
+        color: $green;
+    }
+    #sideEntertainment:hover {
+        color: $blue;
+    }
+    .masthead__menu-item {
+        width: 20px;
+        margin: 0px;
+        list-style-type: none;
+        white-space: nowrap;
+        cursor: pointer;
+        font-size: 1em;
+        padding: 0px;
+        .toggle-theme {
             margin: 0px;
-            list-style-type: none;
-            white-space: nowrap;
-            cursor: pointer;
-            font-size: 1em;
             padding: 0px;
-            .toggle-theme {
-                margin: 0px;
-                padding: 0px;
-            }
-            // color: $primary-color;
         }
+        // color: $primary-color;
+    }
+    @include breakpoint($large){
+        width: 60px;
+        right: 0px;
     }
 }

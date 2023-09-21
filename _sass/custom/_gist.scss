@@ -1,6 +1,10 @@
 .gist {
     overflow: auto;
 }
+.gist .gist-file {
+    overflow: hidden;
+    border-radius: $border-radius !important;
+}
 .gist .render-wrapper .render-viewer {
     height: 1000px;
     overflow: auto;
