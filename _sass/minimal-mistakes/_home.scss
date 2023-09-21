@@ -176,8 +176,8 @@
     justify-content: center;
     > button {
         margin: 0.5rem 2%;
-        width: 11em;
-        height: 11em;
+        width: 10em;
+        height: 10em;
         border: 2px solid var(--button-color);
         border-radius: 0.5rem;
         background-color: transparent;
@@ -263,11 +263,8 @@
 .post-category {
     color:$text-color;
     font-weight:300;
-    font-size: 0.1em;
+    font-size: $type-size-8;
     font-family: $sans-serif;
-    @include breakpoint($large){
-        font-size: 0.6em;
-    }
     white-space: nowrap;
     overflow: hidden;
     text-overflow: ellipsis;
@@ -276,10 +273,7 @@
         white-space: nowrap;
         overflow: hidden;
         text-overflow: ellipsis;
-        font-size: 0.1em;
-        @include breakpoint($large){
-            font-size: 0.6em;
-        }
+        font-size: $type-size-8;
     }
 }
 .home-more {
