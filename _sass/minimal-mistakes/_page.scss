@@ -14,7 +14,7 @@
   -webkit-animation-delay: 0.15s;
   animation-delay: 0.15s;
 
-  @include breakpoint($xxx-large) {
+  @include breakpoint($x-large) {
     max-width: $max-width;
   }
 }
@@ -58,28 +58,19 @@ body {
     .page__content,
     .page__meta,
     .page__share {
-      font-weight: 500;
       position: relative;
       float: left;
       margin-left: 0;
       margin-right: 0;
-      margin-bottom: 3em;
       width: 100%;
       clear: both;
-    }
-    .page__meta {
-      font-family: 'rixgwangalli-pro', sans-serif;
     }
   }
 }
 
 .page__title {
   margin-top: 0;
-  margin-bottom: 0.7em;
-  line-height: 1.25;
-  font-family: 'rixgwangalli-pro', sans-serif;
-  font-weight: 500;
-  font-size: $type-size-2;
+  line-height: 1;
 
   a {
     color: $text-color;
@@ -97,12 +88,6 @@ body {
 }
 
 .page__content {
-  h1 {
-    margin-top: 1em;
-    &:nth-child(1) {
-      margin-top: 0;
-    }
-  }
   h2 {
     padding-bottom: 0.5em;
     border-bottom: 1px solid $border-color;
@@ -113,7 +98,7 @@ body {
 			position: relative;
 			left: 0.5em;
 			opacity: 0;
-			font-size: 1rem;
+			font-size: 0.8em;
 			-webkit-transition: opacity 0.2s ease-in-out 0.1s;
 			-moz-transition: opacity 0.2s ease-in-out 0.1s;
 			-o-transition: opacity 0.2s ease-in-out 0.1s;
@@ -128,12 +113,12 @@ body {
   p,
   li,
   dl {
-    font-size: $type-size-5;
+    font-size: 1em;
   }
 
   /* paragraph indents */
   p {
-    margin: $indent-var 0 $indent-var;
+    margin: 0 0 $indent-var;
 
     /* sibling indentation*/
     @if $paragraph-indent == true {
@@ -170,7 +155,6 @@ body {
 
   dt {
     margin-top: 1em;
-    margin-bottom: 0.5em;
     font-family: $sans-serif;
     font-weight: bold;
   }
@@ -178,7 +162,7 @@ body {
   dd {
     margin-left: 1em;
     font-family: $sans-serif;
-    font-size: $type-size-5;
+    font-size: $type-size-6;
   }
 
   .small {
@@ -364,7 +348,6 @@ body {
   border-radius: $border-radius;
 
   &:hover {
-    background-color: $box-color;
     text-decoration: none;
     color: $link-color-hover;
   }
@@ -593,151 +576,3 @@ body {
     }
   }
 }
-
-/*
-   Notebook style
-   ========================================================================== */
-.note {
-  border-radius: 1em;
-  padding: 1em 4% 2em;
-  background-color: $box-color;
-}
-.note-top {
-  border-bottom: #dbdbdb 1px solid;
-  .title {
-    padding: 0.1em 0.5em;
-    font-size: 3em;
-    font-family: 'rixfreestyle-pro', sans-serif;
-  }
-  .date {
-    font-weight: bold;
-    float: right;
-    margin-top: 2em;
-    margin-right: 1em;
-    > #date {
-      padding: 0.1em 0.5em;
-      font-size: 1.5em;
-      font-family: 'rixfreestyle-pro', sans-serif;
-    }
-  }
-}
-.multistage {
-  padding-top:1.5em;
-  font-size: 1.2em;
-  font-family: 'rixfreestyle-pro', sans-serif;
-  >h1 {
-    font-size: 2em;
-    font-family: 'rixfreestyle-pro', sans-serif;
-  }
-  &.two {
-    @include breakpoint($large) {
-      padding-top:2em;
-      float: left;
-      width: 50%;
-      &.first {
-        padding-left: 3%;
-        padding-right:1%;
-        border-right: #dbdbdb 1px solid;
-      }
-      &.second {
-        padding-left:3%;
-      }
-    }
-  }
-}
-
-/*
-   Mindmap
-   ========================================================================== */
-// .mindmap {
-//   border-radius: $border-radius;
-//   width: 100%;
-//   height: 30em;
-//   margin: 0 0.5em;
-//   position: relative;
-//   overflow: hidden;
-//   background-color: #f2f2f2;
-//   display: flex;
-//   justify-content: center;
-//   align-items: center;
-//   flex-direction: column;
-//   .title {
-//     margin: 0.5em;
-//     font-weight: bold;
-//   }
-//   .map {
-//     border: red 1px solid;
-//     width: 100%;
-//     display: flex;
-//     justify-content: center;
-//     align-items: center;
-//     flex-direction: row;
-//     .center {
-//       border: #747474 1px solid;
-//       border-radius: $border-radius;
-//       background-color: #747474;
-//       padding: 0.5em 1em;
-//       margin: 0.5em;
-//       text-align: center;
-//       color: white;
-//     }
-//     ul {
-//       list-style: none;
-//       margin: 0;
-//       padding: 0;
-//       border: blue 1px solid;
-//       width: 50%;
-//       height: 100%;
-//       display: flex;
-//       justify-content: left;
-//       align-items: center;
-//       flex-direction: column;
-//     }
-//     li{
-//       list-style: none;
-//       margin: 0;
-//       padding: 0;
-//       border: green 1px solid;
-//       width: 50%;
-//       display: flex;
-//       justify-content: left;
-//       align-items: center;
-//       flex-direction: row;
-//     }
-//     node {
-//       border-radius: 0px !important;
-//       border-bottom: red 1px solid;
-//       border-radius: $border-radius;
-//       margin: 0.5em;
-//       text-align: center;
-//       display: inline-block;
-//       white-space: nowrap;
-//     }
-//   }
-// }
-
-.mindmap {
-  border-radius: $border-radius;
-  margin: 0.5em 0.5em;
-  background-color: #f2f2f2;
-  @include breakpoint($large) {
-    width: 50%;
-    height: 25em;
-  }
-  width: 100%;
-  height: 15em;
-}
-
-// #mindmap path {
-//   stroke: black;
-// }
-
-// #mindmap circle {
-//   display: none;
-//   // stroke: #44b78b;
-//   // fill: #44b78b;
-// }
-
-// #mindmap rect {
-//   fill: black;
-// }

@@ -3,10 +3,11 @@
    ========================================================================== */
 
 table {
+  display: block;
   margin-bottom: 1em;
   width: 100%;
   font-family: $global-font-family;
-  font-size: $type-size-5;
+  font-size: $type-size-6;
   border-collapse: collapse;
   overflow-x: auto;
 
@@ -16,7 +17,8 @@ table {
 }
 
 thead {
-  background-color: $thead-color;
+  background-color: $border-color;
+  border-bottom: 2px solid mix(#000, $border-color, 25%);
 }
 
 th {
@@ -24,308 +26,14 @@ th {
   font-weight: bold;
   text-align: left;
 }
-th:first-child {
-  border-top-left-radius: 1.2em;
-  border-bottom-left-radius: 1.2em;
-}
-th:last-child {
-  border-top-right-radius: 1.2em;
-  border-bottom-right-radius: 1.2em;
-}
+
 td {
   padding: 0.5em;
-  border-bottom: 1px solid #dddddd;
+  border-bottom: 1px solid mix(#000, $border-color, 25%);
 }
-// tbody tr:last-child {
-//   border-bottom: 1.2em solid #f2f2f2;
-// }
 
 tr,
 td,
 th {
   vertical-align: middle;
-}
-/* lck standings */
-.lck_title{
-  margin: 1vmin 0;
-  font-family: 'ChaneyUltraextended';
-  text-align: center;
-  font-size: 5vmin;
-}
-.dataframe.lck-standings {
-  width: 47%;
-  height: 79%;
-  position: relative;
-  float: left;
-  text-align: center;
-  border-collapse: separate;
-  border-spacing: 0 1.5vmin;
-  margin: -1.7vmin 0 0.5vmin 2vmin;
-}
-.dataframe.lck-standings thead {
-  height: 2vmin;
-  background: none;
-  font-weight: bold;
-  font-size: 1vmin;
-  border-width: 0px !important;
-}
-.dataframe.lck-standings thead th {
-  background: none;
-  text-align: center;
-}
-.dataframe.lck-standings thead th:first-child,
-.dataframe.lck-standings thead th:nth-child(2),
-.dataframe.lck-standings thead th:nth-child(3) {
-  border-right: $text-color 1px solid;
-}
-.dataframe.lck-standings tbody {
-  font-size: 2vmin;
-  font-weight: bold;
-  color: $background-color;
-}
-
-.dataframe.lck-standings td,
-.dataframe.lck-standings tr{
-  border: none;
-}
-.dataframe.lck-standings tbody tr:first-child,
-.dataframe.lck-standings tbody tr:nth-child(2),
-.dataframe.lck-standings tbody tr:nth-child(3),
-.dataframe.lck-standings tbody tr:nth-child(4),
-.dataframe.lck-standings tbody tr:nth-child(5) {
-  border-radius: 5px;
-  background: $text-color;
-  box-shadow: 0px 0px 0px 0.35vmin $text-color;
-}
-.dataframe.lck-standings tbody td:first-child{
-  width: 6vmin;
-  background-color: $box-color;
-  border-radius: 5px 0 0 5px;
-  color: $text-color;
-  border: $text-color 0.15vmin solid;
-}
-.dataframe.lck-standings tbody td:nth-child(2) {
-  width: 20vmin;
-  font-family: 'ChaneyUltraextended';
-  font-weight : bold;
-  border-right: $box-color 1px solid;
-}
-.dataframe.lck-standings tbody td:nth-child(2) > img{
-  position: relative;
-  max-height: 5vmin;
-  vertical-align: middle;
-  margin-right: 2vmin;
-}
-.dataframe.lck-standings tbody td:nth-child(3) {
-  border-right: $box-color 1px solid;
-}
-
-/* football standings */
-.table_container {
-  margin: 30px 0px;
-  width: 100% !important;
-  border: none;
-  border-radius: 15px;
-  // box-shadow: 0px 0px 15px 0px lightslategray;
-  overflow-x: auto;
-  backdrop-filter: blur(10px);
-  /* background: linear-gradient(45deg, #f2f2f2, lightgray); */
-  background: $box-color;//rgba(220, 220, 230, 0.6);
-}
-.badge-rank {
-  padding: 0.3vmin 1vmin;
-  border-radius: 10px;
-  margin-right: 1vmin;
-  color: #fff;
-  background-color: #1e746a;
-}
-.football_title{
-  position: sticky;
-  margin: 4vmin 0;
-  font-family: 'Futura Maxi CG Bold';
-  text-align: center;
-  font-size: 6vmin;
-  color: $text-color;
-  background-color: $box-color;
-}
-.dataframe.premierleague-standings,
-.dataframe.laliga-standings,
-.dataframe.seriea-standings,
-.dataframe.bundesliga-standings,
-.dataframe.ligue1-standings,
-.dataframe.championsleague-standings,
-.dataframe.europaleague-standings,
-.dataframe.kleague1-standings {
-  width: 100%!important;
-  position: relative !important;
-  text-align: center !important;
-  border: none !important;
-  border-collapse: separate !important;
-  display: table !important;
-  border-spacing: 5vmin 1vmin;
-  font-size: 0.9em;
-}
-.dataframe.premierleague-standings thead th,
-.dataframe.laliga-standings thead th,
-.dataframe.seriea-standings thead th,
-.dataframe.bundesliga-standings thead th,
-.dataframe.ligue1-standings thead th,
-.dataframe.championsleague-standings thead th,
-.dataframe.europaleague-standings thead th,
-.dataframe.kleague1-standings thead th {
-  padding: 15px 10px;
-  color:$text-color;
-  background-color: $box-color !important;
-  font-size:0.7em;
-  text-align: center !important;
-  font-weight: bold !important;
-  border-radius: 0px;
-  border-bottom: 0.2vmin solid #dddddd !important;
-}
-.dataframe.premierleague-standings tbody td,
-.dataframe.laliga-standings tbody td,
-.dataframe.seriea-standings tbody td,
-.dataframe.bundesliga-standings tbody td,
-.dataframe.ligue1-standings tbody td,
-.dataframe.championsleague-standings tbody td,
-.dataframe.europaleague-standings tbody td,
-.dataframe.kleague1-standings tbody td {
-  padding: 5px 0px;
-  border-bottom: 0px !important;
-}
-// .dataframe.premierleague-standings tbody tr:hover td,
-// .dataframe.laliga-standings tbody tr:hover td,
-// .dataframe.seriea-standings tbody tr:hover td,
-// .dataframe.bundesliga-standings tbody tr:hover td,
-// .dataframe.ligue1-standings tbody tr:hover td,
-// .dataframe.kleague1-standings tbody tr:hover td {
-//   background:rgba(220, 220, 230, 0.5)!important;
-//   color: #000;
-// }
-.dataframe.premierleague-standings tbody tr,
-.dataframe.laliga-standings tbody tr,
-.dataframe.seriea-standings tbody tr,
-.dataframe.bundesliga-standings tbody tr,
-.dataframe.ligue1-standings tbody tr,
-.dataframe.championsleague-standings tbody tr,
-.dataframe.europaleague-standings tbody tr,
-.dataframe.kleague1-standings tbody tr {
-  color:$text-color;
-  white-space: nowrap;
-  overflow: hidden;
-  text-overflow: ellipsis;
-  font-weight:bold;
-}
-
-/* --------- Champions League ---------- */
-.dataframe.premierleague-standings tbody tr:first-child td:first-child,
-.dataframe.premierleague-standings tbody tr:nth-child(2) td:first-child,
-.dataframe.premierleague-standings tbody tr:nth-child(3) td:first-child,
-.dataframe.premierleague-standings tbody tr:nth-child(4) td:first-child,
-.dataframe.laliga-standings tbody tr:first-child td:first-child,
-.dataframe.laliga-standings tbody tr:nth-child(2) td:first-child,
-.dataframe.laliga-standings tbody tr:nth-child(3) td:first-child,
-.dataframe.laliga-standings tbody tr:nth-child(4) td:first-child,
-.dataframe.seriea-standings tbody tr:first-child td:first-child,
-.dataframe.seriea-standings tbody tr:nth-child(2) td:first-child,
-.dataframe.seriea-standings tbody tr:nth-child(3) td:first-child,
-.dataframe.seriea-standings tbody tr:nth-child(4) td:first-child,
-.dataframe.bundesliga-standings tbody tr:first-child td:first-child,
-.dataframe.bundesliga-standings tbody tr:nth-child(2) td:first-child,
-.dataframe.bundesliga-standings tbody tr:nth-child(3) td:first-child,
-.dataframe.bundesliga-standings tbody tr:nth-child(4) td:first-child,
-.dataframe.ligue1-standings tbody tr:first-child td:first-child,
-.dataframe.ligue1-standings tbody tr:nth-child(2) td:first-child {
-  background-color: #1e746a !important;
-  color: #f2f2f2 !important;
-  border-radius: 13px;
-}
-/* --------- Champions League qualification ---------- */
-.dataframe.ligue1-standings tbody tr:nth-child(3) td:first-child {
-  background-color: #637721 !important;
-  color: #f2f2f2 !important;
-  border-radius: 13px;
-}
-
-/* --------- Europa League ---------- */
-.dataframe.premierleague-standings tbody tr:nth-child(5) td:first-child,
-.dataframe.premierleague-standings tbody tr:nth-child(6) td:first-child,
-.dataframe.laliga-standings tbody tr:nth-child(5) td:first-child,
-.dataframe.laliga-standings tbody tr:nth-child(6) td:first-child,
-.dataframe.seriea-standings tbody tr:nth-child(5) td:first-child,
-.dataframe.seriea-standings tbody tr:nth-child(6) td:first-child,
-.dataframe.bundesliga-standings tbody tr:nth-child(5) td:first-child,
-.dataframe.bundesliga-standings tbody tr:nth-child(6) td:first-child,
-.dataframe.ligue1-standings tbody tr:nth-child(4) td:first-child{
-  background-color: #3426b1 !important;
-  color: #f2f2f2;
-  border-radius: 13px;
-}
-
-/* --------- Europa Conference League ---------- */
-.dataframe.premierleague-standings tbody tr:nth-child(7) td:first-child,
-.dataframe.laliga-standings tbody tr:nth-child(7) td:first-child,
-.dataframe.seriea-standings tbody tr:nth-child(7) td:first-child,
-.dataframe.bundesliga-standings tbody tr:nth-child(7) td:first-child,
-.dataframe.ligue1-standings tbody tr:nth-child(5) td:first-child {
-  background: #15bfdd !important;
-  color: #f2f2f2;
-  border-radius: 13px;
-}
-/* --------- Relegation qualification---------- */
-.dataframe.bundesliga-standings tbody tr:nth-last-child(3) td:first-child {
-  background: #637721 !important;
-  color: #f2f2f2;
-  border-radius: 13px;
-}
-
-/* --------- Relegation ---------- */
-.dataframe.premierleague-standings tbody tr:last-child td:first-child,
-.dataframe.premierleague-standings tbody tr:nth-last-child(2) td:first-child,
-.dataframe.premierleague-standings tbody tr:nth-last-child(3) td:first-child,
-.dataframe.laliga-standings tbody tr:last-child td:first-child,
-.dataframe.laliga-standings tbody tr:nth-last-child(2) td:first-child,
-.dataframe.laliga-standings tbody tr:nth-last-child(3) td:first-child,
-.dataframe.seriea-standings tbody tr:last-child td:first-child,
-.dataframe.seriea-standings tbody tr:nth-last-child(2) td:first-child,
-.dataframe.seriea-standings tbody tr:nth-last-child(3) td:first-child,
-.dataframe.bundesliga-standings tbody tr:last-child td:first-child,
-.dataframe.bundesliga-standings tbody tr:nth-last-child(2) td:first-child,
-.dataframe.ligue1-standings tbody tr:last-child td:first-child,
-.dataframe.ligue1-standings tbody tr:nth-last-child(2) td:first-child,
-.dataframe.ligue1-standings tbody tr:nth-last-child(3) td:first-child,
-.dataframe.ligue1-standings tbody tr:nth-last-child(4) td:first-child {
-  background:#ad2022 !important;
-  color: #f2f2f2;
-  border-radius: 13px;
-}
-.dataframe.premierleague-standings tbody td:nth-child(2),
-.dataframe.laliga-standings tbody td:nth-child(2),
-.dataframe.seriea-standings tbody td:nth-child(2),
-.dataframe.bundesliga-standings tbody td:nth-child(2),
-.dataframe.ligue1-standings tbody td:nth-child(2),
-.dataframe.championsleague-standings tbody td:nth-child(2),
-.dataframe.europaleague-standings tbody td:nth-child(2),
-.dataframe.kleague1-standings tbody td:nth-child(2) {
-  text-align:left;
-  width: 30%;
-}
-// .dataframe.premierleague-standings tbody span {
-// font-weight:bold;
-// padding:10px 15px;
-// border-radius:50%;
-// }
-// .dataframe.premierleague-standings tbody tr:first-child span {
-// background:#5055CB;
-// color:white;
-// }
-// .dataframe.premierleague-standings tbody tr span {
-// background:#262626;
-// color:#747474;
-// }
-
-@media (max-width: 1024px) {
-  .table_container {
-    overflow-x: scroll;
-  }
 }

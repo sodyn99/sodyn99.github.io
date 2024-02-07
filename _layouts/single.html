@@ -18,7 +18,6 @@ layout: default
   {% endunless %}
 {% endif %}
 
-
 <div id="main" role="main">
   {% include sidebar.html %}
 
@@ -40,24 +39,15 @@ layout: default
 
       <section class="page__content e-content" itemprop="text">
         {% if page.toc %}
-        <aside class="sidebar__right {% if page.toc_sticky %}sticky{% endif %}">
-          <nav class="toc">
-            <header>
-              <h4 class="nav__title">
-                <i class="fas fa-{{ page.toc_icon | default: 'list-ul' }}"></i> &nbsp; {{ page.toc_label | default: site.data.ui-text[site.locale].toc_label | default: "On this page" }}
-              </h4>
-            </header>
-            <div class="toc__wrap">
-              <div class="toc__line"></div>
+          <aside class="sidebar__right {% if page.toc_sticky %}sticky{% endif %}">
+            <nav class="toc">
+              <header><h4 class="nav__title"><i class="fas fa-{{ page.toc_icon | default: 'file-alt' }}"></i> {{ page.toc_label | default: site.data.ui-text[site.locale].toc_label | default: "On this page" }}</h4></header>
               {% include toc.html sanitize=true html=content h_min=1 h_max=6 class="toc__menu" skip_no_ids=true %}
-            </div>
-          </nav>
-        </aside>
-        {% endif %} {{ content }} {% if page.link %}
-        <div>
-          <a href="{{ page.link }}" class="btn btn--primary">{{ site.data.ui-text[site.locale].ext_link_label | default: "Direct Link" }}</a>
-        </div>
+            </nav>
+          </aside>
         {% endif %}
+        {{ content }}
+        {% if page.link %}<div><a href="{{ page.link }}" class="btn btn--primary">{{ site.data.ui-text[site.locale].ext_link_label | default: "Direct Link" }}</a></div>{% endif %}
       </section>
 
       <footer class="page__meta">
@@ -101,38 +91,5 @@ layout: default
         {% endfor %}
       </div>
     </div>
-  {% endif %}
-</div>
-
-<!-- <div id="topButton" style="cursor: pointer"><img src="/images/topbutton.png" id="topButtonImg"></div> -->
-<a id="topbutton"></a>
-
-<div id="myModal" class="modal">
-  <!-- <span class="close">&#10006;</span> -->
-  <div class="modal-content">
-      <img id="modalImg" class="modal-image" alt="">
-      <div id="caption" class="caption"></div>
-  </div>
-</div>
-
-<!-- Right Side Menu -->
-<div id="singleRightSide">
-  <a id="sideHome" href='/'>
-    <!-- <img class="invert-images" src="/assets/mstile-150x150.png"/> -->
-    <img src="/images/logo.png"/>
-  </a>
-  <a id="sideStudy" href='/study/'>
-    <i style="font-weight:bold" class="fas fa-book" aria-hidden="true"></i>
-  </a>
-  <a id="sideSports" href='/sports/'>
-    <i style="font-weight:bold" class="fas fa-table-tennis" aria-hidden="true"></i>
-  </a>
-  <a id="sideEntertainment" href='/entertainment/'>
-    <i style="font-weight:bold" class="fas fa-play" aria-hidden="true"></i>
-  </a>
-  {% if site.dark_theme_toggle == true %}
-  <li class="masthead__menu-item">
-    <a class="toggle-theme"></a>
-  </li>
   {% endif %}
 </div>

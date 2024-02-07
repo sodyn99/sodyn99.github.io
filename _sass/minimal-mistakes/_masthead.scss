@@ -4,9 +4,7 @@
 
 .masthead {
   position: relative;
-  background: none;
-  // background-color: $background-color;
-  border-bottom: 0px solid $border-color;
+  border-bottom: 1px solid $border-color;
   -webkit-animation: $intro-transition;
   animation: $intro-transition;
   -webkit-animation-delay: 0.15s;
@@ -42,7 +40,7 @@
 }
 
 .site-logo img {
-  max-height: 2.5rem;
+  max-height: 2rem;
 }
 
 .site-title {
@@ -87,13 +85,9 @@
   display: block;
   list-style-type: none;
   white-space: nowrap;
-  cursor: pointer;
-  // color: $primary-color;
-  font-size: $type-size-3;
-  
+
   &--lg {
     padding-right: 2em;
     font-weight: 700;
   }
 }
-

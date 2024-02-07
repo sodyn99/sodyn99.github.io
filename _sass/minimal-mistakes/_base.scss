@@ -21,69 +21,6 @@ body {
   }
 }
 
-/* details, summary tag*/
-.side {
-  // transition: background .5s ease;
-  width: 100%;
-  outline: 0;
-  display: flex;
-  padding-left: 15px;
-  justify-content: space-between;
-  cursor: pointer;
-  border-bottom: 1px solid $border-color;
-}
-// .side::after {
-//   font-family: "Font Awesome 5 Free";
-//   font-weight: 900;
-//   content: "\f107";
-//   display: inline-block;
-//   padding-right: 15px;
-//   transition: all 0.3s;
-//   font-size: 180%;
-//   color: #525252;//#034171;
-// }
-// details[open] .side::after {
-//   content: '\f106';
-//   display: inline-block;
-//   transition: all 0.3s;
-//   padding-right: 15px;
-//   font-size: 180%;
-// }
-details[open] > .side {
-  margin-bottom: 10px;
-}
-.side:hover {
-  background: $box-color;
-  //transform: scale(1.1);
-}
-details > .side {
-  border-top-left-radius: 0.5em;
-  border-top-right-radius: 0.5em;
-  cursor: pointer;
-  transition: all ease-in-out 0.09s;
-}
-details > .side::-webkit-details-marker {
-  display:none;
-}
-.sidebar-details {
-  margin-bottom: 1.5em;
-  border-top-left-radius: 0.5em;
-  border-top-right-radius: 0.5em;
-}
-.sidebar-details-selected {
-  margin-bottom: 1.5em;
-  border-top-left-radius: 0.5em;
-  border-top-right-radius: 0.5em;
-  background-color: $box-color;
-}
-.sidebar-details-selected[open] {
-  border-radius: 0.5em;
-  background-color: $box-color;
-}
-summary {
-  cursor: pointer;
-}
-
 h1,
 h2,
 h3,
@@ -189,8 +126,6 @@ blockquote {
 /* links */
 
 a {
-  text-decoration: none;
-
   &:focus {
     @extend %tab-focus;
   }
@@ -223,25 +158,6 @@ pre {
 
 pre {
   overflow-x: auto; /* add scrollbars to wide code blocks*/
-}
-
-p > code,
-a > code,
-li > code,
-figcaption > code,
-td > code {
-  padding-top: 0.1rem;
-  padding-bottom: 0.1rem;
-  font-size: 0.8em;
-  // font-weight: bold;
-  background: $code-background-color;
-  border-radius: $border-radius;
-  color: $code-text-color;
-  &:before,
-  &:after {
-    letter-spacing: -0.2em;
-    content: "\00a0"; /* non-breaking space*/
-  }
 }
 
 /* horizontal rule */
