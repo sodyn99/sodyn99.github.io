@@ -123,7 +123,6 @@
 }
 //--------------------------------------------------------------------
 .home__section {
-    border: blue 1px solid;
     width: 100%;
     position: relative;
     display: -webkit-box;
@@ -201,33 +200,56 @@
     }
 }
 .home__section-card {
-    border: red 1px solid;
     flex: auto;
     cursor: pointer;
     border-radius: 1em;
     overflow: hidden;
     margin: 0.5em;
     width: calc($small - 1em);
+    width: -webkit-calc($small - 1em);
+    width: -moz-calc($small - 1em);
     height: calc($small - 1em);
+    height: -webkit-calc($small - 1em);
+    height: -moz-calc($small - 1em);
     @include breakpoint($small) {
         width: calc($small - 1em);
+        width: -webkit-calc($small - 1em);
+        width: -moz-calc($small - 1em);
         height: calc($small - 1em);
+        height: -webkit-calc($small - 1em);
+        height: -moz-calc($small - 1em);
     }
     @include breakpoint($medium) {
         width: calc($medium / 2 - 1em);
+        width: -webkit-calc($medium / 2 - 1em);
+        width: -moz-calc($medium / 2 - 1em);
         height: calc($medium / 2 - 1em);
+        height: -webkit-calc($medium / 2 - 1em);
+        height: -moz-calc($medium / 2 - 1em);
     }
     @include breakpoint($medium-wide) {
         width: calc($medium-wide / 3 - 1em);
+        width: -webkit-calc($medium-wide / 3 - 1em);
+        width: -moz-calc($medium-wide / 3 - 1em);
         height: calc($medium-wide / 3 - 1em);
+        height: -webkit-calc($medium-wide / 3 - 1em);
+        height: -moz-calc($medium-wide / 3 - 1em);
     }
     @include breakpoint($large) {
         width: calc($large / 3 - 1em);
+        width: -webkit-calc($large / 3 - 1em);
+        width: -moz-calc($large / 3 - 1em);
         height: calc($large / 3 - 1em);
+        height: -webkit-calc($large / 3 - 1em);
+        height: -moz-calc($large / 3 - 1em);
     }
     @include breakpoint($x-large) {
         width: calc($x-large / 3 - 1em);
+        width: -webkit-calc($x-large / 3 - 1em);
+        width: -moz-calc($x-large / 3 - 1em);
         height: calc($x-large / 3 - 1em);
+        height: -webkit-calc($x-large / 3 - 1em);
+        height: -moz-calc($x-large / 3 - 1em);
     }
 }
 .home__section-image {
@@ -255,26 +277,50 @@
     justify-content: center;
     padding-bottom: 2.5em;
     width: calc($small - 1em);
+    width: -webkit-calc($small - 1em);
+    width: -moz-calc($small - 1em);
     height: calc($small - 1em);
+    height: -webkit-calc($small - 1em);
+    height: -moz-calc($small - 1em);
     @include breakpoint($small) {
         width: calc($small - 1em);
+        width: -webkit-calc($small - 1em);
+        width: -moz-calc($small - 1em);
         height: calc($small - 1em);
+        height: -webkit-calc($small - 1em);
+        height: -moz-calc($small - 1em);
     }
     @include breakpoint($medium) {
         width: calc($medium / 2 - 1em);
+        width: -webkit-calc($medium / 2 - 1em);
+        width: -moz-calc($medium / 2 - 1em);
         height: calc($medium / 2 - 1em);
+        height: -webkit-calc($medium / 2 - 1em);
+        height: -moz-calc($medium / 2 - 1em);
     }
     @include breakpoint($medium-wide) {
         width: calc($medium-wide / 3 - 1em);
+        width: -webkit-calc($medium-wide / 3 - 1em);
+        width: -moz-calc($medium-wide / 3 - 1em);
         height: calc($medium-wide / 3 - 1em);
+        height: -webkit-calc($medium-wide / 3 - 1em);
+        height: -moz-calc($medium-wide / 3 - 1em);
     }
     @include breakpoint($large) {
         width: calc($large / 3 - 1em);
+        width: -webkit-calc($large / 3 - 1em);
+        width: -moz-calc($large / 3 - 1em);
         height: calc($large / 3 - 1em);
+        height: -webkit-calc($large / 3 - 1em);
+        height: -moz-calc($large / 3 - 1em);
     }
     @include breakpoint($x-large) {
         width: calc($x-large / 3 - 1em);
+        width: -webkit-calc($x-large / 3 - 1em);
+        width: -moz-calc($x-large / 3 - 1em);
         height: calc($x-large / 3 - 1em);
+        height: -webkit-calc($x-large / 3 - 1em);
+        height: -moz-calc($x-large / 3 - 1em);
     }
 }
 .home__section-card:hover .home__section-cover  {
