@@ -123,6 +123,7 @@
 }
 //--------------------------------------------------------------------
 .home__section {
+    border: blue 1px solid;
     width: 100%;
     position: relative;
     display: -webkit-box;
@@ -138,7 +139,7 @@
     padding: 3em 1em;
 }
 .home__section-info {
-    width: $small;
+    width: 90%;
     @include breakpoint($small) {
         width: $small;
     }
@@ -174,13 +175,14 @@
     display: -ms-flexbox;
     display: flex;
     flex-direction: row;
+    flex-wrap: wrap;
     -webkit-box-align: center;
     -ms-flex-align: center;
     align-items: center;
     -webkit-box-pack: justify;
     -ms-flex-pack: justify;
     justify-content: space-between;
-    width: $small;
+    width: 90%;
     @include breakpoint($small) {
         width: $small;
     }
@@ -199,29 +201,21 @@
     }
 }
 .home__section-card {
+    border: red 1px solid;
+    flex: auto;
     cursor: pointer;
     border-radius: 1em;
     overflow: hidden;
-    z-index: 10;
-    width: calc($small / 3 - 1em);
-    height: calc($small / 3 - 1em);
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    flex-direction: row;
-    -webkit-box-align: center;
-    -ms-flex-align: center;
-    align-items: center;
-    -webkit-box-pack: justify;
-    -ms-flex-pack: justify;
-    justify-content: space-between;
+    margin: 0.5em;
+    width: calc($small - 1em);
+    height: calc($small - 1em);
     @include breakpoint($small) {
-        width: calc($small / 3 - 1em);
-        height: calc($small / 3 - 1em);
+        width: calc($small - 1em);
+        height: calc($small - 1em);
     }
     @include breakpoint($medium) {
-        width: calc($medium / 3 - 1em);
-        height: calc($medium / 3 - 1em);
+        width: calc($medium / 2 - 1em);
+        height: calc($medium / 2 - 1em);
     }
     @include breakpoint($medium-wide) {
         width: calc($medium-wide / 3 - 1em);
@@ -248,8 +242,6 @@
     opacity: 0;
     border-radius: 1em;
     background: linear-gradient(to top, rgb(255, 166, 0), rgba(255, 166, 0, 0.8), transparent);
-    width: calc($small / 3 - 1em);
-    height: calc($small / 3 - 1em);
     transition: opacity .2s ease-in-out;
     display: -webkit-box;
     display: -ms-flexbox;
@@ -262,13 +254,15 @@
     -ms-flex-pack: justify;
     justify-content: center;
     padding-bottom: 2.5em;
+    width: calc($small - 1em);
+    height: calc($small - 1em);
     @include breakpoint($small) {
-        width: calc($small / 3 - 1em);
-        height: calc($small / 3 - 1em);
+        width: calc($small - 1em);
+        height: calc($small - 1em);
     }
     @include breakpoint($medium) {
-        width: calc($medium / 3 - 1em);
-        height: calc($medium / 3 - 1em);
+        width: calc($medium / 2 - 1em);
+        height: calc($medium / 2 - 1em);
     }
     @include breakpoint($medium-wide) {
         width: calc($medium-wide / 3 - 1em);
