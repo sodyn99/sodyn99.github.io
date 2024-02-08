@@ -15,7 +15,7 @@ var store = [{
     "excerpt":"최근 포스트                                               Introduction                                                                     March 26, 2023                                                                           최대 1 분 소요                                본 page는 Erik Dahlman 외 2인의 4G LTE/LTE-Advanced for Mobile Broadband를 바탕으로 작성됨.               ","url": "http://localhost:4000/blog/"
   },{
     "title": "Bluetooth",
-    "excerpt":"Bluetooth","url": "http://localhost:4000/bluetooth/"
+    "excerpt":"Bluetooth","url": "http://localhost:4000/projects/bluetooth/"
   },{
     "title": "Category",
     "excerpt":" ","url": "http://localhost:4000/categories/"
@@ -34,6 +34,9 @@ var store = [{
   },{
     "title": null,
     "excerpt":"var store = [ {%- for c in site.collections -%} {%- if forloop.last -%} {%- assign l = true -%} {%- endif -%} {%- assign docs = c.docs | where_exp:'doc','doc.search != false' -%} {%- for doc in docs -%} {%- if doc.header.teaser -%} {%- capture teaser -%}{{ doc.header.teaser }}{%- endcapture...","url": "http://localhost:4000/assets/js/lunr/lunr-store.js"
+  },{
+    "title": "Projects",
+    "excerpt":"                                   Bluetooth                                                            5G KPI                                                                        ","url": "http://localhost:4000/projects/"
   },{
     "title": "Search",
     "excerpt":"","url": "http://localhost:4000/search/"

@@ -1,0 +1,64 @@
+.page__head {
+    width: 100%;
+    position: relative;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    flex-direction: column;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
+    justify-content: center;
+    padding: 2em 1em;
+}
+.page__head-info {
+    width: 90%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    flex-direction: column;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
+    justify-content: center;
+    @include breakpoint($small) {
+        width: $small;
+    }
+    @include breakpoint($medium) {
+        width: $medium;
+    }
+    @include breakpoint($medium-wide) {
+        width: $medium-wide;
+    }
+    @include breakpoint($large) {
+        width: $large;
+    }
+    @include breakpoint($x-large) {
+        width: $x-large;
+        max-width: $max-width;
+    }
+}
+.page__head-title {
+    font-family: 'termina';
+    font-weight: 700;
+    font-size: 2em;
+}
+
+.page__section {
+    width: 100%;
+    position: relative;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    flex-direction: column;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
+    justify-content: center;
+}

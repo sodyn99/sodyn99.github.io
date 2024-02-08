@@ -99,6 +99,12 @@
   list-style-type: none;
   white-space: nowrap;
   font-weight: bold;
+  text-align: center;
+
+  .selected {
+    border-top: 3px solid orange;
+    margin-top: -3px;
+  }
 
   &--lg {
     padding-left: 2em;
