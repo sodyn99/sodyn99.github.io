@@ -93,7 +93,6 @@
     }
 }
 .hero__image {
-    border: 1px solid gray;
     border-radius: 4em;
     float: right;
     height: 400px;
@@ -202,16 +201,16 @@
         height: calc($medium / 2 - 20px);
     }
     @include breakpoint($medium-wide) {
-        width: calc($medium-wide / 3 - 20px);
-        height: calc($medium-wide / 3 - 20px);
+        width: calc($medium-wide / 3 - 21px);
+        height: calc($medium-wide / 3 - 21px);
     }
     @include breakpoint($large) {
-        width: calc($large / 3 - 20px);
-        height: calc($large / 3 - 20px);
+        width: calc($large / 3 - 21px);
+        height: calc($large / 3 - 21px);
     }
     @include breakpoint($x-large) {
-        width: calc($x-large / 3 - 20px);
-        height: calc($x-large / 3 - 20px);
+        width: calc($x-large / 3 - 21px);
+        height: calc($x-large / 3 - 21px);
     }
 }
 .home__section-image {
@@ -278,6 +277,7 @@
     justify-content: center;
     align-items: center;
     width: 90%;
+    max-width: $max-width;
     >h2 {
         color: $text-color;
         font-size: $type-size-1;
@@ -289,7 +289,7 @@
     }
     .contact-container {
         background-color: $box-color;
-        border-radius: 2em;
+        border-radius: 1.5em;
         display: flex;
         flex-direction: column;
         justify-content: center;
