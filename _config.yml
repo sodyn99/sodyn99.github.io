@@ -20,13 +20,13 @@ title                    : "SDIN"
 title_separator          : "|"
 subtitle                 : # site tagline that appears below site title in masthead
 name                     : "sdin.99"
-description              : "Welcome to my blog"
+description              : "Welcome to SDIN."
 url                      : "https://asungajinli.github.io"
 baseurl                  : "/"
 repository               : "asungajinli/asungajinli.github.io"
 teaser                   : # path of fallback teaser image, e.g. "/assets/images/500x300.png"
 logo                     : # "/assets/images/logo.png"
-masthead_title           : " "
+masthead_title           :
 breadcrumbs              : true
 words_per_minute         : 200
 comments:
@@ -105,7 +105,7 @@ analytics:
 # Site Author
 author:
   name             : "sdin.99"
-  avatar           : "/assets/images/account.jpg"
+  avatar           : "/assets/images/account.png"
   bio              : # "I am an **amazing** person."
   location         : "Somewhere"
   email            :

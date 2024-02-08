@@ -5,26 +5,26 @@
   Free for personal and commercial use under the MIT license
   https://github.com/mmistakes/minimal-mistakes/blob/master/LICENSE
 -->
-<html lang="en" class="no-js">
+<html lang="ko" class="no-js">
   <head>
     <meta charset="utf-8">
 
-<!-- begin _includes/seo.html --><title>Site Title</title>
-<meta name="description" content="An amazing website.">
+<!-- begin _includes/seo.html --><title>SDIN</title>
+<meta name="description" content="Welcome to SDIN.">
 
 
-  <meta name="author" content="Your Name">
+  <meta name="author" content="sdin.99">
   
 
 
 <meta property="og:type" content="website">
-<meta property="og:locale" content="en_US">
-<meta property="og:site_name" content="Site Title">
-<meta property="og:title" content="Site Title">
+<meta property="og:locale" content="ko_KR">
+<meta property="og:site_name" content="SDIN">
+<meta property="og:title" content="SDIN">
 <meta property="og:url" content="http://localhost:4000/">
 
 
-  <meta property="og:description" content="An amazing website.">
+  <meta property="og:description" content="Welcome to SDIN.">
 
 
 
@@ -51,7 +51,7 @@
     "@context": "https://schema.org",
     
       "@type": "Person",
-      "name": "Your Name",
+      "name": "sdin.99",
       "url": "http://localhost:4000/"
     
   }
@@ -62,12 +62,14 @@
 
 
 
+  <meta name="naver-site-verification" content="06acecf7fb0a1404baa3fe16f8edb02311e95984">
+
 
 <!-- end _includes/seo.html -->
 
 
 
-  <link href="/feed.xml" type="application/atom+xml" rel="alternate" title="Site Title Feed">
+  <link href="/feed.xml" type="application/atom+xml" rel="alternate" title="SDIN Feed">
 
 
 <!-- https://t.co/dKP3o1e -->
@@ -79,6 +81,9 @@
 
 <!-- For all browsers -->
 <link rel="stylesheet" href="/assets/css/main.css">
+<!-- 
+<link rel="stylesheet" href="/assets/css/main-dark.css">
+ -->
 <link rel="preload" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5/css/all.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
 <noscript><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5/css/all.min.css"></noscript>
 
@@ -87,6 +92,50 @@
     <!-- start custom head snippets -->
 
 <!-- insert favicons. use https://realfavicongenerator.net/ -->
+
+<link rel="apple-touch-icon" sizes="180x180" href="/assets/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/assets/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/assets/favicon-16x16.png">
+<link rel="manifest" href="/assets/site.webmanifest">
+<link rel="mask-icon" href="/assets/safari-pinned-tab.svg" color="#5bbad5">
+<meta name="msapplication-TileColor" content="#da532c">
+<meta name="theme-color" content="#f2f2f2">
+
+<!-- end custom head snippets -->
+
+<!-- custom -->
+<style>
+    .div1{
+        width: 20%;
+        float: left;
+    }
+    .div2{
+        width: 80%;
+        float: right;
+    }
+    .box {
+        background-color : #7F7F7F;
+        border-radius: 10px;
+        text-align: center
+    }
+</style>
+
+<!-- Adobe Fonts -->
+<script>
+(function(d) {
+    var config = {
+    kitId: 'hex0kuj',
+    scriptTimeout: 3000,
+    async: true
+    },
+    h=d.documentElement,t=setTimeout(function(){h.className=h.className.replace(/\bwf-loading\b/g,"")+" wf-inactive";},config.scriptTimeout),tk=d.createElement("script"),f=false,s=d.getElementsByTagName("script")[0],a;h.className+=" wf-loading";tk.src='https://use.typekit.net/'+config.kitId+'.js';tk.async=true;tk.onload=tk.onreadystatechange=function(){a=this.readyState;if(f||a&&a!="complete"&&a!="loaded")return;f=true;clearTimeout(t);try{Typekit.load(config)}catch(e){}};s.parentNode.insertBefore(tk,s)
+})(document);
+</script>
+
+<!-- Markmap -->
+<script src="https://cdn.jsdelivr.net/npm/d3@6.2.0"></script>
+<script src="https://cdn.jsdelivr.net/npm/markmap-view@0.14.5-alpha.13+50ca560"></script>
+<script src="https://cdn.jsdelivr.net/npm/markmap-toolbar@0.14.5-alpha.13+50ca560/dist/index.js"></script>
 
 <!-- end custom head snippets -->
 
@@ -109,15 +158,26 @@
       <nav id="site-nav" class="greedy-nav">
         
         <a class="site-title" href="/">
-          Site Title
+          SDIN
           
         </a>
         <ul class="visible-links"><li class="masthead__menu-item">
-              <a href="https://mmistakes.github.io/minimal-mistakes/docs/quick-start-guide/">Quick-Start Guide</a>
+              <a href="/">Home</a>
+            </li><li class="masthead__menu-item">
+              <a href="/projects/">Projects</a>
+            </li><li class="masthead__menu-item">
+              <a href="/blog/">Blog</a>
+            </li><li class="masthead__menu-item">
+              <a href="/about/">About</a>
             </li></ul>
         
+        <button class="search__toggle" type="button">
+          <span class="visually-hidden">Toggle search</span>
+          <i class="fas fa-search"></i>
+        </button>
+        
         <button class="greedy-nav__toggle hidden" type="button">
-          <span class="visually-hidden">Toggle menu</span>
+          <span class="visually-hidden">토글 메뉴</span>
           <div class="navicon"></div>
         </button>
         <ul class="hidden-links hidden"></ul>
@@ -128,143 +188,136 @@
 
 
     <div class="initial-content">
-      
+      <head>
+  <style>
+    body {
+        background: linear-gradient(45deg, #fcf8f1, transparent);
+    }
+  </style>
+</head>
 
-
-
-<div id="main" role="main">
-  
-  <div class="sidebar sticky">
-  
-
-
-<div itemscope itemtype="https://schema.org/Person" class="h-card">
-
-  
-
-  <div class="author__content">
-    <h3 class="author__name p-name" itemprop="name">
-      <a class="u-url" rel="me" href="http://localhost:4000/" itemprop="url">Your Name</a>
-    </h3>
-    
-      <div class="author__bio p-note" itemprop="description">
-        <p>I am an <strong>amazing</strong> person.</p>
-
+<div class="hero">
+  <div class="hero__inner">
+    <div class="hero__inner-left">
+      <div class="hero__title">
+        Hi there, I am Lee Sungjin
       </div>
-    
+      <p>
+        Student from South Korea.
+        I'm studying mobile communication at Kyunghee University.
+      </p>
+      <button type="submit" id="comment-form-submit" tabindex="5" class="btn btn--primary btn--small">Get In Touch</button>
+    </div>
+    <div class="hero__inner-right">
+      <div class="hero__image"></div>
+    </div>
   </div>
-
-  <div class="author__urls-wrapper">
-    <button class="btn btn--inverse">Follow</button>
-    <ul class="author__urls social-icons">
-      
-        <li itemprop="homeLocation" itemscope itemtype="https://schema.org/Place">
-          <i class="fas fa-fw fa-map-marker-alt" aria-hidden="true"></i> <span itemprop="name" class="p-locality">Somewhere</span>
-        </li>
-      
-
-      
-        
-          
-        
-          
-        
-          
-        
-          
-        
-          
-        
-          
-        
-      
-
-      
-
-      
-
-      
-
-      
-
-      
-
-      
-
-      
-
-      
-
-      
-
-      
-
-      
-
-      
-
-      
-
-      
-
-      
-
-      
-
-      
-
-      
-
-      
-
-      
-
-      
-
-      
-
-      
-
-      
-
-      <!--
-  <li>
-    <a href="http://link-to-whatever-social-network.com/user/" itemprop="sameAs" rel="nofollow noopener noreferrer me">
-      <i class="fas fa-fw" aria-hidden="true"></i> Custom Social Profile Link
-    </a>
-  </li>
--->
-    </ul>
+</div>
+<!-- -------------------------Section------------------------------ -->
+<div class="home__section study">
+  <div class="home__section-info">
+    <div class="home__section-head">
+      Latest Works
+      <div class="link" OnClick="location.href ='/projects/'">View all</div>
+    </div>
+    <p>
+      My works with my partners.
+    </p>
+  </div>
+  <div class="home__section-contents">
+    <div class="home__section-card" OnClick="location.href ='/bluetooth/'">
+      <div class="home__section-cover">
+        <div class="home__section-cover-head">
+          Bluetooth
+        </div>
+      </div>
+      <img class="home__section-image" src="/assets/images/home/bluetooth.jpeg"></img>
+    </div>
+    <div class="home__section-card">
+    </div>
+    <div class="home__section-card">
+    </div>
   </div>
 </div>
 
-  
-  </div>
+<!-- 
 
-
-
-  <div class="archive">
-    
-      <h1 id="page-title" class="page__title"></h1>
-    
-    
-
-<h3 class="archive__subtitle">Recent posts</h3>
+<h3 class="archive__subtitle">최근 포스트</h3>
 
 
 
 
 <div class="entries-list">
   
+    
+
+
+
+<div class="list__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+    <h2 class="archive__item-title no_toc" itemprop="headline">
+      
+        <a href="/study/mobile/4g_lte/1.1/" rel="permalink">Introduction
+</a>
+      
+    </h2>
+    
+
+  <p class="page__meta">
+    
+      
+      <span class="page__meta-date">
+        <i class="far fa-calendar-alt" aria-hidden="true"></i>
+        
+        <time datetime="2023-03-26T00:00:00+09:00">March 26, 2023</time>
+      </span>
+    
+
+    <span class="page__meta-sep"></span>
+
+    
+      
+      
+
+      <span class="page__meta-readtime">
+        <i class="far fa-clock" aria-hidden="true"></i>
+        
+          최대 1 분 소요
+        
+      </span>
+    
+  </p>
+
+
+    <p class="archive__item-excerpt" itemprop="description">본 page는 Erik Dahlman 외 2인의 4G LTE/LTE-Advanced for Mobile Broadband를 바탕으로 작성됨.
+
+</p>
+  </article>
+</div>
+
+  
 </div>
 
 
+ -->
 
 
-  </div>
-</div>
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script src="/assets/js/custom/dark-theme.js"></script>
     </div>
 
+    
+      <div class="search-content">
+        <div class="search-content__inner-wrap"><form class="search-content__form" onkeydown="return event.key != 'Enter';" role="search">
+    <label class="sr-only" for="search">
+      Enter your search term...
+    </label>
+    <input type="search" id="search" class="search-input" tabindex="-1" placeholder="검색어를 입력하세요..." />
+  </form>
+  <div id="results" class="results"></div></div>
+
+      </div>
     
 
     <div id="footer" class="page__footer">
@@ -275,7 +328,7 @@
         <div class="page__footer-follow">
   <ul class="social-icons">
     
-      <li><strong>Follow:</strong></li>
+      <li><strong>팔로우:</strong></li>
     
 
     
@@ -285,22 +338,34 @@
         
       
         
-      
+          <li><a href="https://github.com/asungajinli" rel="nofollow noopener noreferrer"><i class="fab fa-fw fa-github" aria-hidden="true"></i> GitHub</a></li>
         
       
         
       
+        
+      
+        
+          <li><a href="https://instagram.com/s_din.99" rel="nofollow noopener noreferrer"><i class="fab fa-fw fa-instagram" aria-hidden="true"></i> Instagram</a></li>
+        
+      
+        
+          <li><a href="https://www.linkedin.com/in/asungajinli" rel="nofollow noopener noreferrer"><i class="fab fa-fw fa-linkedin" aria-hidden="true"></i> Linkedin</a></li>
+        
+      
+        
+          <li><a href="mailto:ssjj3552@gmail.com" rel="nofollow noopener noreferrer"><i class="fas fa-fw fa-envelope-square" aria-hidden="true"></i> Email</a></li>
         
       
     
 
     
-      <li><a href="/feed.xml"><i class="fas fa-fw fa-rss-square" aria-hidden="true"></i> Feed</a></li>
+      <li><a href="/feed.xml"><i class="fas fa-fw fa-rss-square" aria-hidden="true"></i> 피드</a></li>
     
   </ul>
 </div>
 
-<div class="page__footer-copyright">&copy; 2024 Your Name. Powered by <a href="https://jekyllrb.com" rel="nofollow">Jekyll</a> &amp; <a href="https://mademistakes.com/work/minimal-mistakes-jekyll-theme/" rel="nofollow">Minimal Mistakes</a>.</div>
+<div class="page__footer-copyright">&copy; 2024 sdin.99. Powered by <a href="https://jekyllrb.com" rel="nofollow">Jekyll</a> &amp; <a href="https://mademistakes.com/work/minimal-mistakes-jekyll-theme/" rel="nofollow">Minimal Mistakes</a>.</div>
 
       </footer>
     </div>
@@ -311,11 +376,85 @@
 
 
 
+<script src="/assets/js/lunr/lunr.min.js"></script>
+<script src="/assets/js/lunr/lunr-store.js"></script>
+<script src="/assets/js/lunr/lunr-en.js"></script>
 
 
 
 
 
+  
+    <script src="/assets/js/custom/dark-theme.js"></script>
+  
+
+
+<!-- mathjax -->
+<script type="text/javascript" async
+	src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/latest.js?config=TeX-MML-AM_CHTML">
+</script>
+
+<script type="text/x-mathjax-config">
+   MathJax.Hub.Config({
+     extensions: ["tex2jax.js"],
+     jax: ["input/TeX", "output/HTML-CSS"],
+     tex2jax: {
+       inlineMath: [ ['$','$'], ["\\(","\\)"] ],
+       displayMath: [ ['$$','$$'], ["\\[","\\]"] ],
+       processEscapes: true
+     },
+     "HTML-CSS": { availableFonts: ["TeX"] }
+   });
+</script>
+
+<!-- image drag, select ban -->
+<script>
+  const images = document.querySelectorAll('img');
+  images.forEach(image => {
+    image.addEventListener('contextmenu', event => {
+      event.preventDefault();
+    });
+    image.addEventListener('dragstart', event => {
+      event.preventDefault();
+    });
+  });
+  </script>
+<!-- kakaotalk sharing -->
+<script src="https://t1.kakaocdn.net/kakao_js_sdk/2.1.0/kakao.min.js" integrity="sha384-dpu02ieKC6NUeKFoGMOKz6102CLEWi9+5RQjWSV0ikYSFFd8M3Wp2reIcquJOemx" crossorigin="anonymous"></script>
+<script>
+  Kakao.init('c7061823133572c4f528e1e0725a59cc'); // 사용하려는 앱의 JavaScript 키 입력
+  function shareMessage() {
+    Kakao.Share.sendCustom({
+      templateId: 94266,
+      templateArgs: {
+        title: "",
+        url : "/",
+      },
+    });
+  }
+</script>
+
+<!-- 404.html -->
+<script>
+  var pageX = $(document).width();
+  var pageY = $(document).height();
+  var mouseY=0;
+  var mouseX=0;
+
+  $(document).mousemove(function( event ) {
+  //verticalAxis
+  mouseY = event.pageY;
+  yAxis = (pageY-mouseY)/pageY*200;
+  //horizontalAxis
+  mouseX = event.pageX / -pageX;
+  xAxis = -mouseX * 100 - 100;
+
+  $('.box__ghost-eyes').css({ 'transform': 'translate('+ xAxis +'%,-'+ yAxis +'%)' });
+
+  //console.log('X: ' + xAxis);
+
+  });
+</script>
 
   </body>
 </html>

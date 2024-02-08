@@ -1,8 +1,59 @@
 ---
-layout: archive
+layout: default
 ---
+<head>
+  <style>
+    body {
+        background: linear-gradient(45deg, #fcf8f1, transparent);
+    }
+  </style>
+</head>
 
-{{ content }}
+<div class="hero">
+  <div class="hero__inner">
+    <div class="hero__inner-left">
+      <div class="hero__title">
+        Hi there, I am Lee Sungjin
+      </div>
+      <p>
+        Student from South Korea.
+        I'm studying mobile communication at Kyunghee University.
+      </p>
+      <button type="submit" id="comment-form-submit" tabindex="5" class="btn btn--primary btn--small">Get In Touch</button>
+    </div>
+    <div class="hero__inner-right">
+      <div class="hero__image"></div>
+    </div>
+  </div>
+</div>
+<!-- -------------------------Section------------------------------ -->
+<div class="home__section study">
+  <div class="home__section-info">
+    <div class="home__section-head">
+      Latest Works
+      <div class="link" OnClick="location.href ='/projects/'">View all</div>
+    </div>
+    <p>
+      My works with my partners.
+    </p>
+  </div>
+  <div class="home__section-contents">
+    <div class="home__section-card" OnClick="location.href ='/bluetooth/'">
+      <div class="home__section-cover">
+        <div class="home__section-cover-head">
+          Bluetooth
+        </div>
+      </div>
+      <img class="home__section-image" src="/assets/images/home/bluetooth.jpeg"></img>
+    </div>
+    <div class="home__section-card">
+    </div>
+    <div class="home__section-card">
+    </div>
+  </div>
+</div>
+
+<!-- {{ content }}
 
 <h3 class="archive__subtitle">{{ site.data.ui-text[site.locale].recent_posts | default: "Recent Posts" }}</h3>
 
@@ -19,4 +70,8 @@ layout: archive
   {% endfor %}
 </div>
 
-{% include paginator.html %}
+{% include paginator.html %} -->
+
+
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script src="/assets/js/custom/dark-theme.js"></script>

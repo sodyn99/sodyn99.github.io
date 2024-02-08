@@ -1,0 +1,294 @@
+.hero {
+    position: relative;
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
+    justify-content: center;
+    height: 600px;
+
+    @include breakpoint($small) {
+    }
+    @include breakpoint($medium) {
+    }
+    @include breakpoint($medium-wide) {
+    }
+    @include breakpoint($large) {
+        height: 700px;
+    }
+    @include breakpoint($x-large) {
+        height: 700px;
+    }
+}
+.hero__inner {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    flex-direction: column;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    height: 400px;
+    @include breakpoint($small) {
+        height: 400px;
+        width: $small;
+    }
+    @include breakpoint($medium) {
+        flex-direction: row;
+        width: $medium;
+    }
+    @include breakpoint($medium-wide) {
+        width: $medium-wide;
+    }
+    @include breakpoint($large) {
+        height: 500px;
+        width: $large;
+    }
+    @include breakpoint($x-large) {
+        height: 500px;
+        width: $x-large;
+        max-width: $max-width;
+    }
+}
+.hero__inner-left {
+    width: 90%;
+    @include breakpoint($medium) {
+        width: 50%;
+    }
+    >p {
+        max-width: 25em;
+    }
+}
+.hero__inner-right {
+    width: 90%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
+    justify-content: center;
+    @include breakpoint($medium) {
+        width: 50%;
+    }
+}
+.hero__title {
+    font-family: 'termina';
+    font-weight: 700;
+    font-size: 2em;
+    @include breakpoint($small) {
+    }
+    @include breakpoint($medium) {
+    }
+    @include breakpoint($medium-wide) {
+    }
+    @include breakpoint($large) {
+        font-size: 2.5em;
+    }
+    @include breakpoint($x-large) {
+        max-width: 10em;
+    }
+}
+.hero__image {
+    border: 1px solid gray;
+    border-radius: 4em;
+    float: right;
+    height: 300px;
+    width: 300px;
+    @include breakpoint($small) {
+        height: 300px;
+        width: 300px;
+    }
+    @include breakpoint($medium) {
+    }
+    @include breakpoint($medium-wide) {
+        height: 400px;
+        width: 400px;
+    }
+    @include breakpoint($large) {
+        height: 500px;
+        width: 500px;
+    }
+    @include breakpoint($x-large) {
+    }
+}
+//--------------------------------------------------------------------
+.home__section {
+    width: 100%;
+    position: relative;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    flex-direction: column;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
+    justify-content: center;
+    padding: 3em 1em;
+}
+.home__section-info {
+    width: $small;
+    @include breakpoint($small) {
+        width: $small;
+    }
+    @include breakpoint($medium) {
+        width: $medium;
+    }
+    @include breakpoint($medium-wide) {
+        width: $medium-wide;
+    }
+    @include breakpoint($large) {
+        width: $large;
+    }
+    @include breakpoint($x-large) {
+        width: $x-large;
+        max-width: $max-width;
+    }
+}
+.home__section-head {
+    font-family: 'termina';
+    font-weight: 700;
+    font-size: 1.5em;
+    .link {
+        cursor: pointer;
+        font-family: $sans-serif;
+        font-weight: 200;
+        font-size: 0.5em;
+        float: right;
+    }
+}
+.home__section-contents {
+    padding-top: 2em;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    flex-direction: row;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+    width: $small;
+    @include breakpoint($small) {
+        width: $small;
+    }
+    @include breakpoint($medium) {
+        width: $medium;
+    }
+    @include breakpoint($medium-wide) {
+        width: $medium-wide;
+    }
+    @include breakpoint($large) {
+        width: $large;
+    }
+    @include breakpoint($x-large) {
+        width: $x-large;
+        max-width: $max-width;
+    }
+}
+.home__section-card {
+    cursor: pointer;
+    border-radius: 1em;
+    overflow: hidden;
+    z-index: 10;
+    width: calc($small / 3 - 1em);
+    height: calc($small / 3 - 1em);
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    flex-direction: row;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+    @include breakpoint($small) {
+        width: calc($small / 3 - 1em);
+        height: calc($small / 3 - 1em);
+    }
+    @include breakpoint($medium) {
+        width: calc($medium / 3 - 1em);
+        height: calc($medium / 3 - 1em);
+    }
+    @include breakpoint($medium-wide) {
+        width: calc($medium-wide / 3 - 1em);
+        height: calc($medium-wide / 3 - 1em);
+    }
+    @include breakpoint($large) {
+        width: calc($large / 3 - 1em);
+        height: calc($large / 3 - 1em);
+    }
+    @include breakpoint($x-large) {
+        width: calc($x-large / 3 - 1em);
+        height: calc($x-large / 3 - 1em);
+    }
+}
+.home__section-image {
+    transition: all 0.2s;
+    width: 100%;
+    height: 100%;
+    z-index: -5;
+    object-fit: cover;
+}
+.home__section-cover {
+    position: absolute;
+    opacity: 0;
+    border-radius: 1em;
+    background: linear-gradient(to top, rgb(255, 166, 0), rgba(255, 166, 0, 0.8), transparent);
+    width: calc($small / 3 - 1em);
+    height: calc($small / 3 - 1em);
+    transition: opacity .2s ease-in-out;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    flex-direction: row;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: end;
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
+    justify-content: center;
+    padding-bottom: 2.5em;
+    @include breakpoint($small) {
+        width: calc($small / 3 - 1em);
+        height: calc($small / 3 - 1em);
+    }
+    @include breakpoint($medium) {
+        width: calc($medium / 3 - 1em);
+        height: calc($medium / 3 - 1em);
+    }
+    @include breakpoint($medium-wide) {
+        width: calc($medium-wide / 3 - 1em);
+        height: calc($medium-wide / 3 - 1em);
+    }
+    @include breakpoint($large) {
+        width: calc($large / 3 - 1em);
+        height: calc($large / 3 - 1em);
+    }
+    @include breakpoint($x-large) {
+        width: calc($x-large / 3 - 1em);
+        height: calc($x-large / 3 - 1em);
+    }
+}
+.home__section-card:hover .home__section-cover  {
+    opacity: 1;
+}
+.home__section-cover-head {
+    font-family: 'termina';
+    color: #fff;
+    font-size: 1.5em;
+    font-weight: 700;
+}

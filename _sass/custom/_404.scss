@@ -1,0 +1,16 @@
+.notFound-container {
+  margin-left: auto;
+  margin-right: auto;
+  padding: 2em;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  flex-direction: column;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.notFound-404 {
+  font-size: 5em;
+}
