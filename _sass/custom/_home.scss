@@ -147,9 +147,12 @@
     .link {
         cursor: pointer;
         font-family: $sans-serif;
-        font-weight: 200;
+        font-weight: 500;
         font-size: 0.5em;
         float: right;
+        >i {
+            margin-left: 0.5em;
+        }
     }
 }
 .home__section-contents {
