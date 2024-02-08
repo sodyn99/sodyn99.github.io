@@ -193,24 +193,24 @@
     width: 450px;
     height: 450px;
     @include breakpoint($small) {
-        width: calc(var($small) - 20px);
-        height: calc(var($small) - 20px);
+        width: calc(600px - 20px);
+        height: calc(600px - 20px);
     }
     @include breakpoint($medium) {
-        width: calc(var($medium) / 2 - 20px);
-        height: calc(var($medium) / 2 - 20px);
+        width: calc(768px / 2 - 20px);
+        height: calc(768px / 2 - 20px);
     }
     @include breakpoint($medium-wide) {
-        width: calc(var($medium-wide) / 3 - 20px);
-        height: calc(var($medium-wide) / 3 - 20px);
+        width: calc(900px / 3 - 20px);
+        height: calc(900px / 3 - 20px);
     }
     @include breakpoint($large) {
-        width: calc(var($large) / 3 - 20px);
-        height: calc(var($large) / 3 - 20px);
+        width: calc(1024px / 3 - 20px);
+        height: calc(1024px / 3 - 20px);
     }
     @include breakpoint($x-large) {
-        width: calc(var($x-large) / 3 - 20px);
-        height: calc(var($x-large) / 3 - 20px);
+        width: calc(1280px / 3 - 20px);
+        height: calc(1280px / 3 - 20px);
     }
 }
 .home__section-image {
@@ -240,24 +240,24 @@
     width: 450px;
     height: 450px;
     @include breakpoint($small) {
-        width: calc(var($small) - 20px);
-        height: calc(var($small) - 20px);
+        width: calc(600px - 20px);
+        height: calc(600px - 20px);
     }
     @include breakpoint($medium) {
-        width: calc(var($medium) / 2 - 20px);
-        height: calc(var($medium) / 2 - 20px);
+        width: calc(768px / 2 - 20px);
+        height: calc(768px / 2 - 20px);
     }
     @include breakpoint($medium-wide) {
-        width: calc(var($medium-wide) / 3 - 20px);
-        height: calc(var($medium-wide) / 3 - 20px);
+        width: calc(900px / 3 - 20px);
+        height: calc(900px / 3 - 20px);
     }
     @include breakpoint($large) {
-        width: calc(var($large) / 3 - 20px);
-        height: calc(var($large) / 3 - 20px);
+        width: calc(1024px / 3 - 20px);
+        height: calc(1024px / 3 - 20px);
     }
     @include breakpoint($x-large) {
-        width: calc(var($x-large) / 3 - 20px);
-        height: calc(var($x-large) / 3 - 20px);
+        width: calc(1280px / 3 - 20px);
+        height: calc(1280px / 3 - 20px);
     }
 }
 .home__section-card:hover .home__section-cover  {
