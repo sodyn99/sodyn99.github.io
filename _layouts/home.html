@@ -2,16 +2,6 @@
 layout: default
 search: false
 ---
-<head>
-  <style>
-    body {
-        background: linear-gradient(45deg, #fcf8f1, transparent);
-    }
-  </style>
-</head>
-<script>
-  console.log(site.search)
-</script>
 <div class="hero">
   <div class="hero__inner">
     <div class="hero__inner-left">
@@ -49,19 +39,24 @@ search: false
       </div>
       <img class="home__section-image" src="/assets/images/home/bluetooth.jpeg"></img>
     </div>
-    <div class="home__section-card">
+    <div class="home__section-card" OnClick="location.href ='/'">
+      <div class="home__section-cover">
+        <div class="home__section-cover-head">
+          5G KPI
+        </div>
+      </div>
+      <img class="home__section-image" src="/assets/images/home/KPI.jpeg"></img>
     </div>
-    <div class="home__section-card">
+    <div class="home__section-card" OnClick="location.href ='/'">
     </div>
-    <div class="home__section-card">
+    <div class="home__section-card" OnClick="location.href ='/'">
     </div>
-    <div class="home__section-card">
+    <div class="home__section-card" OnClick="location.href ='/'">
     </div>
-    <div class="home__section-card">
+    <div class="home__section-card" OnClick="location.href ='/'">
     </div>
   </div>
 </div>
-
 
 <div class="home__section blog">
   <div class="home__section-info">
@@ -98,25 +93,6 @@ search: false
     </div>
   </div>
 </div>
-
-<!-- {{ content }}
-
-<h3 class="archive__subtitle">{{ site.data.ui-text[site.locale].recent_posts | default: "Recent Posts" }}</h3>
-
-{% if paginator %}
-  {% assign posts = paginator.posts %}
-{% else %}
-  {% assign posts = site.posts %}
-{% endif %}
-
-{% assign entries_layout = page.entries_layout | default: 'list' %}
-<div class="entries-{{ entries_layout }}">
-  {% for post in posts %}
-    {% include archive-single.html type=entries_layout %}
-  {% endfor %}
-</div>
-
-{% include paginator.html %} -->
 
 
 <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>

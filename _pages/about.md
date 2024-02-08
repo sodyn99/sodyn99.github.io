@@ -6,13 +6,6 @@ author_profile: false
 sidebar:
   nav: home
 ---
-<head>
-  <style>
-    body {
-        background: linear-gradient(45deg, #fcf8f1, transparent);
-    }
-  </style>
-</head>
 <br><br>
 <p><div style="border:#aaa 1px solid;border-radius:50%;overflow:hidden;width:10%;height:auto;">
   <img src="/assets/images/account.png" width="100%" style="user-select:none;-webkit-user-drag:none;">
