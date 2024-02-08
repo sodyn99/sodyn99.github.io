@@ -13,18 +13,8 @@
     -ms-flex-pack: justify;
     justify-content: center;
     height: 600px;
-
-    @include breakpoint($small) {
-    }
     @include breakpoint($medium) {
-    }
-    @include breakpoint($medium-wide) {
-    }
-    @include breakpoint($large) {
-        height: 700px;
-    }
-    @include breakpoint($x-large) {
-        height: 700px;
+        height: 500px;
     }
 }
 .hero__inner {
@@ -35,9 +25,9 @@
     -webkit-box-align: center;
     -ms-flex-align: center;
     align-items: center;
-    height: 400px;
+    justify-content: center;
+    height: inherit;
     @include breakpoint($small) {
-        height: 400px;
         width: $small;
     }
     @include breakpoint($medium) {
@@ -48,37 +38,22 @@
         width: $medium-wide;
     }
     @include breakpoint($large) {
-        height: 500px;
         width: $large;
     }
     @include breakpoint($x-large) {
-        height: 500px;
         width: $x-large;
         max-width: $max-width;
     }
 }
 .hero__inner-left {
+    order: 2;
     width: 90%;
     @include breakpoint($medium) {
+        order: 1;
         width: 50%;
     }
     >p {
         max-width: 25em;
-    }
-}
-.hero__inner-right {
-    width: 90%;
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-align: center;
-    -ms-flex-align: center;
-    align-items: center;
-    -webkit-box-pack: justify;
-    -ms-flex-pack: justify;
-    justify-content: center;
-    @include breakpoint($medium) {
-        width: 50%;
     }
 }
 .hero__title {
@@ -98,27 +73,38 @@
         max-width: 10em;
     }
 }
+.hero__inner-right {
+    order: 1;
+    width: 90%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
+    justify-content: center;
+    margin-bottom: 1em;
+    @include breakpoint($medium) {
+        order: 2;
+        width: 50%;
+        margin-bottom: 0em;
+    }
+}
 .hero__image {
     border: 1px solid gray;
     border-radius: 4em;
     float: right;
-    height: 300px;
-    width: 300px;
-    @include breakpoint($small) {
-        height: 300px;
-        width: 300px;
-    }
+    height: 400px;
+    width: 500px;
     @include breakpoint($medium) {
-    }
-    @include breakpoint($medium-wide) {
         height: 400px;
         width: 400px;
     }
     @include breakpoint($large) {
         height: 500px;
         width: 500px;
-    }
-    @include breakpoint($x-large) {
     }
 }
 //--------------------------------------------------------------------
@@ -181,7 +167,7 @@
     -webkit-box-pack: justify;
     -ms-flex-pack: justify;
     justify-content: space-between;
-    width: 90%;
+    width: 450px;
     @include breakpoint($small) {
         width: $small;
     }
@@ -204,52 +190,28 @@
     cursor: pointer;
     border-radius: 1em;
     overflow: hidden;
-    margin: 0.5em;
-    width: calc($small - 1em);
-    width: -webkit-calc($small - 1em);
-    width: -moz-calc($small - 1em);
-    height: calc($small - 1em);
-    height: -webkit-calc($small - 1em);
-    height: -moz-calc($small - 1em);
+    margin: 10px;
+    width: 450px;
+    height: 450px;
     @include breakpoint($small) {
-        width: calc($small - 1em);
-        width: -webkit-calc($small - 1em);
-        width: -moz-calc($small - 1em);
-        height: calc($small - 1em);
-        height: -webkit-calc($small - 1em);
-        height: -moz-calc($small - 1em);
+        width: calc($small - 20px);
+        height: calc($small - 20px);
     }
     @include breakpoint($medium) {
-        width: calc($medium / 2 - 1em);
-        width: -webkit-calc($medium / 2 - 1em);
-        width: -moz-calc($medium / 2 - 1em);
-        height: calc($medium / 2 - 1em);
-        height: -webkit-calc($medium / 2 - 1em);
-        height: -moz-calc($medium / 2 - 1em);
+        width: calc($medium / 2 - 20px);
+        height: calc($medium / 2 - 20px);
     }
     @include breakpoint($medium-wide) {
-        width: calc($medium-wide / 3 - 1em);
-        width: -webkit-calc($medium-wide / 3 - 1em);
-        width: -moz-calc($medium-wide / 3 - 1em);
-        height: calc($medium-wide / 3 - 1em);
-        height: -webkit-calc($medium-wide / 3 - 1em);
-        height: -moz-calc($medium-wide / 3 - 1em);
+        width: calc($medium-wide / 3 - 20px);
+        height: calc($medium-wide / 3 - 20px);
     }
     @include breakpoint($large) {
-        width: calc($large / 3 - 1em);
-        width: -webkit-calc($large / 3 - 1em);
-        width: -moz-calc($large / 3 - 1em);
-        height: calc($large / 3 - 1em);
-        height: -webkit-calc($large / 3 - 1em);
-        height: -moz-calc($large / 3 - 1em);
+        width: calc($large / 3 - 20px);
+        height: calc($large / 3 - 20px);
     }
     @include breakpoint($x-large) {
-        width: calc($x-large / 3 - 1em);
-        width: -webkit-calc($x-large / 3 - 1em);
-        width: -moz-calc($x-large / 3 - 1em);
-        height: calc($x-large / 3 - 1em);
-        height: -webkit-calc($x-large / 3 - 1em);
-        height: -moz-calc($x-large / 3 - 1em);
+        width: calc($x-large / 3 - 20px);
+        height: calc($x-large / 3 - 20px);
     }
 }
 .home__section-image {
@@ -276,51 +238,27 @@
     -ms-flex-pack: justify;
     justify-content: center;
     padding-bottom: 2.5em;
-    width: calc($small - 1em);
-    width: -webkit-calc($small - 1em);
-    width: -moz-calc($small - 1em);
-    height: calc($small - 1em);
-    height: -webkit-calc($small - 1em);
-    height: -moz-calc($small - 1em);
+    width: 450px;
+    height: 450px;
     @include breakpoint($small) {
-        width: calc($small - 1em);
-        width: -webkit-calc($small - 1em);
-        width: -moz-calc($small - 1em);
-        height: calc($small - 1em);
-        height: -webkit-calc($small - 1em);
-        height: -moz-calc($small - 1em);
+        width: calc($small - 20px);
+        height: calc($small - 20px);
     }
     @include breakpoint($medium) {
-        width: calc($medium / 2 - 1em);
-        width: -webkit-calc($medium / 2 - 1em);
-        width: -moz-calc($medium / 2 - 1em);
-        height: calc($medium / 2 - 1em);
-        height: -webkit-calc($medium / 2 - 1em);
-        height: -moz-calc($medium / 2 - 1em);
+        width: calc($medium / 2 - 20px);
+        height: calc($medium / 2 - 20px);
     }
     @include breakpoint($medium-wide) {
-        width: calc($medium-wide / 3 - 1em);
-        width: -webkit-calc($medium-wide / 3 - 1em);
-        width: -moz-calc($medium-wide / 3 - 1em);
-        height: calc($medium-wide / 3 - 1em);
-        height: -webkit-calc($medium-wide / 3 - 1em);
-        height: -moz-calc($medium-wide / 3 - 1em);
+        width: calc($medium-wide / 3 - 20px);
+        height: calc($medium-wide / 3 - 20px);
     }
     @include breakpoint($large) {
-        width: calc($large / 3 - 1em);
-        width: -webkit-calc($large / 3 - 1em);
-        width: -moz-calc($large / 3 - 1em);
-        height: calc($large / 3 - 1em);
-        height: -webkit-calc($large / 3 - 1em);
-        height: -moz-calc($large / 3 - 1em);
+        width: calc($large / 3 - 20px);
+        height: calc($large / 3 - 20px);
     }
     @include breakpoint($x-large) {
-        width: calc($x-large / 3 - 1em);
-        width: -webkit-calc($x-large / 3 - 1em);
-        width: -moz-calc($x-large / 3 - 1em);
-        height: calc($x-large / 3 - 1em);
-        height: -webkit-calc($x-large / 3 - 1em);
-        height: -moz-calc($x-large / 3 - 1em);
+        width: calc($x-large / 3 - 20px);
+        height: calc($x-large / 3 - 20px);
     }
 }
 .home__section-card:hover .home__section-cover  {
