@@ -8,9 +8,12 @@ layout: default
             {% if page.title %}{{page.title}}{% endif %}
         </div>
         <p>
-            My works with partners.
+            {{page.description}}
         </p>
     </div>
 </div>
 
-{{ content }}
+
+<div class="page__section">
+    {{ content }}
+</div>

@@ -151,6 +151,7 @@
     <style>
       body {
           background: linear-gradient(45deg, #fcf8f1, transparent);
+          overflow-x: hidden;
       }
     </style>
   </head>
@@ -177,6 +178,8 @@
         </a>
         <ul class="visible-links"><li class="masthead__menu-item">
               <a href="/"  class="selected"  >Home</a>
+            </li><li class="masthead__menu-item">
+              <a href="/study/"  >Study</a>
             </li><li class="masthead__menu-item">
               <a href="/projects/"  >Projects</a>
             </li><li class="masthead__menu-item">
@@ -218,10 +221,49 @@
   </div>
 </div>
 <!--------------------------- Section -------------------------------->
+<div class="home__section study">
+  <div class="home__section-info">
+    <div class="home__section-head">
+      Study
+      <div class="link" OnClick="location.href ='/study/'">More<i class="fas fa-arrow-circle-right"></i></div>
+    </div>
+    <p>
+      My personal studies.
+    </p>
+  </div>
+  <div class="home__section-contents">
+    <div class="home__section-card" OnClick="location.href ='/study/communication/'">
+      <div class="home__section-cover">
+        <div class="home__section-cover-head">
+          Communication
+        </div>
+      </div>
+      <img class="home__section-image" src="/assets/images/home/antenna.jpg"></img>
+    </div>
+    <div class="home__section-card" OnClick="location.href ='/study/paper_review/'">
+      <div class="home__section-cover">
+        <div class="home__section-cover-head">
+          Paper Review
+        </div>
+      </div>
+      <img class="home__section-image" src="/assets/images/home/paper.jpg"></img>
+    </div>
+    <div class="home__section-card" OnClick="location.href ='/'">
+    </div>
+    <div class="home__section-card" OnClick="location.href ='/'">
+    </div>
+    <div class="home__section-card" OnClick="location.href ='/'">
+    </div>
+    <div class="home__section-card" OnClick="location.href ='/'">
+    </div>
+  </div>
+</div>
+
+
 <div class="home__section projects">
   <div class="home__section-info">
     <div class="home__section-head">
-      Latest Works
+      Projects
       <div class="link" OnClick="location.href ='/projects/'">More<i class="fas fa-arrow-circle-right"></i></div>
     </div>
     <p>

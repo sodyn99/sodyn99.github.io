@@ -17,6 +17,9 @@ var store = [{
     "title": "Category",
     "excerpt":" ","url": "http://localhost:4000/categories/"
   },{
+    "title": "Communication",
+    "excerpt":"","url": "http://localhost:4000/study/communication/"
+  },{
     "title": "Copyright Attribution",
     "excerpt":"Powered by Jekyll &amp; Minimal Mistakes. Source & License Logo Logo: 3D monstera plant with holes in its leaves by Icons 8 Source/License: Illustration by Icons 8 from Ouch! Fonts Font: Suit by Sunn Source/License: SIL Open Font License v1.1 Font: Roboto by Christian Robertson Source/License: Google Fonts Attribution Font:...","url": "http://localhost:4000/copyright/"
   },{
@@ -32,11 +35,20 @@ var store = [{
     "title": null,
     "excerpt":"var store = [ {%- for c in site.collections -%} {%- if forloop.last -%} {%- assign l = true -%} {%- endif -%} {%- assign docs = c.docs | where_exp:'doc','doc.search != false' -%} {%- for doc in docs -%} {%- if doc.header.teaser -%} {%- capture teaser -%}{{ doc.header.teaser }}{%- endcapture...","url": "http://localhost:4000/assets/js/lunr/lunr-store.js"
   },{
+    "title": "Optimization",
+    "excerpt":"","url": "http://localhost:4000/study/communication/optimization/"
+  },{
+    "title": "Paper Review",
+    "excerpt":"","url": "http://localhost:4000/study/paper_review/"
+  },{
     "title": "Projects",
     "excerpt":"                                   Bluetooth                                                            5G KPI                                                                        ","url": "http://localhost:4000/projects/"
   },{
     "title": "Search",
     "excerpt":"","url": "http://localhost:4000/search/"
+  },{
+    "title": "Study",
+    "excerpt":"","url": "http://localhost:4000/study/"
   },{
     "title": "Tag",
     "excerpt":"","url": "http://localhost:4000/tags/"
