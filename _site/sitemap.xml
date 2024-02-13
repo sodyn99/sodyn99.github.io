@@ -1,8 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9 http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd" xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 <url>
-<loc>http://localhost:4000/study/mobile/4g_lte/1.1/</loc>
-<lastmod>2023-03-26T00:00:00+09:00</lastmod>
+<loc>http://localhost:4000/Building-Flexible,-Low-Cost-Wireless-Access-Networks-With-Magma/</loc>
+<lastmod>2024-02-13T00:00:00+09:00</lastmod>
+</url>
+<url>
+<loc>http://localhost:4000/Private-Cellular-Network-Deployment-Comparison-of-OpenAirInterface-with-Magma-Core/</loc>
+<lastmod>2024-02-13T00:00:00+09:00</lastmod>
 </url>
 <url>
 <loc>http://localhost:4000/about/</loc>
@@ -24,6 +28,9 @@
 </url>
 <url>
 <loc>http://localhost:4000/</loc>
+</url>
+<url>
+<loc>http://localhost:4000/projects/bluetooth/multiple_connection/</loc>
 </url>
 <url>
 <loc>http://localhost:4000/study/communication/optimization/</loc>

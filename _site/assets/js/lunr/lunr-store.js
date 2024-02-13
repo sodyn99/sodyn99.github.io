@@ -1,18 +1,24 @@
 var store = [{
-        "title": "Introduction",
-        "excerpt":"본 page는 Erik Dahlman 외 2인의 4G LTE/LTE-Advanced for Mobile Broadband를 바탕으로 작성됨.       ","categories": ["Study","Mobile","4G_LTE"],
-        "tags": ["4G"],
-        "url": "/study/mobile/4g_lte/1.1/",
+        "title": "Building Flexible, Low-Cost Wireless Access Networks With Magma",
+        "excerpt":" ","categories": [],
+        "tags": [],
+        "url": "/Building-Flexible,-Low-Cost-Wireless-Access-Networks-With-Magma/",
+        "teaser": null
+      },{
+        "title": "Private cellular network deployment comparison of openairinterface with magma core",
+        "excerpt":" ","categories": [],
+        "tags": [],
+        "url": "/Private-Cellular-Network-Deployment-Comparison-of-OpenAirInterface-with-Magma-Core/",
         "teaser": null
       },{
     "title": "About",
     "excerpt":"아성가진리 Asungajinli About Me 👤 이성진 🏫 경희대학교 📝 전자공학과 🎓 4학년 💼 학생입니다. 👤 LEE SUNGJIN 🏫 Kyunghee University 📝 Electronic Engineering 🎓 Senior 💼 Student. 🌐 Contact Me             About Blog 🅰️ Font SUIT 🎨 Color ■ &nbsp;#1C192B&nbsp;&nbsp;|&nbsp;&nbsp;Text ■ &nbsp;#24A091&nbsp;&nbsp;|&nbsp;&nbsp;Green ■ &nbsp;#D1F951&nbsp;&nbsp;|&nbsp;&nbsp;Yellow ■ &nbsp;#F0383B&nbsp;&nbsp;|&nbsp;&nbsp;Red ■ &nbsp;#6454ED&nbsp;&nbsp;|&nbsp;&nbsp;Blue Copyright Copyright...","url": "http://localhost:4000/about/"
   },{
     "title": "Blog",
-    "excerpt":"최근 포스트                                               Introduction                                                                     March 26, 2023                                                                           최대 1 분 소요                                본 page는 Erik Dahlman 외 2인의 4G LTE/LTE-Advanced for Mobile Broadband를 바탕으로 작성됨.               ","url": "http://localhost:4000/blog/"
+    "excerpt":"","url": "http://localhost:4000/blog/"
   },{
     "title": "Bluetooth",
-    "excerpt":"Bluetooth","url": "http://localhost:4000/projects/bluetooth/"
+    "excerpt":"                                    Bluetooth 역사                                        Bluetooth 세대별 특징                                                   Version 1                     Version 2                     Version 3                     Version 4                     Version 5                                                                      Bluetooth 관련 법규                                                   한국                     유럽                     미국                     중국                     일본                                                                      Bluetooth 다중 연결                        ","url": "http://localhost:4000/projects/bluetooth/"
   },{
     "title": "Category",
     "excerpt":" ","url": "http://localhost:4000/categories/"
@@ -34,6 +40,9 @@ var store = [{
   },{
     "title": null,
     "excerpt":"var store = [ {%- for c in site.collections -%} {%- if forloop.last -%} {%- assign l = true -%} {%- endif -%} {%- assign docs = c.docs | where_exp:'doc','doc.search != false' -%} {%- for doc in docs -%} {%- if doc.header.teaser -%} {%- capture teaser -%}{{ doc.header.teaser }}{%- endcapture...","url": "http://localhost:4000/assets/js/lunr/lunr-store.js"
+  },{
+    "title": "Bluetooth Multiple Connection",
+    "excerpt":"블루투스 기기 여러 대를 동시에 연결할 수 있을까? 블루투스를 일상생활에서 항상 활용하는 나도 매번 헷갈려하는 문제다. 여러 대를 동시에 연결한다는 것은 point-to-point, 즉 일대일 연결을 말하는 것이다. Broadcast 방식의 단방향 전송은 해당하지 않는다. 기본적으로 여러 기기를 **동시**에 연결하기 위해서는 기기들이 보내는 패킷에 충돌이 일어나면 안된다. 따라서 블루투스는 기본적으로 **FDMA** 방식을...","url": "http://localhost:4000/projects/bluetooth/multiple_connection/"
   },{
     "title": "Optimization",
     "excerpt":"","url": "http://localhost:4000/study/communication/optimization/"
