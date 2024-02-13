@@ -25,7 +25,7 @@ url                      : "https://asungajinli.github.io"
 baseurl                  : "/"
 repository               : "asungajinli/asungajinli.github.io"
 teaser                   : # path of fallback teaser image, e.g. "/assets/images/500x300.png"
-logo                     : # "/assets/images/logo.png"
+logo                     : "/assets/images/logo.png"
 masthead_title           :
 breadcrumbs              : true
 words_per_minute         : 200
@@ -162,6 +162,7 @@ footer:
 include:
   - .htaccess
   - _pages
+  - _blogs
 exclude:
   - "*.sublime-project"
   - "*.sublime-workspace"
@@ -262,17 +263,23 @@ category_archive:
 tag_archive:
   type: liquid
   path: /tags/
+blog_archive:
+  type: liquid
+  path: /blog/
 # https://github.com/jekyll/jekyll-archives
 jekyll-archives:
   enabled:
     - categories
     - tags
+    - blog
   layouts:
     category: archive-taxonomy
     tag: archive-taxonomy
+    blog: archive-blog
   permalinks:
     category: /categories/:name/
     tag: /tags/:name/
+    blog: /blog/:name/
 
 
 # HTML Compression

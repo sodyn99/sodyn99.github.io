@@ -1,16 +1,22 @@
 var store = [{
-        "title": "Building Flexible, Low-Cost Wireless Access Networks With Magma",
+        "title": "Test 1",
         "excerpt":" ","categories": [],
         "tags": [],
-        "url": "/Building-Flexible,-Low-Cost-Wireless-Access-Networks-With-Magma/",
+        "url": "/test-1/",
         "teaser": null
       },{
-        "title": "Private cellular network deployment comparison of openairinterface with magma core",
+        "title": "Test 2",
         "excerpt":" ","categories": [],
         "tags": [],
-        "url": "/Private-Cellular-Network-Deployment-Comparison-of-OpenAirInterface-with-Magma-Core/",
+        "url": "/test-2/",
         "teaser": null
       },{
+    "title": "Building Flexible, Low-Cost Wireless Access Networks With Magma",
+    "excerpt":" ","url": "http://localhost:4000/study/paper_review/magma_001/"
+  },{
+    "title": "Private Cellular Network Deployment: Comparison of OpenAirInterface with Magma Core",
+    "excerpt":" ","url": "http://localhost:4000/_pages/study/paper_review/Private%20Cellular%20Network%20Deployment%20Comparison%20of%20OpenAirInterface%20with%20Magma%20Core%20copy/"
+  },{
     "title": "About",
     "excerpt":"아성가진리 Asungajinli About Me 👤 이성진 🏫 경희대학교 📝 전자공학과 🎓 4학년 💼 학생입니다. 👤 LEE SUNGJIN 🏫 Kyunghee University 📝 Electronic Engineering 🎓 Senior 💼 Student. 🌐 Contact Me             About Blog 🅰️ Font SUIT 🎨 Color ■ &nbsp;#1C192B&nbsp;&nbsp;|&nbsp;&nbsp;Text ■ &nbsp;#24A091&nbsp;&nbsp;|&nbsp;&nbsp;Green ■ &nbsp;#D1F951&nbsp;&nbsp;|&nbsp;&nbsp;Yellow ■ &nbsp;#F0383B&nbsp;&nbsp;|&nbsp;&nbsp;Red ■ &nbsp;#6454ED&nbsp;&nbsp;|&nbsp;&nbsp;Blue Copyright Copyright...","url": "http://localhost:4000/about/"
   },{
@@ -48,7 +54,7 @@ var store = [{
     "excerpt":"","url": "http://localhost:4000/study/communication/optimization/"
   },{
     "title": "Paper Review",
-    "excerpt":"","url": "http://localhost:4000/study/paper_review/"
+    "excerpt":"                                  Magma         Building Flexible, Low-Cost Wireless Access Networks With Magma         How to configure low-cost cellular network using Magma.                                         Magma         Private Cellular Network Deployment: Comparison of OpenAirInterface with Magma Core         How to configure low-cost cellular network using Magma.        ","url": "http://localhost:4000/study/paper_review/"
   },{
     "title": "Projects",
     "excerpt":"                                   Bluetooth                                                            5G KPI                                                                        ","url": "http://localhost:4000/projects/"

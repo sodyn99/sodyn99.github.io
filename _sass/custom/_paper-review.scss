@@ -1,0 +1,91 @@
+.review__content {
+    transition: 0.2s background-color;
+    cursor: pointer;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    flex-direction: column;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    justify-content: center;
+    height: inherit;
+    padding: 1.5em;
+    @include breakpoint($small) {
+        width: $small;
+    }
+    @include breakpoint($medium) {
+        flex-direction: row;
+        width: $medium;
+    }
+    @include breakpoint($medium-wide) {
+        width: $medium-wide;
+    }
+    @include breakpoint($large) {
+        width: $large;
+    }
+    @include breakpoint($x-large) {
+        width: $x-large;
+        max-width: $max-width;
+    }
+    &:hover {
+        background-color: #f2f2f2;
+    }
+}
+.review__info {
+    order: 2;
+    width: 90%;
+    @include breakpoint($medium) {
+        order: 1;
+        width: 50%;
+        padding-right: 1em;
+    }
+    >p {
+        max-width: 25em;
+    }
+}
+.review__category {
+    font-size: 1.2em;
+    font-weight: 700;
+    text-transform: uppercase;
+    color: $gray;
+    margin-bottom: 0.5em;
+}
+.review__title {
+    font-family: 'termina';
+    font-weight: 700;
+    font-size: 1.5em;
+    line-height: 1.5;
+    margin-bottom: 0.5em;
+}
+.review__description {
+    font-weight: 700;
+    font-size: 1em;
+    color: $gray;
+}
+.review__teaser {
+    order: 1;
+    width: 90%;
+    margin-bottom: 1em;
+    @include breakpoint($medium) {
+        order: 2;
+        width: 50%;
+        margin-bottom: 0em;
+    }
+}
+.review__image {
+    float: right;
+    border: 1px solid $light-gray;
+    border-radius: 2em;
+    height: 300px;
+    width: 500px;
+    object-fit: cover;
+    @include breakpoint($medium) {
+        height: 250px;
+        width: 400px;
+    }
+    @include breakpoint($large) {
+        height: 350px;
+        width: 500px;
+    }
+}

@@ -93,9 +93,9 @@
 }
 .hero__image {
     border-radius: 4em;
-    float: right;
     height: 300px;
     width: 500px;
+    object-fit: cover;
     @include breakpoint($medium) {
         height: 400px;
         width: 400px;
