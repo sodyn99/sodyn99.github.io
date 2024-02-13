@@ -63,7 +63,7 @@ var store = [{
     "excerpt":"","url": "http://localhost:4000/search/"
   },{
     "title": "Study",
-    "excerpt":"","url": "http://localhost:4000/study/"
+    "excerpt":"                                             Communication                                                                            Paper Review                                                                                                  ","url": "http://localhost:4000/study/"
   },{
     "title": "Tag",
     "excerpt":"","url": "http://localhost:4000/tags/"
