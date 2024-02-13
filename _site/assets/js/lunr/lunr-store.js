@@ -11,17 +11,8 @@ var store = [{
     "title": "About",
     "excerpt":"아성가진리 Asungajinli About Me 👤 이성진 🏫 경희대학교 📝 전자공학과 🎓 4학년 💼 학생입니다. 👤 LEE SUNGJIN 🏫 Kyunghee University 📝 Electronic Engineering 🎓 Senior 💼 Student. 🌐 Contact Me             About Blog 🅰️ Font SUIT 🎨 Color ■ &nbsp;#1C192B&nbsp;&nbsp;|&nbsp;&nbsp;Text ■ &nbsp;#24A091&nbsp;&nbsp;|&nbsp;&nbsp;Green ■ &nbsp;#D1F951&nbsp;&nbsp;|&nbsp;&nbsp;Yellow ■ &nbsp;#F0383B&nbsp;&nbsp;|&nbsp;&nbsp;Red ■ &nbsp;#6454ED&nbsp;&nbsp;|&nbsp;&nbsp;Blue Copyright Copyright...","url": "http://localhost:4000/about/"
   },{
-    "title": "Blog",
-    "excerpt":"최근 포스트                                               Introduction                                                                     March 26, 2023                                                                           최대 1 분 소요                                본 page는 Erik Dahlman 외 2인의 4G LTE/LTE-Advanced for Mobile Broadband를 바탕으로 작성됨.               ","url": "http://localhost:4000/blog/"
-  },{
-    "title": "Bluetooth",
-    "excerpt":"Bluetooth","url": "http://localhost:4000/projects/bluetooth/"
-  },{
     "title": "Category",
     "excerpt":" ","url": "http://localhost:4000/categories/"
-  },{
-    "title": "Copyright Attribution",
-    "excerpt":"Powered by Jekyll &amp; Minimal Mistakes. Source & License Logo Logo: 3D monstera plant with holes in its leaves by Icons 8 Source/License: Illustration by Icons 8 from Ouch! Fonts Font: Suit by Sunn Source/License: SIL Open Font License v1.1 Font: Roboto by Christian Robertson Source/License: Google Fonts Attribution Font:...","url": "http://localhost:4000/copyright/"
   },{
     "title": null,
     "excerpt":"","url": "http://localhost:4000/"
@@ -34,9 +25,6 @@ var store = [{
   },{
     "title": null,
     "excerpt":"var store = [ {%- for c in site.collections -%} {%- if forloop.last -%} {%- assign l = true -%} {%- endif -%} {%- assign docs = c.docs | where_exp:'doc','doc.search != false' -%} {%- for doc in docs -%} {%- if doc.header.teaser -%} {%- capture teaser -%}{{ doc.header.teaser }}{%- endcapture...","url": "http://localhost:4000/assets/js/lunr/lunr-store.js"
-  },{
-    "title": "Projects",
-    "excerpt":"                                   Bluetooth                                                            5G KPI                                                                        ","url": "http://localhost:4000/projects/"
   },{
     "title": "Search",
     "excerpt":"","url": "http://localhost:4000/search/"

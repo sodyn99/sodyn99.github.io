@@ -1,98 +1,44 @@
 ---
-layout: default
-search: false
+layout: archive
 ---
-<div class="hero">
-  <div class="hero__inner">
-    <div class="hero__inner-left">
-      <div class="hero__title">
-        Hi there, I am Lee Sungjin
-      </div>
-      <p>
-        Student from South Korea.
-        I'm studying mobile communication at Kyunghee University.
-      </p>
-      <button type="button" onclick="location.href='/#contact'" class="btn btn--warning btn--small">Get In Touch</button>
-    </div>
-    <div class="hero__inner-right">
-      <img src="/assets/images/home/profile.jpg" class="hero__image"></div>
-    </div>
-  </div>
-</div>
-<!--------------------------- Section -------------------------------->
-<div class="home__section projects">
-  <div class="home__section-info">
-    <div class="home__section-head">
-      Latest Works
-      <div class="link" OnClick="location.href ='/projects/'">More<i class="fas fa-arrow-circle-right"></i></div>
-    </div>
-    <p>
-      My works with partners.
-    </p>
-  </div>
-  <div class="home__section-contents">
-    <div class="home__section-card" OnClick="location.href ='/projects/bluetooth/'">
-      <div class="home__section-cover">
-        <div class="home__section-cover-head">
-          Bluetooth
-        </div>
-      </div>
-      <img class="home__section-image" src="/assets/images/home/bluetooth.jpeg"></img>
-    </div>
-    <div class="home__section-card" OnClick="location.href ='/projects/kpi/'">
-      <div class="home__section-cover">
-        <div class="home__section-cover-head">
-          5G KPI
-        </div>
-      </div>
-      <img class="home__section-image" src="/assets/images/home/KPI.jpeg"></img>
-    </div>
-    <div class="home__section-card" OnClick="location.href ='/'">
-    </div>
-    <div class="home__section-card" OnClick="location.href ='/'">
-    </div>
-    <div class="home__section-card" OnClick="location.href ='/'">
-    </div>
-    <div class="home__section-card" OnClick="location.href ='/'">
-    </div>
-  </div>
+<head>
+  <style>
+    body {
+        background-color: var(--bg-color);
+        color: var(--text-color);
+        font-family: var(--font);
+        font-weight: 400;
+    }
+    /* .masthead {
+        border-bottom: #f2f2f2 2px solid;
+    } */
+    .masthead .site-logo {
+        display: none;
+    }
+    .masthead .site-title {
+        display: none;
+    }
+  </style>
+</head>
+
+<!-- {{ content }}
+
+<h3 class="archive__subtitle">{{ site.data.ui-text[site.locale].recent_posts | default: "Recent Posts" }}</h3>
+
+{% if paginator %}
+  {% assign posts = paginator.posts %}
+{% else %}
+  {% assign posts = site.posts %}
+{% endif %}
+
+{% assign entries_layout = page.entries_layout | default: 'list' %}
+<div class="entries-{{ entries_layout }}">
+  {% for post in posts %}
+    {% include archive-single.html type=entries_layout %}
+  {% endfor %}
 </div>
 
-<div class="home__section blog">
-  <div class="home__section-info">
-    <div class="home__section-head">
-      Recent posts
-      <div class="link" OnClick="location.href ='/blog/'">More<i class="fas fa-arrow-circle-right"></i></div>
-    </div>
-    <p>
-
-    </p>
-  </div>
-</div>
-
-<!---------------------------- Contact ---------------------------------------->
-<div class="home__section contact">
-  <div id="contact" class="home-contact">
-    <h2><a name="contact">Get In Touch</a></h2>
-    <div id="contact-form" class="contact-container">
-          <form action="https://formspree.io/f/mjvqogqw" method="POST">
-            <label class="label__email">
-              <span>Email</span>
-              <input id="email" name="_replyto" type="email" required="" placeholder="example@gmail.com" value="">
-            </label>
-            <label class="label__name">
-              <span>Name</span>
-              <input name="name" type="text" required="" placeholder="John Smith" value="">
-            </label>
-            <label class="label__message">
-              <span>Message</span>
-              <textarea name="message" required="" placeholder="Hey there!"></textarea>
-            </label>
-            <button type="submit" value="send">Send</button>
-        </form>
-    </div>
-  </div>
-</div>
+{% include paginator.html %} -->
 
 
 <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>

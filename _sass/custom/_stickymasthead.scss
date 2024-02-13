@@ -1,136 +1,136 @@
-// .left-side {
-//     position: absolute;
-//     top: 0em;
-//     left: 2em;
-//     height: 100%;
+.left-side {
+    position: absolute;
+    top: 0em;
+    left: 2em;
+    height: 100%;
 
-//     .left-side-menu-container {
-//         display: none;
-//         top: 0em;
-//         margin: 0em;
-//         background-color: $box-color;
-//         padding: 2.5em 0.5em 1em 0.5em;
-//         border-bottom-right-radius: $border-radius;
-//         border-bottom-left-radius: $border-radius;
-//         flex-direction: column;
-//         align-items: center;
-//         justify-content: center;
+    .left-side-menu-container {
+        display: none;
+        top: 0em;
+        margin: 0em;
+        background-color: $box-color;
+        padding: 2.5em 0.5em 1em 0.5em;
+        border-bottom-right-radius: $border-radius;
+        border-bottom-left-radius: $border-radius;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
 
-//         a {
-//             margin: 0em;
-//         }
-//     }
-// }
-// .right-side {
-//     position: absolute;
-//     top: 0em;
-//     right: 2em;
-//     height: 100%;
+        a {
+            margin: 0em;
+        }
+    }
+}
+.right-side {
+    position: absolute;
+    top: 0em;
+    right: 2em;
+    height: 100%;
 
-//     .right-side-menu-container {
-//         display: none;
-//         top: 0em;
-//         margin: 0em;
-//         background-color: $box-color;
-//         padding: 1em 0.5em 0.5em 0.5em;
-//         border-bottom-right-radius: $border-radius;
-//         border-bottom-left-radius: $border-radius;
-//         flex-direction: column;
-//         align-items: center;
-//         justify-content: center;
+    .right-side-menu-container {
+        display: none;
+        top: 0em;
+        margin: 0em;
+        background-color: $box-color;
+        padding: 1em 0.5em 0.5em 0.5em;
+        border-bottom-right-radius: $border-radius;
+        border-bottom-left-radius: $border-radius;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
 
-//         ul {
-//             display: flex;
-//             flex-direction: column;
-//             align-items: center;
-//             justify-content: center;
-//             padding: 0em;
-//             .masthead__menu-item {
-//                 display: block;
-//                 list-style-type: none;
-//                 white-space: nowrap;
-//                 cursor: pointer;
-//                 // color: $primary-color;
-//                 font-size: $type-size-3;
-//                 a {
-//                     color: $text-color;
-//                 }
-//             }
-//         }
+        ul {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            padding: 0em;
+            .masthead__menu-item {
+                display: block;
+                list-style-type: none;
+                white-space: nowrap;
+                cursor: pointer;
+                // color: $primary-color;
+                font-size: $type-size-3;
+                a {
+                    color: $text-color;
+                }
+            }
+        }
 
-//         button {
-//             margin: 0em;
-//         }
+        button {
+            margin: 0em;
+        }
 
-//         .masthead__menu-item {
-//             margin: 0.5em 0em 0em 0em;
-//             display: block;
-//             list-style-type: none;
-//             white-space: nowrap;
-//             cursor: pointer;
-//             // color: $primary-color;
-//             font-size: $type-size-3;
-//         }
-//     }
-// }
+        .masthead__menu-item {
+            margin: 0.5em 0em 0em 0em;
+            display: block;
+            list-style-type: none;
+            white-space: nowrap;
+            cursor: pointer;
+            // color: $primary-color;
+            font-size: $type-size-3;
+        }
+    }
+}
 
-// #singleRightSide {
-//     display: none;
-//     position: fixed;
-//     bottom: 150px;
-//     width: 0px;
-//     height: 230px;
-//     right: -60px;
-//     margin: 0em;
-//     background-color: $box-color;
-//     //padding: 10px;
-//     border-top-left-radius: $border-radius;
-//     border-bottom-left-radius: $border-radius;
-//     flex-direction: column;
-//     align-items: center;
-//     justify-content: center;
-//     z-index: 20;
-//     a {
-//         width: 20px;
-//         color: $text-color;
-//         display: flex;
-//         align-items: center;
-//         justify-content: center;
-//         font-size: 1em;
-//         margin-bottom: 20px;
-//         i {
-//             transition: .1s;
-//         }
-//         img {
-//             width: 100%;
-//             scale: 1.3;
-//         }
-//     }
-//     #sideStudy:hover {
-//         color: $orange; //#DC7D48;
-//     }
-//     #sideSports:hover {
-//         color: $green;
-//     }
-//     #sideEntertainment:hover {
-//         color: $blue;
-//     }
-//     .masthead__menu-item {
-//         width: 20px;
-//         margin: 0px;
-//         list-style-type: none;
-//         white-space: nowrap;
-//         cursor: pointer;
-//         font-size: 1em;
-//         padding: 0px;
-//         .toggle-theme {
-//             margin: 0px;
-//             padding: 0px;
-//         }
-//         // color: $primary-color;
-//     }
-//     @include breakpoint($large){
-//         width: 60px;
-//         right: 0px;
-//     }
-// }
+#singleRightSide {
+    display: none;
+    position: fixed;
+    bottom: 150px;
+    width: 0px;
+    height: 230px;
+    right: -60px;
+    margin: 0em;
+    background-color: $box-color;
+    //padding: 10px;
+    border-top-left-radius: $border-radius;
+    border-bottom-left-radius: $border-radius;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    z-index: 20;
+    a {
+        width: 20px;
+        color: $text-color;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 1em;
+        margin-bottom: 20px;
+        i {
+            transition: .1s;
+        }
+        img {
+            width: 100%;
+            scale: 1.3;
+        }
+    }
+    #sideStudy:hover {
+        color: $orange; //#DC7D48;
+    }
+    #sideSports:hover {
+        color: $green;
+    }
+    #sideEntertainment:hover {
+        color: $blue;
+    }
+    .masthead__menu-item {
+        width: 20px;
+        margin: 0px;
+        list-style-type: none;
+        white-space: nowrap;
+        cursor: pointer;
+        font-size: 1em;
+        padding: 0px;
+        .toggle-theme {
+            margin: 0px;
+            padding: 0px;
+        }
+        // color: $primary-color;
+    }
+    @include breakpoint($large){
+        width: 60px;
+        right: 0px;
+    }
+}

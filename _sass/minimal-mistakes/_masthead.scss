@@ -4,6 +4,7 @@
 
 .masthead {
   position: relative;
+  border-bottom: 1px solid $border-color;
   -webkit-animation: $intro-transition;
   animation: $intro-transition;
   -webkit-animation-delay: 0.15s;
@@ -14,8 +15,8 @@
     @include clearfix;
     margin-left: auto;
     margin-right: auto;
-    height: 150px;
-    max-width: 90%;
+    padding: 1em;
+    max-width: 100%;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -23,22 +24,9 @@
     -ms-flex-pack: justify;
     justify-content: space-between;
     font-family: $sans-serif-narrow;
-    align-items: center;
 
-    @include breakpoint($small) {
-      max-width: $small;
-    }
-    @include breakpoint($medium) {
-      max-width: $medium;
-    }
-    @include breakpoint($medium-wide) {
-      max-width: $medium-wide;
-    }
-    @include breakpoint($large) {
-      max-width: $large;
-    }
     @include breakpoint($x-large) {
-      max-width: $x-large;
+      max-width: $max-width;
     }
 
     nav {
@@ -61,8 +49,7 @@
   display: flex;
   -ms-flex-item-align: center;
   align-self: center;
-  font-weight: 700;
-  font-family: termina, sans-serif;
+  font-weight: bold;
   // z-index: 20;
 }
 
@@ -98,16 +85,9 @@
   display: block;
   list-style-type: none;
   white-space: nowrap;
-  font-weight: bold;
-  text-align: center;
-
-  .selected {
-    border-top: 3px solid orange;
-    margin-top: -3px;
-  }
 
   &--lg {
-    padding-left: 2em;
+    padding-right: 2em;
     font-weight: 700;
   }
 }

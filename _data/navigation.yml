@@ -1,10 +1,19 @@
 # main links
 main:
-  - title: "Home"
-    url: /
-  - title: "Projects"
-    url: /projects/
-  - title: "Blog"
-    url: /blog/
+  - title: "Category"
+    icon: "fas fa-clone"
+    url: /categories/
+  - title: "Tag"
+    icon: "fas fa-tag"
+    url: /tags/
   - title: "About"
+    icon: "fas fa-address-card"
     url: /about/
+  # - title: "Quick-Start Guide"
+  #   url: https://mmistakes.github.io/minimal-mistakes/docs/quick-start-guide/
+  # - title: "Sample Posts"
+  #   url: /year-archive/
+  # - title: "Sample Collections"
+  #   url: /collection-archive/
+  # - title: "Sitemap"
+  #   url: /sitemap/
