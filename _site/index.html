@@ -93,14 +93,23 @@
 
 <!-- insert favicons. use https://realfavicongenerator.net/ -->
 
-<link rel="apple-touch-icon" sizes="180x180" href="/assets/apple-touch-icon.png">
-<link rel="icon" type="image/png" sizes="32x32" href="/assets/favicon-32x32.png">
-<link rel="icon" type="image/png" sizes="16x16" href="/assets/favicon-16x16.png">
-<link rel="manifest" href="/assets/site.webmanifest">
-<link rel="mask-icon" href="/assets/safari-pinned-tab.svg" color="#5bbad5">
-<meta name="msapplication-TileColor" content="#da532c">
-<meta name="theme-color" content="#f2f2f2">
-
+<link rel="apple-touch-icon" sizes="57x57" href="/assets/favicon/apple-icon-57x57.png">
+<link rel="apple-touch-icon" sizes="60x60" href="/assets/favicon/apple-icon-60x60.png">
+<link rel="apple-touch-icon" sizes="72x72" href="/assets/favicon/apple-icon-72x72.png">
+<link rel="apple-touch-icon" sizes="76x76" href="/assets/favicon/apple-icon-76x76.png">
+<link rel="apple-touch-icon" sizes="114x114" href="/assets/favicon/apple-icon-114x114.png">
+<link rel="apple-touch-icon" sizes="120x120" href="/assets/favicon/apple-icon-120x120.png">
+<link rel="apple-touch-icon" sizes="144x144" href="/assets/favicon/apple-icon-144x144.png">
+<link rel="apple-touch-icon" sizes="152x152" href="/assets/favicon/apple-icon-152x152.png">
+<link rel="apple-touch-icon" sizes="180x180" href="/assets/favicon/apple-icon-180x180.png">
+<link rel="icon" type="image/png" sizes="192x192"  href="/assets/favicon/android-icon-192x192.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/assets/favicon/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="96x96" href="/assets/favicon/favicon-96x96.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/assets/favicon/favicon-16x16.png">
+<link rel="manifest" href="/assets/favicon/manifest.json">
+<meta name="msapplication-TileColor" content="#ffffff">
+<meta name="msapplication-TileImage" content="/assets/favicon/ms-icon-144x144.png">
+<meta name="theme-color" content="#ffffff">
 <!-- end custom head snippets -->
 
 <!-- custom -->
@@ -139,6 +148,11 @@
 
 <!-- end custom head snippets -->
 
+    <style>
+      body {
+          background: linear-gradient(45deg, #fcf8f1, transparent);
+      }
+    </style>
   </head>
 
   <body class="layout--home">
@@ -162,17 +176,16 @@
           
         </a>
         <ul class="visible-links"><li class="masthead__menu-item">
-              <a href="/categories/">Category</a>
+              <a href="/"  class="selected"  >Home</a>
             </li><li class="masthead__menu-item">
-              <a href="/tags/">Tag</a>
+              <a href="/projects/"  >Projects</a>
             </li><li class="masthead__menu-item">
-              <a href="/about/">About</a>
+              <a href="/blog/"  >Blog</a>
+            </li><li class="masthead__menu-item">
+              <a href="/about/"  >About</a>
             </li></ul>
         
-        <button class="search__toggle" type="button">
-          <span class="visually-hidden">Toggle search</span>
-          <i class="fas fa-search"></i>
-        </button>
+          
         
         <button class="greedy-nav__toggle hidden" type="button">
           <span class="visually-hidden">토글 메뉴</span>
@@ -185,106 +198,103 @@
 </div>
 
 
+
     <div class="initial-content">
-      
-
-
-
-<div id="main" role="main">
-  
-
-
-  <div class="archive">
-    
-      <h1 id="page-title" class="page__title"></h1>
-    
-    <head>
-  <style>
-    body {
-        background-color: var(--bg-color);
-        color: var(--text-color);
-        font-family: var(--font);
-        font-weight: 400;
-    }
-    /* .masthead {
-        border-bottom: #f2f2f2 2px solid;
-    } */
-    .masthead .site-logo {
-        display: none;
-    }
-    .masthead .site-title {
-        display: none;
-    }
-  </style>
-</head>
-
-<!-- 
-
-<h3 class="archive__subtitle">최근 포스트</h3>
-
-
-
-
-<div class="entries-list">
-  
-    
-
-
-
-<div class="list__item">
-  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
-    
-    <h2 class="archive__item-title no_toc" itemprop="headline">
-      
-        <a href="/study/mobile/4g_lte/1.1/" rel="permalink">Introduction
-</a>
-      
-    </h2>
-    
-
-  <p class="page__meta">
-    
-      
-      <span class="page__meta-date">
-        <i class="far fa-calendar-alt" aria-hidden="true"></i>
-        
-        <time datetime="2023-03-26T00:00:00+09:00">March 26, 2023</time>
-      </span>
-    
-
-    <span class="page__meta-sep"></span>
-
-    
-      
-      
-
-      <span class="page__meta-readtime">
-        <i class="far fa-clock" aria-hidden="true"></i>
-        
-          최대 1 분 소요
-        
-      </span>
-    
-  </p>
-
-
-    <p class="archive__item-excerpt" itemprop="description">본 page는 Erik Dahlman 외 2인의 4G LTE/LTE-Advanced for Mobile Broadband를 바탕으로 작성됨.
-
-</p>
-  </article>
+      <div class="hero">
+  <div class="hero__inner">
+    <div class="hero__inner-left">
+      <div class="hero__title">
+        Hi there, I am Lee Sungjin
+      </div>
+      <p>
+        Student from South Korea.
+        I'm studying mobile communication at Kyunghee University.
+      </p>
+      <button type="button" onclick="location.href='/#contact'" class="btn btn--warning btn--small">Get In Touch</button>
+    </div>
+    <div class="hero__inner-right">
+      <img src="/assets/images/home/profile.jpg" class="hero__image"></div>
+    </div>
+  </div>
+</div>
+<!--------------------------- Section -------------------------------->
+<div class="home__section projects">
+  <div class="home__section-info">
+    <div class="home__section-head">
+      Latest Works
+      <div class="link" OnClick="location.href ='/projects/'">More<i class="fas fa-arrow-circle-right"></i></div>
+    </div>
+    <p>
+      My works with partners.
+    </p>
+  </div>
+  <div class="home__section-contents">
+    <div class="home__section-card" OnClick="location.href ='/projects/bluetooth/'">
+      <div class="home__section-cover">
+        <div class="home__section-cover-head">
+          Bluetooth
+        </div>
+      </div>
+      <img class="home__section-image" src="/assets/images/home/bluetooth.jpeg"></img>
+    </div>
+    <div class="home__section-card" OnClick="location.href ='/projects/kpi/'">
+      <div class="home__section-cover">
+        <div class="home__section-cover-head">
+          5G KPI
+        </div>
+      </div>
+      <img class="home__section-image" src="/assets/images/home/KPI.jpeg"></img>
+    </div>
+    <div class="home__section-card" OnClick="location.href ='/'">
+    </div>
+    <div class="home__section-card" OnClick="location.href ='/'">
+    </div>
+    <div class="home__section-card" OnClick="location.href ='/'">
+    </div>
+    <div class="home__section-card" OnClick="location.href ='/'">
+    </div>
+  </div>
 </div>
 
-  
+<div class="home__section blog">
+  <div class="home__section-info">
+    <div class="home__section-head">
+      Recent posts
+      <div class="link" OnClick="location.href ='/blog/'">More<i class="fas fa-arrow-circle-right"></i></div>
+    </div>
+    <p>
+
+    </p>
+  </div>
 </div>
 
-
- -->
+<!---------------------------- Contact ---------------------------------------->
+<div class="home__section contact">
+  <div id="contact" class="home-contact">
+    <h2><a name="contact">Get In Touch</a></h2>
+    <div id="contact-form" class="contact-container">
+          <form action="https://formspree.io/f/mjvqogqw" method="POST">
+            <label class="label__email">
+              <span>Email</span>
+              <input id="email" name="_replyto" type="email" required="" placeholder="example@gmail.com" value="">
+            </label>
+            <label class="label__name">
+              <span>Name</span>
+              <input name="name" type="text" required="" placeholder="John Smith" value="">
+            </label>
+            <label class="label__message">
+              <span>Message</span>
+              <textarea name="message" required="" placeholder="Hey there!"></textarea>
+            </label>
+            <button type="submit" value="send">Send</button>
+        </form>
+    </div>
+  </div>
+</div>
 
 
 <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 <script src="/assets/js/custom/dark-theme.js"></script>
-  </div>
-</div>
     </div>
 
     
@@ -345,7 +355,7 @@
   </ul>
 </div>
 
-<div class="page__footer-copyright">&copy; 2024 sdin.99. Powered by <a href="https://jekyllrb.com" rel="nofollow">Jekyll</a> &amp; <a href="https://mademistakes.com/work/minimal-mistakes-jekyll-theme/" rel="nofollow">Minimal Mistakes</a>.</div>
+<div class="page__footer-copyright">&copy; 2024 sdin.99.</div>
 
       </footer>
     </div>
@@ -369,6 +379,72 @@
   
 
 
+<!-- mathjax -->
+<script type="text/javascript" async
+	src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/latest.js?config=TeX-MML-AM_CHTML">
+</script>
+
+<script type="text/x-mathjax-config">
+   MathJax.Hub.Config({
+     extensions: ["tex2jax.js"],
+     jax: ["input/TeX", "output/HTML-CSS"],
+     tex2jax: {
+       inlineMath: [ ['$','$'], ["\\(","\\)"] ],
+       displayMath: [ ['$$','$$'], ["\\[","\\]"] ],
+       processEscapes: true
+     },
+     "HTML-CSS": { availableFonts: ["TeX"] }
+   });
+</script>
+
+<!-- image drag, select ban -->
+<script>
+  const images = document.querySelectorAll('img');
+  images.forEach(image => {
+    image.addEventListener('contextmenu', event => {
+      event.preventDefault();
+    });
+    image.addEventListener('dragstart', event => {
+      event.preventDefault();
+    });
+  });
+  </script>
+<!-- kakaotalk sharing -->
+<script src="https://t1.kakaocdn.net/kakao_js_sdk/2.1.0/kakao.min.js" integrity="sha384-dpu02ieKC6NUeKFoGMOKz6102CLEWi9+5RQjWSV0ikYSFFd8M3Wp2reIcquJOemx" crossorigin="anonymous"></script>
+<script>
+  Kakao.init('c7061823133572c4f528e1e0725a59cc'); // 사용하려는 앱의 JavaScript 키 입력
+  function shareMessage() {
+    Kakao.Share.sendCustom({
+      templateId: 94266,
+      templateArgs: {
+        title: "",
+        url : "/",
+      },
+    });
+  }
+</script>
+
+<!-- 404.html -->
+<script>
+  var pageX = $(document).width();
+  var pageY = $(document).height();
+  var mouseY=0;
+  var mouseX=0;
+
+  $(document).mousemove(function( event ) {
+  //verticalAxis
+  mouseY = event.pageY;
+  yAxis = (pageY-mouseY)/pageY*200;
+  //horizontalAxis
+  mouseX = event.pageX / -pageX;
+  xAxis = -mouseX * 100 - 100;
+
+  $('.box__ghost-eyes').css({ 'transform': 'translate('+ xAxis +'%,-'+ yAxis +'%)' });
+
+  //console.log('X: ' + xAxis);
+
+  });
+</script>
 
   </body>
 </html>

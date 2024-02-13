@@ -16,17 +16,17 @@ minimal_mistakes_skin    : "default" # "air", "aqua", "contrast", "dark", "dirt"
 
 # Site Settings
 locale                   : "ko-KR"
-title                    : "Site Title"
+title                    : "SDIN"
 title_separator          : "|"
 subtitle                 : # site tagline that appears below site title in masthead
 name                     : "sdin.99"
-description              : "Welcome to SDIN"
+description              : "Welcome to SDIN."
 url                      : "https://asungajinli.github.io"
 baseurl                  : "/"
 repository               : "asungajinli/asungajinli.github.io"
 teaser                   : # path of fallback teaser image, e.g. "/assets/images/500x300.png"
 logo                     : # "/assets/images/logo.png"
-masthead_title           : " "
+masthead_title           :
 breadcrumbs              : true
 words_per_minute         : 200
 comments:

@@ -1,15 +1,14 @@
 ---
-layout: single
+layout: pages
 title: "About"
 permalink: /about/
-author_profile: true
+author_profile: false
 sidebar:
   nav: home
 ---
-
 <br><br>
 <p><div style="border:#aaa 1px solid;border-radius:50%;overflow:hidden;width:10%;height:auto;">
-  <img src="/images/account.png" width="100%" style="user-select:none;-webkit-user-drag:none;">
+  <img src="/assets/images/account.png" width="100%" style="user-select:none;-webkit-user-drag:none;">
 </div></p>
 
 아성가진리
