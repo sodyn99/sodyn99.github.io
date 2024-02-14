@@ -1,0 +1,20 @@
+<!-- image drag, select ban -->
+<script>
+    const images = document.querySelectorAll('img');
+    images.forEach(image => {
+      image.addEventListener('contextmenu', event => {
+        event.preventDefault();
+      });
+      image.addEventListener('dragstart', event => {
+        event.preventDefault();
+      });
+    });
+</script>
+
+<!-- modal -->
+<script>
+    const modal = document.querySelector('.modal');
+    $("#fade").modal({
+      fadeDuration: 100
+    });
+</script>

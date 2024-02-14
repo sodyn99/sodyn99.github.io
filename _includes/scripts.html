@@ -45,51 +45,6 @@
    });
 </script>
 
-<!-- image drag, select ban -->
-<script>
-  const images = document.querySelectorAll('img');
-  images.forEach(image => {
-    image.addEventListener('contextmenu', event => {
-      event.preventDefault();
-    });
-    image.addEventListener('dragstart', event => {
-      event.preventDefault();
-    });
-  });
-  </script>
-<!-- kakaotalk sharing -->
-<script src="https://t1.kakaocdn.net/kakao_js_sdk/2.1.0/kakao.min.js" integrity="sha384-dpu02ieKC6NUeKFoGMOKz6102CLEWi9+5RQjWSV0ikYSFFd8M3Wp2reIcquJOemx" crossorigin="anonymous"></script>
-<script>
-  Kakao.init('c7061823133572c4f528e1e0725a59cc'); // 사용하려는 앱의 JavaScript 키 입력
-  function shareMessage() {
-    Kakao.Share.sendCustom({
-      templateId: 94266,
-      templateArgs: {
-        title: "{{ page.title }}",
-        url : "{{ page.url }}",
-      },
-    });
-  }
-</script>
 
-<!-- 404.html -->
-<script>
-  var pageX = $(document).width();
-  var pageY = $(document).height();
-  var mouseY=0;
-  var mouseX=0;
-
-  $(document).mousemove(function( event ) {
-  //verticalAxis
-  mouseY = event.pageY;
-  yAxis = (pageY-mouseY)/pageY*200;
-  //horizontalAxis
-  mouseX = event.pageX / -pageX;
-  xAxis = -mouseX * 100 - 100;
-
-  $('.box__ghost-eyes').css({ 'transform': 'translate('+ xAxis +'%,-'+ yAxis +'%)' });
-
-  //console.log('X: ' + xAxis);
-
-  });
-</script>
+{% include custom_scripts/image.html %}
+{% include custom_scripts/kakaotalk.html %}

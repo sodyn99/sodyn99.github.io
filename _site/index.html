@@ -150,7 +150,8 @@
 
     <style>
       body {
-          background: linear-gradient(45deg, #fff2dc, transparent);
+          background-color: rgb(255, 252, 248);
+          /* background: linear-gradient(45deg, #fff7e8, transparent); */
           overflow-x: hidden;
       }
     </style>
@@ -439,18 +440,27 @@
    });
 </script>
 
+
 <!-- image drag, select ban -->
 <script>
-  const images = document.querySelectorAll('img');
-  images.forEach(image => {
-    image.addEventListener('contextmenu', event => {
-      event.preventDefault();
+    const images = document.querySelectorAll('img');
+    images.forEach(image => {
+      image.addEventListener('contextmenu', event => {
+        event.preventDefault();
+      });
+      image.addEventListener('dragstart', event => {
+        event.preventDefault();
+      });
     });
-    image.addEventListener('dragstart', event => {
-      event.preventDefault();
+</script>
+
+<!-- modal -->
+<script>
+    const modal = document.querySelector('.modal');
+    $("#fade").modal({
+      fadeDuration: 100
     });
-  });
-  </script>
+</script>
 <!-- kakaotalk sharing -->
 <script src="https://t1.kakaocdn.net/kakao_js_sdk/2.1.0/kakao.min.js" integrity="sha384-dpu02ieKC6NUeKFoGMOKz6102CLEWi9+5RQjWSV0ikYSFFd8M3Wp2reIcquJOemx" crossorigin="anonymous"></script>
 <script>
@@ -466,27 +476,6 @@
   }
 </script>
 
-<!-- 404.html -->
-<script>
-  var pageX = $(document).width();
-  var pageY = $(document).height();
-  var mouseY=0;
-  var mouseX=0;
-
-  $(document).mousemove(function( event ) {
-  //verticalAxis
-  mouseY = event.pageY;
-  yAxis = (pageY-mouseY)/pageY*200;
-  //horizontalAxis
-  mouseX = event.pageX / -pageX;
-  xAxis = -mouseX * 100 - 100;
-
-  $('.box__ghost-eyes').css({ 'transform': 'translate('+ xAxis +'%,-'+ yAxis +'%)' });
-
-  //console.log('X: ' + xAxis);
-
-  });
-</script>
 
   </body>
 </html>

@@ -11,12 +11,6 @@ var store = [{
         "url": "/test-2/",
         "teaser": null
       },{
-    "title": "Building Flexible, Low-Cost Wireless Access Networks With Magma",
-    "excerpt":" ","url": "http://localhost:4000/study/paper_review/magma_001/"
-  },{
-    "title": "Private Cellular Network Deployment: Comparison of OpenAirInterface with Magma Core",
-    "excerpt":" ","url": "http://localhost:4000/study/paper_review/magma_002/"
-  },{
     "title": "About",
     "excerpt":"아성가진리 Asungajinli About Me 👤 이성진 🏫 경희대학교 📝 전자공학과 🎓 4학년 💼 학생입니다. 👤 LEE SUNGJIN 🏫 Kyunghee University 📝 Electronic Engineering 🎓 Senior 💼 Student. 🌐 Contact Me             About Blog 🅰️ Font SUIT 🎨 Color ■ &nbsp;#1C192B&nbsp;&nbsp;|&nbsp;&nbsp;Text ■ &nbsp;#24A091&nbsp;&nbsp;|&nbsp;&nbsp;Green ■ &nbsp;#D1F951&nbsp;&nbsp;|&nbsp;&nbsp;Yellow ■ &nbsp;#F0383B&nbsp;&nbsp;|&nbsp;&nbsp;Red ■ &nbsp;#6454ED&nbsp;&nbsp;|&nbsp;&nbsp;Blue Copyright Copyright...","url": "http://localhost:4000/about/"
   },{
@@ -47,8 +41,14 @@ var store = [{
     "title": null,
     "excerpt":"var store = [ {%- for c in site.collections -%} {%- if forloop.last -%} {%- assign l = true -%} {%- endif -%} {%- assign docs = c.docs | where_exp:'doc','doc.search != false' -%} {%- for doc in docs -%} {%- if doc.header.teaser -%} {%- capture teaser -%}{{ doc.header.teaser }}{%- endcapture...","url": "http://localhost:4000/assets/js/lunr/lunr-store.js"
   },{
+    "title": "Building Flexible, Low-Cost Wireless Access Networks With Magma",
+    "excerpt":"","url": "http://localhost:4000/study/paper_review/magma_001/"
+  },{
+    "title": "Private Cellular Network Deployment: Comparison of OpenAirInterface with Magma Core",
+    "excerpt":"이 논문은 LTE 특화망 구축에 오픈소스인 OpenAirInterface와 Magma Core를 사용하는 두 가지 시나리오를 비교하는 내용이다. 단순한 비교 뿐만아니라 테스트베드의 배치과정에서의 시행착오, 가능한 사용 사례에 대한 고려도 함께 설명하고 있다. 앞서 LTE 특화망이라고 했지만, 궁극적으로는 NGN을 목표로 하고 있다. NGN의 새로운 비즈니스 요구 사항에 늘어나는 서비스 제공업체, 소규모 운영자 등이 포함되어...","url": "http://localhost:4000/study/paper_review/magma_002/"
+  },{
     "title": "Bluetooth Multiple Connection",
-    "excerpt":"블루투스 기기 여러 대를 동시에 연결할 수 있을까? 블루투스를 일상생활에서 항상 활용하는 나도 매번 헷갈려하는 문제다. 여러 대를 동시에 연결한다는 것은 point-to-point, 즉 일대일 연결을 말하는 것이다. Broadcast 방식의 단방향 전송은 해당하지 않는다. 기본적으로 여러 기기를 **동시**에 연결하기 위해서는 기기들이 보내는 패킷에 충돌이 일어나면 안된다. 따라서 블루투스는 기본적으로 **FDMA** 방식을...","url": "http://localhost:4000/projects/bluetooth/multiple_connection/"
+    "excerpt":"블루투스 기기 여러 대를 동시에 연결할 수 있을까? 블루투스를 일상생활에서 항상 활용하는 나도 매번 헷갈려하는 문제다.  여러 대를 동시에 연결한다는 것은 point-to-point, 즉 일대일 연결을 말하는 것이다. Broadcast 방식의 단방향 전송은 해당하지 않는다.  기본적으로 여러 기기를 **동시**에 연결하기 위해서는 기기들이 보내는 패킷에 충돌이 일어나면 안된다.","url": "http://localhost:4000/projects/bluetooth/multiple_connection/"
   },{
     "title": "Optimization",
     "excerpt":"","url": "http://localhost:4000/study/communication/optimization/"
