@@ -11,8 +11,11 @@ var store = [{
         "url": "/test-2/",
         "teaser": null
       },{
+    "title": "Page Not Found",
+    "excerpt":" ","url": "http://localhost:4000/404.html"
+  },{
     "title": "About",
-    "excerpt":"아성가진리 Asungajinli About Me 👤 이성진 🏫 경희대학교 📝 전자공학과 🎓 4학년 💼 학생입니다. 👤 LEE SUNGJIN 🏫 Kyunghee University 📝 Electronic Engineering 🎓 Senior 💼 Student. 🌐 Contact Me             About Blog 🅰️ Font SUIT 🎨 Color ■ &nbsp;#1C192B&nbsp;&nbsp;|&nbsp;&nbsp;Text ■ &nbsp;#24A091&nbsp;&nbsp;|&nbsp;&nbsp;Green ■ &nbsp;#D1F951&nbsp;&nbsp;|&nbsp;&nbsp;Yellow ■ &nbsp;#F0383B&nbsp;&nbsp;|&nbsp;&nbsp;Red ■ &nbsp;#6454ED&nbsp;&nbsp;|&nbsp;&nbsp;Blue Copyright Copyright...","url": "http://localhost:4000/about/"
+    "excerpt":"          👤 이성진    🏫 경희대학교    📝 전자공학과    🎓 4학년    💼 학생입니다.       👤 LEE SUNGJIN    🏫 Kyunghee University    📝 Electronic Engineering    🎓 Senior    💼 Student.    🌐 Contact Me                                           Copyright  Copyright 2024. Lee Sung Jin All pictures cannot be copied without permission.   Copyright Attribution         ","url": "http://localhost:4000/about/"
   },{
     "title": "Blog",
     "excerpt":"","url": "http://localhost:4000/blog/"
@@ -54,7 +57,7 @@ var store = [{
     "excerpt":"","url": "http://localhost:4000/study/communication/optimization/"
   },{
     "title": "Paper Review",
-    "excerpt":"                                  Magma         Building Flexible, Low-Cost Wireless Access Networks With Magma         How to configure low-cost cellular network using Magma.                                         Magma         Private Cellular Network Deployment: Comparison of OpenAirInterface with Magma Core         How to configure low-cost cellular network using Magma.        ","url": "http://localhost:4000/study/paper_review/"
+    "excerpt":"                                  Magma         Building Flexible, Low-Cost Wireless Access Networks With Magma         How to configure low-cost cellular network using Magma.                                         Magma         Private Cellular Network Deployment: Comparison of OpenAirInterface with Magma Core         Comparison of OpenAirInterface and Magma Core, two prominent open-source projects in cellular networks.        ","url": "http://localhost:4000/study/paper_review/"
   },{
     "title": "Projects",
     "excerpt":"                                   Bluetooth                                                            5G KPI                                                                        ","url": "http://localhost:4000/projects/"

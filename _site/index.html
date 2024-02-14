@@ -118,10 +118,12 @@
     .div1{
         width: 20%;
         float: left;
+        margin-bottom: 1em;
     }
     .div2{
         width: 80%;
         float: right;
+        margin-bottom: 1em;
     }
     .box {
         background-color : #7F7F7F;
@@ -541,6 +543,25 @@
   }
 </script>
 
+<a id="topBtn" href="#">
+    <i class="fa fa-chevron-up" aria-hidden="true"></i>
+</a>
+
+<script>
+    $(function() {
+        $(window).scroll(function() {
+            if ($(this).scrollTop() > 300) {
+                $('#topBtn').css('transform','translate(0, -90px)');
+            } else {
+                $('#topBtn').css('transform','translate(0, 0)');
+            }
+        });
+        $("#topBtn").click(function() {
+            $('html, body').animate({ scrollTop : 0 }, 50);
+            return false;
+        });
+    });
+</script>
 
   </body>
 </html>
