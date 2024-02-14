@@ -19,9 +19,9 @@ OAI와 Magma-core 프로젝트는 소형 이동 통신 네트워크의 유연한
 1. eNodeB와 코어 분리형 E2E 테스트베드 배치 과정과 연결하는 동안 발생하는 인터페이스 문제와 해결책
 2. 각 코어 네트워크 솔루션이 더 유용하게 사용될 수 있는 사용 사례에 대한 논의. 여기에는 새로운 비즈니스 모델과 비표준 장치와의 호환성, 적응성, 신뢰성 등 여러 매개변수가 포함된다.
 
-<img class="modal" src="/_pages/study/paper_review/images/magma_002/1.png"/>
+<img class="modal" src="/_pages/study/paper_review/images/magma_002/1.png" alt="<b>[Fig. 1]</b> Architecture of deployed testbed. (a) the red box denotes Smartphone OAI - RAN+Magma - CN, and (b) the blue box shows Smartphone OAI - RAN+OAI - CN. The intersection of two boxes depict OAI-RAN common to both scenarios."/>
 
-Fig.1은 테스트베드의 전반적인 아키텍처를 보여준다.
+[Fig. 1]은 테스트베드의 전반적인 아키텍처를 보여준다.
 
 참고할만한 주요 문제와 해결과정은 다음과 같다.
 1. RAN: 오버플로우 문제를 피하기 위해 eNodeB 소프트웨어는 Ubuntu용 저지연 커널과 avx2 명령어를 지원하는 프로세서에 의존했다. <font color="gray">이 문제는 좀 더 알아봐야 할 것 같다.</font>
@@ -29,11 +29,14 @@ Fig.1은 테스트베드의 전반적인 아키텍처를 보여준다.
 
 사용 사례는 Magma-core와 OAI-CN 각각 다르게 적용될 수 있다. OAI-CN은 유연성이 크게 필요하지 않은 3GPP 호환 소규모 네트워크를 구축하는데 사용할 수 있다. 반대로 Magma는 Access Gateway(AGW)를 통해 다양한 RAT을 지원하기 때문에 운영자들이 정책과 HSS 등을 직접 정의할 수 있는 유연성을 가지고 있다. 이를 통해 저렴한 비용으로 네트워크 솔루션을 구축하고자 하는 시골 지역과 같은 사례에 유용하다. 그러나 코드와 문서의 미숙함, 배치 복잡성의 문제가 존재한다. 특히 RAN에 대한 최신 문서가 부족하다.
 
-<img src="/_pages/study/paper_review/images/magma_002/2.png"/>
+<img class="modal" src="/_pages/study/paper_review/images/magma_002/2.png" alt="<b>[Fig. 2]</b> Monitoring the performance of the end-to-end connection using Tracer (left side) and MME-log (right-up). Deployed testbed (right-down: 1) Antenna USRP B210, 2) Smartphone (Samsung galaxy S4), 3) Core network, 4) OAI-RAN)."/>
 
-결과는 Fig.2와 같다. 두 시나리오의 전반적인 throughput에 큰 차이는 없지만, OAI-CN은 UL throughput에서 더 좋은 성능을 보여줬다. CPU의 경우 OAI-CN의 경우 9-10%, Magma-core의 경우 3-4%의 사용량을 보였다. eNodeB는 공통적으로 60% CPU 사용량을 보였다.
+결과는 Fig.2와 같다. 두 시나리오의 전반적인 throughput에 큰 차이는 없지만, OAI-CN은 UL throughput에서 더 좋은 성능을 보였다. CPU의 경우 OAI-CN의 경우 9-10%, Magma-core의 경우 3-4%의 사용량을 보였다. eNodeB는 공통적으로 60% CPU 사용량을 보였다.
 
 ---
 
-그럼 이제부터 직접 테스트베드를 구축해보자.
+이제부터 직접 테스트베드를 구축해보자.<br>
+설치과정은 [Magma docs](https://magma.github.io/magma/docs/basics/introduction){:target="_blank"}를 참고했다.
+
+
 

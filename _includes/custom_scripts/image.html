@@ -11,10 +11,72 @@
     });
 </script>
 
-<!-- modal -->
+<!------------------------- modal -------------------------->
+<!-- Sample Code --> <!-- <img class="modal" src="1.png" alt="<b>[Fig. 2]</b> Hey"/> -->
+<div id="modalContainer" class="modal-container">
+  <div id="modalContent" class="modal-content">
+      <img id="modalImage" class="modal-image" alt="">
+      <div id="caption" class="caption"></div>
+  </div>
+</div>
+
+<script src="https://code.jquery.com/ui/1.13.2/jquery-ui.js"></script>
 <script>
-    const modal = document.querySelector('.modal');
-    $("#fade").modal({
-      fadeDuration: 100
+  let zoom = 1;
+  const zoomSpeed = 0.1;
+
+  $(document).ready(function() {
+    $('.modal').each(function(){
+      var imgAlt = $(this).attr('alt');
+      $(this).after("<div>"+imgAlt+"</div>")
     });
+  });
+  $('.modal').on('click', function() {
+      $('#modalContainer').fadeIn();
+      var imgSrc = $(this).attr('src');
+      var imgAlt = $(this).attr('alt');
+      $('#modalImage').attr('src', imgSrc);
+      $('#caption').html(imgAlt);
+      $('#modalContainer').css("display", "flex")
+      initializeModal();
+  });
+  $('#modalImage').on('mouseenter', function(e) {
+    $(this).css('cursor', 'grab');
+  });
+  $("#modalContent").draggable();
+  $(document).mousedown(function(e) {
+      if (!$('#modalContent').is(e.target) && $('#modalContent').has(e.target).length === 0) {
+          $('#modalContainer').fadeOut();
+          $('body').css("overflow-y", "scroll");
+      }
+  });
+  $(document).keydown(function(e) {
+    if (e.keyCode == 27) {
+      $('#modalContainer').fadeOut();
+      $('body').css("overflow-y", "scroll");
+    }
+  });
+
+  $('#modalContent').on('mousewheel', function(e) {
+    e.preventDefault();
+    if (e.originalEvent.wheelDelta / 120 > 0) {
+      zoom += zoomSpeed;
+    } else {
+      zoom -= zoomSpeed;
+    }
+    $('#modalContent').css({
+      transform: 'scale(' + zoom + ')'
+    });
+  });
+
+  function initializeModal() {
+    $('#modalContent').css({
+        top: "0px",
+        left: "0px"
+    });
+    $('#modalContent').css({
+        transform: 'none'
+    });
+    zoom = 1;
+  }
 </script>
