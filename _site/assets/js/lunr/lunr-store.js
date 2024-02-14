@@ -12,7 +12,7 @@ var store = [{
         "teaser": null
       },{
     "title": "About",
-    "excerpt":"          👤 이성진    🏫 경희대학교    📝 전자공학과    🎓 4학년    💼 학생입니다.       👤 LEE SUNGJIN    🏫 Kyunghee University    📝 Electronic Engineering    🎓 Senior    💼 Student.    🌐 Contact Me                                           Copyright  Copyright 2024. Lee Sung Jin All pictures cannot be copied without permission.   Copyright Attribution         ","url": "http://localhost:4000/about/"
+    "excerpt":"                      👤 이성진      🏫 경희대학교     📝 전자공학과     🎓 4학년     💼 학생입니다.           👤 LEE SUNGJIN      🏫 Kyunghee University     📝 Electronic Engineering     🎓 Senior     💼 Student.         🌐 Contact Me                                                                &nbsp;Copyright     Copyright 2024. Lee Sung Jin All pictures cannot be copied without permission.    Copyright Attribution    ","url": "http://localhost:4000/about/"
   },{
     "title": "Blog",
     "excerpt":"","url": "http://localhost:4000/blog/"

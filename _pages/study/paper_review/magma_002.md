@@ -31,7 +31,7 @@ OAI와 Magma-core 프로젝트는 소형 이동 통신 네트워크의 유연한
 
 <img class="modal" src="/_pages/study/paper_review/images/magma_002/2.png" alt="<b>[Fig. 2]</b> Monitoring the performance of the end-to-end connection using Tracer (left side) and MME-log (right-up). Deployed testbed (right-down: 1) Antenna USRP B210, 2) Smartphone (Samsung galaxy S4), 3) Core network, 4) OAI-RAN)."/>
 
-결과는 Fig.2와 같다. 두 시나리오의 전반적인 throughput에 큰 차이는 없지만, OAI-CN은 UL throughput에서 더 좋은 성능을 보였다. CPU의 경우 OAI-CN의 경우 9-10%, Magma-core의 경우 3-4%의 사용량을 보였다. eNodeB는 공통적으로 60% CPU 사용량을 보였다.
+결과는 [Fig. 2]와 같다. 두 시나리오의 전반적인 throughput에 큰 차이는 없지만, OAI-CN은 UL throughput에서 더 좋은 성능을 보였다. CPU의 경우 OAI-CN의 경우 9-10%, Magma-core의 경우 3-4%의 사용량을 보였다. eNodeB는 공통적으로 60% CPU 사용량을 보였다.
 
 ---
 

@@ -1,0 +1,87 @@
+---
+layout: pages
+title: "About"
+permalink: /about/
+---
+
+<div class="about__container-row">
+  <div style="border:#aaa 1px solid;border-radius:50%;overflow:hidden;width:10%;height:auto;">
+    <img src="/assets/images/portrait.jpg" width="100%" style="user-select:none;-webkit-user-drag:none;">
+  </div>
+</div>
+
+<div class="about__container-row">
+  <div class = "about__info" markdown="1">
+    <p>👤 이성진</p>
+    <span>🏫 경희대학교</span>
+    <span>📝 전자공학과</span>
+    <span>🎓 4학년</span>
+    <span>💼 학생입니다.</span>
+  </div>
+  <div class = "about__info" markdown="1">
+    <p>👤 LEE SUNGJIN</p>
+    <span>🏫 Kyunghee University</span>
+    <span>📝 Electronic Engineering</span>
+    <span>🎓 Senior</span>
+    <span>💼 Student.</span>
+  </div>
+</div>
+
+<div class="about__title">
+  🌐 Contact Me
+</div>
+
+<div class="about__container-row">
+  <a href="https://github.com/asungajinli" class="contact" target="_blank" rel="me">
+    <i class="fab fa-fw fa-github" aria-hidden="true"></i>
+  </a>
+  <a href="https://instagram.com/sdin.99" class="contact" target="_blank" rel="me">
+    <i class="fab fa-fw fa-instagram" aria-hidden="true"></i>
+  </a>
+  <a class="contact modal-link" alt="" data-target="modalContainer" rel="me">
+    <i class="fas fa-fw fa-comment" style="cursor:pointer;" aria-hidden="true"></i>
+  </a>
+  <a href="https://www.linkedin.com/in/asungajinli" class="contact" target="_blank" rel="me">
+    <i class="fab fa-fw fa-linkedin" aria-hidden="true"></i>
+  </a>
+  <a href="mailto:ssjj3552@gmail.com" class="contact" rel="me">
+    <i class="fas fa-fw fa-envelope-square" aria-hidden="true"></i>
+  </a>
+</div>
+
+<div class="about__title">
+  <i class="fas fa-fw fa-copyright" aria-hidden="true"></i>&nbsp;Copyright
+</div>
+<div class="about__container-column">
+  <span>Copyright 2024. Lee Sung Jin All pictures cannot be copied without permission.</span>
+  <a href="/copyright/" style="text-decoration:none;" rel="nofollow noopener noreferrer"> Copyright Attribution</a>
+</div>
+
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script>
+  $('.modal-link').on('click', function() {
+      $('#modalContainer').fadeIn();
+      var imgSrc = '/assets/images/KakaoAddFriend.png';
+      var imgAlt = 'QR코드를 찍으세요';
+      $('#modalImage').attr('src', imgSrc);
+      $('#caption').html(imgAlt);
+      $('#modalContainer').css("display", "flex")
+      initializeModal();
+  });
+  $('#modalImage').on('mouseenter', function(e) {
+    $(this).css('cursor', 'grab');
+  });
+  $("#modalContent").draggable();
+  $(document).mousedown(function(e) {
+      if (!$('#modalContent').is(e.target) && $('#modalContent').has(e.target).length === 0) {
+          $('#modalContainer').fadeOut();
+          $('body').css("overflow-y", "scroll");
+      }
+  });
+  $(document).keydown(function(e) {
+    if (e.keyCode == 27) {
+      $('#modalContainer').fadeOut();
+      $('body').css("overflow-y", "scroll");
+    }
+  });
+</script>
