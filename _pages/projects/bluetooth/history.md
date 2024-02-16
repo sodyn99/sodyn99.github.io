@@ -15,3 +15,4 @@ Bluetooth 역사에서 빠질 수 없는 중요한 사건(?)은 Bluetooth 4.0부
 # <a name="Reference"></a>Reference
 
 1. <a href='https://spri.kr/posts/view/21964?code=industry_trend' target='_blank'>SPRi소프트웨어정책연구소</a>
+{:.post__reference}

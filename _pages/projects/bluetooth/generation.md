@@ -47,7 +47,6 @@ BLE는 Advertise mode와 Connection mode 이렇게 2가지 모드를 통해 통�
 # <a name="Reference"></a>Reference
 
 1. <a href='https://makersweb.net/embedded/14289' target='_blank'>MakersWeb</a>
-
 2. <a href='https://community.silabs.com/s/share/a5U1M000000knyFUAQ/a-short-history-of-the-bluetooth-ble-standard-ble-beacons-and-gatt?language=en_US' target='_blank'>Silicon Labs</a>
-
 3. <a href='https://www.bluetooth.com/learn-about-bluetooth/tech-overview/' target='_blank'>Bluetooth SIG</a>
+{:.post__reference}
