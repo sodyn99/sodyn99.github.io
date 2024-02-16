@@ -92,12 +92,17 @@
     }
 }
 .page__slider {
+    transition: all 0.2s;
     margin: 0;
     cursor: pointer;
     width: 100%;
     padding: 1em 0.5em;
     ul {
         list-style-type: disc;
+    }
+    dt {
+        font-size: 1.2em;
+        font-weight: bold;
     }
     &:hover {
         background-color: #f2f2f2;

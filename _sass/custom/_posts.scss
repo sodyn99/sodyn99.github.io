@@ -44,6 +44,11 @@
     font-weight: 700;
     font-size: 2em;
 }
+.post__head-description {
+    font-size: 0.8em;
+    border-left: 0.2em solid orange;
+    padding-left: 1em;
+}
 
 .post__section {
     width: 100%;
@@ -83,4 +88,74 @@
         width: $x-large;
         max-width: $max-width;
     }
+    h1, h2, h3, h4, h5, h6 {
+        padding-top: 1em;
+        padding-bottom: 0.5em;
+		.header-link {
+			position: relative;
+			left: 0.5em;
+			opacity: 0;
+			font-size: 0.8em;
+			-webkit-transition: opacity 0.2s ease-in-out 0.1s;
+			-moz-transition: opacity 0.2s ease-in-out 0.1s;
+			-o-transition: opacity 0.2s ease-in-out 0.1s;
+			transition: opacity 0.2s ease-in-out 0.1s;
+		}
+
+		&:hover .header-link {
+			opacity: 1;
+		}
+	}
+    p,
+    li,
+    dl {
+      font-size: 1em;
+    }
+
+    /* paragraph indents */
+    p {
+      margin: 0 0 $indent-var;
+
+      /* sibling indentation*/
+      @if $paragraph-indent == true {
+        & + p {
+          text-indent: $indent-var;
+          margin-top: -($indent-var);
+        }
+      }
+    }
+    ul {
+        margin: 0 0 $indent-var;
+    }
+
+    .img__small{
+        max-width: 50%;
+    }
+    .img__medium{
+        max-width: 70%;
+    }
+    .img__large{
+        max-width: 90%;
+    }
+}
+
+.post__stage-container {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    flex-direction: row;
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
+    justify-content: center;
+    margin: 0 0 $indent-var;
+}
+.post__stage {
+    padding-right: 1.5em;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    flex-direction: column;
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
+    justify-content: center;
 }

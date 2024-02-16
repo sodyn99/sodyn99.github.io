@@ -9,6 +9,9 @@
 <lastmod>2023-01-02T00:00:00+09:00</lastmod>
 </url>
 <url>
+<loc>http://localhost:4000/study/communication/optimization/3/</loc>
+</url>
+<url>
 <loc>http://localhost:4000/about/</loc>
 </url>
 <url>
@@ -27,7 +30,16 @@
 <loc>http://localhost:4000/copyright/</loc>
 </url>
 <url>
+<loc>http://localhost:4000/projects/bluetooth/generation/</loc>
+</url>
+<url>
+<loc>http://localhost:4000/projects/bluetooth/history/</loc>
+</url>
+<url>
 <loc>http://localhost:4000/</loc>
+</url>
+<url>
+<loc>http://localhost:4000/projects/bluetooth/law/</loc>
 </url>
 <url>
 <loc>http://localhost:4000/study/paper_review/magma_001/</loc>
@@ -49,6 +61,9 @@
 </url>
 <url>
 <loc>http://localhost:4000/search/</loc>
+</url>
+<url>
+<loc>http://localhost:4000/projects/bluetooth/simulation/</loc>
 </url>
 <url>
 <loc>http://localhost:4000/study/</loc>

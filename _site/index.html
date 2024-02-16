@@ -418,10 +418,8 @@
 
 
 <!-- mathjax -->
-<script type="text/javascript" async
-	src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/latest.js?config=TeX-MML-AM_CHTML">
+<script type="text/javascript" async src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/latest.js?config=TeX-MML-AM_CHTML">
 </script>
-
 <script type="text/x-mathjax-config">
    MathJax.Hub.Config({
      extensions: ["tex2jax.js"],
@@ -466,7 +464,7 @@
   $(document).ready(function() {
     $('.modal').each(function(){
       var imgAlt = $(this).attr('alt');
-      $(this).after("<div>"+imgAlt+"</div>")
+      $(this).after("<div class='caption'>"+imgAlt+"</div>")
     });
   });
   $('.modal').on('click', function() {
