@@ -107,3 +107,9 @@
 .notice--danger {
   @include notice($danger-color);
 }
+
+/* Callout notice --- 노션의 콜아웃처럼 강조나 박스 처리 용도*/
+
+.notice--callout {
+  @include notice($callout-color);
+}
