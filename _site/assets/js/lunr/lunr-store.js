@@ -11,8 +11,14 @@ var store = [{
         "url": "/test-2/",
         "teaser": null
       },{
+    "title": "5G 표준화",
+    "excerpt":"표준화 단체 표준화 단체는 크게 2가지로 알면 된다. 바로 ITU와 3GPP이다. ITU는 국제전기통신연합으로 유엔 산하의 국제 기구다. 기술 표준을 제정하는 것 뿐만 아니라 주파수 관리, 위성 관리, 개발도상국 기술 지원 등의 역할을 하고 있다. 3GPP는 유럽의 ETSI, 일본의 TTC, 중국의 CCSA, 한국의 TTA, 미국의 ATIS가 연합하여 설립한 국제 표준화 단체이다....","url": "http://localhost:4000/study/communication/5g/1/"
+  },{
     "title": "Mathematical Methods for Wireless Communications",
     "excerpt":"Signal Spaces 위 그림은 우리가 흔히 알고 있는 통신 시스템의 구조를 나타낸 것이다. 이러한 통신 시스템을 수학적으로 분석하기 위한 가장 기본적인 개념은 Signal Space 이다. Approximation and Estimation in Signal Spaces Minimum Mean-Squared Error Estimation 추정이라는 단어가 본의 아니게 많이 사용되게 되는데 추정, 추정값, 추정자 등등 헷갈리는 사태를 방지하기 위해...","url": "http://localhost:4000/study/communication/optimization/3/"
+  },{
+    "title": "5G",
+    "excerpt":"                                    5G 표준화                        ","url": "http://localhost:4000/study/communication/5g/"
   },{
     "title": "About",
     "excerpt":"                      👤 이성진      🏫 경희대학교     📝 전자공학과     🎓 4학년     💼 학생입니다.           👤 LEE SUNGJIN      🏫 Kyunghee University     📝 Electronic Engineering     🎓 Senior     💼 Student.         🌐 Contact Me                                                                &nbsp;Copyright     Copyright 2024. Lee Sung Jin All pictures cannot be copied without permission.    Copyright Attribution    ","url": "http://localhost:4000/about/"
@@ -27,7 +33,7 @@ var store = [{
     "excerpt":" ","url": "http://localhost:4000/categories/"
   },{
     "title": "Communication",
-    "excerpt":"                                    Optimization                        ","url": "http://localhost:4000/study/communication/"
+    "excerpt":"                                    5G                                        Optimization                        ","url": "http://localhost:4000/study/communication/"
   },{
     "title": "Copyright Attribution",
     "excerpt":"Powered by Jekyll &amp; Minimal Mistakes. Source & License Logo Logo: 3D monstera plant with holes in its leaves by Icons 8 Source/License: Illustration by Icons 8 from Ouch! Fonts Font: Suit by Sunn Source/License: SIL Open Font License v1.1 Font: Roboto by Christian Robertson Source/License: Google Fonts Attribution Font:...","url": "http://localhost:4000/copyright/"
@@ -60,7 +66,7 @@ var store = [{
     "excerpt":"이 논문은 LTE 특화망 구축에 오픈소스인 OpenAirInterface와 Magma Core를 사용하는 두 가지 시나리오를 비교하는 내용이다. 단순한 비교 뿐만아니라 테스트베드의 배치과정에서의 시행착오, 가능한 사용 사례에 대한 고려도 함께 설명하고 있다. 앞서 LTE 특화망이라고 했지만, 궁극적으로는 NGN을 목표로 하고 있다. NGN의 새로운 비즈니스 요구 사항에 늘어나는 서비스 제공업체, 소규모 운영자 등이 포함되어...","url": "http://localhost:4000/study/paper_review/magma_002/"
   },{
     "title": "Bluetooth Multiple Connection",
-    "excerpt":"블루투스 기기 여러 대를 동시에 연결할 수 있을까? 블루투스를 일상생활에서 항상 활용하는 나도 매번 헷갈려하는 문제다.  여러 대를 동시에 연결한다는 것은 point-to-point, 즉 일대일 연결을 말하는 것이다. Broadcast 방식의 단방향 전송은 해당하지 않는다.  기본적으로 여러 기기를 **동시**에 연결하기 위해서는 기기들이 보내는 패킷에 충돌이 일어나면 안된다.","url": "http://localhost:4000/projects/bluetooth/multiple_connection/"
+    "excerpt":"Bluetooth 기기 여러 대를 동시에 연결할 수 있을까? Bluetooth를 일상생활에서 항상 활용하는 여러분들도 아마 매번 헷갈려하는 문제일 것이다. 여러 대를 동시에 연결한다는 것은 point-to-point, 즉 일대일 연결을 말하는 것이다. Broadcast 방식의 단방향 전송은 해당하지 않는다. BLE 표준 문서는 기본적으로 기본적으로 여러 기기를 **동시**에 연결하기 위해서는 기기들이 보내는 패킷에 충돌이 일어나면...","url": "http://localhost:4000/projects/bluetooth/multiple_connection/"
   },{
     "title": "Optimization",
     "excerpt":"                                    Mathematical Methods for Wireless Communications                        ","url": "http://localhost:4000/study/communication/optimization/"

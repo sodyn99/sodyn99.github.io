@@ -1,3 +1,11 @@
 <script>
     $('.posts__reference').find('li:eq(0)').marker().css('color', 'red');
 </script>
+
+<script>
+  $(document).ready(function() {
+    $('.posts__caption').each(function(){
+      $(this).after("<div class='caption'>"+$(this).attr('alt')+"</div>")
+    });
+  });
+</script>
