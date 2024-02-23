@@ -6,15 +6,13 @@ permalink: /projects/bluetooth/multiple_connection/
 
 Bluetooth 기기 여러 대를 동시에 연결할 수 있을까? Bluetooth를 일상생활에서 항상 활용하는 여러분들도 아마 매번 헷갈려하는 문제일 것이다. 여러 대를 동시에 연결한다는 것은 point-to-point, 즉 일대일 연결을 말하는 것이다. Broadcast 방식의 단방향 전송은 해당하지 않는다.
 
-BLE 표준 문서는 기본적으로
-
-기본적으로 여러 기기를 **동시**에 연결하기 위해서는 기기들이 보내는 패킷에 충돌이 일어나면 안된다. 이를 막기 위해 같은 피코넷을 공유하는 기기들간의 통신은 Time Division Multiplexing(TDM) 방식을 사용한다. TDM은 시간을 나눠서 여러 기기가 동시에 사용할 수 있도록 한다. 이 때, 각 기기는 자신에게 할당된 시간만큼만 사용한다.
+Blueooth 제품을 만들기 앞서 다중 연결 여부를 고려하는 것은 중요하다. 다중 연결이 필요할 경우 고려해야 할 상황과 방안을 알아보도록 하자.
 
 # Coexistence And Collocation
 
 우선 그러기 위해서는 Bluetooth의 다중 분할 방식에 대해 알아볼 필요가 있다. 상세한 내용은 Bluetooth Core Specification<sup><a href='#Reference'>[1]</a></sup>의 285 페이지(또는 섹션 7)을 참고하기 바란다.
 
-Bluetooth는 알다시피 2.4 GHz의 ISM 대역을 사용하기 때문에 같은 대역을 사용하는 무선 장치들과의 간섭을 피하는 것이 중요하다. 이를 위해 크게 FDD 방식과 TDD 방식의 다중 분할 방식을 사용한다. Isolation이 충분할 경우 FDD 방식을 채택하고, isolation이 부족하거나 공유 안테나의 경우 TDD 방식을 사용한다.
+Bluetooth는 알다시피 2.4 GHz의 ISM 대역을 사용하기 때문에 같은 대역을 사용하는 무선 장치들과의 간섭을 피하는 것이 중요하다. 이를 위해 크게 FDD와 TDD 다중 분할 방식을 사용한다. Isolation이 충분할 경우 FDD 방식을 채택하고, isolation이 부족하거나 공유 안테나의 경우 TDD 방식을 사용한다.
 
 | Feature                        | Version | Introduced Description                                          |
 |--------------------------------|---------|-----------------------------------------------------------------|
@@ -28,11 +26,23 @@ Bluetooth는 알다시피 2.4 GHz의 ISM 대역을 사용하기 때문에 같은
 | Slot Availability Mask        | 5.0     | Provides a mechanism for two Bluetooth devices to indicate to each other the availability of their time slots |
 {:.posts__caption alt="<b>[Table. 1]</b> Interference mitigation features <a href='#Reference'>[1]</a>."}
 
-위 [Table. 1]은 Core Specification에 나와있는 기능을 그대로 가져와 본 것이다. 여기에 있는 기능들을 다 다루지는 않고 중요한 몇가지만 알아보겠다.
+위 [Table. 1]은 Core Specification에 나와있는 기능을 그대로 가져와 본 것이다. 여기에 있는 기능들을 다 다루지는 않고 Bluetooth 다중 연결을 위한 몇가지만 알아보겠다.
 
 ## Adaptive Frequency Hopping
 
-Adaptive Frequency Hopping(AFH)는 Bluetooth 장치가 간섭을 일으키지 않게 하기 위한 가장 기본적인 기능이다.
+Frequency Hopping는 Bluetooth 장치가 간섭을 일으키지 않게 하기 위한 가장 기본적인 기능이다. 그 중 Adaptive Frequency Hopping(AFH)는 'Adaptive(적응형)' 말그대로 상황에 따라 능동적으로 채널을 사용하겠다는 것이다.
+
+
+
+# Bluetooth Mesh
+
+Bluetooth는 LE를 기반으로 하는 Mesh 네트워크를 지원한다. Mesh는 다대다 통신이 가능한 구조로 주로 스마트홈이나 스마트빌딩 등 IoT 환경에서 주로 사용된다. 이미 Zigbee, WiFi, Thread 등 Mesh 네트워크를 구축하기위한 여러 프로토콜이 있지만, Bluetooth Mesh가 가지는 장점이 존재한다.
+
+우선 Mesh 네트워크의 데이터 전달방식에 대해 알아볼 필요가 있다. **Routing** 방식과 **Flooding** 방식이 있는데, Zigbee와 Thread가 Routing 방식을 사용하고, Bluetooth는 Flooding 방식을 사용한다. Routing은 말그대로 각 네트워크 노드가 라우팅 테이블을 가지고 있고, 이를 기반으로 해당 주소로 데이터를 보낸다. Flooding은 노드에 데이터가 들어오면 주변 노드로 broadcast하여 데이터를 전달한다. Flooding이 직역하면 '홍수'라는 말에서 알 수 있듯 데이터가 홍수처럼 퍼져나간다고 생각할 수 있다.
+
+<img class="modal img__small" src="/_pages/projects/bluetooth/images/multiple_connection/1.webp" alt="<b>[Fig. 1]</b> BLE meshnets with managed flooding and routing <a href='#Reference'>[2]</a>."/>
+
+받은 데이터를 계속해서 broadcast하게 되면, 데이터 수가 너무 많아질 뿐더러 영원히 사라지지 않는것이 아닐까 하는 생각이 들 수 있다. 이를 방지하기 위한 여러가지 기능이 있지만, 대표적인 것이 data cache와 Time To Live(TTL)이다. 각 홉(노드)은 이미 보낸 데이터를 cache하고 있어서 cached 데이터와 동일한 데이터가 들어올 시에는 전송시키지 않는다. TTL은 쉽게 말해 데이터에 수명을 부여하는 방식이다. 홉을 지나갈 때마다 TTL을 1씩 감소시키고, TTL이 0이 되면 해당 데이터는 폐기한다.
 
 
 
@@ -41,4 +51,5 @@ Adaptive Frequency Hopping(AFH)는 Bluetooth 장치가 간섭을 일으키지 �
 # <a name="Reference"></a>Reference
 
 1. Woolley, Martin (7 February 2023). "[Bluetooth® Core Specification Version 5.4](https://www.bluetooth.org/DocMan/handlers/DownloadDoc.ashx?doc_id=556599){:target="_blank"}" (PDF). bluetooth.com. Retrieved 19 February 2024.
+2. Andrey Solovev, Anna Petrova, "Bluetooth Mesh: Technology Overview, Examples, Alternatives, and First-Hand Experience," <i>Integra Sources Blog</i>, 2019. [Online]. Available: [https://www.integrasources.com/blog/bluetooth-mesh-network-tutorial/](https://www.integrasources.com/blog/bluetooth-mesh-network-tutorial/){:target="_blank"}. [Accessed: 10- Feb- 2024].
 {:.post__reference}

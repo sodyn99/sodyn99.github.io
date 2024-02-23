@@ -1,7 +1,7 @@
 ---
 layout: posts
-title: "표준화"
-permalink: /study/communication/5g/1/1/
+title: "5G 개요"
+permalink: /study/communication/5g/1/back/
 description:
 ---
 

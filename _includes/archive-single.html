@@ -10,7 +10,7 @@
   {% assign title = post.title %}
 {% endif %}
 
-<div class="{{ include.type | default: 'list' }}__item">
+<!-- <div class="{{ include.type | default: 'list' }}__item">
   <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
     {% if include.type == "grid" and teaser %}
       <div class="archive__item-teaser">
@@ -27,4 +27,35 @@
     {% include page__meta.html type=include.type %}
     {% if post.excerpt %}<p class="archive__item-excerpt" itemprop="description">{{ post.excerpt | markdownify | strip_html | truncate: 160 }}</p>{% endif %}
   </article>
+</div> -->
+
+<div class="blog__container" OnClick="location.href ='{{ post.url | relative_url }}'">
+  <div class="blog__teaser">
+      <img src="{{ post.teaser }}" class="blog__image"></img>
+      {% assign document = post | default: page %}
+      {% if document.read_time or document.show_date %}
+        <p class="blog__meta">
+          {% if document.show_date and document.date %}
+            {% assign date = document.date %}
+            <span class="blog__meta-date">
+              {% assign date_format = site.date_format | default: "%B %-d, %Y" %}
+              <time datetime="{{ date | date_to_xmlschema }}">{{ date | date: date_format }}</time>
+            </span>
+          {% endif %}
+        </p>
+      {% endif %}
+  </div>
+  <div class="blog__content">
+    <div class="blog__info">
+        <div class="blog__category">{{ post.category }}</div>
+        <div class="blog__title">
+          {% if post.link %}
+            <a href="{{ post.link }}">{{ title }}</a> <a href="{{ post.url | relative_url }}" rel="permalink"><i class="fas fa-link" aria-hidden="true" title="permalink"></i><span class="sr-only">Permalink</span></a>
+          {% else %}
+            <a href="{{ post.url | relative_url }}" rel="permalink">{{ title }}</a>
+          {% endif %}
+        </div>
+        {% if post.excerpt %}<div class="blog__description"><p class="archive__item-excerpt" itemprop="description">{{ post.excerpt | markdownify | strip_html | truncate: 160 }}</p></div>{% endif %}
+    </div>
+  </div>
 </div>

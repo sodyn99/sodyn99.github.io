@@ -91,6 +91,7 @@
     h1, h2, h3, h4, h5, h6 {
         padding-top: 1em;
         padding-bottom: 0.5em;
+        margin: 0;
 		.header-link {
 			position: relative;
 			left: 0.5em;
@@ -125,7 +126,7 @@
       }
     }
     ul {
-        margin: 0 0 $indent-var;
+        margin: 0.5em 0;
     }
 
     .img__small{
@@ -147,7 +148,7 @@
     -webkit-box-pack: justify;
     -ms-flex-pack: justify;
     justify-content: center;
-    margin: 0 0 $indent-var;
+    margin: 0.5em 0;
 }
 .post__stage {
     max-width: 50%;
