@@ -92,13 +92,14 @@
     }
 }
 .hero__image {
-    border-radius: 4em;
+    border-radius: 2.5em;
     height: 300px;
     width: 500px;
     object-fit: cover;
     @include breakpoint($medium) {
         height: 400px;
         width: 400px;
+        border-radius: 4em;
     }
     @include breakpoint($large) {
         height: 500px;
@@ -187,9 +188,10 @@
     }
 }
 .home__section-card {
+    position: relative;
     flex: auto;
     cursor: pointer;
-    border-radius: 1em;
+    border-radius: 2.5em;
     overflow: hidden;
     margin: 10px;
     width: 450px;
@@ -201,6 +203,7 @@
     @include breakpoint($medium) {
         width: calc(768px / 2 - 20px);
         height: calc(768px / 2 - 20px);
+        border-radius: 1em;
     }
     @include breakpoint($medium-wide) {
         width: calc(900px / 3 - 20px);
@@ -225,7 +228,7 @@
 .home__section-cover {
     position: absolute;
     opacity: 0;
-    border-radius: 1em;
+    border-radius: 2.5em;
     background: linear-gradient(to top, rgb(255, 166, 0), rgba(255, 166, 0, 0.8), transparent);
     transition: opacity .2s ease-in-out;
     display: -webkit-box;
@@ -239,8 +242,7 @@
     -ms-flex-pack: justify;
     justify-content: center;
     padding-bottom: 2.5em;
-    width: 450px;
-    max-width: 90%;
+    width: 100%;
     height: 450px;
     @include breakpoint($small) {
         width: calc(600px - 20px);
@@ -249,6 +251,7 @@
     @include breakpoint($medium) {
         width: calc(768px / 2 - 20px);
         height: calc(768px / 2 - 20px);
+        border-radius: 1em;
     }
     @include breakpoint($medium-wide) {
         width: calc(900px / 3 - 20px);

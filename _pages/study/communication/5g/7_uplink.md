@@ -67,4 +67,5 @@ PUCCH format 별로
 2. “PUCCH Formats in 5G.” Youtube, Wireless Explained, 4 May 2023, [https://www.youtube.com/watch?v=g6IjHANJ180](https://www.youtube.com/watch?v=g6IjHANJ180){:target="_blank"}.
 3. NTT DOCOMO, INC., “WI Summary of New Radio Access Technology,” [3GPP TDocs (written contributions) at meeting](https://www.3gpp.org/dynareport?code=TDocExMtg--RP-80--18663.htm){:target="_blank"}, RP-180990, 2018.
 4. Erik Dahlman, Stefan Parkvall, Johan Sköld,Chapter 10 - Physical-Layer Control Signaling, Editor(s): Erik Dahlman, Stefan Parkvall, Johan Sköld, 5G NR (Second Edition), Academic Press, 2021, Pages 197-241.
+5. ShareTechnote, [5G/NR - PUCCH](https://www.sharetechnote.com/html/5G/5G_PUCCH.html){:target="_blank"}.
 {:.post__reference}
