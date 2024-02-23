@@ -75,7 +75,7 @@ var store = [{
     "excerpt":"                                    6G                                        5G                                        Optimization                                        Mobility                        ","url": "http://localhost:4000/study/communication/"
   },{
     "title": "Copyright Attribution",
-    "excerpt":"Powered by Jekyll &amp; Minimal Mistakes. Source & License Logo Logo: 3D monstera plant with holes in its leaves by Icons 8 Source/License: Illustration by Icons 8 from Ouch! Fonts Font: Suit by Sunn Source/License: SIL Open Font License v1.1 Font: Roboto by Christian Robertson Source/License: Google Fonts Attribution Font:...","url": "http://localhost:4000/copyright/"
+    "excerpt":"Powered by Jekyll &amp; Minimal Mistakes. Source & License Logo Created by ChatGPT Fonts Font: Suit by Sunn Source/License: SIL Open Font License v1.1 Font: Roboto by Christian Robertson Source/License: Google Fonts Attribution Font: Noto Sans Korean by Google Source/License: Google Fonts Attribution Font: Termina by Mattox Shuler Source/License: Adobe...","url": "http://localhost:4000/copyright/"
   },{
     "title": "Data Analysis",
     "excerpt":"","url": "http://localhost:4000/study/data_analysis/"
