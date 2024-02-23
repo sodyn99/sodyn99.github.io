@@ -30,7 +30,7 @@
             <a href="{{ post.url | relative_url }}" rel="permalink">{{ title }}</a>
           {% endif %}
         </div>
-        {% if post.excerpt %}<div class="blog__description"><p class="archive__item-excerpt" itemprop="description">{{ post.excerpt | markdownify | strip_html | truncate: 160 }}</p></div>{% endif %}
+        {% if post.excerpt %}<div class="blog__description"><p class="archive__item-excerpt" itemprop="description">{{ post.excerpt | markdownify | strip_html | truncate: 100 }}</p></div>{% endif %}
     </div>
   </div>
 </div>
