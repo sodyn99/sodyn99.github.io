@@ -56,19 +56,6 @@ search: false
     <p> My personal posts </p>
   </div>
   <div class="home__section-contents">
-    {% assign posts = site.posts %}
-
-    {% assign entries_layout = page.entries_layout | default: 'list' %}
-    <div class="entries-{{ entries_layout }}">
-      <!-- Recent Post용 Draggable Wrapper 추가 예정 -->
-      <!-- <div class="home__wrapper"> -->
-        <!-- <i id="homeWrapperLeftBtn" class="fa fa-angle-left"></i> -->
-        {% for post in posts limit:3%}
-          {% include archive-single.html type=entries_layout %}
-        {% endfor %}
-        <!-- <i id="homeWrapperRightBtn" class="fa fa-angle-right"></i> -->
-      <!-- </div> -->
-    </div>
   </div>
 </div>
 
