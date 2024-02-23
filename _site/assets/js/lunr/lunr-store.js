@@ -2,13 +2,13 @@ var store = [{
         "title": "Blog 소개",
         "excerpt":"여기 Blog 페이지에는 많은 것을 올리진 않을 것 같고 일상적인 것들이나 생각 같은 것들만 간단하게 쓸 것같다.  ","categories": ["daily"],
         "tags": [],
-        "url": "/daily/blogintro/",
+        "url": "/daily/1/",
         "teaser": null
       },{
         "title": "5G-Advanced 및 6G 동향",
         "excerpt":"5G 서비스는 과도기라는 말을 들을 정도로 어려움을 겪었다. 통신사들 자체의 서비스적인 측면을 떠나서 한국의 경우 이미 4G에 대한 만족도가 높은 상황에서 5G에 큰 메리트를 느끼기 어려웠다 라고 볼 수 있을 것 같다. 4G가 상용화 되면서 OTT나 Youtube와 같은 서비스들이 사용자들에게 새로운 경험을 선사했는데 5G는 아직까지도 대다수의 사람들에게 신선한 경험을 선사하는...","categories": ["6G"],
         "tags": [],
-        "url": "/6g/6gtrends/",
+        "url": "/6g/2/",
         "teaser": null
       },{
     "title": "5G 개요",
@@ -19,6 +19,9 @@ var store = [{
   },{
     "title": "표준화",
     "excerpt":"표준화 표준화 단체는 크게 2가지로 알면 된다. 바로 ITU와 3GPP이다. ITU는 국제전기통신연합으로 유엔 산하의 국제 기구다. 기술 표준을 제정하는 것 뿐만 아니라 주파수 관리, 위성 관리, 개발도상국 기술 지원 등의 역할을 하고 있다. 3GPP는 유럽의 ETSI, 일본의 TTC, 중국의 CCSA, 한국의 TTA, 미국의 ATIS가 연합하여 설립한 국제 표준화 단체이다. 3GPP의...","url": "http://localhost:4000/study/communication/5g/1/1/"
+  },{
+    "title": "6G 개요",
+    "excerpt":"#   — –&gt; &lt;!–  Reference     TTA, “3GPP, 6G 표준화 주요 일정 확정,” TTA 보도 자료, 2023년 12월 18일. [Online]. Available: https://www.tta.or.kr/tta/selectBbsNttView.do?key=76&amp;bbsNo=107&amp;nttNo=13137&amp;searchCtgry=&amp;searchCnd=all&amp;searchKrwd=&amp;integrDeptCode=&amp;pageIndex=1. [Accessed: 19- Feb- 2024].   ETSI  ","url": "http://localhost:4000/study/communication/6g/1/"
   },{
     "title": "기본 철학",
     "excerpt":"1. 높은 주파수 대역 넓은 대역폭을 위해 mmWave를 사용. &#8618; 높은 대역 But! mmWave를 사용하면, pathloss &uarr; cell coverage &darr; 해결? MIMO, Beamforming, 낮은 주파수 대역과 협력 운용. 2. Ultra-Lean 'Always-on' 신호를 줄이기 위함. always-on? 사용자 트래픽에 상관없이 전송되는 신호(e.g. 기지국 감지 신호, 브로드캐스트 신호, 항상 켜져있는 레퍼런스 시그널 등)....","url": "http://localhost:4000/study/communication/5g/1/2/"
