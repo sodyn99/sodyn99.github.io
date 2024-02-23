@@ -191,7 +191,7 @@
     position: relative;
     flex: auto;
     cursor: pointer;
-    border-radius: 2.5em;
+    border-radius: 1em;
     overflow: hidden;
     margin: 10px;
     width: 450px;
@@ -203,7 +203,6 @@
     @include breakpoint($medium) {
         width: calc(768px / 2 - 20px);
         height: calc(768px / 2 - 20px);
-        border-radius: 1em;
     }
     @include breakpoint($medium-wide) {
         width: calc(900px / 3 - 20px);
@@ -228,7 +227,7 @@
 .home__section-cover {
     position: absolute;
     opacity: 0;
-    border-radius: 2.5em;
+    border-radius: 1em;
     background: linear-gradient(to top, rgb(255, 166, 0), rgba(255, 166, 0, 0.8), transparent);
     transition: opacity .2s ease-in-out;
     display: -webkit-box;
@@ -243,28 +242,7 @@
     justify-content: center;
     padding-bottom: 2.5em;
     width: 100%;
-    height: 450px;
-    @include breakpoint($small) {
-        width: calc(600px - 20px);
-        height: calc(600px - 20px);
-    }
-    @include breakpoint($medium) {
-        width: calc(768px / 2 - 20px);
-        height: calc(768px / 2 - 20px);
-        border-radius: 1em;
-    }
-    @include breakpoint($medium-wide) {
-        width: calc(900px / 3 - 20px);
-        height: calc(900px / 3 - 20px);
-    }
-    @include breakpoint($large) {
-        width: calc(1024px / 3 - 20px);
-        height: calc(1024px / 3 - 20px);
-    }
-    @include breakpoint($x-large) {
-        width: calc(1280px / 3 - 20px);
-        height: calc(1280px / 3 - 20px);
-    }
+    height: 100%;
 }
 .home__section-card:hover .home__section-cover  {
     opacity: 1;
