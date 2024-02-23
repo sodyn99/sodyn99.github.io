@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9 http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd" xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 <url>
-<loc>http://localhost:4000/daily/1/</loc>
+<loc>http://localhost:4000/daily/blog-%EC%86%8C%EA%B0%9C/</loc>
 <lastmod>2024-02-10T00:00:00+09:00</lastmod>
 </url>
 <url>
-<loc>http://localhost:4000/6g/2/</loc>
+<loc>http://localhost:4000/6g/6G-%EB%8F%99%ED%96%A5/</loc>
 <lastmod>2024-02-22T00:00:00+09:00</lastmod>
 </url>
 <url>
@@ -75,6 +75,9 @@
 <loc>http://localhost:4000/copyright/</loc>
 </url>
 <url>
+<loc>http://localhost:4000/study/data_analysis/</loc>
+</url>
+<url>
 <loc>http://localhost:4000/projects/bluetooth/generation/</loc>
 </url>
 <url>
@@ -82,6 +85,9 @@
 </url>
 <url>
 <loc>http://localhost:4000/</loc>
+</url>
+<url>
+<loc>http://localhost:4000/projects/kpi/</loc>
 </url>
 <url>
 <loc>http://localhost:4000/projects/bluetooth/law/</loc>
