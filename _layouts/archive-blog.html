@@ -8,16 +8,7 @@ layout: pages
   {% include page__hero_video.html %}
 {% endif %}
 
-<!-- {% if page.url != "/" and site.breadcrumbs %}
-  {% unless paginator %}
-    {% include breadcrumbs.html %}
-  {% endunless %}
-{% endif %} -->
-
-
-<div class="archive">
-  {% unless page.header.overlay_color or page.header.overlay_image %}
-    <!-- <h1 id="page-title" class="page__title">{{ page.title }}</h1> -->
-  {% endunless %}
-  {{ content }}
-</div>
+{% unless page.header.overlay_color or page.header.overlay_image %}
+  <!-- <h1 id="page-title" class="page__title">{{ page.title }}</h1> -->
+{% endunless %}
+{{ content }}
