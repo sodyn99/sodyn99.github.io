@@ -26,23 +26,9 @@ PUCCH를 위한 자원할당은 Payload 크기와 채널 상태에 따라 적합
 
 PUCCH format 2와 3은 2 bits를 초과하는 payload에 대한 UE multiplexing을 지원하지 않는다. 그에 대한 대안으로 PUCCH format 4는 FDM을 통해 4대 이상의 UE multiplexing을 지원한다.
 
-<div class="post__stage-container">
-    <div class="post__stage">
-        <img class="modal" src="/_pages/study/communication/5G/images/7/uplink_3.png" alt="<b>[Fig. 3]</b> General description of NR PUCCH <a href='#Reference'>[3]</a>."/>
-    </div>
-    <div class="post__stage">
-        <img class="modal" src="/_pages/study/communication/5G/images/7/uplink/4.png" alt="<b>[Fig. 4]</b> NR PUCCH formats <a href='#Reference'>[3]</a>."/>
-    </div>
-</div>
+<img class="modal" src="/_pages/study/communication/5G/images/7/uplink/3.png" alt="<b>[Fig. 3]</b> General description of NR PUCCH <a href='#Reference'>[3]</a>."/>
 
-<div class="post__stage-container">
-    <div class="post__stage">
-        <img class="modal" src="/_pages/projects/bluetooth/images/generation/1.png" alt="<b>[Fig. 1]</b> Bluetooth 프로토콜 스택 <a href='#Reference'>[1]</a>."/>
-    </div>
-    <div class="post__stage">
-        <img class="modal" src="/_pages/projects/bluetooth/images/generation/2.png" alt="<b>[Fig. 2]</b> Bluetooth 듀얼모드 <a href='#Reference'>[2]</a>."/>
-    </div>
-</div>
+<img class="modal" src="/_pages/study/communication/5G/images/7/uplink/4.png" alt="<b>[Fig. 4]</b> NR PUCCH formats <a href='#Reference'>[3]</a>."/>
 
 Long PUCCH format은 frequency hopping이 적용돼 할당된 대역폭 양 극단에 위치한다.
 
