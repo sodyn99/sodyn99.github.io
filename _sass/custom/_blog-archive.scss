@@ -13,7 +13,8 @@
     padding: 1.5em;
     margin-bottom: 3em;
     border-radius: 2.5em;
-    background-color: #f2f2f2;
+    background-color: #fff;
+    border: 1px solid $callout-color;
     @include breakpoint($small) {
         width: $small;
     }
@@ -84,7 +85,7 @@
     }
 }
 .blog__image {
-    border: 1px solid $light-gray;
+    border: 1px solid $callout-color;
     border-radius: 2.5em;
     height: 200px;
     width: 100%;

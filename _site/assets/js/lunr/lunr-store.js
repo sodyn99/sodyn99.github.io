@@ -1,14 +1,8 @@
 var store = [{
-        "title": "Test",
-        "excerpt":"테스트테스트테스트테스트테스트테스트테스트테스트테스트테스트테스트테스트테스트테스트테스트테스트테스트테스트테스트테스트테스트테스트테스트테스트테스트테스트테스트테스트테스트테스트테스트테스트테스트테스트테스트테스트테스트테스트테스트테스트테스트테스트테스트테스트테스트테스트테스트테스트테스트테스트테스트테스트테스트테스트테스트테스트테스트테스트테스트테스트테스트테스트테스트테스트테스트테스트테스트테스트테스트테스트테스트테스트테스트테스트테스트테스트테스트테스트테스트테스트테스트테스트테스트테스트테스트테스트테스트테스트테스트테스트테스트테스트테스트테스트테스트테스트테스트테스트테스트테스트테스트테스트테스트테스트테스트테스트테스트테스트테스트테스트테스트테스트테스트테스트테스트테스트테스트테스트테스트테스트테스트테스트테스트테스트테스트테스트테스트테스트테스트테스트테스트테스트테스트테스트테스트테스트테스트테스트테스트테스트테스트테스트테스트테스트테스트테스트테스트테스트테스트테스트테스트테스트테스트테스트테스트테스트테스트테스트테스트테스트테스트테스트테스트테스트테스트테스트테스트테스트테스트테스트테스트테스트테스트테스트테스트테스트테스트테스트테스트테스트테스트테스트테스트테스트테스트테스트테스트테스트테스트테스트테스트테스트테스트테스트테스트테스트테스트테스트테스트테스트테스트테스트테스트테스트테스트테스트테스트테스트테스트테스트테스트테스트테스트테스트테스트테스트테스트테스트테스트테스트테스트테스트테스트테스트테스트테스트테스트테스트테스트테스트테스트테스트테스트테스트테스트테스트테스트테스트테스트테스트테스트테스트테스트테스트테스트테스트테스트테스트테스트테스트테스트테스트테스트테스트테스트테스트테스트테스트테스트테스트테스트테스트테스트테스트테스트테스트테스트테스트테스트테스트테스트테스트테스트테스트테스트테스트  ","categories": ["test"],
-        "tags": [],
-        "url": "/test/test-2/",
-        "teaser": null
-      },{
         "title": "5G-Advanced 및 6G 동향",
         "excerpt":"5G 서비스는 과도기라는 말을 들을 정도로 어려움을 겪었다. 통신사들 자체의 서비스적인 측면을 떠나서 한국의 경우 이미 4G에 대한 만족도가 높은 상황에서 5G에 큰 메리트를 느끼기 어려웠다 라고 볼 수 있을 것 같다. 4G가 상용화 되면서 OTT나 Youtube와 같은 서비스들이 사용자들에게 새로운 경험을 선사했는데 5G는 아직까지도 대다수의 사람들에게 신선한 경험을 선사하는...","categories": ["6G"],
         "tags": [],
-        "url": "/6g/6G-%EB%8F%99%ED%96%A5/",
+        "url": "/6g/6G-trends/",
         "teaser": null
       },{
     "title": "5G 개요",
@@ -72,7 +66,7 @@ var store = [{
     "excerpt":" ","url": "http://localhost:4000/categories/"
   },{
     "title": "Communication",
-    "excerpt":"                                    6G                                        5G                                        Optimization                        ","url": "http://localhost:4000/study/communication/"
+    "excerpt":"                                    6G                                        5G                                        Optimization                                        Mobility                        ","url": "http://localhost:4000/study/communication/"
   },{
     "title": "Copyright Attribution",
     "excerpt":"Powered by Jekyll &amp; Minimal Mistakes. Source & License Logo Logo: 3D monstera plant with holes in its leaves by Icons 8 Source/License: Illustration by Icons 8 from Ouch! Fonts Font: Suit by Sunn Source/License: SIL Open Font License v1.1 Font: Roboto by Christian Robertson Source/License: Google Fonts Attribution Font:...","url": "http://localhost:4000/copyright/"
@@ -114,7 +108,7 @@ var store = [{
     "excerpt":"                                  Magma         Building Flexible, Low-Cost Wireless Access Networks With Magma         How to configure low-cost cellular network using Magma.                                         Magma         Private Cellular Network Deployment: Comparison of OpenAirInterface with Magma Core         Comparison of OpenAirInterface and Magma Core, two prominent open-source projects in cellular networks.        ","url": "http://localhost:4000/study/paper_review/"
   },{
     "title": "Projects",
-    "excerpt":"                                   Bluetooth                                                            5G KPI                                                                        ","url": "http://localhost:4000/projects/"
+    "excerpt":" ","url": "http://localhost:4000/projects/"
   },{
     "title": "Search",
     "excerpt":"","url": "http://localhost:4000/search/"
@@ -123,7 +117,7 @@ var store = [{
     "excerpt":"블루투스 기기 여러 대를 동시에 연결할 수 있을까? 블루투스를 일상생활에서 항상 활용하는 나도 매번 헷갈려하는 문제다.  여러 대를 동시에 연결한다는 것은 point-to-point, 즉 일대일 연결을 말하는 것이다. Broadcast 방식의 단방향 전송은 해당하지 않는다.  기본적으로 여러 기기를 **동시**에 연결하기 위해서는 기기들이 보내는 패킷에 충돌이 일어나면 안된다.","url": "http://localhost:4000/projects/bluetooth/simulation/"
   },{
     "title": "Study",
-    "excerpt":"                                             Communication                                                                            Paper Review                                                                                                  ","url": "http://localhost:4000/study/"
+    "excerpt":" ","url": "http://localhost:4000/study/"
   },{
     "title": "Tag",
     "excerpt":"","url": "http://localhost:4000/tags/"

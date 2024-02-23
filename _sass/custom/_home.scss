@@ -228,7 +228,7 @@
     position: absolute;
     opacity: 0;
     border-radius: 1em;
-    background: linear-gradient(to top, rgb(255, 166, 0), rgba(255, 166, 0, 0.8), transparent);
+    background: linear-gradient(to top, rgb(255, 166, 0), rgba(255, 166, 0), rgba(255, 166, 0, 0.8), rgba(255, 166, 0, 0.5));
     transition: opacity .2s ease-in-out;
     display: -webkit-box;
     display: -ms-flexbox;
@@ -254,3 +254,45 @@
     font-weight: 700;
 }
 
+// ------------------------ Blog --------------------------
+.home__blog-container {
+    transition: 0.2s all;
+    cursor: pointer;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    flex-direction: column;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    justify-content: center;
+    height: inherit;
+    padding: 1.5em;
+    margin-bottom: 3em;
+    border-radius: 2.5em;
+    background-color: #fff;
+    border: 1px solid $callout-color;
+    @include breakpoint($small) {
+        width: $small;
+    }
+    @include breakpoint($medium) {
+        flex-direction: row;
+        width: $medium;
+        border-radius: 1.5em;
+    }
+    @include breakpoint($medium-wide) {
+        width: $medium-wide;
+    }
+    @include breakpoint($large) {
+        width: $large;
+    }
+    @include breakpoint($x-large) {
+        width: $x-large;
+        max-width: $max-width;
+    }
+}
+.home__wrapper{
+  display: flex;
+  max-width: 100%;
+  position: relative;
+}

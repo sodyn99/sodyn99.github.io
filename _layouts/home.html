@@ -32,32 +32,6 @@ search: false
       My personal studies.
     </p>
   </div>
-  <div class="home__section-contents">
-    <div class="home__section-card" OnClick="location.href ='/study/communication/'">
-      <div class="home__section-cover">
-        <div class="home__section-cover-head">
-          Communication
-        </div>
-      </div>
-      <img class="home__section-image" src="/assets/images/home/antenna.jpg"></img>
-    </div>
-    <div class="home__section-card" OnClick="location.href ='/study/paper_review/'">
-      <div class="home__section-cover">
-        <div class="home__section-cover-head">
-          Paper Review
-        </div>
-      </div>
-      <img class="home__section-image" src="/assets/images/home/paper.jpg"></img>
-    </div>
-    <div class="home__section-card" OnClick="location.href ='/'">
-    </div>
-    <div class="home__section-card" OnClick="location.href ='/'">
-    </div>
-    <div class="home__section-card" OnClick="location.href ='/'">
-    </div>
-    <div class="home__section-card" OnClick="location.href ='/'">
-    </div>
-  </div>
 </div>
 
 
@@ -71,32 +45,6 @@ search: false
       My works with partners.
     </p>
   </div>
-  <div class="home__section-contents">
-    <div class="home__section-card" OnClick="location.href ='/projects/bluetooth/'">
-      <div class="home__section-cover">
-        <div class="home__section-cover-head">
-          Bluetooth
-        </div>
-      </div>
-      <img class="home__section-image" src="/assets/images/home/bluetooth.jpeg"></img>
-    </div>
-    <div class="home__section-card" OnClick="location.href ='/projects/kpi/'">
-      <div class="home__section-cover">
-        <div class="home__section-cover-head">
-          5G KPI
-        </div>
-      </div>
-      <img class="home__section-image" src="/assets/images/home/KPI.jpeg"></img>
-    </div>
-    <div class="home__section-card" OnClick="location.href ='/'">
-    </div>
-    <div class="home__section-card" OnClick="location.href ='/'">
-    </div>
-    <div class="home__section-card" OnClick="location.href ='/'">
-    </div>
-    <div class="home__section-card" OnClick="location.href ='/'">
-    </div>
-  </div>
 </div>
 
 <div class="home__section blog">
@@ -105,9 +53,22 @@ search: false
       Recent posts
       <div class="link" OnClick="location.href ='/blog/'">More<i class="fas fa-arrow-circle-right"></i></div>
     </div>
-    <p>
+    <p> My personal posts </p>
+  </div>
+  <div class="home__section-contents">
+    {% assign posts = site.posts %}
 
-    </p>
+    {% assign entries_layout = page.entries_layout | default: 'list' %}
+    <div class="entries-{{ entries_layout }}">
+      <!-- Recent Post용 Draggable Wrapper 추가 예정 -->
+      <!-- <div class="home__wrapper"> -->
+        <!-- <i id="homeWrapperLeftBtn" class="fa fa-angle-left"></i> -->
+        {% for post in posts limit:3%}
+          {% include archive-single-home.html type=entries_layout %}
+        {% endfor %}
+        <!-- <i id="homeWrapperRightBtn" class="fa fa-angle-right"></i> -->
+      <!-- </div> -->
+    </div>
   </div>
 </div>
 
