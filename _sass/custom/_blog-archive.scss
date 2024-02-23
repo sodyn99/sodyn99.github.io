@@ -13,7 +13,7 @@
     padding: 1.5em;
     margin-bottom: 3em;
     border-radius: 1.5em;
-    background-color: #ffe8c7;
+    background-color: #f2f2f2;
     @include breakpoint($small) {
         width: $small;
     }
@@ -41,7 +41,7 @@
     @include breakpoint($medium) {
         order: 1;
         width: 50%;
-        padding-right: 1em;
+        padding-left: 1em;
     }
     >p {
         max-width: 25em;
@@ -104,8 +104,10 @@
     text-align: left;
     color: $gray;
     margin-bottom: 0;
+    font-family: 'SUIT';
     @include breakpoint($medium) {
         font-size: 1.5em;
         text-align: center;
+        font-family: 'termina';
     }
 }
