@@ -28,7 +28,7 @@ PUCCH format 2와 3은 2 bits를 초과하는 payload에 대한 UE multiplexing�
 
 <div class="post__stage-container">
     <div class="post__stage">
-        <img class="modal" src="/_pages/study/communication/5G/images/7/uplink/2.png" alt="<b>[Fig. 3]</b> General description of NR PUCCH <a href='#Reference'>[3]</a>."/>
+        <img class="modal" src="/_pages/study/communication/5G/images/7/uplink_3.png" alt="<b>[Fig. 3]</b> General description of NR PUCCH <a href='#Reference'>[3]</a>."/>
     </div>
     <div class="post__stage">
         <img class="modal" src="/_pages/study/communication/5G/images/7/uplink/4.png" alt="<b>[Fig. 4]</b> NR PUCCH formats <a href='#Reference'>[3]</a>."/>
