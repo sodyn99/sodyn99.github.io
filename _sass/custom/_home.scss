@@ -156,6 +156,11 @@
         }
     }
 }
+.home__section-head .link:hover {
+    >i {
+        transform: translateX(10%);
+    }
+}
 .home__section-contents {
     padding-top: 2em;
     display: -webkit-box;
@@ -254,7 +259,7 @@
     font-weight: 700;
 }
 
-// ------------------------ Blog --------------------------
+// ------------------------ Blog -------------------------- //
 .home__blog-container {
     transition: 0.2s all;
     cursor: pointer;
@@ -291,8 +296,12 @@
         max-width: $max-width;
     }
 }
-.home__wrapper{
-  display: flex;
-  max-width: 100%;
-  position: relative;
+.carousel-container {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    -webkit-user-select:none;
+    -moz-user-select:none;
+    -ms-user-select:none;
+    user-select:none
 }
