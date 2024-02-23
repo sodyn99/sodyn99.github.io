@@ -22,7 +22,7 @@ PUCCH를 위한 자원할당은 Payload 크기와 채널 상태에 따라 적합
 
 **2 bits 이하의 payload**의 경우 PUCCH format 0과 1을 사용하게 된다. HARQ Ack/Nack이나 SR을 보낼 때 사용된다. CSI Report는 보통 bit 수가 많기 때문에(2 bits 초과) PUCCH format 2~4를 사용해 보낸다. PUCCH format 0은 OFDM 심볼 최대 2개까지만 사용할 수 때문에 채널 상태가 좋지 않거나 먼 거리에 있을 경우에는 OFDM 심볼 4~14개를 사용하는 PUCCH format 1을 사용한다.
 
-**Payload가 2 bits를 초과**하는 경우 PUCCH format 2를 사용하는데 마찬가지로 채널 상태가 좋지 않거나 먼 거리에 있을 경우에는 PUCCH format 3를 사용한다. OFDM 심볼을 최대 2개까지만 사용하는 PUCCH format 0, 2를 **short PUCCH format**이라고 하고 심볼 4~14개를 사용하는 PUCCH format 1, 3, 4를 **long PUCCH format**이라고 한다.
+**Payload가 2 bits를 초과**하는 경우 PUCCH format 2와 3을 사용하는데 마찬가지로 채널 상태가 좋지 않거나 먼 거리에 있을 경우에는 PUCCH format 3를 사용한다. OFDM 심볼을 최대 2개까지만 사용하는 PUCCH format 0, 2를 **short PUCCH format**이라고 하고 심볼 4~14개를 사용하는 PUCCH format 1, 3, 4를 **long PUCCH format**이라고 한다.
 
 PUCCH format 2와 3은 2 bits를 초과하는 payload에 대한 UE multiplexing을 지원하지 않는다. 그에 대한 대안으로 PUCCH format 4는 FDM을 통해 4대 이상의 UE multiplexing을 지원한다.
 
@@ -32,6 +32,15 @@ PUCCH format 2와 3은 2 bits를 초과하는 payload에 대한 UE multiplexing�
     </div>
     <div class="post__stage">
         <img class="modal" src="/_pages/study/communication/5G/images/7/uplink/4.png" alt="<b>[Fig. 4]</b> NR PUCCH formats <a href='#Reference'>[3]</a>."/>
+    </div>
+</div>
+
+<div class="post__stage-container">
+    <div class="post__stage">
+        <img class="modal" src="/_pages/projects/bluetooth/images/generation/1.png" alt="<b>[Fig. 1]</b> Bluetooth 프로토콜 스택 <a href='#Reference'>[1]</a>."/>
+    </div>
+    <div class="post__stage">
+        <img class="modal" src="/_pages/projects/bluetooth/images/generation/2.png" alt="<b>[Fig. 2]</b> Bluetooth 듀얼모드 <a href='#Reference'>[2]</a>."/>
     </div>
 </div>
 
