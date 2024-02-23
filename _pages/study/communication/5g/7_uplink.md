@@ -28,22 +28,23 @@ PUCCH format 2와 3은 2 bits를 초과하는 payload에 대한 UE multiplexing�
 
 <div class="post__stage-container">
     <div class="post__stage">
-        <img class="modal img__large" src="/_pages/study/communication/5G/images/7/uplink/3.png" alt="<b>[Fig. 3]</b> General description of NR PUCCH <a href='#Reference'>[3]</a>."/>
+        <img class="modal" src="/_pages/study/communication/5G/images/7/uplink/3.png" alt="<b>[Fig. 3]</b> General description of NR PUCCH <a href='#Reference'>[3]</a>."/>
     </div>
     <div class="post__stage">
-        <img class="modal img__large" src="/_pages/study/communication/5G/images/7/uplink/4.png" alt="<b>[Fig. 4]</b> NR PUCCH formats <a href='#Reference'>[3]</a>."/>
+        <img class="modal" src="/_pages/study/communication/5G/images/7/uplink/4.png" alt="<b>[Fig. 4]</b> NR PUCCH formats <a href='#Reference'>[3]</a>."/>
     </div>
 </div>
 
 Long PUCCH format은 frequency hopping이 적용돼 할당된 대역폭 양 극단에 위치한다.
 
-그럼 PUCCH 시퀀스 생성에 대해 알아보자. PUCCH format 별로
+PUCCH format 별로
 
 ## PUCCH format 0
 
 ---
 
 # <a name="Reference"></a>Reference
+
 1. “5G Physical Uplink Control Channel (PUCCH) and Uplink Control Information (UCI).” Youtube, MATLAB, 9 Sept. 2019, [https://www.youtube.com/watch?v=Tc_ECMWSH30](https://www.youtube.com/watch?v=Tc_ECMWSH30){:target="_blank"}.
 2. “PUCCH Formats in 5G.” Youtube, Wireless Explained, 4 May 2023, [https://www.youtube.com/watch?v=g6IjHANJ180](https://www.youtube.com/watch?v=g6IjHANJ180){:target="_blank"}.
 3. NTT DOCOMO, INC., “WI Summary of New Radio Access Technology,” [3GPP TDocs (written contributions) at meeting](https://www.3gpp.org/dynareport?code=TDocExMtg--RP-80--18663.htm){:target="_blank"}, RP-180990, 2018.
