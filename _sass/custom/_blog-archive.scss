@@ -12,7 +12,7 @@
     height: inherit;
     padding: 1.5em;
     margin-bottom: 3em;
-    border-radius: 1.5em;
+    border-radius: 2.5em;
     background-color: #f2f2f2;
     @include breakpoint($small) {
         width: $small;
@@ -20,6 +20,7 @@
     @include breakpoint($medium) {
         flex-direction: row;
         width: $medium;
+        border-radius: 1.5em;
     }
     @include breakpoint($medium-wide) {
         width: $medium-wide;
@@ -84,13 +85,14 @@
 }
 .blog__image {
     border: 1px solid $light-gray;
-    border-radius: 2em;
+    border-radius: 2.5em;
     height: 200px;
-    width: 500px;
+    width: 100%;
     object-fit: cover;
     @include breakpoint($medium) {
         height: 200px;
         width: 350px;
+        border-radius: 1.5em;
     }
     @include breakpoint($large) {
         height: 300px;
