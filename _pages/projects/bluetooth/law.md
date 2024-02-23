@@ -1,6 +1,6 @@
 ---
 layout: posts
-title: "Bluetooth History"
+title: "Bluetooth 관련 법규"
 permalink: /projects/bluetooth/law/
 ---
 

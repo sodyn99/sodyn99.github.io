@@ -1,6 +1,6 @@
 ---
 layout: posts
-title: "Bluetooth History"
+title: "Bluetooth 역사"
 permalink: /projects/bluetooth/history/
 ---
 

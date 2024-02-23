@@ -1,6 +1,6 @@
 ---
 layout: posts
-title: "Bluetooth Multiple Connection"
+title: "Bluetooth 다중 연결"
 permalink: /projects/bluetooth/multiple_connection/
 ---
 

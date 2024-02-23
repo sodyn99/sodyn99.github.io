@@ -1,6 +1,6 @@
 ---
 layout: posts
-title: "Bluetooth Generation"
+title: "Bluetooth 세대별 특징"
 permalink: /projects/bluetooth/generation/
 ---
 

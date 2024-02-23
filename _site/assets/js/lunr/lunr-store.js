@@ -6,7 +6,7 @@ var store = [{
         "teaser": null
       },{
         "title": "5G-Advanced 및 6G 동향",
-        "excerpt":"5G 서비스는 과도기라는 말을 들을 정도로 어려움을 겪었다. 통신사들 자체의 서비스적인 측면을 떠나서 한국의 경우 이미 4G에 대한 만족도가 높은 상황에서 5G에 큰 메리트를 느끼기 어려웠다 라고 볼 수 있을 것 같다. 4G가 상용화 되면서 OTT나 Youtube와 같은 서비스들이 사용자들에게 새로운 경험을 선사했는데 5G는 아직까지도 대다수의 사람들에게 신선한 경험을 선사하는...","categories": ["6G"],
+        "excerpt":"5G 서비스는 과도기라는 말을 들을 정도로 어려움을 겪었다. 통신사들 자체의 서비스적인 측면을 떠나서 한국의 경우 이미 4G에 대한 만족도가 높은 상황에서 5G에 큰 메리트를 느끼기 어려웠다 라고 볼 수 있을 것 같다. 4G가 상용화 되면서 OTT나 Youtube 같은 서비스들이 사용자들에게 새로운 경험을 선사했는데, 5G는 아직까지도 대다수의 사람들에게 신선함을 주는 대표적인...","categories": ["6G"],
         "tags": [],
         "url": "/6g/6G-%EB%8F%99%ED%96%A5/",
         "teaser": null
@@ -80,10 +80,10 @@ var store = [{
     "title": "Data Analysis",
     "excerpt":"","url": "http://localhost:4000/study/data_analysis/"
   },{
-    "title": "Bluetooth Generation",
+    "title": "Bluetooth 세대별 특징",
     "excerpt":"Bluetooth 1 GFSK 변조 방식을 이용해 최대 1 Mbps, 실제로는 0.7 Mbps의 전송속도와 최대 10 m의 전파 범위를 지원한다. Bluetooth 2 Bluetooth 2.0은 2004년 3월에 발표되었다. 기존에 사용하던 GFSK 변좡식을 그대로 사용할 경우 1 Mbps의 전송속도를 유지하지만, Enhanced Data Rate(EDR)을 통해 최대 3 Mbps, 실제로는 2.1 Mbps의 속도가 지원된다. EDR은...","url": "http://localhost:4000/projects/bluetooth/generation/"
   },{
-    "title": "Bluetooth History",
+    "title": "Bluetooth 역사",
     "excerpt":"Bluetooth는 에릭슨, 인텔, IBM, 노키아, 도시바 이렇게 5개의 회사들이 모여 Bluetooth SIG를 설립하면서 시작되었다. Bluetooth 1.0의 경우 IEEE 802.15.1 표준에도 등록이 되어있는데, 그 이후 버전들은 모두 Bluetooth SIG에서 표준화 하고있다. 현재(2024.02)까지 Bluetooth 5.4까지 표준이 제정되어있다. Bluetooth 역사에서 빠질 수 없는 중요한 사건(?)은 Bluetooth 4.0부터 등장한 Bluetooth Low Energy(이하 BLE)라고 할...","url": "http://localhost:4000/projects/bluetooth/history/"
   },{
     "title": null,
@@ -92,7 +92,7 @@ var store = [{
     "title": "KPI",
     "excerpt":"","url": "http://localhost:4000/projects/kpi/"
   },{
-    "title": "Bluetooth History",
+    "title": "Bluetooth 관련 법규",
     "excerpt":"블루투스 기기 여러 대를 동시에 연결할 수 있을까? 블루투스를 일상생활에서 항상 활용하는 나도 매번 헷갈려하는 문제다.   여러 대를 동시에 연결한다는 것은 point-to-point, 즉 일대일 연결을 말하는 것이다. Broadcast 방식의 단방향 전송은 해당하지 않는다.   기본적으로 여러 기기를 동시에 연결하기 위해서는 기기들이 보내는 패킷에 충돌이 일어나면 안된다.  ","url": "http://localhost:4000/projects/bluetooth/law/"
   },{
     "title": null,
@@ -110,7 +110,7 @@ var store = [{
     "title": "Private Cellular Network Deployment: Comparison of OpenAirInterface with Magma Core",
     "excerpt":"이 논문은 LTE 특화망 구축에 오픈소스인 OpenAirInterface와 Magma Core를 사용하는 두 가지 시나리오를 비교하는 내용이다. 단순한 비교 뿐만아니라 테스트베드의 배치과정에서의 시행착오, 가능한 사용 사례에 대한 고려도 함께 설명하고 있다. 앞서 LTE 특화망이라고 했지만, 궁극적으로는 NGN을 목표로 하고 있다. NGN의 새로운 비즈니스 요구 사항에 늘어나는 서비스 제공업체, 소규모 운영자 등이 포함되어...","url": "http://localhost:4000/study/paper_review/magma_002/"
   },{
-    "title": "Bluetooth Multiple Connection",
+    "title": "Bluetooth 다중 연결",
     "excerpt":"Bluetooth 기기 여러 대를 동시에 연결할 수 있을까? Bluetooth를 일상생활에서 항상 활용하는 여러분들도 아마 매번 헷갈려하는 문제일 것이다. 여러 대를 동시에 연결한다는 것은 point-to-point, 즉 일대일 연결을 말하는 것이다. Broadcast 방식의 단방향 전송은 해당하지 않는다. Blueooth 제품을 만들기 앞서 다중 연결 여부를 고려하는 것은 중요하다. 다중 연결이 필요할 경우 고려해야...","url": "http://localhost:4000/projects/bluetooth/multiple_connection/"
   },{
     "title": "Optimization",
