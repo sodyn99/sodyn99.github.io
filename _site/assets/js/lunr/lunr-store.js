@@ -78,7 +78,7 @@ var store = [{
     "excerpt":"Powered by Jekyll &amp; Minimal Mistakes. Source & License Logo Logo: 3D monstera plant with holes in its leaves by Icons 8 Source/License: Illustration by Icons 8 from Ouch! Fonts Font: Suit by Sunn Source/License: SIL Open Font License v1.1 Font: Roboto by Christian Robertson Source/License: Google Fonts Attribution Font:...","url": "http://localhost:4000/copyright/"
   },{
     "title": "Bluetooth Generation",
-    "excerpt":"Bluetooth 1 GFSK 변조 방식을 이용해 최대 1 Mbps, 실제로는 0.7 Mbps의 전송속도와 최대 10 m의 전파 범위를 지원한다. Bluetooth 2 Bluetooth 2.0은 2004년 3월에 발표되었다. 기존에 사용하던 GFSK 변좡식을 그대로 사용할 경우 1 Mbps의 전송속도를 유지하지만, Enhanced Data Rate(EDR)을 통해 최대 3 Mbps, 실제로는 2.1 Mbps의 속도가 지원된다 EDR은...","url": "http://localhost:4000/projects/bluetooth/generation/"
+    "excerpt":"Bluetooth 1 GFSK 변조 방식을 이용해 최대 1 Mbps, 실제로는 0.7 Mbps의 전송속도와 최대 10 m의 전파 범위를 지원한다. Bluetooth 2 Bluetooth 2.0은 2004년 3월에 발표되었다. 기존에 사용하던 GFSK 변좡식을 그대로 사용할 경우 1 Mbps의 전송속도를 유지하지만, Enhanced Data Rate(EDR)을 통해 최대 3 Mbps, 실제로는 2.1 Mbps의 속도가 지원된다. EDR은...","url": "http://localhost:4000/projects/bluetooth/generation/"
   },{
     "title": "Bluetooth History",
     "excerpt":"Bluetooth는 에릭슨, 인텔, IBM, 노키아, 도시바 이렇게 5개의 회사들이 모여 Bluetooth SIG를 설립하면서 시작되었다. Bluetooth 1.0의 경우 IEEE 802.15.1 표준에도 등록이 되어있는데, 그 이후 버전들은 모두 Bluetooth SIG에서 표준화 하고있다. 현재(2024.02)까지 Bluetooth 5.4까지 표준이 제정되어있다. Bluetooth 역사에서 빠질 수 없는 중요한 사건(?)은 Bluetooth 4.0부터 등장한 Bluetooth Low Energy(이하 BLE)라고 할...","url": "http://localhost:4000/projects/bluetooth/history/"

@@ -10,7 +10,7 @@ GFSK 변조 방식을 이용해 최대 1 Mbps, 실제로는 0.7 Mbps의 전송�
 
 # Bluetooth 2
 
-Bluetooth 2.0은 2004년 3월에 발표되었다. 기존에 사용하던 GFSK 변좡식을 그대로 사용할 경우 1 Mbps의 전송속도를 유지하지만, Enhanced Data Rate(EDR)을 통해 최대 3 Mbps, 실제로는 2.1 Mbps의 속도가 지원된다
+Bluetooth 2.0은 2004년 3월에 발표되었다. 기존에 사용하던 GFSK 변좡식을 그대로 사용할 경우 1 Mbps의 전송속도를 유지하지만, Enhanced Data Rate(EDR)을 통해 최대 3 Mbps, 실제로는 2.1 Mbps의 속도가 지원된다.
 
 EDR은 2 Mbps를 지원하는 π/4-DPSK와 3 Mbps를 지원하는 8-DPSK 변조 방식을 사용한다.
 
