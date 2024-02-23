@@ -25,6 +25,7 @@ PUCCH를 위한 자원할당은 Payload 크기와 채널 상태에 따라 적합
 **Payload가 2 bits를 초과**하는 경우 PUCCH format 2를 사용하는데 마찬가지로 채널 상태가 좋지 않거나 먼 거리에 있을 경우에는 PUCCH format 3를 사용한다. OFDM 심볼을 최대 2개까지만 사용하는 PUCCH format 0, 2를 **short PUCCH format**이라고 하고 심볼 4~14개를 사용하는 PUCCH format 1, 3, 4를 **long PUCCH format**이라고 한다.
 
 PUCCH format 2와 3은 2 bits를 초과하는 payload에 대한 UE multiplexing을 지원하지 않는다. 그에 대한 대안으로 PUCCH format 4는 FDM을 통해 4대 이상의 UE multiplexing을 지원한다.
+
 <div class="post__stage-container">
     <div class="post__stage">
         <img class="modal" src="/_pages/study/communication/5G/images/7/uplink/3.png" alt="<b>[Fig. 3]</b> General description of NR PUCCH <a href='#Reference'>[3]</a>."/>
@@ -33,6 +34,7 @@ PUCCH format 2와 3은 2 bits를 초과하는 payload에 대한 UE multiplexing�
         <img class="modal" src="/_pages/study/communication/5G/images/7/uplink/4.png" alt="<b>[Fig. 4]</b> NR PUCCH formats <a href='#Reference'>[3]</a>."/>
     </div>
 </div>
+
 Long PUCCH format은 frequency hopping이 적용돼 할당된 대역폭 양 극단에 위치한다.
 
 그럼 PUCCH 시퀀스 생성에 대해 알아보자. PUCCH format 별로
