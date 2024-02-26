@@ -130,13 +130,22 @@
     }
 
     .img__small{
-        max-width: 50%;
+        max-width: 100%;
+        @include breakpoint($small) {
+            max-width: $small;
+        }
     }
     .img__medium{
-        max-width: 70%;
+        max-width: 100%;
+        @include breakpoint($medium) {
+            max-width: $medium;
+        }
     }
     .img__large{
-        max-width: 90%;
+        max-width: 100%;
+        @include breakpoint($large) {
+            max-width: $large;
+        }
     }
 }
 
