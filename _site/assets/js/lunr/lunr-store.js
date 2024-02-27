@@ -6,15 +6,15 @@ var store = [{
         "teaser": null
       },{
         "title": "5G-Advanced 및 6G 동향",
-        "excerpt":"5G 서비스는 과도기라는 말을 들을 정도로 어려움을 겪었다. 통신사들 자체의 서비스적인 측면을 떠나서 한국의 경우 이미 4G에 대한 만족도가 높은 상황에서 5G에 큰 메리트를 느끼기 어려웠다 라고 볼 수 있을 것 같다. 4G가 상용화 되면서 OTT나 Youtube 같은 서비스들이 사용자들에게 새로운 경험을 선사했는데, 5G는 아직까지도 대다수의 사람들에게 신선함을 주는 대표적인...","categories": ["6G"],
+        "excerpt":"5G 서비스는 과도기라는 말을 들을 정도로 어려움을 겪었다. 통신사들 자체의 서비스적인 측면을 떠나서 한국의 경우 이미 4G에 대한 만족도가 높은 상황에서 5G에 큰 메리트를 느끼기 어려웠다 라고 볼 수 있을 것 같다. 4G가 상용화 되면서 OTT나 Youtube 같은 서비스들이 사용자들에게 새로운 경험을 선사했는데, 5G는 아직까지도 대다수의 사람들에게 신선함을 주는 대표적인...","categories": ["trends"],
         "tags": [],
-        "url": "/6g/6G-%EB%8F%99%ED%96%A5/",
+        "url": "/trends/6G-%EB%8F%99%ED%96%A5/",
         "teaser": null
       },{
         "title": "2024 MWC",
-        "excerpt":" ","categories": ["6G"],
+        "excerpt":" ","categories": ["trends"],
         "tags": [],
-        "url": "/6g/2024_mwc-copy/",
+        "url": "/trends/2024_mwc-copy/",
         "teaser": null
       },{
     "title": "5G 개요",

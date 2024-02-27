@@ -35,8 +35,145 @@ OAI와 Magma-core 프로젝트는 소형 이동 통신 네트워크의 유연한
 
 ---
 
+# 테스트베드 구축
+
 이제부터 직접 테스트베드를 구축해보자.<br>
-설치과정은 [Magma docs](https://magma.github.io/magma/docs/basics/introduction){:target="_blank"}를 참고했다.
+
+## 코어
 
 
+OAI 코어 네트워크를 구축하는데에는 **Ubuntu 22.04**버전을 사용하였다. 자세한 건 [OAI 공식 문서](https://gitlab.eurecom.fr/oai/cn5g/oai-cn5g-fed/-/blob/master/docs/DEPLOY_HOME.md){:target="_blank"}를 참고하자.
 
+우선 Docker를 설치한다. 참고로 나는 wsl2를 사용했는데, wsl2을 사용하고자 하는 경우 wsl2 및 docker 설치 방법은 [여기]()를 참고하기 바란다. 설치 후 docker에 권한을 설정해줘야 한다.
+
+```bash
+$ sudo usermod -a -G docker $USER
+```
+```bash
+$ docker login
+Login with your Docker ID to push and pull images from Docker Hub. If you don't have a Docker ID, head over to https://hub.docker.com to create one.
+Username:
+Password:
+```
+Docker에 로그인 후 docker hub에서 이미지를 가져온다. 나는 22.04버전이기 때문에 `ubuntu:jammy`를 가져왔다.
+```bash
+$ docker pull ubuntu:jammy
+$ docker pull mysql:8.0
+```
+```bash
+docker pull oaisoftwarealliance/oai-amf:v2.0.1
+docker pull oaisoftwarealliance/oai-nrf:v2.0.1
+docker pull oaisoftwarealliance/oai-upf:v2.0.1
+docker pull oaisoftwarealliance/oai-smf:v2.0.1
+docker pull oaisoftwarealliance/oai-udr:v2.0.1
+docker pull oaisoftwarealliance/oai-udm:v2.0.1
+docker pull oaisoftwarealliance/oai-ausf:v2.0.1
+docker pull oaisoftwarealliance/oai-upf-vpp:v2.0.1
+docker pull oaisoftwarealliance/oai-nssf:v2.0.1
+docker pull oaisoftwarealliance/oai-pcf:v2.0.1
+docker pull oaisoftwarealliance/oai-nef:latest
+# Utility image to generate traffic
+docker pull oaisoftwarealliance/trf-gen-cn5g:latest
+```
+```bash
+$ docker logout
+```
+
+```bash
+$ git clone --branch v2.0.1 https://gitlab.eurecom.fr/oai/cn5g/oai-cn5g-fed.git
+$ cd oai-cn5g-fed
+$ git checkout -f v2.0.1
+
+# 서브 모듈 동기화
+$ ./scripts/syncComponents.sh
+```
+
+Docker compose를 이용해 basic nrf를 자동으로 구축한다.
+
+```bash
+$ cd oai-cn5g-fed/docker-compose/
+$ docker-compose -f docker-compose-basic-nrf.yaml up -d
+$ docker ps
+```
+```bash
+CONTAINER ID   IMAGE                                     COMMAND                  CREATED      STATUS                    PORTS                                    NAMES
+ada795e6348f   oaisoftwarealliance/oai-upf:v2.0.1        "/openair-upf/bin/oa…"   8 days ago   Up 17 minutes (healthy)   2152/udp, 8805/udp                       oai-upf
+c23a801280fa   oaisoftwarealliance/oai-smf:v2.0.1        "/openair-smf/bin/oa…"   8 days ago   Up 17 minutes (healthy)   80/tcp, 8080/tcp, 8805/udp               oai-smf
+a1bcbbd85ec3   oaisoftwarealliance/oai-amf:v2.0.1        "/openair-amf/bin/oa…"   8 days ago   Up 17 minutes (healthy)   80/tcp, 8080/tcp, 9090/tcp, 38412/sctp   oai-amf
+a6dded16cf46   oaisoftwarealliance/oai-ausf:v2.0.1       "/openair-ausf/bin/o…"   8 days ago   Up 17 minutes (healthy)   80/tcp, 8080/tcp                         oai-ausf
+fee7739568ec   oaisoftwarealliance/oai-udm:v2.0.1        "/openair-udm/bin/oa…"   8 days ago   Up 17 minutes (healthy)   80/tcp, 8080/tcp                         oai-udm
+c0cf8f2412f9   oaisoftwarealliance/oai-udr:v2.0.1        "/openair-udr/bin/oa…"   8 days ago   Up 17 minutes (healthy)   80/tcp, 8080/tcp                         oai-udr
+85d27d181535   oaisoftwarealliance/trf-gen-cn5g:latest   "/bin/bash -c ' ip r…"   8 days ago   Up 17 minutes (healthy)                                            oai-ext-dn
+426acc9ab446   mysql:8.0                                 "docker-entrypoint.s…"   8 days ago   Up 17 minutes (healthy)   3306/tcp, 33060/tcp                      mysql
+919aef5eeed7   oaisoftwarealliance/oai-nrf:v2.0.1        "/openair-nrf/bin/oa…"   8 days ago   Up 17 minutes (healthy)   80/tcp, 8080/tcp, 9090/tcp               oai-nrf
+```
+
+Docker network 'demo-oai-public-net'이 자동으로 생성된다.
+
+```bash
+$ docker network ls
+```
+```bash
+$ docker network inspect demo-oai-public-net
+[
+    {
+        "Name": "demo-oai-public-net",
+        "Id": "fbd6af5ccbf4557b826de26db58b1b240701d82cf0afd1a2bd73390a7a8b4c0c",
+        "Created": "2024-02-19T01:27:01.107124943Z",
+        "Scope": "local",
+        "Driver": "bridge",
+        ...
+            "Config": [
+                {
+                    "Subnet": "192.168.70.128/26",
+                    "Gateway": "192.168.70.129"
+                }
+            ]
+...
+```
+
+```bash
+$ docker exec oai-amf ping oai-smf
+```
+
+
+## Wireshark
+
+Wireshark를 설치한다.
+
+```bash
+$ sudo add-apt-repository ppa:wireshark-dev/stable
+$ sudo apt update
+$ sudo apt install wireshark
+```
+
+
+## 외부 IP 연결
+
+'가상 스위치 관리자'
+
+```
+[WSL2]
+networkingMode = bridged
+vmSwitch = wsl_externel
+```
+
+```
+eth0: flags=4163<UP,BROADCAST,RUNNING,MULTICAST>  mtu 1500
+        inet 192.168.1.220  netmask 255.255.255.0  broadcast 192.168.1.255
+        ether 5e:bb:f6:9e:ee:fa  txqueuelen 1000  (Ethernet)
+        RX packets 5746  bytes 612210 (612.2 KB)
+        RX errors 0  dropped 0  overruns 0  frame 0
+        TX packets 32  bytes 3120 (3.1 KB)
+        TX errors 0  dropped 0 overruns 0  carrier 0  collisions 0
+
+lo: flags=73<UP,LOOPBACK,RUNNING>  mtu 65536
+        inet 127.0.0.1  netmask 255.0.0.0
+        loop  txqueuelen 1000  (Local Loopback)
+        RX packets 0  bytes 0 (0.0 B)
+        RX errors 0  dropped 0  overruns 0  frame 0
+        TX packets 0  bytes 0 (0.0 B)
+        TX errors 0  dropped 0 overruns 0  carrier 0  collisions 0
+```
+
+[작성중]

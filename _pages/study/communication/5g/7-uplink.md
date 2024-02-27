@@ -42,7 +42,7 @@ PUCCH format 2와 3은 2 bits를 초과하는 payload에 대한 UE multiplexing�
     </div>
 </div>
 
-Long PUCCH format은 frequency hopping이 적용돼 할당된 대역폭 양 극단에 위치한다.
+Long PUCCH format은 frequency hopping이 적용돼 할당된 대역폭 양 극단에 위치하고, short PUCCH format은 보통 슬롯의 마지막에 전송되는데 꼭 그런건 아니고 저지연이 중요한 경우나 스케줄링 요청이 빈번한 경우, 더 큰 서브캐리어 간격이 필요한 경우에는 다른 위치에서 보낼 수 있다.
 
 PUCCH format 별로 리소스 매핑 과정이 다르다.
 
