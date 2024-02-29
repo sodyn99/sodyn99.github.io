@@ -48,7 +48,7 @@ PUCCH format 별로 리소스 매핑 과정이 다르다.
 
 ## PUCCH format 0
 
-우선 PUCCH format 0의 기본 시퀀스로는 base [시퀀스](/study/communication/5g/2/2/)를 사용한다. 이 기본 시퀀스에 12가지의 위상 회전(phase rotation)에 정보를 싣는다. 즉 base 시퀀스 자체에는 정보가 없는데 이 시퀀스에 서로 다른 12개의 orthogonal한 직교 시퀀스가 존재해서 정보에 의해 시퀀스의 위상이 결정된다.
+우선 PUCCH format 0의 기본 시퀀스로는 base [시퀀스](/study/communication/5g/2/2/)를 사용한다. 이 기본 시퀀스에 12가지의 위상 회전(phase rotation)에 정보를 싣는다. 즉 base 시퀀스 자체에는 정보가 없는데 이 시퀀스에 서로 다른 12개의 orthogonal한 직교 시퀀스가 존재해서 정보에 의해 시퀀스의 위상이 결정된다. 이를 'cyclic shift'라고 부른다.
 
 <img class="modal img__small" src="/_pages/study/communication/5g/images/7/uplink/7.png" alt="<b>[Fig. 6]</b> HARQ와 SR을 이용한 위상 회전의 예 <a href='#Reference'>[5]</a>."/>
 
@@ -62,19 +62,33 @@ PUCCH format 별로 리소스 매핑 과정이 다르다.
 
 ## PUCCH format 1
 
-<img class="modal img__small" src="/_pages/study/communication/5g/images/7/uplink/5_1.png" alt="<b>[Fig. 7]</b> PUCCH formats <a href='#Reference'>[5]</a>."/>
+PUCCH는 4~14 심볼을 이용해 2 bit 까지 전송하는데, control information용 OFDM 심볼과 reference signal용 심볼이 분리되어 있다. CI 심볼과 RS 심볼을 반반 정도 배치하는게 좋은 절충선이라 본다.
+
+1 bit 일 때는 BPSK, 2 bits 일 때는 QPSK를 사용하는데 변조된 신호에 PUCCH format 0에서와 같이 12 길이의 low-PAPR 시퀀스가 곱해지고 sequnece hopping이 적용된다. 그 후 orthogonal DFT 코드가 곱해진다. 직교 코드를 곱하는 것은 다수의 단말이 같은 기준 시퀀스와 위상을 사용할 때도 코드를 통해 분리하겠다는 것이다.
+
+추가로 long PUCCH format의 경우 frequency hopping을 적용할 수 있다고 했는데, hopping을 할지의 여부는 PUCCH 리소스 설정에 의해 결정되고 hopping 위치는 심볼 길이에 의해 결정된다.
+
+<img class="modal img__small" src="/_pages/study/communication/5g/images/7/uplink/5_1.png" alt="<b>[Fig. 7]</b> PUCCH format 1 <a href='#Reference'>[5]</a>."/>
 
 ## PUCCH format 2
 
-<img class="modal img__small" src="/_pages/study/communication/5g/images/7/uplink/5_2.png" alt="<b>[Fig. 8]</b> PUCCH formats <a href='#Reference'>[5]</a>."/>
+PUCCH format 2부터는 2 bits 보다 큰 payload를 가지는 CSI Report나 많은 수의 HARQ Ack/Nack, 또는 두 가지를 동시에 보낼 때의 경우인데 인코딩 해야 할 비트가 너무 크면 CSI Report는 누락시킬 수 있다.
+
+Payload가 크기 때문에 CRC와 채널 코딩 과정을 거친다. CRC 포함 11 bits 이하면 Reed-Muller를 사용하고 11 bits보다 많으면 polar 코딩을 사용한다. 이후 scramblig 과정이 있는데, scrambling sequence는 C-RNTI와 Cell ID를 이용해 생성한다.
+
+$$
+b ̃(i)=(b(i)+c(i)) \mod 2
+$$
+
+<img class="modal img__small" src="/_pages/study/communication/5g/images/7/uplink/5_2.png" alt="<b>[Fig. 8]</b> PUCCH format 2 <a href='#Reference'>[5]</a>."/>
 
 ## PUCCH format 3
 
-<img class="modal img__small" src="/_pages/study/communication/5g/images/7/uplink/5_3.png" alt="<b>[Fig. 9]</b> PUCCH formats <a href='#Reference'>[5]</a>."/>
+<img class="modal img__small" src="/_pages/study/communication/5g/images/7/uplink/5_3.png" alt="<b>[Fig. 9]</b> PUCCH format 3 <a href='#Reference'>[5]</a>."/>
 
 ## PUCCH format 4
 
-<img class="modal img__small" src="/_pages/study/communication/5g/images/7/uplink/5_4.png" alt="<b>[Fig. 10]</b> PUCCH formats <a href='#Reference'>[5]</a>."/>
+<img class="modal img__small" src="/_pages/study/communication/5g/images/7/uplink/5_4.png" alt="<b>[Fig. 10]</b> PUCCH format 4 <a href='#Reference'>[5]</a>."/>
 
 ---
 

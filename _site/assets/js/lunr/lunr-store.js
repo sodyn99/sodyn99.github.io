@@ -12,7 +12,7 @@ var store = [{
         "teaser": null
       },{
         "title": "2024 MWC",
-        "excerpt":" ","categories": ["trends"],
+        "excerpt":"2024년에도 어김없이 찾아온 MWC. 직접 바르셀로나에 가서 보았다면 좋았겠지만, 아쉽게도 그러지 못해서 간단하게나마 이번 MWC에서 주요하게 볼만한 몇가지들을 정리해보고자 한다. 역시나 핵심 화두는 ‘AI’다. 또 AI냐 라고 할만큼 지겨울 수도 있지만 또 워낙 그만큼 중요한 주제이다. 화제가 되는건 역시 삼성이 CES에서도 선보였던 갤럭시 S24와 엣지 AI가 있지만 우리는 이동통신을 위주로...","categories": ["trends"],
         "tags": [],
         "url": "/trends/2024_mwc-copy/",
         "teaser": null
@@ -128,8 +128,11 @@ var store = [{
     "title": "Optimization",
     "excerpt":"                                    Mathematical Methods for Wireless Communications                        ","url": "http://localhost:4000/study/communication/optimization/"
   },{
+    "title": "Learning to Optimize: Training Deep Neural Networks for Interference Management",
+    "excerpt":"이 논문은 2018년에 발표된 논문으로 최신 논문은 아니지만 인용수도 높고 최적화와 관련해 도움이 많이 될만한 논문이라 한번 리뷰 해 보려고 한다.","url": "http://localhost:4000/study/paper_review/optimization_001/"
+  },{
     "title": "Paper Review",
-    "excerpt":"                                  Magma         Building Flexible, Low-Cost Wireless Access Networks With Magma         How to configure low-cost cellular network using Magma.                                         Magma         Private Cellular Network Deployment: Comparison of OpenAirInterface with Magma Core         Comparison of OpenAirInterface and Magma Core, two prominent open-source projects in cellular networks.        ","url": "http://localhost:4000/study/paper_review/"
+    "excerpt":"optimization Learning to Optimize: Training Deep Neural Networks for Interference Management Comparison of OpenAirInterface and Magma Core, two prominent open-source projects in cellular networks. magma Private Cellular Network Deployment: Comparison of OpenAirInterface with Magma Core Comparison of OpenAirInterface and Magma Core, two prominent open-source projects in cellular networks. magma Building...","url": "http://localhost:4000/study/paper_review/"
   },{
     "title": "Projects",
     "excerpt":"     {% include pages-contents/projects.html %} ","url": "http://localhost:4000/projects/"
