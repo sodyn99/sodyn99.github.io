@@ -74,21 +74,35 @@ PUCCH는 4~14 심볼을 이용해 2 bit 까지 전송하는데, control informat
 
 PUCCH format 2부터는 2 bits 보다 큰 payload를 가지는 CSI Report나 많은 수의 HARQ Ack/Nack, 또는 두 가지를 동시에 보낼 때의 경우인데 인코딩 해야 할 비트가 너무 크면 CSI Report는 누락시킬 수 있다.
 
-Payload가 크기 때문에 CRC와 채널 코딩 과정을 거친다. CRC 포함 11 bits 이하면 Reed-Muller를 사용하고 11 bits보다 많으면 polar 코딩을 사용한다. 이후 scramblig 과정이 있는데, scrambling sequence는 C-RNTI와 Cell ID를 이용해 생성한다.
+Payload가 크기 때문에 CRC와 채널 코딩 과정을 거친다. 무조건 CRC를 붙이는 건 아니고 payload가 큰 경우에 붙인다. CRC 포함 11 bits 이하면 Reed-Muller를 사용하고 11 bits보다 많으면 polar 코딩을 사용한다. 이후 scramblig 과정이 있는데, scrambling sequence는 C-RNTI와 Cell ID를 이용해 생성한다<sup><a href='#Reference'>[7]</a></sup>.
 
 $$
-b ̃(i)=(b(i)+c(i)) \mod 2
+\begin{align}
+\widetilde{b}(i) &= (b(i) + c(i)) \, \text{mod} \, 2 \quad &(1) \\
+c_{\text{init}} &= n_{\text{RNTI}} \cdot 2^{15} + n_{\text{ID}} \quad &(2)
+\end{align}
 $$
+
+그 뒤에는 마찬가지로 QPSK 변조 과정을 거친다. PUCCH format 2부터는 RB의 개수를 가변적으로 사용하는데, 이 개수는 payload 크기와 code rate의 최곳값에 의해 결정된다. PUCCH format 2도 format 0과 마찬가지로 일반적으로는 슬롯의 맨 뒤에 전송되지만, 필요한 경우 바뀔 수 있다.
 
 <img class="modal img__small" src="/_pages/study/communication/5g/images/7/uplink/5_2.png" alt="<b>[Fig. 8]</b> PUCCH format 2 <a href='#Reference'>[5]</a>."/>
 
 ## PUCCH format 3
 
+PUCCH format 3는 할당되는 리소스가 가장 많은 format이다. 전송 구조는 format 2와 거의 동일하고, modulation의 경우 QPSK가 default로 사용되지만 cubic metric을 낮추기 위해 π/2-BPSK를 사용할 수 있고, OFDM 심볼에 매핑 시 DFT-precoding을 적용할 수 있다. 중요한 정보일수록 DMRS에 가깝게 매핑시킨다.
+
 <img class="modal img__small" src="/_pages/study/communication/5g/images/7/uplink/5_3.png" alt="<b>[Fig. 9]</b> PUCCH format 3 <a href='#Reference'>[5]</a>."/>
 
 ## PUCCH format 4
 
+전반적인 구조는 format 3와 동일하나 format 4의 경우는 말했듯이 다수의 단말에 multiplexing을 하기 위해 하나의 resource block을 사용한다.
+
 <img class="modal img__small" src="/_pages/study/communication/5g/images/7/uplink/5_4.png" alt="<b>[Fig. 10]</b> PUCCH format 4 <a href='#Reference'>[5]</a>."/>
+
+## PUCCH resource set
+
+
+
 
 ---
 
@@ -100,4 +114,5 @@ $$
 4. NTT DOCOMO, INC., “WI Summary of New Radio Access Technology,” [3GPP TDocs (written contributions) at meeting](https://www.3gpp.org/dynareport?code=TDocExMtg--RP-80--18663.htm){:target="_blank"}, RP-180990, 2018.
 5. Erik Dahlman, Stefan Parkvall, Johan Sköld,Chapter 10 - Physical-Layer Control Signaling, Editor(s): Erik Dahlman, Stefan Parkvall, Johan Sköld, 5G NR (Second Edition), Academic Press, 2021, Pages 197-241.
 6. ShareTechnote, [5G/NR - PUCCH](https://www.sharetechnote.com/html/5G/5G_PUCCH.html){:target="_blank"}.
+7. 3GPP, "[TS 38.211 v17.6.0](https://portal.3gpp.org/desktopmodules/Specifications/SpecificationDetails.aspx?specificationId=3213){:target="_blank"}".
 {:.post__reference}

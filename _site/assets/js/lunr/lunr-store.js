@@ -36,7 +36,7 @@ var store = [{
     "excerpt":" ","url": "http://localhost:4000/study/communication/5g/2/1/"
   },{
     "title": "Sequence",
-    "excerpt":"Sequence 통신 공부를 하며 책에서 자꾸 ‘sequnece’ 거리는데 이게 정확히 뭐지 싶을 때가 있다. 뭐 없을 수도 있다. 아무튼 이 sequence는 수열이니까 말그대로 수를 나열한건데, 예를 들어 reference signal이 그냥 만들어 지는 것은 아닐 것이다. Sequnece generator로 reference signal을 만든 다음 적절한 resource 할당과 맵핑 과정을 거쳐 전송이 될 것이다....","url": "http://localhost:4000/study/communication/5g/2/2/"
+    "excerpt":"Sequence 통신 공부를 하며 책에서 자꾸 ‘sequnece’ 거리는데 이게 정확히 뭐지 싶을 때가 있다. 뭐 없을 수도 있다. 아무튼 이 sequence는 수열이니까 말그대로 수를 나열한건데, 예를 들어 reference signal이 그냥 만들어 지는 것은 아닐 것이다. Sequnece generator로 reference signal을 만든 다음 적절한 resource 할당과 매핑 과정을 거쳐 전송이 될 것이다....","url": "http://localhost:4000/study/communication/5g/2/2/"
   },{
     "title": "5G 개념",
     "excerpt":"                                    주파수                                        Sequence                        ","url": "http://localhost:4000/study/communication/5g/2/"
