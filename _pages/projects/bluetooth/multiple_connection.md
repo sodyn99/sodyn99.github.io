@@ -49,7 +49,7 @@ Routing 기반 Mesh 네트워크를 사용하기 위해서는 네트워크 장�
 
 Silicon Labs에서 Zigbee, Thread, BLE Mesh를 비교한 자료<sup><a href='#Reference'>[3]</a></sup>가 있는데, 참고하면 좋을 것 같다.
 
-<table>
+<table class="posts__caption" alt="<b>[Table. 2]</b> Thread, Zigbee, Bluetooth Mesh의 비교.">
     <thead>
         <tr>
             <th>Thread</th>
@@ -98,9 +98,3 @@ Silicon Labs에서 Zigbee, Thread, BLE Mesh를 비교한 자료<sup><a href='#Re
 2. Andrey Solovev, Anna Petrova, "Bluetooth Mesh: Technology Overview, Examples, Alternatives, and First-Hand Experience," <i>Integra Sources Blog</i>, 2019. [Online]. Available: [https://www.integrasources.com/blog/bluetooth-mesh-network-tutorial/](https://www.integrasources.com/blog/bluetooth-mesh-network-tutorial/){:target="_blank"}. [Accessed: 10- Feb- 2024].
 3. "Benchmarking Bluetooth Mesh, Thread, and Zigbee Network Performance," <i>Silicon Labs</i>, [Online]. Available: [https://www.silabs.com/wireless/multiprotocol/mesh-performance](https://www.silabs.com/wireless/multiprotocol/mesh-performance){:target="_blank"}. [Accessed: 20- Feb- 2024].
 {:.post__reference}
-
----
-
-# Q&A
-
-질문은 [여기](https://slashpage.com/asungajinli/qna){:target="_blank"}에 남겨주세요

@@ -47,7 +47,86 @@ PHY 채널을 살펴보면 BR/EDR은 ISM 대역에 해당하는 2.402 ~ 2.480 GH
 
 # Bluetooth 5
 
-5 버전에서는 PHY layer에서 큰 변화가 있었다. 4 버전에서는 GFSK를 이용한 1 Mbps의 전송속도만 지원하였는데, 2 Mbps를 지원하는 'LE 2M', 전송거리 최대 4배를 지원하는 'LE 125K'와 'LE 250K'가 추가되었다. 전송 속도가 올라간 'LE 2M'은 간단하게 2LE,
+5 버전에서는 PHY layer에서 큰 변화가 있었다. 4 버전에서는 GFSK를 이용한 1 Mbps의 전송속도만 지원하였는데, 2 Mbps를 지원하는 'LE 2M', 전송거리 최대 4배를 지원하는 'LE 125K'와 'LE 500K'(합쳐서 'LE Coded')가 추가되었다. 전송 속도가 올라간 'LE 2M'은 간단하게 2LE, 전송거리가 증가한 'LE Coded'는 Bluetooth LE Long Range라 해서 BLR이라고 부르기도 한다.
+
+<table class="posts__caption" alt="<b>[Table. 1]</b> BLE PHY Layer.">
+  <thead>
+    <tr>
+        <th>PHY</th>
+        <th>LE 1M</th>
+        <th colspan="2">LE Coded (BLR)</th>
+        <th>LE 2M (2LE)</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+        <td>Modulation</td>
+        <td>1 Ms/s<br>GFSK</td>
+        <td>1 Ms/s<br>GFSK</td>
+        <td>1 Ms/s<br>GFSK</td>
+        <td>2 Ms/s<br>GFSK</td>
+    </tr>
+    <tr>
+        <td>Data Rate</td>
+        <td>1 Mbit/s</td>
+        <td>500 Kbit/s</td>
+        <td>125 Kbit/s</td>
+        <td>2 Mbit/s</td>
+    </tr>
+    <tr>
+        <td>Error Detection</td>
+        <td>CRC</td>
+        <td>CRC</td>
+        <td>CRC</td>
+        <td>CRC</td>
+    </tr>
+    <tr>
+        <td>Error Correction</td>
+        <td>NONE</td>
+        <td>FEC</td>
+        <td>FEC</td>
+        <td>NONE</td>
+    </tr>
+    <tr>
+        <td>Range Multiplier</td>
+        <td>1</td>
+        <td>2</td>
+        <td>4</td>
+        <td>0.8</td>
+    </tr>
+    <tr>
+        <td>Coded System<br>(Access Header)</td>
+        <td>Uncoded</td>
+        <td>S=8</td>
+        <td>S=8</td>
+        <td>Uncoded</td>
+    </tr>
+    <tr>
+        <td>Coded System<br>(Payload)</td>
+        <td>Uncoded</td>
+        <td>S=2</td>
+        <td>S=8</td>
+        <td>Uncoded</td>
+    </tr>
+    <tr>
+        <td>Bluetooth 5 Requirement</td>
+        <td>Mandatory</td>
+        <td>Optional</td>
+        <td>Optional</td>
+        <td>Optional</td>
+    </tr>
+  </tbody>
+</table>
+
+BLR의 경우에는, 블루투스 코어 사양은 0.1%의 BER을 한계로 정하였고, 중요한 점은 **전력 사용량을 증가시키지 않고 최대 허용 BER을 달성**한다는 것이다. 이를 위해 BLR에서는 Forward Error Correcting(FEC)를 수행한다. FEC 인코딩에는 S=2, S=8 두가지 옵션이 있으며 패턴 매퍼를 거쳐 1비트를 각각 2, 8심볼로 변환한다. 범위는 대략 각각 2, 4배로 증가하고, 대신 전송해야 하는 심볼 수가 늘어나 Application Layer의 전체 data rate은 감소하며 통신 시간이 길어져 평균 소비 전력이 증가한다.
+
+2LE는 Modulation을 향상시켜 2배의 전송 속도를 달성했다. 그만큼 전송 시간이 줄어들어 배터리 향상과 주파수 효율성이 좋아지는 등의 효과를 볼 수 있다. 전송 속도 2배라고 되어있지만, 실제로 속도가 2배가 된다고 보기는 어렵고, 대역폭이 2배가 되어서 패킷 자체의 전송에 걸리는 시간이 반으로 줄어드는 것은 맞지만 오버헤드, 그러니까 패킷 사이의 간격은 그대로이기 때문에 전체 속도가 2배가 되지는 않는다.
+
+PHY Update는 Host에서 PHY 변경 요청이 있을 경우 Link Layer에서 변경 요청 및 업데이트가 이루어진다. Central(Master) 뿐만 아니라 Peripheral(Slave)에서도 PHY Update를 시도할 수 있지만, 최종 결정권은 Master에게 있다.
+
+그 밖에 오디오가 지원되기 시작했고 **Extended Advertising**이 도입되어 별도의 연결 과정 없이 정보를 전달하는 방법이 개선되었다. 기존의 37, 38, 39 채널 외에 나머지 37개의 채널을 보조 advertising 채널로 사용한다.
+
+
 
 ---
 
