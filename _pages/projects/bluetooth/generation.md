@@ -41,6 +41,13 @@ BLE가 개발되면서부터 Bluetooth는 Bluetooth BR/EDR(Classic)과 Bluetooth
 
 BLE는 Advertise mode와 Connection mode 이렇게 2가지 모드를 통해 통신이 이루어진다. Advertise mode에서는 브로드캐스트 방식으로 데이터를 전송하며, Connection mode에서는 브로드캐스트 방식으로 전송된 데이터를 수신하는 디바이스와 1:1로 연결하여 데이터를 주고 받는다.
 
+그래서 communication 토폴로지에는 P2P, broadcast, mesh 네트워킹이 있는데 기존의 BR/EDR에서는 P2P 방식의 통신 방법만 지원했다면 BLE에서는 broadcast와 mesh 방식이 추가되었다.
+
+PHY 채널을 살펴보면 BR/EDR은 ISM 대역에 해당하는 2.402 ~ 2.480 GHz를 1 MHz 단위로 쪼개어 총 79개의 채널을 사용을 하였는데, BLE는 2 MHz 단위로 쪼개어 총 40개의 채널을 사용한다. 그 중 37, 38, 39 채널은 broadcast용 채널로 분류되어있다.
+
+# Bluetooth 5
+
+5 버전에서는 PHY layer에서 큰 변화가 있었다. 4 버전에서는 GFSK를 이용한 1 Mbps의 전송속도만 지원하였는데, 2 Mbps를 지원하는 'LE 2M', 전송거리 최대 4배를 지원하는 'LE 125K'와 'LE 250K'가 추가되었다. 전송 속도가 올라간 'LE 2M'은 간단하게 2LE,
 
 ---
 

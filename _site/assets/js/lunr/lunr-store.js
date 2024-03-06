@@ -78,7 +78,7 @@ var store = [{
     "excerpt":"","url": "http://localhost:4000/blog/"
   },{
     "title": "Bluetooth",
-    "excerpt":"                                    Bluetooth 역사                                        Bluetooth 세대별 특징                                                   Version 1                     Version 2                     Version 3                     Version 4                     Version 5                                                                      Bluetooth 관련 법규                                                   한국                     유럽                     미국                     중국                     일본                                                                      Bluetooth 다중 연결                                        MATLAB 시뮬레이션                        ","url": "http://localhost:4000/projects/bluetooth/"
+    "excerpt":"                                    Bluetooth 역사                                        Bluetooth 세대별 특징                                                   Version 1                     Version 2                     Version 3                     Version 4                     Version 5                                                                      Bluetooth 관련 법규                                                   한국                     유럽                     미국                     중국                     일본                                                                      Bluetooth 다중 연결                                        시뮬레이션                        ","url": "http://localhost:4000/projects/bluetooth/"
   },{
     "title": "Category",
     "excerpt":" ","url": "http://localhost:4000/categories/"

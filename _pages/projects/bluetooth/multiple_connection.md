@@ -34,6 +34,7 @@ Frequency Hopping는 Bluetooth 장치가 간섭을 일으키지 않게 하기 �
 
 
 
+
 # Bluetooth Mesh
 
 Bluetooth는 LE를 기반으로 하는 Mesh 네트워크를 지원한다. Mesh는 다대다 통신이 가능한 구조로 주로 스마트홈이나 스마트빌딩 등 IoT 환경에서 주로 사용된다. 이미 Zigbee, WiFi, Thread 등 Mesh 네트워크를 구축하기위한 여러 프로토콜이 있지만, Bluetooth Mesh가 가지는 장점이 존재한다.
@@ -42,8 +43,51 @@ Bluetooth는 LE를 기반으로 하는 Mesh 네트워크를 지원한다. Mesh�
 
 <img class="modal img__small" src="/_pages/projects/bluetooth/images/multiple_connection/1.webp" alt="<b>[Fig. 1]</b> BLE meshnets with managed flooding and routing <a href='#Reference'>[2]</a>."/>
 
-받은 데이터를 계속해서 broadcast하게 되면, 데이터 수가 너무 많아질 뿐더러 영원히 사라지지 않는것이 아닐까 하는 생각이 들 수 있다. 이를 방지하기 위한 여러가지 기능이 있지만, 대표적인 것이 data cache와 Time To Live(TTL)이다. 각 홉(노드)은 이미 보낸 데이터를 cache하고 있어서 cached 데이터와 동일한 데이터가 들어올 시에는 전송시키지 않는다. TTL은 쉽게 말해 데이터에 수명을 부여하는 방식이다. 홉을 지나갈 때마다 TTL을 1씩 감소시키고, TTL이 0이 되면 해당 데이터는 폐기한다.
+받은 데이터를 계속해서 broadcast하게 되면, 데이터 수가 너무 많아질 뿐더러 영원히 사라지지 않는것이 아닐까 하는 생각이 들 수 있다. 이를 방지하기 위한 여러가지 기능이 있지만, 대표적인 것이 data cache와 Time To Live(TTL)이다. 각 노드는 이미 보낸 데이터를 cache하고 있어서 cached 데이터와 동일한 데이터가 들어올 시에는 전송시키지 않는다. TTL은 쉽게 말해 데이터에 수명을 부여하는 방식이다. 홉을 지나갈 때마다 TTL을 1씩 감소시키고, TTL이 0이 되면 해당 데이터는 폐기한다.
 
+Routing 기반 Mesh 네트워크를 사용하기 위해서는 네트워크 장치에 routing table을 저장하기 위한 충분한 RAM 확보가 필요하고 노드의 추가, 삭제 시 라우팅 테이블 변경으로 인한 낮은 안정성과 유지관리가 어렵다는 단점이 있다. 그러나 Flooding 방식에 비해 홉 수에 의한 영향을 덜받는다. 또 기본적으로 data rate이나 latency 성능이 더 좋다.
+
+Silicon Labs에서 Zigbee, Thread, BLE Mesh를 비교한 자료<sup><a href='#Reference'>[3]</a></sup>가 있는데, 참고하면 좋을 것 같다.
+
+<table>
+    <thead>
+        <tr>
+            <th>Thread</th>
+            <th>Zigbee</th>
+            <th>Bluetooth</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td>
+                <ul>
+                    <li>라우팅 방식</li>
+                    <li>IPv6 기반</li>
+                    <li>라우터 수가 제한되어 있으며 라우터 당 최대 511개의 장치에 연결 가능</li>
+                    <li>따라서 대규모 네트워크보다는 고밀도 메시 넷이 적합</li>
+                    <li>유사 기술에 비해 높은 데이터 전송률</li>
+                    <li>로컬 시스템에 적합하며 장거리 데이터 전송용으로는 적합하지 않음</li>
+                </ul>
+            </td>
+            <td>
+                <ul>
+                    <li>라우팅 방식</li>
+                    <li>낮은 데이터 속도 (최대 250 Kbps)</li>
+                    <li>다양한 주파수 및 전력 범위 지원으로 다양한 전송 거리 지원</li>
+                    <li>BLE를 포함한 다양한 트랜시버와 함께 작동 가능</li>
+                    <li>스마트폰과 같이 Zigbee 송수신기가 없는 장치를 네트워크에 추가하려면 게이트웨이를 사용해야 함</li>
+                </ul>
+            </td>
+            <td>
+                <ul>
+                    <li>플러딩 방식</li>
+                    <li>다중 노드 네트워크에서 관리형 플러딩을 사용할 경우 많은 노이즈, 오버헤드가 발생</li>
+                    <li>이를 줄이기 위해 필터링 알고리즘을 개발하거나 고유 식별자가 있는 가상 주소 사용</li>
+                </ul>
+            </td>
+        </tr>
+    </tbody>
+</table>
 
 
 ---
@@ -52,4 +96,11 @@ Bluetooth는 LE를 기반으로 하는 Mesh 네트워크를 지원한다. Mesh�
 
 1. Woolley, Martin (7 February 2023). "[Bluetooth® Core Specification Version 5.4](https://www.bluetooth.org/DocMan/handlers/DownloadDoc.ashx?doc_id=556599){:target="_blank"}" (PDF). bluetooth.com. Retrieved 19 February 2024.
 2. Andrey Solovev, Anna Petrova, "Bluetooth Mesh: Technology Overview, Examples, Alternatives, and First-Hand Experience," <i>Integra Sources Blog</i>, 2019. [Online]. Available: [https://www.integrasources.com/blog/bluetooth-mesh-network-tutorial/](https://www.integrasources.com/blog/bluetooth-mesh-network-tutorial/){:target="_blank"}. [Accessed: 10- Feb- 2024].
+3. "Benchmarking Bluetooth Mesh, Thread, and Zigbee Network Performance," <i>Silicon Labs</i>, [Online]. Available: [https://www.silabs.com/wireless/multiprotocol/mesh-performance](https://www.silabs.com/wireless/multiprotocol/mesh-performance){:target="_blank"}. [Accessed: 20- Feb- 2024].
 {:.post__reference}
+
+---
+
+# Q&A
+
+질문은 [여기](https://slashpage.com/asungajinli/qna){:target="_blank"}에 남겨주세요
