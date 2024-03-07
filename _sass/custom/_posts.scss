@@ -40,8 +40,8 @@
     }
 }
 .post__head-title {
-    font-family: 'termina';
-    font-weight: 700;
+    font-family: 'Ydestreet';
+    font-weight: 900;
     font-size: 2em;
 }
 .post__head-description {
@@ -145,6 +145,41 @@
         max-width: 100%;
         @include breakpoint($large) {
             max-width: $large;
+        }
+    }
+
+    .vid__small {
+        width: 480px;
+        height: 270px;
+        border-radius: 10px;
+        @include breakpoint($small) {
+            width: 480px;
+            height: 270px;
+        }
+    }
+    .vid__medium {
+        width: 480px;
+        height: 270px;
+        border-radius: 10px;
+        @include breakpoint($medium) {
+            width: 720px;
+            height: 405px;
+            border-radius: 10px;
+        }
+    }
+    .vid__large {
+        width: 480px;
+        height: 270px;
+        border-radius: 10px;
+        @include breakpoint($medium) {
+            width: 720px;
+            height: 405px;
+            border-radius: 10px;
+        }
+        @include breakpoint($large) {
+            width: 960px;
+            height: 540px;
+            border-radius: 10px;
         }
     }
 }

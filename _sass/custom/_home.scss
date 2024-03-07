@@ -55,8 +55,8 @@
     }
 }
 .hero__title {
-    font-family: 'termina';
-    font-weight: 700;
+    font-family: 'Ydestreet';
+    font-weight: 900;
     font-size: 1.5em;
     @include breakpoint($small) {
         font-size: 2em;
@@ -142,8 +142,8 @@
     }
 }
 .home__section-head {
-    font-family: 'termina';
-    font-weight: 700;
+    font-family: 'Ydestreet';
+    font-weight: 900;
     font-size: 1.5em;
     .link {
         cursor: pointer;
@@ -253,10 +253,10 @@
     opacity: 1;
 }
 .home__section-cover-head {
-    font-family: 'termina';
+    font-family: 'Ydestreet';
     color: #fff;
     font-size: 1.5em;
-    font-weight: 700;
+    font-weight: 900;
 }
 
 // ------------------------ Blog -------------------------- //

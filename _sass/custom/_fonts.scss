@@ -43,3 +43,15 @@
 	font-weight: 900;
 	src: local('SUIT Heavy'), url('/assets/fonts/SUIT/SUIT-Heavy.woff2') format('woff2');
 }
+
+
+@font-face {
+	font-family: 'Ydestreet';
+	font-weight: 700;
+	src: local('Ydestreet Light'), url('/assets/fonts/Ydestreet/YdestreetL.woff') format('woff');
+}
+@font-face {
+	font-family: 'Ydestreet';
+	font-weight: 900;
+	src: local('Ydestreet Bold'), url('/assets/fonts/Ydestreet/YdestreetB.woff') format('woff');
+}
