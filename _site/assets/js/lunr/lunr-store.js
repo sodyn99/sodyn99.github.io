@@ -105,7 +105,7 @@ var store = [{
     "excerpt":"","url": "http://localhost:4000/projects/kpi/"
   },{
     "title": "Bluetooth 관련 법규",
-    "excerpt":"블루투스 기기 여러 대를 동시에 연결할 수 있을까? 블루투스를 일상생활에서 항상 활용하는 나도 매번 헷갈려하는 문제다.   여러 대를 동시에 연결한다는 것은 point-to-point, 즉 일대일 연결을 말하는 것이다. Broadcast 방식의 단방향 전송은 해당하지 않는다.   기본적으로 여러 기기를 동시에 연결하기 위해서는 기기들이 보내는 패킷에 충돌이 일어나면 안된다.  ","url": "http://localhost:4000/projects/bluetooth/law/"
+    "excerpt":"블루투스는 무선장치이기 때문에 탑재제품은 판매할 각 나라의 전파법규에 규정되어 있는 법규와 규제를 준수하고 승인을 받아야 한다. 직접 신청해도 되지만, 여러 대행 업체들이 있으니 대행 업체를 알아보는 것도 좋은 방법이다. 한국 우선 한국은 KC 전자파적합성인증제도가 있다. 블루투스 제품의 경우, 기존의 ‘적합인증’에서 ‘지정시험기관 적합등록’으로 완화되었다. ‘지정시험기관 적합등록’의 경우 적합인증 대상이 아닌 방송통신기자재등을...","url": "http://localhost:4000/projects/bluetooth/law/"
   },{
     "title": null,
     "excerpt":"var idx = lunr(function () { this.field('title') this.field('excerpt') this.field('categories') this.field('tags') this.ref('id') this.pipeline.remove(lunr.trimmer) for (var item in store) { this.add({ title: store[item].title, excerpt: store[item].excerpt, categories: store[item].categories, tags: store[item].tags, id: item }) } }); $(document).ready(function() { $('input#search').on('keyup', function () { var resultdiv = $('#results'); var query = $(this).val().toLowerCase(); var result = idx.query(function...","url": "http://localhost:4000/assets/js/lunr/lunr-en.js"
@@ -141,7 +141,7 @@ var store = [{
     "excerpt":"","url": "http://localhost:4000/search/"
   },{
     "title": "Bluetooth Simulation",
-    "excerpt":"블루투스 기기 여러 대를 동시에 연결할 수 있을까? 블루투스를 일상생활에서 항상 활용하는 나도 매번 헷갈려하는 문제다.  여러 대를 동시에 연결한다는 것은 point-to-point, 즉 일대일 연결을 말하는 것이다. Broadcast 방식의 단방향 전송은 해당하지 않는다.  기본적으로 여러 기기를 **동시**에 연결하기 위해서는 기기들이 보내는 패킷에 충돌이 일어나면 안된다.","url": "http://localhost:4000/projects/bluetooth/simulation/"
+    "excerpt":"","url": "http://localhost:4000/projects/bluetooth/simulation/"
   },{
     "title": "Study",
     "excerpt":"     {% include pages-contents/study.html %} ","url": "http://localhost:4000/study/"
