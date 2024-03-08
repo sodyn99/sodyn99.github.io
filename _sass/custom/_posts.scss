@@ -40,7 +40,7 @@
     }
 }
 .post__head-title {
-    font-family: 'Ydestreet';
+    font-family: $title-font;
     font-weight: 900;
     font-size: 2em;
 }
@@ -112,6 +112,9 @@
     dl {
       font-size: 1em;
     }
+    hr {
+        border-color: #d3d3d3;
+    }
 
     /* paragraph indents */
     p {
@@ -129,6 +132,9 @@
         margin: 0.5em 0;
     }
 
+    img {
+        border-radius: 0;
+    }
     .img__small{
         max-width: 100%;
         @include breakpoint($small) {

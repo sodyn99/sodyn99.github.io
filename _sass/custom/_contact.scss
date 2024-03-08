@@ -8,7 +8,7 @@
     >h2 {
         color: $text-color;
         font-size: $type-size-1;
-        font-family: 'Ydestreet', sans-serif;
+        font-family: $title-font, sans-serif;
         margin-bottom: 2em;
         >a {
             text-decoration: none !important;

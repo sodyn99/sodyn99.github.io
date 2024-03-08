@@ -55,7 +55,7 @@
     }
 }
 .hero__title {
-    font-family: 'Ydestreet';
+    font-family: $title-font;
     font-weight: 900;
     font-size: 1.5em;
     @include breakpoint($small) {
@@ -142,7 +142,7 @@
     }
 }
 .home__section-head {
-    font-family: 'Ydestreet';
+    font-family: $title-font;
     font-weight: 900;
     font-size: 1.5em;
     .link {
@@ -253,7 +253,7 @@
     opacity: 1;
 }
 .home__section-cover-head {
-    font-family: 'Ydestreet';
+    font-family: $title-font;
     color: #fff;
     font-size: 1.5em;
     font-weight: 900;

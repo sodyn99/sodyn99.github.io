@@ -131,8 +131,11 @@ var store = [{
     "title": "Learning to Optimize: Training Deep Neural Networks for Interference Management",
     "excerpt":"이 논문은 2018년에 발표된 논문으로 최신 논문은 아니지만 인용수도 높고 최적화와 관련해 도움이 많이 될만한 논문이라 한번 리뷰 해 보려고 한다.","url": "http://localhost:4000/study/paper_review/optimization_001/"
   },{
+    "title": "Energy-aware Scheduling of Virtualized Base Stations in O-RAN with Online Learning",
+    "excerpt":"O-RAN은 OPEX/CAPEX(운영/자본 지출)을 줄이고 다양한 기기에 호스팅 될 수 있다는 장점이 있지만, virtualization된 기지국(vBS)은 예측하기 어려운 성능과 불안정한 에너지 소비라는 단점이 있다. vBS의 자원관리를 최적화하고자 하는 연구는 이전에도 이루어 졌지만, 주로 (i) 제어 장치와 성능 함수의 관계에 대한 모델, (ii) 훈련 데이터에 의존한 model-free 접근 방법, (iii) 강화 학습(Reinforcement Learning)...","url": "http://localhost:4000/study/paper_review/oran_001/"
+  },{
     "title": "Paper Review",
-    "excerpt":"optimization Learning to Optimize: Training Deep Neural Networks for Interference Management Comparison of OpenAirInterface and Magma Core, two prominent open-source projects in cellular networks. magma Private Cellular Network Deployment: Comparison of OpenAirInterface with Magma Core Comparison of OpenAirInterface and Magma Core, two prominent open-source projects in cellular networks. magma Building...","url": "http://localhost:4000/study/paper_review/"
+    "excerpt":"O-RAN Energy-aware Scheduling of Virtualized Base Stations in O-RAN with Online Learning optimization Learning to Optimize: Training Deep Neural Networks for Interference Management magma Private Cellular Network Deployment: Comparison of OpenAirInterface with Magma Core Comparison of OpenAirInterface and Magma Core, two prominent open-source projects in cellular networks. magma Building Flexible,...","url": "http://localhost:4000/study/paper_review/"
   },{
     "title": "Projects",
     "excerpt":"     {% include pages-contents/projects.html %} ","url": "http://localhost:4000/projects/"
