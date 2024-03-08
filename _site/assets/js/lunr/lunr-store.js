@@ -99,7 +99,7 @@ var store = [{
     "excerpt":"Powered by Jekyll &amp; Minimal Mistakes. Source & License Logo Created by ChatGPT Fonts Font: Suit by Sunn Source/License: SIL Open Font License v1.1 Font: Roboto by Christian Robertson Source/License: Google Fonts Attribution Font: Noto Sans Korean by Google Source/License: Google Fonts Attribution Font: Y이드스트릿체 by KT 'Y' Source/License: (주)케이티...","url": "http://localhost:4000/copyright/"
   },{
     "title": "Data Analysis",
-    "excerpt":"                                    SQL                        ","url": "http://localhost:4000/study/data_analysis/"
+    "excerpt":"                                    SQL                          ","url": "http://localhost:4000/study/data_analysis/"
   },{
     "title": "Bluetooth 세대별 특징",
     "excerpt":"Bluetooth 1 GFSK 변조 방식을 이용해 최대 1 Mbps, 실제로는 0.7 Mbps의 전송속도와 최대 10 m의 전파 범위를 지원한다. Bluetooth 2 Bluetooth 2.0은 2004년 3월에 발표되었다. 기존에 사용하던 GFSK 변좡식을 그대로 사용할 경우 1 Mbps의 전송속도를 유지하지만, Enhanced Data Rate(EDR)을 통해 최대 3 Mbps, 실제로는 2.1 Mbps의 속도가 지원된다. EDR은...","url": "http://localhost:4000/projects/bluetooth/generation/"
