@@ -2,6 +2,7 @@
 layout: posts
 title: "PHY Control 시그널링 - Downlink"
 permalink: /study/communication/5g/7/downlink/
+prev: communication
 description:
 ---
 

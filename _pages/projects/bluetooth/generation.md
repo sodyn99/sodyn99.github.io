@@ -2,6 +2,7 @@
 layout: posts
 title: "Bluetooth 세대별 특징"
 permalink: /projects/bluetooth/generation/
+prev: bluetooth
 ---
 
 # Bluetooth 1

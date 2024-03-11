@@ -2,6 +2,7 @@
 layout: posts
 title: "PHY Control 시그널링 - Uplink"
 permalink: /study/communication/5g/7/uplink/
+prev: communication
 description:
 ---
 

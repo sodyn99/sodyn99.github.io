@@ -1,8 +1,8 @@
 a#topBtn {
 	position: fixed;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+	display: flex;
+	align-items: center;
+	justify-content: center;
 	right: 50px;
 	bottom: -50px;
 	z-index: 9999;
@@ -17,23 +17,23 @@ a#topBtn {
 	font-size: 30px;
 	text-align: center;
 	line-height: 50px;
-    text-decoration: none;
-    >i {
-        font-size: 20px;
-        text-align: center;
-    }
+	text-decoration: none;
+	>i {
+			font-size: 20px;
+			text-align: center;
+	}
 }
 a#topBtn:hover {
 	opacity: 0.5; /* 마우스 오버시 불투명도 1로 */
 }
 
-a#backBtn {
+a#prevBtn {
 	position: fixed;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-	right: 100px;
-	bottom: 40px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	right: 50px;
+	bottom: 90px;
 	z-index: 9999;
 
 	width: 40px;
@@ -46,12 +46,12 @@ a#backBtn {
 	font-size: 30px;
 	text-align: center;
 	line-height: 50px;
-    text-decoration: none;
-    >i {
-        font-size: 20px;
-        text-align: center;
-    }
+	text-decoration: none;
+	>i {
+			font-size: 20px;
+			text-align: center;
+	}
 }
-a#backBtn:hover {
+a#prevBtn:hover {
 	opacity: 0.5; /* 마우스 오버시 불투명도 1로 */
 }

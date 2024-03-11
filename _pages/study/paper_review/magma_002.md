@@ -3,6 +3,7 @@ layout: posts
 title: "Private Cellular Network Deployment: Comparison of OpenAirInterface with Magma Core"
 category: Magma
 permalink: /study/paper_review/magma_002/
+prev: paper_review
 ---
 
 이 논문은 LTE 특화망 구축에 오픈소스인 OpenAirInterface와 Magma Core를 사용하는 두 가지 시나리오를 비교하는 내용이다. 단순한 비교 뿐만아니라 테스트베드의 배치과정에서의 시행착오, 가능한 사용 사례에 대한 고려도 함께 설명하고 있다.

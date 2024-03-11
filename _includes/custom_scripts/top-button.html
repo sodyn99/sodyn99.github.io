@@ -5,6 +5,13 @@
     <i class="fa fa-chevron-up" aria-hidden="true"></i>
 </a>
 
+{% if page.url == '/' or page.url == '/study/' or page.url == '/projects/' or page.url == '/blog/' or page.url == '/about/'%}
+{% else %}
+<a id="prevBtn" href="#">
+    <i class="fas fa-align-justify" aria-hidden="true"></i>
+</a>
+{% endif %}
+
 <script>
     $(function() {
         $(window).scroll(function() {
@@ -17,6 +24,27 @@
         $("#topBtn").click(function() {
             $('html, body').animate({ scrollTop : 0 }, 50);
             return false;
+        });
+    });
+</script>
+<script>
+    $(function() {
+        $("#prevBtn").click(function() {
+            {% if page.prev == 'home' %}
+                location.replace('/');
+            {% elsif page.prev == 'study' %}
+                location.replace('/study/');
+            {% elsif page.prev == 'paper_review' %}
+                location.replace('/study/paper_review/');
+            {% elsif page.prev == 'communication' %}
+                location.replace('/study/communication/');
+            {% elsif page.prev == 'data_analysis' %}
+                location.replace('/study/data_analysis/');
+            {% elsif page.prev == 'projects' %}
+                location.replace('/projects/');
+            {% elsif page.prev == 'blog' %}
+                location.replace('/blog/');
+            {% endif %}
         });
     });
 </script>

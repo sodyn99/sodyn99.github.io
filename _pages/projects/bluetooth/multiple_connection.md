@@ -2,6 +2,7 @@
 layout: posts
 title: "Bluetooth 다중 연결"
 permalink: /projects/bluetooth/multiple_connection/
+prev: bluetooth
 ---
 
 Bluetooth 기기 여러 대를 동시에 연결할 수 있을까? Bluetooth를 일상생활에서 항상 활용하는 여러분들도 아마 매번 헷갈려하는 문제일 것이다. 여러 대를 동시에 연결한다는 것은 point-to-point, 즉 일대일 연결을 말하는 것이다. Broadcast 방식의 단방향 전송은 해당하지 않는다.

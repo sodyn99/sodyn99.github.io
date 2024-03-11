@@ -128,10 +128,10 @@
         }
       }
     }
-    ul {
+    ul,
+    table {
         margin: 0.5em 0;
     }
-
     img {
         border-radius: 0;
     }
@@ -213,5 +213,7 @@
 }
 
 @for $i from 0 to 50 {
-    .post__reference > li:nth-child(#{$i})::marker { content: '[#{$i}] '; }
+    .post__reference > li:nth-child(#{$i})::marker {
+        content: '[#{$i}]  ';
+    }
 }
