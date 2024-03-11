@@ -24,7 +24,7 @@ a#topBtn {
 	}
 }
 a#topBtn:hover {
-	opacity: 0.5; /* 마우스 오버시 불투명도 1로 */
+	background: #ca5e00;
 }
 
 a#prevBtn {
@@ -33,7 +33,7 @@ a#prevBtn {
 	align-items: center;
 	justify-content: center;
 	right: 50px;
-	bottom: 90px;
+	bottom: 40px;
 	z-index: 9999;
 
 	width: 40px;
@@ -53,5 +53,5 @@ a#prevBtn {
 	}
 }
 a#prevBtn:hover {
-	opacity: 0.5; /* 마우스 오버시 불투명도 1로 */
+	background: #ca5e00;
 }

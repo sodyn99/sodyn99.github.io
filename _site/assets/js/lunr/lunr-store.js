@@ -134,6 +134,9 @@ var store = [{
     "title": "Private Cellular Network Deployment: Comparison of OpenAirInterface with Magma Core",
     "excerpt":"이 논문은 LTE 특화망 구축에 오픈소스인 OpenAirInterface와 Magma Core를 사용하는 두 가지 시나리오를 비교하는 내용이다. 단순한 비교 뿐만아니라 테스트베드의 배치과정에서의 시행착오, 가능한 사용 사례에 대한 고려도 함께 설명하고 있다. 앞서 LTE 특화망이라고 했지만, 궁극적으로는 NGN을 목표로 하고 있다. NGN의 새로운 비즈니스 요구 사항에 늘어나는 서비스 제공업체, 소규모 운영자 등이 포함되어...","url": "http://localhost:4000/study/paper_review/magma_002/"
   },{
+    "title": "A Reinforcement Learning Framework for PQoS in a Teleoperated Driving Scenario",
+    "excerpt":"# RAN-AI [**ns3-ran-ai**](https://github.com/signetlabdei/ns3-ran-ai){:target=\"_blank\"} Matteo Drago 외 연구진들은 RAN-AI라는 ns3환경에서 시뮬레이션 되는 새로운 엔티티를 개발하였다. 매우 동적인 V2X 시스템에서 QoS는 언제든 예기치 못하게 변경 또는 저하될 수 있다. 사람의 안전과 직결되는 교통수단에서 통신 장애는 치명적인 결과를 초래할 수 있다. 이를 위해 QoS를 사전에 예측하여 그에 따라 애플리케이션을 통제한다는 개념인 PQoS(Predictive Quality...","url": "http://localhost:4000/study/paper_review/mobility_001/"
+  },{
     "title": "Bluetooth 다중 연결",
     "excerpt":"Bluetooth 기기 여러 대를 동시에 연결할 수 있을까? Bluetooth를 일상생활에서 항상 활용하는 여러분들도 아마 매번 헷갈려하는 문제일 것이다. 여러 대를 동시에 연결한다는 것은 point-to-point, 즉 일대일 연결을 말하는 것이다. Broadcast 방식의 단방향 전송은 해당하지 않는다. Blueooth 제품을 만들기 앞서 다중 연결 여부를 고려하는 것은 중요하다. 다중 연결이 필요할 경우 고려해야...","url": "http://localhost:4000/projects/bluetooth/multiple_connection/"
   },{

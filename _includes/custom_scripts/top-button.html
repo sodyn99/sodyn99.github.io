@@ -29,6 +29,13 @@
 </script>
 <script>
     $(function() {
+        $(window).scroll(function() {
+            if ($(this).scrollTop() > 300) {
+                $('#prevBtn').css('transform','translate(0, -50px)');
+            } else {
+                $('#prevBtn').css('transform','translate(0, 0)');
+            }
+        });
         $("#prevBtn").click(function() {
             {% if page.prev == 'home' %}
                 location.replace('/');
