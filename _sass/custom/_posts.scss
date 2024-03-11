@@ -135,6 +135,17 @@
     img {
         border-radius: 0;
     }
+    details {
+        summary {
+            cursor: pointer;
+            transition: all 0.2s;
+            padding: 0.5em;
+            border-radius: $border-radius;
+            &:hover {
+                background-color: #fff2de;
+            }
+        }
+    }
     .img__small{
         max-width: 100%;
         @include breakpoint($small) {

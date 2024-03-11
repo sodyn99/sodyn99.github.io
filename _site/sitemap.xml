@@ -25,10 +25,10 @@
 <loc>http://localhost:4000/study/communication/6g/1/</loc>
 </url>
 <url>
-<loc>http://localhost:4000/study/data_analysis/sql/1/</loc>
+<loc>http://localhost:4000/study/communication/5g/1/1/</loc>
 </url>
 <url>
-<loc>http://localhost:4000/study/communication/5g/1/1/</loc>
+<loc>http://localhost:4000/study/data_analysis/sql/1/</loc>
 </url>
 <url>
 <loc>http://localhost:4000/study/communication/5g/2/1/</loc>
@@ -40,7 +40,13 @@
 <loc>http://localhost:4000/study/communication/5g/2/</loc>
 </url>
 <url>
+<loc>http://localhost:4000/study/communication/ns3/2/</loc>
+</url>
+<url>
 <loc>http://localhost:4000/study/data_analysis/sql/2/</loc>
+</url>
+<url>
+<loc>http://localhost:4000/study/communication/ns3/3/</loc>
 </url>
 <url>
 <loc>http://localhost:4000/study/communication/optimization/3/</loc>
@@ -122,6 +128,9 @@
 </url>
 <url>
 <loc>http://localhost:4000/projects/bluetooth/multiple_connection/</loc>
+</url>
+<url>
+<loc>http://localhost:4000/study/communication/ns3/</loc>
 </url>
 <url>
 <loc>http://localhost:4000/study/communication/optimization/</loc>
