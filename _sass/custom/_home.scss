@@ -58,6 +58,7 @@
     font-family: $title-font;
     font-weight: 900;
     font-size: 1.5em;
+    line-height: 1.5em;
     @include breakpoint($small) {
         font-size: 2em;
     }
@@ -97,7 +98,7 @@
 .hero__image {
     border-radius: 2.5em;
     height: 300px;
-    width: 500px;
+    width: 100%;
     object-fit: cover;
     @include breakpoint($medium) {
         height: 400px;

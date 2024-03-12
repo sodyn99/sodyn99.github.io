@@ -59,7 +59,7 @@ RAN-AI 시뮬레이션 수행은 ns-3를 통해 이루어졌다. 이는 ns3-gym 
 
 
 ---
-# Reference
+# <a name="Reference"></a>Reference
 
 1. 한수빈, 백상헌.(2022).OpenAI Gym을 활용한 지능형 네트워크 시뮬레이션 연구 동향.한국통신학회지(정보와통신),40(1),35-41.
 2. M. Boban, J. Barros and O. K. Tonguz, "Geometry-Based Vehicle-to-Vehicle Channel Modeling for Large-Scale Simulation," in IEEE Transactions on Vehicular Technology, vol. 63, no. 9, pp. 4146-4164, Nov. 2014, doi: 10.1109/TVT.2014.2317803.
