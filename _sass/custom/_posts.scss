@@ -136,15 +136,40 @@
         border-radius: 0;
     }
     details {
-        summary {
-            cursor: pointer;
-            transition: all 0.2s;
-            padding: 0.5em;
-            border-radius: $border-radius;
-            &:hover {
-                background-color: #f2f2f2;
-            }
-        }
+      position: relative;
+      padding: 0.5em 1em 0.5em 2.5em;
+      margin: 0.5em 0;
+      border-radius: $border-radius;
+      border: 1px solid #cacaca;
+      summary::-webkit-details-marker {
+        display: none;
+      }
+      summary {
+        cursor: pointer;
+        border-radius: $border-radius;
+        transition: all 0.2s;
+        display: block;
+        -webkit-user-select:none;
+        -moz-user-select:none;
+        -ms-user-select:none;
+        user-select:none;
+      }
+      summary:before {
+        content: "";
+        position: absolute;
+        border-top: 0.4em solid transparent;
+        border-bottom: 0.4em solid transparent;
+        border-left: 0.6em solid #686868;
+        top: 1.15em;
+        left: 1em;
+        transition: .25s transform;
+      }
+      // &:hover {
+      //     background-color: #f2f2f2;
+      // }
+    }
+    details[open] summary:before {
+      transform: rotateZ(90deg);
     }
     .img__small{
         max-width: 100%;

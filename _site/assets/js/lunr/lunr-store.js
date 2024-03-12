@@ -45,7 +45,7 @@ var store = [{
     "excerpt":"                                    주파수                                        Sequence                        ","url": "http://localhost:4000/study/communication/5g/2/"
   },{
     "title": "ns3 설치",
-    "excerpt":"1. Ubuntu 설치 2. ns-3 다운로드 ns-3.33 버전 문서[1]를 바탕으로 진행. 필수구성요소 Prerequisite Package/version Code Current version C++ 컴파일러 clang++ 또는 g++(4.9 버전 이상) sudo apt install g++ 11.3.0 Python python3 버전 &gt;= 3.5 sudo apt install python3 3.10.6 Git 최신 버전 (GitLab.com에서 ns-3에 엑세스) sudo apt install git 2.34.1...","url": "http://localhost:4000/study/communication/ns3/2/"
+    "excerpt":"1. Ubuntu 설치 2. ns-3 다운로드 * 최신 버전은 ns-3 공식 문서를 참고하여 다운로드 받길 바란다. ns-3.33 버전 문서[1]를 바탕으로 진행. 필수구성요소 Prerequisite Package/version Code Current version C++ 컴파일러 clang++ 또는 g++(4.9 버전 이상) sudo apt install g++ 11.3.0 Python python3 버전 &gt;= 3.5 sudo apt install python3 3.10.6 Git...","url": "http://localhost:4000/study/communication/ns3/2/"
   },{
     "title": "SQL 함수",
     "excerpt":"중복 삭제 및 문자열 정리 DISTINCT 중복 데이터를 제외하고 고유한 값으로 목록을 생성한다. SELECT DISTINCT player_id FROM player_address LENGTH 문자열 변수의 길이를 반환한다. SELECT LENGTH(country) AS letters_in_country FROM player_address SELECT country FROM player_address WHERE LENGTH(country) &gt; 2 country USA SUBSTR SELECT country FROM player_address WHERE SUBSTR(coutry,1,2) = 'US' country US...","url": "http://localhost:4000/study/data_analysis/sql/2/"
