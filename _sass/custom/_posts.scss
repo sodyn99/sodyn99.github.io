@@ -135,6 +135,9 @@
     img {
         border-radius: 0;
     }
+    iframe {
+        margin: 0.5em 0;
+    }
     details {
       position: relative;
       padding: 0.5em 1em 0.5em 2.5em;
@@ -153,6 +156,7 @@
         -moz-user-select:none;
         -ms-user-select:none;
         user-select:none;
+        min-height: 2em;
       }
       summary:before {
         content: "";
@@ -191,6 +195,7 @@
     }
 
     .vid__small {
+        max-width: 100%;
         width: 480px;
         height: 270px;
         border-radius: 10px;
@@ -200,6 +205,7 @@
         }
     }
     .vid__medium {
+        max-width: 100%;
         width: 480px;
         height: 270px;
         border-radius: 10px;
@@ -210,6 +216,7 @@
         }
     }
     .vid__large {
+        max-width: 100%;
         width: 480px;
         height: 270px;
         border-radius: 10px;
