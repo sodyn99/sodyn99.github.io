@@ -44,6 +44,10 @@
   border-radius: $border-radius;
   box-shadow: none;
   transition: all 0.2s;
+  -webkit-user-select:none;
+  -moz-user-select:none;
+  -ms-user-select:none;
+  user-select:none;
   // &:hover {
   //   opacity: 0.8;
   // }

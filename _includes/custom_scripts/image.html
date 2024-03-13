@@ -56,6 +56,12 @@
       $('body').css("overflow-y", "scroll");
     }
   });
+  $(document).on('mousewheel', function(e) {
+      if (!$('#modalContent').is(e.target) && $('#modalContent').has(e.target).length === 0) {
+          $('#modalContainer').fadeOut();
+          $('body').css("overflow-y", "scroll");
+      }
+  });
 
   $('#modalContent').on('mousewheel', function(e) {
     e.preventDefault();
