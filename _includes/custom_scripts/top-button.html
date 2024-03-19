@@ -39,6 +39,7 @@
         $("#prevBtn").click(function() {
             {% if page.prev == 'home' %}
                 location.replace('/');
+
             {% elsif page.prev == 'study' %}
                 location.replace('/study/');
             {% elsif page.prev == 'paper_review' %}
@@ -47,12 +48,18 @@
                 location.replace('/study/communication/');
             {% elsif page.prev == 'data_analysis' %}
                 location.replace('/study/data_analysis/');
+            {% elsif page.prev == 'cloud' %}
+                location.replace('/study/cloud/');
+            {% elsif page.prev == 'ai' %}
+                location.replace('/study/ai/');
+
             {% elsif page.prev == 'projects' %}
                 location.replace('/projects/');
             {% elsif page.prev == 'bluetooth' %}
                 location.replace('/projects/bluetooth/');
             {% elsif page.prev == 'kpi' %}
                 location.replace('/projects/kpi/');
+
             {% elsif page.prev == 'blog' %}
                 location.replace('/blog/');
             {% endif %}

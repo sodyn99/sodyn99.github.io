@@ -26,17 +26,20 @@ var store = [{
     "title": "5G 개요",
     "excerpt":"                                    표준화                                        기본 철학                        ","url": "http://localhost:4000/study/communication/5g/1/"
   },{
-    "title": "표준화",
-    "excerpt":"표준화 표준화 단체는 크게 2가지로 알면 된다. 바로 ITU와 3GPP이다. ITU는 국제전기통신연합으로 유엔 산하의 국제 기구다. 기술 표준을 제정하는 것 뿐만 아니라 주파수 관리, 위성 관리, 개발도상국 기술 지원 등의 역할을 하고 있다. 3GPP는 유럽의 ETSI, 일본의 TTC, 중국의 CCSA, 한국의 TTA, 미국의 ATIS가 연합하여 설립한 국제 표준화 단체이다. 3GPP의...","url": "http://localhost:4000/study/communication/5g/1/1/"
+    "title": "6G 개요",
+    "excerpt":"#     ","url": "http://localhost:4000/study/communication/6g/1/"
   },{
     "title": "ns3 개요",
     "excerpt":"ns3 는 오픈소스 네트워크, 패킷 레벨 시뮬레이터 이다.   기본적으로 C++을 기반으로 하고 있고, discrete-event 네트워크 시뮬레이터이기 때문에 연속된 시간을 시뮬레이션 하는것이 아닌, 지정된 시간에 실행되도록 예약된 이벤트를 추적한다.   자세한 내용은 매뉴얼[1]을 참고하자.     Reference      ns-3.41 Manual  ","url": "http://localhost:4000/study/communication/ns3/1/"
   },{
-    "title": "6G 개요",
-    "excerpt":"#     ","url": "http://localhost:4000/study/communication/6g/1/"
-  },{
     "title": "SQL 개요",
     "excerpt":" ","url": "http://localhost:4000/study/data_analysis/sql/1/"
+  },{
+    "title": "Cloud 전체적인 그림",
+    "excerpt":"클라우드의 반댓말은 온프레미스다. 기존에는 기업들이 온프레미스 서버를 구축해 독자적으로 서버를 운영했다. 당연하게도 서버 구축, 유지 관리 비용이 더 들어갈 수밖에 없었다. AWS와 같은 클라우드 업체는 이미 구축된 서버를 빌려준다. 예를 들어 스타트업이나 본인의 사이트를 운영하는 개인 들은 온프레미스 서버를 구축하고 운영하기가 어렵기 때문에 이런 클라우드 업체를 통해 서버를 대여하고 그...","url": "http://localhost:4000/study/cloud/1/"
+  },{
+    "title": "표준화",
+    "excerpt":"표준화 표준화 단체는 크게 2가지로 알면 된다. 바로 ITU와 3GPP이다. ITU는 국제전기통신연합으로 유엔 산하의 국제 기구다. 기술 표준을 제정하는 것 뿐만 아니라 주파수 관리, 위성 관리, 개발도상국 기술 지원 등의 역할을 하고 있다. 3GPP는 유럽의 ETSI, 일본의 TTC, 중국의 CCSA, 한국의 TTA, 미국의 ATIS가 연합하여 설립한 국제 표준화 단체이다. 3GPP의...","url": "http://localhost:4000/study/communication/5g/1/1/"
   },{
     "title": "주파수",
     "excerpt":" ","url": "http://localhost:4000/study/communication/5g/2/1/"
@@ -53,8 +56,8 @@ var store = [{
     "title": "ns3 설치",
     "excerpt":"1. Ubuntu 설치 2. ns-3 다운로드 * 최신 버전은 ns-3 공식 문서를 참고하여 다운로드 받길 바란다. ns-3.33 버전 문서[1]를 바탕으로 진행. 필수구성요소 Prerequisite Package/version Code Current version C++ 컴파일러 clang++ 또는 g++(4.9 버전 이상) sudo apt install g++ 11.3.0 Python python3 버전 &gt;= 3.5 sudo apt install python3 3.10.6 Git...","url": "http://localhost:4000/study/communication/ns3/2/"
   },{
-    "title": "Mathematical Methods for Wireless Communications",
-    "excerpt":"Signal Spaces 위 그림은 우리가 흔히 알고 있는 통신 시스템의 구조를 나타낸 것이다. 이러한 통신 시스템을 수학적으로 분석하기 위한 가장 기본적인 개념은 Signal Space 이다. Approximation and Estimation in Signal Spaces Minimum Mean-Squared Error Estimation 추정이라는 단어가 본의 아니게 많이 사용되게 되는데 추정, 추정값, 추정자 등등 헷갈리는 사태를 방지하기 위해...","url": "http://localhost:4000/study/communication/optimization/3/"
+    "title": "Cloud 개요",
+    "excerpt":"Cloud Computing 🔸 클라우드 컴퓨팅은 IT 리소스를 인터넷을 통해 온디맨드로 제공하고 사용한 만큼만 비용을 지불하는 것을 말합니다. 클라우드 컴퓨팅이란 클라우드 컴퓨팅 소개 Amazon Web Services 클라이언트 간 통신 구조인 mesh 구조에서는 클라이언트가 늘어날수록 통신이 매우 복잡해진다. 반면 클라이언트-서버 구조에서는 서버를 통해 훨씬 간단하게 통신이 이루어질 수 있다. 이러한 서버를 모아...","url": "http://localhost:4000/study/cloud/2/"
   },{
     "title": "ns3 예제",
     "excerpt":"hello-simulator.cc source code /* -*- Mode:C++; c-file-style:\"gnu\"; indent-tabs-mode:nil; -*- */ /* * This program is free software; you can redistribute it and/or modify * it under the terms of the GNU General Public License version 2 as * published by the Free Software Foundation; * * This program is distributed...","url": "http://localhost:4000/study/communication/ns3/3/"
@@ -62,20 +65,23 @@ var store = [{
     "title": "시스템 구조",
     "excerpt":"전체적인 네트워크 구조는 RAN과 Core로 나눠진다.    ","url": "http://localhost:4000/study/communication/5g/3/"
   },{
-    "title": "전송 구조",
-    "excerpt":" ","url": "http://localhost:4000/study/communication/5g/4/"
+    "title": "Mathematical Methods for Wireless Communications",
+    "excerpt":"Signal Spaces 위 그림은 우리가 흔히 알고 있는 통신 시스템의 구조를 나타낸 것이다. 이러한 통신 시스템을 수학적으로 분석하기 위한 가장 기본적인 개념은 Signal Space 이다. Approximation and Estimation in Signal Spaces Minimum Mean-Squared Error Estimation 추정이라는 단어가 본의 아니게 많이 사용되게 되는데 추정, 추정값, 추정자 등등 헷갈리는 사태를 방지하기 위해...","url": "http://localhost:4000/study/communication/optimization/3/"
   },{
     "title": "ns3 Logging, CommandLine",
     "excerpt":"Logging $ export 'NS_LOG=UdpEchoClientApplciation=level_all' # 모든 사건(?)을 Log로 출력 $ export 'NS_LOG=UdpEchoClientApplciation=level_all|prefix_time' #시간을 prefix로 출력 $ export 'NS_LOG=*=level_all|prefix_func|prefix_time' 코드에 NS_LOG_COMPONENT_DEFINE (\"HelloExample\") NS_LOG_INFO (\"Hello\"); 가 정의되어 있다면 $ export NS_LOG=HelloExample=info # 출력은 Hello At time +2s ... 시뮬레이션이 끝나면 해당 시뮬레이션에서 사용한 로깅 모듈을 초기화 해주는 것이 좋다. # LOG 초기화...","url": "http://localhost:4000/study/communication/ns3/4/"
   },{
-    "title": "Page Not Found",
-    "excerpt":" ","url": "http://localhost:4000/404.html"
+    "title": "전송 구조",
+    "excerpt":" ","url": "http://localhost:4000/study/communication/5g/4/"
   },{
-    "title": "ns3 기본 요소",
-    "excerpt":"여기서 기본 요소라는 건 ns3 시뮬레이션 코드를 이루는 기본적인 요소들을 말한다.   1. Node   우선 node가 있다. 단말과 같이 네트워크 토폴로지의 끝단이라고 보면 된다.   2. Channel   3. Net device   4. Application   5. Helpers    ","url": "http://localhost:4000/study/communication/ns3/5/"
+    "title": "Page Not Found",
+    "excerpt":"   404   Page Not Found  ","url": "http://localhost:4000/404.html"
   },{
     "title": "채널 사운딩",
     "excerpt":" ","url": "http://localhost:4000/study/communication/5g/5/"
+  },{
+    "title": "ns3 기본 요소",
+    "excerpt":"여기서 기본 요소라는 건 ns3 시뮬레이션 코드를 이루는 기본적인 요소들을 말한다. 1. Node 우선 node가 있다. 단말과 같이 네트워크 토폴로지의 끝단이라고 보면 된다. NodeContainer nodes; nodes.Create (2); NodeContainer와 Create로 node를 생성할 수 있고, 몇개를 생성할 지 정할수 있다. 2. Channel Channel은 말그대로 node와 node 사이 채널을 말한다. Channel은 ChannelContainer가 따로...","url": "http://localhost:4000/study/communication/ns3/5/"
   },{
     "title": "5G",
     "excerpt":"                                    5G 개요                                                   표준화                     기본 철학                                                                      5G 개념                                                   주파수                     Sequence                                                                      시스템 구조                                        Transmission 구조                                        채널 사운딩                                        Transport 채널 프로세싱                                        PHY Control 시그널링                                                   Downlink                     Uplink                                                      ","url": "http://localhost:4000/study/communication/5g/"
@@ -101,6 +107,12 @@ var store = [{
     "title": "About",
     "excerpt":"                      👤 이성진      🏫 경희대학교     📝 전자공학과     🎓 4학년     💼 학생입니다.           👤 LEE SUNGJIN      🏫 Kyunghee University     📝 Electronic Engineering     🎓 Senior     💼 Student.         🌐 Contact Me                                                                &nbsp;Copyright     Copyright 2024. Lee Sung Jin All pictures cannot be copied without permission.    Copyright Attribution    ","url": "http://localhost:4000/about/"
   },{
+    "title": "AI",
+    "excerpt":"                                    AI 개요                        ","url": "http://localhost:4000/study/ai/"
+  },{
+    "title": "AWS",
+    "excerpt":"                                    AWS                        ","url": "http://localhost:4000/study/cloud/aws/"
+  },{
     "title": "Blog",
     "excerpt":"","url": "http://localhost:4000/blog/"
   },{
@@ -109,6 +121,9 @@ var store = [{
   },{
     "title": "Category",
     "excerpt":" ","url": "http://localhost:4000/categories/"
+  },{
+    "title": "Cloud",
+    "excerpt":"                                    Cloud 전체적인 그림                                        Cloud 개요                                        AWS                        ","url": "http://localhost:4000/study/cloud/"
   },{
     "title": "Communication",
     "excerpt":"                                    6G                                        5G                                        Optimization                                        ns3                        ","url": "http://localhost:4000/study/communication/"

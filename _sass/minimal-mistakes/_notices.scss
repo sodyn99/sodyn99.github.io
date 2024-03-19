@@ -76,40 +76,47 @@
 
 .notice {
   @include notice($light-gray);
+  overflow: auto;
 }
 
 /* Primary notice */
 
 .notice--primary {
   @include notice($primary-color);
+  overflow: auto;
 }
 
 /* Info notice */
 
 .notice--info {
   @include notice($info-color);
+  overflow: auto;
 }
 
 /* Warning notice */
 
 .notice--warning {
   @include notice($warning-color);
+  overflow: auto;
 }
 
 /* Success notice */
 
 .notice--success {
   @include notice($success-color);
+  overflow: auto;
 }
 
 /* Danger notice */
 
 .notice--danger {
   @include notice($danger-color);
+  overflow: auto;
 }
 
 /* Callout notice --- 노션의 콜아웃처럼 강조나 박스 처리 용도*/
 
 .notice--callout {
   @include notice($callout-color);
+  overflow: auto;
 }
