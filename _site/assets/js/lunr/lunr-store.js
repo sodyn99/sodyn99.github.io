@@ -29,17 +29,17 @@ var store = [{
     "title": "6G 개요",
     "excerpt":"#     ","url": "http://localhost:4000/study/communication/6g/1/"
   },{
-    "title": "ns3 개요",
-    "excerpt":"ns3 는 오픈소스 네트워크, 패킷 레벨 시뮬레이터 이다.   기본적으로 C++을 기반으로 하고 있고, discrete-event 네트워크 시뮬레이터이기 때문에 연속된 시간을 시뮬레이션 하는것이 아닌, 지정된 시간에 실행되도록 예약된 이벤트를 추적한다.   자세한 내용은 매뉴얼[1]을 참고하자.     Reference      ns-3.41 Manual  ","url": "http://localhost:4000/study/communication/ns3/1/"
-  },{
     "title": "SQL 개요",
     "excerpt":" ","url": "http://localhost:4000/study/data_analysis/sql/1/"
   },{
-    "title": "Cloud 전체적인 그림",
-    "excerpt":"클라우드의 반댓말은 온프레미스다. 기존에는 기업들이 온프레미스 서버를 구축해 독자적으로 서버를 운영했다. 당연하게도 서버 구축, 유지 관리 비용이 더 들어갈 수밖에 없었다. AWS와 같은 클라우드 업체는 이미 구축된 서버를 빌려준다. 예를 들어 스타트업이나 본인의 사이트를 운영하는 개인 들은 온프레미스 서버를 구축하고 운영하기가 어렵기 때문에 이런 클라우드 업체를 통해 서버를 대여하고 그...","url": "http://localhost:4000/study/cloud/1/"
+    "title": "ns3 개요",
+    "excerpt":"ns3 는 오픈소스 네트워크, 패킷 레벨 시뮬레이터 이다.   기본적으로 C++을 기반으로 하고 있고, discrete-event 네트워크 시뮬레이터이기 때문에 연속된 시간을 시뮬레이션 하는것이 아닌, 지정된 시간에 실행되도록 예약된 이벤트를 추적한다.   자세한 내용은 매뉴얼[1]을 참고하자.     Reference      ns-3.41 Manual  ","url": "http://localhost:4000/study/communication/ns3/1/"
   },{
     "title": "표준화",
     "excerpt":"표준화 표준화 단체는 크게 2가지로 알면 된다. 바로 ITU와 3GPP이다. ITU는 국제전기통신연합으로 유엔 산하의 국제 기구다. 기술 표준을 제정하는 것 뿐만 아니라 주파수 관리, 위성 관리, 개발도상국 기술 지원 등의 역할을 하고 있다. 3GPP는 유럽의 ETSI, 일본의 TTC, 중국의 CCSA, 한국의 TTA, 미국의 ATIS가 연합하여 설립한 국제 표준화 단체이다. 3GPP의...","url": "http://localhost:4000/study/communication/5g/1/1/"
+  },{
+    "title": "Cloud 개요",
+    "excerpt":"클라우드의 반댓말은 온프레미스다. 기존에는 기업들이 온프레미스 서버를 구축해 독자적으로 서버를 운영했다. 당연하게도 서버 구축, 유지 관리 비용이 더 들어갈 수밖에 없었다. AWS와 같은 클라우드 업체는 이미 구축된 서버를 빌려준다. 예를 들어 스타트업이나 본인의 사이트를 운영하는 개인 들은 온프레미스 서버를 구축하고 운영하기가 어렵기 때문에 이런 클라우드 업체를 통해 서버를 대여하고 그...","url": "http://localhost:4000/study/cloud/1/"
   },{
     "title": "주파수",
     "excerpt":" ","url": "http://localhost:4000/study/communication/5g/2/1/"
@@ -50,14 +50,11 @@ var store = [{
     "title": "5G 개념",
     "excerpt":"                                    주파수                                        Sequence                        ","url": "http://localhost:4000/study/communication/5g/2/"
   },{
-    "title": "SQL 함수",
-    "excerpt":"중복 삭제 및 문자열 정리 DISTINCT 중복 데이터를 제외하고 고유한 값으로 목록을 생성한다. SELECT DISTINCT player_id FROM player_address LENGTH 문자열 변수의 길이를 반환한다. SELECT LENGTH(country) AS letters_in_country FROM player_address SELECT country FROM player_address WHERE LENGTH(country) &gt; 2 country USA SUBSTR SELECT country FROM player_address WHERE SUBSTR(coutry,1,2) = 'US' country US...","url": "http://localhost:4000/study/data_analysis/sql/2/"
-  },{
     "title": "ns3 설치",
     "excerpt":"1. Ubuntu 설치 2. ns-3 다운로드 * 최신 버전은 ns-3 공식 문서를 참고하여 다운로드 받길 바란다. ns-3.33 버전 문서[1]를 바탕으로 진행. 필수구성요소 Prerequisite Package/version Code Current version C++ 컴파일러 clang++ 또는 g++(4.9 버전 이상) sudo apt install g++ 11.3.0 Python python3 버전 &gt;= 3.5 sudo apt install python3 3.10.6 Git...","url": "http://localhost:4000/study/communication/ns3/2/"
   },{
-    "title": "Cloud 개요",
-    "excerpt":"Cloud Computing 🔸 클라우드 컴퓨팅은 IT 리소스를 인터넷을 통해 온디맨드로 제공하고 사용한 만큼만 비용을 지불하는 것을 말합니다. 클라우드 컴퓨팅이란 클라우드 컴퓨팅 소개 Amazon Web Services 클라이언트 간 통신 구조인 mesh 구조에서는 클라이언트가 늘어날수록 통신이 매우 복잡해진다. 반면 클라이언트-서버 구조에서는 서버를 통해 훨씬 간단하게 통신이 이루어질 수 있다. 이러한 서버를 모아...","url": "http://localhost:4000/study/cloud/2/"
+    "title": "SQL 함수",
+    "excerpt":"중복 삭제 및 문자열 정리 DISTINCT 중복 데이터를 제외하고 고유한 값으로 목록을 생성한다. SELECT DISTINCT player_id FROM player_address LENGTH 문자열 변수의 길이를 반환한다. SELECT LENGTH(country) AS letters_in_country FROM player_address SELECT country FROM player_address WHERE LENGTH(country) &gt; 2 country USA SUBSTR SELECT country FROM player_address WHERE SUBSTR(coutry,1,2) = 'US' country US...","url": "http://localhost:4000/study/data_analysis/sql/2/"
   },{
     "title": "ns3 예제",
     "excerpt":"hello-simulator.cc source code /* -*- Mode:C++; c-file-style:\"gnu\"; indent-tabs-mode:nil; -*- */ /* * This program is free software; you can redistribute it and/or modify * it under the terms of the GNU General Public License version 2 as * published by the Free Software Foundation; * * This program is distributed...","url": "http://localhost:4000/study/communication/ns3/3/"
@@ -123,7 +120,7 @@ var store = [{
     "excerpt":" ","url": "http://localhost:4000/categories/"
   },{
     "title": "Cloud",
-    "excerpt":"                                    Cloud 전체적인 그림                                        Cloud 개요                                        AWS                        ","url": "http://localhost:4000/study/cloud/"
+    "excerpt":"                                    Cloud 개요                                        AWS                        ","url": "http://localhost:4000/study/cloud/"
   },{
     "title": "Communication",
     "excerpt":"                                    6G                                        5G                                        Optimization                                        ns3                        ","url": "http://localhost:4000/study/communication/"

@@ -16,11 +16,11 @@ minimal_mistakes_skin    : "default" # "air", "aqua", "contrast", "dark", "dirt"
 
 # Site Settings
 locale                   : "ko-KR"
-title                    : "SDIN"
+title                    : "SODYN"
 title_separator          : "|"
 subtitle                 : # site tagline that appears below site title in masthead
-name                     : "sdin.99"
-description              : "Welcome to SDIN."
+name                     : "sodyn99"
+description              : "Welcome to SODYN."
 url                      : "https://asungajinli.github.io"
 baseurl                  : "/"
 repository               : "asungajinli/asungajinli.github.io"
@@ -32,7 +32,7 @@ words_per_minute         : 200
 comments:
   provider               : "disqus" # false (default), "disqus", "discourse", "facebook", "staticman", "staticman_v2", "utterances", "giscus", "custom""
   disqus:
-    shortname            : "sdin"
+    shortname            : "sodyn99"
   discourse:
     server               : # https://meta.discourse.org/t/embedding-discourse-comments-via-javascript/31963 , e.g.: meta.discourse.org
   facebook:
@@ -104,7 +104,7 @@ analytics:
 
 # Site Author
 author:
-  name             : "sdin.99"
+  name             : "sodyn99"
   avatar           : "/assets/images/account.png"
   bio              : # "I am an **amazing** person."
   location         : "Somewhere"
@@ -140,7 +140,7 @@ footer:
       # url:
     - label: "GitHub"
       icon: "fab fa-fw fa-github"
-      url: "https://github.com/asungajinli"
+      url: "https://github.com/sodyn99"
     - label: "GitLab"
       icon: "fab fa-fw fa-gitlab"
       # url:
