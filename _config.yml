@@ -21,9 +21,9 @@ title_separator          : "|"
 subtitle                 : # site tagline that appears below site title in masthead
 name                     : "sodyn99"
 description              : "Welcome to SODYN."
-url                      : "https://asungajinli.github.io"
+url                      : "https://sodyn99.github.io"
 baseurl                  : "/"
-repository               : "asungajinli/asungajinli.github.io"
+repository               : "sodyn99/sodyn99.github.io"
 teaser                   : # path of fallback teaser image, e.g. "/assets/images/500x300.png"
 logo                     : "/assets/images/logo.png"
 masthead_title           :
