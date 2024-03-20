@@ -38,7 +38,7 @@ OAI와 Magma-core 프로젝트는 소형 이동 통신 네트워크의 유연한
 
 # 테스트베드 구축
 
-테스트베드 구축은 [github](https://github.com/asungajinli/oai-integration-master){:target="_blank"}를 참고바란다.
+테스트베드 구축은 [github](https://github.com/sodyn99/oai-integration-master){:target="_blank"}를 참고바란다.
 
 <!-- OAI 코어 네트워크를 구축하는데에는 **Ubuntu 22.04**버전을 사용하였다. 자세한 건 [OAI 공식 문서](https://gitlab.eurecom.fr/oai/cn5g/oai-cn5g-fed/-/blob/master/docs/DEPLOY_HOME.md){:target="_blank"}를 참고하자.
 
