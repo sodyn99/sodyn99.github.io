@@ -1,1 +1,1 @@
-# [Go To My Page](https://sodyn99.github.io)
+# [Go to my page](https://sodyn99.github.io)

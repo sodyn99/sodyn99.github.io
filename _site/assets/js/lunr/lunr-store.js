@@ -78,7 +78,7 @@ var store = [{
     "excerpt":" ","url": "http://localhost:4000/study/communication/5g/5/"
   },{
     "title": "ns3 기본 요소",
-    "excerpt":"여기서 기본 요소라는 건 ns3 시뮬레이션 코드를 이루는 기본적인 요소들을 말한다. 1. Node 우선 node가 있다. 단말과 같이 네트워크 토폴로지의 끝단이라고 보면 된다. NodeContainer nodes; nodes.Create (2); NodeContainer와 Create로 node를 생성할 수 있고, 몇개를 생성할 지 정할수 있다. 2. Channel Channel은 말그대로 node와 node 사이 채널을 말한다. Channel은 ChannelContainer가 따로...","url": "http://localhost:4000/study/communication/ns3/5/"
+    "excerpt":"여기서 기본 요소라는 건 ns3 시뮬레이션 코드를 이루는 기본적인 요소들을 말한다. first.cc 예제와 함께 보면 훨씬 이해가 쉬울 것이다. 1. Node 우선 node가 있다. 단말과 같이 네트워크 토폴로지의 끝단이라고 보면 된다. NodeContainer nodes; nodes.Create (2); NodeContainer와 Create로 node를 생성할 수 있고, 몇개를 생성할 지 정할수 있다. 2. Channel Channel은 말그대로...","url": "http://localhost:4000/study/communication/ns3/5/"
   },{
     "title": "5G",
     "excerpt":"                                    5G 개요                                                   표준화                     기본 철학                                                                      5G 개념                                                   주파수                     Sequence                                                                      시스템 구조                                        Transmission 구조                                        채널 사운딩                                        Transport 채널 프로세싱                                        PHY Control 시그널링                                                   Downlink                     Uplink                                                      ","url": "http://localhost:4000/study/communication/5g/"
