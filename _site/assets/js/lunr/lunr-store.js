@@ -17,6 +17,12 @@ var store = [{
         "url": "/trends/2024_mwc-copy/",
         "teaser": null
       },{
+        "title": "AI-RAN Alliance",
+        "excerpt":"2024 MWC에서 삼성전자, 엔비디아(Nvidia), 암(Arm), 소프트뱅크(SoftBank), 에릭슨(Ericsson), 노키아(Nokia), 마이크로소프트(Microsoft), 미국 노스이스턴대학 등 통신 및 소프트웨어 기업 10개사와 1개 대학이 모여 ‘AI-RAN Alliance’를 공식 출범했다. 주요 통신 장비 제조업체들이 모여 AI 경쟁력을 강화하고 본격적으로 6G에 대비하기 위한 움직임으로 보인다. 또 한편으로는 오픈소스 진영에서 활발히 연구되고 있는 O-RAN에 대항(?)하기 위한 것도 아닐까...","categories": ["news"],
+        "tags": [],
+        "url": "/news/ai-ran/",
+        "teaser": null
+      },{
     "title": "5G 개요",
     "excerpt":"표준화 표준화 단체는 크게 2가지로 알면 된다. 바로 ITU와 3GPP이다. ITU는 국제전기통신연합으로 유엔 산하의 국제 기구다. 기술 표준을 제정하는 것 뿐만 아니라 주파수 관리, 위성 관리, 개발도상국 기술 지원 등의 역할을 하고 있다. 3GPP는 유럽의 ETSI, 일본의 TTC, 중국의 CCSA, 한국의 TTA, 미국의 ATIS가 연합하여 설립한 국제 표준화 단체이다. 3GPP의...","url": "http://localhost:4000/study/communication/5g/1/back/"
   },{
@@ -205,4 +211,7 @@ var store = [{
   },{
     "title": null,
     "excerpt":"{% if page.xsl %}{% endif %}Jekyll{{ site.time | date_to_xmlschema }}{{ page.url | absolute_url | xml_escape }}{% assign title = site.title | default: site.name %}{% if page.collection != \"posts\" %}{% assign collection = page.collection | capitalize %}{% assign title = title | append: \" | \" | append: collection %}{% endif...","url": "http://localhost:4000/feed.xml"
+  },{
+    "title": null,
+    "excerpt":"","url": "http://localhost:4000/page2/"
   }]
