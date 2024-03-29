@@ -12,6 +12,39 @@ O-RAN은 OPEX/CAPEX(운영/자본 지출)을 줄이고 다양한 기기에 호�
 
 <img class="modal img__small" src="/_pages/study/paper_review/images/oran_001/1.gif" alt="<b>[Fig. 1]</b> O-RAN 호환 architecture 및 workflow."/>
 
+이 알고리즘은 vBS 송신 전력, 변조 및 부호화 방식(MCS), 듀티 사이클(또는 에어타임)을 파라미터로 vBS 작동에 대한 threshold를 결정한다. 우선 다운링크에서 시간 $t$ 동안 DL control을 아래와 같이 나타낼 수 있다.
+
+$$
+x_{t}^{d}\in \mathcal{P}_{d}\times\mathcal{M}_{d}\times \mathcal{A}_{d}
+$$
+
+여기서 $\mathcal{P_d} = \\{ p^d_i, \forall i \in [H] \\}$ 는 최대 허용 vBS 송신 전력을 나타내고, $\mathcal{M_d} = \\{ m^d_i, \forall i \in [I] \\}$ 는 최대 허용 MCS 집합,  $\mathcal{A_d} = \\{ a^d_i, \forall i \in [J] \\}$ 는 듀티 사이클을 나타낸다.
+
+UL control은 $\mathcal{M_u} = \\{ p^u_i, \forall i \in [K] \\}$, $\mathcal{A_u} = \\{ a^u_i, \forall i \in [L] \\}$ 에 대해서 아래와 같이 나타낼 수 있다.
+
+$$
+x_{t}^{u}\in \mathcal{M}_{u}\times \mathcal{A}_{u}
+$$
+
+따라서 가능한 모든 유한한 조합 $\mathcal{X}$ 를 정의할 수 있고, 시간 $t$ 동안의 정책을 정의할 수 있다.
+
+$$
+\begin{align}
+  \mathcal{X}=\mathcal{P}_{d}\times\mathcal{M}_{d}\times \mathcal{A}_{d}\times\mathcal{M}_{u}\times \mathcal{A}_{u} \\
+  x_{t}=(x_{t}^{d},\ x_{t}^{u})\in \mathcal{X}
+\end{align}
+$$
+
+유틸리티 함수 $U_t$ 와 보상 함수 $\tilde{f}_{t} : \mathcal{X} \rightarrow \mathbb{R}$ 는 아래와 같이 정의된다. 파라미터 $\delta > 0$ 은 유틸리티와 에너지 비용의 상대적 우선순위를 조정하기 위해 설정된다.
+
+$$
+\begin{align}
+  U_t\left(x_t\right)=\log \left(1+\frac{R_t^d\left(x_t^d\right)}{d_t^d}\right)+\log \left(1+\frac{R_t^u\left(x_t^u\right)}{d_t^u}\right) \tag{1} \\
+  \tilde{f}_{t}(x_{t})=U_{t}(x_{t})-\delta P_{t}(x_{t}) \tag{2}
+\end{align}
+$$
+
+
 ---
 
 # <a name="Reference"></a>Reference
