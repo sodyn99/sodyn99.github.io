@@ -45,7 +45,7 @@ RAN-AI 시뮬레이션 수행은 ns-3를 통해 이루어졌다. 이는 ns3-gym 
 
 ## 구조
 
-<img class="modal img__medium" src="/_pages/study/paper_review/teasers/mobility_001.png" alt="<b>[Fig. 1]</b> O-RAN 호환 architecture 및 workflow <a href='#Reference'>[1]</a>."/>
+<img class="modal img__medium" src="/_pages/study/paper_review/images/mobility_001/1.png" alt="<b>[Fig. 1]</b> O-RAN 호환 architecture 및 workflow <a href='#Reference'>[1]</a>."/>
 
 - [SUMO(Simulation of Urban MObility)](https://eclipse.dev/sumo/){:target="_blank"}<br>
     시뮬레이션 차량들은 SUMO를 통해 생성된 실제 길을 따라 이동.
@@ -56,11 +56,77 @@ RAN-AI 시뮬레이션 수행은 ns-3를 통해 이루어졌다. 이는 ns3-gym 
 
 논문 참고
 
-## GEMV
+## SUMO
 
-[Google 어스로 KML 지도 데이터 가져오기](https://support.google.com/earth/answer/7365595?hl=ko&co=GENIE.Platform%3DDesktop){:target="_blank"}
+먼저 OpenStreetMap과 같은 오픈소스 지도에서 osm 파일을 가져온다.
 
+<img class="modal img__medium" src="/_pages/study/paper_review/images/mobility_001/2.png" alt="<b>[Fig. 2]</b>OpenStreetMap으로 지도 파일 내보내기."/>
 
+‘내보내기’ 버튼을 눌러 직접 파일을 저장할 수도 있고,
+
+```bash
+wget -O inputPolygon/SanFrancisco.osm “https://api.openstreetmap.org/api/0.6/map?bbox=-122.4115,37.7814,-122.3899,37.7965"
+```
+
+으로 CLI를 통해 받아오는 것도 가능하다. 이렇게 해서 저장된 ‘.osm’ 파일을 xml 파일로 변환해주어야 한다. SUMO에는 여러 종류의 xml 파일이 있는데, 교통 인프라 네트워크인 net.xml, 루트 파일인 trips.xml 및 rou.xml 등이 있다. 우선 netconfverter를 이용하여 osm 파일을 net.xml 파일로 변환해 주어야 한다.
+
+```bash
+netconvert --osm inputPolygon/ SanFrancisco.osm -o inputPolygon/SanFrancisco.net.xml --geometry.remove --ramps.guess --junctions.join --tls.guess-signals --tls.discard-simple --tls.join --remove-edges.by-type railway.subway
+```
+
+<img class="modal img__medium" src="/_pages/study/paper_review/images/mobility_001/3.png" alt="<b>[Fig. 3]</b>SUMO-gui를 통해 확인한 SanFrancisco.net.xml."/>
+
+그 후 randomTrips.py를 이용해 랜덤하게 차량들의 경로를 생성하고, trips.xml 로 저장한다. 이 때 차량의 개수를 저장해준다.
+
+```bash
+randomTrips.py -n inputPolygon/ SanFrancisco.net.xml -e 20 -o inputPolygon/SanFrancisco.trips.xml
+```
+
+그 후 duarouter를 이용해 rou.xml 파일을 생성한다.
+
+```bash
+duarouter -n inputPolygon/SanFrancisco.net.xml --route-files inputPolygon/SanFrancisco.trips.xml -o inputPolygon/SanFrancisco.rou.xml --ignore-errors
+```
+
+파일들의 경로를 inputPolygon이라 한 것은 GEMV의 내부 경로에 바로 저장해 주기 위함이다.
+
+시뮬레이션에 필요한 파일 경로와 같은 기본 정보나 시뮬레이션 시간 등의 파라미터는 sumo.cfg 파일에 저장해 준다.
+
+```xml
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- generated on 2024-03-14 12:39:54 by Eclipse SUMO sumo Version 1.19.0
+-->
+<configuration xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://sumo.dlr.de/xsd/sumoConfiguration.xsd">
+    <input>
+        <net-file value="inputPolygon/SanFrancisco.net.xml"/>
+        <route-files value="inputPolygon/SanFrancisco.rou.xml"/>
+    </input>
+    <output>
+        <fcd-output value="inputMobilitySUMO/SanFrancisco-mobility-trace.xml"/>
+        <fcd-output.geo value="true"/>
+    </output>
+    <time>
+        <begin value="10"/>
+        <end value="100"/>
+        <step-length value="0.1"/>
+    </time>
+    <processing>
+        <collision.action value="none"/>
+        <collision.mingap-factor value="0"/>
+    </processing>
+    <gui_only>
+        <tracker-interval value="0.1"/>
+    </gui_only>
+</configuration>
+```
+
+위는 SUMO simulation에 사용한 SanFrancisco.sumo.cfg 파일의 전문이다. 이 sumo.cfg 파일을 이용해 SUMO simulation을 실행한다.
+
+```bash
+sumo -c SanFrancisco.sumo.cfg
+```
+
+위 SanFrancisco.sumo.cfg 파일에서 알 수 있듯 시뮬레이션 결과는 inputMobilitySUMO 폴더 안에 SanFrancisco-mobility-trace.xml 파일로 저장된다.
 
 
 ---

@@ -45,6 +45,15 @@ $$
 $$
 
 
+# Evaluation
+
+<img class="modal img__small" src="/_pages/study/paper_review/images/oran_001/2.gif" alt="<b>[Fig. 2]</b> BP-vRAN의 시나리오 B($\mathcal{X}=16$)에서의 regret."/>
+
+<img class="modal img__small" src="/_pages/study/paper_review/images/oran_001/3.gif" alt="<b>[Fig. 3]</b> BSvBS의 시나리오 A와 B($\mathcal{X}=256$)에서의 regret."/>
+
+<img class="modal img__small" src="/_pages/study/paper_review/images/oran_001/4.gif" alt="<b>[Fig. 4]</b> BP-vRAN의 시나리오 B($\mathcal{X}=16$)에서의 전력 소비."/>
+
+
 ---
 
 # <a name="Reference"></a>Reference
