@@ -90,37 +90,7 @@ duarouter -n inputPolygon/SanFrancisco.net.xml --route-files inputPolygon/SanFra
 
 파일들의 경로를 inputPolygon이라 한 것은 GEMV의 내부 경로에 바로 저장해 주기 위함이다.
 
-시뮬레이션에 필요한 파일 경로와 같은 기본 정보나 시뮬레이션 시간 등의 파라미터는 sumo.cfg 파일에 저장해 준다.
-
-```xml
-<?xml version="1.0" encoding="UTF-8"?>
-<!-- generated on 2024-03-14 12:39:54 by Eclipse SUMO sumo Version 1.19.0
--->
-<configuration xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://sumo.dlr.de/xsd/sumoConfiguration.xsd">
-    <input>
-        <net-file value="inputPolygon/SanFrancisco.net.xml"/>
-        <route-files value="inputPolygon/SanFrancisco.rou.xml"/>
-    </input>
-    <output>
-        <fcd-output value="inputMobilitySUMO/SanFrancisco-mobility-trace.xml"/>
-        <fcd-output.geo value="true"/>
-    </output>
-    <time>
-        <begin value="10"/>
-        <end value="100"/>
-        <step-length value="0.1"/>
-    </time>
-    <processing>
-        <collision.action value="none"/>
-        <collision.mingap-factor value="0"/>
-    </processing>
-    <gui_only>
-        <tracker-interval value="0.1"/>
-    </gui_only>
-</configuration>
-```
-
-위는 SUMO simulation에 사용한 SanFrancisco.sumo.cfg 파일의 전문이다. 이 sumo.cfg 파일을 이용해 SUMO simulation을 실행한다.
+시뮬레이션에 필요한 파일 경로와 같은 기본 정보나 시뮬레이션 시간 등의 파라미터는 sumo.cfg 파일에 저장해 준 후 이 sumo.cfg 파일을 이용해 SUMO simulation을 실행한다.
 
 ```bash
 sumo -c SanFrancisco.sumo.cfg
@@ -129,9 +99,14 @@ sumo -c SanFrancisco.sumo.cfg
 위 SanFrancisco.sumo.cfg 파일에서 알 수 있듯 시뮬레이션 결과는 inputMobilitySUMO 폴더 안에 SanFrancisco-mobility-trace.xml 파일로 저장된다.
 
 
+
+
+
 ---
 # <a name="Reference"></a>Reference
 
 1. M. Drago, F. Mason, T. Zugno, M. Giordani, M. Boban and M. Zorzi, "Artificial Intelligence in Vehicular Wireless Networks: A Case Study Using ns-3", Workshop on ns-3 (WNS3), 2022.
 2. M. Boban, J. Barros and O. K. Tonguz, "Geometry-Based Vehicle-to-Vehicle Channel Modeling for Large-Scale Simulation," in IEEE Transactions on Vehicular Technology, vol. 63, no. 9, pp. 4146-4164, Nov. 2014, doi: 10.1109/TVT.2014.2317803.
 {:.post__reference}
+
+
