@@ -60,7 +60,7 @@ RAN-AI 시뮬레이션 수행은 ns-3를 통해 이루어졌다. 이는 ns3-gym 
 
 먼저 OpenStreetMap과 같은 오픈소스 지도에서 osm 파일을 가져온다.
 
-<img class="modal img__medium" src="/_pages/study/paper_review/images/mobility_001/2.png" alt="<b>[Fig. 2]</b>OpenStreetMap으로 지도 파일 내보내기."/>
+<img class="modal img__medium" src="/_pages/study/paper_review/images/mobility_001/2.png" alt="<b>[Fig. 2]</b> OpenStreetMap으로 지도 파일 내보내기."/>
 
 ‘내보내기’ 버튼을 눌러 직접 파일을 저장할 수도 있고,
 
@@ -68,38 +68,59 @@ RAN-AI 시뮬레이션 수행은 ns-3를 통해 이루어졌다. 이는 ns3-gym 
 wget -O inputPolygon/SanFrancisco.osm “https://api.openstreetmap.org/api/0.6/map?bbox=-122.4115,37.7814,-122.3899,37.7965"
 ```
 
-으로 CLI를 통해 받아오는 것도 가능하다. 이렇게 해서 저장된 ‘.osm’ 파일을 xml 파일로 변환해주어야 한다. SUMO에는 여러 종류의 xml 파일이 있는데, 교통 인프라 네트워크인 net.xml, 루트 파일인 trips.xml 및 rou.xml 등이 있다. 우선 netconfverter를 이용하여 osm 파일을 net.xml 파일로 변환해 주어야 한다.
+으로 CLI를 통해 받아오는 것도 가능하다. 그런데 이때 파일을 'inputPolygon' 디렉토리에 저장하는 것은 GEMV [다운로드](https://vehicle2x.net/download/){:target="_blank"}를 완료한 상태에서 하는건데, 다른 디렉토리에서 먼저 아래 과정을 수행하고 파일들을 나중에 'inputPolygon' 으로 복사해도 상관은 없다.
+
+이렇게 해서 저장된 `.osm` 파일을 xml 파일로 변환해주어야 한다. SUMO에는 여러 종류의 xml 파일이 있는데, 교통 인프라 네트워크인 `net.xml`, 루트 파일인 `trips.xml` 및 `rou.xml` 등이 있다. 우선 netconfverter를 이용하여 osm 파일을 `net.xml` 파일로 변환해 주어야 한다.
 
 ```bash
 netconvert --osm inputPolygon/ SanFrancisco.osm -o inputPolygon/SanFrancisco.net.xml --geometry.remove --ramps.guess --junctions.join --tls.guess-signals --tls.discard-simple --tls.join --remove-edges.by-type railway.subway
 ```
 
-<img class="modal img__medium" src="/_pages/study/paper_review/images/mobility_001/3.png" alt="<b>[Fig. 3]</b>SUMO-gui를 통해 확인한 SanFrancisco.net.xml."/>
+<img class="modal img__medium" src="/_pages/study/paper_review/images/mobility_001/3.png" alt="<b>[Fig. 3]</b> SUMO-gui를 통해 확인한 SanFrancisco.net.xml."/>
 
-그 후 randomTrips.py를 이용해 랜덤하게 차량들의 경로를 생성하고, trips.xml 로 저장한다. 이 때 차량의 개수를 저장해준다.
+그 후 `randomTrips.py`를 이용해 랜덤하게 차량들의 경로를 생성하고, `trips.xml` 로 저장한다. 이 때 차량의 개수를 저장해준다.
 
 ```bash
 randomTrips.py -n inputPolygon/ SanFrancisco.net.xml -e 20 -o inputPolygon/SanFrancisco.trips.xml
 ```
 
-그 후 duarouter를 이용해 rou.xml 파일을 생성한다.
+그 후 duarouter를 이용해 `rou.xml` 파일을 생성한다.
 
 ```bash
 duarouter -n inputPolygon/SanFrancisco.net.xml --route-files inputPolygon/SanFrancisco.trips.xml -o inputPolygon/SanFrancisco.rou.xml --ignore-errors
 ```
 
-파일들의 경로를 inputPolygon이라 한 것은 GEMV의 내부 경로에 바로 저장해 주기 위함이다.
-
-시뮬레이션에 필요한 파일 경로와 같은 기본 정보나 시뮬레이션 시간 등의 파라미터는 sumo.cfg 파일에 저장해 준 후 이 sumo.cfg 파일을 이용해 SUMO simulation을 실행한다.
+시뮬레이션에 필요한 파일 경로와 같은 기본 정보나 시뮬레이션 시간 등의 파라미터는 `sumo.cfg` 파일에 저장해 준 후, 이 `sumo.cfg` 파일을 이용해 SUMO simulation을 실행한다.
 
 ```bash
 sumo -c SanFrancisco.sumo.cfg
 ```
 
-위 SanFrancisco.sumo.cfg 파일에서 알 수 있듯 시뮬레이션 결과는 inputMobilitySUMO 폴더 안에 SanFrancisco-mobility-trace.xml 파일로 저장된다.
+위 `SanFrancisco.sumo.cfg` 파일에서 알 수 있듯 시뮬레이션 결과는 inputMobilitySUMO 폴더 안에 `SanFrancisco-mobility-trace.xml` 파일로 저장된다.
+
+그럼 이제 matlab으로 GEMV 시뮬레이션을 실행할 준비가 된것이다.
+
+## GEMV
+
+만들어 둔 xml 파일을 돌리기 위해 우선 `simSetting.m` 파일에 SanFracisco case를 추가해주고, 시뮬레이션을 실행한다.
+
+```matlab
+>> runSimulation
+```
+
+시뮬레이션이 완료되면 kml 파일과 csv 파일이 'outputKML', 'outputSim' 디렉토리에 저장된다.
+
+Kml 파일은 구글어스로 시각화 할 수 있다.
 
 
-
+<div class="post__stage-container">
+    <div class="post__stage">
+        <img class="modal img__medium" src="/_pages/study/paper_review/images/mobility_001/4.jpg" alt="<b>[Fig. 4]</b> Busan."/>
+    </div>
+    <div class="post__stage">
+        <img class="modal img__medium" src="/_pages/study/paper_review/images/mobility_001/5.jpg" alt="<b>[Fig. 5]</b> San Francisco."/>
+    </div>
+</div>
 
 
 ---

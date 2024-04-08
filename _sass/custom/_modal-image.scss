@@ -15,17 +15,18 @@
 }
 
 .modal-content {
+  position: relative;
   background: none;
   -webkit-user-drag: none;
   transition: transform 0.3s ease;
   display: block;
-  overflow: visible;
+  overflow: hidden;
 }
 
 .modal-image {
   display: block;
   width: 100%;
-  height: auto;
+  max-height: 95%;
   -webkit-user-drag: none;
   user-select: none;
   -webkit-user-select: none;
