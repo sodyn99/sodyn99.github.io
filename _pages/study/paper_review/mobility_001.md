@@ -56,7 +56,9 @@ RAN-AI 시뮬레이션 수행은 ns-3를 통해 이루어졌다. 이는 ns3-gym 
 
 논문 참고
 
-## SUMO
+
+
+<!-- ## SUMO
 
 먼저 OpenStreetMap과 같은 오픈소스 지도에서 osm 파일을 가져온다.
 
@@ -115,12 +117,68 @@ Kml 파일은 구글어스로 시각화 할 수 있다.
 
 <div class="post__stage-container">
     <div class="post__stage">
-        <img class="modal img__medium" src="/_pages/study/paper_review/images/mobility_001/4.jpg" alt="<b>[Fig. 4]</b> Busan."/>
+        <img class="modal img__medium" src="/_pages/study/paper_review/images/mobility_001/4.png" alt="<b>[Fig. 4]</b> Busan."/>
     </div>
     <div class="post__stage">
-        <img class="modal img__medium" src="/_pages/study/paper_review/images/mobility_001/5.jpg" alt="<b>[Fig. 5]</b> San Francisco."/>
+        <img class="modal img__medium" src="/_pages/study/paper_review/images/mobility_001/5.png" alt="<b>[Fig. 5]</b> San Francisco."/>
     </div>
-</div>
+</div> -->
+
+
+
+## RAN-AI
+
+Ran-ai 환경을 구축하기 위해 Anaconda를 이용하는 것이 좋다.
+
+```bash
+sudo apt-get install -y libgl1-mesa-glx libegl1-mesa libxrandr2 libxrandr2 libxss1 libxcursor1 libxcomposite1 libasound2 libxi6 libxtst6
+# https://docs.anaconda.com/free/anaconda/allpkglists/
+curl --output anaconda.sh https://repo.anaconda.com/archive/Anaconda3-2024.02-1-Linux-x86_64.sh
+shasum -a 256 anaconda.sh # 무결성 확인
+bash ./anaconda.sh
+source ~/.bashrc
+```
+
+우선 Ran-ai 코드를 받아준다.
+
+```bash
+git clone https://github.com/signetlabdei/ns3-ran-ai.git
+```
+
+그 후 conda 환경 세팅을 해준다.
+
+```bash
+conda create -n ns3 python=3.10
+conda activate ns3
+```
+
+```bash
+conda install numpy tensorflow pytorch pandas seaborn matplotlib=3.6 psutil ipywidgets conda-forge::tikzplotlib
+pip install pickle5 sem
+```
+
+Python interface를 추가해준다.
+
+```bash
+cd contrib/ns3-ai/py_interface
+pip3 install . --user
+cd ../../..
+```
+
+Python interface를 위한 환경 변수를 추가해준다.
+
+```bash
+export PYTHONPATH=/home/host/.local/lib/python3.10/site-packages/ns3_ai-0.0.2-py3.10-linux-x86_64.egg:$ PYTHONPATH
+```
+
+Ns3 시뮬레이션을 수행하고 offline 데이터를 생성한다.
+
+```bash
+python3 scratch/ran-ai/get_offline_stats.py -run
+```
+
+
+
 
 
 ---

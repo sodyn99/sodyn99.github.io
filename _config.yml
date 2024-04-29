@@ -16,11 +16,11 @@ minimal_mistakes_skin    : "default" # "air", "aqua", "contrast", "dark", "dirt"
 
 # Site Settings
 locale                   : "ko-KR"
-title                    : "SODYN"
+title                    : "SDIN"
 title_separator          : "|"
 subtitle                 : # site tagline that appears below site title in masthead
-name                     : "sodyn99"
-description              : "Welcome to SODYN."
+name                     : "sdin99"
+description              : "Welcome to SDIN."
 url                      : "https://sodyn99.github.io"
 baseurl                  : "/"
 repository               : "sodyn99/sodyn99.github.io"
@@ -32,7 +32,7 @@ words_per_minute         : 200
 comments:
   provider               : "disqus" # false (default), "disqus", "discourse", "facebook", "staticman", "staticman_v2", "utterances", "giscus", "custom""
   disqus:
-    shortname            : "sodyn99"
+    shortname            : "sdin99"
   discourse:
     server               : # https://meta.discourse.org/t/embedding-discourse-comments-via-javascript/31963 , e.g.: meta.discourse.org
   facebook:
@@ -104,7 +104,7 @@ analytics:
 
 # Site Author
 author:
-  name             : "sodyn99"
+  name             : "sdin99"
   avatar           : "/assets/images/account.png"
   bio              : # "I am an **amazing** person."
   location         : "Somewhere"
