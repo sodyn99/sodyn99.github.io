@@ -170,14 +170,14 @@
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
     flex-wrap: wrap;
     -webkit-box-align: center;
     -ms-flex-align: center;
     align-items: center;
     -webkit-box-pack: justify;
     -ms-flex-pack: justify;
-    justify-content: center;
+    justify-content: space-between;
     width: 100%;
     @include breakpoint($small) {
         width: $small;
@@ -314,6 +314,37 @@
         flex-direction: row;
         width: $medium;
         border-radius: 1.5em;
+    }
+    @include breakpoint($medium-wide) {
+        width: $medium-wide;
+    }
+    @include breakpoint($large) {
+        width: $large;
+    }
+    @include breakpoint($x-large) {
+        width: $x-large;
+        max-width: $max-width;
+    }
+}
+.home__section-blog-contents {
+    padding-top: 2em;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
+    justify-content: center;
+    width: 100%;
+    @include breakpoint($small) {
+        width: $small;
+    }
+    @include breakpoint($medium) {
+        width: $medium;
     }
     @include breakpoint($medium-wide) {
         width: $medium-wide;
