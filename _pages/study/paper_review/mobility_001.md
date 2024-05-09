@@ -59,7 +59,7 @@ RAN-AI 시뮬레이션 수행은 ns-3를 통해 이루어졌다. 이는 ns3-gym 
 
 
 
-<!-- ## SUMO
+## SUMO
 
 먼저 OpenStreetMap과 같은 오픈소스 지도에서 osm 파일을 가져온다.
 
@@ -103,6 +103,14 @@ sumo -c SanFrancisco.sumo.cfg
 
 그럼 이제 matlab으로 GEMV 시뮬레이션을 실행할 준비가 된것이다.
 
+OpenStreetMap을 이용해 바로 파일을 받아오는 방법 외에, `osmWebWizard.py`를 사용하는 방법이 있다. `osmWebWizard.py`를 통해 더 간편하게 지도를 다운로드 받을 수 있다. 파일의 위치를 찾기 힘들다면 `find`를 이용하자.
+
+```bash
+sudo find / -n osmWebWizard.py
+```
+
+<img class="modal img__medium" src="/_pages/study/paper_review/images/mobility_001/3-2.png" alt=""/>
+
 ## GEMV
 
 만들어 둔 xml 파일을 돌리기 위해 우선 `simSetting.m` 파일에 SanFracisco case를 추가해주고, 시뮬레이션을 실행한다.
@@ -123,7 +131,7 @@ Kml 파일은 구글어스로 시각화 할 수 있다.
     <div class="post__stage">
         <img class="modal img__medium" src="/_pages/study/paper_review/images/mobility_001/5.png" alt="<b>[Fig. 5]</b> San Francisco."/>
     </div>
-</div> -->
+</div>
 
 
 
