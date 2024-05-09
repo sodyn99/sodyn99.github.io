@@ -137,10 +137,19 @@ sudo apt-get install -y libgl1-mesa-glx libegl1-mesa libxrandr2 libxrandr2 libxs
 curl --output anaconda.sh https://repo.anaconda.com/archive/Anaconda3-2024.02-1-Linux-x86_64.sh
 shasum -a 256 anaconda.sh # 무결성 확인
 bash ./anaconda.sh
+```
+
+```bash
+sudo nano ~/.bashrc
+```
+
+마지막 줄에 `export PATH=~/anaconda3/bin:~/anaconda3/condabin:$PATH` 추가해준다.
+
+```bash
 source ~/.bashrc
 ```
 
-우선 Ran-ai 코드를 받아준다.
+Ran-ai 코드를 받아준다.
 
 ```bash
 git clone https://github.com/signetlabdei/ns3-ran-ai.git
@@ -172,11 +181,33 @@ Python interface를 위한 환경 변수를 추가해준다.
 export PYTHONPATH=/home/host/.local/lib/python3.10/site-packages/ns3_ai-0.0.2-py3.10-linux-x86_64.egg:$ PYTHONPATH
 ```
 
-Ns3 시뮬레이션을 수행하고 offline 데이터를 생성한다.
+- **Offline learning**
 
-```bash
-python3 scratch/ran-ai/get_offline_stats.py -run
-```
+    ```bash
+    python3 scratch/ran-ai/get_offline_stats.py -run
+    python3 scratch/ran-ai/run.py -train -run -offline -episode 100
+    ```
+
+    오프라인 데이터를 생성하기 위해 `get_offline_stats.py` 파일을 실행한다.
+
+    `get_offline_stats.py`를 run 할 때, 여러가지 error 상황에 부딪히게 된다. 우선 python 코드 내부의 경로를 수정해주어야 한다. Import 구문 사이에 `sys.path.append(os.path.abspath('.'))`를 추가해 준다. `params_grid` 리스트에는 `gemvTracesPath`와 `appTracesPath`로 파일 경로를 명시해 주고 있다. 이를 내가 사용하는 실제 파일 경로로 변경해 주었다.
+
+    그 후 ns3 실행 파일인 `waf`가 있는 폴더를 설정해주어야 한다. `ns_path = '/home/host/ns3-ran-ai'`로 설정해준 후 코드를 실행시키게 되면 error: ‘numeric_limits’ is not a member of ‘std’라는 std 에러가 발생한다. 이 에러는 `csv-reader.cc`파일의 오류로 `csv-reader.h`파일에 `<stddef.h>` 파일과 `<limits>` 파일을 include함으로써 해결 가능하다. &rarr; [ns3 설치](/study/communication/ns3/2/) 참고.
+
+- **Online learning**
+
+    ```bash
+    python3 scratch/ran-ai/run.py -train -run -episode 100
+    ```
+
+    Simulation.py의 `initialize_simulation()` 함수에 의해 “TRAINING”이라는 단어가 출력되고 os.makedirs() 함수에 의해 `/output/train/` 및 하위 폴더가 새롭게 생성된다.
+
+    처음 training을 실행시키기 위해 parser에 `-run`을 활성해 해주었고, `get_input()`함수의 `running = args['run']`에 의해 `running`이라는 변수가 True가 된다.
+
+    `initialize_simulation`이 완료되면, 메모리 설정을 위해 `Experiment()`함수가 실행된다. 이 함수로 생성된 설정값들은 `experiment`라는 변수에 저장되게 된다. 이 때 Experiment()함수 4번째 파라미터를 `ns3-ran-ai`의 경로로 설정해준다.
+
+    `experiment`설정이 완료되면 `initialize_online_episode()`함수가 실행된다.
+
 
 
 
