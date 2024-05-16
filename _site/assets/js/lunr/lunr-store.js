@@ -35,29 +35,29 @@ var store = [{
     "title": "Elasticsearch 개요",
     "excerpt":"Elastic 소개 과거에는 기업들이 생성한 정형 데이터가 주를 이루었다면, 이제는 개인들이 생성하는 정형/비정형 데이터들을 다루게 되었다. 데이터 규모와 다양성이 커지면서, 검색은 더욱 중요해졌다. 이제는 검색이 그저 사전이나 포털 사이트 같은 일부 서비스에서만 국한되지 않는다. SNS, 쇼핑몰, 게임 부터 마케팅, 개발 까지 검색 기능의 활용 분야는 매우 광범위하다. 이러한 상황에 Elasticsearch는...","url": "http://localhost:4000/study/data_analysis/elasticsearch/1/"
   },{
-    "title": "표준화",
-    "excerpt":"표준화 표준화 단체는 크게 2가지로 알면 된다. 바로 ITU와 3GPP이다. ITU는 국제전기통신연합으로 유엔 산하의 국제 기구다. 기술 표준을 제정하는 것 뿐만 아니라 주파수 관리, 위성 관리, 개발도상국 기술 지원 등의 역할을 하고 있다. 3GPP는 유럽의 ETSI, 일본의 TTC, 중국의 CCSA, 한국의 TTA, 미국의 ATIS가 연합하여 설립한 국제 표준화 단체이다. 3GPP의...","url": "http://localhost:4000/study/communication/5g/1/1/"
-  },{
     "title": "R 설치",
     "excerpt":"R # update indices sudo apt update -qq # install two helper packages we need sudo apt install --no-install-recommends software-properties-common dirmngr # add the signing key (by Michael Rutter) for these repos # To verify key, run gpg --show-keys /etc/apt/trusted.gpg.d/cran_ubuntu_key.asc # Fingerprint: E298A3A825C0D65DFD57CBB651716619E084DAB9 wget -qO- https://cloud.r-project.org/bin/linux/ubuntu/marutter_pubkey.asc | sudo tee -a...","url": "http://localhost:4000/study/data_analysis/r/1/"
   },{
     "title": "SQL 개요",
     "excerpt":" ","url": "http://localhost:4000/study/data_analysis/sql/1/"
   },{
-    "title": "Cloud 개요",
-    "excerpt":"클라우드의 반댓말은 온프레미스다. 기존에는 기업들이 온프레미스 서버를 구축해 독자적으로 서버를 운영했다. 당연하게도 서버 구축, 유지 관리 비용이 더 들어갈 수밖에 없었다. AWS와 같은 클라우드 업체는 이미 구축된 서버를 빌려준다. 예를 들어 스타트업이나 본인의 사이트를 운영하는 개인 들은 온프레미스 서버를 구축하고 운영하기가 어렵기 때문에 이런 클라우드 업체를 통해 서버를 대여하고 그...","url": "http://localhost:4000/study/cloud/1/"
+    "title": "Protocol",
+    "excerpt":"#     ","url": "http://localhost:4000/study/communication/computer_network/1/"
   },{
     "title": "6G 개요",
     "excerpt":"#     ","url": "http://localhost:4000/study/communication/6g/1/"
   },{
+    "title": "Cloud 개요",
+    "excerpt":"클라우드의 반댓말은 온프레미스다. 기존에는 기업들이 온프레미스 서버를 구축해 독자적으로 서버를 운영했다. 당연하게도 서버 구축, 유지 관리 비용이 더 들어갈 수밖에 없었다. AWS와 같은 클라우드 업체는 이미 구축된 서버를 빌려준다. 예를 들어 스타트업이나 본인의 사이트를 운영하는 개인 들은 온프레미스 서버를 구축하고 운영하기가 어렵기 때문에 이런 클라우드 업체를 통해 서버를 대여하고 그...","url": "http://localhost:4000/study/cloud/1/"
+  },{
+    "title": "표준화",
+    "excerpt":"표준화 표준화 단체는 크게 2가지로 알면 된다. 바로 ITU와 3GPP이다. ITU는 국제전기통신연합으로 유엔 산하의 국제 기구다. 기술 표준을 제정하는 것 뿐만 아니라 주파수 관리, 위성 관리, 개발도상국 기술 지원 등의 역할을 하고 있다. 3GPP는 유럽의 ETSI, 일본의 TTC, 중국의 CCSA, 한국의 TTA, 미국의 ATIS가 연합하여 설립한 국제 표준화 단체이다. 3GPP의...","url": "http://localhost:4000/study/communication/5g/1/1/"
+  },{
     "title": "ns3 개요",
     "excerpt":"ns3 는 오픈소스 네트워크, 패킷 레벨 시뮬레이터 이다.   기본적으로 C++을 기반으로 하고 있고, discrete-event 네트워크 시뮬레이터이기 때문에 연속된 시간을 시뮬레이션 하는것이 아닌, 지정된 시간에 실행되도록 예약된 이벤트를 추적한다.   자세한 내용은 매뉴얼[1]을 참고하자.     Reference      ns-3.41 Manual  ","url": "http://localhost:4000/study/communication/ns3/1/"
   },{
-    "title": "Protocol",
-    "excerpt":"#     ","url": "http://localhost:4000/study/communication/computer_network/1/"
-  },{
     "title": "Git",
-    "excerpt":"   ","url": "http://localhost:4000/study/programming/github/1/"
+    "excerpt":"Git?   Git은 버전 관리 시스템이다. Git 원격 저장소 서비스로 GitHub, GitLab이 가장 많이 사용되는데 여기는 GitHub에 대한 내용을 올릴 예정이다.                 Github 시작          ","url": "http://localhost:4000/study/programming/github/1/"
   },{
     "title": "주파수",
     "excerpt":" ","url": "http://localhost:4000/study/communication/5g/2/1/"
@@ -68,20 +68,20 @@ var store = [{
     "title": "5G 개념",
     "excerpt":"                                    주파수                                        Sequence                        ","url": "http://localhost:4000/study/communication/5g/2/"
   },{
+    "title": "SQL 함수",
+    "excerpt":"중복 삭제 및 문자열 정리 DISTINCT 중복 데이터를 제외하고 고유한 값으로 목록을 생성한다. SELECT DISTINCT player_id FROM player_address LENGTH 문자열 변수의 길이를 반환한다. SELECT LENGTH(country) AS letters_in_country FROM player_address SELECT country FROM player_address WHERE LENGTH(country) &gt; 2 country USA SUBSTR SELECT country FROM player_address WHERE SUBSTR(coutry,1,2) = 'US' country US...","url": "http://localhost:4000/study/data_analysis/sql/2/"
+  },{
     "title": "ns3 설치",
     "excerpt":"1. Ubuntu 설치 2. ns-3 다운로드 * 최신 버전은 ns-3 공식 문서를 참고하여 다운로드 받길 바란다. ns-3.33 버전 문서[1]를 바탕으로 진행. 필수구성요소 Prerequisite Package/version Code Current version C++ 컴파일러 clang++ 또는 g++(4.9 버전 이상) sudo apt install g++ 11.3.0 Python python3 버전 &gt;= 3.5 sudo apt install python3 3.10.6 Git...","url": "http://localhost:4000/study/communication/ns3/2/"
-  },{
-    "title": "딥 러닝",
-    "excerpt":"딥 러닝은 인간 두뇌의 구조를 본 따 개발된 인공지능이다. 인간이 사물을 인식하기의 과정은, 먼저 눈으로 보고 그 정보가 여러 뇌를 거치게 되는데 마찬가지로 딥 러닝 또한 여러 계층으로 구성된다. 인간의 신경과 뇌에는 수백만개의 뉴런이 연결되어 있듯 딥 러닝 신경망도 인공 신경 세포 노드를 통해 계층을 구성하고 있다. 딥 러닝의 목표는...","url": "http://localhost:4000/study/ai/2/"
   },{
     "title": "Elastic with Chat GPT",
     "excerpt":"Logstash 실습 진행 NLP 현재 제공되는 클라우드를 어떻게 효율적으로 사용할 수 있을까. ChatGPT 그냥 ChatGPT는 신뢰도를 보장할 수 없음. 서비스 제공자가 직접 신뢰도를 보장해야 함. 답변을 컨트롤할 수 있고, 신뢰도를 보장할 수 있음. Word Embedding NLP는 광대해서 전부 다루기는 어려움. &lt;Word2Vec&gt; 사람의 자연어를 기계가 이해할 수 있게. 단어를 벡터로 치환함....","url": "http://localhost:4000/study/data_analysis/elasticsearch/2/"
   },{
-    "title": "Github 개요",
-    "excerpt":"git init git add README.md git commit -e git branch -M main git remote add origin https://github.com/&lt;user_name&gt;/&lt;repository_name&gt;.git git push -u origin main      ","url": "http://localhost:4000/study/programming/github/2/"
+    "title": "딥 러닝",
+    "excerpt":"딥 러닝은 인간 두뇌의 구조를 본 따 개발된 인공지능이다. 인간이 사물을 인식하기의 과정은, 먼저 눈으로 보고 그 정보가 여러 뇌를 거치게 되는데 마찬가지로 딥 러닝 또한 여러 계층으로 구성된다. 인간의 신경과 뇌에는 수백만개의 뉴런이 연결되어 있듯 딥 러닝 신경망도 인공 신경 세포 노드를 통해 계층을 구성하고 있다. 딥 러닝의 목표는...","url": "http://localhost:4000/study/ai/2/"
   },{
-    "title": "SQL 함수",
-    "excerpt":"중복 삭제 및 문자열 정리 DISTINCT 중복 데이터를 제외하고 고유한 값으로 목록을 생성한다. SELECT DISTINCT player_id FROM player_address LENGTH 문자열 변수의 길이를 반환한다. SELECT LENGTH(country) AS letters_in_country FROM player_address SELECT country FROM player_address WHERE LENGTH(country) &gt; 2 country USA SUBSTR SELECT country FROM player_address WHERE SUBSTR(coutry,1,2) = 'US' country US...","url": "http://localhost:4000/study/data_analysis/sql/2/"
+    "title": "Push",
+    "excerpt":"Github Repository 생성 [Repository name *] 부분에 아무 이름을 넣고 새로운 리포지토리(원격 저장소)를 만들어준다. Git Push GitHub로 올릴 로컬 디렉토리에서 아래 코드를 순차적으로 따라가면 된다. 1. Git init Git 사용을 위한 초기 설정 git init 2. Git add 변경 사항을 스테이징한다. git add . 3. Git commit 스테이징된 변경 사항을...","url": "http://localhost:4000/study/programming/github/2/"
   },{
     "title": "시스템 구조",
     "excerpt":"전체적인 네트워크 구조는 RAN과 Core로 나눠진다.    ","url": "http://localhost:4000/study/communication/5g/3/"
@@ -89,23 +89,26 @@ var store = [{
     "title": "ns3 예제",
     "excerpt":"hello-simulator.cc source code /* -*- Mode:C++; c-file-style:\"gnu\"; indent-tabs-mode:nil; -*- */ /* * This program is free software; you can redistribute it and/or modify * it under the terms of the GNU General Public License version 2 as * published by the Free Software Foundation; * * This program is distributed...","url": "http://localhost:4000/study/communication/ns3/3/"
   },{
+    "title": "Pull-Request",
+    "excerpt":"Branch 생성 git checkout -b develop main 브랜치로 직접 푸시하기 전, 개발 전용(?) 브랜치를 새로 만들어준다. git branch를 통해 변경된 브랜치를 확인할 수 있다. Push 새로 만든 develop 브랜치로 변경 사항을 푸시한다. 푸시가 완료되면 이렇게 새로 브랜치가 만들어지고 변경 사항이 적용된 것을 확인할 수 있다. Pull-Request GitHub에서 이런 메시지가 뜨는데...","url": "http://localhost:4000/study/programming/github/3/"
+  },{
     "title": "Mathematical Methods for Wireless Communications",
     "excerpt":"Signal Spaces 위 그림은 우리가 흔히 알고 있는 통신 시스템의 구조를 나타낸 것이다. 이러한 통신 시스템을 수학적으로 분석하기 위한 가장 기본적인 개념은 Signal Space 이다. Approximation and Estimation in Signal Spaces Minimum Mean-Squared Error Estimation 추정이라는 단어가 본의 아니게 많이 사용되게 되는데 추정, 추정값, 추정자 등등 헷갈리는 사태를 방지하기 위해...","url": "http://localhost:4000/study/communication/optimization/3/"
-  },{
-    "title": "ns3 Logging, CommandLine",
-    "excerpt":"Logging $ export 'NS_LOG=UdpEchoClientApplciation=level_all' # 모든 사건(?)을 Log로 출력 $ export 'NS_LOG=UdpEchoClientApplciation=level_all|prefix_time' #시간을 prefix로 출력 $ export 'NS_LOG=*=level_all|prefix_func|prefix_time' 코드에 NS_LOG_COMPONENT_DEFINE (\"HelloExample\") NS_LOG_INFO (\"Hello\"); 가 정의되어 있다면 $ export NS_LOG=HelloExample=info # 출력은 Hello At time +2s ... 시뮬레이션이 끝나면 해당 시뮬레이션에서 사용한 로깅 모듈을 초기화 해주는 것이 좋다. # LOG 초기화...","url": "http://localhost:4000/study/communication/ns3/4/"
   },{
     "title": "전송 구조",
     "excerpt":" ","url": "http://localhost:4000/study/communication/5g/4/"
   },{
-    "title": "Page Not Found",
-    "excerpt":"   404   Page Not Found  ","url": "http://localhost:4000/404.html"
+    "title": "ns3 Logging, CommandLine",
+    "excerpt":"Logging $ export 'NS_LOG=UdpEchoClientApplciation=level_all' # 모든 사건(?)을 Log로 출력 $ export 'NS_LOG=UdpEchoClientApplciation=level_all|prefix_time' #시간을 prefix로 출력 $ export 'NS_LOG=*=level_all|prefix_func|prefix_time' 코드에 NS_LOG_COMPONENT_DEFINE (\"HelloExample\") NS_LOG_INFO (\"Hello\"); 가 정의되어 있다면 $ export NS_LOG=HelloExample=info # 출력은 Hello At time +2s ... 시뮬레이션이 끝나면 해당 시뮬레이션에서 사용한 로깅 모듈을 초기화 해주는 것이 좋다. # LOG 초기화...","url": "http://localhost:4000/study/communication/ns3/4/"
   },{
-    "title": "채널 사운딩",
-    "excerpt":" ","url": "http://localhost:4000/study/communication/5g/5/"
+    "title": "Page Not Found",
+    "excerpt":"         404   Page Not Found                               ","url": "http://localhost:4000/404.html"
   },{
     "title": "ns3 기본 요소",
     "excerpt":"여기서 기본 요소라는 건 ns3 시뮬레이션 코드를 이루는 기본적인 요소들을 말한다. first.cc 예제와 함께 보면 훨씬 이해가 쉬울 것이다. 1. Node 우선 node가 있다. 단말과 같이 네트워크 토폴로지의 끝단이라고 보면 된다. NodeContainer nodes; nodes.Create (2); NodeContainer와 Create로 node를 생성할 수 있고, 몇개를 생성할 지 정할수 있다. 2. Channel Channel은 말그대로...","url": "http://localhost:4000/study/communication/ns3/5/"
+  },{
+    "title": "채널 사운딩",
+    "excerpt":" ","url": "http://localhost:4000/study/communication/5g/5/"
   },{
     "title": "5G",
     "excerpt":"                                    5G 개요                                                   표준화                     기본 철학                                                                      5G 개념                                                   주파수                     Sequence                                                                      시스템 구조                                        Transmission 구조                                        채널 사운딩                                        Transport 채널 프로세싱                                        PHY Control 시그널링                                                   Downlink                     Uplink                                                      ","url": "http://localhost:4000/study/communication/5g/"
@@ -170,8 +173,8 @@ var store = [{
     "title": "Bluetooth 세대별 특징",
     "excerpt":"Bluetooth 1 GFSK 변조 방식을 이용해 최대 1 Mbps, 실제로는 0.7 Mbps의 전송속도와 최대 10 m의 전파 범위를 지원한다. Bluetooth 2 Bluetooth 2.0은 2004년 3월에 발표되었다. 기존에 사용하던 GFSK 변좡식을 그대로 사용할 경우 1 Mbps의 전송속도를 유지하지만, Enhanced Data Rate(EDR)을 통해 최대 3 Mbps, 실제로는 2.1 Mbps의 속도가 지원된다. EDR은...","url": "http://localhost:4000/projects/bluetooth/generation/"
   },{
-    "title": "Github",
-    "excerpt":"                                    Git                                        Github 개요                        ","url": "http://localhost:4000/study/programming/github/"
+    "title": "GitHub",
+    "excerpt":"                                    Git                                        Push                                        Pull-Request                        ","url": "http://localhost:4000/study/programming/github/"
   },{
     "title": "Bluetooth 역사",
     "excerpt":"Bluetooth는 에릭슨, 인텔, IBM, 노키아, 도시바 이렇게 5개의 회사들이 모여 Bluetooth SIG를 설립하면서 시작되었다. Bluetooth 1.0의 경우 IEEE 802.15.1 표준에도 등록이 되어있는데, 그 이후 버전들은 모두 Bluetooth SIG에서 표준화 하고있다. 현재(2024.02)까지 Bluetooth 5.4까지 표준이 제정되어있다. Bluetooth 역사에서 빠질 수 없는 중요한 사건(?)은 Bluetooth 4.0부터 등장한 Bluetooth Low Energy(이하 BLE)라고 할...","url": "http://localhost:4000/projects/bluetooth/history/"
