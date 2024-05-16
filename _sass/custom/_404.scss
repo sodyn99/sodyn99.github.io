@@ -1,7 +1,7 @@
 .notFound-container {
   margin-left: auto;
   margin-right: auto;
-  padding: 2em;
+  padding: 1em;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -9,8 +9,51 @@
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: center;
 }
-
 .notFound-404 {
   font-size: 5em;
+}
+.notFound-botton_container {
+  margin-left: auto;
+  margin-right: auto;
+  padding: 2em;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  flex-direction: row;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: center;
+}
+a#notFound-button {
+	margin: 0 0.5em;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	z-index: 9999;
+
+	width: 40px;
+	height: 40px;
+	background: #ffa55c;
+	color: #fff;
+	cursor: pointer;
+	opacity: 1;
+	border-radius: 50%;
+	font-size: 30px;
+	text-align: center;
+	line-height: 50px;
+	text-decoration: none;
+	>i {
+			font-size: 20px;
+			text-align: center;
+	}
+}
+a#topBtn:hover {
+	background: #ca5e00;
 }
