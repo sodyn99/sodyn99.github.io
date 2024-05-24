@@ -2,27 +2,27 @@ var store = [{
         "title": "Blog 소개",
         "excerpt":"여기 Blog 페이지에는 많은 것을 올리진 않을 것 같고 일상적인 것들이나 생각 같은 것들만 간단하게 쓸 것같다.  ","categories": ["daily"],
         "tags": [],
-        "url": "/daily/blog-%EC%86%8C%EA%B0%9C/",
+        "url": "/blog/2024-02-10-blog-%EC%86%8C%EA%B0%9C/",
         "teaser": null
       },{
         "title": "6G 동향",
         "excerpt":"5G 서비스는 과도기라는 말을 들을 정도로 어려움을 겪었다. 통신사들 자체의 서비스적인 측면을 떠나서 한국의 경우 이미 4G에 대한 만족도가 높은 상황에서 5G에 큰 메리트를 느끼기 어려웠다 라고 볼 수 있을 것 같다. 4G가 상용화 되면서 OTT나 Youtube 같은 서비스들이 사용자들에게 새로운 경험을 선사했는데, 5G는 아직까지도 대다수의 사람들에게 신선함을 주는 대표적인...","categories": ["trends"],
         "tags": [],
-        "url": "/trends/6G-%EB%8F%99%ED%96%A5/",
+        "url": "/blog/2024-02-22-6g-%EB%8F%99%ED%96%A5/",
         "teaser": null
       },{
         "title": "2024 MWC",
         "excerpt":"2024년에도 어김없이 찾아온 MWC. 직접 바르셀로나에 가서 보았다면 좋았겠지만, 아쉽게도 그러지 못해서 간단하게나마 이번 MWC에서 주요하게 볼만한 몇가지들을 정리해보고자 한다. 역시나 핵심 화두는 ‘AI’다. 또 AI냐 라고 할만큼 지겨울 수도 있지만 또 워낙 그만큼 중요한 주제이다. 화제가 되는건 역시 삼성이 CES에서도 선보였던 갤럭시 S24와 엣지 AI가 있지만 우리는 이동통신을 위주로...","categories": ["trends"],
         "tags": [],
-        "url": "/trends/2024_mwc-copy/",
+        "url": "/blog/2024-02-26-2024-mwc-copy/",
         "teaser": null
       },{
         "title": "AI-RAN Alliance",
         "excerpt":"2024 MWC에서 삼성전자, 엔비디아(Nvidia), 암(Arm), 소프트뱅크(SoftBank), 에릭슨(Ericsson), 노키아(Nokia), 마이크로소프트(Microsoft), 미국 노스이스턴대학 등 통신 및 소프트웨어 기업 10개사와 1개 대학이 모여 ‘AI-RAN Alliance’를 공식 출범했다. 주요 통신 장비 제조업체들이 모여 AI 경쟁력을 강화하고 본격적으로 6G에 대비하기 위한 움직임으로 보인다. 또 한편으로는 오픈소스 진영에서 활발히 연구되고 있는 O-RAN에 대항(?)하기 위한 것도 아닐까...","categories": ["news"],
         "tags": [],
-        "url": "/news/ai-ran/",
+        "url": "/blog/2024-03-02-ai-ran/",
         "teaser": null
-      },{
+      },,{
     "title": "5G 개요",
     "excerpt":"표준화 표준화 단체는 크게 2가지로 알면 된다. 바로 ITU와 3GPP이다. ITU는 국제전기통신연합으로 유엔 산하의 국제 기구다. 기술 표준을 제정하는 것 뿐만 아니라 주파수 관리, 위성 관리, 개발도상국 기술 지원 등의 역할을 하고 있다. 3GPP는 유럽의 ETSI, 일본의 TTC, 중국의 CCSA, 한국의 TTA, 미국의 ATIS가 연합하여 설립한 국제 표준화 단체이다. 3GPP의...","url": "http://localhost:4000/study/communication/5g/1/back/"
   },{
@@ -250,7 +250,4 @@ var store = [{
   },{
     "title": null,
     "excerpt":"{% if page.xsl %}{% endif %}Jekyll{{ site.time | date_to_xmlschema }}{{ page.url | absolute_url | xml_escape }}{% assign title = site.title | default: site.name %}{% if page.collection != \"posts\" %}{% assign collection = page.collection | capitalize %}{% assign title = title | append: \" | \" | append: collection %}{% endif...","url": "http://localhost:4000/feed.xml"
-  },{
-    "title": null,
-    "excerpt":"","url": "http://localhost:4000/page2/"
   }]
