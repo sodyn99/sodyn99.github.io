@@ -267,9 +267,9 @@ category_archive:
 tag_archive:
   type: liquid
   path: /tags/
-blog_archive:
-  type: liquid
-  path: /blog/
+# blog_archive:
+#   type: liquid
+#   path: /blog/
 # https://github.com/jekyll/jekyll-archives
 jekyll-archives:
   enabled:
@@ -284,6 +284,10 @@ jekyll-archives:
     category: /categories/:name/
     tag: /tags/:name/
     blog: /blog/:name/
+collections:
+  blog:
+    output: true
+    permalink: /blog/:name/
 
 
 # HTML Compression

@@ -1,19 +1,19 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9 http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd" xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 <url>
-<loc>http://localhost:4000/daily/blog-%EC%86%8C%EA%B0%9C/</loc>
+<loc>http://localhost:4000/blog/2024-02-10-blog-%EC%86%8C%EA%B0%9C/</loc>
 <lastmod>2024-02-10T00:00:00+09:00</lastmod>
 </url>
 <url>
-<loc>http://localhost:4000/trends/6G-%EB%8F%99%ED%96%A5/</loc>
+<loc>http://localhost:4000/blog/2024-02-22-6g-%EB%8F%99%ED%96%A5/</loc>
 <lastmod>2024-02-22T00:00:00+09:00</lastmod>
 </url>
 <url>
-<loc>http://localhost:4000/trends/2024_mwc-copy/</loc>
+<loc>http://localhost:4000/blog/2024-02-26-2024-mwc-copy/</loc>
 <lastmod>2024-02-26T00:00:00+09:00</lastmod>
 </url>
 <url>
-<loc>http://localhost:4000/news/ai-ran/</loc>
+<loc>http://localhost:4000/blog/2024-03-02-ai-ran/</loc>
 <lastmod>2024-03-02T00:00:00+09:00</lastmod>
 </url>
 <url>
@@ -222,9 +222,6 @@
 </url>
 <url>
 <loc>http://localhost:4000/tags/</loc>
-</url>
-<url>
-<loc>http://localhost:4000/page2/</loc>
 </url>
 <url>
 <loc>http://localhost:4000/assets/fonts/Ydestreet/Manual.pdf</loc>
