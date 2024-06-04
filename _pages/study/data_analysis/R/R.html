@@ -9,13 +9,12 @@ description:
 <section class="page__container">
     <ul>
         <hr>
-        <li class="page__slider" OnClick="location.href ='/study/data_analysis/r/1/'">
-            <dt>R 설치</dt>
+        {% assign files = site.study | where: "category", "data_analysis" | where: "subcategory", "r" %}
+        {% for file in files %}
+        <li class="page__slider" OnClick="location.href ='{{ file.url }}'">
+            <dt>{{ file.title }}</dt>
         </li>
         <hr>
-        <li class="page__slider" OnClick="location.href ='/study/data_analysis/r/2/'">
-            <dt></dt>
-        </li>
-        <hr>
+        {% endfor %}
     </ul>
 </section>

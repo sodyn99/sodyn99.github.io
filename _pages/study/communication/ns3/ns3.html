@@ -9,25 +9,12 @@ description: ""
 <section class="page__container">
     <ul>
         <hr>
-        <li class="page__slider" OnClick="location.href ='/study/communication/ns3/1/'">
-            <dt>ns3 개요</dt>
+        {% assign files = site.study | where: "category", "communication" | where: "subcategory", "ns3" %}
+        {% for ns3 in files %}
+        <li class="page__slider" OnClick="location.href ='{{ ns3.url }}'">
+            <dt>{{ ns3.title }}</dt>
         </li>
         <hr>
-        <li class="page__slider" OnClick="location.href ='/study/communication/ns3/2/'">
-            <dt>ns3 설치</dt>
-        </li>
-        <hr>
-        <li class="page__slider" OnClick="location.href ='/study/communication/ns3/3/'">
-            <dt>ns3 예제</dt>
-        </li>
-        <hr>
-        <li class="page__slider" OnClick="location.href ='/study/communication/ns3/4/'">
-            <dt>ns3 Logging, Command Line</dt>
-        </li>
-        <hr>
-        <li class="page__slider" OnClick="location.href ='/study/communication/ns3/5/'">
-            <dt>ns3 기본 요소</dt>
-        </li>
-        <hr>
+        {% endfor %}
     </ul>
 </section>

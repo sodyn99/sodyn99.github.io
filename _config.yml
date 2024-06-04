@@ -288,6 +288,9 @@ collections:
   blog:
     output: true
     permalink: /blog/:name/
+  study:
+    output: true
+    permalink: /:collection/:path/
 
 
 # HTML Compression
