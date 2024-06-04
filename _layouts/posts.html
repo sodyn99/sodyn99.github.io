@@ -18,5 +18,58 @@ layout: default
   <div class="post__container">
     {{ content }}
     <!-- <iframe width="100%" height="315" src="https://slashpage.com/sodyn99/qna"></iframe> -->
+
+    <hr>
+
+    <div class="post__pager-container">
+      {% assign collection_name = page.collection %}
+      {% assign category = page.category %}
+      {% assign subcategory = page.subcategory %}
+
+      {% if site[collection_name] %}
+        {% assign collection_pages = site[collection_name] | where: "category", category | where: "subcategory", subcategory | sort: 'path' %}
+        {% if collection_pages %}
+          {% for p in collection_pages %}
+            {% if p.url == page.url %}
+              {% assign current_index = forloop.index0 %}
+            {% endif %}
+          {% endfor %}
+
+          {% assign prev_index = current_index | minus: 1 %}
+          {% assign next_index = current_index | plus: 1 %}
+
+          {% if prev_index >= 0 %}
+          <div class="post__pager-prev" onclick="location.href='{{ collection_pages[prev_index].url }}'">
+            <div class="post__pager-title"><i class="fas fa-arrow-alt-circle-left" aria-hidden="true"></i></div>
+            <div class="post__pager-title">{{ collection_pages[prev_index].title }}</div>
+          </div>
+          {% endif %}
+
+          {% if next_index < collection_pages.size %}
+          <div class="post__pager-next" onclick="location.href='{{ collection_pages[next_index].url }}'">
+            <div class="post__pager-title">{{ collection_pages[next_index].title }}</div>
+            <div class="post__pager-title"><i class="fas fa-arrow-alt-circle-right" aria-hidden="true"></i></div>
+          </div>
+          {% endif %}
+        {% endif %}
+      {% endif %}
+    </div>
+
   </div>
 </div>
+
+<script>
+  document.addEventListener("DOMContentLoaded", function() {
+    const prevIndex = {{ prev_index }};
+    const nextIndex = {{ next_index }};
+    const collectionPagesSize = {{ collection_pages.size }};
+
+    if (prevIndex < 0) {
+      document.querySelector(".post__pager-next").style.width = "100%";
+    }
+
+    if (nextIndex >= collectionPagesSize) {
+      document.querySelector(".post__pager-prev").style.width = "100%";
+    }
+  });
+</script>

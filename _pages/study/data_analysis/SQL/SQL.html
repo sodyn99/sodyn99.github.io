@@ -9,13 +9,12 @@ description:
 <section class="page__container">
     <ul>
         <hr>
-        <li class="page__slider" OnClick="location.href ='/study/data_analysis/sql/1/'">
-            <dt>SQL 개요</dt>
+        {% assign files = site.study | where: "category", "data_analysis" | where: "subcategory", "sql" %}
+        {% for file in files %}
+        <li class="page__slider" OnClick="location.href ='{{ file.url }}'">
+            <dt>{{ file.title }}</dt>
         </li>
         <hr>
-        <li class="page__slider" OnClick="location.href ='/study/data_analysis/sql/2/'">
-            <dt>SQL 함수</dt>
-        </li>
-        <hr>
+        {% endfor %}
     </ul>
 </section>
