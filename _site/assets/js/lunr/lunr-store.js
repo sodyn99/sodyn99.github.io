@@ -84,7 +84,7 @@ var store = [{
         "teaser": null
       },{
         "title": "Git",
-        "excerpt":"Git?   Git은 버전 관리 시스템이다. Git 원격 저장소 서비스로 GitHub, GitLab이 가장 많이 사용되는데 여기는 GitHub에 대한 내용을 올릴 예정이다.      ","categories": ["programming"],
+        "excerpt":"Git? Git은 버전 관리 시스템이다. Git 원격 저장소 서비스로 GitHub, GitLab이 가장 많이 사용되는데 여기는 GitHub에 대한 내용을 올릴 예정이다. Github Education 자신이 학생 신분이라면 Github Education을 신청하자. Github Pro 멤버쉽과 함께 PRO 뱃지를 달 수 있다. 우선 설정으로 들어가서 학교 이메일을 추가해야 한다. 추가 완료 했으면 신청 페이지로 들어가...","categories": ["programming"],
         "tags": [],
         "url": "/study/programming/github/1/",
         "teaser": null
@@ -116,11 +116,14 @@ var store = [{
     "title": "Protocol",
     "excerpt":"#     ","url": "http://localhost:4000/study/communication/computer_network/1/"
   },{
-    "title": "Cloud 개요",
-    "excerpt":"클라우드의 반댓말은 온프레미스다. 기존에는 기업들이 온프레미스 서버를 구축해 독자적으로 서버를 운영했다. 당연하게도 서버 구축, 유지 관리 비용이 더 들어갈 수밖에 없었다. AWS와 같은 클라우드 업체는 이미 구축된 서버를 빌려준다. 예를 들어 스타트업이나 본인의 사이트를 운영하는 개인 들은 온프레미스 서버를 구축하고 운영하기가 어렵기 때문에 이런 클라우드 업체를 통해 서버를 대여하고 그...","url": "http://localhost:4000/study/cloud/1/"
+    "title": "AIMLFW 환경설정",
+    "excerpt":"O-RAN SC에 오픈소스 기여를 해보자 1일차 - AIMLFW 환경설정 에서 잘 정리해주셔서 링크를 걸어놓았습니다.  ","url": "http://localhost:4000/projects/aimlfw/1/"
   },{
     "title": "표준화",
     "excerpt":"표준화 표준화 단체는 크게 2가지로 알면 된다. 바로 ITU와 3GPP이다. ITU는 국제전기통신연합으로 유엔 산하의 국제 기구다. 기술 표준을 제정하는 것 뿐만 아니라 주파수 관리, 위성 관리, 개발도상국 기술 지원 등의 역할을 하고 있다. 3GPP는 유럽의 ETSI, 일본의 TTC, 중국의 CCSA, 한국의 TTA, 미국의 ATIS가 연합하여 설립한 국제 표준화 단체이다. 3GPP의...","url": "http://localhost:4000/study/communication/5g/1/1/"
+  },{
+    "title": "Cloud 개요",
+    "excerpt":"클라우드의 반댓말은 온프레미스다. 기존에는 기업들이 온프레미스 서버를 구축해 독자적으로 서버를 운영했다. 당연하게도 서버 구축, 유지 관리 비용이 더 들어갈 수밖에 없었다. AWS와 같은 클라우드 업체는 이미 구축된 서버를 빌려준다. 예를 들어 스타트업이나 본인의 사이트를 운영하는 개인 들은 온프레미스 서버를 구축하고 운영하기가 어렵기 때문에 이런 클라우드 업체를 통해 서버를 대여하고 그...","url": "http://localhost:4000/study/cloud/1/"
   },{
     "title": "주파수",
     "excerpt":" ","url": "http://localhost:4000/study/communication/5g/2/1/"
@@ -134,14 +137,23 @@ var store = [{
     "title": "딥 러닝",
     "excerpt":"딥 러닝은 인간 두뇌의 구조를 본 따 개발된 인공지능이다. 인간이 사물을 인식하기의 과정은, 먼저 눈으로 보고 그 정보가 여러 뇌를 거치게 되는데 마찬가지로 딥 러닝 또한 여러 계층으로 구성된다. 인간의 신경과 뇌에는 수백만개의 뉴런이 연결되어 있듯 딥 러닝 신경망도 인공 신경 세포 노드를 통해 계층을 구성하고 있다. 딥 러닝의 목표는...","url": "http://localhost:4000/study/ai/2/"
   },{
+    "title": "InfluxDB 사용하기",
+    "excerpt":"일단 QoE 데이터를 InfluxDB에 올리는 것 까지 되었을 것이다. 그럼 InfluxDB에 데이터가 잘 들어갔는지 확인해보자. 우선 포트포워딩을 해준다. kubectl port-forward svc/my-release-influxdb 8086:8086 그리고 InfluxDB에 접속해보자. 우선 계정을 생성해준다. kubectl exec -it -n default my-release-influxdb -- influx user create --org primary --name &lt;USERNAME&gt; --password &lt;PASSWORD&gt; -t $INFLUXDB_TOKEN http://localhost:8086 에 접속해서 로그인을...","url": "http://localhost:4000/projects/aimlfw/2/"
+  },{
     "title": "시스템 구조",
     "excerpt":"전체적인 네트워크 구조는 RAN과 Core로 나눠진다.    ","url": "http://localhost:4000/study/communication/5g/3/"
+  },{
+    "title": "모델 학습 pipeline 구축하기",
+    "excerpt":" ","url": "http://localhost:4000/projects/aimlfw/3/"
   },{
     "title": "Mathematical Methods for Wireless Communications",
     "excerpt":"Signal Spaces 위 그림은 우리가 흔히 알고 있는 통신 시스템의 구조를 나타낸 것이다. 이러한 통신 시스템을 수학적으로 분석하기 위한 가장 기본적인 개념은 Signal Space 이다. Approximation and Estimation in Signal Spaces Minimum Mean-Squared Error Estimation 추정이라는 단어가 본의 아니게 많이 사용되게 되는데 추정, 추정값, 추정자 등등 헷갈리는 사태를 방지하기 위해...","url": "http://localhost:4000/study/communication/optimization/3/"
   },{
     "title": "전송 구조",
     "excerpt":" ","url": "http://localhost:4000/study/communication/5g/4/"
+  },{
+    "title": "Kserve를 통해 모델 배포하기",
+    "excerpt":"Documentation: Install Kserve 위 링크를 참고하여 Kserve를 설치하고 모델을 배포해보자. 아래 내용은 위 링크를 참고하여 작성되었다. Kserve 설치 aimlfw-dep 디렉토리로 가서 bin/install-kserve.sh QoE 모델 배포 먼저 네임스페이스를 생성한다. kubectl create namespace kserve-test qoe.yaml 파일을 생성해서 아래 내용을 넣어준다. apiVersion: \"serving.kserve.io/v1beta1\" kind: \"InferenceService\" metadata: name: qoe-model spec: predictor: tensorflow: storageUri: \"&lt;update...","url": "http://localhost:4000/projects/aimlfw/4/"
   },{
     "title": "Page Not Found",
     "excerpt":"         404   Page Not Found                               ","url": "http://localhost:4000/404.html"
@@ -178,6 +190,9 @@ var store = [{
   },{
     "title": "AI",
     "excerpt":"                                    AI 개요                                        딥러닝                        ","url": "http://localhost:4000/study/ai/"
+  },{
+    "title": "O-SC AIMLFW",
+    "excerpt":"                                    AIMLFW 환경설정                                        InfluxDB 사용하기                                        모델 학습 pipeline 구축하기                                        Kserve를 통해 모델 배포하기                        ","url": "http://localhost:4000/projects/aimlfw/"
   },{
     "title": "AWS",
     "excerpt":"                                    AWS                        ","url": "http://localhost:4000/study/cloud/aws/"
@@ -220,9 +235,6 @@ var store = [{
   },{
     "title": null,
     "excerpt":"","url": "http://localhost:4000/"
-  },{
-    "title": "KPI",
-    "excerpt":"","url": "http://localhost:4000/projects/kpi/"
   },{
     "title": "Bluetooth 관련 법규",
     "excerpt":"블루투스는 무선장치이기 때문에 탑재제품은 판매할 각 나라의 전파법규에 규정되어 있는 법규와 규제를 준수하고 승인을 받아야 한다. 직접 신청해도 되지만, 여러 대행 업체들이 있으니 대행 업체를 알아보는 것도 좋은 방법이다. 한국 우선 한국은 KC 전자파적합성인증제도가 있다. 블루투스 제품의 경우, 기존의 ‘적합인증’에서 ‘지정시험기관 적합등록’으로 완화되었다. ‘지정시험기관 적합등록’의 경우 적합인증 대상이 아닌 방송통신기자재등을...","url": "http://localhost:4000/projects/bluetooth/law/"
