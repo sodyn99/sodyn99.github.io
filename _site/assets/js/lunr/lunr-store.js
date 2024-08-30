@@ -135,7 +135,7 @@ var store = [{
     "excerpt":"                                    주파수                                        Sequence                        ","url": "http://localhost:4000/study/communication/5g/2/"
   },{
     "title": "InfluxDB 사용하기",
-    "excerpt":"일단 QoE 데이터를 InfluxDB에 올리는 것 까지 되었을 것이다. 그럼 InfluxDB에 데이터가 잘 들어갔는지 확인해보자. 우선 포트포워딩을 해준다. kubectl port-forward svc/my-release-influxdb 8086:8086 그리고 InfluxDB에 접속해보자. 우선 계정을 생성해준다. kubectl exec -it -n default my-release-influxdb -- influx user create --org primary --name &lt;USERNAME&gt; --password &lt;PASSWORD&gt; -t $INFLUXDB_TOKEN http://localhost:8086 에 접속해서 로그인을...","url": "http://localhost:4000/projects/aimlfw/2/"
+    "excerpt":"일단 QoE 데이터를 InfluxDB에 올리는 것 까지 되었을 것이다.   그럼 InfluxDB에 데이터가 잘 들어갔는지 확인해보자.   우선 포트포워딩을 해준다.   kubectl port-forward svc/my-release-influxdb 8086:8086   다음으로 계정을 생성해준다.   kubectl exec -it -n default my-release-influxdb -- influx user create --org primary --name &lt;USERNAME&gt; --password &lt;PASSWORD&gt; -t $INFLUXDB_TOKEN   http://localhost:8086 에 접속해서 로그인을 해보자.  ","url": "http://localhost:4000/projects/aimlfw/2/"
   },{
     "title": "딥 러닝",
     "excerpt":"딥 러닝은 인간 두뇌의 구조를 본 따 개발된 인공지능이다. 인간이 사물을 인식하기의 과정은, 먼저 눈으로 보고 그 정보가 여러 뇌를 거치게 되는데 마찬가지로 딥 러닝 또한 여러 계층으로 구성된다. 인간의 신경과 뇌에는 수백만개의 뉴런이 연결되어 있듯 딥 러닝 신경망도 인공 신경 세포 노드를 통해 계층을 구성하고 있다. 딥 러닝의 목표는...","url": "http://localhost:4000/study/ai/2/"
