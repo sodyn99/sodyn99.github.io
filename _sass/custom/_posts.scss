@@ -350,3 +350,17 @@
         font-size: 1.5em;
     }
 }
+
+
+.language-plaintext {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 0.7em;
+    padding: 0 0.5em;
+    margin: 0 0.2em;
+    border-radius: 4px;
+    color: #c94821;
+    vertical-align: middle;
+    background-color: #f0f0f0;
+}
