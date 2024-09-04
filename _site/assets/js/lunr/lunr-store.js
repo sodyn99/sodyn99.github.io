@@ -110,20 +110,23 @@ var store = [{
     "title": "5G 개요",
     "excerpt":"                                    표준화                                        기본 철학                        ","url": "http://localhost:4000/study/communication/5g/1/"
   },{
-    "title": "6G 개요",
-    "excerpt":"#     ","url": "http://localhost:4000/study/communication/6g/1/"
+    "title": "Protocol",
+    "excerpt":"#     ","url": "http://localhost:4000/study/communication/computer_network/1/"
   },{
     "title": "AIMLFW 환경설정",
     "excerpt":"1. 우분투 환경설정 우분투 설치 완료되면 sudo apt-get update &amp;&amp; sudo apt-get upgrade sudo apt-get install htop htop도 설치해준다. 하도 램 부족 문제를 많이 겪어서 htop은 일단 깔아놓자. 다음으로는 Anaconda를 설치해준다. Anaconda 설치가 필수는 아니지만, 개인적으로는 Anaconda 있는게 훨씬 편하기 때문에, 거의 무조건 설치해주자. wget https://repo.anaconda.com/archive/Anaconda3-2024.06-1-Linux-x86_64.sh # 최신 버전으로 바꿔주자....","url": "http://localhost:4000/projects/aimlfw/1/"
   },{
-    "title": "Protocol",
-    "excerpt":"#     ","url": "http://localhost:4000/study/communication/computer_network/1/"
+    "title": "표준화",
+    "excerpt":"표준화 표준화 단체는 크게 2가지로 알면 된다. 바로 ITU와 3GPP이다. ITU는 국제전기통신연합으로 유엔 산하의 국제 기구다. 기술 표준을 제정하는 것 뿐만 아니라 주파수 관리, 위성 관리, 개발도상국 기술 지원 등의 역할을 하고 있다. 3GPP는 유럽의 ETSI, 일본의 TTC, 중국의 CCSA, 한국의 TTA, 미국의 ATIS가 연합하여 설립한 국제 표준화 단체이다. 3GPP의...","url": "http://localhost:4000/study/communication/5g/1/1/"
+  },{
+    "title": "6G 개요",
+    "excerpt":"#     ","url": "http://localhost:4000/study/communication/6g/1/"
   },{
     "title": "Cloud 개요",
     "excerpt":"클라우드의 반댓말은 온프레미스다. 기존에는 기업들이 온프레미스 서버를 구축해 독자적으로 서버를 운영했다. 당연하게도 서버 구축, 유지 관리 비용이 더 들어갈 수밖에 없었다. AWS와 같은 클라우드 업체는 이미 구축된 서버를 빌려준다. 예를 들어 스타트업이나 본인의 사이트를 운영하는 개인 들은 온프레미스 서버를 구축하고 운영하기가 어렵기 때문에 이런 클라우드 업체를 통해 서버를 대여하고 그...","url": "http://localhost:4000/study/cloud/1/"
   },{
-    "title": "표준화",
-    "excerpt":"표준화 표준화 단체는 크게 2가지로 알면 된다. 바로 ITU와 3GPP이다. ITU는 국제전기통신연합으로 유엔 산하의 국제 기구다. 기술 표준을 제정하는 것 뿐만 아니라 주파수 관리, 위성 관리, 개발도상국 기술 지원 등의 역할을 하고 있다. 3GPP는 유럽의 ETSI, 일본의 TTC, 중국의 CCSA, 한국의 TTA, 미국의 ATIS가 연합하여 설립한 국제 표준화 단체이다. 3GPP의...","url": "http://localhost:4000/study/communication/5g/1/1/"
+    "title": "Federated Learning framework 개발",
+    "excerpt":"Helm Chart 우선 image fl-extraction:latest를 빌드해준다. ./build.sh 다음으로 namespace를 생성해준다. kubectl create namespace federated-learning Helm chart를 설치해준다. helm install fl-extraction . -n federated-learning Cassandra secret을 생성해준다. kubectl create secret generic cassandra --from-literal=cassandra-password=OOcrm4pqFi -n federated-learning Pod가 잘 생성되었는지 확인해준다. $ kubectl get pods -n federated-learning NAME READY STATUS RESTARTS AGE fl-extraction-868f46958d-9q2mt...","url": "http://localhost:4000/projects/aimlfw/10/"
   },{
     "title": "주파수",
     "excerpt":" ","url": "http://localhost:4000/study/communication/5g/2/1/"
@@ -140,38 +143,38 @@ var store = [{
     "title": "딥 러닝",
     "excerpt":"딥 러닝은 인간 두뇌의 구조를 본 따 개발된 인공지능이다. 인간이 사물을 인식하기의 과정은, 먼저 눈으로 보고 그 정보가 여러 뇌를 거치게 되는데 마찬가지로 딥 러닝 또한 여러 계층으로 구성된다. 인간의 신경과 뇌에는 수백만개의 뉴런이 연결되어 있듯 딥 러닝 신경망도 인공 신경 세포 노드를 통해 계층을 구성하고 있다. 딥 러닝의 목표는...","url": "http://localhost:4000/study/ai/2/"
   },{
-    "title": "시스템 구조",
-    "excerpt":"전체적인 네트워크 구조는 RAN과 Core로 나눠진다.    ","url": "http://localhost:4000/study/communication/5g/3/"
-  },{
     "title": "Mathematical Methods for Wireless Communications",
     "excerpt":"Signal Spaces 위 그림은 우리가 흔히 알고 있는 통신 시스템의 구조를 나타낸 것이다. 이러한 통신 시스템을 수학적으로 분석하기 위한 가장 기본적인 개념은 Signal Space 이다. Approximation and Estimation in Signal Spaces Minimum Mean-Squared Error Estimation 추정이라는 단어가 본의 아니게 많이 사용되게 되는데 추정, 추정값, 추정자 등등 헷갈리는 사태를 방지하기 위해...","url": "http://localhost:4000/study/communication/optimization/3/"
   },{
     "title": "모델 학습 pipeline 구축하기",
     "excerpt":"‘Completed’ 상태 파드 일괄 삭제하기   kubectl delete pod --field-selector=status.phase==Succeeded --all-namespaces   ‘Error’ 상태 파드 일괄 삭제하기   kubectl delete pod --field-selector=status.phase==Failed --all-namespaces   ","url": "http://localhost:4000/projects/aimlfw/3/"
   },{
-    "title": "전송 구조",
-    "excerpt":" ","url": "http://localhost:4000/study/communication/5g/4/"
+    "title": "시스템 구조",
+    "excerpt":"전체적인 네트워크 구조는 RAN과 Core로 나눠진다.    ","url": "http://localhost:4000/study/communication/5g/3/"
   },{
     "title": "Kserve를 통해 모델 배포하기",
     "excerpt":"Documentation: Install Kserve 위 링크를 참고하여 Kserve를 설치하고 모델을 배포해보자. 아래 내용은 위 링크를 참고하여 작성되었다. Kserve 설치 aimlfw-dep 디렉토리로 가서 bin/install-kserve.sh QoE 모델 배포 먼저 네임스페이스를 생성한다. kubectl create namespace kserve-test qoe.yaml 파일을 생성해서 아래 내용을 넣어준다. apiVersion: \"serving.kserve.io/v1beta1\" kind: \"InferenceService\" metadata: name: qoe-model spec: predictor: tensorflow: storageUri: \"&lt;update...","url": "http://localhost:4000/projects/aimlfw/4/"
   },{
+    "title": "전송 구조",
+    "excerpt":" ","url": "http://localhost:4000/study/communication/5g/4/"
+  },{
     "title": "Page Not Found",
     "excerpt":"         404   Page Not Found                               ","url": "http://localhost:4000/404.html"
-  },{
-    "title": "채널 사운딩",
-    "excerpt":" ","url": "http://localhost:4000/study/communication/5g/5/"
   },{
     "title": "Usecase: UAV Path Prediction",
     "excerpt":"데이터 넣기 우선 Bucket을 생성해준다. kubectl exec -it &lt;INFLUXDB_POD_NAME&gt; -- influx bucket create -n UAVData -o primary -t $INFLUXDB_TOKEN UAV_insert.py를 이용해 데이터를 넣어준다. python3 UAV_insert.py # 파일 내 파일 경로, 토큰을 수정해주어야 함 모델 학습 Jupyter Notebook(http://localhost:32088)에 접속하여 UAV_pipeline.ipynb를 실행하여, pipeline을 구축한다. Dashboard(http://localhost:32005)에서 Feature Group을 생성하고, Training Job을 통해 모델을...","url": "http://localhost:4000/projects/aimlfw/5/"
   },{
+    "title": "채널 사운딩",
+    "excerpt":" ","url": "http://localhost:4000/study/communication/5g/5/"
+  },{
     "title": "5G",
     "excerpt":"                                    5G 개요                                                   표준화                     기본 철학                                                                      5G 개념                                                   주파수                     Sequence                                                                      시스템 구조                                        Transmission 구조                                        채널 사운딩                                        Transport 채널 프로세싱                                        PHY Control 시그널링                                                   Downlink                     Uplink                                                      ","url": "http://localhost:4000/study/communication/5g/"
   },{
-    "title": "Transport 채널 프로세싱",
-    "excerpt":"PHY와 MAC 레이어 사이에 위치하는 레이어를 Transport 레이어라고 한다. 즉 Transport 채널 프로세싱이라는 것은 MAC 계층에서 내려온 데이터를 PHY 단으로 내보내기 위한 (혹은 그 반대) 일종의 가공 과정이라고 할 수 있겠다.    ","url": "http://localhost:4000/study/communication/5g/6/"
-  },{
     "title": "Debug Pod 생성하기",
     "excerpt":"Debug Pod 필요성 모델을 배포하고 나서, 모델이 잘 동작하는지 확인해야 하는 등 모델 학습을 직접 실행할 수 있는 Debug Pod를 만들어보았다. 가장 큰 이유는 처음부터 완벽하게 코드를 짜는것이 아니면 계속 training job을 실행하고, 로그를 확인해야하는 불편함이 있어서다. Debug Pod 생성 우선 Debug-pod 레포지토리를 클론한다. git clone https://github.com/sodyn99/aimlfw-debugging.git Debugging 그리고 config/debug-pod-template.yaml...","url": "http://localhost:4000/projects/aimlfw/6/"
+  },{
+    "title": "Transport 채널 프로세싱",
+    "excerpt":"PHY와 MAC 레이어 사이에 위치하는 레이어를 Transport 레이어라고 한다. 즉 Transport 채널 프로세싱이라는 것은 MAC 계층에서 내려온 데이터를 PHY 단으로 내보내기 위한 (혹은 그 반대) 일종의 가공 과정이라고 할 수 있겠다.    ","url": "http://localhost:4000/study/communication/5g/6/"
   },{
     "title": "6G",
     "excerpt":"                                    6G 개요                                     ","url": "http://localhost:4000/study/communication/6g/"
@@ -185,11 +188,14 @@ var store = [{
     "title": "PHY Control 시그널링",
     "excerpt":"                                    Downlink                                        Uplink                        ","url": "http://localhost:4000/study/communication/5g/7/"
   },{
-    "title": "Feature Store SDK",
+    "title": "Cassandra 데이터 정렬 문제 - 1",
     "excerpt":"AIMLFW를 통해 모델을 학습시키는데, 성능이 예상에 크게 미치지 못하는 문제가 계속 생겼다. 분명 로컬에서 수행한 코드와 동일한 코드를 AIMLFW를 통해 수행했는데, 성능이 훨씬 떨어지는 것이었다. Debug-Pod를 통해 코드(get_data.ipynb)를 실행해보니 feature store sdk에서 받아오는 데이터와 InfluxDB에 넣은 데이터가 다르다는 것을 확인할 수 있었다. InfluxDB에서 데이터를 받아올 때는 동일한 데이터를 받아왔는데, feature...","url": "http://localhost:4000/projects/aimlfw/7/"
   },{
     "title": "Gerrit Review",
     "excerpt":"환경 설정 Git review를 설치해준다. sudo apt-get update &amp;&amp; sudo apt-get install git git-review Git config 설정을 해주고, git config --global user.name \"&lt;NAME&gt;\" git config --global user.email \"&lt;EMAIL&gt;\" Gerrit에 접속하기 위해 SSH key를 생성해준다. ssh-keygen -t rsa -b 4096 -C \"&lt;EMAIL&gt;\" ~/.ssh에 생성된 id_rsa.pub를 복사하여 Gerrit에 등록해준다. Gerrit에 접속해 ssh...","url": "http://localhost:4000/projects/aimlfw/8/"
+  },{
+    "title": "Cassandra 데이터 정렬 문제 - 2",
+    "excerpt":"Jira 이슈 이전에 설명한 Cassandra 데이터를 가져올 때의 문제에 대한 이슈를 Jira에 등록했고, 답변을 받았다. 커미터 분들이 처음에는 데이터 정렬이 꼭 필요한지에 대한 의문을 제기하셨다. 이에 대해 데이터 정렬이 필요한 이유에 대해 설명했고, 시계열 데이터의 LSTM 모델 사용에 있어서 데이터 정렬이 필요하다는 것에 동의하셨다. 정렬 방식의 경우 __Id를 기준으로 정렬하는...","url": "http://localhost:4000/projects/aimlfw/9/"
   },{
     "title": "R",
     "excerpt":"                                                      R 설치                                 ","url": "http://localhost:4000/study/data_analysis/r/"
@@ -204,7 +210,7 @@ var store = [{
     "excerpt":"                                    AI 개요                                        딥러닝                        ","url": "http://localhost:4000/study/ai/"
   },{
     "title": "O-SC AIMLFW",
-    "excerpt":"                                    AIMLFW 환경설정                                        InfluxDB 사용하기                                        모델 학습 pipeline 구축하기                                        Kserve를 통해 모델 배포하기                                        Usecase: UAV Path Prediction                                        Debug Pod 생성하기                                        Feature Store SDK 수정하기                                        Gerrit Review                        ","url": "http://localhost:4000/projects/aimlfw/"
+    "excerpt":"                                    AIMLFW 환경설정                                        InfluxDB 사용하기                                        모델 학습 pipeline 구축하기                                        Kserve를 통해 모델 배포하기                                        Usecase: UAV Path Prediction                                        Debug Pod 생성하기                                        Cassandra 데이터 정렬 문제 - 1                                        Gerrit Review                                        Cassandra 데이터 정렬 문제 - 2                                        Federated Learning framework 개발                        ","url": "http://localhost:4000/projects/aimlfw/"
   },{
     "title": "AWS",
     "excerpt":"                                    AWS                        ","url": "http://localhost:4000/study/cloud/aws/"
