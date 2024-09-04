@@ -110,23 +110,26 @@ var store = [{
     "title": "5G 개요",
     "excerpt":"                                    표준화                                        기본 철학                        ","url": "http://localhost:4000/study/communication/5g/1/"
   },{
+    "title": "Cloud 개요",
+    "excerpt":"클라우드의 반댓말은 온프레미스다. 기존에는 기업들이 온프레미스 서버를 구축해 독자적으로 서버를 운영했다. 당연하게도 서버 구축, 유지 관리 비용이 더 들어갈 수밖에 없었다. AWS와 같은 클라우드 업체는 이미 구축된 서버를 빌려준다. 예를 들어 스타트업이나 본인의 사이트를 운영하는 개인 들은 온프레미스 서버를 구축하고 운영하기가 어렵기 때문에 이런 클라우드 업체를 통해 서버를 대여하고 그...","url": "http://localhost:4000/study/cloud/1/"
+  },{
     "title": "Protocol",
     "excerpt":"#     ","url": "http://localhost:4000/study/communication/computer_network/1/"
   },{
     "title": "AIMLFW 환경설정",
     "excerpt":"1. 우분투 환경설정 우분투 설치 완료되면 sudo apt-get update &amp;&amp; sudo apt-get upgrade sudo apt-get install htop htop도 설치해준다. 하도 램 부족 문제를 많이 겪어서 htop은 일단 깔아놓자. 다음으로는 Anaconda를 설치해준다. Anaconda 설치가 필수는 아니지만, 개인적으로는 Anaconda 있는게 훨씬 편하기 때문에, 거의 무조건 설치해주자. wget https://repo.anaconda.com/archive/Anaconda3-2024.06-1-Linux-x86_64.sh # 최신 버전으로 바꿔주자....","url": "http://localhost:4000/projects/aimlfw/1/"
   },{
-    "title": "표준화",
-    "excerpt":"표준화 표준화 단체는 크게 2가지로 알면 된다. 바로 ITU와 3GPP이다. ITU는 국제전기통신연합으로 유엔 산하의 국제 기구다. 기술 표준을 제정하는 것 뿐만 아니라 주파수 관리, 위성 관리, 개발도상국 기술 지원 등의 역할을 하고 있다. 3GPP는 유럽의 ETSI, 일본의 TTC, 중국의 CCSA, 한국의 TTA, 미국의 ATIS가 연합하여 설립한 국제 표준화 단체이다. 3GPP의...","url": "http://localhost:4000/study/communication/5g/1/1/"
-  },{
     "title": "6G 개요",
     "excerpt":"#     ","url": "http://localhost:4000/study/communication/6g/1/"
   },{
-    "title": "Cloud 개요",
-    "excerpt":"클라우드의 반댓말은 온프레미스다. 기존에는 기업들이 온프레미스 서버를 구축해 독자적으로 서버를 운영했다. 당연하게도 서버 구축, 유지 관리 비용이 더 들어갈 수밖에 없었다. AWS와 같은 클라우드 업체는 이미 구축된 서버를 빌려준다. 예를 들어 스타트업이나 본인의 사이트를 운영하는 개인 들은 온프레미스 서버를 구축하고 운영하기가 어렵기 때문에 이런 클라우드 업체를 통해 서버를 대여하고 그...","url": "http://localhost:4000/study/cloud/1/"
+    "title": "표준화",
+    "excerpt":"표준화 표준화 단체는 크게 2가지로 알면 된다. 바로 ITU와 3GPP이다. ITU는 국제전기통신연합으로 유엔 산하의 국제 기구다. 기술 표준을 제정하는 것 뿐만 아니라 주파수 관리, 위성 관리, 개발도상국 기술 지원 등의 역할을 하고 있다. 3GPP는 유럽의 ETSI, 일본의 TTC, 중국의 CCSA, 한국의 TTA, 미국의 ATIS가 연합하여 설립한 국제 표준화 단체이다. 3GPP의...","url": "http://localhost:4000/study/communication/5g/1/1/"
+  },{
+    "title": "Cassandra 데이터 정렬 문제 - 3",
+    "excerpt":"2편에서 다루었었던 내용을 보면 정수형 데이터 __Id를 Clustering Key로 설정했었다. Jira에 커미터분께서 _time과 같은 시간 데이터를 Clustering Key로 설정하는 것이 어떤가 하는 의견을 주셨다. _time 받아오기 Dataextraction의 기존 SQLTransform.py에서는 사용자가 선언한 Features만 받아오게 되어있다. 여기에 _time을 받아오는 코드를 추가해주었다. q_features = \"`_time`,\" 아래와 같이 _time 데이터를 성공적으로 받아온 것을 확인할...","url": "http://localhost:4000/projects/aimlfw/10/"
   },{
     "title": "Federated Learning framework 개발",
-    "excerpt":"Helm Chart 우선 image fl-extraction:latest를 빌드해준다. ./build.sh 다음으로 namespace를 생성해준다. kubectl create namespace federated-learning Helm chart를 설치해준다. helm install fl-extraction . -n federated-learning Cassandra secret을 생성해준다. kubectl create secret generic cassandra --from-literal=cassandra-password=OOcrm4pqFi -n federated-learning Pod가 잘 생성되었는지 확인해준다. $ kubectl get pods -n federated-learning NAME READY STATUS RESTARTS AGE fl-extraction-868f46958d-9q2mt...","url": "http://localhost:4000/projects/aimlfw/10/"
+    "excerpt":"Helm Chart 우선 image fl-extraction:latest를 빌드해준다. ./build.sh 다음으로 namespace를 생성해준다. kubectl create namespace federated-learning Helm chart를 설치해준다. helm install fl-extraction . -n federated-learning Cassandra secret을 생성해준다. kubectl create secret generic cassandra --from-literal=cassandra-password=OOcrm4pqFi -n federated-learning Pod가 잘 생성되었는지 확인해준다. $ kubectl get pods -n federated-learning NAME READY STATUS RESTARTS AGE fl-extraction-868f46958d-9q2mt...","url": "http://localhost:4000/projects/aimlfw/11/"
   },{
     "title": "주파수",
     "excerpt":" ","url": "http://localhost:4000/study/communication/5g/2/1/"
@@ -137,11 +140,11 @@ var store = [{
     "title": "5G 개념",
     "excerpt":"                                    주파수                                        Sequence                        ","url": "http://localhost:4000/study/communication/5g/2/"
   },{
-    "title": "InfluxDB 사용하기",
-    "excerpt":"일단 QoE 데이터를 InfluxDB에 올리는 것 까지 되었을 것이다.   그럼 InfluxDB에 데이터가 잘 들어갔는지 확인해보자.   우선 포트포워딩을 해준다.   kubectl port-forward svc/my-release-influxdb 8086:8086   다음으로 계정을 생성해준다.   kubectl exec -it -n default my-release-influxdb -- influx user create --org primary --name &lt;USERNAME&gt; --password &lt;PASSWORD&gt; -t $INFLUXDB_TOKEN   http://localhost:8086 에 접속해서 로그인을 해보자.  ","url": "http://localhost:4000/projects/aimlfw/2/"
-  },{
     "title": "딥 러닝",
     "excerpt":"딥 러닝은 인간 두뇌의 구조를 본 따 개발된 인공지능이다. 인간이 사물을 인식하기의 과정은, 먼저 눈으로 보고 그 정보가 여러 뇌를 거치게 되는데 마찬가지로 딥 러닝 또한 여러 계층으로 구성된다. 인간의 신경과 뇌에는 수백만개의 뉴런이 연결되어 있듯 딥 러닝 신경망도 인공 신경 세포 노드를 통해 계층을 구성하고 있다. 딥 러닝의 목표는...","url": "http://localhost:4000/study/ai/2/"
+  },{
+    "title": "InfluxDB 사용하기",
+    "excerpt":"일단 QoE 데이터를 InfluxDB에 올리는 것 까지 되었을 것이다.   그럼 InfluxDB에 데이터가 잘 들어갔는지 확인해보자.   우선 포트포워딩을 해준다.   kubectl port-forward svc/my-release-influxdb 8086:8086   다음으로 계정을 생성해준다.   kubectl exec -it -n default my-release-influxdb -- influx user create --org primary --name &lt;USERNAME&gt; --password &lt;PASSWORD&gt; -t $INFLUXDB_TOKEN   http://localhost:8086 에 접속해서 로그인을 해보자.  ","url": "http://localhost:4000/projects/aimlfw/2/"
   },{
     "title": "Mathematical Methods for Wireless Communications",
     "excerpt":"Signal Spaces 위 그림은 우리가 흔히 알고 있는 통신 시스템의 구조를 나타낸 것이다. 이러한 통신 시스템을 수학적으로 분석하기 위한 가장 기본적인 개념은 Signal Space 이다. Approximation and Estimation in Signal Spaces Minimum Mean-Squared Error Estimation 추정이라는 단어가 본의 아니게 많이 사용되게 되는데 추정, 추정값, 추정자 등등 헷갈리는 사태를 방지하기 위해...","url": "http://localhost:4000/study/communication/optimization/3/"
@@ -152,11 +155,11 @@ var store = [{
     "title": "시스템 구조",
     "excerpt":"전체적인 네트워크 구조는 RAN과 Core로 나눠진다.    ","url": "http://localhost:4000/study/communication/5g/3/"
   },{
-    "title": "Kserve를 통해 모델 배포하기",
-    "excerpt":"Documentation: Install Kserve 위 링크를 참고하여 Kserve를 설치하고 모델을 배포해보자. 아래 내용은 위 링크를 참고하여 작성되었다. Kserve 설치 aimlfw-dep 디렉토리로 가서 bin/install-kserve.sh QoE 모델 배포 먼저 네임스페이스를 생성한다. kubectl create namespace kserve-test qoe.yaml 파일을 생성해서 아래 내용을 넣어준다. apiVersion: \"serving.kserve.io/v1beta1\" kind: \"InferenceService\" metadata: name: qoe-model spec: predictor: tensorflow: storageUri: \"&lt;update...","url": "http://localhost:4000/projects/aimlfw/4/"
-  },{
     "title": "전송 구조",
     "excerpt":" ","url": "http://localhost:4000/study/communication/5g/4/"
+  },{
+    "title": "Kserve를 통해 모델 배포하기",
+    "excerpt":"Documentation: Install Kserve 위 링크를 참고하여 Kserve를 설치하고 모델을 배포해보자. 아래 내용은 위 링크를 참고하여 작성되었다. Kserve 설치 aimlfw-dep 디렉토리로 가서 bin/install-kserve.sh QoE 모델 배포 먼저 네임스페이스를 생성한다. kubectl create namespace kserve-test qoe.yaml 파일을 생성해서 아래 내용을 넣어준다. apiVersion: \"serving.kserve.io/v1beta1\" kind: \"InferenceService\" metadata: name: qoe-model spec: predictor: tensorflow: storageUri: \"&lt;update...","url": "http://localhost:4000/projects/aimlfw/4/"
   },{
     "title": "Page Not Found",
     "excerpt":"         404   Page Not Found                               ","url": "http://localhost:4000/404.html"
@@ -210,7 +213,7 @@ var store = [{
     "excerpt":"                                    AI 개요                                        딥러닝                        ","url": "http://localhost:4000/study/ai/"
   },{
     "title": "O-SC AIMLFW",
-    "excerpt":"                                    AIMLFW 환경설정                                        InfluxDB 사용하기                                        모델 학습 pipeline 구축하기                                        Kserve를 통해 모델 배포하기                                        Usecase: UAV Path Prediction                                        Debug Pod 생성하기                                        Cassandra 데이터 정렬 문제 - 1                                        Gerrit Review                                        Cassandra 데이터 정렬 문제 - 2                                        Federated Learning framework 개발                        ","url": "http://localhost:4000/projects/aimlfw/"
+    "excerpt":"                                    AIMLFW 환경설정                                        InfluxDB 사용하기                                        모델 학습 pipeline 구축하기                                        Kserve를 통해 모델 배포하기                                        Usecase: UAV Path Prediction                                        Debug Pod 생성하기                                        Cassandra 데이터 정렬 문제 - 1                                        Gerrit Review                                        Cassandra 데이터 정렬 문제 - 2                                        Cassandra 데이터 정렬 문제 - 3                                        Federated Learning framework 개발                        ","url": "http://localhost:4000/projects/aimlfw/"
   },{
     "title": "AWS",
     "excerpt":"                                    AWS                        ","url": "http://localhost:4000/study/cloud/aws/"
