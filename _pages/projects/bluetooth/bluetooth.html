@@ -8,43 +8,12 @@ prev: projects
 <section class="page__container">
     <ul>
         <hr>
-        <li class="page__slider" OnClick="location.href ='/projects/bluetooth/history/'">
-            <dt>Bluetooth 역사</dt>
+        {% assign files = site.projects | where: "category", "bluetooth" %}
+        {% for file in files %}
+        <li class="page__slider" OnClick="location.href ='{{ file.url }}'">
+            <dt>{{ file.title }}</dt>
         </li>
         <hr>
-        <li class="page__slider" OnClick="location.href ='/projects/bluetooth/generation/'">
-            <dt>Bluetooth 세대별 특징</dt>
-            <dd>
-                <ul>
-                    <li>Version 1</li>
-                    <li>Version 2</li>
-                    <li>Version 3</li>
-                    <li>Version 4</li>
-                    <li>Version 5</li>
-                </ul>
-            </dd>
-        </li>
-        <hr>
-        <li class="page__slider" OnClick="location.href ='/projects/bluetooth/law/'">
-            <dt>Bluetooth 관련 법규</dt>
-            <dd>
-                <ul>
-                    <li>한국</li>
-                    <li>유럽</li>
-                    <li>미국</li>
-                    <li>중국</li>
-                    <li>일본</li>
-                </ul>
-            </dd>
-        </li>
-        <hr>
-        <li class="page__slider" OnClick="location.href ='/projects/bluetooth/multiple_connection/'">
-            <dt>Bluetooth 다중 연결</dt>
-        </li>
-        <hr>
-        <li class="page__slider" OnClick="location.href ='/projects/bluetooth/simulation/'">
-            <dt>시뮬레이션</dt>
-        </li>
-        <hr>
+        {% endfor %}
     </ul>
 </section>

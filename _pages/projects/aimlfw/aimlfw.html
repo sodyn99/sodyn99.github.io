@@ -8,49 +8,12 @@ prev: projects
 <section class="page__container">
     <ul>
         <hr>
-        <li class="page__slider" OnClick="location.href ='/projects/aimlfw/1/'">
-            <dt>AIMLFW 환경설정</dt>
+        {% assign files = site.projects | where: "category", "aimlfw" %}
+        {% for file in files %}
+        <li class="page__slider" OnClick="location.href ='{{ file.url }}'">
+            <dt>{{ file.title }}</dt>
         </li>
         <hr>
-        <li class="page__slider" OnClick="location.href ='/projects/aimlfw/2/'">
-            <dt>InfluxDB 사용하기</dt>
-        </li>
-        <hr>
-        <li class="page__slider" OnClick="location.href ='/projects/aimlfw/3/'">
-            <dt>모델 학습 pipeline 구축하기</dt>
-        </li>
-        <hr>
-        <li class="page__slider" OnClick="location.href ='/projects/aimlfw/4/'">
-            <dt>Kserve를 통해 모델 배포하기</dt>
-        </li>
-        <hr>
-        <li class="page__slider" OnClick="location.href ='/projects/aimlfw/5/'">
-            <dt>Usecase: UAV Path Prediction</dt>
-        </li>
-        <hr>
-        <li class="page__slider" OnClick="location.href ='/projects/aimlfw/6/'">
-            <dt>Debug Pod 생성하기</dt>
-        </li>
-        <hr>
-        <li class="page__slider" OnClick="location.href ='/projects/aimlfw/7/'">
-            <dt>Gerrit Review</dt>
-        </li>
-        <hr>
-        <li class="page__slider" OnClick="location.href ='/projects/aimlfw/8/'">
-            <dt>Cassandra 데이터 정렬 문제 - 1</dt>
-        </li>
-        <hr>
-        <li class="page__slider" OnClick="location.href ='/projects/aimlfw/9/'">
-            <dt>Cassandra 데이터 정렬 문제 - 2</dt>
-        </li>
-        <hr>
-        <li class="page__slider" OnClick="location.href ='/projects/aimlfw/10/'">
-            <dt>Cassandra 데이터 정렬 문제 - 3</dt>
-        </li>
-        <hr>
-        <li class="page__slider" OnClick="location.href ='/projects/aimlfw/11/'">
-            <dt>Federated Learning framework 개발</dt>
-        </li>
-        <hr>
+        {% endfor %}
     </ul>
 </section>

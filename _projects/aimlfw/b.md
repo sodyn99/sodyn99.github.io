@@ -1,7 +1,7 @@
 ---
 layout: posts
 title: "Federated Learning framework 개발"
-permalink: /projects/aimlfw/11/
+category: aimlfw
 prev: aimlfw
 ---
 

@@ -1,7 +1,7 @@
 ---
 layout: posts
 title: "Cassandra 데이터 정렬 문제 - 3"
-permalink: /projects/aimlfw/10/
+category: aimlfw
 prev: aimlfw
 ---
 
