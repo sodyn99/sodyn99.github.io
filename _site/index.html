@@ -587,42 +587,80 @@
 
 <script>
 document.addEventListener('DOMContentLoaded', () => {
-  const codeBlocks = document.querySelectorAll('pre');
+    const codeBlocks = document.querySelectorAll('pre');
 
-  const copyIcon = `<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#A4A4A4" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path></svg>`;
-  const checkIcon = `<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#04B486" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path><polyline points="22 4 12 14.01 9 11.01"></polyline></svg>`;
+    const copyIcon = `<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#A4A4A4" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path></svg>`;
+    const checkIcon = `<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#04B486" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path><polyline points="22 4 12 14.01 9 11.01"></polyline></svg>`;
 
-  codeBlocks.forEach((block) => {
-    const copyButton = document.createElement('button');
-    copyButton.innerHTML = copyIcon;
-    copyButton.className = 'copy-button';
+    codeBlocks.forEach((block) => {
+        const container = document.createElement('div');
+        container.style.position = 'relative';
+        container.style.overflow = 'hidden';
+        block.parentNode.insertBefore(container, block);
+        container.appendChild(block);
 
-    copyButton.style.position = 'absolute';
-    copyButton.style.right = '10px';
-    copyButton.style.top = '10px';
-    copyButton.style.width = '30px';
-    copyButton.style.height = '30px';
-    copyButton.style.background = 'transparent';
-    copyButton.style.border = 'none';
-    copyButton.style.cursor = 'pointer';
-    copyButton.style.display = 'flex';
-    copyButton.style.alignItems = 'center';
-    copyButton.style.justifyContent = 'center';
+        const scrollContainer = document.createElement('div');
+        scrollContainer.style.paddingRight = '50px';
+        scrollContainer.style.maxWidth = '100%';
+        scrollContainer.style.scrollbarWidth = 'thin';
+        scrollContainer.style.scrollbarColor = '#888 #f1f1f1';
+        container.appendChild(scrollContainer);
 
-    block.style.position = 'relative';
+        scrollContainer.appendChild(block);
 
-    copyButton.addEventListener('click', () => {
-      const code = block.textContent;
-      navigator.clipboard.writeText(code).then(() => {
-        copyButton.innerHTML = checkIcon;
-        setTimeout(() => {
-          copyButton.innerHTML = copyIcon;
-        }, 2000);
-      });
+        block.style.whiteSpace = 'pre';
+        block.style.display = 'inline-block';
+        block.style.maxWidth = 'none';
+        block.style.overflow = 'auto';
+        block.style.marginBottom = '-0.6em';
+
+        const copyButton = document.createElement('button');
+        copyButton.innerHTML = copyIcon;
+        copyButton.className = 'copy-button';
+
+        copyButton.style.position = 'absolute';
+        copyButton.style.right = '10px';
+        copyButton.style.top = '10px';
+        copyButton.style.width = '30px';
+        copyButton.style.height = '30px';
+        copyButton.style.background = 'transparent';
+        copyButton.style.border = 'none';
+        copyButton.style.cursor = 'pointer';
+        copyButton.style.display = 'flex';
+        copyButton.style.alignItems = 'center';
+        copyButton.style.justifyContent = 'center';
+        copyButton.style.zIndex = '10';
+
+        copyButton.addEventListener('click', () => {
+            const code = block.textContent;
+            navigator.clipboard.writeText(code).then(() => {
+                copyButton.innerHTML = checkIcon;
+                setTimeout(() => {
+                    copyButton.innerHTML = copyIcon;
+                }, 2000);
+            });
+        });
+
+        container.appendChild(copyButton);
+        const style = document.createElement('style');
+        style.textContent = `
+            .code-scroll::-webkit-scrollbar {
+                width: 5px;
+                height: 5px;
+            }
+            .code-scroll::-webkit-scrollbar-track {
+                background: #f1f1f1;
+            }
+            .code-scroll::-webkit-scrollbar-thumb {
+                background: #888;
+            }
+            .code-scroll::-webkit-scrollbar-thumb:hover {
+                background: #555;
+            }
+        `;
+        document.head.appendChild(style);
+        scrollContainer.classList.add('code-scroll');
     });
-
-    block.appendChild(copyButton);
-  });
 });
 </script>
 
