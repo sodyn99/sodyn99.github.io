@@ -61,8 +61,9 @@
   display: flex;
   -ms-flex-item-align: center;
   align-self: center;
-  font-weight: 900;
-  font-family: $title-font, sans-serif;
+  font-weight: normal;
+  font-family: "Gasoek One", sans-serif;
+  font-size: $type-size-4;
   // z-index: 20;
 }
 
