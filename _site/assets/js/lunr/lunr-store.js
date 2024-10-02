@@ -270,7 +270,7 @@ var store = [{
     "excerpt":"                                                      SQL 개요                                                 SQL 함수                                 ","url": "http://localhost:4000/study/data_analysis/sql/"
   },{
     "title": "About",
-    "excerpt":"                      👤 이성진      🏫 경희대학교     💼 학생입니다.           👤 LEE SUNGJIN      🏫 Kyunghee University     💼 Student.         🌐 Contact Me                                                                &nbsp;Copyright     Copyright 2024. Lee Sung Jin All pictures cannot be copied without permission.    Copyright Attribution    ","url": "http://localhost:4000/about/"
+    "excerpt":"             👤 LEE SUNGJIN      🏫 Kyunghee University     💼 Student.         🌐 Contact Me                                                                &nbsp;Copyright     Copyright 2024. Lee Sung Jin All pictures cannot be copied without permission.    Copyright Attribution    ","url": "http://localhost:4000/about/"
   },{
     "title": "AI",
     "excerpt":"                                    AI 개요                                        딥러닝                        ","url": "http://localhost:4000/study/ai/"
@@ -300,7 +300,7 @@ var store = [{
     "excerpt":"                                    Protocol                        ","url": "http://localhost:4000/study/communication/computer_network/"
   },{
     "title": "Copyright Attribution",
-    "excerpt":"Powered by Jekyll &amp; Minimal Mistakes. Source & License Logo Created by ChatGPT Fonts Font: Suit by Sunn Source/License: SIL Open Font License v1.1 Font: Roboto by Christian Robertson Source/License: Google Fonts Attribution Font: Noto Sans Korean by Google Source/License: Google Fonts Attribution Font: Y이드스트릿체 by KT 'Y' Source/License: (주)케이티...","url": "http://localhost:4000/copyright/"
+    "excerpt":"Powered by Jekyll &amp; Minimal Mistakes. Source & License Logo Created by ChatGPT Fonts Font: Suit by Sunn Source/License: SIL Open Font License v1.1 Font: Roboto by Christian Robertson Source/License: Google Fonts Attribution Font: Noto Sans Korean by Google Source/License: Google Fonts Attribution Font: Gasoek One by Jiashuo Zhang Source/License:...","url": "http://localhost:4000/copyright/"
   },{
     "title": "Data Analysis",
     "excerpt":"                                    SQL                                        Elasticsearch                                        R                          ","url": "http://localhost:4000/study/data_analysis/"

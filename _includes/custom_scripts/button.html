@@ -39,6 +39,8 @@
         $("#prevBtn").click(function() {
             {% if page.prev == 'home' %}
                 location.replace('/');
+            {% elsif page.prev == 'about' %}
+                location.replace('/about/');
 
             {% elsif page.prev == 'study' %}
                 location.replace('/study/');
