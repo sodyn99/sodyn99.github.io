@@ -149,6 +149,12 @@ var store = [{
         "url": "/study/communication/ns3/5/",
         "teaser": null
       },{
+        "title": "DataGrip",
+        "excerpt":"DataGrip 설치 DataGrip은 JetBrains사에서 만든 데이터베이스 관리 툴이다. 데이터베이스 관리를 위한 툴은 많이 있지만, 내가 가장 선호하는 것은 DataGrip이다. 원래는 유료인데, 학생이라면 학생용 라이센스를 받아 무료로 사용할 수 있다. https://www.jetbrains.com/community/education/#students에서 학생용 라이센스를 신청할 수 있다. 라이센스를 받았다면, https://www.jetbrains.com/ko-kr/products/download에서 DataGrip을 다운로드 받아 설치하자. 설치가 완료 후, DataGrip을 실행하고, 로그인 하면 라이센스가...","categories": ["data_analysis"],
+        "tags": [],
+        "url": "/study/data_analysis/datagrip",
+        "teaser": null
+      },{
         "title": "Elasticsearch 개요",
         "excerpt":"Elastic 소개 과거에는 기업들이 생성한 정형 데이터가 주를 이루었다면, 이제는 개인들이 생성하는 정형/비정형 데이터들을 다루게 되었다. 데이터 규모와 다양성이 커지면서, 검색은 더욱 중요해졌다. 이제는 검색이 그저 사전이나 포털 사이트 같은 일부 서비스에서만 국한되지 않는다. SNS, 쇼핑몰, 게임 부터 마케팅, 개발 까지 검색 기능의 활용 분야는 매우 광범위하다. 이러한 상황에 Elasticsearch는...","categories": ["data_analysis"],
         "tags": [],
@@ -303,7 +309,7 @@ var store = [{
     "excerpt":"Powered by Jekyll &amp; Minimal Mistakes. Source & License Logo Created by ChatGPT Fonts Font: Suit by Sunn Source/License: SIL Open Font License v1.1 Font: Roboto by Christian Robertson Source/License: Google Fonts Attribution Font: Noto Sans Korean by Google Source/License: Google Fonts Attribution Font: Gasoek One by Jiashuo Zhang Source/License:...","url": "http://localhost:4000/copyright/"
   },{
     "title": "Data Analysis",
-    "excerpt":"                                    SQL                                        Elasticsearch                                        R                          ","url": "http://localhost:4000/study/data_analysis/"
+    "excerpt":"                                    DataGrip                                        SQL                                        Elasticsearch                                        R                          ","url": "http://localhost:4000/study/data_analysis/"
   },{
     "title": "Elasticsearch",
     "excerpt":"                                                      Elasticsearch 개요                                                 Elastic with Chat GPT                                 ","url": "http://localhost:4000/study/data_analysis/elasticsearch/"
