@@ -1,7 +1,6 @@
 ---
 layout: posts
 title: "DataGrip"
-permalink: /study/data_analysis/datagrip
 category: data_analysis
 prev: data_analysis
 ---

@@ -152,7 +152,7 @@ var store = [{
         "title": "DataGrip",
         "excerpt":"DataGrip 설치 DataGrip은 JetBrains사에서 만든 데이터베이스 관리 툴이다. 데이터베이스 관리를 위한 툴은 많이 있지만, 내가 가장 선호하는 것은 DataGrip이다. 원래는 유료인데, 학생이라면 학생용 라이센스를 받아 무료로 사용할 수 있다. https://www.jetbrains.com/community/education/#students에서 학생용 라이센스를 신청할 수 있다. 라이센스를 받았다면, https://www.jetbrains.com/ko-kr/products/download에서 DataGrip을 다운로드 받아 설치하자. 설치가 완료 후, DataGrip을 실행하고, 로그인 하면 라이센스가...","categories": ["data_analysis"],
         "tags": [],
-        "url": "/study/data_analysis/datagrip",
+        "url": "/study/data_analysis/datagrip/",
         "teaser": null
       },{
         "title": "Elasticsearch 개요",
