@@ -2,7 +2,7 @@
 layout: posts
 title: "DataGrip"
 category: data_analysis
-prev: data_analysis
+
 ---
 
 # DataGrip 설치

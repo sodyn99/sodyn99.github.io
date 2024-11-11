@@ -580,7 +580,12 @@
             }
         });
         $("#prevBtn").click(function() {
-            
+            var currentPath = window.location.pathname;
+            if (currentPath.endsWith('/')) {
+                currentPath = currentPath.slice(0, -1);
+            }
+            var newPath = currentPath.substring(0, currentPath.lastIndexOf('/')) + '/';
+            location.replace(newPath);
         });
     });
 </script>

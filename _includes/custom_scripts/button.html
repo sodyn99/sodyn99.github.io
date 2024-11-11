@@ -37,36 +37,12 @@
             }
         });
         $("#prevBtn").click(function() {
-            {% if page.prev == 'home' %}
-                location.replace('/');
-            {% elsif page.prev == 'about' %}
-                location.replace('/about/');
-
-            {% elsif page.prev == 'study' %}
-                location.replace('/study/');
-            {% elsif page.prev == 'paper_review' %}
-                location.replace('/study/paper_review/');
-            {% elsif page.prev == 'communication' %}
-                location.replace('/study/communication/');
-            {% elsif page.prev == 'data_analysis' %}
-                location.replace('/study/data_analysis/');
-            {% elsif page.prev == 'cloud' %}
-                location.replace('/study/cloud/');
-            {% elsif page.prev == 'ai' %}
-                location.replace('/study/ai/');
-            {% elsif page.prev == 'programming' %}
-                location.replace('/study/programming/');
-
-            {% elsif page.prev == 'projects' %}
-                location.replace('/projects/');
-            {% elsif page.prev == 'bluetooth' %}
-                location.replace('/projects/bluetooth/');
-            {% elsif page.prev == 'aimlfw' %}
-                location.replace('/projects/aimlfw/');
-
-            {% elsif page.prev == 'blog' %}
-                location.replace('/blog/');
-            {% endif %}
+            var currentPath = window.location.pathname;
+            if (currentPath.endsWith('/')) {
+                currentPath = currentPath.slice(0, -1);
+            }
+            var newPath = currentPath.substring(0, currentPath.lastIndexOf('/')) + '/';
+            location.replace(newPath);
         });
     });
 </script>
