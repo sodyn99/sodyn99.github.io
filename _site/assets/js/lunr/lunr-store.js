@@ -1,26 +1,20 @@
 var store = [{
-        "title": "Blog 소개",
-        "excerpt":"여기 Blog 페이지에는 많은 것을 올리진 않을 것 같고 일상적인 것들이나 생각 같은 것들만 간단하게 쓸 것같다.  ","categories": ["daily"],
-        "tags": [],
-        "url": "/blog/2024-02-10-blog-%EC%86%8C%EA%B0%9C/",
-        "teaser": null
-      },{
         "title": "6G 동향",
-        "excerpt":"5G 서비스는 과도기라는 말을 들을 정도로 어려움을 겪었다. 통신사들 자체의 서비스적인 측면을 떠나서 한국의 경우 이미 4G에 대한 만족도가 높은 상황에서 5G에 큰 메리트를 느끼기 어려웠다 라고 볼 수 있을 것 같다. 4G가 상용화 되면서 OTT나 Youtube 같은 서비스들이 사용자들에게 새로운 경험을 선사했는데, 5G는 아직까지도 대다수의 사람들에게 신선함을 주는 대표적인...","categories": ["trends"],
+        "excerpt":"5G 서비스는 과도기라는 말을 들을 정도로 어려움을 겪었다. 통신사들 자체의 서비스적인 측면을 떠나서 한국의 경우 이미 4G에 대한 만족도가 높은 상황에서 5G에 큰 메리트를 느끼기 어려웠다 라고 볼 수 있을 것 같다. 4G가 상용화 되면서 OTT나 Youtube 같은 서비스들이 사용자들에게 새로운 경험을 선사했는데, 5G는 아직까지도 대다수의 사람들에게 신선함을 주는 대표적인...","categories": ["blog"],
         "tags": [],
         "url": "/blog/2024-02-22-6g-%EB%8F%99%ED%96%A5/",
         "teaser": null
       },{
-        "title": "2024 MWC",
-        "excerpt":"2024년에도 어김없이 찾아온 MWC. 직접 바르셀로나에 가서 보았다면 좋았겠지만, 아쉽게도 그러지 못해서 간단하게나마 이번 MWC에서 주요하게 볼만한 몇가지들을 정리해보고자 한다. 역시나 핵심 화두는 ‘AI’다. 또 AI냐 라고 할만큼 지겨울 수도 있지만 또 워낙 그만큼 중요한 주제이다. 화제가 되는건 역시 삼성이 CES에서도 선보였던 갤럭시 S24와 엣지 AI가 있지만 우리는 이동통신을 위주로...","categories": ["trends"],
-        "tags": [],
-        "url": "/blog/2024-02-26-2024-mwc-copy/",
-        "teaser": null
-      },{
         "title": "AI-RAN Alliance",
-        "excerpt":"2024 MWC에서 삼성전자, 엔비디아(Nvidia), 암(Arm), 소프트뱅크(SoftBank), 에릭슨(Ericsson), 노키아(Nokia), 마이크로소프트(Microsoft), 미국 노스이스턴대학 등 통신 및 소프트웨어 기업 10개사와 1개 대학이 모여 ‘AI-RAN Alliance’를 공식 출범했다. 주요 통신 장비 제조업체들이 모여 AI 경쟁력을 강화하고 본격적으로 6G에 대비하기 위한 움직임으로 보인다. 또 한편으로는 오픈소스 진영에서 활발히 연구되고 있는 O-RAN에 대항(?)하기 위한 것도 아닐까...","categories": ["news"],
+        "excerpt":"2024 MWC에서 삼성전자, 엔비디아(Nvidia), 암(Arm), 소프트뱅크(SoftBank), 에릭슨(Ericsson), 노키아(Nokia), 마이크로소프트(Microsoft), 미국 노스이스턴대학 등 통신 및 소프트웨어 기업 10개사와 1개 대학이 모여 ‘AI-RAN Alliance’를 공식 출범했다. 주요 통신 장비 제조업체들이 모여 AI 경쟁력을 강화하고 본격적으로 6G에 대비하기 위한 움직임으로 보인다. 또 한편으로는 오픈소스 진영에서 활발히 연구되고 있는 O-RAN에 대항(?)하기 위한 것도 아닐까...","categories": ["blog"],
         "tags": [],
         "url": "/blog/2024-03-02-ai-ran/",
+        "teaser": null
+      },{
+        "title": "GISC 2024",
+        "excerpt":"11월 4일 부터 6일 까지 3일간 서울 엘타워에서 GISC가 열렸다. 일정상 두번째날만 참석을 했는데, 듣지 못한 세션들은 유튜브에 올라오길 기다리고 있다. 차세대통신: 인공지능과 함께 진화하는 미래 통신 사실 이 세션을 듣기 위해 GISC에 참석했다 해도 과언이 아니다. 구글에서 검색을 아무리 잘해도 최신 정보를 얻기에는 한계가 있기 때문에 꼭 GISC에서 현재...","categories": ["blog"],
+        "tags": [],
+        "url": "/blog/2024-11-11-gisc-2024/",
         "teaser": null
       },{
         "title": "AIMLFW 환경설정",
@@ -84,7 +78,7 @@ var store = [{
         "teaser": null
       },{
         "title": "Federated Learning framework 개발",
-        "excerpt":"Helm Chart 우선 image fl-extraction:latest를 빌드해준다. ./build.sh 다음으로 namespace를 생성해준다. kubectl create namespace federated-learning Helm chart를 설치해준다. helm install fl-extraction . -n federated-learning Cassandra secret을 생성해준다. kubectl create secret generic cassandra --from-literal=cassandra-password=OOcrm4pqFi -n federated-learning Pod가 잘 생성되었는지 확인해준다. $ kubectl get pods -n federated-learning NAME READY STATUS RESTARTS AGE fl-extraction-868f46958d-9q2mt...","categories": ["aimlfw"],
+        "excerpt":" ","categories": ["aimlfw"],
         "tags": [],
         "url": "/projects/aimlfw/b/",
         "teaser": null

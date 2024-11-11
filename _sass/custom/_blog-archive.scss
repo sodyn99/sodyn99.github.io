@@ -12,7 +12,7 @@
     height: inherit;
     padding: 1.5em;
     margin-top: 1em;
-    border-radius: 2.5em;
+    border-radius: 4em;
     background-color: #fff;
     border: 1px solid $callout-color;
     @include breakpoint($small) {
@@ -90,10 +90,12 @@
     height: 200px;
     width: 100%;
     object-fit: cover;
+    margin-bottom: 1em;
     @include breakpoint($medium) {
         height: 200px;
         width: 350px;
         border-radius: 1.5em;
+        margin-bottom: 0;
     }
     @include breakpoint($large) {
         height: 300px;
