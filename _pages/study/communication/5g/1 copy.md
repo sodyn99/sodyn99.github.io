@@ -2,7 +2,6 @@
 layout: posts
 title: "5G 개요"
 permalink: /study/communication/5g/1/back/
-prev: communication
 description:
 ---
 

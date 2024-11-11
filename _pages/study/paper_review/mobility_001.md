@@ -3,7 +3,6 @@ layout: posts
 title: "A Reinforcement Learning Framework for PQoS in a Teleoperated Driving Scenario"
 categories: Mobility
 permalink: /study/paper_review/mobility_001/
-prev: paper_review
 description: "선행연구 - Artificial Intelligence in Vehicular Wireless Networks: A Case Study Using ns-3"
 ---
 # RAN-AI

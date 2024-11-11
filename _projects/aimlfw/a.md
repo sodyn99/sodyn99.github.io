@@ -2,7 +2,7 @@
 layout: posts
 title: "Cassandra 데이터 정렬 문제 - 3"
 category: aimlfw
-prev: aimlfw
+
 ---
 
 2편에서 다루었었던 내용을 보면 정수형 데이터 `__Id`를 *Clustering Key*로 설정했었다.
