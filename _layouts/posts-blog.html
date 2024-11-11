@@ -8,7 +8,7 @@ layout: archive-blog
 
 {% assign entries_layout = page.entries_layout | default: 'list' %}
 <div class="entries-{{ entries_layout }}">
-  {% for post in posts %}
+  {% for post in posts reversed %}
     {% include archive-single.html type=entries_layout %}
   {% endfor %}
 </div>
