@@ -6,13 +6,13 @@ var store = [{
         "teaser": null
       },{
         "title": "AI-RAN Alliance",
-        "excerpt":"2024 MWC에서 삼성전자, 엔비디아(Nvidia), 암(Arm), 소프트뱅크(SoftBank), 에릭슨(Ericsson), 노키아(Nokia), 마이크로소프트(Microsoft), 미국 노스이스턴대학 등 통신 및 소프트웨어 기업 10개사와 1개 대학이 모여 ‘AI-RAN Alliance’를 공식 출범했다. 주요 통신 장비 제조업체들이 모여 AI 경쟁력을 강화하고 본격적으로 6G에 대비하기 위한 움직임으로 보인다. 또 한편으로는 오픈소스 진영에서 활발히 연구되고 있는 O-RAN에 대항(?)하기 위한 것도 아닐까...","categories": ["blog"],
+        "excerpt":"2024 MWC에서 삼성전자, 엔비디아(Nvidia), 암(Arm), 소프트뱅크(SoftBank), 에릭슨(Ericsson), 노키아(Nokia), 마이크로소프트(Microsoft), 미국 노스이스턴대학 등 통신 및 소프트웨어 기업 10개사와 1개 대학이 모여 ‘AI-RAN Alliance’를 공식 출범했다. 주요 통신 장비 제조업체들이 모여 AI 경쟁력을 강화하고 본격적으로 6G에 대비하기 위한 움직임으로 보인다. ‘AI-RAN Alliance’는 ‘AI for RAN’, ‘AI and RAN’, ‘AI on RAN’ 이렇게...","categories": ["blog"],
         "tags": [],
         "url": "/blog/2024-03-02-ai-ran/",
         "teaser": null
       },{
         "title": "GISC 2024",
-        "excerpt":"11월 4일 부터 6일 까지 3일간 서울 엘타워에서 GISC가 열렸다. 일정상 두번째날만 참석을 했는데, 듣지 못한 세션들은 유튜브에 올라오길 기다리고 있다. 차세대통신: 인공지능과 함께 진화하는 미래 통신 사실 이 세션을 듣기 위해 GISC에 참석했다 해도 과언이 아니다. 구글에서 검색을 아무리 잘해도 최신 정보를 얻기에는 한계가 있기 때문에 꼭 GISC에서 현재...","categories": ["blog"],
+        "excerpt":"11월 4일 부터 6일 까지 3일간 서울 엘타워에서 GISC가 열렸다. 일정 상 두번째 날만 참석을 했는데, 듣지 못한 세션들은 유튜브에 올라오길 기다리고 있다. 차세대통신: 인공지능과 함께 진화하는 미래 통신 사실 이 세션을 듣기 위해 GISC에 참석했다 해도 과언이 아니다. 구글에서 검색을 아무리 잘해도 최신 정보를 얻기에는 한계가 있기 때문에 꼭...","categories": ["blog"],
         "tags": [],
         "url": "/blog/2024-11-11-gisc-2024/",
         "teaser": null
