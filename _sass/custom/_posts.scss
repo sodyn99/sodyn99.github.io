@@ -242,15 +242,15 @@
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     -webkit-box-pack: justify;
     -ms-flex-pack: justify;
     justify-content: center;
-    margin: 0.5em 0;
+    @include breakpoint($medium) {
+        flex-direction: row;
+    }
 }
 .post__stage {
-    max-width: 50%;
-    padding-right: 1.5em;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -258,6 +258,11 @@
     -webkit-box-pack: justify;
     -ms-flex-pack: justify;
     justify-content: center;
+    margin: 0.5em 0;
+    @include breakpoint($medium) {
+        max-width: 50%;
+        padding-right: 1.5em;
+    }
 }
 
 @for $i from 0 to 50 {

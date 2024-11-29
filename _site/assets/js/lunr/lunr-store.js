@@ -113,6 +113,24 @@ var store = [{
         "url": "/projects/bluetooth/5/",
         "teaser": null
       },{
+        "title": "합격후기",
+        "excerpt":"SKT AI Fellowship은 SKT에서 AI기술 분야 실무 과제 프로그램으로 AI 기술/개발에 관심있는 학부생 및 대학원생 누구나 지원할 수 있다! 나는 이번 6기 연구과제 중 5G 관련 과제인 5G Green AI Algorithm 개발에 연구실 동료들과 팀을 이루어 지원하였다. 실제 SKT 기지국 데이터를 사용해 AI 알고리즘을 개발할 수 있다는 것이 매력적이었다. 우선...","categories": ["fellowship"],
+        "tags": [],
+        "url": "/projects/fellowship/1/",
+        "teaser": null
+      },{
+        "title": "프로젝트",
+        "excerpt":" ","categories": ["fellowship"],
+        "tags": [],
+        "url": "/projects/fellowship/2/",
+        "teaser": null
+      },{
+        "title": "수료식",
+        "excerpt":"  관련 기사                                                                                                                           ","categories": ["fellowship"],
+        "tags": [],
+        "url": "/projects/fellowship/3/",
+        "teaser": null
+      },{
         "title": "ns3 개요",
         "excerpt":"ns3 는 오픈소스 네트워크, 패킷 레벨 시뮬레이터 이다.   기본적으로 C++을 기반으로 하고 있고, discrete-event 네트워크 시뮬레이터이기 때문에 연속된 시간을 시뮬레이션 하는것이 아닌, 지정된 시간에 실행되도록 예약된 이벤트를 추적한다.   자세한 내용은 매뉴얼[1]을 참고하자.     Reference      ns-3.41 Manual  ","categories": ["communication"],
         "tags": [],
@@ -206,11 +224,11 @@ var store = [{
     "title": "5G 개요",
     "excerpt":"                                    표준화                                        기본 철학                        ","url": "http://localhost:4000/study/communication/5g/1/"
   },{
-    "title": "Protocol",
-    "excerpt":"#     ","url": "http://localhost:4000/study/communication/computer_network/1/"
-  },{
     "title": "6G 개요",
     "excerpt":"#     ","url": "http://localhost:4000/study/communication/6g/1/"
+  },{
+    "title": "Protocol",
+    "excerpt":"#     ","url": "http://localhost:4000/study/communication/computer_network/1/"
   },{
     "title": "표준화",
     "excerpt":"표준화 표준화 단체는 크게 2가지로 알면 된다. 바로 ITU와 3GPP이다. ITU는 국제전기통신연합으로 유엔 산하의 국제 기구다. 기술 표준을 제정하는 것 뿐만 아니라 주파수 관리, 위성 관리, 개발도상국 기술 지원 등의 역할을 하고 있다. 3GPP는 유럽의 ETSI, 일본의 TTC, 중국의 CCSA, 한국의 TTA, 미국의 ATIS가 연합하여 설립한 국제 표준화 단체이다. 3GPP의...","url": "http://localhost:4000/study/communication/5g/1/1/"
@@ -230,11 +248,11 @@ var store = [{
     "title": "딥 러닝",
     "excerpt":"딥 러닝은 인간 두뇌의 구조를 본 따 개발된 인공지능이다. 인간이 사물을 인식하기의 과정은, 먼저 눈으로 보고 그 정보가 여러 뇌를 거치게 되는데 마찬가지로 딥 러닝 또한 여러 계층으로 구성된다. 인간의 신경과 뇌에는 수백만개의 뉴런이 연결되어 있듯 딥 러닝 신경망도 인공 신경 세포 노드를 통해 계층을 구성하고 있다. 딥 러닝의 목표는...","url": "http://localhost:4000/study/ai/2/"
   },{
-    "title": "Mathematical Methods for Wireless Communications",
-    "excerpt":"Signal Spaces 위 그림은 우리가 흔히 알고 있는 통신 시스템의 구조를 나타낸 것이다. 이러한 통신 시스템을 수학적으로 분석하기 위한 가장 기본적인 개념은 Signal Space 이다. Approximation and Estimation in Signal Spaces Minimum Mean-Squared Error Estimation 추정이라는 단어가 본의 아니게 많이 사용되게 되는데 추정, 추정값, 추정자 등등 헷갈리는 사태를 방지하기 위해...","url": "http://localhost:4000/study/communication/optimization/3/"
-  },{
     "title": "시스템 구조",
     "excerpt":"전체적인 네트워크 구조는 RAN과 Core로 나눠진다.    ","url": "http://localhost:4000/study/communication/5g/3/"
+  },{
+    "title": "Mathematical Methods for Wireless Communications",
+    "excerpt":"Signal Spaces 위 그림은 우리가 흔히 알고 있는 통신 시스템의 구조를 나타낸 것이다. 이러한 통신 시스템을 수학적으로 분석하기 위한 가장 기본적인 개념은 Signal Space 이다. Approximation and Estimation in Signal Spaces Minimum Mean-Squared Error Estimation 추정이라는 단어가 본의 아니게 많이 사용되게 되는데 추정, 추정값, 추정자 등등 헷갈리는 사태를 방지하기 위해...","url": "http://localhost:4000/study/communication/optimization/3/"
   },{
     "title": "전송 구조",
     "excerpt":" ","url": "http://localhost:4000/study/communication/5g/4/"
@@ -307,6 +325,9 @@ var store = [{
   },{
     "title": "Elasticsearch",
     "excerpt":"                                                      Elasticsearch 개요                                                 Elastic with Chat GPT                                 ","url": "http://localhost:4000/study/data_analysis/elasticsearch/"
+  },{
+    "title": "SKT AI Fellowship 6th",
+    "excerpt":"                                                      합격후기                                                 프로젝트                                                 수료식                                 ","url": "http://localhost:4000/projects/fellowship/"
   },{
     "title": "GitHub",
     "excerpt":"                                                      Git                                                 Push                                                 Pull-Request                                 ","url": "http://localhost:4000/study/programming/github/"
