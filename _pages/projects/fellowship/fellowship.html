@@ -1,0 +1,18 @@
+---
+layout: pages
+title: "SKT AI Fellowship 6th"
+permalink: /projects/fellowship/
+---
+
+<section class="page__container">
+    <ul>
+        <hr>
+        {% assign files = site.projects | where: "category", "fellowship" %}
+        {% for file in files %}
+        <li class="page__slider" OnClick="location.href ='{{ file.url }}'">
+            <dt>{{ file.title }}</dt>
+        </li>
+        <hr>
+        {% endfor %}
+    </ul>
+</section>
