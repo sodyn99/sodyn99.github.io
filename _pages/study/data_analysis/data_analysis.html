@@ -7,28 +7,25 @@ permalink: /study/data_analysis/
 <section class="page__container">
     <ul>
         <hr>
-        <li class="page__slider" OnClick="location.href ='/study/data_analysis/datagrip/'">
-            <dt>DataGrip</dt>
+        {% assign files = site.study | where: "category", "data_analysis" %}
+        {% for file in files %}
+        {% assign file_name_no_ext = file.path | split: '/' | last | split: '.' | first %}
+        <li class="page__slider" OnClick="location.href ='{{ file.url }}'">
+            <dt>{{ file.title }}</dt>
+            <dd>
+                {% for subfile in site.study %}
+                    {% assign subfile_dir = subfile.url | split: '/' %}
+                    {% if subfile.url contains '/data_analysis/' and subfile_dir[3] == file_name_no_ext and subfile_dir.size > 4 %}
+                    <ul>
+                        <li>
+                            <a href="{{ subfile.url }}">{{ subfile.title }}</a>
+                        </li>
+                    </ul>
+                    {% endif %}
+                {% endfor %}
+            </dd>
         </li>
         <hr>
-        <li class="page__slider" OnClick="location.href ='/study/data_analysis/sql/'">
-            <dt>SQL</dt>
-        </li>
-        <hr>
-        <li class="page__slider" OnClick="location.href ='/study/data_analysis/elasticsearch/'">
-            <dt>Elasticsearch</dt>
-        </li>
-        <hr>
-        <li class="page__slider" OnClick="location.href ='/study/data_analysis/r/'">
-            <dt>R</dt>
-        </li>
-        <hr>
+        {% endfor %}
     </ul>
 </section>
-
-<!-- <section class="page__container">
-    https://coursera.org/share/a346af7c51fc69f7cb27ce134b6a4c53
-    https://coursera.org/share/3f81c68cffa390c1ca6dc8a8ede40466
-    https://coursera.org/share/66bbdf6dfdc825db26798b5334e0fd94
-    https://coursera.org/share/fb54d36258058deb243318c3b912c0a7
-</section> -->
