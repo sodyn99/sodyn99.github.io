@@ -10,19 +10,21 @@ description: ""
         <hr>
         {% assign files = site.study | where: "category", "communication" | where: "subcategory", "5g" %}
         {% for file in files %}
+        {% assign file_name_no_ext = file.name | split: '.' | first %}
+        {% assign subfile_path_contains = '/5g/' | append: file_name_no_ext | append: '/' %}
         <li class="page__slider" OnClick="location.href ='{{ file.url }}'">
             <dt>{{ file.title }}</dt>
-            {% if file.subfiles %}
+
+            {% assign subfiles = site.study | where_exp: "subfile", "subfile.path contains subfile_path_contains" %}
             <dd>
                 <ul>
-                    {% for subfile in file.subfiles %}
+                    {% for subfile in subfiles %}
                     <li>
                         <a href="{{ subfile.url }}">{{ subfile.title }}</a>
                     </li>
                     {% endfor %}
                 </ul>
             </dd>
-            {% endif %}
         </li>
         <hr>
         {% endfor %}

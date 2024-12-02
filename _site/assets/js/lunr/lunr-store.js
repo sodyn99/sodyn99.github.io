@@ -132,7 +132,7 @@ var store = [{
         "teaser": null
       },{
         "title": "5G 개요",
-        "excerpt":"                                                      표준화                                                 기본 철학                                 ","categories": ["communication"],
+        "excerpt":"                                                      표준화                                                 시스템 구조                                 ","categories": ["communication"],
         "tags": [],
         "url": "/study/communication/5g/1/",
         "teaser": null
@@ -143,7 +143,7 @@ var store = [{
         "url": "/study/communication/5g/1/1/",
         "teaser": null
       },{
-        "title": "기본 철학",
+        "title": "시스템 구조",
         "excerpt":"1. 높은 주파수 대역 넓은 대역폭을 위해 mmWave를 사용. &#8618; 높은 대역 But! mmWave를 사용하면, pathloss &uarr; cell coverage &darr; 해결? MIMO, Beamforming, 낮은 주파수 대역과 협력 운용. 2. Ultra-Lean 'Always-on' 신호를 줄이기 위함. always-on? 사용자 트래픽에 상관없이 전송되는 신호(e.g. 기지국 감지 신호, 브로드캐스트 신호, 항상 켜져있는 레퍼런스 시그널 등)....","categories": ["communication"],
         "tags": [],
         "url": "/study/communication/5g/1/2/",
@@ -312,7 +312,7 @@ var store = [{
     "excerpt":"         404   Page Not Found                               ","url": "http://localhost:4000/404.html"
   },{
     "title": "5G",
-    "excerpt":"                                                      5G 개요                                                                                                              표준화                                                                                        기본 철학                                                                                                                                      5G 개념                                                                                                              주파수                                                                                        Sequence                                                                                                                                      시스템 구조                                                              전송 구조                                                              채널 사운딩                                                              Transport 채널 프로세싱                                                              PHY Control 시그널링                                                                                                              Downlink                                                                                        Uplink                                                                                                                      ","url": "http://localhost:4000/study/communication/5g/"
+    "excerpt":"                                                                        5G 개요                                                                                                               표준화                                                                                        시스템 구조                                                                                                                                           5G 개념                                                                                                               주파수                                                                                        Sequence                                                                                                                                           시스템 구조                                                                                                                                                                  전송 구조                                                                                                                                                                  채널 사운딩                                                                                                                                                                  Transport 채널 프로세싱                                                                                                                                                                  PHY Control 시그널링                                                                                                               Downlink                                                                                        Uplink                                                                                                          ","url": "http://localhost:4000/study/communication/5g/"
   },{
     "title": "6G",
     "excerpt":"                                    6G 개요                                     ","url": "http://localhost:4000/study/communication/6g/"
