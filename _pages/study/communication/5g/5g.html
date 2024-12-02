@@ -15,6 +15,7 @@ description: ""
             <dt>{{ file.title }}</dt>
             <dd>
             {% for subfile in site.study %}
+                <p>{{ subfile.path }}</p>
                 {% assign subfile_dir = subfile.path | split: '/' %}
                 {% if subfile.path contains '/5g/' and subfile_dir contains file_name_no_ext %}
                 <p>{{ subfile_dir }}</p>
