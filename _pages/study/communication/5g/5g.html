@@ -14,8 +14,8 @@ description: ""
         {% assign subfile_path_contains = '/5g/' | append: file_name_no_ext | append: '/' %}
         <li class="page__slider" OnClick="location.href ='{{ file.url }}'">
             <dt>{{ file.title }}</dt>
-
             {% assign subfiles = site.study | where_exp: "subfile", "subfile.path contains subfile_path_contains" %}
+            {% if subfiles.size != 0 %}
             <dd>
                 <ul>
                     {% for subfile in subfiles %}
@@ -25,6 +25,7 @@ description: ""
                     {% endfor %}
                 </ul>
             </dd>
+            {% endif %}
         </li>
         <hr>
         {% endfor %}
