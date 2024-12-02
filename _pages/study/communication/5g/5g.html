@@ -13,13 +13,11 @@ description: ""
         {% assign file_name_no_ext = file.name | split: '.' | first %}
         <li class="page__slider" OnClick="location.href ='{{ file.url }}'">
             <dt>{{ file.title }}</dt>
-
-            {% assign has_subfiles = false %}
             <dd>
             {% for subfile in site.study %}
                 {% assign subfile_dir = subfile.path | split: '/' %}
                 {% if subfile.path contains '/5g/' and subfile_dir contains file_name_no_ext %}
-                {% assign has_subfiles = true %}
+                <p>{{ subfile_dir }}</p>
                 <ul>
                     <li>
                         <a href="{{ subfile.url }}">{{ subfile.title }}</a>
