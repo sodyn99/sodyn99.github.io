@@ -1,14 +1,14 @@
 ---
 layout: pages
 title: "R"
-permalink: /study/data_analysis/r/
 description:
+category: "data_analysis"
 ---
 
 <section class="page__container">
     <ul>
         <hr>
-        {% assign files = site.study | where: "category", "data_analysis" | where: "subcategory", "r" %}
+        {% assign files = site.study | where: "category", "r" %}
         {% for file in files %}
         <li class="page__slider" OnClick="location.href ='{{ file.url }}'">
             <dt>{{ file.title }}</dt>

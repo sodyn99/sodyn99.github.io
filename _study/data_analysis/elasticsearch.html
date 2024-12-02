@@ -1,14 +1,13 @@
 ---
 layout: pages
-title: "SQL"
-permalink: /study/data_analysis/sql/
-description:
+title: "Elasticsearch"
+category: "data_analysis"
 ---
 
 <section class="page__container">
     <ul>
         <hr>
-        {% assign files = site.study | where: "category", "data_analysis" | where: "subcategory", "sql" %}
+        {% assign files = site.study | where: "category", "data_analysis" | where: "subcategory", "elasticsearch" %}
         {% for file in files %}
         <li class="page__slider" OnClick="location.href ='{{ file.url }}'">
             <dt>{{ file.title }}</dt>
