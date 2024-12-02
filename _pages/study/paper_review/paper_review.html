@@ -4,68 +4,21 @@ title: "Paper Review"
 permalink: /study/paper_review/
 ---
 
-<!-- {% assign posts = site.categories.review %}
-
-{% assign entries_layout = page.entries_layout | default: 'list' %}
-<div class="entries-{{ entries_layout }}">
-  {% for post in posts %}
-    {% include archive-single.html type=entries_layout %}
-  {% endfor %}
-</div> -->
-
+{% assign files = site.study | where: "category", "paper_review" %}
 <hr>
-<div class="review__content" OnClick="location.href ='/study/paper_review/oran_001/'">
+{% for file in files %}
+<div class="review__content" OnClick="location.href ='{{ file.url }}'">
     <div class="review__teaser">
-        <img src="/_pages/study/paper_review/teasers/oran_001.jpg" class="review__image"></img>
+        {% assign extensions = "jpg,png,gif" | split: ',' %}
+        {% for ext in extensions %}
+            <img src="/_pages/study/paper_review/teasers/{{ file.url | split: '/' | last }}.{{ ext }}" onerror="this.style.display='none'" class="review__image"></img>
+        {% endfor %}
     </div>
     <div class="review__info">
-        <div class="review__category">O-RAN</div>
-        <div class="review__title">Energy-aware Scheduling of Virtualized Base Stations in O-RAN with Online Learning</div>
-        <div class="review__description"></div>
+        <div class="review__category">{{ file.subject }}</div>
+        <div class="review__title">{{ file.title }}</div>
+        <!-- <div class="review__description">{{ file.description }}</div> -->
     </div>
 </div>
 <hr>
-<div class="review__content" OnClick="location.href ='/study/paper_review/optimization_001/'">
-    <div class="review__teaser">
-        <img src="/_pages/study/paper_review/teasers/optimization_001.gif" class="review__image"></img>
-    </div>
-    <div class="review__info">
-        <div class="review__category">optimization</div>
-        <div class="review__title">Learning to Optimize: Training Deep Neural Networks for Interference Management</div>
-        <div class="review__description"></div>
-    </div>
-</div>
-<hr>
-<div class="review__content" OnClick="location.href ='/study/paper_review/magma_002/'">
-    <div class="review__teaser">
-        <img src="/_pages/study/paper_review/teasers/magma_002.png" class="review__image"></img>
-    </div>
-    <div class="review__info">
-        <div class="review__category">magma</div>
-        <div class="review__title">Private Cellular Network Deployment: Comparison of OpenAirInterface with Magma Core</div>
-        <div class="review__description">Comparison of OpenAirInterface and Magma Core, two prominent open-source projects in cellular networks.</div>
-    </div>
-</div>
-<hr>
-<div class="review__content" OnClick="location.href ='/study/paper_review/magma_001/'">
-    <div class="review__teaser">
-        <img src="/_pages/study/paper_review/teasers/magma_001.png" class="review__image"></img>
-    </div>
-    <div class="review__info">
-        <div class="review__category">magma</div>
-        <div class="review__title">Building Flexible, Low-Cost Wireless Access Networks With Magma</div>
-        <div class="review__description">How to configure low-cost cellular network using Magma.</div>
-    </div>
-</div>
-<hr>
-<div class="review__content" OnClick="location.href ='/study/paper_review/mobility_001/'">
-    <div class="review__teaser">
-        <img src="/_pages/study/paper_review/teasers/mobility_001.png" class="review__image"></img>
-    </div>
-    <div class="review__info">
-        <div class="review__category">mobility</div>
-        <div class="review__title">A Reinforcement Learning Framework for PQoS in a Teleoperated Driving Scenario</div>
-        <div class="review__description"></div>
-    </div>
-</div>
-<hr>
+{% endfor %}
