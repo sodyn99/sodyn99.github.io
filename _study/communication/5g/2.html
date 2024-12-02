@@ -1,14 +1,15 @@
 ---
 layout: pages
-title: "ns3"
-permalink: /study/communication/ns3/
+title: "5G 개념"
+category: communication
+subcategory: 5g
 description: ""
 ---
 
 <section class="page__container">
     <ul>
         <hr>
-        {% assign files = site.study | where: "category", "communication" | where: "subcategory", "ns3" %}
+        {% assign files = site.study | where: "category", "communication" | where: "subcategory", "5g개념" %}
         {% for file in files %}
         <li class="page__slider" OnClick="location.href ='{{ file.url }}'">
             <dt>{{ file.title }}</dt>
