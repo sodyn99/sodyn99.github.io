@@ -16,6 +16,9 @@ description: ""
             <dd>
                 {% for subfile in site.study %}
                     {% assign subfile_dir = subfile.url | split: '/' %}
+                    <p>subfile_dir: {{ subfile_dir }}</p>
+                    <p>subfile_dir[4]: {{ subfile_dir[4] }}</p>
+                    <p>file_name_no_ext: {{ file_name_no_ext }}</p>
                     {% if subfile.url contains '/5g/' and subfile_dir[4] == file_name_no_ext and subfile_dir.size > 5 %}
                     <ul>
                         <li>
