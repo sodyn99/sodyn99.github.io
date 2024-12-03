@@ -20,7 +20,7 @@ q_features = "`_time`,"
 
 아래와 같이 `_time` 데이터를 성공적으로 받아온 것을 확인할 수 있다.
 
-<img class="modal img_small" src="/_pages/projects/aimlfw/images/10-1.png" alt=""/>
+<img class="modal img__small" src="/_pages/projects/aimlfw/images/10-1.png" alt=""/>
 
 # `_time`을 Clustering Key로 설정
 
@@ -44,4 +44,4 @@ sparkdf = sparkdf.select("*").withColumn("partition_key", lit('1'))
 
 아래와 같이 `_time`이 *Clustering Key*로 설정된 것을 확인할 수 있다.
 
-<img class="modal img_small" src="/_pages/projects/aimlfw/images/10-2.png" alt=""/>
+<img class="modal img__small" src="/_pages/projects/aimlfw/images/10-2.png" alt=""/>
