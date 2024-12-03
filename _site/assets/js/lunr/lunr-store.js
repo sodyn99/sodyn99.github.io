@@ -17,6 +17,12 @@ var store = [{
         "url": "/blog/2024-11-11-gisc-2024/",
         "teaser": null
       },{
+        "title": "이건희 에세이: 생각 좀 하며 세상을 보자",
+        "excerpt":"  ","categories": ["blog"],
+        "tags": [],
+        "url": "/blog/2024-12-03-%EC%9D%B4%EA%B1%B4%ED%9D%AC-%EC%97%90%EC%84%B8%EC%9D%B4/",
+        "teaser": null
+      },{
         "title": "AIMLFW 환경설정",
         "excerpt":"1. 우분투 환경설정 우분투 설치 완료되면 sudo apt-get update &amp;&amp; sudo apt-get upgrade sudo apt-get install htop htop도 설치해준다. 하도 램 부족 문제를 많이 겪어서 htop은 일단 깔아놓자. 다음으로는 Anaconda를 설치해준다. Anaconda 설치가 필수는 아니지만, 개인적으로는 Anaconda 있는게 훨씬 편하기 때문에, 거의 무조건 설치해주자. wget https://repo.anaconda.com/archive/Anaconda3-2024.06-1-Linux-x86_64.sh # 최신 버전으로 바꿔주자....","categories": ["aimlfw"],
         "tags": [],
@@ -168,7 +174,7 @@ var store = [{
         "teaser": null
       },{
         "title": "시스템 구조",
-        "excerpt":"전체적인 네트워크 구조는 RAN과 Core로 나눠진다.    ","categories": ["communication"],
+        "excerpt":"전체적인 네트워크 구조는 RAN과 Core로 나눠진다.      RAN은 단말과 무선 네트워크 간의 인터페이스 제공, 무선 자원 관리, 단말의 이동성 관리 등을 담당하며, Core는     Reference     최성남, 안철주, 육영수, “기업의 DX와 5G”, 에이콘출판(2023), p. 1-519  ","categories": ["communication"],
         "tags": [],
         "url": "/study/communication/5g/3/",
         "teaser": null
@@ -246,7 +252,7 @@ var store = [{
         "teaser": null
       },{
         "title": "Elasticsearch",
-        "excerpt":"                                      ","categories": ["data_analysis"],
+        "excerpt":"                                                      Elasticsearch 개요                                                 Elastic with Chat GPT                                 ","categories": ["data_analysis"],
         "tags": [],
         "url": "/study/data_analysis/elasticsearch/",
         "teaser": null
@@ -276,7 +282,7 @@ var store = [{
         "teaser": null
       },{
         "title": "SQL",
-        "excerpt":"                                      ","categories": ["data_analysis"],
+        "excerpt":"                                                      SQL 개요                                                 SQL 함수                                 ","categories": ["data_analysis"],
         "tags": [],
         "url": "/study/data_analysis/sql/",
         "teaser": null
