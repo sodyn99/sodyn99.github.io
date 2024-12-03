@@ -246,7 +246,7 @@ var store = [{
         "teaser": null
       },{
         "title": "Elasticsearch",
-        "excerpt":"                                      ","categories": ["data_analysis"],
+        "excerpt":"                                                      Elasticsearch 개요                                                 Elastic with Chat GPT                                 ","categories": ["data_analysis"],
         "tags": [],
         "url": "/study/data_analysis/elasticsearch/",
         "teaser": null
@@ -276,7 +276,7 @@ var store = [{
         "teaser": null
       },{
         "title": "SQL",
-        "excerpt":"                                      ","categories": ["data_analysis"],
+        "excerpt":"                                                      SQL 개요                                                 SQL 함수                                 ","categories": ["data_analysis"],
         "tags": [],
         "url": "/study/data_analysis/sql/",
         "teaser": null

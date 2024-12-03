@@ -1,5 +1,5 @@
 ---
-layout: pages
+layout: posts
 title: "Elasticsearch"
 category: "data_analysis"
 ---
@@ -7,7 +7,7 @@ category: "data_analysis"
 <section class="page__container">
     <ul>
         <hr>
-        {% assign files = site.study | where: "category", "data_analysis" | where: "subcategory", "elasticsearch" %}
+        {% assign files = site.study | where: "category", "elasticsearch" %}
         {% for file in files %}
         <li class="page__slider" OnClick="location.href ='{{ file.url }}'">
             <dt>{{ file.title }}</dt>
