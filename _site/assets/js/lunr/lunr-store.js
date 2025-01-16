@@ -299,10 +299,10 @@ var store = [{
         "url": "/study/data_analysis/sql/2/",
         "teaser": null
       },{
-        "title": "Building Flexible, Low-Cost Wireless Access Networks With Magma",
-        "excerpt":" ","categories": ["paper_review"],
+        "title": "Communication-Efficient Learning of Deep Networks from Decentralized Data",
+        "excerpt":"본 논문 리뷰에는 개인적인 해석이 포함되어 있음 이 논문은 Federated Learning(연합학습)이라는 학습 방식을 제안한다. 연합학습은 개인 정보 보호에 민감하거나 데이터 양이 많을 경우 로컬에서 계산된 업데이트를 집계하여 공유 모델을 학습하는 분산형 접근 방식이다. 논문은 실험을 통해 unbalanced data*와 non-IID data**에 대한 연합학습의 효율성을 입증하며, 기존의 sychronized SGD에 비해 통신 라운드가...","categories": ["paper_review"],
         "tags": [],
-        "url": "/study/paper_review/magma_001/",
+        "url": "/study/paper_review/federated_learning_001/",
         "teaser": null
       },{
         "title": "Private Cellular Network Deployment: Comparison of OpenAirInterface with Magma Core",
